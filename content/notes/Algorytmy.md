@@ -1,0 +1,5 @@
+---
+title: Algorytmy
+tags: 
+aliases:
+---

@@ -1,0 +1,13 @@
+---
+title: Tech3camp | Machine Learning
+Data: 2023-11-21
+---
+# Nazwa Eventu
+1. Tech3camp | Machine Learning
+# Prelekcje
+1. SURVIVING THE DATA JOURNEY: A CASE STUDY OF MIGRATING ML-ENGINE
+2. DOUCZANIE MODELU TEKSTOWEGO WŁASNYMI DANYMI - PIERWSZE KROKI I WRAŻENIA
+3. MODEL ZOSTAŁ WYTRENOWANY... I CO DALEJ?" - AI INFERENCE
+# Opinia
+
+# Notes
