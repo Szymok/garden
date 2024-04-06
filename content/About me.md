@@ -1,5 +1,5 @@
 ---
-title: Bez nazwy
+title: Cześć!
 type: about me
 tags: 
 Word of the day:
