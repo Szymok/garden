@@ -2,6 +2,10 @@
 title: "Apache Airflow"
 tags:
 - inżynieria danych
+- Airflow
+- DataOrchestration
+- WorkflowAsCode
+- MaximeBeauchemin
 ---
 
 [Airflow](https://airflow.apache.org/) to [orkiestrator danych](notes/orkiestrator%20danych.md) i pierwszy, który uczynił harmonogramowanie zadań popularnym w środowisku [Python](notes/python.md). Pierwotnie został stworzony przez [Maxime'a Beauchemina](notes/maxime%20beauchemin.md), pracującego w Airbnb.

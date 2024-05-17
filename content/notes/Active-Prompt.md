@@ -1,6 +1,10 @@
 ---
 title: Active-Prompt
 tags: 
+- ChainOfThought
+- ActivePrompt
+- LLM
+- UncertaintyMetric
 aliases:
 ---
 # Active-Prompt

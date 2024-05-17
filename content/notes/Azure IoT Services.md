@@ -2,6 +2,10 @@
 title: Azure IoT Services
 type: post
 tags: 
+- IoT
+- IoTDevices
+- Settings
+- Telemetry
 aliases:
 ---
 ## What is Internet of Things?

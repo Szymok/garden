@@ -2,6 +2,9 @@
 title: "Apache Arrow"
 tags:
 - inżynieria danych
+- ApacheArrow
+- InMemoryAnalytics
+- BigDataProcessing
 ---
 Apache Arrow to platforma rozwojowa do analizy danych przechowywanych w pamięci podręcznej. Zawiera zestaw technologii, które umożliwiają systemom big data szybkie przetwarzanie i przemieszczanie danych.
 

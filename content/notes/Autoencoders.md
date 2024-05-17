@@ -1,6 +1,10 @@
 ---
 title: Autoencoders
 tags: 
+- Autoencoders
+- NeuralNetworks
+- ImageDenoising
+- DimensionalityReduction
 aliases:
 ---
 Autoenkodery są rodzajem sieci neuronowych w których wejście i wyjście są identyczne. Są one zazwyczaj używane do odszumiania obrazu i redukcji wymiarowości.

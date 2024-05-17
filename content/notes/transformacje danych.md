@@ -1,7 +1,14 @@
 ---
-title: "transformacja danych"
+title: transformacja danych
 tags:
-- inżynieria danych
+  - inżynieria
+  - danych
+  - DataOptimization
+  - DataEnrichment
+  - DataIntegration
+  - DataTransformation
+  - augmentation
+  - ETL
 ---
 Transformacja danych to proces konwertowania danych z jednego formatu na inny. Powodem takiej transformacji może być optymalizacja danych do innego przypadku użycia niż pierwotnie zakładano, lub dostosowanie ich do wymagań przechowywania w innym systemie. Transformacja danych może obejmować kroki takie jak oczyszczanie, normalizacja, [strukturyzacja](notes/strukturyzacja%20danych.md), walidacja, sortowanie, łączenie lub [wzbogacanie](notes/data%20enrichment.md) danych.
 

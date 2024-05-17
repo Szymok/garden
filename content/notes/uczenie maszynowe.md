@@ -1,10 +1,15 @@
 ---
-title: "Uczenie Maszynowe"
+title: Uczenie Maszynowe
 tags:
-- inżynieria danych
+  - inżynieria
+  - danych
+  - PredictiveAnalytics
+  - MLAlgorithms
+  - MachineLearning
+  - ArtificialIntelligence
 aliases:
-- AI
-- nauka danych
+  - AI
+  - nauka danych
 ---
 Uczenie maszynowe (ML) to rodzaj sztucznej inteligencji (AI), która umożliwia aplikacjom oprogramowania dokładniejsze przewidywanie wyników bez konieczności programowania tego w sposób jawny. [[notes/Algorytmy|Algorytmy]] uczenia maszynowego wykorzystują dane historyczne jako dane wejściowe do przewidywania nowych wartości wyjściowych.
 

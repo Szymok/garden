@@ -4,6 +4,11 @@ tags:
   - AI
   - prompt-techniques
   - llm
+  - ChainOfThoughtPrompting
+- LLM
+- DemonstrationCreation
+- FrozenLLM
+- IntermediateReasoning
 aliases:
   - ART
 ---

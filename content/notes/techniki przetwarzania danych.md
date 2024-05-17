@@ -1,7 +1,13 @@
 ---
-title: "Jakie są Techniki Przetwarzania Danych (oparte na wierszach, kolumnach, wektorowe)"
+title: Jakie są Techniki Przetwarzania Danych (oparte na wierszach, kolumnach, wektorowe)
 tags:
-- inżynieria danych
+  - inżynieria
+  - danych
+  - DatabaseTechnology
+  - ColumnarStorage
+  - RowStorage
+  - VectorEngine
+  - DataOptimization
 ---
 Zbiór koncepcji i technologii obejmujących różne metody i optymalizacje przechowywania, pobierania i przetwarzania danych w systemach baz danych. Ta strona słownika zawiera definicje dla **przechowywania kolumnowego, przechowywania wierszowego i silników wektorowych**, które są wszystkie technikami mającymi na celu poprawę wydajności i efektywności różnych rodzajów obciążeń, takich jak operacje transakcyjne, analityczne i przetwarzanie danych na dużą skalę.
 

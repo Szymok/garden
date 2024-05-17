@@ -1,7 +1,9 @@
 ---
 title: Cześć!
 type: about me
-tags: 
+tags:
+  - aboutme
+  - "#information"
 Word of the day:
 ---
 # Napisz cos o sobie

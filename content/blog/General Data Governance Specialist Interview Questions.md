@@ -1,7 +1,9 @@
 ---
 title: General Data Governance Specialist Interview Questions
 type: blog post
-tags: 
+tags:
+  - "#aboutme"
+  - "#information"
 aliases:
 ---
 1. Czy możesz wyjaśnić znaczenie zarządzania danymi w organizacji?

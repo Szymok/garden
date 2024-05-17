@@ -1,6 +1,10 @@
 ---
 title: Adversarial Prompting
 tags: 
+- AdversarialPrompting
+- SecurityConcerns
+- LLMAttacks
+- PromptEngineering
 aliases:
 ---
 Adversarial prompting jest ważnym tematem w inżynierii promptów, ponieważ może pomóc zrozumieć ryzyko i kwestie bezpieczeństwa związane z LLM. Ważną dyscypliną jest również identyfikacja tych zagrożeń i projektowanie technik w celu ich wyeliminowania.

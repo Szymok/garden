@@ -2,6 +2,10 @@
 title: "Apache Avro"
 tags:
 - inżynieria danych
+- Avro
+- DataSerialization
+- OpenSource
+- DataExchange
 ---
 Avro to system serializacji danych typu open-source, który pomaga w wymianie danych między systemami, [językami programowania](notes/jezyki%20programowania.md) i frameworkami przetwarzania. Avro pomaga zdefiniować format binarny dla Twoich danych, jak również odwzorować go na wybrany język programowania.
 

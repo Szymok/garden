@@ -2,6 +2,12 @@
 title: Azure Big Data & Analytics Services
 type: post
 tags: 
+- BigData
+- Extraction
+- Processing
+- Analysis
+- LargeScale
+- ComplexData
 aliases:
 ---
 ## What is Big Data?

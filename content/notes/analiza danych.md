@@ -2,6 +2,7 @@
 title: "Co to jest Analiza Danych?"
 tags:
 - inżynieria danych
+- DataAnalysis
 aliases:
 - Dashboards
 - Wizualizacja

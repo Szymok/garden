@@ -2,6 +2,10 @@
 title: "Apache Druid"
 tags:
 - inżynieria danych
+- Druid
+- ColumnarStore
+- DistributedDatabase
+- OLAP
 ---
 Druid to otwarty, zorientowany na kolumny, rozproszony magazyn danych napisany w języku Java. Jest zaprojektowany do szybkiego przyjmowania ogromnych ilości danych zdarzeń i zapewniania zapytań o niskim opóźnieniu na podstawie tych danych.
 

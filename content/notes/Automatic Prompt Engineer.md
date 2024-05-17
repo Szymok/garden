@@ -4,6 +4,11 @@ tags:
   - prompt
   - AI
   - Sztuczna-Inteligencja
+  - ZhouEtAl
+- InstructionGeneration
+- NaturalLanguageGeneration
+- BlackBoxOptimization
+- LLM
 aliases:
   - APE
 ---

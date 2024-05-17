@@ -2,6 +2,10 @@
 title: "Apache Parquet"
 tags:
 - inżynieria danych
+- ApacheParquet
+- ColumnarFormat
+- DataLakeFileFormat
+- HadoopEcosystem
 ---
 Apache Parquet to darmowy i otwarty format kolumnowy typu [Data Lake File Format](notes/format%20plikow%20data%20lake.md) w ekosystemie Apache Hadoop. Jest podobny do formatu RCFile i [ORC](notes/orc.md), innych formatów plików o układzie kolumnowym w Hadoopie, i jest kompatybilny z większością frameworków przetwarzania danych wokół Hadoopa.
 
