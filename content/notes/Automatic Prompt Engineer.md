@@ -1,10 +1,10 @@
 ---
 title: Automatic Prompt Engineer
 tags:
-  - prompt
-  - AI
-  - Sztuczna-Inteligencja
-  - ZhouEtAl
+- prompt
+- AI
+- Sztuczna-Inteligencja
+- ZhouEtAl
 - InstructionGeneration
 - NaturalLanguageGeneration
 - BlackBoxOptimization
