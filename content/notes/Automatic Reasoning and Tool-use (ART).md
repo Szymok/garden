@@ -1,10 +1,10 @@
 ---
 title: Automatic Reasoning and Tool-use (ART)
 tags:
-  - AI
-  - prompt-techniques
-  - llm
-  - ChainOfThoughtPrompting
+- AI
+- prompt-techniques
+- llm
+- ChainOfThoughtPrompting
 - LLM
 - DemonstrationCreation
 - FrozenLLM
