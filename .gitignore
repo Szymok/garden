@@ -9,6 +9,6 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
-daily/
+content/daily/
 notes/courses/
 courses/
