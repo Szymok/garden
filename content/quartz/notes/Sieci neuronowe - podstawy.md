@@ -1,0 +1,154 @@
+---
+title: Sieci neuronowe - podstawy
+tags: 
+aliases:
+---
+- Porównanie wszystkich modeli (graficznych)
+    - Czy ktoś porównał większość modeli graficznych i podzielił się wynikami?
+    - Gdzie znaleźć notatnik do porównania?
+    - Jakie 3 kryteria są używane do porównania?
+- Wypróbuj nowe modele
+    - Jak wybrać i wypróbować modele z wysokimi wynikami?
+    - Gdzie znajduje się plik train.ipynb?
+    - Jak wypróbować modele w TIMM?
+    - Jak porównać je pod względem strat?
+    - Dlaczego ten model jest naprawdę imponujący?
+    - Co może nam powiedzieć nazwa modelu?
+    - Dlaczego Jeremy trenuje tylko 3 epoki? 18:58
+- Uzyskiwanie kategorii modelu
+    - Jak uzyskać etykiety lub informacje o kategoriach z modelu?
+    - Reszty dowiedzieliśmy się z ostatniego wykładu.
+- Co znajduje się w modelu
+    - Jakie dwie rzeczy są przechowywane w modelu?
+- Jak wygląda architektura modelu?
+- Parametry modelu
+    - Jak powiększyć warstwę modelu?
+    - Jak sprawdzić parametry warstwy?
+    - Jak wyglądają parametry warstwy?
+- Pytania badawcze
+    - Jakie są wagi/liczby?
+    - Jak mogą dowiedzieć się czegoś ważnego?
+    - Gdzie jest notatnik na temat działania sieci neuronowej?
+- Tworzenie ogólnej funkcji kwadratowej
+    - Jak utworzyć ogólną funkcję, aby wyprowadzić dowolną określoną funkcję kwadratową, zmieniając 3 parametry?
+    - Jak wygenerować wynik z określonej funkcji kwadratowej, zmieniając 1 parametr?
+    - Dlaczego tworzymy taką ogólną (kwadratową) funkcję z wieloma nieznanymi parametrami, zamiast bezpośrednio pisać konkretną funkcję kwadratową o określonych współczynnikach?
+- Dopasowanie funkcji przez sprawne ręce i oczy
+    - Co oznacza dopasowanie funkcji (wyszukiwanie lepszych parametrów na podstawie zbioru danych)?
+    - Jak utworzyć losowy zbiór danych?
+    - Jak dopasować ogólną funkcję kwadratową do zbioru danych, zmieniając ręcznie 3 parametry za pomocą widżetów jupyter?
+    - Jakie są ograniczenia tego ręcznego/wizualnego podejścia?
+    - Gdzie jest ten notatnik?
+- Strata: lepsze dopasowanie funkcji bez dobrych oczu
+    - Dlaczego potrzebujemy funkcji straty?
+    - Co to jest błąd średniokwadratowy?
+    - W jaki sposób strata pomaga podejściu ręcznemu/wizualnemu być bardziej dokładnym i niezawodnym?
+- Automatyzacja wyszukiwania parametrów dla lepszej straty
+    - Skąd mamy wiedzieć, w jaki sposób i o ile zaktualizować parametry, aby poprawić stratę?
+    - Czy na Khanacademy można znaleźć wystarczająco dużo materiałów pochodnych?
+    - Co dokładnie musisz wiedzieć o instrumentach pochodnych według Jeremy'ego? 34:26
+    - Co to jest nachylenie lub gradient?
+    - Czy pytorch robi dla nas pochodną lub oblicza nachylenie / gradient?
+    - Jak utworzyć funkcję, aby wyprowadzić niewielką stratę na ogólnej funkcji kwadratowej? 35:02
+    - Co musisz wiedzieć o tensorze związanym z pochodnymi według Jeremy'ego? 36:02
+    - Jak utworzyć tensor rzędu 1 (listę do przechowywania liczb) do przechowywania parametrów funkcji kwadratowej? 36:49
+    - Jak poprosić pytorch o przygotowanie obliczeń gradientów dla tych parametrów? 37:10
+    - Jak faktycznie obliczyć gradienty dla każdego parametru w oparciu o stratę osiągniętą przez tę konkretną funkcję (3 określone parametry) w stosunku do całego zbioru danych? 37:38
+    - Innymi słowy, tym razem, gdy obliczamy stratę, możemy również łatwo uzyskać gradient dla każdego parametru.
+    - Co oznacza wartość gradientu dla każdego parametru? 38:34
+    - Jak zaktualizować parametry do nowych wartości za pomocą gradientów uzyskanych przez stratę? 39:18
+    - Jak zautomatyzować powyższy proces, aby znaleźć lepsze parametry w celu osiągnięcia lepszej straty? 41:05
+    - Dlaczego ta automatyzacja nazywa się zejściem gradientowym?
+    - notebook
+- Funkcje matematyczne
+    - Oprócz zbioru danych, funkcji straty, pochodnej, co jest również bardzo ważne w znajdowaniu/obliczaniu tych parametrów?
+    - Dlaczego nie możemy po prostu użyć do tego funkcji kwadratowych?
+- ReLu: Rektyfikowana funkcja liniowa
+    - Potężne modele w świecie rzeczywistym wymagają złożonych parametrów, a także złożonych funkcji, jak złożoną funkcję możemy wymyślić?
+    - Czy możliwe jest utworzenie nieskończenie złożonej funkcji poprzez dodanie niezwykle prostych funkcji?
+    - Jak może wyglądać taka niezwykle prosta funkcja?
+    - Co to jest rektyfikowana funkcja liniowa? Jak prosta ona jest? Co to jest funkcja liniowa i która jej część jest rektyfikowana?
+    - Jak wygląda wyprostowana funkcja liniowa na wykresie?
+    - Jak ręcznie dostosować 2 parametry funkcji za pomocą widżetu?
+    - Jak może wyglądać funkcja przy różnych parametrach? 44:46
+- Nieskończenie złożona funkcja
+    - Jak potężne może być dodawanie niezwykle prostych funkcji?
+    - Jak utworzyć podwójnie rektyfikowaną funkcję liniową (double relu) i ręcznie dostosować 4 parametry za pomocą widżetu?
+    - O ile bardziej elastycznie wygląda ta podwójna funkcja relu w porównaniu do pojedynczej wyprostowanej funkcji liniowej?
+    - Czy możesz sobie wyobrazić, jak złożona może być funkcja, gdy dodane zostaną miliony wyprostowanych funkcji liniowych?
+- 2 okręgi do sowy
+    - Bardzo zwięzłe podsumowanie łączenia podstawowych pomysłów na głębokie uczenie się
+- Wykres porównujący wszystkie modele obrazów
+    - Czy można to zrobić za pomocą obliczeń brute force z prostym kodem?
+    - Czy Jeremy szuka najlepszych modeli na wykresie porównawczym modeli?
+    - Jaki jest niewłaściwy sposób korzystania z wykresu porównawczego przez studentów? 50:45
+    - W jaki sposób Jeremy korzysta z wykresu?
+    - W jaki sposób Jeremy decyduje, które modele wypróbować krok po kroku?
+- Czy mam wystarczająco dużo danych?
+    - Czy zbudowałeś już model i trenowałeś na własnym zestawie danych?
+    - Czy wynik jest wystarczająco dobry?
+    - Jaki błąd często popełnia branża DL w tej kwestii? 52:55
+    - Jaka jest sugestia Jeremy'ego?
+    - W jaki sposób i w czym może pomóc pół-nadzorowane uczenie się i rozszerzanie danych?
+    - Co z danymi etykietowanymi i nieetykietowanymi?
+- Interpretować gradienty w jednostce?
+    - O ile zmniejsza się strata, gdy parametr a wzrasta o jednostkę 1? 55:24
+- Szybkość uczenia się
+    - Dlaczego nie aktualizujemy wartości parametrów w dużych krokach?
+    - Dlaczego Jeremy rysuje funkcję kwadratową, aby odnieść się do modelu podczas powiększania bardzo blisko funkcji złożonej?
+    - Co by się stało, gdybyśmy aktualizowali parametry z dużymi wartościami? 57:19
+    - Czy duży spadek strat koniecznie wymaga dużego wzrostu wartości parametru zgodnie z kwadratową naturą?
+    - Czym jest współczynnik uczenia? Dlaczego potrzebujemy, aby był mały? Jak wybrać jego dobrą wartość? 58:07
+    - Co by się stało, gdyby współczynnik uczenia był zbyt duży?
+    - Co by się stało, gdyby był zbyt mały?
+- przerwa
+- Mnożenie macierzy
+    - Kiedy model wymaga milionów wyprostowanych funkcji liniowych, jak obliczyć je wystarczająco szybko?
+    - Co tak naprawdę jest potrzebne z algebry liniowej do wykonania DL 1:01:33
+    - Jak łatwo jest wykonać mnożenie macierzy? 1:01:51
+    - Co to jest zbiór danych i parametry w mnożeniu macierzy?
+    - Czy mnożenie macierzy wykonuje za ciebie część rektyfikowaną?
+    - W czym GPU jest dobre? 1:03:49
+- Budowanie modelu regresji w arkuszu kalkulacyjnym
+    - Wprowadzenie do konkursu Titanic na Kaggle 1:05:01
+    - Czym jest zbiór danych 1:05:18
+    - Co zrobić z plikiem train.csv?
+    - Jak nieco oczyścić zbiór danych?
+    - Jak przekształcić zbiór danych do mnożenia macierzy? 1:07:17
+    - Jak przygotować parametry do mnożenia macierzy? 1:08:50
+    - Co jest nie tak ze znacznie większą wartością kolumny "Fare" w porównaniu do innych kolumn? 1:09:35
+    - Co zrobić z wartościami "Fare" i analogicznie z wartościami "Age"?
+    - Co to jest normalizacja danych?
+    - Czy fastai wykonuje te wszystkie normalizacje za nas? Czy w przyszłości dowiemy się, jak fastai to robi?
+    - Dlaczego stosować log do wartości "Fare"? 1:10:59
+    - Dlaczego potrzebujemy równomiernie rozłożonych wartości?
+    - Jak wykonać mmult na zbiorze danych i parametrach w arkuszu kalkulacyjnym? 1:11:56
+    - Jak użyć mmult zamiast dodawania, aby dodać stałą?
+    - Jak wygląda wynik naszego modelu? 1:13:41
+    - Czy Jeremy po prostu używa regresji liniowej do modelu, nawet nie relu?
+    - Czy możemy rozwiązać regresję za pomocą zejścia gradientowego? Jak to zrobić?
+- Zbuduj sieć neuronową, dodając dwa modele regresji
+    - Co trzeba zrobić, aby przekształcić model regresji w sieć neuronową?
+    - Dlaczego nie sumujemy wyników dwóch funkcji liniowych?
+    - Dlaczego dodajemy wyniki dopiero po ich skorygowaniu?
+    - Jak wygląda predykcja modelu?
+    - Teraz musimy zaktualizować parametry dwóch funkcji liniowych, a nie tylko jednej.
+- Mnożenie macierzy przyspiesza uczenie
+    - Jak sprawić, by trening wykonywał mnożenie macierzy zamiast dodawania mnożeń liniowych w arkuszu kalkulacyjnym?
+- Uważaj! To rozdział 4
+    - Zapraszamy do wzięcia udziału w konkursie Titanic
+    - Dlaczego rozdział 4 odstraszył większość ludzi?
+    - Sposoby samodzielnego opracowania arkusza kalkulacyjnego
+- Utwórz zmienne zastępcze 3 klas
+    - Czy potrzebujemy tylko 2 kolumn/klas dla zmiennej fikcyjnej z 3 klasami?
+- Posmakuj NLP
+    - Czym zajmują się modele przetwarzania języka naturalnego?
+    - Jakie możliwości projektowe mają studenci nie mówiący po angielsku?
+    - Jakie zadania może wykonywać NLP? 1:25:57
+- Biblioteka fastai NLP vs biblioteka Hugging Face
+    - Czym różnią się te dwie biblioteki?
+    - Dlaczego w tym wykładzie używamy biblioteki transformer?
+- Praca domowa przygotowująca do następnej lekcji
+
+[
+](https://course.fast.ai/Lessons/Summaries/lesson2.html)

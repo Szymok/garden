@@ -1,0 +1,192 @@
+---
+title: NLP
+tags: 
+aliases:
+---
+- Nowa i ekscytująca zawartość
+- Dlaczego transformator Hugging Face?
+    - Czy w tym wykładzie będziemy dostrajać wstępnie wytrenowany model NLP za pomocą HF zamiast biblioteki fastai?
+    - Dlaczego warto używać transformatora zamiast biblioteki fastai?
+    - Czy Jeremy jest w trakcie integracji transformera z biblioteką fastai?
+    - Czy transformer ma taką samą warstwową architekturę jak fastai? Czy jest to wystarczająco wysoki poziom?
+    - Dlaczego dobrze jest korzystać z biblioteki dość wysokiego poziomu (nie tak wysokiego jak fastai)?
+- Zrozumienie dostrajania
+    - Czy mamy podstawy do zrozumienia szczegółów dostrajania?
+    - Jak rozumieć wstępnie wytrenowany model pod względem pewności parametrów? 03:51
+    - Czy dostrajanie próbuje zwiększyć parametry, które nie są pewne?
+- ULMFiT: pierwszy dostrojony model NLP
+    - Gdzie ten model został po raz pierwszy opracowany i nauczany?
+    - Kto napisał artykuł?
+    - Jaki jest jego wpływ?
+- Krok 1 ULMFiT: model językowy od podstaw
+    - Jaki jest pierwszy model językowy w kroku pierwszym?
+    - Co model próbuje przewidzieć? Jaki jest zbiór danych?
+    - Dlaczego to zadanie jest tak trudne? 06:10
+    - Ile wiedzy musi zrozumieć model, aby przewidywać?
+    - Jak dobrze ten pierwszy model może przewidywać w kroku pierwszym?
+- Krok 2: dopracowanie pierwszego modelu na IMDB
+    - Jak Jeremy zbudował drugi model językowy?
+    - Od czego zaczął się drugi model? Jaki był zestaw danych dla drugiego modelu?
+    - Co dobrze przewidywał drugi model?
+- Krok 3: włączenie modelu językowego do klasyfikacji
+- Etykiety modeli językowych
+    - Jakie są etykiety dla zbiorów danych pierwszych dwóch modeli?
+- Modele transformatorowe a ULMFiT
+    - Kiedy po raz pierwszy pojawiły się transformatory?
+    - Co wykorzystują modele transformatorowe?
+    - Czego transformery nie próbują przewidzieć (uzasadnienie w części 2)?
+    - Jak transformery zmodyfikowały swój zbiór danych i co przewidują? 09:41
+    - Czy ULMFiT i Transformers naprawdę różnią się znacznie w kwestii przewidywania?
+    - Jak bardzo różnią się 3 kroki między ULMFiT i Transformers?
+- Co wie model
+    - Czego mogą nauczyć się niższe i wyższe warstwy parametrów/wag? 11:08
+    - Co robimy z tymi warstwami wag dla uczenia transferowego? 13:20
+    - Artykuł Zeilera i Fergusa
+- NLP dla początkujących w konkursie Kaggle
+    - Wykorzystanie konkursu Kaggle do wprowadzenia NLP dla początkujących, czyż to nie niesamowite!
+    - Dlaczego powinniśmy traktować konkurs Kaggle bardziej poważnie? 15:06
+    - Jakie zadania w świecie rzeczywistym może wykonywać klasyfikacja NLP? 15:57
+- Zbadaj zestaw danych konkursowych
+    - Co znajduje się w zbiorze danych konkursu?
+    - Jak wygląda klasyfikacyjny zbiór danych?
+    - Co możemy przewidzieć na temat "kotwicy" i "celu"?
+    - Jaką wartość przewidzieć?
+    - Dlaczego tak naprawdę nie jest to prosta klasyfikacja?
+    - Jaki jest pożytek z "kontekstu"?
+- Strategia modelu
+    - Jak zmodyfikować zbiór danych, aby przekształcić problem podobieństwa w problem klasyfikacji?
+    - Czy zawsze powinniśmy próbować rozwiązać problem, przekształcając go w znany nam problem?
+- Przygotowanie notebooka
+    - Kiedy i jak używać GPU w Kaggle?
+    - Dlaczego Jeremy poleca Paperspace zamiast Kaggle jako stację roboczą?
+    - Jak łatwo Jeremy sprawił, że można pobrać zestaw danych Kaggle i pracować na Paperspace lub lokalnie?
+    - Jak korzystać z pythona i basha w tej samej komórce jupytera?
+- Pobieranie surowego zbioru danych do dokumentów
+    - Jak sprawdzić co znajduje się w folderze dataset?
+    - Dlaczego ważne jest, aby przeczytać wprowadzenie danych konkurencji, które jest często pomijane?
+    - Jak odczytać plik csv za pomocą pandas? 24:30
+    - Jakie są cztery kluczowe biblioteki do nauki o danych w Pythonie? 24:46
+    - Jaką inną książkę oprócz fastbooka poleca Jeremy? 25:36
+    - Dlaczego warto ją przeczytać?
+    - Jak uzyskać dostęp do zbioru danych i wyświetlić go w ramce danych? 26:39
+    - Jak "opisać" zbiór danych? Co on nam ogólnie mówi? 27:10
+    - Co na początku oznaczała dla Jeremiego liczba unikalnych próbek danych? 27:57
+    - Jak utworzyć pojedynczy ciąg znaków w oparciu o strategię modelu? 28:26
+    - Jak odwołać się do kolumny ramki danych podczas odczytu i zapisu danych kolumnowych?
+- Tokenizacja: Intro
+    - Jak przekształcić ciągi/dokumenty w liczby dla sieci neuronowej?
+    - Czy najpierw dzielimy ciąg na słowa?
+    - Jaki jest problem ze słowami w języku chińskim?
+    - Czym są słowniki w porównaniu z podzielonymi słowami?
+    - Co zrobić ze słownictwem?
+    - Dlaczego chcemy, aby słownictwo było zwięzłe, a nie zbyt duże?
+    - Co w dzisiejszych czasach ludzie wolą zamiast słów w słowniku?
+- Tokenizacja podsłów przez Transformer
+    - Jak przekształcić naszą ramkę danych w "zbiór danych" Hugging Face?
+    - Jak wygląda zbiór danych HF?
+    - Czym jest tokenizacja? Co ona robi?
+    - Dlaczego powinniśmy wybrać wstępnie wytrenowany model przed tokenizacją?
+    - Dlaczego musimy używać słownictwa modelu zamiast tworzyć własne?
+    - Jak podobne jest centrum modelu HF do TIMM? 33:10
+    - Jakie są rady Jeremy'ego dotyczące korzystania z HF model hub?
+    - Czy niektóre modele są ogólnie dobre dla większości praktycznych problemów? 34:17
+    - Kiedy modele NLP zaczęły być faktycznie bardzo przydatne? 34:35
+    - Dlaczego nie wiemy zbyt wiele o tych modelach, które potencjalnie są dobre dla większości rzeczy?
+    - Dlaczego powinniśmy wybrać mały model na początek?
+    - Jak uzyskać tokeny, słownictwo i powiązane informacje o wstępnie wytrenowanym modelu? 36:04
+    - Jak tokenizować zdanie według stylu modelu?
+    - Po podzieleniu dokumentu na listę słowników, czy zamieniamy listę słowników na listę liczb? Numeracja 38:30
+    - Czy na podstawie przykładów tokenizacji można zrozumieć, czym jest subword vs word?
+    - Jak tokenizować wszystkie dokumenty za pomocą obliczeń równoległych? 38:50
+    - Biorąc pod uwagę, że kolumna wejściowa to dokument, co znajduje się w kolumnie input_id?
+- Specjalne traktowanie danych wejściowych?
+    - Czy musimy stosować jakieś specjalne zabiegi podczas tworzenia dokumentu lub danych wejściowych ze zbioru danych?
+    - Co w przypadku, gdy dokument jest bardzo długi?
+- Uruchamianie ULMFiT na dużych dokumentach
+    - W czym ULMFiT jest najlepszy?
+    - Dlaczego ULMFiT może pracować na dużych dokumentach szybko i bez dużej ilości GPU?
+    - Jak duży jest duży dokument?
+- Niektóre niejasne dokumentacje biblioteki Transformer
+- Najważniejszy pomysł w ML
+    - Czy jest to pomysł posiadania oddzielnych zestawów danych treningowych, testowych i walidacyjnych?
+- Underfitting vs Overfitting
+    - Jak utworzyć funkcję wykreślającą funkcję wielomianową ze zmienną stopnia?
+    - Co to są wielomiany pierwszego, drugiego i trzeciego stopnia?
+    - Co Jeremy sądzi o sklearn? Kiedy go używać? 47:37
+    - Co to jest niedopasowanie? Dlaczego zbyt prosty model jest problemem lub jest systematycznie stronniczy? 48:12
+    - Co to jest overfitting? Jak wygląda nadmierne dopasowanie? 48:58
+    - Co jest przyczyną nadmiernego dopasowania?
+    - Łatwo jest wykryć niedopasowanie, ale jak odfiltrować nadmierne dopasowanie od funkcji, którą chcemy?
+- Walidacja: unikanie nadmiernego dopasowania na zestawie treningowym
+    - Jak uzyskać zestaw danych walidacyjnych i z niego korzystać?
+    - Dlaczego należy zachować ostrożność podczas korzystania z innych bibliotek niż fastai?
+- Jak i dlaczego stworzyć dobry zestaw walidacyjny?
+    - Czy wiesz, że po prostu losowe 20% zbioru danych jako zestaw walidacyjny nie jest wystarczająco dobre?
+    - Na przykład, czy nie powinieneś wybrać zestawu danych walidacyjnych, aby Twój model mógł przewidywać przyszłość, a nie przeszłość?
+    - Dlaczego konkurs Kaggle jest świetnym i rzeczywistym sposobem na docenienie korzystania z zestawu walidacyjnego w celu uniknięcia nadmiernego dopasowania?
+    - W jaki sposób zestaw walidacyjny może pomóc uniknąć nadmiernego dopasowania w 2 konkursie Kaggle na rzeczywistych problemach? 54:44
+    - Uważaj, gdy dotykasz walidacji krzyżowej 56:03
+    - Dlaczego należy zachować ostrożność podczas korzystania z gotowych narzędzi bibliotecznych do losowego wybierania zestawu walidacyjnego?
+    - Post o walidacji autorstwa Rachel
+- Zestaw testowy: unikaj nadmiernego dopasowania na zestawie walidacyjnym
+    - Do czego służy zestaw testowy?
+    - Dlaczego jest potrzebny, skoro mamy zestaw walidacyjny?
+    - Kiedy lub w jaki sposób można nadmiernie dopasować zestaw walidacyjny? lub
+    - Dlaczego zestaw walidacyjny nie wystarcza do przezwyciężenia nadmiernego dopasowania modelu?
+    - Dlaczego Kaggle przygotowuje dwa zestawy testowe? lub
+    - Dlaczego Kaggle uważa, że dwa zestawy testowe wystarczą do odfiltrowania modeli z nadmiernym dopasowaniem?
+- Funkcje metryk a funkcje strat
+    - Jak używamy zestawu walidacyjnego do sprawdzania wydajności modelu?
+    - Czy konkurs Kaggle wybierze metryki dla ciebie?
+    - Czy metryka powinna być naszą funkcją straty?
+    - Jakiego rodzaju funkcji należy użyć jako funkcji straty? (wyboista vs gładka)
+    - Tak więc, zawsze bądź świadomy: strata, którą twój model próbuje pokonać, może nie być tą samą funkcją do oceny twojego modelu.
+    - Dlaczego jedna metryka zawsze nie wystarcza i może powodować wiele problemów?
+- Metryka: nie można jej wyczuć z matematyki
+    - Czym jest korelacja Pearsona (r) i jak ją interpretować?
+    - Co może nauczyć Cię jak zachowuje się r, jego funkcja matematyczna czy jego wydajność na zbiorach danych?
+    - Wykres z 1000 losowymi punktami danych czy wykres z całym milionem punktów danych?
+    - Jak uzyskać współczynnik korelacji dla każdej zmiennej do każdej innej zmiennej? 1:06:27
+    - Jak odczytać macierz współczynnika korelacji?
+    - Jak uzyskać pojedynczy współczynnik korelacji między dwiema rzeczami?
+    - Jak określić jak dobry jest współczynnik korelacji? 1:07:45
+    - Na co zwrócić uwagę (linia tendencji, odchylenia wokół linii, wartości odstające)?
+    - Jak stworzyć przezroczystość na wykresie?
+    - Jak możemy stwierdzić na innym przykładzie, że r jest bardzo wrażliwe na wartości odstające? 1:09:47
+    - Jak bardzo usunięcie lub zepsucie kilku wartości odstających może wpłynąć na wyniki w r? lub
+    - Dlaczego trzeba uważać na każdy wiersz danych, gdy mamy do czynienia z r?
+    - Czy możemy wiedzieć, jak dobre jest r = 0,34 lub r = -0,2 bez wykresu?
+    - Nie zapomnij o prawidłowym formacie danych dla HF
+- Podział na trening i walidację HF
+    - Jak wykonać losowy podział z HF?
+    - Czy Jeremy omówi prawidłowy podział w innym notatniku?
+- Trenowanie modelu
+    - Czego używać do trenowania modelu w HF?
+    - Co to jest partia i rozmiar partii?
+    - Jak duży powinien być rozmiar partii?
+    - Jak znaleźć dobry współczynnik uczenia? (szczegóły w przyszłym wykładzie)
+    - Gdzie przygotować wszystkie argumenty treningowe w bibliotece HF?
+    - Jakiego typu zadań używamy do wyboru modelu?
+    - Jak utworzyć uczącego się lub trenera po modelu?
+    - Jak trenować?
+    - Dlaczego wyniki metryk są tak dobre już od pierwszej epoki?
+- Radzenie sobie z wartościami odstającymi
+    - Czy powinniśmy przeprowadzić drugą analizę wartości odstających, zamiast po prostu je usuwać?
+    - Czym tak naprawdę są wartości odstające w prawdziwym świecie?
+    - Czy wartości odstające zwykle nie dostarczają nam wielu zaskakująco przydatnych informacji niż w ograniczającym sensie statystycznym?
+    - Jaka jest rada Jeremy'ego na temat wartości odstających?
+- Przewidywanie i przesyłanie
+    - Jak prognozować za pomocą HF?
+    - Czy zawsze powinniśmy sprawdzać dane wyjściowe predykcji, a także dane wejściowe zestawu testowego?
+    - Jaki jest najczęstszy problem z danymi wyjściowymi? (właściwe rozwiązanie może być w następnym wykładzie)
+    - Jakie jest proste rozwiązanie?
+    - Jak przesłać swoją odpowiedź do Kaggle?
+- Ogromne możliwości w badaniach i biznesie
+- Nadużycia NLP
+    - Czy chatboty NLP mogą stworzyć 99% czatów online, które prawie nie różnią się od prawdziwych ludzi?
+    - Czy GTP-3 może tworzyć jeszcze dłuższą i bardziej wyrafinowaną prozę, która jest jeszcze bardziej podobna do ludzkiej?
+    - W jaki sposób generowane maszynowo opinie publiczne mogą wpływać na politykę publiczną lub prawo?
+- Problemy z `num_labels` w bibliotece HF
+
+[
+](https://course.fast.ai/Lessons/Summaries/lesson3.html)

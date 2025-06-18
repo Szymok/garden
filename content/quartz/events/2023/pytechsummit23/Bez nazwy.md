@@ -1,0 +1,2 @@
+[(8) Konferencja Online - Canal 1 - YouTube](https://www.youtube.com/@konferencjaonline-canal1162/featured)
+[Pytech Summit 2023 (online) | Największa konferencja o Python](https://stage.pytechsummit.pl/)
