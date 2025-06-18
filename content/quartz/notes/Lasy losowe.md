@@ -1,0 +1,68 @@
+---
+title: Lasy losowe
+tags: 
+aliases:
+---
+- Przegląd: wykład 5 i OneR od podstaw
+- Jak ręcznie zbudować model TwoR (w kierunku drzewa decyzyjnego)?
+- Jak utworzyć drzewo decyzyjne z 4 liśćmi i narysować wykres? Jak zinterpretować wykres? Dlaczego drzewo decyzyjne jest uwielbiane podczas analizy eksploracyjnej?
+- Czym jest `gini` pod względem tego, jak dobry jest podział? Jaki jest jego kod źródłowy? Jak myśleć o `gini` w kategoriach prawdopodobieństwa wielokrotnego pobrania tego samego elementu?
+- Dlaczego `mean_absolute_error` drzewa decyzyjnego jest w rzeczywistości gorsze niż wersja OneR?
+- Jak zbudować drzewo decyzyjne z 50 liśćmi? Jak dobrze to działa?
+- Jak wykonać predykcję i przygotować plik csv do przesłania do tabeli liderów kaggle? Powinniśmy zacząć od takiego modelu bazowego i codziennie go ulepszać.
+- W jaki sposób drzewo decyzyjne uwalnia cię od zmiennych zastępczych, logowania taryfy, myślenia o wartościach odstających i długim ogonie rozkładów? Jeremy zawsze używa drzew decyzyjnych do stworzenia modelu bazowego, który jest trudny do zepsucia. W jaki sposób drzewa decyzyjne zamieniają kategorie takie jak `embarked` w ciągi, a następnie liczby do sortowania? Na ilu poziomach Jeremy zwykle używa drzew decyzyjnych?
+- Jak zbudować wiele nieobciążonych i nieskorelowanych modeli (lub drzew decyzyjnych) do baggingu? To podejście do budowania wszystkich tych modeli nazywa się losowym lasem
+- Jak utworzyć losowy las ze 100 drzew decyzyjnych? Jak sprawić, by były to drzewa losowe? Jak uśrednić przewidywania wszystkich drzew i przesłać je do kaggle?
+- Co robi feature-important (ulubieniec Jeremy'ego)? Czy dba o dystrybucję lub numeryczną vs kategoryczną? Jak Jeremy go używa? Jest też niesamowita historia Jeremy'ego i feature-important dla problemu niewypłacalności kredytowej.
+- Czy zwiększanie liczby drzew zawsze zwiększa dokładność? Tak z małymi skokami. Czy wzrost zwrotu maleje? Im więcej drzew, tym dłuższy czas wnioskowania, ale można go przyspieszyć dobrym kodem. Czy Jeremy często używa więcej niż 100 drzew? rozdział 8 książki fastbook.
+- Co to jest OOB (błąd poza workiem)? Jak bagging radzi sobie z brakiem zestawu walidacyjnego, biorąc pod uwagę, że każde drzewo wykorzystuje tylko 75% zbioru danych do treningu? Czy sklearn ułatwia korzystanie z OOB?
+- Czym jest bagging w porównaniu z lasem losowym? Czy las losowy to po prostu bagging (meta model) zastosowany do danych tabelarycznych z wieloma drzewami decyzyjnymi? Czy możemy zapakować nie tylko wiele drzew decyzyjnych (do lasu losowego), ale także wiele sieci neuronowych? Czy my (ludzie fastai) to zrobimy, biorąc pod uwagę, że większość ludzi tego nie robi?
+- Jakie spostrzeżenia lub interpretacje modeli może nam dać Random Forest?
+- W jaki sposób bagging pomaga nam dowiedzieć się, jak pewni jesteśmy przewidywania wiersza danych tabelarycznych?
+- Po znalezieniu tych ważnych cech, co zrobić z tymi mniej ważnymi kolumnami lub cechami zbioru danych tabelarycznych?
+- Zapoznaj się z sekcją książki dotyczącą usuwania nadmiarowych funkcji
+- Co robi zależność częściowa? Jak każda kolumna/cecha jest powiązana ze zmienną zależną? Czy jest to specyficzne dla Random Forest? Dlaczego obliczanie częściowej zależności nie jest tak łatwe, jak się wydaje? Jak działa zależność częściowa za sceną? Czy możemy wykonać więcej niż jedną funkcję częściowej zależności w tym samym czasie?
+- Czy możesz wyjaśnić, dlaczego dokonywana jest konkretna prognoza? Czy interpreter drzewa może podać nam ważność cechy (lub ścieżkę od korzenia do liścia) przewidywania modelu dla wiersza danych?
+- Czy usunąłbyś drzewo, które nie działa dobrze? Nie, spowodowałoby to stronniczość baggingu.
+- Czy worki worków będą działać lepiej niż jeden worek? Nie, średnia ze średnich to wciąż średnia
+- Co Jeremy sądzi o znaczeniu cech Random Forest w porównaniu z innymi technikami objaśniania modelu? Kiedy stosować ważność cech i inne techniki objaśniania?
+- sekcja tabelaryczna znajduje się w rozdziale 9. Czy można przeuczyć losowy las? Nie, większa liczba drzew czyni go dokładniejszym, ale niewystarczająca liczba drzew z głębokimi poziomami może spowodować nadmierne dopasowanie lasu losowego.
+- Czy można zmylić losowy las, dodając wiele kolumn/cech szumu?
+- O co nie trzeba się martwić w przypadku lasów losowych? Interakcja w regresji logistycznej, normalizacja.
+- Co to jest wzmocnienie gradientowe? Jak działa boosting? Czy bagging i boosting są meta modelami, które można zastosować do drzew decyzyjnych? Las losowy a drzewa wzmacniane gradientowo. Czy wzmocnienie gradientowe może powodować overfit, biorąc pod uwagę, że jest dokładniejsze? Jakie jest zdanie Jeremy'ego na temat random forest vs gradient boost?
+- Wprowadzenie do walkthrus na zawodach paddy i co jest w tym takiego ekscytującego?
+- Jaki jest podstawowy proces wyodrębniony z walkthrus?
+- Co robi dla nas `fastkaggle`? Jak go zainstalować i zaktualizować? Czy może pobierać dla nas dane kaggle niezależnie od tego, czy jesteś na kaggle, czy nie?
+- Jest tak wiele korzyści, które możemy uzyskać, pracując nad konkursami kaggle, takimi jak zmuszenie cię do spojrzenia prawdzie w oczy i zaprzestania okłamywania samego siebie o tym, jak dobry jest twój model itp.
+- Na jakich dwóch rzeczach powinniśmy się skupić? Dobry zestaw walidacyjny i jak iterować w ciągu minuty. Dlaczego tak ważne jest iterowanie (opowiadanie historii)?
+- Kiedy Jeremy używa `seed=42`, a kiedy nie?
+- Czy wiesz jak pytorch i PILImage opisują kształt tensora/obrazu? Pytorch (640 wierszy x 480 kolumn) vs PILImage (480 kolumn x 640 wierszy)
+- Czy określenie kształtu lub rozmiaru obrazu wymaga dużej ilości obliczeń? W jaki sposób `fastcore.parallel` Jeremy'ego pomaga znacznie szybciej określić rozmiary wszystkich obrazów?
+- Co najłatwiej zrobić z obrazami? Co robi `item_tfms=Resize(480, method='squish'`? Co robi `batch_tfms=aug_transforms(size=128, scale=0.75`? Czy możemy użyć `dls.show_batch(max_n=6)` dla dowolnego rodzaju danych?
+- Dlaczego Jeremy zazwyczaj buduje model bardzo wcześnie i wybiera te, które mogą szybko iterować?
+- Jaki projekt stworzyli Jeremy i Thomas, aby znaleźć najlepsze modele do dostrajania? Ile różnych architektur zostało zbadanych? Jak różne są dwa zestawy danych, z których korzystali?
+- Jakie są kryteria oceny modeli? W jaki sposób są one porównywane? Którą architekturę modelu wybrał Jeremy dla swojego pierwszego modelu i dlaczego? Co Jeremy sądzi o badaniu struktury architektur modeli takich jak resnet26?
+- Jak Jeremy stworzył swój pierwszy model? W jaki sposób Jeremy użył `lr_find` do wybrania bardziej odpowiedniego tempa uczenia? Jak szybki jest pierwszy model Jeremy'ego? Dlaczego Jeremy chce to zrobić w ten sposób?
+- Czy powinniśmy przesłać model tak szybko, jak to możliwe? Jak najpierw sprawdzić format przesyłania? Jak powinniśmy zbudować dataloader dla zestawu testowego? Jak przewidzieć cały zbiór testowy i zwrócić listę indeksów wskazujących na najbardziej prawdopodobny typ choroby? Jak utworzyć słownik z `dls.vocab` i użyć funkcji map pandas do mapowania indeksów na ciągi typu choroby? Jak umieścić nasz ostateczny przetworzony wynik w ramce danych i zapisać je w pliku csv i sprawdzić wyniki z pliku csv w terminalu?
+- Jak w ogóle sprawić, by przesyłanie do kaggle było szybką automatyzacją?
+- Model bazowy, który szybko iteruje i wyszkolony w ciągu minuty pozwala nam osiągnąć 80% lub 20%, nie jest zły i stanowi dobry punkt wyjścia.
+- Jak nawet zautomatyzować proces udostępniania notatników kaggle? i dlaczego warto publikować swoje notatniki na kaggle (lub dlaczego jest to bardzo korzystne)?
+- W jaki sposób Jeremy iteruje modele z notatnikami (lokalnymi i kaggle) w naprawdę prostym, ale praktycznie skutecznym stylu?
+- Co Jeremy sądzi o AutoML? Jak Jeremy podchodzi do optymalizacji hiperparametrów? Jak Jeremy odkrył, że `squish` jest zawsze lepszy niż `cropping` w większości przypadków bez przeszukiwania siatki? Jak Jeremy szybko znalazł dobrą szybkość uczenia się bez wyszukiwania siatki?
+- Jaka jest zasada kciuka Jeremy'ego? Problem wizji komputerowej wykorzystuje modele głębokiego uczenia, losowy las (nie przejmując się GBM) dla zbioru danych tabelarycznych.
+- Dlaczego pierwszy model działa tak wolno na procesorach graficznych Kaggle? Jak sprawić, by nasz model/notebook działał szybciej na procesorach graficznych i graficznych Kaggle? Jak najpierw zmienić rozmiar wszystkich danych treningowych i umieścić je w innym folderze? O ile szybciej działał po tym Jeremy?
+- Jak bardzo pierwszy model wykorzystuje GPU Kaggle? Czy procesory Kaggle 2 zostały wyczerpane?
+- W jaki sposób Jeremy wybrał drugą architekturę modelu dla drugiej iteracji?
+- O ile lepiej nowa architektura może poprawić dokładność w porównaniu z pierwszym modelem (resnet26)?
+- Dlaczego powinniśmy przejść z ery resnet do nowej ery convnext? Jak wybrać odpowiednie modele z rodziny convnext do naszych iteracji?
+- Jak szybko iterować model z różnymi ustawieniami, umieszczając wszystko w jednej funkcji `train`? Jak szybko wypróbować zmianę rozmiaru z losowym przycinaniem bez `squish`? Czego Jeremy dowiedział się o tej iteracji modelu?
+- Jak iterować model z wypełnieniem? Co jest wyjątkowego w paddingu w porównaniu do przycinania i squisha? Jakie są jego wady? I jak dobrze poradziła sobie ta iteracja?
+- Co nasze rozszerzenie danych robi z obrazami? Jak rozumieć rozszerzenie czasu testowania (tta) w kategoriach mini-baggingu? Jak łatwo fastai sprawia, że tta działa? tta powinno działać lepiej, ale w tym konkretnym przebiegu kaggle tak nie było. Jeremy powiedział, że wróci do tego następnym razem.
+- Jak iterować model z większymi obrazami i dłuższymi epokami? O ile lepsza była ta iteracja? Do tego momentu mechanizm stojący za wszystkimi powyższymi iteracjami jest uniwersalny dla wszystkich różnych problemów
+- W jaki sposób indeksowanie pand sprawia, że mapowanie z indeksów do ciągów słownictwa jest superszybkie? i przesłać do kaggle w zwykły sposób?
+- Czy zawsze wykonujemy augmentację danych dla obrazów? Jakiego rozszerzenia danych używa tta?
+- Dlaczego Jeremy używa różnych współczynników proporcji w różnych iteracjach? Jakie są lepsze rzeczy, które Jeremy eksperymentował?
+- Dlaczego Jeremy nie stworzył obrazów bardziej przypominających obrazy, ale zamiast tego użył prostego wypełnienia (np. czarnych pasków)?
+
+[
+](https://course.fast.ai/Lessons/Summaries/lesson5.html)

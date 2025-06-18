@@ -1,0 +1,5 @@
+---
+title: Gradient
+tags: 
+aliases:
+---
