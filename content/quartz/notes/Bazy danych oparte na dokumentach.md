@@ -18,4 +18,4 @@ Po wysłaniu osadzeń dokumentów do bazy danych, są one indeksowane, gdzie są
 
 Aby zwiększyć komfort użytkowania dużych aplikacji językowych, można zaprojektować architekturę, która wykorzystuje możliwości bazy danych. Po przesłaniu podpowiedzi w celu znalezienia odpowiedniej treści, jest ona osadzana i używana do przeszukiwania dokumentu w celu zidentyfikowania podobnych słów lub połączeń. Umożliwia to pobieranie odpowiednich informacji i pomaga w znalezieniu przydatnych treści, takich jak naprawa określonego narzędzia lub rozwiązanie wyzwania.
 
-![[images/Pasted image 20230920003522.jpg]]
+![[Pasted image 20230920003522.jpg]]

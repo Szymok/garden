@@ -7,6 +7,6 @@ Zhang  zaproponowali niedawno multimodalne podejście polegające na podpowiadan
 
 Multimodalny model CoT (1B) przewyższa GPT-3.5 w teście porównawczym ScienceQA.
 
-![[images/Pasted image 20230924185937.png]]
+![[Pasted image 20230924185937.png]]
 
 [Language Is Not All You Need: Aligning Perception with Language Models](https://arxiv.org/abs/2302.14045)

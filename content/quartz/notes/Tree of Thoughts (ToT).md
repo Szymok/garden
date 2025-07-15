@@ -13,17 +13,17 @@ ToT utrzymuje Tree of Thoughts, gdzie myśli reprezentują spójne sekwencje ję
 
 Struktura ToT została zilustrowana poniżej:
 
-![[images/Pasted image 20230922001632.png]]
+![[Pasted image 20230922001632.png]]
 [Yao et el. (2023) (opens in a new tab)](https://arxiv.org/abs/2305.10601)
 Podczas korzystania z ToT różne zadania wymagają zdefiniowania liczby kandydatów i liczby myśli/kroków. Na przykład, jak pokazano w artykule, Game of 24 jest używana jako zadanie rozumowania matematycznego, które wymaga rozłożenia myśli na 3 kroki, z których każdy obejmuje równanie pośrednie. Na każdym etapie przechowywanych jest b=5 najlepszych kandydatów.
 
 Aby wykonać BFS w ToT dla zadania Game of 24, LM jest proszony o ocenę każdego kandydata na myśl jako "pewny/możliwy/niemożliwy" w odniesieniu do osiągnięcia 24. Jak stwierdzili autorzy, "celem jest promowanie poprawnych rozwiązań częściowych, które można zweryfikować w ciągu kilku prób lookahead, i wyeliminowanie niemożliwych rozwiązań częściowych opartych na zdrowym rozsądku "zbyt duży/mały", a resztę "być może" zostawic. Wartości są próbkowane 3 razy dla każdej myśli. Proces ten zilustrowano poniżej:
 
-![[images/Pasted image 20230922001646.png]]
+![[Pasted image 20230922001646.png]]
 
 Z wyników przedstawionych na poniższym rysunku wynika, że ToT znacznie przewyższa inne metody podpowiadania:
 
-![[images/Pasted image 20230922001702.png]]
+![[Pasted image 20230922001702.png]]
 
 Na wysokim poziomie, główne idee Yao et el. i Long są podobne. Oba zwiększają zdolność LLM do rozwiązywania złożonych problemów poprzez przeszukiwanie drzewa za pomocą wielorundowej konwersacji. Jedną z głównych różnic jest to, że Yao et el. wykorzystuje wyszukiwanie [DFS](DFS)/[BFS](BFS)/[beam](beam) , podczas gdy strategia przeszukiwania drzewa (tj. kiedy cofać się i o ile poziomów itd.) zaproponowana w Longa jest sterowana przez "[kontroler ToT](kontroler%20ToT)" wyszkolony poprzez [uczenie ze wzmocnieniem](Reinforcement%20learning). DFS/BFS/Beam search to ogólne strategie wyszukiwania rozwiązań bez adaptacji do konkretnych problemów. Dla porównania, kontroler ToT wyszkolony za pomocą RL może być w stanie uczyć się z nowych zestawów danych lub poprzez samodzielną grę (AlphaGo vs. wyszukiwanie siłowe), a zatem system ToT oparty na RL może nadal ewoluować i uczyć się nowej wiedzy nawet przy stałym LLM.
 

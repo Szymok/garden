@@ -11,9 +11,7 @@ Modele są trenowane na bilionach tokenów z publicznie dostępnych zbiorów dan
 
 Praca [(Hoffman et al. 2022)](https://arxiv.org/abs/2203.15556) pokazuje, że biorąc pod uwagę budżet obliczeniowy, mniejsze modele wytrenowane na znacznie większej ilości danych mogą osiągnąć lepszą wydajność niż ich większe odpowiedniki. W pracy tej zaleca się trenowanie modeli 10B na 200B tokenów. Jednak w artykule LLaMA stwierdzono, że wydajność modelu 7B nadal poprawia się nawet po 1T tokenów.
 
-![[images/Pasted image 20231007182921.png]]
-
-Niniejsza praca koncentruje się na modelach treningowych (LLaMA), które osiągają najlepszą możliwą wydajność przy różnych budżetach wnioskowania, poprzez trening na większej liczbie tokenów.
+![[Pasted image 20231007182921.png]]jsza praca koncentruje się na modelach treningowych (LLaMA), które osiągają najlepszą możliwą wydajność przy różnych budżetach wnioskowania, poprzez trening na większej liczbie tokenów.
 
 ## Możliwości i kluczowe wyniki[](https://www.promptingguide.ai/models/llama#capabilities--key-results)
 

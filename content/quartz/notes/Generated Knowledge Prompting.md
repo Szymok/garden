@@ -6,7 +6,7 @@ tags:
 aliases:
   - GKP
 ---
-![[images/Pasted image 20230922002008.png]]
+![[Pasted image 20230922002008.png]]
 
 Modele [LLM](LLM) są wciąż ulepszane, a jedna z popularnych technik obejmuje możliwość uwzględnienia wiedzy lub informacji, aby pomóc modelowi w dokonywaniu dokładniejszych prognoz.
 

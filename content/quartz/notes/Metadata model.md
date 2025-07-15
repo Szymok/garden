@@ -40,7 +40,7 @@ Person have a array of role references and during deleting the person the refere
 [[notes/Custom Filter]]
 
 Chaning Metadata changes application behavior. Changing Meta Metadata changes application structure. 
-![[images/Pasted image 20250401144757.png]]
+![[Pasted image 20250401144757.png]]
 Metadata Driven
-![[images/Pasted image 20250401144816.png]]
+![[Pasted image 20250401144816.png]]
 [[notes/Metadata Sync]]

@@ -19,20 +19,20 @@ Python 3.7+; validate it with Pydantic.
 - Aby było bezpieczniej
 - Aby przyj emniej się pracowało
 ### BaseModel, model—dump, constrain'y pól
-![[images/Pasted image 20240105122325.png]]
-![[images/Pasted image 20240105122802.png]]
+![[Pasted image 20240105122325.png]]
+![[Pasted image 20240105122802.png]]
 #### Model dumping
-![[images/Pasted image 20240105122924.png]]
-![[images/Pasted image 20240105144339.png]]
+![[Pasted image 20240105122924.png]]
+![[Pasted image 20240105144339.png]]
 
 ### error handling i przetwarzanie error message'y
-![[images/Pasted image 20240105122506.png]]
-![[images/Pasted image 20240105122654.png]]
+![[Pasted image 20240105122506.png]]
+![[Pasted image 20240105122654.png]]
 modele złożone
 ### RootMode1
-![[images/Pasted image 20240105144628.png]]
+![[Pasted image 20240105144628.png]]
 ### custom validators
-![[images/Pasted image 20240105144942.png]]
+![[Pasted image 20240105144942.png]]
 generics
 TypeAdapter
 custom types

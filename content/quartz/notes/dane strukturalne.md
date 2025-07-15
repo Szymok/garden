@@ -30,7 +30,7 @@ Prostym przykładem danych niestrukturalnych jest ciąg zawierający interesują
 
 ## Formatowanie danych niestrukturalnych
 
-Przekształcenie danych niestrukturalnych w strukturalne można przeprowadzić podczas etapu [transformacji danych](notes/transformacje%20danych.md) w procesie [ETL](notes/etl.md) lub [ELT](ELT.md). 
+Przekształcenie danych niestrukturalnych w strukturalne można przeprowadzić podczas etapu [transformacji danych](Transformacja%20danych.md) w procesie [ETL](ETL.md) lub [ELT](ELT.md). 
 
 Na przykład, aby efektywnie wykorzystać dane niestrukturalne podane w poprzednim przykładzie, można by je przekształcić na dane strukturalne, takie jak poniżej:
 

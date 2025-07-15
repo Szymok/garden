@@ -28,7 +28,7 @@ tags:
 
 # 💡 Kluczowe wnioski
 - Co się dzieje, gdy dziennikarze zajmują się popularyzacją nauki
-![[images/Pasted image 20241207123054.png]]
+![[Pasted image 20241207123054.png]]
 
 # 🤔 Osobista refleksja
 - Co było najbardziej wartościowe?

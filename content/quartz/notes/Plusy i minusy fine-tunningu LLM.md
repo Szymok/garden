@@ -4,4 +4,4 @@ type: post
 tags: 
 aliases:
 ---
-![[images/Pasted image 20231123143658.png]]
+![[Pasted image 20231123143658.png]]

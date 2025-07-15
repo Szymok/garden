@@ -24,7 +24,7 @@ aliases:
 
 ## 👽 Brudnopis
 Solution Architecture
-![[images/Pasted image 20250401145516.png]]
+![[Pasted image 20250401145516.png]]
 To affect changes in metadata driven applications, you need to manipulate metadata 
 - This often means synchronization of multiple metadata systems 
 Challenges when syncing data between applications 

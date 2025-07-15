@@ -10,40 +10,40 @@ Podczas prezentacji opowiemy o procesie tworzenia aplikacji z wykorzystaniem gł
 # Notes
 
 ### Architektura
-![[images/Pasted image 20240105151020.png]]
+![[Pasted image 20240105151020.png]]
 
 ### Podstawowy lancuch
-![[images/Pasted image 20240105151221.png]]
+![[Pasted image 20240105151221.png]]
 Tworzymy szablon prompta, który przyjmuje zmiennq {foo} tą zmienną będziemy mogli potem uzupełnić podczas wywołania modelu. Nastepnie definiujemy model, ktorego bedziemy uzywac oraz lancuch.
 
 Defininiujemy łańcuch składający się z prompta + modelu "l” (pipe) oznacza że wynik jednej operacji jest przekazywany do drugiej W tym przypadku prompt jest przekazywany do modelu
 
-![[images/Pasted image 20240105151351.png]]
+![[Pasted image 20240105151351.png]]
 ### Dodanie pamieci do modelu
-![[images/Pasted image 20240105151427.png]]
+![[Pasted image 20240105151427.png]]
 Nasz prompt składa się z 3 elementów
 • Wiadomości systemowej - czyli instrukcji
 • Placeholdera - miejsca gdzie trafiq poprzednie wiadomości
 • Inputu - miejsca na na nowq wiadomość od użytkownika
 
-![[images/Pasted image 20240105151454.png]]
+![[Pasted image 20240105151454.png]]
 Tworzymy obiekt, który będzie trzymać naszq pamięć
-![[images/Pasted image 20240105151536.png]]
+![[Pasted image 20240105151536.png]]
 Przypisujemy do prompta zmiennq history, która jest ładowana z pamięci
 Wywolanie:
-![[images/Pasted image 20240105151600.png]]
+![[Pasted image 20240105151600.png]]
 Zapisywanie konwersacji do MongoDB w postaci JSONow
 ### Wykorzystanie bazy wiedzy
-![[images/Pasted image 20240105152335.png]]
+![[Pasted image 20240105152335.png]]
 
 Podobienstwo semantyczne - 
 
-![[images/Pasted image 20240105153717.png]]
+![[Pasted image 20240105153717.png]]
 Tworzymy bazę wiedzy w podstaci bazy wektorowej
 Tworzymy retriever z bazy wiedzy - obiekt który wywołany będzie zwracać
 najabardziej podobne do zapytania dokumenty
 Definiujemy nasz prompt, który ma placeholder na kontekst
-![[images/Pasted image 20240105154012.png]]
+![[Pasted image 20240105154012.png]]
 Na początku działa retriever - przypisuje do zmiennej "context" najbardziej
 podobny dokument do zapytania
 
@@ -62,4 +62,4 @@ podjęciu działania. Na przykład, jeśli działanie modelu polegało na wyszuk
 Wikipedii, obserwacją może być znaleziona informacja. Te nowe informacje stają się następnie częścią
 kontekstu, którego model używa do następnej myśli.
 
-![[images/Pasted image 20240105155009.png]]
+![[Pasted image 20240105155009.png]]

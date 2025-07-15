@@ -8,9 +8,9 @@ type: event
 
 # Notes
 # UART
-Poszukujemy pinów na plytce. ![[images/Pasted image 20240305171758.png]]
+Poszukujemy pinów na plytce. ![[Pasted image 20240305171758.png]]
 Nastepnie miernik ustawiamy na test ciaglosci. Czarny do masy, a czerwony do kazdego z pinow po kolei. Nastepnie przelaczamy na 20 V i sprawdzamy ponownie. Jezeli mamy wynik 3,3 to jest to zasilanie, ktore wykluczamy. Linia RX odpowiada za otrzymywane pakiet y do urzadzenia. Bedzie zawsze miala wartosc 0. Za nadawanie danych z urzadzenia do konwertera odpowiada linia, gdzie wystepuja wahania.
-![[images/Pasted image 20240305173220.png]]
+![[Pasted image 20240305173220.png]]
 Baud rate musi być taki sam dla nadajnika jak i odbiornika! Najczęściej używane prędkości: 110, 300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 38400, 57600, 115200, 128000
 Picocom
 # Rekonesans

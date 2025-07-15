@@ -8,7 +8,7 @@ tags:
 aliases:
   - CoT
 ---
-![[images/Pasted image 20230922002358.png]]
+![[Pasted image 20230922002358.png]]
 
 Podpowiedzi typu chain-of-thought (CoT) umożliwiają złożone rozumowanie poprzez pośrednie etapy rozumowania. Można je połączyć z [Few-Shot Prompting](Few-Shot%20Prompting), aby uzyskać lepsze wyniki w bardziej złożonych zadaniach, które wymagają rozumowania przed udzieleniem odpowiedzi.
 
@@ -42,7 +42,7 @@ Należy pamiętać, że autorzy twierdzą, że jest to zdolność emergentna, kt
 
 ## [Zero-shot COT Prompting](Zero-shot%20COT%20Prompting)
 
-![[images/Pasted image 20230922002447.png]]
+![[Pasted image 20230922002447.png]]
 
 Jednym z najnowszych pomysłów, który pojawił się niedawno, jest idea [zero-shot CoT](Zero-Shot%20CoT), która zasadniczo polega na dodaniu "Pomyślmy krok po kroku" do oryginalnego prompta. Wypróbujmy prosty problem i zobaczmy, jak działa model:
 
@@ -87,4 +87,4 @@ Prostą heurystyką może być długość pytania (np. 60 tokenów) i liczba kro
 
 Proces został zilustrowany poniżej:
 
-![[images/Pasted image 20230922002546.png]]
+![[Pasted image 20230922002546.png]]

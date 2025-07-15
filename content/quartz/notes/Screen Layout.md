@@ -23,7 +23,7 @@ aliases:
 ## 📌 Źródła
 
 ## 👽 Brudnopis
-![[images/Pasted image 20250331175345.png]]
+![[Pasted image 20250331175345.png]]
 [[notes/widget]]
 [[notes/card]]
 [[notes/property]]

@@ -34,11 +34,11 @@ Słownik Danych ciągle się rozwija, a poniżej wymieniam kilka kluczowych punk
 |-----------------------|-----------------------------------------------------------------------------------------------|
 | Inżynieria Danych      | [Koncepty Inżynierii Danych](Koncepcje%20Inżynierii%20Danych.md), [Przewodniki po Inżynierii Danych](Przewodniki%20po%20Inżynierii%20Danych.md), [Cykle Życia Inżynierii Danych](notes/cykle%20życia%20data%20engineering.md) |
 | Architektura Danych          | [Magazyny Danych](Data%20Warehouse.md), [Jeziora Danych](notes/data%20lake), [Lakehouse](notes/data%20lakehouse) |
-| Przetwarzanie Danych       | [ELT](ELT.md), [ETL](notes/etl), [EtLT](notes/etlt.md), [Reverse ETL](notes/reverse%20etl), [Integracja Danych](notes/integracja%20danych.md) |
+| Przetwarzanie Danych       | [ELT](ELT.md), [ETL](ETL.md), [EtLT](EtLT.md), [Reverse ETL](Odwrócony%20ETL.md), [Integracja Danych](notes/integracja%20danych.md) |
 | Formaty Danych          | [Apache Avro](notes/apache%20avro), [Apache Parquet](notes/apache%20parquet), [Apache ORC](notes/apache%20orc.md) |
-| Analiza Danych, BI    | [Analiza Danych](notes/analiza%20danych.md), [Business Intelligence](notes/business%20intelligence), [Narzędzia Business Intelligence](notes/narzędzia%20business%20intelligence.md) |
+| Analiza Danych, BI    | [Analiza Danych](notes/analiza%20danych.md), [Business Intelligence](Business%20Intelligence.md), [Narzędzia Business Intelligence](Narzędzia%20Business%20Intelligence.md) |
 | Sztuczna Inteligencja | [Uczenie Maszynowe](notes/uczenie%20maszynowe.md) |
-| Programowanie| [Programowanie Funkcyjne](notes/programowanie%20funkcyjne.md), [Funkcyjna Inżynieria Danych](notes/funkcyjny%20data%20engineering.md) |
+| Programowanie| [Programowanie Funkcyjne](Programowanie%20Funkcyjne.md), [Funkcyjna Inżynieria Danych](notes/funkcyjny%20data%20engineering.md) |
 
 ## Twój wkład
 

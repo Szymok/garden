@@ -10,9 +10,9 @@ Model na produkcji, to model, który przeżyje. Niezależnie czy pracujemy jako 
 # Notes
 # Cykl rozwoju usługi opartej na danych
 
-![[images/Pasted image 20231214195921.png]]
+![[Pasted image 20231214195921.png]]
 Najpierw badania, pozniej wdrozenia
-![[images/Pasted image 20231214200034.png]]
+![[Pasted image 20231214200034.png]]
 
 
 Kroki do wdrożenia

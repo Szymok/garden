@@ -89,7 +89,7 @@ Moiliwoéé zarzqdzania nimi
 • Bonus: Decyzja Al jest wyjasnialna
 
 # Architektura
-![[images/Pasted image 20231209132941.png]]
+![[Pasted image 20231209132941.png]]
 
 # Inwestycje zwiazanie z generatywna AI
 Opiata: naliczana poprzez wykorzystanie tzw. tokenöw
@@ -121,9 +121,9 @@ https://bbycroft.net/llm
 
 # Wejscie w glab modeli
 Mechanistic Interpretability
-![[images/Pasted image 20231209142257.png]]
+![[Pasted image 20231209142257.png]]
 
-![[images/Pasted image 20231209142426.png]]
+![[Pasted image 20231209142426.png]]
 Artykul architektura GPT3 na serwetce
 
 Mozna pisac prompty w formie BASE64

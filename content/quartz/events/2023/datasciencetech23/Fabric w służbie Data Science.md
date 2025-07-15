@@ -62,5 +62,5 @@ All Fabric engines have been redesigned and optimized for delta/parquet as their
 Sharing data in OneLake is as easy as sharing files in OneDrive, removing the needs for data duplication With shortcuts, data throughout OneLake can be composed together without any data movement Shortcuts also allow instant linking of data already existing in Azure and in other clouds, without any data duplication and movement, making OneLake the first mufti-cloud data lake With support for industry standard APIs, OneLake data can be directly accessed by any application or service
 
 # Mirrorying in Fabric
-![[images/Pasted image 20231215150012.png]]
+![[Pasted image 20231215150012.png]]
 Fabric Mirroring enables adding existing databases and data warehouses to Fabric without any ETL A full editing experience of the source database is available for the Mirrored database. Data is replicated into OneLake in Delta format and kept up-to-date in near-real-time. All the Fabric experiences instantly work with the OneLake replica. Analysts and Data Scientists can work with real-time data. The replica protects operational databases from analytical queries.
