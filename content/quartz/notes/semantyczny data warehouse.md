@@ -22,7 +22,7 @@ Data Warehouse Semantyczny próbuje rozwiązać następujące problemy:
 3. Producentów nie obowiązuje (chociaż powinno) jakość danych. Inżynierowie danych nie powinni być pośrednikami w konflikcie między konsumentami.
 4. Brak semantyki i kontekstu. Deweloperzy danych spędzają dni lub tygodnie, próbując zrozumieć, jakie dane mamy, co oznaczają, jak się odnoszą do usług i czy dane można ufać.
 5. Modelowanie danych nie było obywatelem pierwszej klasy. Modelowanie było trudne do zrealizowania (z powodu #4) i w niektórych przypadkach niemożliwe ze względu na brak danych.
-6. Nasz [Data Warehouse](notes/data%20warehouse.md) nie odzwierciedlał rzeczywistego świata. Zamiast tego był składnikiem do produkcji usług i interfejsów API stron trzecich.
+6. Nasz [Data Warehouse](Data%20Warehouse.md) nie odzwierciedlał rzeczywistego świata. Zamiast tego był składnikiem do produkcji usług i interfejsów API stron trzecich.
 7. Brak interoperacyjności z powodu narzędzi, które nie "mówią tym samym językiem". Mamy wiele produktów, z których każdy wymaga swojego środowiska modelowania i braku wspólnego zrozumienia pojęć biznesowych.
 8. [Zarządzanie Danymi](notes/data%20governance.md) jest istotne, ale firmy go odrzucają, jeśli staje się przeszkodą. Nie możemy skalować naszego zespołu danych poprzez złożoność.
 

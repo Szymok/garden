@@ -13,7 +13,7 @@ Podczas gdy poniższy obraz ilustruje podejście ELT do integracji danych:
 
 ![](images/elt-tool.png)
 
-ETL pierwotnie był używany do [Magazynowania Danych](notes/data%20warehouse.md), a ELT do tworzenia [Jeziora Danych](notes/data%20lake.md).
+ETL pierwotnie był używany do [Magazynowania Danych](Data%20Warehouse.md), a ELT do tworzenia [Jeziora Danych](notes/data%20lake.md).
 
 ## Wady ETL w porównaniu z ELT
 

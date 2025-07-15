@@ -11,7 +11,7 @@ Oto kilka przewodników po Inżynierii Danych, które pomogą Ci nauczyć się [
 	- Jak radzić sobie z problemami związanych z [jakość danych](notes/jakość%20danych) poprzez wykrywanie, rozumienie, naprawianie i redukowanie.
 - **[Przewodnik po Jeziorze Danych / Lakehouse](https://airbyte.com/blog/data-lake-lakehouse-guide-powered-by-table-formats-delta-lake-iceberg-hudi)**
 	- i dlaczego potrzebujemy [Jeziora Danych (Data Lake)](notes/data%20lake.md)
-	- Różnice między [Jeziorami Danych z Magazynem (Lakehouse)](notes/data%20lake%20z%20magazynem.md) a [Magazynem Danych (Data Warehouse)](notes/data%20warehouse.md)
+	- Różnice między [Jeziorami Danych z Magazynem (Lakehouse)](notes/data%20lake%20z%20magazynem.md) a [Magazynem Danych (Data Warehouse)](Data%20Warehouse.md)
 	- Składniki jeziora danych
 		1. [Warstwa Przechowywania (Storage Layer)](notes/storage%20layer.md)
 		2. [Format Plików w Jeziorze Danych (Data Lake File Format)](notes/format%20plików%20data%20lake.md)

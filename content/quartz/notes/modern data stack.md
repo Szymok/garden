@@ -15,5 +15,5 @@ Celem MDS jest uzyskanie wglądu w dane przy użyciu najlepiej dopasowanych narz
 > Pojawił się już nowy termin [ngods (nowa generacja otwartego stosu danych)](https://blog.devgenius.io/modern-data-stack-demo-5d75dcdfba50). Lub *DataStack 2.0* w ostatnim artykule na blogu Dagstera: [Evolution IQ Case Study](https://dagster.io/blog/evolution-iq-case-study).
 
 ## Przyszłość MDS
-Jeśli spojrzymy nieco w przyszłość, Barr Moses przedstawia w swoim artykule [Co czeka w przyszłości na Nowoczesny Stos Danych?](https://www.montecarlodata.com/blog-the-future-of-the-modern-data-stack/) więcej funkcji, takich jak udostępnianie danych, wszechstronna [Gospodarka Danych](notes/data%20governance.md), wyrównane [Zasób Danych](notes/data%20asset.md) i [Hurtownia Danych](notes/data%20warehouse.md), oraz nowsza ewolucja analizy predykcyjnej:
+Jeśli spojrzymy nieco w przyszłość, Barr Moses przedstawia w swoim artykule [Co czeka w przyszłości na Nowoczesny Stos Danych?](https://www.montecarlodata.com/blog-the-future-of-the-modern-data-stack/) więcej funkcji, takich jak udostępnianie danych, wszechstronna [Gospodarka Danych](notes/data%20governance.md), wyrównane [Zasób Danych](notes/data%20asset.md) i [Hurtownia Danych](Data%20Warehouse.md), oraz nowsza ewolucja analizy predykcyjnej:
 ![](images/future-modern-data-stack.png)

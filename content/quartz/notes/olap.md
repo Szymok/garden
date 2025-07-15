@@ -4,7 +4,7 @@ tags:
 - inżynieria danych
 ---
 
-OLAP to skrót od **Online Analytical Processing** (Przetwarzanie Analityczne w Trybie Online). OLAP wykonuje wielowymiarową analizę danych biznesowych i umożliwia złożone obliczenia, analizę trendów oraz zaawansowane [modelowanie wymiarow](notes/modelowanie%20wymiarow.md). **Sześcian OLAP** to baza danych wielowymiarowa zoptymalizowana dla potrzeb [hurtowni danych](notes/data%20warehouse.md) i aplikacji przetwarzania analitycznego online (OLAP).
+OLAP to skrót od **Online Analytical Processing** (Przetwarzanie Analityczne w Trybie Online). OLAP wykonuje wielowymiarową analizę danych biznesowych i umożliwia złożone obliczenia, analizę trendów oraz zaawansowane [modelowanie wymiarow](notes/modelowanie%20wymiarow.md). **Sześcian OLAP** to baza danych wielowymiarowa zoptymalizowana dla potrzeb [hurtowni danych](Data%20Warehouse.md) i aplikacji przetwarzania analitycznego online (OLAP).
 
 Sześcian OLAP to metoda przechowywania danych w formie wielowymiarowej, zazwyczaj w celu raportowania. W sześcianach OLAP dane ([Miary](notes/miara.md)) są kategoryzowane według [wymiarów](notes/wymiary.md).
 

@@ -8,7 +8,7 @@ Niezawodne koncepcje, które zbadamy:
 
 | Tematy Inżynierii Danych                         format%20tabel%20data%20lake                    |
 |----------------------------------------------------------------------------------------------|
-| [Magazyn Danych (Data Warehouse)](notes/data%20warehouse.md), [Jezioro Danych (Data Lake)](notes/data%20lake.md), [Jezioro Danych z Magazynem (Data Lakehouse)](notes/data%20lakehouse.md) |
+| [Magazyn Danych (Data Warehouse)](Data%20Warehouse.md), [Jezioro Danych (Data Lake)](notes/data%20lake.md), [Jezioro Danych z Magazynem (Data Lakehouse)](notes/data%20lakehouse.md) |
 | [Warstwa Przechowywania (Storage Layer)](notes/storage%20layer.md), [Format Plików w Jeziorze Danych (Data Lake File Format)](notes/format%20plikow%20data%20lake.md), [Format Tabel w Jeziorze Danych (Data Lake Table Format)](notes/format%20tabel%20data%20lake.md) |
 | [Katalog Danych (Data Catalog)](notes/katalog%20danych.md)                                      |
 | [Nowoczesny Stos Danych (Modern Data Stack)](notes/modern%20data%20stack.md), [Otwarty Stos Danych (Open Data Stack)](notes/open%20data%20stack.md) |
