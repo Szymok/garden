@@ -17,4 +17,4 @@ W porównaniu do istniejących ról byłaby to połączona rola **inżyniera opr
 
 Dlatego też potrzebne są bardziej programistyczne umiejętności, podobne do inżynierii oprogramowania. **Obecnie rosnącym językiem w tej dziedzinie jest [Python](notes/python.md)**, który jest wykorzystywany zarówno w inżynierii danych przy użyciu narzędzi takich jak [[Apache Airflow]], [Dagster](Dagster), [[notes/Prefect]], jak i w naukach o danych za pomocą potężnych bibliotek.
 
-Jako inżynier danych korzystasz przede wszystkim z [SQL](notes/sql.md) prawie do wszystkiego, z wyjątkiem sytuacji, gdy używasz danych zewnętrznych z API. W takim przypadku wykorzystasz narzędzia [ELT](notes/elt.md) lub napiszesz pewne [[notes/potoki przetwarzania danych|potoki danych]] przy użyciu wymienionych wyżej narzędzi.
+Jako inżynier danych korzystasz przede wszystkim z [SQL](notes/sql.md) prawie do wszystkiego, z wyjątkiem sytuacji, gdy używasz danych zewnętrznych z API. W takim przypadku wykorzystasz narzędzia [ELT](ELT.md) lub napiszesz pewne [[notes/potoki przetwarzania danych|potoki danych]] przy użyciu wymienionych wyżej narzędzi.

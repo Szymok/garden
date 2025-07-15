@@ -31,7 +31,7 @@ Chad Sanderson mówi w [Data Contract Battle Royale w/ Chad Sanderson vs Ethan A
 	- Umowa danych to podobne porozumienie, ale dotyczy ono **osoby produkującej dane i osoby konsumującej dane**, aby dostarczyć określony zestaw danych, który zwykle obejmuje schemat i jakiś mechanizm egzekwowania.
 - Różnica między kontraktem danych a produktem danych:
 	- **Kontrakt danych**, który mówi *co* to są dane i *jak* zapewnimy ich jakość.
-	- **[Produkt Danych (Data Product)](notes/produkt%20danych.md)**, który mówi *dlaczego* potrzebujemy tych danych.
+	- **[Produkt Danych (Data Product)](Produkt%20Danych.md)**, który mówi *dlaczego* potrzebujemy tych danych.
 
 Ethan Aaron twierdzi, że jego problem z kontraktami danych polega na tym, że skupiasz się na zbyt wczesnym definiowaniu interfejsu/kontraktu. Na przykład, jeśli dużo zadań jest wykonywanych przez kilka zespołów lub osób, mamy kontrakt w celu uzgodnienia interfejsu. Argumentowałbym, że to dokładnie są produkty danych, a zamiast uzgadniać jakiś sztuczny kontrakt, decydujemy się na produkt, aby narzędzia i zespoły mogły być odrębne.
 

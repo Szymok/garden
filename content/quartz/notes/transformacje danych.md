@@ -13,7 +13,7 @@ tags:
 Transformacja danych to proces konwertowania danych z jednego formatu na inny. Powodem takiej transformacji może być optymalizacja danych do innego przypadku użycia niż pierwotnie zakładano, lub dostosowanie ich do wymagań przechowywania w innym systemie. Transformacja danych może obejmować kroki takie jak oczyszczanie, normalizacja, [strukturyzacja](notes/strukturyzacja%20danych.md), walidacja, sortowanie, łączenie lub [wzbogacanie](notes/data%20enrichment.md) danych.
 
 ## Jak jest wykonywana transformacja danych
-Dane często są przekształcane jako część podejścia [ETL (Extract, Transform, Load)](notes/etl.md) lub [ELT (Extract, Load, Transform)](notes/elt.md) do [integracji danych](notes/integracja%20danych.md).
+Dane często są przekształcane jako część podejścia [ETL (Extract, Transform, Load)](notes/etl.md) lub [ELT (Extract, Load, Transform)](ELT.md) do [integracji danych](notes/integracja%20danych.md).
 
 Zobacz [ETL vs. ELT](notes/etl%20vs%20elt.md) dla porównania tych dwóch podejść.
 
