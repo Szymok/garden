@@ -3,7 +3,7 @@ title: "ETL kontra ELT"
 tags:
 - inżynieria danych
 ---
-[ETL](notes/etl.md) (Wyodrębnianie, Przekształcanie i Ładowanie) oraz [ELT](notes/elt.md) (Wyodrębnianie, Ładowanie i Przekształcanie) to dwa paradygmaty przenoszenia danych z jednego systemu do drugiego. Główną różnicą między nimi jest to, że w przypadku podejścia ETL dane są przekształcane przed załadowaniem ich do systemu docelowego. Z drugiej strony, w przypadku ELT wszelkie wymagane przekształcenia są wykonywane po zapisaniu danych do docelowego miejsca i są wtedy wykonywane _wewnątrz_ docelowego systemu - często za pomocą poleceń SQL. Różnica między tymi podejściami jest łatwiejsza do zrozumienia poprzez wizualne porównanie obu podejść.
+[ETL](notes/etl.md) (Wyodrębnianie, Przekształcanie i Ładowanie) oraz [ELT](ELT.md) (Wyodrębnianie, Ładowanie i Przekształcanie) to dwa paradygmaty przenoszenia danych z jednego systemu do drugiego. Główną różnicą między nimi jest to, że w przypadku podejścia ETL dane są przekształcane przed załadowaniem ich do systemu docelowego. Z drugiej strony, w przypadku ELT wszelkie wymagane przekształcenia są wykonywane po zapisaniu danych do docelowego miejsca i są wtedy wykonywane _wewnątrz_ docelowego systemu - często za pomocą poleceń SQL. Różnica między tymi podejściami jest łatwiejsza do zrozumienia poprzez wizualne porównanie obu podejść.
 
 Poniższy obraz ilustruje podejście ETL do [integracji danych](notes/integracja%20danych.md):
 

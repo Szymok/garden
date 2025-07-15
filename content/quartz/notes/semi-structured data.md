@@ -19,7 +19,7 @@ W przeciwieństwie do danych półstrukturalnych, [dane strukturalne](notes/dane
 
 ## Przekształcanie danych półstrukturalnych w dane strukturalne
 
-Przekształcenie danych półstrukturalnych w dane strukturalne jest często stosunkowo prostym procesem. Przekształcenie danych półstrukturalnych w dane strukturalne jest zwykle wykonywane podczas etapu [transformacji danych](notes/transformacje%20danych.md) w procesie [ETL](notes/etl.md) lub [ELT](notes/elt.md).
+Przekształcenie danych półstrukturalnych w dane strukturalne jest często stosunkowo prostym procesem. Przekształcenie danych półstrukturalnych w dane strukturalne jest zwykle wykonywane podczas etapu [transformacji danych](notes/transformacje%20danych.md) w procesie [ETL](notes/etl.md) lub [ELT](ELT.md).
 
 Na przykład, jeśli włączona jest normalizacja, to Airbyte automatycznie przekształci przechowywane w polu `_airbyte_data` dane JSON w tabelę, która będzie wyglądać następująco:
 

@@ -1,16 +1,63 @@
 ---
-title: "ELT"
+
+title: ELT  
+created: 2025-07-15  
+status:  
+category: Inżynieria danych  
+difficulty: podstawowy  
+language: pl  
 tags:
-- inżynieria danych
+
+- ELT
+- integracja danych
+- hurtownia danych
+- dbt  
+aliases:
+- Extract Load Transform
+
 ---
-ELT (Extract, Load, and [Transform](notes/transformacje%20danych.md)) to podejście do [integracji danych](notes/integracja%20danych.md), które polega na wydobyciu (E) danych z systemu źródłowego, załadowaniu (L) surowych danych do systemu docelowego przed przekształceniem (T) tych danych. Innymi słowy, w podejściu ELT przekształcenie (T) danych jest wykonywane _wewnątrz_ docelowego [Magazynu Danych](Data%20Warehouse.md) po załadowaniu danych.
 
-ELT różni się od bardziej tradycyjnego podejścia [ETL](notes/etl.md) do integracji danych, w którym dane są przekształcane przed dotarciem do celu. Zobacz [ETL kontra ELT](notes/etl%20vs%20elt.md) po więcej szczegółów porównania tych podejść.
+# 🎯 Definicja
 
-Przejście od paradygmatu ETL do paradygmatu ELT stało się możliwe dzięki spadającym kosztom obliczeń i przechowywania w chmurze oraz pojawieniu się magazynów danych opartych na chmurze, takich jak Redshift, BigQuery czy Snowflake.
+**ELT (Extract, Load, Transform)** to podejście do integracji danych, w którym najpierw wydobywa się dane z systemów źródłowych, następnie ładuje się je w surowej postaci do magazynu danych lub hurtowni, a dopiero potem przekształca (transformuje) już w systemie docelowym. Transformacje wykonywane są na dużych wolumenach danych bezpośrednio w hurtowni, co pozwala na pełne wykorzystanie jej mocy obliczeniowej.
 
-Następujący obraz ilustruje podejście ELT do integracji danych -- na tym diagramie [dbt](https://docs.getdbt.com/docs/introduction) tworzy i zarządza SQL-em używanym do przekształcania danych w docelowym miejscu:
+# 🔑 Kluczowe punkty
 
-![](images/elt-tool.png)
+- **Kolejność operacji:** Najpierw ekstrakcja i ładowanie surowych danych, później transformacja w hurtowni.
+- **Wydajność i skalowalność:** Transformacje korzystają z zasobów magazynów danych w chmurze (np. Snowflake, BigQuery).
+- **Automatyzacja i modularność:** Łatwiejsza automatyzacja, wersjonowanie i audyt transformacji dzięki narzędziom takim jak dbt.
+- **Nowoczesny standard:** ELT wypiera klasyczne ETL w środowiskach opartych o chmurę, szczególnie przy dużej ilości danych.
 
-ELT jest również powiązane z [Odwróconym ETL](notes/reverse%20etl.md), o którym możesz dowiedzieć się więcej pod adresem: [Wyjaśnienie Odwróconego ETL](https://airbyte.com/blog/reverse-etl#so-what-is-a-reverse-etl) lub [Airbyte.com](https://airbyte.com).
+# 📚 Szczegółowe wyjaśnienie
+
+## Mechanizm działania ELT
+
+W trybie ELT dane są najpierw wyodrębniane z systemów źródłowych (aplikacje, bazy operacyjne) i w całości kopiowane do docelowego magazynu danych. Dopiero potem, za pomocą narzędzi takich jak dbt, transformacje danych (czyszczenie, agregacje, łączenie tabel itp.) realizowane są na surowych danych już w hurtowni. Pozwala to korzystać z możliwości przetwarzania równoległego oraz elastycznego skalowania oferowanego przez chmurę.
+
+## Technologia i ekosystem
+
+Rozwój ELT jest efektem spadku kosztów przechowywania/obliczeń w chmurze oraz rosnącej popularności chmurowych hurtowni danych (Snowflake, Redshift, BigQuery). Do kluczowych narzędzi wspierających ELT należą:
+
+- **Narzędzia ETL/ELT:** Fivetran, Airbyte, Meltano
+- **Transformacje:** dbt (Data Build Tool), Dataform
+- **Orkiestracja:** Airflow, Dagster, Prefect
+
+## Przewagi nad ETL
+
+W ETL transformacja wykonywana jest przed załadowaniem danych do hurtowni, co komplikuje proces dla dużych zbiorów danych i ogranicza elastyczność. ELT pozwala oddzielić ładowanie od transformacji, zwiększa przejrzystość i zapewnia lepszą kontrolę nad jakością transformacji oraz testowalność kodu.
+
+# 💡 Przykład zastosowania
+
+Szybko rozwijający się e-commerce korzysta z ELT, aby codziennie ładować miliardy kliknięć i transakcji klientów do hurtowni Snowflake, a następnie za pomocą dbt wykonuje transformacje i modelowanie danych do raportów BI, analityki marketingowej i trenowania modeli machine learning.
+
+## 📌 Źródła
+
+- [dbt Docs – Introduction to ELT](https://docs.getdbt.com/docs/introduction)
+- [Google BigQuery Documentation – Loading and Transforming Data](https://cloud.google.com/bigquery/docs/loading-data)
+
+## 👽 Brudnopis
+
+- ELT: ekstrakcja i ładowanie surowych danych, transformacje w docelowym warehouse/DB, np. dbt, Dataform
+- Przewaga: wydajność, elastyczność, praca na surowym detalu i później harmonogramowane modele danych
+- BigQuery, Snowflake, Redshift – optymalizacja kosztów i mocy, Fivetran i Airbyte – E/L
+- Realne usecase: e-commerce, raporty, ML pipeline’y, segmentacje klientów, BI

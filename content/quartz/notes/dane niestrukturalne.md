@@ -21,7 +21,7 @@ W przeciwieństwie do danych niestrukturalnych, [dane strukturalne](notes/dane%2
 
 ## Formatowanie danych niestrukturalnych
 
-Przekształcenie danych strukturalnych z danych niestrukturalnych jest często wykonywane podczas etapu [transformacji danych](notes/transformacje%20danych.md) w procesie [ETL](notes/etl.md) lub [ELT](notes/elt.md). 
+Przekształcenie danych strukturalnych z danych niestrukturalnych jest często wykonywane podczas etapu [transformacji danych](notes/transformacje%20danych.md) w procesie [ETL](notes/etl.md) lub [ELT](ELT.md). 
 
 Na przykład, aby efektywnie wykorzystać dane niestrukturalne podane w poprzednim przykładzie, można by je przekształcić na dane strukturalne takie jak poniżej:
 
