@@ -19,7 +19,7 @@ Podpowiedzi typu Chain-of-thought (CoT) wykazały zdolność LLM do przeprowadza
 
 ReAct to ogólny paradygmat, który łączy rozumowanie i działanie z LLM. ReAct zachęca LLM do generowania werbalnych ścieżek rozumowania i działań dla danego zadania. Pozwala to systemowi na dynamiczne rozumowanie w celu tworzenia, utrzymywania i dostosowywania planów działania, jednocześnie umożliwiając interakcję ze środowiskami zewnętrznymi (np. Wikipedią) w celu włączenia dodatkowych informacji do rozumowania. Poniższy rysunek przedstawia przykład ReAct i różne kroki związane z odpowiadaniem na pytania.
 
-![[images/Pasted image 20230924185406.png]]
+![[Pasted image 20230924185406.png]]
 
 W powyższym przykładzie przekazujemy prompt podobny do następującego pytania z HotpotQA
 
@@ -47,7 +47,7 @@ Należy zauważyć, że dla różnych typów zadań stosowane są różne konfig
 
 W artykule po raz pierwszy oceniono ReAct w zadaniach wymagających dużej wiedzy, takich jak odpowiadanie na pytania (HotPotQA) i weryfikacja faktów (Fever). PaLM-540B jest używany jako model bazowy dla podpowiedzi.
 
-![[images/Pasted image 20230924185519.png]]
+![[Pasted image 20230924185519.png]]
 
 Wyniki podpowiadania w HotPotQA i Fever przy użyciu różnych metod podpowiadania pokazują, że ReAct generalnie działa lepiej niż Act (obejmuje tylko działanie) w obu zadaniach.
 
@@ -64,7 +64,7 @@ W artykule przedstawiono również wyniki demonstrujące wydajność ReAct w zad
 
 Należy zauważyć, że podpowiedzi ReAct są zaprojektowane inaczej dla tych zadań, ale nadal zachowują tę samą podstawową ideę łączenia rozumowania i działania. Poniżej znajduje się przykład zadania ALFWorld z wykorzystaniem podpowiedzi ReAct.
 
-![[images/Pasted image 20230924185552.png]]
+![[Pasted image 20230924185552.png]]
 
 ReAct przewyższa Act zarówno w ALFWorld, jak i Webshop. Act, bez żadnych przemyśleń, nie jest w stanie poprawnie rozłożyć celów na podcele. Rozumowanie wydaje się być korzystne w ReAct dla tego typu zadań, ale obecne metody oparte na podpowiedziach są nadal dalekie od wydajności ekspertów ludzkich w tych zadaniach.
 

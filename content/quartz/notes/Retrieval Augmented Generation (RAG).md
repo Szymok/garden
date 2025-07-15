@@ -8,7 +8,7 @@ tags:
 aliases:
   - RAG
 ---
-Modele językowe ogólnego przeznaczenia [LLM](LLM) można precyzyjnie dostroić, aby osiągnąć kilka typowych zadań, takich jak analiza sentymentow i rozpoznawanie nazwanych jednostek. Zadania te zazwyczaj nie wymagają dodatkowej wiedzy w tle.![[images/Pasted image 20231217201834.png]]
+Modele językowe ogólnego przeznaczenia [LLM](LLM) można precyzyjnie dostroić, aby osiągnąć kilka typowych zadań, takich jak analiza sentymentow i rozpoznawanie nazwanych jednostek. Zadania te zazwyczaj nie wymagają dodatkowej wiedzy w tle.![[Pasted image 20231217201834.png]]
 
 W przypadku bardziej złożonych i wymagających wiedzy zadań możliwe jest zbudowanie systemu opartego na modelu językowym, który uzyskuje dostęp do zewnętrznych źródeł wiedzy w celu wykonania zadań. Zapewnia to większą spójność faktów, poprawia wiarygodność generowanych odpowiedzi i pomaga złagodzić problem "[halucynacji](Halucynacje)".
 
@@ -18,7 +18,7 @@ RAG pobiera dane wejściowe i pobiera zestaw odpowiednich / wspierających dokum
 
 Lewis zaproponowal ogólny przepis dostrajania dla RAG. Wstępnie wytrenowany model [seq2seq](seq2seq) jest używany jako [pamięć parametryczna](pamięć parametryczna), a [dense vector index](dense%20vector%20index) Wikipedii jest używany jako [pamięć nieparametryczna](pamięć%20nieparametryczna) (dostępna przy użyciu wstępnie wytrenowanego [neural pre-trained retriever](neural%20pre-trained%20retriever)). Poniżej znajduje się przegląd tego, jak działa to podejście:
 
-![[images/Pasted image 20230922001554.png]]
+![[Pasted image 20230922001554.png]]
 
 RAG osiąga dobre wyniki w kilku testach porównawczych, takich jak [Natural Questions](Natural%20Questions), [WebQuestions](WebQuestions) i [CuratedTrec](CuratedTrec). RAG generuje odpowiedzi, które są bardziej rzeczowe, konkretne i zróżnicowane, gdy testowane są na pytaniach [MS-MARCO](MS-MARCO) i [Jeopardy](Jeopardy). RAG poprawia również wyniki weryfikacji faktów [FEVER](FEVER).
 
@@ -42,7 +42,7 @@ Istnieje pięć kluczowych etapów w ramach RAG, które z kolei będą części�
     
 - Zapytania: dla każdej strategii indeksowania istnieje wiele sposobów wykorzystania LLM i struktur danych LlamaIndex do zapytań, w tym podzapytań, zapytań wieloetapowych i strategii hybrydowych.
     
-- **Evaluation**: krytycznym krokiem w każdym potoku jest sprawdzenie jego skuteczności w stosunku do innych strategii lub po wprowadzeniu zmian. Ocena zapewnia obiektywne pomiary dokładności, wierności i szybkości odpowiedzi na zapytania.![[images/Pasted image 20231217201958.png]]
+- **Evaluation**: krytycznym krokiem w każdym potoku jest sprawdzenie jego skuteczności w stosunku do innych strategii lub po wprowadzeniu zmian. Ocena zapewnia obiektywne pomiary dokładności, wierności i szybkości odpowiedzi na zapytania.![[Pasted image 20231217201958.png]]
 
 ## Ważne pojęcia w ramach każdego kroku
 

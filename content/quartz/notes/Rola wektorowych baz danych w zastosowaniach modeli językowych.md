@@ -14,4 +14,4 @@ Wektorowe bazy danych to wyspecjalizowane systemy pamięci masowej zaprojektowan
 
 Wektorowe bazy danych umożliwiają wydajną obsługę dużych przestrzeni wektorowych, optymalizując operacje przechowywania, wyszukiwania i porównywania.
 
-![[images/Pasted image 20230920002314.jpg]]
+![[Pasted image 20230920002314.jpg]]

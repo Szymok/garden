@@ -39,7 +39,7 @@ W kontekście Wiedzy 2.0, istotne jest, abyśmy jako społeczeństwo nauczyli si
 
 # 🖊️ Brudnopis
 Sielanka, wiedza budowana elitarystycznie, elity opowiadaja pozostalym o wszystkim. Wiedza jest polityczna. 
-![[images/Pasted image 20241219155732.png]]Pierre LĆvy, Collective Intelligence: Mankinďs Emerging World in Cyberspace, 1997. cyberdemokracja oznacza upadek totalitaryzmów Losy demokracji i cyberprzestrzeni sq ze sobą Ściśle powiązane. To pole obejmujące to, co jest najbardziej istotne dla ludzkości: dążenie do wolności i twórczq moc zbiorowej inteligencji Barbara van Schewick, Internet Architecture and ,rnnovatjon, 2012, Bezprecedensowa eksplozja kreatywności i globalnego dobra wspólnego Architektura innowacji bez zezwoleń Partia Piratów otwarty dostęp i wolne zasoby bezpośrednie i demokratyczne zaanagżowanie
+![[Pasted image 20241219155732.png]]Pierre LĆvy, Collective Intelligence: Mankinďs Emerging World in Cyberspace, 1997. cyberdemokracja oznacza upadek totalitaryzmów Losy demokracji i cyberprzestrzeni sq ze sobą Ściśle powiązane. To pole obejmujące to, co jest najbardziej istotne dla ludzkości: dążenie do wolności i twórczq moc zbiorowej inteligencji Barbara van Schewick, Internet Architecture and ,rnnovatjon, 2012, Bezprecedensowa eksplozja kreatywności i globalnego dobra wspólnego Architektura innowacji bez zezwoleń Partia Piratów otwarty dostęp i wolne zasoby bezpośrednie i demokratyczne zaanagżowanie
 Elity nie chca aby wiedza byla plaska i dostepna. 
 "Musimy zdziczec internet"
 Maria Farrell, Robin Berjon, We need to rewild the Internet

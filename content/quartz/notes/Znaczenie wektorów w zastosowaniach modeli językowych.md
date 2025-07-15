@@ -24,4 +24,4 @@ W ML i AI są one ważne z następujących powodów:
 
 Pomagają identyfikować powiązane pojęcia i poprawiają dokładność modeli językowych w rozumieniu i generowaniu tekstu.
 
-![[images/image-2-700x444.webp]]
+![[image-2-700x444.webp]]

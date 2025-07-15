@@ -11,7 +11,7 @@ Formaty w pamięci operacyjnej są zoptymalizowane pod kątem:
 
 Formaty:
 - [Apache Arrow](notes/apache%20arrow.md) 
-- [Apache Spark](notes/Apache%20Spark) [DataFrame](notes/DataFrames)
+- [Apache Spark](Apache%20Spark.md) [DataFrame](notes/DataFrames)
 - [NumPy](notes/numpy.md)
 - [Pandas](notes/pandas.md)
 

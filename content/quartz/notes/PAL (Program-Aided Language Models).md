@@ -8,7 +8,7 @@ Polegają na generowaniu przez model odpowiedzi będącej kodem JavaScript, w kt
 
 Gao  przedstawia metodę, która wykorzystuje LLM do odczytywania problemów w języku naturalnym i generowania programów jako pośrednich etapów rozumowania. Metoda ta, nazywana modelami językowymi wspomaganymi programowo (PAL), różni się od [Chain-of-Thought Prompting](Chain-of-Thought%20Prompting) tym, że zamiast wykorzystywać dowolny tekst do uzyskania rozwiązania, odciąża etap rozwiązania do programowego środowiska wykonawczego, takiego jak interpreter Pythona.
 
-![[images/Pasted image 20230925211125.png]]
+![[Pasted image 20230925211125.png]]
 
 Przyjrzyjmy się przykładowi wykorzystującemu [[notes/Langchain|LangChain]] i OpenAI GPT-3. Jesteśmy zainteresowani opracowaniem prostej aplikacji, która jest w stanie zinterpretować zadane pytanie i udzielić odpowiedzi, wykorzystując interpreter Pythona.
 

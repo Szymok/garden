@@ -47,7 +47,7 @@ Philosophically, software code designs, decides and deploys the conditions of po
 - Automation
 Nowa ekologia danych, techonologii i maszyn. Zyjemy w spoleczenstwie czujnikow, ktore sa rozproszone wszedzie.One gromadza dane, a one tworze automatyzacje. 
 Wzrost mozliwosci maszyn:
-![[images/Pasted image 20241210090549.png]]
+![[Pasted image 20241210090549.png]]
 - Anticipation
 PRzechodzimy od ery archiwalnej do ery wyroczni. Wyrocznia jest wszedzie. 
 - Simulation

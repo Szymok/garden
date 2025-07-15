@@ -12,4 +12,4 @@ Struktura danych zawiera również osie oznaczone etykietami (wiersze i kolumny)
 
 Więcej informacji można znaleźć w [Dokumentacji Pandas](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html).
 
-Innym DataFrame o tej samej strukturze API jest [Koalas](https://github.com/databricks/koalas), stworzony przez firmę Databricks, zoptymalizowany dla większych zestawów danych oraz [Apache Spark](notes/apache%20spark.md).
+Innym DataFrame o tej samej strukturze API jest [Koalas](https://github.com/databricks/koalas), stworzony przez firmę Databricks, zoptymalizowany dla większych zestawów danych oraz [Apache Spark](Apache%20Spark.md).

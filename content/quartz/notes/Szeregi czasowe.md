@@ -25,4 +25,4 @@ Jutro bedzie tak jak dzisiaj etc.
 # Przesuniecie
 
 Dlaczego walidacja krzyżowa nie dziala?
-![[images/Pasted image 20231118173921.png]]
+![[Pasted image 20231118173921.png]]

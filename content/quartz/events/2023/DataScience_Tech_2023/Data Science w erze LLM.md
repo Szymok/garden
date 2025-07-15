@@ -9,6 +9,6 @@ Celem prelekcji jest przedstawienie przewidywanych zmian roli i kompetencji spec
 # Opinia
 
 # Notes
-![[images/Pasted image 20231218181858.png]]
+![[Pasted image 20231218181858.png]]
 # MLOPS
-![[images/Pasted image 20231218184035.png]]
+![[Pasted image 20231218184035.png]]

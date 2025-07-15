@@ -17,7 +17,7 @@ You are a helpful code assistant that can teach a junior developer how to code. 
 
 Komunikat użytkownika będzie wówczas samym promptem z instrukcją konkretnego kodu, który ma zostać wygenerowany przez model. Poniżej znajduje się migawka pierwszego podstawowego promptu o wygenerowanie kodu. Należy zauważyć, że ostateczny kod został wygenerowany przez Asystenta.
 
-![[images/Pasted image 20230925214359.png]]
+![[Pasted image 20230925214359.png]]
 
 Oto prompt, jeśli chcesz spróbować samemu:
 

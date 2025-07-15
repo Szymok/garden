@@ -39,4 +39,4 @@ tags:
 - [ ] Materiały do przejrzenia
 
 # 🖊️ Brudnopis
-![[images/Pasted image 20250107164237.png]]
+![[Pasted image 20250107164237.png]]

@@ -7,4 +7,4 @@ type: event
 # Opinia
 
 # Notes
-![[images/Pasted image 20231221020658.png]]
+![[Pasted image 20231221020658.png]]

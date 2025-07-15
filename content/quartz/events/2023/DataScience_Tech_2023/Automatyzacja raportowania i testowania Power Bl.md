@@ -25,4 +25,4 @@ Dlaczego chcemy automatyzować analizę oraz inżynierię danych?
 - Nowe funkcjonalności
 Stos dla projektów BI
 
-![[images/Pasted image 20231209090506.png]]
+![[Pasted image 20231209090506.png]]

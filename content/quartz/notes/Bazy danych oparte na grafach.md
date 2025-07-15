@@ -16,4 +16,4 @@ Podczas gdy bazy danych grafów doskonale radzą sobie z przechwytywaniem relacj
 
 Do użytkownika należy odpowiednie ustrukturyzowanie i zaprojektowanie, aby zachować funkcjonalne relacje. Ułatwia to przeszukiwanie bazy danych w celu uzyskania lepszego wglądu w te relacje.
 
-![[images/Pasted image 20230920003320.png]]
+![[Pasted image 20230920003320.png]]

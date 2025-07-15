@@ -60,7 +60,7 @@ ASSISTANT: Of course! Black holes are created when a massive star runs out of fu
 
 Zauważ, że w powyższym przykładzie uprościłem dane wejściowe i wyjściowe, ale interfejs API uzupełniania czatu ChatGPT wymaga, aby wiadomości miały określony format. Poniżej dodałem migawkę tego, jak ten przykład wyglądałby przy użyciu `Chat Mode` w OpenAI Playground:
 
-![[images/Pasted image 20231007182639.png]]
+![[Pasted image 20231007182639.png]]
 
 Bardziej formalne wywołanie API dla naszego przykładu wyglądałoby mniej więcej tak, jak w poniższym przykładzie:
 
@@ -88,7 +88,7 @@ ASSISTANT: Mice.
 
 Należy pamiętać, że dodaję etykiety `USER` i `ASSISTANT`, aby lepiej zademonstrować, w jaki sposób można wykonać zadanie za pomocą ChatGPT. Oto przykład z wykorzystaniem Playground:
 
-![[images/Pasted image 20231007182732.png]]
+![[Pasted image 20231007182732.png]]
 
 Bardziej formalnie, jest to wywołanie API (uwzględniłem tylko komponent wiadomości żądania):
 
