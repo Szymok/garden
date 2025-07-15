@@ -9,7 +9,7 @@ Kluczową cechą ETL jest to, że dane są przekształcane przed ich przesłanie
 
 ![](images/etl-tool.png)
 
-Jednak w ostatnich latach preferowany paradygmat przenoszenia danych przesunął się w kierunku [ELT](notes/elt.md) (Ekstrakcja, Ładowanie i Przekształcanie). Filozofia ELT nakazuje, że dane powinny pozostać nietknięte - poza drobnym oczyszczaniem i filtrowaniem - podczas przechodzenia przez etapy ekstrakcji i ładowania, aby surowe dane zawsze były dostępne w docelowym [Magazynie Danych](notes/data%20warehouse.md). Zobacz [ETL kontra ELT](notes/etl%20vs%20elt.md) po porównanie tych podejść.
+Jednak w ostatnich latach preferowany paradygmat przenoszenia danych przesunął się w kierunku [ELT](notes/elt.md) (Ekstrakcja, Ładowanie i Przekształcanie). Filozofia ELT nakazuje, że dane powinny pozostać nietknięte - poza drobnym oczyszczaniem i filtrowaniem - podczas przechodzenia przez etapy ekstrakcji i ładowania, aby surowe dane zawsze były dostępne w docelowym [Magazynie Danych](Data%20Warehouse.md). Zobacz [ETL kontra ELT](notes/etl%20vs%20elt.md) po porównanie tych podejść.
 
 
 ## ETL się zmienia

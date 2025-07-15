@@ -33,7 +33,7 @@ Słownik Danych ciągle się rozwija, a poniżej wymieniam kilka kluczowych punk
 | Kategoria              | Temat                                                                                        |
 |-----------------------|-----------------------------------------------------------------------------------------------|
 | Inżynieria Danych      | [Koncepty Inżynierii Danych](notes/koncepty%20data%20engineering.md), [Przewodniki po Inżynierii Danych](notes/przewodnik%20data%20engineering.md), [Cykle Życia Inżynierii Danych](notes/cykle%20życia%20data%20engineering.md) |
-| Architektura Danych          | [Magazyny Danych](notes/data%20warehouse), [Jeziora Danych](notes/data%20lake), [Lakehouse](notes/data%20lakehouse) |
+| Architektura Danych          | [Magazyny Danych](Data%20Warehouse.md), [Jeziora Danych](notes/data%20lake), [Lakehouse](notes/data%20lakehouse) |
 | Przetwarzanie Danych       | [ELT](notes/elt), [ETL](notes/etl), [EtLT](notes/etlt.md), [Reverse ETL](notes/reverse%20etl), [Integracja Danych](notes/integracja%20danych.md) |
 | Formaty Danych          | [Apache Avro](notes/apache%20avro), [Apache Parquet](notes/apache%20parquet), [Apache ORC](notes/apache%20orc.md) |
 | Analiza Danych, BI    | [Analiza Danych](notes/analiza%20danych.md), [Business Intelligence](notes/business%20intelligence), [Narzędzia Business Intelligence](notes/narzędzia%20business%20intelligence.md) |
