@@ -1,51 +1,110 @@
 ---
-title: Base LLM
+
+title: Base LLM  
+created: 2025-04-01  
+status:  
+category: sztuczna inteligencja / modele językowe  
+difficulty: średni  
+language: pl  
 tags:
-  - Sztuczna-Inteligencja
-  - llm
+
+- Sztuczna-Inteligencja
+- llm
+- modele językowe
+- NLP  
 aliases:
-  - large language models
+- large language models
+- LLM
+
 ---
-Przewiduje następne słowo na podstawie tekstowych danych szkoleniowych. 
-Duże modele językowe, takie jak GPT-4, wykorzystują [[notes/Sieci neuronowe|sieci neuronowe]] do przetwarzania języka naturalnego. **W prostych słowach — uczą się mówić.** Co więcej, u podstaw treningu sieci do realizacji takiego zadania leży absurdalnie prosta idea **przewidywania kolejnego fragmentu wypowiedzi** poprzez nieustanne odpowiadanie na pytanie: **"Biorąc pod uwagę ten tekst, co powinno być dalej?"**.
-## Zastosowania
 
-- **Wcielanie się w różne role niczym kameleon**, co jednocześnie nadaje kontekst interakcji, dzięki któremu uwaga modelu skupia się na wybranym zagadnieniu (np. definicje występujące w różnych dziedzinach są dzięki określeniu roli asystenta postrzegane jednoznacznie).
+# 🎯 Definicja
 
-- **Transformacje dostarczonych treści**, np. tłumaczenia, korekty, analizy i podsumowania, uwzględniające kontekst przetwarzanych dokumentów.
+**Large Language Models (LLM)** to duże modele językowe wykorzystujące głębokie sieci neuronowe – zazwyczaj oparte na architekturze transformera – które uczą się przewidywania kolejnych słów w tekście. Trening oparty jest na bardzo prostym założeniu:
 
-- **Parsowanie danych** uwzględniając zadania, które są bardzo trudne do zrealizowania programistycznie, np. za pomocą wyrażeń regularnych.
+> „Biorąc pod uwagę ten tekst, co powinno być dalej?”
 
-- **Odpowiadanie na pytania i generowanie treści** na podstawie danych przekazanych jako kontekst zapytania.
+LLM-y są trenowane na wielkoskalowych zbiorach danych tekstowych i uczą się rozumienia oraz generowania spójnego języka naturalnego.
 
-- **Zadania związane z programowaniem** uwzględniają tworzenie, modyfikowanie, wyjaśnianie, oraz debugowanie kodu.
+# 🔑 Kluczowe punkty
 
-- **Integracja z kodem aplikacji** i zastosowanie biznesowe czynią LLMi użytecznymi narzędziami, które pozwalają realizować zadania związane z przetwarzaniem języka naturalnego (eng. Natural Language Processing, NLP).
+- 🧠 Zbudowane na architekturze transformer (np. GPT).
+- 🔁 Przewidują kolejne słowo/token na podstawie wcześniejszego kontekstu.
+- 📚 Trening obejmuje miliardy tokenów z korpusów tekstów pisanych.
+- 💬 Mogą być dostrojone do interakcji konwersacyjnych i różnych zadań (prompt-based learning, instruction tuning).
+- 🔍 Wykazują efekt emergencji – nieoczekiwane zdolności pojawiające się w dużej skali.
 
-- **Posługiwanie się API**, w szczególności w kontekście [Function Calling](https://openai.com/blog/function-calling-and-other-api-updates), oraz wersji modeli OpenAI wyspecjalizowanych w wyborze funkcji i generowaniu do nich parametrów.
+# 📚 Zastosowania
 
-### Niedeterministyczna natura
+- 🧑‍💼 **Asystent AI** – przyjmowanie ról: ekspert, prawnik, doradca, nauczyciel.
+- ✍️ **Tworzenie i przekształcanie tekstów** – tłumaczenia, parafrazy, streszczenia, korekty.
+- 🧾 **Parsowanie danych** – ekstrakcja informacji z chaotycznych źródeł (np. PDF, maile, umowy).
+- ❓ **Odpowiadanie na pytania** na podstawie dostarczonych danych kontekstowych.
+- 💻 **Zadania programistyczne** – tworzenie, refaktoryzacja, debugowanie kodu.
+- 🔌 **Integracja z API i funkcjami** – wykorzystując techniki Function Calling.
+- 📊 **Wnioskowanie semantyczne** – klasyfikacja, kategoryzacja, analiza tonacji.
+- 🤖 **Integracja z aplikacjami** – personalizacja asystentów w CRM, helpdesk, BI, itd.
 
+# 🧠 Emergentne zachowania
 
-## Ograniczenia
+LLM-y wykazują funkcjonalności, których nie mają mniejsze modele, np.:
 
-Wymagają ogromnych zbiorów danych podczas treningu, co może prowadzić do przetworzenia uprzedzeń zawartych w tych początkowych, treningowych zbiorach danych. Dla przykładu jeżeli model został wytrenowany na literaturze z przed kilku dekad - może nie rozpoznać aktualnego slangu. 
+- tłumaczenie pomimo braku dedykowanego treningu do tego celu,
+- rozumienie skomplikowanych instrukcji,
+- rozwiązywanie testów IQ lub zadań arytmetycznych.
 
-Modele Językowe projektowane są z myślą o tworzeniu treści na podstawie wejściowych danych oraz podążaniem za instrukcjami (zwykle) w kontekście czatu. W wyniku (prawdopodobnie) ogromnej skali danych wykorzystywanych do trenowania dużych modeli językowych, mamy do czynienia ze zjawiskiem tzw. **emergencji** związanym z [pojawianiem się zachowań nieobecnych w przypadku mniejszych modeli](https://arxiv.org/abs/2206.07682). Przykładem może być zdolność do tłumaczeń z jednego języka na inny, pomimo tego, że model nie był dokładnie do tego trenowany (ale oczywiście miał kontakt z tymi językami).
-Obecność emergencji w LLMach może wyraźnie sugerować, że **wszystkie możliwości modeli, z którymi obecnie mamy do czynienia, nie są nam jeszcze znane**. Tym bardziej że mówimy tutaj o zachowaniach, które mogą zaskakiwać także twórców OpenAI. Przykładem jest fragment [GPT-4 Technical Report](https://cdn.openai.com/papers/gpt-4.pdf), omawiający **nieoczekiwany wzrost skuteczności w zadaniach "Hindsight Neglect"** związanych z odróżnianiem przewidywania od faktycznej odpowiedzi w obliczu znajomości rezultatu.
+Zachowania te są wynikiem ilości danych i skali modelu – często zaskakując nawet twórców modeli: [GPT-4 Technical Report](https://cdn.openai.com/papers/gpt-4.pdf).
 
-### Ograniczenie długości kontekstu
+# 🚧 Ograniczenia
 
-Obecne LLM-y opierają się na architekturze modelu Transformer, zaprezentowanej po raz pierwszy przez Google w 2017 roku w publikacji [Attention Is All You Need](https://arxiv.org/abs/1706.03762). Wiąże się z nią zarówno szereg możliwości, jak i ograniczeń. Jednym z nich jest limit długości treści przetwarzanej w danej chwili, obejmujący zarówno **dane wejściowe, jak i te generowane przez model**, który określa się jako tzw. "Token Window".
+### 1. Występowanie halucynacji
 
-Z długością kontekstu wiążą się jeszcze trzy dodatkowe wyzwania, z którymi będziesz się mierzyć podczas pracy z dużymi modelami językowymi. Są to:
+Modele mogą generować błędne informacje, choć brzmią one przekonująco. → Zobacz: Halucynacje
 
-- **Koszty** związane z przetwarzaniem i generowaniem tokenów, które szybko rosną, nawet na stosunkowo małej skali.
+### 2. Przenoszenie biasów treningowych
 
-- **Wydajność**, która w dużym stopniu jest uzależniona od liczby tokenów w ramach zapytania.
+LLM-y mogą wzmacniać stereotypy i powielać uprzedzenia zawarte w danych treningowych.
 
-- **Skuteczność**, która według publikacji [Lost In The Middle](https://arxiv.org/pdf/2307.03172.pdf), spada w przypadku jednorazowego przetwarzania dłuższych treści.
-### Problem [halucynacji](notes/Halucynacje)
+### 3. Ograniczenie kontekstu (Token Window)
 
-Modele LLM mogą generować odpowiedzi, które brzmią przekonywująco, ale są po prostu błędne.
+Transformery mają maksymalną długość sekwencji (np. 8k, 32k tokenów), co wpływa na:
 
+- 💰 **Koszt zapytań i generacji**,
+- 🐢 **Wydajność operacyjną**,
+- 📉 **Spadek trafności – „Lost in the Middle”** ([źródło](https://arxiv.org/pdf/2307.03172.pdf)).
+
+### 4. Brak źródła prawdy
+
+Bazują wyłącznie na wzorcach z tekstu – nie mają zagwarantowanego dostępu do faktów (chyba że połączone z systemem RAG).
+
+# 💬 Niedeterministyczność
+
+LLM generuje odpowiedzi probabilistycznie. Każde zapytanie może dać inną, choć logiczną odpowiedź. Można wpływać na to przez parametry jak `temperature` lub `top_p`.
+
+# 💡 Przykład zastosowania
+
+```python
+prompt = """
+You are a helpful assistant that extracts invoice numbers from messy text.
+Text: "Dziękujemy za współpracę! Faktura: FV-2023-0091."
+Answer:
+"""
+
+# Oczekiwany output: "FV-2023-0091"
+```
+
+# 📌 Źródła
+
+- [GPT-4 Technical Report](https://cdn.openai.com/papers/gpt-4.pdf)
+- [Emergent Abilities of LLMs (Wei et al.)](https://arxiv.org/abs/2206.07682)
+- [Lost in the Middle (Liu et al.)](https://arxiv.org/pdf/2307.03172.pdf)
+- [Function Calling (OpenAI)](https://openai.com/blog/function-calling-and-other-api-updates)
+- "Attention Is All You Need", Vaswani et al., [https://arxiv.org/abs/1706.03762](https://arxiv.org/abs/1706.03762)
+
+# 👽 Brudnopis
+
+- Architektura transformer = podstawa: self-attention, dekodery, maskowanie przyszłych tokenów.
+- Token window = dostępne miejsce w modelu → wpływa na OKNO percepcji.
+- LLM ≠ Chatbot (ale może być jego silnikiem) → foundation model, konfigurowalny przez prompt.
+- Brak gwarancji prawdziwości → argument za integracją z bazami wiedzy, RAG czy search API.
+- Dalszy rozwój LLM = techniki fine-tuning, self-refinement, chain-of-thought, agent + tools.

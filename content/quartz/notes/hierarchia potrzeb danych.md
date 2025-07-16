@@ -1,3 +1,0 @@
----
-title: hierarchia potrzeb danych
----
