@@ -78,7 +78,7 @@ print(tokenizer.decode(high_temp_output, skip_special_tokens=True))
 
 1. Dokumentacja modeli GPT (np. OpenAI lub Hugging Face).
 2. Artykuły o regulacji losowości w generatywnych modelach językowych.
-3. Blogi techniczne o zastosowaniu temperatury w [[notes/uczenie maszynowe|AI]].
+3. Blogi techniczne o zastosowaniu temperatury w [[Uczenie Maszynowe|AI]].
 
 ## 👽 Brudnopis
 

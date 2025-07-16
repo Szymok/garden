@@ -1,98 +1,171 @@
 ---
-title: Funkcje promptów
-tags: 
+
+title: Funkcje promptów  
+created: 2025-07-16  
+status: Final  
+category: Prompt Engineering  
+difficulty: średniozaawansowany  
+language: pl  
+tags:
+
+- prompting
+- funkcje promptów
+- application design
+- ai
+- meta prompting  
 aliases:
+- prompt as function
+- funkcjonalne prompty
+- funkcje w GPT
+
 ---
-## Wprowadzenie
 
-Kiedy narysujemy paralelę między interfejsem dialogowym GPT a powłoką języka programowania, monit enkapsulacji można traktować jako funkcję. Funkcja ta ma unikalną nazwę, a gdy wywołujemy tę nazwę z tekstem wejściowym, generuje ona wyniki w oparciu o zestaw wewnętrznych reguł. Krótko mówiąc, tworzymy monit wielokrotnego użytku o nazwie, która ułatwia korzystanie z GPT. To jak posiadanie poręcznego narzędzia, które pozwala GPT wykonywać określone zadania w naszym imieniu - musimy tylko podać dane wejściowe, a otrzymamy pożądane dane wyjściowe.
+# 🎯 Definicja
 
-Umieszczając podpowiedzi w funkcjach, można utworzyć serię funkcji w celu ustanowienia przepływu pracy. Każda funkcja reprezentuje określony krok lub zadanie, a po połączeniu w określonej kolejności mogą one zautomatyzować złożone procesy lub rozwiązywać problemy bardziej efektywnie. Takie podejście pozwala na bardziej ustrukturyzowaną i usprawnioną interakcję z GPT, ostatecznie zwiększając jego możliwości i czyniąc go potężnym narzędziem do wykonywania szerokiego zakresu zadań.
+**Funkcje promptów** (prompt functions) to wzorzec stosowania zorganizowanych, nazwanych promptów do wykonywania konkretnych zadań w modelach językowych. Traktując prompt jako funkcję (z nazwą, argumentami i instrukcją – „regułą przetwarzania”), możemy tworzyć samodokumentujące się, wielokrotnego użytku komponenty konwersacyjne, które można łączyć w przepływy (workflow) lub wywoływać z użyciem spójnej składni.
 
-Zanim więc będziemy mogli użyć funkcji, musimy poinformować o niej GPT. Oto monit definiujący funkcję.
+To podejście przypomina definiowanie funkcji w języku programowania i może być stosowane nawet bez kodowania – wystarczy ścisła konwencja projektowania w naturalnym języku.
 
-_Prompt:_
+# 🔑 Kluczowe elementy
 
-> Let's call this prompt with **meta prompt**.  
-> This prompt has been tested on GPT3.5 and performs even better on GPT4
+- **function_name** — identyfikator funkcji promptu
+- **input** — wejściowy tekst, dane, parametry
+- **rule** — instrukcja mówiąca GPT, co ma zrobić z danymi wejściowymi
+- **output** — wynik wygenerowany przez GPT zgodnie z powyższymi
 
-```
-Hello, ChatGPT! I hope you are doing well. I am reaching out to you for assistance with a specific function. I understand that you have the capability to process information and perform various tasks based on the instructions provided. In order to help you understand my request more easily, I will be using a template to describe the function, input, and instructions on what to do with the input. Please find the details below:function_name: [Function Name]input: [Input]rule: [Instructions on how to process the input]I kindly request you to provide the output for this function, based on the details I have provided. Your assistance is greatly appreciated. Thank you!I will replace the text inside the brackets with the relevant information for the function I want you to perform. This detailed introduction should help you understand my request more efficiently and provide the desired output. The format is function_name(input) If you understand, just answer one word with ok.
-```
-
-## Przykłady
-
-### Asystent ds. nauki języka angielskiego
-
-Załóżmy na przykład, że chcemy użyć GPT, aby pomóc nam w nauce języka angielskiego. Możemy uprościć ten proces, tworząc serię funkcji.
-
-Ten przykład został przetestowany na GPT3.5 i działa jeszcze lepiej na GPT4
-#### Opis funkcji
-Musimy wkleić metapodpowiedź, która została zdefiniowana powyżej sekcji w GPT
-
-Następnie utworzymy funkcję trans_word.
-Funkcja ta poprosi GPT o przetłumaczenie chińskiego na angielski.
-
-_Prompt:_
+Schemat przypomina:
 
 ```
-function_name: [trans_word]input: ["text"]rule: [I want you to act as an English translator, spelling corrector and improver. I will provide you with input forms including "text" in any language and you will detect the language, translate it and answer in the corrected of my text, in English.]
+function_name(input) → output
 ```
 
-Napisz funkcję rozszerzającą tekst.
+lub
 
-_Prompt:_
-
-```
-function_name: [expand_word]input: ["text"]rule: [Please serve as a Chatterbox, spelling corrector, and language enhancer. I will provide you with input forms including "text" in any language, and output the original language.I want you to Keep the meaning same, but make them more literary.]
-```
-
-Napisz funkcję, która poprawia tekst.
-
-_Prompt:_
-
-```
-function_name: [fix_english]input: ["text"]rule: [Please serve as an English master, spelling corrector, and language enhancer. I will provide you with input forms including "text", I want you to improve the text's vocabulary and sentences with more natural and elegent. Keep the meaning same.]
+```text
+function_name: [nazwa]
+input: ["wartość"]
+rule: [instrukcja wykonania działania]
 ```
 
-Wreszcie, można uruchomić funkcję niezależnie lub połączyć je w łańcuch.
+# 📚 Szczegółowe wyjaśnienie
 
-_Prompt:_
+## Wprowadzenie – meta prompt
 
-```
-trans_word('婆罗摩火山处于享有“千岛之国”美称的印度尼西亚. 多岛之国印尼有4500座之多的火山, 世界著名的十大活火山有三座在这里.')fix_english('Finally, you can run the function independently or chain them together.')fix_english(expand_word(trans_word('婆罗摩火山处于享有“千岛之国”美称的印度尼西亚. 多岛之国印尼有4500座之多的火山, 世界著名的十大活火山有三座在这里.')))
-```
+Na początku definiujemy „wstępny prompt-wyjaśnienie”, który informuje model o tym, w jakim formacie będziemy do niego mówić. Prompt można nazwać **meta prompt** – to on ustala strukturę dalszych funkcji promptów.
 
-Przedstawiając funkcje w tym formacie, można wyraźnie zobaczyć nazwę każdej funkcji, dane wejściowe i regułę przetwarzania danych wejściowych. Zapewnia to zorganizowany sposób na zrozumienie funkcjonalności i celu każdego kroku w przepływie pracy
+### Meta prompt:
 
-wskazówki: Jeśli nie chcesz, aby ChatGPT wyświetlał nadmiar informacji, możesz po prostu dodać zdanie po zdefiniowaniu reguł funkcji.
-
-```
-DO NOT SAY THINGS ELSE OK, UNLESS YOU DONT UNDERSTAND THE FUNCTION
-```
-
-### Funkcja wielu parametrów
-
-Stwórzmy funkcję, która generuje hasło, pobierając pięć parametrów wejściowych i wysyłając wygenerowane hasło.
-
-_Prompt:_
-
-```
-function_name: [pg]input: ["length", "capitalized", "lowercase", "numbers", "special"]rule: [I want you to act as a password generator for individuals in need of a secure password. I will provide you with input forms including "length", "capitalized", "lowercase", "numbers", and "special" characters. Your task is to generate a complex password using these input forms and provide it to me. Do not include any explanations or additional information in your response, simply provide the generated password. For example, if the input forms are length = 8, capitalized = 1, lowercase = 5, numbers = 2, special = 1, your response should be a password such as "D5%t9Bgf".]
+```text
+Hello, ChatGPT! I hope you are doing well. I will be using a template to describe the function, input, and rule. Please find the details below:
+function_name: [Function Name]
+input: [Input]
+rule: [Instructions on how to process the input]
+...
 ```
 
+Po potwierdzeniu przez model `ok`, możemy pisać i wywoływać kolejne prompty w formie funkcji.
+
+## Przykłady funkcji promptów
+
+### 1. Tłumaczenie słów – `trans_word`
+
+```text
+function_name: [trans_word]
+input: ["こんにちは。"]
+rule: [I want you to act as an English translator, spelling corrector and improver. Translate any input to English.]
 ```
-pg(length = 10, capitalized = 1, lowercase = 5, numbers = 2, special = 1)pg(10,1,5,2,1)
+
+### 2. Rozszerzanie tekstu – `expand_word`
+
+```text
+function_name: [expand_word]
+input: ["I’m happy today."]
+rule: [Make the sentence more elaborate and literary. Keep the original meaning.]
 ```
 
-## Podsumowanie
+### 3. Poprawianie języka angielskiego – `fix_english`
 
-Obecnie istnieje już wiele projektów, które pracują nad programowaniem GPT, takich jak:
+```text
+function_name: [fix_english]
+input: ["He go to school every day."]
+rule: [Correct grammar, improve vocabulary, and rewrite naturally.]
+```
 
-GitHub Copilot
-Microsoft AI
-chatgpt-plugin
-[[notes/Langchain|LangChain]]
-marvin
+Wywołanie:
 
-Ale te projekty są przeznaczone albo dla klientów produktu, albo dla użytkowników, którzy potrafią kodować w Pythonie lub innych językach programowania. Dla przeciętnego użytkownika, użyj tego prostego szablonu do codziennej pracy i iteruj kilka razy. Użyj aplikacji do notatek, aby udokumentować funkcję, a nawet można ją zaktualizować do biblioteki. Alternatywnie można użyć niektórych narzędzi ChatGPT typu open source, takich jak ChatGPT-Next-Web(otwiera się w nowej karcie), chatbox(otwiera się w nowej karcie), PromptAppGPT(otwiera się w nowej karcie) i ChatGPT-Desktop(otwiera się w nowej karcie). Obecnie ChatGPT-Next-Web umożliwia dodanie kilku strzałów przed zainicjowaniem nowego czatu. PromptAppGPT wspiera niskokodowe tworzenie aplikacji internetowych opartych na szablonach podpowiedzi i umożliwia każdemu tworzenie aplikacji podobnych do AutoGPT za pomocą kilku wierszy podpowiedzi. Możemy użyć tej funkcji, aby dodać naszą funkcję, która może być następnie użyta.
+```text
+fix_english("He go to school every day.")
+```
+
+### 4. Łączenie funkcji
+
+Można zagnieżdżać funkcje, np.:
+
+```text
+fix_english(expand_word(trans_word("Je suis très content.")))
+```
+
+## Funkcje z wieloma parametrami
+
+Funkcje promptów mogą też przyjmować wiele argumentów, np. generator hasła `pg`:
+
+```text
+function_name: [pg]
+input: ["length", "capitalized", "lowercase", "numbers", "special"]
+rule: [Generate a secure password based on the given parameters. Only output the password string.]
+```
+
+Wywołanie:
+
+```text
+pg(10, 1, 5, 2, 2)
+```
+
+## Dobry styl — jasno, bez nadmiaru
+
+Aby uniknąć gadatliwych odpowiedzi LLM, można dodać:
+
+```text
+DO NOT SAY ANYTHING ELSE UNLESS YOU DON'T UNDERSTAND THE FUNCTION
+```
+
+# 💡 Przykład procesu
+
+Załóżmy, że budujesz miniaplikację do nauki języka. Tworzysz te funkcje:
+
+- `trans_word()` tłumaczy
+- `expand_word()` rozwija styl
+- `fix_english()` poprawia język
+
+Zapisujesz je jako definicje w notatniku lub PromptApp. Następnie szkolisz swój własny „agent ChatGPT” poprzez inicjalizację z meta-prompt i używasz funkcji tekstowych tak, jakbyś pisał kod.
+
+To podejście jest świetne do:
+
+- automatyzacji procesów tekstowych
+- prototypowania systemów asystujących
+- budowy interfejsów niskokodowych lub no-code
+- tworzenia bibliotek promptów dla zespołów AI
+
+# 📌 Narzędzia & inspiracje
+
+- ChatGPT-Next-Web – wsparcie wielu promptów/startowych komend
+- PromptAppGPT – tworzenie niskokodowych aplikacji promptowych
+- LangChain / marvin / AutoGPT – integracja promptów z logiką programistyczną
+- Notatniki, vaulty, markdown – idealne do tworzenia bibliotek prompt functions
+- Prompt chaining – konstrukcja bardziej rozbudowanych aplikacji (prompt pipeline)
+
+# 🧠 Podsumowanie
+
+Funkcje promptów to sposób uzyskiwania spójnego, powtarzalnego i łatwego do utrzymania interfejsu z modelami językowymi. Model „promptowania jako funkcji” pozwala traktować naturalny język tak, jakby był językiem programowania — przy jednoczesnym zachowaniu jego elastyczności.
+
+To doskonałe rozwiązanie do codziennej automatyzacji, eksperymentów lub nawet budowy własnego osobistego agenta LLM.
+
+## 👽 Brudnopis
+
+- prompt = funkcja: `nazwa(input, reguła)`
+- meta prompt = sposób nauczenia GPT interfejsu dialogowego
+- działa w stylu REPL/CLI – krótko, strukturalnie
+- może być zapisane jako baza z funkcjami (~prompt library)
+- People Writing Functions in Prompt Language (nowy archetyp?)
+
+---
