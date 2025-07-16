@@ -12,7 +12,7 @@ tags:
 - inżynieria promptów
 - llm
 - ai  
-    aliases:
+aliases:
 - zastosowania promptów
 - prompting use cases
 - aplikacje oparte na promptach
