@@ -86,6 +86,6 @@ Firma logistyczna korzysta z Power BI do śledzenia wskaźników efektywności d
 - BI = transformacja danych w insighty → decyzje
 - Cechy: roll-up, drill-down, one source of truth, automation, self-service
 - Język: SQL, narzędzia: Power BI, Tableau, Looker, Metabase
-- Rola: dashboardy, KPI, współpraca z Data Engineering
+- Rola: dashboardy, KPI, współpraca z [[Inżynieria Danych|Data Engineering]]
 - Przykład: “czas dostawy” odstaje → drilldown → wykrycie regionu/problemu
 - Self-service pozwala każdemu analizować swoje KPI bez wsparcia IT

@@ -20,7 +20,7 @@ tags:
 
 # 🎯 Najważniejsze koncepcje Inżynierii Danych
 
-Inżynieria danych to dziedzina szybko rozwijająca się, obejmująca projektowanie, budowę i zarządzanie systemami, które przetwarzają, przemieszczają i udostępniają dane w organizacji. Poniżej znajdziesz kluczowe koncepcje i tematy, które kształtują współczesny krajobraz data engineering.
+[[Inżynieria danych]] to dziedzina szybko rozwijająca się, obejmująca projektowanie, budowę i zarządzanie systemami, które przetwarzają, przemieszczają i udostępniają dane w organizacji. Poniżej znajdziesz kluczowe koncepcje i tematy, które kształtują współczesny krajobraz [[Inżynieria Danych|data engineering]].
 
 ## 1. Architektury i środowiska danych
 
@@ -52,7 +52,7 @@ Inżynieria danych to dziedzina szybko rozwijająca się, obejmująca projektowa
 
 ## 6. Nowoczesne podejścia i wzorce
 
-- **Funkcjonalna Inżynieria Danych:** Czyste, idempotentne, testowalne pipeline’y inspirowane paradygmatem funkcyjnym.
+- **Funkcjonalna [[Inżynieria Danych]]:** Czyste, idempotentne, testowalne pipeline’y inspirowane paradygmatem funkcyjnym.
 - **Zasoby Zdefiniowane Programowo (SDA/Software-Defined Assets):** Asset-first data orchestration, deklaratywność i kontrola lineage.
 
 ## 7. Warstwa semantyczna i metryk
@@ -93,7 +93,7 @@ Inżynieria danych to dziedzina szybko rozwijająca się, obejmująca projektowa
 |Integracja i przetwarzanie|ETL, ELT, EtLT, MapReduce, Apache Hadoop|
 |Modelowanie|Dimensional Modeling, Data Modeling|
 |Semantyka i metryki|Metrics Layer, KPI, Semantic Warehouse|
-|Orkiestracja & pipeline|Functional Data Engineering, Software-Defined Assets|
+|Orkiestracja & pipeline|Functional [[Inżynieria Danych|Data Engineering]], Software-Defined Assets|
 |Zarządzanie i katalogi|Data Catalog, Kontrakt Danych, Warstwa wirtualna|
 |Analiza i optymalizacja|OLAP, Push-Down, Rollup, OLTP|
 |Programowanie & styl|Deklaratywność, Imperatywność, Notebooks|
@@ -106,4 +106,4 @@ Inżynieria danych to dziedzina szybko rozwijająca się, obejmująca projektowa
 - Rola kontraktów danych (data contracts) w budowie zaufania i odporności ekosystemu danych.
 - Programowanie deklaratywne i asset-first orchestration jako filar skalowalnych, nowoczesnych platform danych.
 
-Zobacz również: Inżynieria Danych – definicja i podstawy oraz linkowane szczegółowe opisy każdej koncepcji.
+Zobacz również: [[Inżynieria Danych]] – definicja i podstawy oraz linkowane szczegółowe opisy każdej koncepcji.

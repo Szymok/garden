@@ -30,7 +30,7 @@ aliases:
 - Wspiera **lokalne testowanie, środowiska staging**, współdzielone katalogi, deploye i kontrolę wersji assetów.
 - Ułatwia **śledzenie świeżości danych**, metadanych i statusów aktywów (data freshness & health checks).
 - Integruje się z narzędziami ekosystemu open source: dbt, Airbyte, Snowflake, S3, PowerBI, DuckDB i więcej.
-- Zaprojektowany z myślą o zespołach DataOps/AI/ML oraz inżynierach danych – wysoka ergonomia pracy programistycznej.
+- Zaprojektowany z myślą o zespołach [[Inżynieria Danych|DataOps]]/AI/ML oraz inżynierach danych – wysoka ergonomia pracy programistycznej.
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -90,7 +90,7 @@ Firma e-commerce integruje dane z Airbyte (synchronizacja z API i baz), przekszt
 
 - dagster = SDK + orchestrator + lineage-sensitive platforma
 - dekleratywna orkiestracja DAG = clean DAGs, odporność na zależności
-- genialna dla DataOps: retries, run logs, asset freshness
+- genialna dla [[Inżynieria Danych|DataOps]]: retries, run logs, asset freshness
 - wygodniejszy niż airflow: brak kodowania imperatywnego + łatwiejsze testy
 - stale się rozwija, kluczowy gracz open data stack obok dbt/airbyte/superset
 - UI = wszystko: lineage, aktualność, podgląd danych, scheduler

@@ -83,7 +83,7 @@ Enterprise SaaS dostarczający narzędzia HR wprowadza architekturę Data Mesh, 
 
 - Architektura Mesh = rozbicie centralnego data lake na zestaw wspierających się produktów danych
 - Każda domena publikuje własny zestaw danych wg wspólnej platformy
-- Wymaga DevOps/DataOps mindset + szerzenie kultury produktowej
+- Wymaga DevOps/[[Inżynieria Danych|DataOps]] mindset + szerzenie kultury produktowej
 - Katalog danych jako repozytorium dostępnych assetów
 - Standardy = klucz do unifikacji: identyfikatory, formaty, metadane
 - Infrastructure as a Platform = DuckDB, dbt, Dagster, DataHub, Iceberg

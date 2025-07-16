@@ -22,7 +22,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Stos Danych Otwartych (Open Data Stack)** to zestaw wzajemnie współpracujących komponentów i narzędzi do infrastruktury danych, których wspólną cechą jest oparcie na otwartym kodzie źródłowym (open source). Umożliwia on organizacjom pełną kontrolę nad przetwarzaniem, integracją, transformacjami, wizualizacją oraz jakością danych – zgodnie z dobrymi praktykami cyklu życia inżynierii danych (Data Engineering Lifecycle).
+**Stos Danych Otwartych (Open Data Stack)** to zestaw wzajemnie współpracujących komponentów i narzędzi do infrastruktury danych, których wspólną cechą jest oparcie na otwartym kodzie źródłowym (open source). Umożliwia on organizacjom pełną kontrolę nad przetwarzaniem, integracją, transformacjami, wizualizacją oraz jakością danych – zgodnie z dobrymi praktykami cyklu życia inżynierii danych ([[Inżynieria Danych|Data Engineering]] Lifecycle).
 
 Stanowi otwartą i elastyczną alternatywę dla komercyjnych, często zamkniętych platform typu SaaS, promując **standardy interoperacyjności, rozszerzalność i niezależność technologiczno-dostawczą**.
 

@@ -53,9 +53,9 @@ Orkiestrator stanowi „centralny mózg” automatyzacji procesów danych w firm
 |Automatyczne skalowanie|Umożliwianie elastycznego przydziału zasobów w chmurze na potrzeby uruchomień|
 |Orkiestracja zadań batch i streaming|Współbieżne przetwarzanie wsadowe i w czasie rzeczywistym|
 
-## Orkiestracja w kontekście DataOps i modern data stack
+## Orkiestracja w kontekście [[Inżynieria Danych|DataOps]] i modern data stack
 
-- Orkiestrator jest centralnym elementem pipeline’ów danych i produktywności zespołów DataOps.
+- Orkiestrator jest centralnym elementem pipeline’ów danych i produktywności zespołów [[Inżynieria Danych|DataOps]].
 - Pozwala synchronizować transformacje danych z narzędziami ETL/ELT (np. Airbyte, dbt).
 - Integruje się z BI, AI i ML, aby wyzwalać modele oraz analizy w odpowiednich momentach.
 - Umożliwia przejście od przetwarzania potokowego (pipeline-centric) do podejścia produktowego (data product-centric).
@@ -91,4 +91,4 @@ Firma zajmująca się sprzedażą detaliczną wdraża orkiestrator danych do koo
 - Przede wszystkim zarządza powiązaniami, zależnościami i wykonaniem złożonych danych i procesów analitycznych
 - Integruje starsze systemy i nowe, elastyczne narzędzia chmurowe
 - Wspiera logiczne wyzwalanie zadań (czas, event, warunek biznesowy)
-- Kluczowy element automatyzacji i skali w DataOps i AI/ML pipelines
+- Kluczowy element automatyzacji i skali w [[Inżynieria Danych|DataOps]] i AI/ML pipelines

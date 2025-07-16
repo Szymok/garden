@@ -96,7 +96,7 @@ Użytkownik przypina tę regułę do wszystkich kolumn przypisanych do terminu �
 
 # 👽 Brudnopis
 
-- W DataOps → rules = repeatable logic block + reusable
+- W [[Inżynieria Danych|DataOps]] → rules = repeatable logic block + reusable
 - Detection Rules → przypisywane przy Data Discovery / Profilowanie
 - DQ Rules → zasilają dashboard jakości, alerty, raporty kierunkowe
 - Dobrze ustawić statusy: Passed / Warning / Failed → automatyzacja flagowania
@@ -198,7 +198,7 @@ Użytkownik przypina tę regułę do wszystkich kolumn przypisanych do terminu �
 
 # 👽 Brudnopis
 
-- W DataOps → rules = repeatable logic block + reusable
+- W [[Inżynieria Danych|DataOps]] → rules = repeatable logic block + reusable
 - Detection Rules → przypisywane przy Data Discovery / Profilowanie
 - DQ Rules → zasilają dashboard jakości, alerty, raporty kierunkowe
 - Dobrze ustawić statusy: Passed / Warning / Failed → automatyzacja flagowania

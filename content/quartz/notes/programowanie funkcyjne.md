@@ -66,7 +66,7 @@ squares = map square [1, 2, 3, 4]
 
 ## Zastosowania w praktyce
 
-- **Data Engineering** – np. pipelines danych z zastosowaniem czystych transformacji (por. Funkcjonalny Data Engineering).
+- **[[Inżynieria Danych|Data Engineering]]** – np. pipelines danych z zastosowaniem czystych transformacji (por. Funkcjonalny [[Inżynieria Danych|Data Engineering]]).
 - **Web development (React)** – paradygmaty funkcyjne w zarządzaniu komponentami i stanem.
 - **Programowanie rozproszone i równoległe** – brak stanu = mniej błędów przy concurrency.
 
@@ -75,7 +75,7 @@ squares = map square [1, 2, 3, 4]
 |Język|Opis|
 |---|---|
 |**Haskell**|Czysty język funkcyjny, silny typ systemu, brak efektów ubocznych.|
-|**Scala**|Hybryda funkcyjno-obiektowa, popularna w Sparku i data engineering.|
+|**Scala**|Hybryda funkcyjno-obiektowa, popularna w Sparku i [[Inżynieria Danych|data engineering]].|
 |**Elixir**|Funkcyjny język oparty o Erlanga – skalowalność systemów rozproszonych.|
 |**Clojure**|Funkcyjny język dla JVM, bogaty ekosystem i wsparcie dla immutability.|
 |**Python**|Nie jest stricte funkcyjny, ale obsługuje wiele koncepcji funkcyjnych.|
@@ -88,7 +88,7 @@ W systemie przetwarzania danych zbudowanym na **dbt + Airflow**, zespoły wykorz
 ## 📌 Źródła
 
 - [Functional Programming in Python – RealPython](https://realpython.com/python-functional-programming/)
-- [Functional Data Engineering — Maxime Beauchemin](https://maximebeauchemin.medium.com/functional-data-engineering-a-modern-paradigm-for-batch-data-processing-2327ec32c42a)
+- [Functional [[Inżynieria Danych|Data Engineering]] — Maxime Beauchemin](https://maximebeauchemin.medium.com/functional-data-engineering-a-modern-paradigm-for-batch-data-processing-2327ec32c42a)
 - [Intro to Functional Programming – freeCodeCamp](https://www.freecodecamp.org/news/introduction-to-functional-programming/)
 
 # 👽 Brudnopis
