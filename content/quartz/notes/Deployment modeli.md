@@ -92,6 +92,6 @@ Zespół buduje klasyfikator obrazów – od pobrania i pre-processing kolekcji 
 - Automatyzacja retrainów, monitoring metryk jakości i kosztów.
 - Blue-Green, Canary, Shadow deployment = zero downtime.
 - Modes: batch, online, edge (Arduino/Jetson).
-- ML + DevOps = MLOps, kluczowe w Data Engineering.
+- ML + DevOps = MLOps, kluczowe w [[Inżynieria Danych|Data Engineering]].
 
 ---

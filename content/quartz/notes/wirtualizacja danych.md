@@ -86,4 +86,4 @@ Międzynarodowa firma technologiczna korzysta z Dremio, aby zintegrować dane z 
 - Warstwy: źródła → federacja → logika biznesowa/model → ekspozycja do BI/query
 - Przewaga: szybkie prototypy, query na aktualnych danych, brak kopiowania/latency ETL
 - Wady: performance ograniczony przez źródła, raczej nie stosować dla obciążeń operacyjnych/masowych batch
-- Real-case: FAQ, dashboardy Ad Hoc, testowanie nowych źródeł, fast POC dla DataOps
+- Real-case: FAQ, dashboardy Ad Hoc, testowanie nowych źródeł, fast POC dla [[Inżynieria Danych|DataOps]]

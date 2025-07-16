@@ -81,4 +81,4 @@ Firma SaaS definiuje „Churn Rate” oraz „Monthly Recurring Revenue (MRR)”
 - Przykłady: przychód, churn, NPS, uptime, ROI, konwersja, CAC, LTV
 - Różnica miara vs KPI — nie wszystkie agregaty to KPI; KPI = nacisk na wpływ na cel
 - Biznes (zarząd, liderzy) monitoruje głównie KPI — ułatwia decyzje
-- DataOps, BI, ML — KPI jako cel/model optymalizacji oraz raportowania
+- [[Inżynieria Danych|DataOps]], BI, ML — KPI jako cel/model optymalizacji oraz raportowania

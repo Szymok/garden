@@ -91,6 +91,6 @@ Dzięki temu zespół analityczny codziennie generuje dashboardy KPI w czasie rz
 - Warstwy: ingress → warehouse → transformacje → BI → ML
 - MDS = gotowe do chmury, plug-and-play, open standards
 - Zwróć uwagę na rozdzielenie ETL i ELT (w dbt typu T)
-- Monitoring runtime pipelines — DataOps + observability
+- Monitoring runtime pipelines — [[Inżynieria Danych|DataOps]] + observability
 - Governance i zgodność: Audit trails, linie pochodzenia danych, katalogi danych
 - Przyszłość: Data Mesh vs. monolityczny Data Platform, Cookieless BI, Federated Querying

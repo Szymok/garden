@@ -102,4 +102,4 @@ W tym przykładzie konfigurujemy system do monitorowania trzech metryk codzienni
 - lifecycle = discovery → configure → run → alert → feedback
 - Wyzwalacze czasowe vs. zdarzeniowe
 - Integracje: Airflow/Prefect → trigger if issue, dbt → execute test + alert
-- DataOps: observability + lineage + testing = pełen monitoring jakości danych
+- [[Inżynieria Danych|DataOps]]: observability + lineage + testing = pełen monitoring jakości danych

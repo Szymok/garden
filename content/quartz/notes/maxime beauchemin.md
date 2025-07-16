@@ -20,11 +20,11 @@ aliases:
 
 # 🎯 Definicja
 
-**Maxime Beauchemin** to wybitny inżynier danych, programista i pomysłodawca o globalnym wpływie na ekosystemy data engineering oraz business intelligence. Jest twórcą przełomowych narzędzi: **Apache Airflow** (standard branżowy do orkiestracji pipeline’ów danych) i **Apache Superset** (open-source’owy system BI do eksploracji i wizualizacji danych). Obecnie pełni kluczową rolę w firmie **Preset**, oferującej Superset jako usługę w chmurze.
+**Maxime Beauchemin** to wybitny inżynier danych, programista i pomysłodawca o globalnym wpływie na ekosystemy [[Inżynieria Danych|data engineering]] oraz business intelligence. Jest twórcą przełomowych narzędzi: **Apache Airflow** (standard branżowy do orkiestracji pipeline’ów danych) i **Apache Superset** (open-source’owy system BI do eksploracji i wizualizacji danych). Obecnie pełni kluczową rolę w firmie **Preset**, oferującej Superset jako usługę w chmurze.
 
 # 🔑 Kluczowe punkty
 
-- **Twórca narzędzi powszechnie używanych w data engineering:** Apache Airflow oraz Apache Superset.
+- **Twórca narzędzi powszechnie używanych w [[Inżynieria Danych|data engineering]]:** Apache Airflow oraz Apache Superset.
 - **Pionier nowoczesnej orkiestracji i eksploracji danych:** Jego narzędzia są fundamentem nowoczesnych stosów danych (Modern Data Stack).
 - **Ekspert w dziedzinie Business Intelligence:** Karierę rozpoczynał jako inżynier BI, pracując nad dużymi projektami danych.
 - **Propagator pojęć idempotencji i funkcjonalnej inżynierii danych:** Wpłynął na filozofię budowy niezawodnych i powtarzalnych systemów data pipeline.
@@ -41,7 +41,7 @@ aliases:
 ## Wkład w filozofię data engineering
 
 - **Idempotencja w data pipelines:** Maxime spopularyzował praktykę tworzenia procesów ETL/ELT, które można bezpiecznie uruchamiać wielokrotnie bez ryzyka powtarzania lub uszkodzenia danych.
-- **Funkcjonalna inżynieria danych:** Propaguje podejście inspirowane programowaniem funkcyjnym do budowy pipeline’ów, kładąc nacisk na czystość, powtarzalność i minimalizację efektów ubocznych.
+- **Funkcjonalna [[inżynieria danych]]:** Propaguje podejście inspirowane programowaniem funkcyjnym do budowy pipeline’ów, kładąc nacisk na czystość, powtarzalność i minimalizację efektów ubocznych.
 - **Edukacja i open source:** Publikuje blogi, udziela się na konferencjach oraz w środowisku open-source, pomagając popularyzować dobre praktyki i nowatorskie rozwiązania w ekosystemie danych.
 
 ## Miejsce w ekosystemie danych
@@ -51,7 +51,7 @@ aliases:
 
 # 💡 Przykład zastosowania
 
-Duża firma retail implementuje **Apache Airflow** jako centralny orkiestrator dziesiątek pipeline’ów — od ekstrakcji, przez transformacje, po ładowanie danych do magazynu i automatyczną aktualizację dashboardów BI w **Apache Superset**. Zespół data engineering buduje zadania idempotentne (każde zadanie można bezpiecznie powtórzyć), a zespół analityczny korzysta z Superset na codzień do tworzenia dashboardów sprzedażowych i marketingowych. Wszystko oparte o filozofię, która pojawiła się dzięki podejściu Maxime’a Beauchemina do niezawodności i reużywalności.
+Duża firma retail implementuje **Apache Airflow** jako centralny orkiestrator dziesiątek pipeline’ów — od ekstrakcji, przez transformacje, po ładowanie danych do magazynu i automatyczną aktualizację dashboardów BI w **Apache Superset**. Zespół [[Inżynieria Danych|data engineering]] buduje zadania idempotentne (każde zadanie można bezpiecznie powtórzyć), a zespół analityczny korzysta z Superset na codzień do tworzenia dashboardów sprzedażowych i marketingowych. Wszystko oparte o filozofię, która pojawiła się dzięki podejściu Maxime’a Beauchemina do niezawodności i reużywalności.
 
 ## 📌 Źródła
 

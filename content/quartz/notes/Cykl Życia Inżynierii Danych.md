@@ -52,7 +52,7 @@ aliases:
 7. **Monitorowanie i optymalizacja (Monitoring & Optimization)**
     
     - 📊 Monitorowanie pipeline'ów, kosztów, opóźnień i anomalii
-    - Stosowanie DataOps do ciągłej poprawy wydajności (CI/CD, testy, automatyzacja)
+    - Stosowanie [[Inżynieria Danych|DataOps]] do ciągłej poprawy wydajności (CI/CD, testy, automatyzacja)
 
 # 📚 Szczegółowe wyjaśnienie
 

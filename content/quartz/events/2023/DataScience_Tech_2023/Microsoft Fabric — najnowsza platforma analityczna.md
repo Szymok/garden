@@ -9,7 +9,7 @@ Zapraszam na prelekcję poświęconą nowej platformie analitycznej Microsoft Fa
 # Opinia
 
 # Notes
-## Data engineering in Azure
+## [[Inżynieria Danych|Data engineering]] in Azure
 
 Wazne - OneLake dla wszystkich danych.
 Pojedyncze jezioro SaaS dla całej organizacji

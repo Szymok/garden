@@ -64,7 +64,7 @@ aliases:
 
 # 💡 Przykład zastosowania
 
-Zespół zajmujący się wdrożeniem platformy analitycznej w firmie e-commerce korzysta z przewodników po data engineering, aby:
+Zespół zajmujący się wdrożeniem platformy analitycznej w firmie e-commerce korzysta z przewodników po [[Inżynieria Danych|data engineering]], aby:
 
 - Zdefiniować strategie integracji z wieloma źródłami danych (API, pliki, bazy relacyjne).
 - Zaprojektować architekturę jeziora danych zgodnie z najlepszymi praktykami rynkowymi.
@@ -84,5 +84,5 @@ Zespół zajmujący się wdrożeniem platformy analitycznej w firmie e-commerce 
 
 - Kategorie przewodników: jakość danych, jezioro danych, lakehouse, reverse ETL, orchestracja, CDC, frameworki ETL.
 - Przykładowe pytania: zarządzanie plikami, architektura lakehouse, automatyzacja pipeline’ów, porównania narzędzi.
-- Praktyczna wartość: wdrożenie platformy analitycznej, wybór narzędzi, optymalizacja procesów data engineering.
+- Praktyczna wartość: wdrożenie platformy analitycznej, wybór narzędzi, optymalizacja procesów [[Inżynieria Danych|data engineering]].
 - Źródła: blogi i materiały Airbyte stanowiące rzetelną bazę dla praktyków.

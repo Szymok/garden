@@ -60,15 +60,15 @@ aliases:
 |Zadowolenie zespołu|Mniej "ręcznych" wdrożeń, mniej frustracji|
 |Transparentność|Widoczność zmian, historii deployów, logów|
 
-## DevOps a DataOps
+## DevOps a [[Inżynieria Danych|DataOps]]
 
-**DevOps** i **DataOps** mają wspólną filozofię: szybkie, niezawodne i zautomatyzowane dostarczanie wartości.  
+**DevOps** i **[[Inżynieria Danych|DataOps]]** mają wspólną filozofię: szybkie, niezawodne i zautomatyzowane dostarczanie wartości.  
 Różnica:
 
 - DevOps — koncentruje się na oprogramowaniu/aplikacjach.
-- DataOps — na pipeline’ach danych i analityce.
+- [[Inżynieria Danych|DataOps]] — na pipeline’ach danych i analityce.
 
-DataOps zapożycza wiele praktyk DevOps: CI/CD dla danych, testy danych, monitoring, IaC dla platform danych.
+[[Inżynieria Danych|DataOps]] zapożycza wiele praktyk DevOps: CI/CD dla danych, testy danych, monitoring, IaC dla platform danych.
 
 # 💡 Przykład zastosowania
 
@@ -87,7 +87,7 @@ Zespół produktowy wykorzystuje DevOps do codziennego wdrażania zmian w aplika
 - Kiedyś: deweloper pisze → admin wdraża
 - Dziś: jeden zespół, wspólna odpowiedzialność
 - Automatyczne testy + monitoring + rollback → jakościowy deployment
-- DevOps w data stack: dbt + Airbyte + Airflow + CI/CD = DataOps v2
+- DevOps w data stack: dbt + Airbyte + Airflow + CI/CD = [[Inżynieria Danych|DataOps]] v2
 - Narzędzia: Git, Docker, Kubernetes, Terraform, Jenkins, ArgoCD, CircleCI
 
 ---

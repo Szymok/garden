@@ -23,7 +23,7 @@ aliases:
 
 # 🎯 Definicja
 
-**dbt (data build tool)** to narzędzie typu open source (dostępne również jako usługa w chmurze – dbt Cloud), które umożliwia transformację danych za pomocą języka SQL bezpośrednio w hurtowni danych. Jest centralnym elementem modelu ELT, koncentrującym się na „T” (transform), i jest standardem de facto w nowoczesnej inżynierii danych (data engineering / analytics engineering).
+**dbt (data build tool)** to narzędzie typu open source (dostępne również jako usługa w chmurze – dbt Cloud), które umożliwia transformację danych za pomocą języka SQL bezpośrednio w hurtowni danych. Jest centralnym elementem modelu ELT, koncentrującym się na „T” (transform), i jest standardem de facto w nowoczesnej inżynierii danych ([[Inżynieria Danych|data engineering]] / analytics engineering).
 
 # 🔑 Kluczowe punkty
 

@@ -49,7 +49,7 @@ aliases:
 ### Peer review i cykl życia danych
 
 - Każda zmiana w modelach danych poddawana jest przeglądowi merytorycznemu (peer review), co zapewnia jakość i zgodność ze standardami domenowymi.
-- Współpraca business & data engineering wynosi jakość produktów danych na wyższy poziom.
+- Współpraca business & [[Inżynieria Danych|data engineering]] wynosi jakość produktów danych na wyższy poziom.
 
 ### Zarządzanie zmianą i skalowalność
 

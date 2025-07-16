@@ -94,7 +94,7 @@ Wszystko to widoczne w dashboardzie, z możliwością szybkiego zgłoszenia prob
 # 👽 Brudnopis
 
 - observability = jakość + detekcja + lineage + alerty
-- must-have w modern data stack, DataOps, federacji danych i lakehouse
+- must-have w modern data stack, [[Inżynieria Danych|DataOps]], federacji danych i lakehouse
 - powiązanie z Data Discovery + SLA logiczne – które zestawy są stale wykorzystywane i potrzebują poziomu usług
 - AI-powered = autowykrywanie terminów, metryk, anomalii
 - przyszłość = samonaprawiające się pipeline’y z feedback loop z observability

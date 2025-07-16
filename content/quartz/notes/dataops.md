@@ -22,7 +22,7 @@ aliases:
 
 # 🎯 Definicja
 
-**DataOps (Data Operations)** to zestaw praktyk, metod i narzędzi mających na celu zautomatyzowanie, ustandaryzowanie i zwiększenie niezawodności procesów związanych z tworzeniem, przetwarzaniem i wdrażaniem danych oraz produktów danych. Bazuje na filozofii DevOps, przenosząc ją w świat danych, zapewniając krótsze cykle wdrożeniowe, wyższą jakość i transparentność danych.
+**[[Inżynieria Danych|DataOps]] (Data Operations)** to zestaw praktyk, metod i narzędzi mających na celu zautomatyzowanie, ustandaryzowanie i zwiększenie niezawodności procesów związanych z tworzeniem, przetwarzaniem i wdrażaniem danych oraz produktów danych. Bazuje na filozofii DevOps, przenosząc ją w świat danych, zapewniając krótsze cykle wdrożeniowe, wyższą jakość i transparentność danych.
 
 # 🔑 Kluczowe punkty
 
@@ -34,7 +34,7 @@ aliases:
 
 # 📚 Szczegółowe wyjaśnienie
 
-## Główne filary filozofii DataOps
+## Główne filary filozofii [[Inżynieria Danych|DataOps]]
 
 |Filary|Opis|
 |---|---|
@@ -45,7 +45,7 @@ aliases:
 |**Feedback/business alignment**|Częste pętle informacji zwrotnej od użytkownika końcowego danych|
 |**Kolaboracja zespołowa**|Silos dane/analityka/IT rozbijane na rzecz wspólnych celów i procesów|
 
-## Cykl życia danych w DataOps
+## Cykl życia danych w [[Inżynieria Danych|DataOps]]
 
 1. **Ingest** – pobieranie danych (streaming, batch, ELT, api)
 2. **Test** – walidacja poprawności, schematów, sensowności
@@ -55,7 +55,7 @@ aliases:
 
 ## Powiązania z innymi koncepcjami
 
-|Koncepcja|Powiązanie z DataOps|
+|Koncepcja|Powiązanie z [[Inżynieria Danych|DataOps]]|
 |---|---|
 |DevOps|Podejście „CI/CD + feedback loop”|
 |MLOps|DataOps stanowi fundament dobrej inżynierii danych dla ML|

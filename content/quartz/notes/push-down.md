@@ -75,7 +75,7 @@ SELECT * FROM orders WHERE year = 2025;
 
 # 💡 Przykład zastosowania
 
-Zespół data engineering zbudował pipeline do kopiowania danych z systemu ERP (Oracle) do hurtowni BigQuery. Dzięki aktywowaniu trybu push-down w narzędziu ELT (np. Fivetran), zamiast kopiować wszystkie rekordy z tabeli `transactions`, system pobiera wyłącznie te z ostatnich 7 dni, ponieważ filtr `WHERE transaction_date > CURRENT_DATE - 7` jest wykonywany już w Oracle.
+Zespół [[Inżynieria Danych|data engineering]] zbudował pipeline do kopiowania danych z systemu ERP (Oracle) do hurtowni BigQuery. Dzięki aktywowaniu trybu push-down w narzędziu ELT (np. Fivetran), zamiast kopiować wszystkie rekordy z tabeli `transactions`, system pobiera wyłącznie te z ostatnich 7 dni, ponieważ filtr `WHERE transaction_date > CURRENT_DATE - 7` jest wykonywany już w Oracle.
 
 ## 📌 Źródła
 

@@ -89,4 +89,4 @@ ART samodzielnie:
 - Model uczy się gdzie i kiedy korzystać z narzędzi (po demonstracjach, zero-shot).
 - Silny w unseen task – ogólność ważniejsza niż ręcznie robione skrypty.
 - Rozszerzalność: naprawianie kroków, dokładanie nowych narzędzi bez retrainu LLM.
-- Najlepszy na kompozycyjnych i złożonych zadaniach (np. Data Engineering, BI, nauki ścisłe).
+- Najlepszy na kompozycyjnych i złożonych zadaniach (np. [[Inżynieria Danych|Data Engineering]], BI, nauki ścisłe).

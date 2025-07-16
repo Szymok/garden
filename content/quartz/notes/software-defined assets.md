@@ -84,7 +84,7 @@ Dagster buduje DAG automatycznie, raportuje szczelność lineage i oferuje view 
 
 ## 📌 Źródła
 
-- [Functional Data Engineering — Maxime Beauchemin](https://maximebeauchemin.medium.com/functional-data-engineering-a-modern-paradigm-for-batch-data-processing-2327ec32c42a)
+- [Functional [[Inżynieria Danych|Data Engineering]] — Maxime Beauchemin](https://maximebeauchemin.medium.com/functional-data-engineering-a-modern-paradigm-for-batch-data-processing-2327ec32c42a)
 - [Dagster Logic Overview](https://docs.dagster.io/concepts/assets/software-defined-assets)
 - [Community Day Video 2023 – Dagster](https://www.youtube.com/live/An78xLxM9zQ?feature=share)
 - [Trendy w Orkiestracji Danych – Airbyte Blog](https://airbyte.com/blog/data-orchestration-trends)
