@@ -1,1 +1,0 @@
-An Arizona charter school, Unbound Academy, has been approved by the state board for an online-only model with an AI-driven curriculum. The academic instruction will be condensed into a two-hour window, while the remaining time will focus on life skills. Human guides will monitor progress and provide targeted interventions.
