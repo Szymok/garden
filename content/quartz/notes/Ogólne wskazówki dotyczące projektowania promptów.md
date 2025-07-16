@@ -1,100 +1,117 @@
 ---
-title: Ogólne wskazówki dotyczące projektowania promptów
-aliases: 
+
+title: Ogólne wskazówki dotyczące projektowania promptów  
+created: 2025-07-16  
+status: Final  
+category: Prompt Engineering  
+difficulty: podstawowy  
+language: pl  
 tags:
+
+- prompting
+- inżynieria promptów
+- ai  
+aliases:
+- ogólne zasady promptowania
+- prompt design best practices
+- projektowanie promptów
+
 ---
-## Start Simple
 
-Rozpoczynając projektowanie podpowiedzi, należy pamiętać, że jest to naprawdę iteracyjny proces, który wymaga wielu eksperymentów, aby uzyskać optymalne wyniki. Korzystanie z prostego placu zabaw z OpenAI lub Cohere jest dobrym punktem wyjścia.
+# 🎯 Definicja
 
-Możesz zacząć od prostych podpowiedzi i dodawać więcej elementów i kontekstu, dążąc do lepszych wyników. Z tego powodu niezbędne jest iterowanie podpowiedzi. Czytając ten przewodnik, zobaczysz wiele przykładów, w których szczegółowość, prostota i zwięzłość często dają lepsze wyniki.
+**Projektowanie promptów** to iteracyjny proces tworzenia jasnych, precyzyjnych instrukcji dla modeli AI, którego celem jest uzyskiwanie powtarzalnych, wysokiej jakości odpowiedzi. Dobre prompty wykorzystują prostotę, jasność polecenia i właściwe dawkowanie kontekstu, umożliwiając skuteczną komunikację z LLM.
 
-Gdy masz duże zadanie, które obejmuje wiele różnych podzadań, możesz spróbować podzielić zadanie na prostsze podzadania i rozwijać je w miarę uzyskiwania lepszych wyników. Pozwala to uniknąć zbytniego komplikowania procesu szybkiego projektowania na samym początku.
+# 🔑 Kluczowe zasady
 
-## Instrukcja
+- **Zaczynaj od prostych promptów** – iteruj, testuj różne warianty i stopniowo dokładnie dopracowuj szczegóły.
+- **Używaj konkretnych poleceń** – operuj czasownikami typu: “Napisz”, “Przetłumacz”, “Podsumuj”, “Wymień”, “Zamień na JSON”.
+- **Dziel duże zadania na mniejsze** – łatwiej uzyskasz kontrolę i przewidywalność, unikając nadmiernej komplikacji.
+- **Instrukcja na początku** – zaczynaj prompt od wyraźnej instrukcji, najlepiej oddzielonej od kontekstu separatorami (`###`, `---`).
+- **Kontekst i przykłady** – im bardziej szczegółowy i istotny kontekst oraz pożądany format, tym lepsze wyniki, szczególnie przy niestandardowych zadaniach.
+- **Bądź precyzyjny, nie za szczegółowy** – precyzja ≠ długość. Ulepszaj prompt w stronę opisu najbardziej istotnych wymagań, unikając zbędnych dygresji.
+- **Unikaj negacji i zakazów** – zamiast mówić, czego model ma nie robić, lepiej jasno określ, co powinien wykonać.
+- **Testuj różne sformułowania, formaty i przykłady** – to, co działa dla jednego zadania, może wymagać innego podejścia w innym przypadku.
 
-Możesz zaprojektować skuteczne podpowiedzi dla różnych prostych zadań, używając poleceń, aby poinstruować model, co chcesz osiągnąć, takich jak "Napisz", "Klasyfikuj", "Podsumuj", "Przetłumacz", "Zamów" itp.
+# 📚 Szczegółowe wyjaśnienia i przykłady
 
-Pamiętaj, że musisz także dużo eksperymentować, aby zobaczyć, co działa najlepiej. Wypróbuj różne instrukcje z różnymi słowami kluczowymi, kontekstami i danymi i zobacz, co działa najlepiej w konkretnym przypadku użycia i zadaniu. Zazwyczaj im bardziej szczegółowy i istotny jest kontekst dla zadania, które próbujesz wykonać, tym lepiej. Poruszymy znaczenie próbkowania i dodawania większego kontekstu w kolejnych przewodnikach.
+## 1. Iteracyjność i prostota
 
-Inni zalecają umieszczenie instrukcji na początku promptu. Innym zaleceniem jest użycie wyraźnego separatora, takiego jak "###", aby oddzielić instrukcję od kontekstu.
+> Najlepsze prompty powstają w wyniku testowania wariantów i obserwowania zachowań modelu. Zacznij od wersji jak najprostszej, iteracyjnie dodając polecenia, kontekst lub przykłady.
 
-Na przykład:
-
-_Prompt:_
-
-```
-### Instruction ###Translate the text below to Spanish:Text: "hello!"
-```
-
-_Output:_
-
-```
-¡Hola!
+```text
+### Instrukcja
+Przetłumacz poniższy tekst na hiszpański:
+Tekst: "Witaj!"
 ```
 
-## Specyfika
+## 2. Precyzyjna i jasna instrukcja
 
-Bądź bardzo konkretny w kwestii instrukcji i zadania, które ma wykonać model. Im bardziej opisowy i szczegółowy jest prompt, tym lepsze są wyniki. Jest to szczególnie ważne, gdy masz pożądany wynik lub styl generowania, którego szukasz. Nie ma konkretnych tokenów lub słów kluczowych, które prowadzą do lepszych wyników. Ważniejszy jest dobry format i opisowa zachęta. W rzeczywistości podawanie przykładów w podpowiedzi jest bardzo skuteczne, aby uzyskać pożądane wyniki w określonych formatach.
+> Im bardziej szczegółowe i opisowe polecenie, tym wyższa jakość oraz spójność odpowiedzi, zwłaszcza gdy oczekujesz konkretnego formatu lub stylu.
 
-Podczas projektowania podpowiedzi należy również pamiętać o długości podpowiedzi, ponieważ istnieją ograniczenia dotyczące tego, jak długa może być podpowiedź. Pomyśl o tym, jak konkretny i szczegółowy powinieneś być. Uwzględnianie zbyt wielu niepotrzebnych szczegółów niekoniecznie jest dobrym podejściem. Szczegóły powinny być istotne i przyczyniać się do realizacji zadania. Jest to coś, z czym będziesz musiał dużo eksperymentować. Zachęcamy do wielu eksperymentów i iteracji, aby zoptymalizować podpowiedzi dla swoich aplikacji.
-
-Jako przykład, wypróbujmy prosty prompt, aby wyodrębnić określone informacje z fragmentu tekstu.
-
-_Prompt:_
-
-```
-Extract the name of places in the following text. Desired format:Place: <comma_separated_list_of_company_names>Input: "Although these developments are encouraging to researchers, much is still a mystery. “We often have a black box between the brain and the effect we see in the periphery,” says Henrique Veiga-Fernandes, a neuroimmunologist at the Champalimaud Centre for the Unknown in Lisbon. “If we want to use it in the therapeutic context, we actually need to understand the mechanism.""
+```text
+Wyodrębnij nazwy miejsc z poniższego tekstu.
+Oczekiwany format:
+Place: <lista_nazw_po_przecinku>
+Tekst: "Henrique Veiga-Fernandes pracuje w Champalimaud Centre for the Unknown w Lizbonie."
 ```
 
-_Output:_
+### Wynik:
 
 ```
-Place: Champalimaud Centre for the Unknown, Lisbon
+Place: Champalimaud Centre for the Unknown, Lizbona
 ```
 
-## Unikaj niedokładności
+## 3. Unikanie nieprecyzyjnych poleceń
 
-Biorąc pod uwagę powyższe wskazówki dotyczące szczegółowości i poprawy formatu, łatwo jest wpaść w pułapkę chęci bycia zbyt sprytnym w kwestii podpowiedzi i potencjalnie tworzenia nieprecyzyjnych opisów. Często lepiej jest być konkretnym i bezpośrednim. Analogia jest tutaj bardzo podobna do skutecznej komunikacji - im bardziej bezpośrednia, tym skuteczniejsza jest wiadomość.
+> Jasność komunikacji jest kluczowa – zbyt ogólne lub niekonkretne prompty zwiększają ryzyko niezadowalających, nieprzewidywalnych odpowiedzi.
 
-Na przykład, możesz być zainteresowany poznaniem koncepcji inżynierii podpowiedzi. Możesz spróbować czegoś takiego:
+- 👎 **Nieoptymalnie:**  
+    "Wyjaśnij inżynierię promptów. Utrzymaj wyjaśnienie krótkie, tylko kilka zdań, nie bądź zbyt opisowy."
+- 👍 **Lepiej:**  
+    "W 2-3 zdaniach wyjaśnij koncepcję inżynierii promptów uczniowi liceum."
 
-```
-Explain the concept prompt engineering. Keep the explanation short, only a few sentences, and don't be too descriptive.
-```
+## 4. Formułowanie wytycznych „co robić”, nie „czego NIE robić”
 
-Z powyższego podpowiedzi nie wynika jasno, ile zdań należy użyć i w jakim stylu. Powyższe podpowiedzi nadal mogą przynieść dobre odpowiedzi, ale lepsza byłaby taka, która jest bardzo konkretna, zwięzła i na temat. Coś w stylu:
+> Sformułowania negatywne łatwo prowadzą model do niepożądanych zachowań. Lepiej wyraźnie określić, jakie działania mają zostać wykonane.
 
-```
-Use 2-3 sentences to explain the concept of prompt engineering to a high school student.
-```
+- 👎  
+    "DO NOT ASK FOR PERSONAL INFORMATION."
+- 👍  
+    "Agent powinien zarekomendować filmy wyłącznie na podstawie globalnych trendów. Nie zadawaj pytań o zainteresowania ani dane osobowe. Jeśli nie znajdziesz filmu, odpowiedz: 'Przepraszam, dziś nie mam propozycji.'"
 
-## To do or not to do?
+## 5. Testowanie formatów promptów
 
-Inną powszechną wskazówką przy projektowaniu podpowiedzi jest unikanie mówienia, czego nie robić, a zamiast tego mówienie, co robić. Zachęca to do większej szczegółowości i koncentruje się na szczegółach, które prowadzą do dobrych odpowiedzi ze strony modelu.
+> Dla modeli (zwłaszcza LLM) warto rozważyć:
 
-Oto przykład chatbota rekomendującego filmy, który zawiódł dokładnie w tym, czego nie chcę, aby robił ze względu na sposób, w jaki napisałem instrukcję - skupiając się na tym, czego nie robić.
+- separator instrukcji i kontekstu (`###`, `---`)
+- przykłady wejścia-wyjścia (few-shot prompting)
+- jasne wymagania co do długości/wyniku ("wymień 3 rzeczy", "zwróć JSON", "podaj jako listę")
 
-_Prompt:_
-
-```
-The following is an agent that recommends movies to a customer. DO NOT ASK FOR INTERESTS. DO NOT ASK FOR PERSONAL INFORMATION.Customer: Please recommend a movie based on my interests.Agent: 
-```
-
-_Output:_
+# 💡 Przykład rozbudowanego promptu
 
 ```
-Sure, I can recommend a movie based on your interests. What kind of movie would you like to watch? Do you prefer action, comedy, romance, or something else?
+### Instrukcja ###
+Podsumuj poniższy tekst w jednym zdaniu używając stylu popularnonaukowego.
+
+Tekst:
+"W XX wieku pojawiły się pierwsze komputery elektroniczne, które zrewolucjonizowały komunikację i przetwarzanie informacji..."
+
+Output format: Jedno zdanie, styl popularnonaukowy.
 ```
 
-_Prompt:_
+# 📌 Źródła
 
-```
-The following is an agent that recommends movies to a customer. The agent is responsible to recommend a movie from the top global trending movies. It should refrain from asking users for their preferences and avoid asking for personal information. If the agent doesn't have a movie to recommend, it should respond "Sorry, couldn't find a movie to recommend today.".Customer: Please recommend a movie based on my interests.Agent:
-```
+- promptingguide.ai/best-practices
+- OpenAI Cookbook: Prompt engineering best practices
+- DeepLearning.AI – ChatGPT Prompt Engineering for Developers
 
-_Output:_
+## 👽 Brudnopis
 
-```
-Sorry, I don't have any information about your interests. However, here's a list of the top global trending movies right now: [list of movies]. I hope you find something you like!
-```
+- Prompt = komunikat, którego skuteczność testujesz i optymalizujesz
+- Lepsze wyniki uzyskasz przez iteracje i stopniowe zawężanie – nie przez pojedynczą próbę
+- Macierz: [jasna instrukcja] + [odpowiedni format] + [kontekst] + [przykład]
+- Najlepsza praktyka: „powiedz, co robić”, nie „czego nie robić”
+- Sprawdzaj: długość promptu vs ograniczenia modelu (kontekst tokenów)
+
+---
