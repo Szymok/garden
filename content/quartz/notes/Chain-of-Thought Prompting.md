@@ -1,90 +1,102 @@
 ---
-title: Chain-of-Thought Prompting
+
+title: Chain-of-Thought Prompting  
+created: 2025-07-16  
+status:  
+category: LLM  
+difficulty: średni  
+language: pl  
 tags:
-  - prompt
-  - AI
-  - Sztuczna-Inteligencja
-  - prompt-techniques
+
+- prompt
+- AI
+- Sztuczna-Inteligencja
+- prompt-techniques  
 aliases:
-  - CoT
+- CoT
+
 ---
-![[Pasted image 20230922002358.png]]
 
-Podpowiedzi typu chain-of-thought (CoT) umożliwiają złożone rozumowanie poprzez pośrednie etapy rozumowania. Można je połączyć z [Few-Shot Prompting](Few-Shot%20Prompting), aby uzyskać lepsze wyniki w bardziej złożonych zadaniach, które wymagają rozumowania przed udzieleniem odpowiedzi.
+# 🎯 Definicja
 
-_Prompt:_
+**Chain-of-Thought Prompting (CoT)** to technika podpowiadania, która prowadzi model językowy przez sekwencję logicznych kroków rozumowania, zanim zostanie udzielona ostateczna odpowiedź. W przeciwieństwie do klasycznych promptów, CoT zachęca model do „myślenia na głos” w stylu krok po kroku. Umożliwia to rozwiązywanie bardziej złożonych zadań wymagających logicznych operacji i wieloetapowego wnioskowania.
+
+# 🔑 Kluczowe punkty
+
+- **Rozumowanie krok po kroku:** Model jest proszony o przeprowadzenie analizy lub przeliczeń przed sformułowaniem odpowiedzi.
+- **Efekt emergentny dużych modeli:** Skuteczność techniki CoT pojawia się dopiero w modelach LLM o odpowiedniej skali (zwykle powyżej 100 miliardów parametrów).
+- **Połączenie z few-shot i zero-shot:** CoT może być wykorzystywane zarówno w promptach z kilkoma przykładami (few-shot), jak i bez żadnych przykładów (`zero-shot-CoT`), tylko z dodatkiem frazy aktywującej (“Let's think step by step”).
+- **Podnosi trafność odpowiedzi** w zadaniach arytmetycznych, logicznych, wyboru wielokrotnego, QA i reasoning.
+- **Auto-CoT** automatyzuje proces tworzenia łańcuchów myślowych przy użyciu modelu wstępnie pobudzanego heurystyką.
+
+# 📚 Szczegółowe wyjaśnienie
+
+## Jak działa Chain-of-Thought Prompting?
+
+Model językowy nie tylko otrzymuje pytanie, ale także zostaje zachęcony do wygenerowania pośrednich etapów rozumowania. Dzięki temu może eksplorować głębsze aspekty zadania i unikać typowych „halucynacji domyślnych”.
+
+### Przykład standardowy
+
+**Prompt:**
 
 ```
-The odd numbers in this group add up to an even number: 4, 8, 9, 15, 12, 2, 1.A: Adding all the odd numbers (9, 15, 1) gives 25. The answer is False.The odd numbers in this group add up to an even number: 17,  10, 19, 4, 8, 12, 24.A: Adding all the odd numbers (17, 19) gives 36. The answer is True.The odd numbers in this group add up to an even number: 16,  11, 14, 4, 8, 13, 24.A: Adding all the odd numbers (11, 13) gives 24. The answer is True.The odd numbers in this group add up to an even number: 17,  9, 10, 12, 13, 4, 2.A: Adding all the odd numbers (17, 9, 13) gives 39. The answer is False.The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. A:
+The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. A:
 ```
 
-_Output:_
+**Output z CoT:**
 
 ```
 Adding all the odd numbers (15, 5, 13, 7, 1) gives 41. The answer is False.
 ```
 
-Wow! Widzimy doskonały wynik, gdy podaliśmy krok rozumowania. W rzeczywistości możemy rozwiązać to zadanie, podając jeszcze mniej przykładów, tj. wystarczy jeden przykład:
+## Zero-shot Chain-of-Thought
 
-_Prompt:_
+Zamiast przykładów używa się klasycznego polecenia typu “Let's think step by step.”
 
-```
-The odd numbers in this group add up to an even number: 4, 8, 9, 15, 12, 2, 1.A: Adding all the odd numbers (9, 15, 1) gives 25. The answer is False.The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. A:
-```
-
-_Output:_
+**Prompt:**
 
 ```
-Adding all the odd numbers (15, 5, 13, 7, 1) gives 41. The answer is False.
+I went to the market and bought 10 apples. I gave 2 to the neighbor and 2 to the repairman. I then bought 5 more and ate 1. How many apples did I remain with? Let's think step by step.
 ```
 
-Należy pamiętać, że autorzy twierdzą, że jest to zdolność emergentna, która pojawia się przy wystarczająco dużych modelach językowych [LLM](LLM).
-
-## [Zero-shot COT Prompting](Zero-shot%20COT%20Prompting)
-
-![[Pasted image 20230922002447.png]]
-
-Jednym z najnowszych pomysłów, który pojawił się niedawno, jest idea [zero-shot CoT](Zero-Shot%20CoT), która zasadniczo polega na dodaniu "Pomyślmy krok po kroku" do oryginalnego prompta. Wypróbujmy prosty problem i zobaczmy, jak działa model:
-
-_Prompt:_
+**Output:**
 
 ```
-I went to the market and bought 10 apples. I gave 2 apples to the neighbor and 2 to the repairman. I then went and bought 5 more apples and ate 1. How many apples did I remain with?
+10 – 2 – 2 = 6, +5 = 11, –1 = 10. Answer: 10 apples.
 ```
 
-_Output:_
+Ten prosty dodatek może znacząco poprawić dokładność odpowiedzi.
 
-```
-11 apples
-```
+## Automatic Chain-of-Thought (Auto-CoT)
 
-Odpowiedź jest nieprawidłowa! Spróbujmy teraz ze specjalnym promptem.
+Auto-CoT automatyzuje tworzenie przykładów pokazujących sekwencję rozumowania:
 
-_Prompt:_
+- **Etap 1: klastrowanie pytań** ze zbioru danych (np. wg długości, tematyki, trudności).
+- **Etap 2: wybór reprezentatywnych pytań i generowanie CoT** za pomocą heurystyki (np. długość pytania, minimalna liczba kroków logicznych).
 
-```
-I went to the market and bought 10 apples. I gave 2 apples to the neighbor and 2 to the repairman. I then went and bought 5 more apples and ate 1. How many apples did I remain with?Let's think step by step.
-```
+Wygenerowane demonystracje mogą być następnie używane jako prompty few-shot do szerszego wnioskowania.
 
-_Output:_
+# 💡 Przykład zastosowania
 
-```
-First, you started with 10 apples.You gave away 2 apples to the neighbor and 2 to the repairman, so you had 6 apples left.Then you bought 5 more apples, so now you had 11 apples.Finally, you ate 1 apple, so you would remain with 10 apples.
-```
+CoT znajduje zastosowanie m.in. w:
 
-To imponujące, że ten prosty prompt jest skuteczny w tym zadaniu. Jest to szczególnie przydatne, gdy nie masz zbyt wielu przykładów do wykorzystania w prompcie.
+- **QA testach (np. ScienceQA, CommonsenseQA):** "Which substance is denser: iron or water?"
+- **Zadaniach z matematyki:** "What is the next prime after 83?"
+- **Złożonych logikach i grach słownych:** "If John is taller than Mary, and Mary is taller than Tom, who is the shortest?"
 
-## [Automatic Chain-of-Thought (Auto-CoT)](Automatic%20Chain-of-Thought%20(Auto-CoT))
+Model odpowiada skuteczniej, gdy użyje serii przemyśleń, a nie zgaduje od razu.
 
-Podczas stosowania [Chain-of-Thought Prompting](Chain-of-Thought%20Prompting) z demonstracjami, proces obejmuje ręczne tworzenie skutecznych i różnorodnych przykładów. Ten ręczny wysiłek może prowadzić do nieoptymalnych rozwiązań. Proponowane podejście mające na celu wyeliminowanie ręcznego wysiłku poprzez wykorzystanie LLM z podpowiedzią "Pomyślmy krok po kroku" do generowania łańcuchów rozumowania dla demonstracji jeden po drugim. Ten automatyczny proces może jednak prowadzić do błędów w generowanych łańcuchach. Aby złagodzić skutki błędów, ważna jest różnorodność demonstracji. W tej pracy zaproponowano [Auto-CoT](Auto-CoT), który próbuje pytania z różnorodnością i generuje łańcuchy rozumowania w celu skonstruowania demonstracji.
+# 📌 Źródła
 
-[Auto-CoT(Auto-CoT)] składa się z dwóch głównych etapów:
+- [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)
+- [Zero-shot CoT Prompting](https://arxiv.org/abs/2205.11916)
+- [Auto-CoT](https://arxiv.org/abs/2210.03057)
+- [PromptingGuide.ai - CoT](https://promptingguide.ai/techniques/chain-of-thought)
 
-- Etap 1): **grupowanie pytań**: podział pytań z danego zbioru danych na kilka klastrów.
-- Etap 2): **próbkowanie demonstracji**: wybór reprezentatywnego pytania z każdego klastra i wygenerowanie jego łańcucha rozumowania przy użyciu [Zero-Shot-CoT](Zero-Shot-CoT) z prostą heurystyką
+# 👽 Brudnopis
 
-Prostą heurystyką może być długość pytania (np. 60 tokenów) i liczba kroków w uzasadnieniu (np. 5 kroków rozumowania). Zachęca to model do korzystania z prostych i dokładnych demonstracji.
-
-Proces został zilustrowany poniżej:
-
-![[Pasted image 20230922002546.png]]
+- CoT działa tylko w naprawdę dużych modelach – efekt emergentny.
+- Dobrym triggerem często okazuje się jedno zdanie: “Let's think step by step.”
+- Można budować demonstracje: (Treść pytania + przykład obliczenia + odpowiedź).
+- Auto-CoT = skalowalne generowanie przykładów do few-shot-CoT.
+- CoT = większy koszt tokenów, ale wyższa jakość reasoning + interpretowalność.

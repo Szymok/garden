@@ -1,74 +1,119 @@
 ---
-title: "Dane strukturalne"
+
+title: Dane strukturalne  
+created: 2025-07-16  
+status:  
+category: inżynieria danych  
+difficulty: podstawowy  
+language: pl  
 tags:
+
 - inżynieria danych
-- koncepcja
+- koncepcja aliases:
+aliases:
 ---
-Strukturalne dane odnoszą się do danych, które zostały sformatowane zgodnie z dobrze zdefiniowanym schematem. Przykładem mogą być dane przechowywane w dokładnie zdefiniowanych kolumnach w bazie danych relacyjnej lub arkuszu kalkulacyjnym. Przykłady strukturalnych pól obejmują wiek, imię, numer telefonu, numery kart kredytowych czy adresy. Przechowywanie danych w formacie strukturalnym umożliwia ich łatwe zrozumienie i zapytania za pomocą maszyn oraz narzędzi takich jak SQL.
 
-## Przykład strukturalnych danych
+# 🎯 Definicja
 
-Poniżej znajduje się przykład strukturalnych danych tak, jakby się one pojawiały w bazie danych:
+**Dane strukturalne** to dane zapisane zgodnie z jasno zdefiniowanym schematem – są uporządkowane, silnie sformatowane, wpisujące się w konkretne typy i kolumny tabel czy zestawów danych. Przykłady to rekordy baz danych relacyjnych, arkusze kalkulacyjne, a także dane opisane za pomocą rozbudowanych znaczników na stronach internetowych (np. Schema.org, JSON-LD, Microdata).
 
-|         |  **wiek**| **imię**| **telefon**| 
-|---------|-----|------|-----|
-|Rekord 1| 29 | Bob | 123-456 |
-|Rekord 2| 30 | Sue | 789-123 | 
+# 🔑 Kluczowe punkty
 
-Może się wydawać, że wszystkie dane są strukturalne, ale nie zawsze jest to prawda - dane mogą być niestrukturalne lub półstrukturalne. Różnice najlepiej zrozumieć na przykładach, które omówione są w kolejnych sekcjach. 
+- **Są przechowywane w ściśle określonej strukturze** – najczęściej w tabelach baz danych: każda kolumna ma typ (np. liczba, tekst, data), a każdy wiersz odpowiada rekordowi.
+- **Pozwalają na szybkie query i automatyczną analizę** – dostępne są za pomocą SQL lub innych sformalizowanych języków zapytań.
+- **Widoczne są również w sieci** – np. w kodzie stron (schema.org, RDFa, JSON-LD, Microdata) jako uporządkowane opisy produktowe, firmowe, artykułów czy wydarzeń.
+- **Ułatwiają integrację oraz automatyczne przetwarzanie** przez narzędzia IT i systemy analityczne.
+- **Stosowane w wielu branżach**: od sklepów internetowych po analitykę mediów społecznościowych i systemy ERP.
 
-## Strukturalne dane a dane niestrukturalne
+# 📚 Szczegółowe wyjaśnienie
 
-Dane strukturalne można zestawić z [danymi niestrukturalnymi](notes/dane%20niestrukturalne.md), które nie podlegają modelowi danych i nie mają łatwo rozpoznawalnej struktury. Dane niestrukturalne nie mogą być łatwo wykorzystywane przez programy i są trudne do analizy. Przykłady danych niestrukturalnych to zawartość e-maila, treść dokumentu Word, dane z mediów społecznościowych, zdjęcia, filmy, wyniki ankiet itp. 
+## Przykłady strukturalnych danych
 
-Prostym przykładem danych niestrukturalnych jest ciąg zawierający interesujące informacje, ale nie został on sformatowany zgodnie z dobrze zdefiniowanym schematem. Przykład jest przedstawiony poniżej:
+Najprostsze przykłady to wiersze w bazie SQL:
 
-|               |  **DaneNiestrukturalne**|
-|---------| -----------|
-|Rekord 1| "Bob ma 29 lat" |
-|Rekord 2| "Mary właśnie skończyła 30 lat"|
+|wiek|imię|telefon|
+|---|---|---|
+|29|Bob|123-456|
+|30|Sue|789-123|
 
-## Formatowanie danych niestrukturalnych
+W kontekście web — dane strukturalne pojawiają się jako znaczniki w kodzie HTML, np. z wykorzystaniem schema.org (artykuły, produkty, FAQ):
 
-Przekształcenie danych niestrukturalnych w strukturalne można przeprowadzić podczas etapu [transformacji danych](Transformacja%20danych.md) w procesie [ETL](ETL.md) lub [ELT](ELT.md). 
-
-Na przykład, aby efektywnie wykorzystać dane niestrukturalne podane w poprzednim przykładzie, można by je przekształcić na dane strukturalne, takie jak poniżej:
-
-|               |  **imię** | **wiek** |
-|---------| -----------|---- |
-|Rekord 1| "Bob" | 29 |
-|Rekord 2| "Mary"| 30 |
-
-Przechowywanie danych w strukturalny sposób sprawia, że znacznie łatwiej jest przeprowadzać zapytania. Na przykład po sformatowaniu danych możliwe jest łatwe i efektywne wykonanie następującego zapytania w oparciu o dane strukturalne:
-  
-``` SQL
-SELECT * FROM X where Age=29
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Robert Lewandowski",
+  "jobTitle": "Piłkarz"
+}
 ```
 
-Takie zapytanie mogłoby być kosztowne i/lub trudniejsze do wykonania na danych niestrukturalnych.
+W e-commerce:
 
-## Strukturalne dane a dane półstrukturalne
+- nazwa produktu, cena, dostępność, ocena → te dane są często implementowane w kodzie strony jako JSON-LD (co umożliwia tzw. rich snippets w wyszukiwarkach).
 
-Dane strukturalne można również zestawić z [danymi półstrukturalnymi](https://chat.openai.com/notes/dane%20p%C3%B3%C5%82strukturalne.md), które nie mają sztywnej struktury i nie są bezpośrednio zgodne z modelem danych. Niemniej jednak, dane półstrukturalne posiadają tagi i elementy opisujące dane.
+## Strukturalne vs. niestrukturalne i półstrukturalne
 
-Przykłady danych półstrukturalnych to pliki JSON lub XML. Dane półstrukturalne często zawierają wystarczającą ilość informacji, aby można je było stosunkowo łatwo przekształcić w dane strukturalne. 
+- **Strukturalne dane**: sztywny schemat, łatwa analiza, szybkie zapytania (baza danych, sheet, schema.org).
+- **Niestrukturalne dane**: brak wyraźnego schematu (np. tekst e-maila, zdjęcie, wolny opis)—trudniejsze do analizy maszynowej.
+- **Półstrukturalne dane**: np. JSON, XML, pliki logów — mają pewne tagi i strukturę, lecz nie zawsze pełny schemat; można je relatywnie łatwo zamienić w dane strukturalne.
 
-Przykładem danych półstrukturalnych jest osadzony wewnątrz ciągu znaków JSON. Ciąg zawiera wszystkie informacje wymagane do zrozumienia struktury danych, ale w danym momencie jest to po prostu ciąg znaków - nie został jeszcze sformatowany. Przykładem danych półstrukturalnych jest również surowy JSON przechowywany przez Airbyte podczas procesu ELT. Wygląda to następująco:
+### Przykład konwersji:
 
+Z niestrukturalnej:
 
-|               |  data |
-|---------| -----------|
-|Rekord 1| "{'id': 1, 'name': 'Mary X'}" |
-|Rekord 2| "{'id': 2, 'name': 'John D'}"|
-## Formatowanie danych półstrukturalnych
+|DaneNiestrukturalne|
+|---|
+|Bob ma 29 lat|
 
-Przekształcenie danych półstrukturalnych na dane strukturalne jest często stosunkowo proste. Na przykład, jeśli włączona jest normalizacja, Airbyte automatycznie przekształci przechowywane w polu `_airbyte_data` dane JSON w tabelę, która wygląda następująco:
+Po ekstrakcji — do postaci strukturalnej:
 
-|---|**id**|**imię**|
-|---|---|---|
-|Rekord 1|1|"Mary X"|
-|Rekord 2|2|"John D"|
+|imię|wiek|
+|---|---|
+|Bob|29|
 
-## Praktyczny przykład przekształcenia danych półstrukturalnych na strukturalne
+Taki przekształcony zestaw jest łatwy do analizy i query w bazach SQL.
 
-Jeśli dane JSON półstrukturalne są przechowywane w Postgresie, można je przekształcić na dane strukturalne, korzystając z Funkcji i Operatorów JSON. 
+## Wdrożenie w sieci – SEO i rich snippets
+
+Wdrożenie danych strukturalnych (np. za pomocą schema.org w formacie JSON-LD w kodzie HTML) pozwala wyszukiwarkom skuteczniej interpretować zawartość strony. Przekłada się to na możliwość generowania tzw. “rozszerzonych” wyników wyszukiwania (rich snippets), np. z opiniami, ocenami produktów, wydarzeniami, FAQ i breadcrumb (okruszkami).
+
+## Najpopularniejsze typy danych strukturalnych dla sieci
+
+- **Product**: nazwa, opis, cena, dostępność, recenzje.
+- **Article**: tytuł, autor, data publikacji.
+- **FAQ Page**: pytanie i odpowiedź.
+- **Breadcrumb**: ścieżka nawigacyjna strony.
+- **Event**: data, miejsce, organizator.
+
+# 💡 Przykład praktyczny
+
+Jeśli Twoja strona e-commerce posiada produkty z metadanymi Product, Google może je wyświetlić z ceną, oceną i dostępnością już w liście wyników wyszukiwania.
+
+**W SQL**:
+
+```sql
+SELECT * FROM users WHERE age=29
+```
+
+Taki query jest możliwy tylko na danych strukturalnych — na nieustrukturyzowanych tekstach wymagałby złożonego NLP lub ręcznej ekstrakcji.
+
+# 📌 Źródła
+
+- [https://ks.pl/slownik/czym-sa-dane-strukturalne](https://ks.pl/slownik/czym-sa-dane-strukturalne)
+- [https://sempai.pl/blog/dane-strukturalne-czym-sa-structural-data-i-jaki-maja-wplyw-na-seo/](https://sempai.pl/blog/dane-strukturalne-czym-sa-structural-data-i-jaki-maja-wplyw-na-seo/)
+- [https://nprofit.net/pl/dane-strukturalne-jakie-sa-rodzaje-15-przykladow-oraz-wplyw-na-seo/](https://nprofit.net/pl/dane-strukturalne-jakie-sa-rodzaje-15-przykladow-oraz-wplyw-na-seo/)
+- [https://widzialni.pl/wzbogac-swoja-strone-o-dane-strukturalne/](https://widzialni.pl/wzbogac-swoja-strone-o-dane-strukturalne/)
+- [https://cyberfolks.pl/slownik/dane-strukturalne/](https://cyberfolks.pl/slownik/dane-strukturalne/)
+- [https://sempire.pl/co-to-sa-dane-strukturalne-structured-data.html](https://sempire.pl/co-to-sa-dane-strukturalne-structured-data.html)
+- [https://udigroup.pl/blog/schema-org-dane-strukturalne-ktore-doceni-google/](https://udigroup.pl/blog/schema-org-dane-strukturalne-ktore-doceni-google/)
+- [https://webwavecms.com/blog/dane-strukturalne](https://webwavecms.com/blog/dane-strukturalne)
+- [https://promotraffic.pl/blog/dane-strukturalne-kompletny-przewodnik-po-implementacji-i-korzysciach](https://promotraffic.pl/blog/dane-strukturalne-kompletny-przewodnik-po-implementacji-i-korzysciach)
+
+# 👽 Brudnopis
+
+- Dane strukturalne: relacyjne bazy, sheet (Excel); JSON-LD, Microdata na stronie.
+- Najczęstsze przypadki: produkt, artykuł, wydarzenie, osoba, FAQ — istotne w SEO i widoczności.
+- Niestrukturalne: teksty, obrazy, video.
+- Półstrukturalne: JSON, XML, logi.
+- Wdrożenie: kod strony (schema.org, JSON-LD), tabela SQL, plik CSV z kolumnami i typami.
+- Rich snippets = efekt wdrożenia na stronie (SEO).

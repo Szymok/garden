@@ -1,42 +1,59 @@
 ---
-title: Few-Shot Prompting
+
+title: Few-Shot Prompting  
+created: 2025-07-16  
+status:  
+category: LLM  
+difficulty: podstawowy  
+language: pl  
 tags:
-  - prompt
-  - AI
-  - Sztuczna-Inteligencja
-  - prompt-techniques
+
+- prompt
+- AI
+- Sztuczna-Inteligencja
+- prompt-techniques  
 aliases:
-  - tworzenie-promptów
+- tworzenie-promptów
+
 ---
-Podczas gdy duże modele językowe [LLM](LLM) wykazują niezwykłe możliwości w zakresie [Zero-Shot Prompting](Zero-Shot%20Prompting), nadal nie radzą sobie z bardziej złożonymi zadaniami przy użyciu ustawienia zero-shot. [Few-Shot Prompting](Few-Shot%20Prompting) moze być wykorzystywane jako technika umożliwiająca uczenie się w kontekście, w którym zapewniamy demonstracje w podpowiedzi, aby kierować modelem w celu uzyskania lepszej wydajności. Demonstracje służą jako warunki dla kolejnych przykładów, w których chcielibyśmy, aby model wygenerował odpowiedź.
 
-Według Touvron właściwości few-shot pojawiły się po raz pierwszy, gdy modele zostały przeskalowane do wystarczającego rozmiaru.
+# 🎯 Definicja
 
-Zademonstrujmy [Few-Shot Prompting](Few-Shot%20Prompting) na przykładzie, w ktorym zadaniem jest poprawne użycie nowego słowa w zdaniu.
+**Few-Shot Prompting** to technika podpowiadania, w której dostarczamy dużemu modelowi językowemu (LLM) kilka demonstracyjnych przykładów zadania w samym promptcie. Te demonstracje pełnią rolę wzorców, na podstawie których model generuje odpowiedzi na nowe, nieznane przypadki – bez potrzeby dodatkowego uczenia.
 
-_Prompt:_
+# 🔑 Kluczowe punkty
+
+- Model uczy się „w kontekście” – wystarczy od 1 do kilku przykładów (tzw. 1-shot, 3-shot, 5-shot... prompting).
+- Format i spójność demonstracji istotnie wpływają na skuteczność – nawet losowe etykiety przy zachowaniu formatu pomagają modelowi zorientować się w zadaniu.
+- Few-shot pozwala na dynamiczną specjalizację modelu bez potrzeby kosztownego fine-tuningu.
+- Wydajność few-shot rośnie wraz ze skalą modelu – technika stała się efektywna dzięki dużym LLM.
+- Ma ograniczenia w zadaniach wymagających wieloetapowego rozumowania lub skomplikowanej logiki.
+
+# 📚 Szczegółowe wyjaśnienie
+
+## Jak działa Few-Shot Prompting?
+
+Model LLM otrzymuje prompt zawierający kilka demonstracji wejście–wyjście (input–output):
 
 ```
-A "whatpu" is a small, furry animal native to Tanzania. An example of a sentence that usesthe word whatpu is:We were traveling in Africa and we saw these very cute whatpus.To do a "farduddle" means to jump up and down really fast. An example of a sentence that usesthe word farduddle is:
+A "whatpu" is a small, furry animal native to Tanzania.
+An example of a sentence that uses the word whatpu is:
+We were traveling in Africa and we saw these very cute whatpus.
+
+To do a "farduddle" means to jump up and down really fast.
+An example of a sentence that uses the word farduddle is:
 ```
 
-_Output:_
+Model domyśla się, że powinien wstawić w odpowiedzi zdanie z poprawnym użyciem „farduddle”.
 
-```
-When we won the game, we all started to farduddle in celebration.
-```
+## Wskazówki i dobre praktyki
 
-Możemy zaobserwować, że model w jakiś sposób nauczył się wykonywać zadanie, dostarczając mu tylko jeden przykład (tj. 1-shot). W przypadku trudniejszych zadań możemy eksperymentować ze zwiększaniem liczby demonstracji (np. 3-shots, 5-shots, 10-shots itd.).
+- **Wybierz przykłady pokrywające różne przypadki etykiet** – lepsze pokrycie dystrybucji wejść i etykiet przekłada się na skuteczność.
+- **Zachowaj spójny format wejść i wyjść** – nawet jeśli etykiety są losowe!
+- **Nowsze modele są bardziej odporne na niespójności i losowe oznaczenia** – choć klasyczne podejście (jeden format) jest wciąż najbezpieczniejsze.
+- **Zwiększ liczbę „shots” dla trudniejszych zadań** – im trudniejsze zadanie, tym więcej przykładów może być potrzebnych (ale za dużo może zapchać kontekst modelu).
 
-Zgodnie z ustaleniami Min, oto kilka dodatkowych wskazówek dotyczących demonstracji/przykładów podczas wykonywania [Few-Shot Promptingu](Few-Shot%20Prompting):
-
-- "przestrzeń etykiet i dystrybucja tekstu wejściowego określonego przez demonstracje są ważne (niezależnie od tego, czy etykiety są poprawne dla poszczególnych danych wejściowych)".
-- używany format również odgrywa kluczową rolę w wydajności, nawet jeśli używasz tylko losowych etykiet, jest to znacznie lepsze niż brak etykiet w ogóle.
-- Dodatkowe wyniki pokazują, że wybór losowych etykiet z prawdziwego rozkładu etykiet (zamiast rozkładu jednostajnego) również pomaga.
-
-Wypróbujmy kilka przykładów. Najpierw wypróbujmy przykład z losowymi etykietami (co oznacza, że etykiety Negative i Positive są losowo przypisywane do wejść):
-
-_Prompt:_
+**Przykład z losową etykietą – nadal działa:**
 
 ```
 This is awesome! // Negative
@@ -45,61 +62,57 @@ Wow that movie was rad! // Positive
 What a horrible show! //
 ```
 
-_Output:_
+Model przewiduje: `Negative`
 
-```
-Negative
-```
+## Ograniczenia Few-Shot Prompting
 
-Nadal otrzymujemy poprawną odpowiedź, mimo że etykiety zostały losowo zmienione. Zwróć uwagę, że zachowaliśmy również format, co również pomaga. W rzeczywistości, wraz z dalszymi eksperymentami, wydaje się, że nowsze modele GPT, z którymi eksperymentujemy, stają się coraz bardziej odporne nawet na losowe formaty. Przykład:
+- **Nie radzi sobie z wieloetapowym rozumowaniem** – model może popełnić błędy logiczne nawet przy licznych przykładach.
+- **Format i jakość demonstracji kluczowa** – niespójność formatu lub chaotyczne przykłady mogą pogorszyć wyniki.
+- **W zadaniach wymagających wyjaśnienia procesu (reasoning)** lepsze efekty daje Chain-of-Thought Prompting (CoT).
 
-_Prompt:_
-
-```
-Positive This is awesome!
-This is bad! Negative
-Wow that movie was rad!Positive
-What a horrible show! --
-```
-
-_Output:_
-
-```
-Negative
-```
-
-Powyższy format nie jest spójny, ale model nadal przewidywał prawidłową etykietę. Musimy przeprowadzić dokładniejszą analizę, aby potwierdzić, czy dotyczy to różnych i bardziej złożonych zadań, w tym różnych wariantów podpowiedzi.
-
-## Ograniczenia [Few-shot Prompting](Few-shot%20Prompting)
-
-Standardowe kilkuzdaniowe podpowiedzi sprawdzają się dobrze w wielu zadaniach, ale nadal nie są doskonałą techniką, szczególnie w przypadku bardziej złożonych zadań rozumowania. Zademonstrujmy, dlaczego tak jest. Pamiętasz poprzedni przykład, w którym przedstawiliśmy następujące zadanie:
+**Przykład ograniczeń:**
 
 ```
 The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. A: 
 ```
-Jeśli spróbujemy ponownie, model wyświetli następujące wyniki:
+
+Model poprawia odpowiedź dopiero po dołączeniu serii przykładów, a i tak nie zawsze skutecznie – konieczne rozbicie na etapy (CoT).
+
+|Technika|Plusy|Minusy|
+|---|---|---|
+|Few-Shot Prompting|Prostota, brak fine-tune, szybkie wdrożenie|Słabiej działa przy złożonych zadaniach|
+|Chain-of-Thought Prompting|Lepsze reasoning, wieloetapowe zadania|Większy prompt, wyższy koszt obliczeniowy|
+
+# 💡 Przykład zastosowania
+
+**Analityk chce sklasyfikować sentyment zdań:**
+
+Prompt:
 
 ```
-Yes, the odd numbers in this group add up to 107, which is an even number.
+This is amazing! // Positive
+I did not enjoy that. // Negative
+Absolutely loving it! // Positive
+Such a disappointing experience. //
 ```
 
-Nie jest to prawidłowa odpowiedź, która nie tylko podkreśla ograniczenia tych systemów, ale także potrzebę bardziej zaawansowanej inżynierii promptów.
+Model generuje: `Negative`
 
-Spróbujmy dodać kilka przykładów, aby zobaczyć, czy [Few-Shot Prompting](Few-Shot%20Prompting) poprawia wyniki.
+**W praktyce:**  
+W data science Few-Shot Prompting pozwala szybko testować nowe zadania na LLM (np. klasyfikacja, parafrazowanie, generowanie przykładów, ekstrakcja informacji) – wystarczy kilka dobrze dobranych demonstracji zamiast czasochłonnego uczenia modelu.
 
-_Prompt:_
+# 📌 Źródła
 
-```
-The odd numbers in this group add up to an even number: 4, 8, 9, 15, 12, 2, 1.A: The answer is False.The odd numbers in this group add up to an even number: 17,  10, 19, 4, 8, 12, 24.A: The answer is True.The odd numbers in this group add up to an even number: 16,  11, 14, 4, 8, 13, 24.A: The answer is True.The odd numbers in this group add up to an even number: 17,  9, 10, 12, 13, 4, 2.A: The answer is False.The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. A: 
-```
+- [https://arxiv.org/abs/2005.14165](https://arxiv.org/abs/2005.14165)
+- [https://platform.openai.com/docs/guides/few-shot-learning](https://platform.openai.com/docs/guides/few-shot-learning)
+- [https://promptingguide.ai/techniques/few-shot](https://promptingguide.ai/techniques/few-shot)
+- [https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/](https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/)
+- [https://huggingface.co/learn/nlp-course/chapter6/6](https://huggingface.co/learn/nlp-course/chapter6/6)
 
-_Output:_
+# 👽 Brudnopis
 
-```
-The answer is True.
-```
-
-To nie zadziałało. Wygląda na to, że [Few-Shot Prompting](Few-Shot%20Prompting) nie wystarczą, by uzyskać wiarygodne odpowiedzi w tego typu zadaniach. Powyższy przykład zawiera podstawowe informacje na temat zadania. Jeśli przyjrzeć się bliżej, typ zadania, który wprowadziliśmy, obejmuje kilka dodatkowych kroków rozumowania. Innymi słowy, pomocne może być podzielenie problemu na etapy i zademonstrowanie tego modelowi. W ostatnim czasie podpowiedzi typu [Chain-of-Thought Prompting](Chain-of-Thought%20Prompting) zostały spopularyzowane w celu rozwiązywania bardziej złożonych zadań arytmetycznych, zdroworozsądkowych i symbolicznych.
-
-Ogólnie rzecz biorąc, wydaje się, że dostarczanie przykładów jest przydatne w rozwiązywaniu niektórych zadań. Gdy typu [Few-Shot Prompting](Few-Shot%20Prompting) i [Zero-Shot Prompting](Zero-Shot%20Prompting) nie są wystarczające, może to oznaczać, że to, czego nauczył się model, nie wystarczy, by dobrze poradzić sobie z zadaniem. Od tego momentu zaleca się rozpoczęcie myślenia o dopracowaniu modeli lub eksperymentowaniu z bardziej zaawansowanymi [Prompting Techniques](Prompting%20Techniques). Następnie omówimy jedną z popularnych technik prompting, zwaną [Chain-of-Thought Prompting](Chain-of-Thought%20Prompting), która zyskała dużą popularność.
-
+- Few-shot = prompty wzorcowe, wysoka elastyczność
+- Im większy model, tym lepsza generalizacja (skala ważna, efekt Touvron/Min)
+- Losowe etykiety i formaty coraz mniej szkodzą – odporność nowoczesnych LLM
+- Ograniczenie reasoning – konieczność przejścia na CoT lub inne techniki
+- Praktyczne use-case: rozpoznawanie sentymentu, Q&A eksperckie, ekstrakcja encji, tłumaczenie z przykładów

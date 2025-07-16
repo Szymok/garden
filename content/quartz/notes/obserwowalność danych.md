@@ -22,6 +22,6 @@ Z doskonałego artykułu [Wybór narzędzia do jakości danych - autorstwa Sarah
 - **Trochę z każdego**
 	- [Databand](https://databand.ai/): unikalna integracja z Airflow i konkretnym monitorowaniem miar Airflow
 	- [Unravel](https://www.unraveldata.com/): unikalne wsparcie dla innych źródeł danych, takich jak Spark, jezioro danych i bazy danych NoSQL
-	- [Katalogi Danych](notes/katalog%20danych.md): Pomagają w obserwacji istniejących danych
+	- [Katalogi Danych](Katalog%20Danych.md): Pomagają w obserwacji istniejących danych
 
-Powiązane terminy to [Gospodarka Danych](notes/data%20governance.md) i [Jakość Danych](notes/data%20quality.md).
+Powiązane terminy to [Gospodarka Danych](Data%20Governance.md) i [Jakość Danych](notes/data%20quality.md).

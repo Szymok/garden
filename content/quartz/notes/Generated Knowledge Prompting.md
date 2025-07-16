@@ -1,18 +1,42 @@
 ---
 title: Generated Knowledge Prompting
+created: 2025-07-16
+status: 
+category: LLM
+difficulty: średni
+language: pl
 tags:
   - prompt
-  - prompt-techniques
-aliases:
   - GKP
+aliases:
 ---
-![[Pasted image 20230922002008.png]]
 
-Modele [LLM](LLM) są wciąż ulepszane, a jedna z popularnych technik obejmuje możliwość uwzględnienia wiedzy lub informacji, aby pomóc modelowi w dokonywaniu dokładniejszych prognoz.
+# 🎯 Definicja
 
-Korzystając z podobnego pomysłu, czy model może być również wykorzystywany do generowania wiedzy przed dokonaniem prognozy? To właśnie jest próbą w artykule Liu et al. 2022(otwiera się w nowej karcie) - generowanie wiedzy, która ma być wykorzystana jako część [promptu](Prompt). W szczególności, jak pomocne jest to w zadaniach takich jak rozumowanie zdroworozsądkowe?
+**Generated Knowledge Prompting (GKP)** to zaawansowana technika podpowiadania, w której model językowy (LLM) najpierw generuje pomocne, kontekstowe informacje (wiedzę), a dopiero potem wykorzystuje je jako część promptu do sformułowania właściwej odpowiedzi na zadanie. Celem GKP jest wzbogacenie procesu rozumowania modelu przez jawne tworzenie i integrację "wiedzy" – faktów, definicji, przykładów lub uwarunkowań istotnych dla danego pytania lub problemu.
 
-Wypróbujmy prosty prompt:
+# 🔑 Kluczowe punkty
+
+- **Dwuetapowe podejście:** Najpierw LLM generuje wiedzę związaną z problemem, następnie wykorzystuje ją do wygenerowania odpowiedzi.
+- **Wzrost trafności i głębi odpowiedzi:** W zadaniach wymagających rozumowania ogólnego (commonsense reasoning) GKP istotnie podnosi jakość odpowiedzi, zwiększając skuteczność z ok. 64% do ponad 70% w testach takich jak CommonsenseQA.
+- **Możliwość stosowania w formacie single- lub dual-prompt:** Wiedza i odpowiedź mogą być generowane razem (single prompt) albo w dwóch krokach (dual prompt).
+- **Ujawnianie i korygowanie ograniczeń modelu:** GKP pozwala modelowi skorygować błędne intuicje lub domyślne halucynacje, przez eksplicytne odniesienia do wiedzy dziedzinowej.
+- **Technika skalowalna i uniwersalna:** Wprowadza automatyzację tworzenia "wskazówek" i pozwala objąć szerszy zakres tematyczny bez ręcznego programowania promptów.
+
+# 📚 Szczegółowe wyjaśnienie
+
+## Mechanizm działania
+
+1. **Generowanie wiedzy**
+    
+    - Model proszony jest o zbudowanie kilku faktów, definicji, zasad lub przykładów na temat danego zagadnienia, pytania czy problemu (np. "Podaj kilka faktów o golfie" albo "Wygeneruj definicję 'ekosystemu'").
+    - W zadaniach typu commonsense reasoning – model generuje tło wiedzy, której mu brakuje do prawidłowego rozwiązania, co pomaga uniknąć typowych halucynacji.
+2. **Integracja wiedzy z promptem**
+    
+    - Wygenerowana wiedza stanowi jawny kontekst – jest dołączana do głównego promptu lub pytania ("Knowledge: ...").
+    - Model przechodzi do rozwiązania zadania i podaje odpowiedź, korzystając wykładniczo zwiększonej ilości eksplicytnej informacji.
+
+**Przykład – zadanie logiczne (QA):**
 
 Prompt:
 
@@ -20,73 +44,80 @@ Prompt:
 Part of golf is trying to get a higher point total than others. Yes or No?
 ```
 
-_Output:_
+Model (bez wiedzy):  
+`Yes.` (błąd)
+
+GKP:  
+Najpierw generuje wiedzę:
 
 ```
-Yes.
+Knowledge: Celem golfa jest ukończenie pola w możliwie najmniejszej liczbie uderzeń. Wyższy wynik oznacza więcej uderzeń, co jest mniej korzystne.
 ```
 
-Ten rodzaj błędu ujawnia ograniczenia [LLM](LLM) w wykonywaniu zadań wymagających większej wiedzy o świecie. Jak możemy to poprawić dzięki generowaniu wiedzy?
-
-Po pierwsze, generujemy troche "wiedzy":
-
-_Prompt:_
-
-```
-Input: Greece is larger than mexico.
-Knowledge: Greece is approximately 131,957 sq km, while Mexico is approximately 1,964,375 sq km, making Mexico 1,389% larger than Greece.
-Input: Glasses always fog up.
-Knowledge: Condensation occurs on eyeglass lenses when water vapor from your sweat, breath, and ambient humidity lands on a cold surface, cools, and then changes into tiny drops of liquid, forming a film that you see as fog. Your lenses will be relatively cool compared to your breath, especially when the outside air is cold.
-Input: A fish is capable of thinking.
-Knowledge: Fish are more intelligent than they appear. In many areas, such as memory, their cognitive powers match or exceed those of ’higher’ vertebrates including non-human primates. Fish’s long-term memories help them keep track of complex social relationships.
-Input: A common effect of smoking lots of cigarettes in one’s lifetime is a higher than normal chance of getting lung cancer.
-Knowledge: Those who consistently averaged less than one cigarette per day over their lifetime had nine times the risk of dying from lung cancer than never smokers. Among people who smoked between one and 10 cigarettes per day, the risk of dying from lung cancer was nearly 12 times higher than that of never smokers.
-Input: A rock is the same size as a pebble.
-Knowledge: A pebble is a clast of rock with a particle size of 4 to 64 millimetres based on the Udden-Wentworth scale of sedimentology. Pebbles are generally considered larger than granules (2 to 4 millimetres diameter) and smaller than cobbles (64 to 256 millimetres diameter).
-Input: Part of golf is trying to get a higher point total than others.
-Knowledge:
-```
-
-_Knowledge 1:_
-
-```
-The objective of golf is to play a set of holes in the least number of strokes. A round of golf typically consists of 18 holes. Each hole is played once in the round on a standard golf course. Each stroke is counted as one point, and the total number of strokes is used to determine the winner of the game.
-```
-
-_Knowledge 2:_
-
-```
-Golf is a precision club-and-ball sport in which competing players (or golfers) use many types of clubs to hit balls into a series of holes on a course using the fewest number of strokes. The goal is to complete the course with the lowest score, which is calculated by adding up the total number of strokes taken on each hole. The player with the lowest score wins the game.
-```
-
-Następnym krokiem jest zintegrowanie wiedzy i uzyskanie prognozy. Przeformatowałem pytanie do formatu QA, aby ukierunkować format odpowiedzi.
-
-_Prompt:_
+Łączy z pytaniem:
 
 ```
 Question: Part of golf is trying to get a higher point total than others. Yes or No?
-Knowledge: The objective of golf is to play a set of holes in the least number of strokes. A round of golf typically consists of 18 holes. Each hole is played once in the round on a standard golf course. Each stroke is counted as one point, and the total number of strokes is used to determine the winner of the game.
-Explain and Answer: 
-```
-
-_Answer 1 (confidence very high):_
-
-```
-No, the objective of golf is not to get a higher point total than others. Rather, the objective is to play a set of holes in the least number of strokes. The total number of strokes is used to determine the winner of the game, not the total number of points.
-```
-
-```
-Question: Part of golf is trying to get a higher point total than others. Yes or No?
-Knowledge: Golf is a precision club-and-ball sport in which competing players (or golfers) use many types of clubs to hit balls into a series of holes on a course using the fewest number of strokes. The goal is to complete the course with the lowest score, which is calculated by adding up the total number of strokes taken on each hole. The player with the lowest score wins the game.
+Knowledge: ...
 Explain and Answer:
 ```
 
-_Answer 2 (confidence is a lot lower):_
+Odpowiedź:
 
 ```
-Yes, part of golf is trying to get a higher point total than others. Each player tries to complete the course with the lowest score, which is calculated by adding up the total number of strokes taken on each hole. The player with the lowest score wins the game.
+Nie, w golfie chodzi o możliwie najniższy wynik. Zwycięża gracz z najmniejszą liczbą punktów (uderzeń), a nie największą.
 ```
 
-W tym przykładzie wydarzyło się kilka naprawdę interesujących rzeczy. W pierwszej odpowiedzi model był bardzo pewny siebie, ale w drugiej już nie tak bardzo. Uprościłem ten proces dla celów demonstracyjnych, ale jest jeszcze kilka szczegółów, które należy wziąć pod uwagę przy uzyskiwaniu ostatecznej odpowiedzi. Więcej informacji można znaleźć w artykule.
+## Format: single-prompt vs. dual-prompt
 
-[Liu et al. 2022 (opens in a new tab)](https://arxiv.org/pdf/2110.08387.pdf)
+- **Single prompt:** Model generuje zarówno wiedzę, jak i końcową odpowiedź w jednej interakcji.
+- **Dual prompt:** Najpierw model generuje wiedzę, a w kolejnym kroku zarówno model, jak i użytkownik używają tej wiedzy jako kontekstu do udzielenia odpowiedzi.
+
+## Korzyści i ograniczenia
+
+|Zalety|Ograniczenia|
+|---|---|
+|Wzrost trafności|Jakość automatycznie wygenerowanej wiedzy może być nierówna|
+|Skalowalność|Zależność od jakości bazowej wiedzy w modelu|
+|Różnorodność podejść|Ryzyko powielania biasów zakorzenionych w modelu|
+|Możliwość audytu (jawność wiedzy)|Potrzeba walidacji generowanych faktów|
+
+# 💡 Przykład zastosowania
+
+**Use case: Rozszerzanie promptów w AI do quizów naukowych**  
+Model najpierw generuje fakty (np. o dinozaurach), a potem odpowiada na dokładne pytanie – podnosząc czytelność, wiarygodność i trafność odpowiedzi w zadaniach edukacyjnych.
+
+**Use case: Tworzenie bloga lub raportu na bazie wiedzy** Prompt:
+
+```
+Wygeneruj 4 fakty o wilkach, a następnie użyj ich do opracowania krótkiego akapitu o wilkach w ekosystemie.
+```
+
+Output:
+
+```
+1. Wilki są drapieżnikami szczytowymi...
+2. Żyją w stadach...
+3. ... itd.
+
+Akapit: Wilki odgrywają kluczową rolę...
+```
+
+# 📌 Źródła
+
+- [https://resources.codefriends.net/en/ai/fundamentals/in-action/chapter-2/generated-knowledge-prompting](https://resources.codefriends.net/en/ai/fundamentals/in-action/chapter-2/generated-knowledge-prompting)
+- [https://www.promptingguide.ai/techniques/knowledge](https://www.promptingguide.ai/techniques/knowledge)
+- [https://www.codefriends.net/courses/ai-prompt-engineering-basics/chapter-2/generated-knowledge](https://www.codefriends.net/courses/ai-prompt-engineering-basics/chapter-2/generated-knowledge)
+- [https://aclanthology.org/2022.acl-long.225.pdf](https://aclanthology.org/2022.acl-long.225.pdf)
+- [https://www.codefriends.net/courses/ai-fundamentals-in-action/chapter-2/generated-knowledge-prompting](https://www.codefriends.net/courses/ai-fundamentals-in-action/chapter-2/generated-knowledge-prompting)
+- [https://fr.linkedin.com/pulse/generate-knowledge-prompting-une-nouvelle-approche-du-gr%C3%A9gory-jeandot-0xsuf](https://fr.linkedin.com/pulse/generate-knowledge-prompting-une-nouvelle-approche-du-gr%C3%A9gory-jeandot-0xsuf)
+- [https://promptengineering.org/knowledge-generation-prompting/](https://promptengineering.org/knowledge-generation-prompting/)
+
+# 👽 Brudnopis
+
+- GKP = najpierw generuj wiedzę, potem twórz odpowiedź – explicit knowledge injection
+- Mechanizm: dwuetapowy prompt (fakty + zadanie) / single-prompt (oba naraz)
+- Wpływ: znacząco wyższa trafność na zadaniach logiczno-faktograficznych (np. CommonsenseQA, ScienceQA)
+- Jakość zależna od zdolności LLM do generowania relewantnych faktów
+- Kaskadowe wykorzystanie wiedzy = lepsza interpretowalność, łatwiejszy audyt, wyciągnięcie efektów "na wierzch"
+- Ograniczenie: ryzyko halucynacji błędnych "faktów"; nie zawsze powstają wartościowe uzupełnienia

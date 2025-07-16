@@ -23,4 +23,4 @@ aliases:
 ## 📌 Źródła
 
 ## 👽 Brudnopis
-Tworzenie backupu i aktualizacja w Ataccamie. Różne tryby działania aplikacji (w związku z [[notes/Metadata model|Metadata model]])
+Tworzenie backupu i aktualizacja w Ataccamie. Różne tryby działania aplikacji (w związku z [[Meta Meta Data Model (MMDM)|Meta Meta Data Model (MMDM)]])
