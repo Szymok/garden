@@ -53,7 +53,7 @@ print(f"Plik {file_name} został przesłany do {bucket_name}.")
 
 ## 📌 Źródła
 
-1. "[[notes/data governance|Data Governance]] and Storage Architecture" – dostępne w literaturze branżowej.
+1. "[[Data Governance|Data Governance]] and Storage Architecture" – dostępne w literaturze branżowej.
 2. Dokumentacja AWS S3 – przykład magazynu obiektowego.
 3. Artykuły o hurtowniach danych i ich zastosowaniu w [[notes/uczenie maszynowe|AI]].
 

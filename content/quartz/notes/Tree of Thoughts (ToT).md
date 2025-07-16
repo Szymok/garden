@@ -1,38 +1,111 @@
 ---
-title: Tree of Thoughts (ToT)
+
+title: Tree of Thoughts (ToT)  
+created: 2025-07-16  
+status:  
+category: Sztuczna Inteligencja  
+difficulty: zaawansowany  
+language: pl  
 tags:
-  - prompt
-  - AI
-  - prompt-techniques
+
+- prompt
+- AI
+- LLM
+- chain-of-thought
+- reasoning  
 aliases:
-  - ToT
+- ToT
+- Tree-of-Thought Prompting
+
 ---
-W przypadku złożonych zadań, które wymagają eksploracji lub strategicznego wybiegania w przyszłość, tradycyjne lub proste techniki podpowiadania są niewystarczające. Yao et el. i Long zaproponowali niedawno [Tree of Thoughts (ToT)](Tree%20of%20Thoughts%20(ToT)), strukturę, która uogólnia [chain-of-thought](chain-of-thought%20Prompting) i zachęca do eksploracji myśli, które służą jako kroki pośrednie do ogólnego rozwiązywania problemów za pomocą modeli językowych.
 
-ToT utrzymuje Tree of Thoughts, gdzie myśli reprezentują spójne sekwencje językowe, które służą jako pośrednie kroki w kierunku rozwiązania problemu. Podejście to umożliwia LM samoocenę postępu, jaki myśli pośrednie czynią w kierunku rozwiązania problemu poprzez celowy proces rozumowania. Zdolność LM do generowania i oceniania myśli jest następnie łączona z algorytmami wyszukiwania (np. [breadth-first search](breadth-first%20search)), aby umożliwić systematyczną eksplorację myśli z wyprzedzeniem i cofaniem.
+# 🎯 Definicja
 
-Struktura ToT została zilustrowana poniżej:
+**Tree of Thoughts (ToT)** to metoda strukturalnego rozumowania przy użyciu modeli językowych (LLM), która rozszerza klasyczne techniki podpowiadania, takie jak chain-of-thought, o możliwość eksploracji wielu alternatywnych ścieżek rozumowania na różnych etapach. Wprowadza drzewa myśli (sekwencji logicznych) i łączy zdolność LLM do generowania i oceniania hipotez z algorytmami wyszukiwania takimi jak BFS, DFS czy beam search.
 
-![[Pasted image 20230922001632.png]]
-[Yao et el. (2023) (opens in a new tab)](https://arxiv.org/abs/2305.10601)
-Podczas korzystania z ToT różne zadania wymagają zdefiniowania liczby kandydatów i liczby myśli/kroków. Na przykład, jak pokazano w artykule, Game of 24 jest używana jako zadanie rozumowania matematycznego, które wymaga rozłożenia myśli na 3 kroki, z których każdy obejmuje równanie pośrednie. Na każdym etapie przechowywanych jest b=5 najlepszych kandydatów.
+ToT jest zaprojektowane z myślą o zadaniach wymagających planowania, eksploracji stanów i złożonego wnioskowania (np. łamigłówki, planowanie działań, kodowanie, pytania wieloetapowe).
 
-Aby wykonać BFS w ToT dla zadania Game of 24, LM jest proszony o ocenę każdego kandydata na myśl jako "pewny/możliwy/niemożliwy" w odniesieniu do osiągnięcia 24. Jak stwierdzili autorzy, "celem jest promowanie poprawnych rozwiązań częściowych, które można zweryfikować w ciągu kilku prób lookahead, i wyeliminowanie niemożliwych rozwiązań częściowych opartych na zdrowym rozsądku "zbyt duży/mały", a resztę "być może" zostawic. Wartości są próbkowane 3 razy dla każdej myśli. Proces ten zilustrowano poniżej:
+# 🔑 Kluczowe punkty
 
-![[Pasted image 20230922001646.png]]
+- **Myślenie rozgałęzione:** LLM rozważa wiele alternatywnych myśli (ścieżek), zamiast jednej liniowej sekwencji.
+- **Myśli jako węzły drzewa:** Każda myśl to potencjalnie wartościowy krok ku rozwiązaniu — może być rozwinięta dalej lub odrzucona.
+- **Metoda oceny:** LLM samo ocenia trafność wygenerowanych myśli: „pewny / możliwy / niemożliwy”.
+- **Integracja z wyszukiwaniem (BFS, DFS):** Możemy kontrolować eksplorację i backtracking.
+- **Możliwości rozszerzenia za pomocą RL:** Propozycja Longa uwzględnia „kontroler ToT” uczący się reguł nawigacji po drzewie.
 
-Z wyników przedstawionych na poniższym rysunku wynika, że ToT znacznie przewyższa inne metody podpowiadania:
+# 📚 Szczegółowe wyjaśnienie
 
-![[Pasted image 20230922001702.png]]
+## Główna różnica względem chain-of-thought (CoT)
 
-Na wysokim poziomie, główne idee Yao et el. i Long są podobne. Oba zwiększają zdolność LLM do rozwiązywania złożonych problemów poprzez przeszukiwanie drzewa za pomocą wielorundowej konwersacji. Jedną z głównych różnic jest to, że Yao et el. wykorzystuje wyszukiwanie [DFS](DFS)/[BFS](BFS)/[beam](beam) , podczas gdy strategia przeszukiwania drzewa (tj. kiedy cofać się i o ile poziomów itd.) zaproponowana w Longa jest sterowana przez "[kontroler ToT](kontroler%20ToT)" wyszkolony poprzez [uczenie ze wzmocnieniem](Reinforcement%20learning). DFS/BFS/Beam search to ogólne strategie wyszukiwania rozwiązań bez adaptacji do konkretnych problemów. Dla porównania, kontroler ToT wyszkolony za pomocą RL może być w stanie uczyć się z nowych zestawów danych lub poprzez samodzielną grę (AlphaGo vs. wyszukiwanie siłowe), a zatem system ToT oparty na RL może nadal ewoluować i uczyć się nowej wiedzy nawet przy stałym LLM.
+|Cecha|Chain of Thought|Tree of Thoughts|
+|---|---|---|
+|Struktura|Liniowa sekwencja myśli|Drzewo możliwych ścieżek rozumowania|
+|Eksploracja|Jedna droga|Eksploracja wielu możliwości (lookahead)|
+|Ocena|Brak|Samoocena myśli pośrednich przez LLM|
+|Algorytmika|Prosta generacja|BFS / DFS / beam + ocena heurystyczna|
+|Zastosowanie|Zadania zero-shot/coT|Problemy z eksploracją, planowaniem, kodowaniem|
 
-Hulbert zaproponował [Tree-of-Thought Prompting](Tree-of-Thought%20Prompting), który stosuje główną koncepcję z ram ToT jako prostą technikę podpowiadania, zmuszając [LLM](LLM) do oceny pośrednich myśli w pojedynczym podpowiedzi. Przykładowy prompt ToT to:
+## Jak działa Tree of Thoughts?
 
-```
+1. **Problem** (np. matematyczny, decyzyjny) jest przekładany na serię rozwijalnych „myśli” — kroków logicznych prowadzących ku rozwiązaniu.
+2. **LLM generuje k myśli** na danym „poziomie” rozumowania — np. alternatywne działania, rozwiązania częściowe.
+3. **Każda myśl jest oceniana** przez LLM wg prostego schematu:
+    - ✅ „pewny” — warto rozwijać
+    - ❓ „możliwy” — warto zostawić
+    - ❌ „niemożliwy” — odrzucić
+4. **System eksploruje dalej** za pomocą algorytmu BFS/DFS/beam search, rozwijając tylko sensowne ścieżki.
+5. Finalnie zostaje wybrana najlepsza ścieżka rozumowania prowadząca do rozwiązania.
+
+📌 Przykładowe konfiguracje:
+
+- **d** – liczba kroków (głębokość drzewa),
+- **k** – liczba alternatywnych myśli per krok,
+- **b** – beam width (maks. liczba ścieżek do rozwinięcia na kolejnym poziomie).
+
+## Dalsze rozszerzenia
+
+### Tree of Thought + RL (propozycja Longa)
+
+- Zamiast sztywnych heurystyk (BFS/DFS), RL uczy się jak eksplorować efektywnie drzewo.
+- „Kontroler ToT” może wycofać się kilka poziomów, eksplorować agresywnie lub zachowawczo – jak AlphaGo.
+- Pozwala adaptować się do danych/problemów – możliwe uczenie przez samodzielną grę lub feedback.
+- LLM pełni wtedy funkcje: generująco-oceniającą, a kontroler – taktyczną.
+
+## Tree-of-Thought Prompting (wersja uproszczona)
+
+Hulbert zaproponował ToT jako jednopromptową strategię:
+
+```text
 Imagine three different experts are answering this question.
-All experts will write down 1 step of their thinking,then share it with the group.
+All experts will write down 1 step of their thinking, then share it with the group.
 Then all experts will go on to the next step, etc.
 If any expert realises they're wrong at any point then they leave.
 The question is...
 ```
+
+Ten format zmusza LLM do równoległego rozważenia wielu punktów widzenia i ścieżek → efekt przypomina wielokierunkowe drzewo, ale bez algorytmu eksploracyjnego.
+
+# 💡 Przykład: Game of 24
+
+Gra polega na tym, by z 4 cyfr i działań arytmetycznych ułożyć wyrażenie dające wynik 24.
+
+1. LLM generuje 5 alternatywnych **myśli 1. poziomu** (np. możliwe pierwsze działania).
+2. Każda jest oceniona wg zasad (too high / good / impossible).
+3. System eksploruje dalej tylko sensem – reszta zostaje odcięta.
+4. Po trzech krokach jedna ścieżka prowadzi do rozwiązania.
+
+# 📌 Źródła
+
+- [Tree of Thoughts – Yao et al. 2023 (arXiv)](https://arxiv.org/abs/2305.10601)
+- [Tree-of-Thought Prompting – S. Hulbert (GitHub)](https://github.com/kyegomez/tree-of-thought-prompting)
+- [Reinforcement Fine-Tuning in ToT (Long et al.)](https://arxiv.org/abs/2308.09687)
+- [Prompt Engineering Guide – ToT Section](https://github.com/dair-ai/Prompt-Engineering-Guide#tree-of-thought)
+
+# 👽 Brudnopis
+
+- Chain-of-thought → Tree-of-thought: linia → rozgałęzienie (jak w grach)
+- Można łączyć ToT z RAG, self-consistency, majority vote
+- Beam search = pozwala tylko np. top-5 ścieżek w przód
+- Końcowy wybór ścieżki można uzależnić od heurystyki, LLM vote lub kontrolera
+- ToT pozwala lepiej rozwiązywać problemy, w których ważne są kilkakrokowe struktury
+- Aplikacje: kodowanie, zadania z eksploracją, reasoning wieloetapowy, planowanie dialogów

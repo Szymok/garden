@@ -1,12 +1,82 @@
 ---
-title: Multimodal CoT Prompting
-tags: 
+
+title: Multimodal CoT Prompting  
+created: 2025-07-16  
+status:  
+category: LLM  
+difficulty: zaawansowany  
+language: pl  
+tags:
+
+- chain-of-thought
+- multimodal
+- LLM
+- vision
+- NLP  
 aliases:
+- Multimodal CoT
 ---
-Zhang  zaproponowali niedawno multimodalne podejście polegające na podpowiadaniu łańcucha myśli. Tradycyjne CoT koncentruje się na modalności językowej. Z kolei multimodalne CoT obejmuje tekst i wizję w dwuetapowej strukturze. Pierwszy etap obejmuje generowanie przesłanek w oparciu o informacje multimodalne. Następnie następuje druga faza, wnioskowanie o odpowiedzi, która wykorzystuje wygenerowane racjonalne informacje.
+# 🎯 Definicja
 
-Multimodalny model CoT (1B) przewyższa GPT-3.5 w teście porównawczym ScienceQA.
+**Multimodal Chain-of-Thought Prompting** (Multimodalne podpowiadanie łańcucha myśli, Multimodal-CoT) to rozszerzenie klasycznego podejścia CoT, w którym modele językowe wykorzystują zarówno tekst, jak i dane wizualne (np. obrazy, wykresy) w celu realizacji złożonego rozumowania i uzyskania bardziej kompletnych odpowiedzi. Model przechodzi przez dwuetapowy proces: najpierw generuje przesłanki na podstawie multimodalnych informacji, a następnie na ich podstawie wnioskuje o odpowiedzi.
 
-![[Pasted image 20230924185937.png]]
+# 🔑 Kluczowe punkty
 
-[Language Is Not All You Need: Aligning Perception with Language Models](https://arxiv.org/abs/2302.14045)
+- **Dwa etapy rozumowania:** Najpierw generowanie przesłanek z danych tekstowych i wizualnych; następnie użycie tych przesłanek do udzielenia odpowiedzi.
+- **Pokonanie ograniczeń CoT:** Tradycyjne CoT skupia się wyłącznie na tekście, podczas gdy Multimodal-CoT pozwala integrować wiele modalności (język + obraz).
+- **Wyższa skuteczność:** Multimodalny model CoT z ok. 1 mld parametrów przewyższa GPT-3.5 na benchmarku ScienceQA, mimo znacznie mniejszej wielkości.
+- **Redukcja halucynacji:** Integracja danych wizualnych pomaga modelowi generować bardziej realistyczne i uzasadnione przesłanki, co ogranicza ryzyko “halucynacji” odpowiedzi.
+- **Zastosowania:** Nauka, edukacja, testy wielomodalne, systemy ekspertowe z dostępem do tekstu i obrazu.
+
+# 📚 Szczegółowe wyjaśnienie
+
+## Jak działa Multimodal CoT?
+
+Multimodalny łańcuch myśli obejmuje dwa główne kroki:
+
+1. **Rationale Generation (Generowanie przesłanek)**  
+    Model otrzymuje pytanie wraz z tekstowym i wizualnym kontekstem, następnie tworzy szczegółowy, krok po kroku “łańcuch myśli” (np. wskazówki tekstowe powiązane z informacjami obrazowymi).
+    
+2. **Answer Inference (Wnioskowanie odpowiedzi)**  
+    Do modelu trafia tekst, obraz oraz wygenerowana przesłanka z pierwszego kroku, na podstawie których formułowana jest finalna odpowiedź.
+    
+
+## Przewaga nad klasycznym CoT
+
+||Klasyczne CoT|Multimodal CoT|
+|---|---|---|
+|Wejście|Tekst|Tekst + Obraz|
+|Przesłanki|Tylko tekstowe|Tekstowe + wizualne|
+|Efektywność|Ograniczona modalnością|Lepsza integracja informacji|
+|Wynik|Może halucynować|Bardziej uzasadnione, trafniejsze odpowiedzi|
+
+## Wyniki benchmarków
+
+- Multimodal-CoT (model ~1B) przewyższył GPT-3.5 CoT na ScienceQA, osiągając najwyższy wynik wśród testowanych metod na pytaniach wymagających interpretacji tekstów i obrazów.
+- Analiza wykazała lepszą konwergencję procesu uczenia oraz mniejszą tendencję do generowania fałszywych przesłanek i odpowiedzi.
+
+# 💡 Przykład zastosowania
+
+**Przykład:**  
+Model LLM dostaje pytanie naukowe z obrazem mikroskopowym.
+
+1. Generuje multimodalną przesłankę: rozpoznaje struktury na obrazie, łączy je z opisem tekstowym i instrukcją pytania.
+2. Na podstawie tej przesłanki wnioskuje, które odpowiedzi są poprawne (np. klasyfikuje komórki jako patologiczne).
+
+Takie podejście sprawdza się w quizach naukowych (ScienceQA), testach maturalnych (z obrazem), edukacji technicznej czy analizie prezentacji multimedialnych.
+
+# 📌 Źródła
+
+[https://www.promptingguide.ai/techniques/multimodalcot](https://www.promptingguide.ai/techniques/multimodalcot)  
+[https://arxiv.org/abs/2302.00923](https://arxiv.org/abs/2302.00923)  
+[https://python.plainenglish.io/promt-engineering-101-multimodal-chain-of-thought-prompting-a0005b4e5186](https://python.plainenglish.io/promt-engineering-101-multimodal-chain-of-thought-prompting-a0005b4e5186)  
+[https://openreview.net/forum?id=y1pPWFVfvR](https://openreview.net/forum?id=y1pPWFVfvR)
+
+# 👽 Brudnopis
+
+- Kluczowe: dwufazowy mechanizm – przesłanki multimodalne i wnioskowanie odpowiedzi
+- ScienceQA = benchmark z pytaniami tekstowo-obrazowymi - Multimodal-CoT przewyższa GPT-3.5 CoT
+- Redukcja halucynacji – więcej danych wejściowych = mniej błędnych przesłanek
+- Możliwe aplikacje: edukacja, medycyna, systemy z multimodalną percepcją
+- Modele 1B lepsze niż duże LLM typowo-tekstowe na zadaniach wizualnych
+- Inspiracja: “Language is not all you need” – potrzeba integracji percepcji i języka

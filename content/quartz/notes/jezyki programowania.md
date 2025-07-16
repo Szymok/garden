@@ -1,3 +1,0 @@
----
-title: jezyki programowania
----

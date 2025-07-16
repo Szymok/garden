@@ -1,27 +1,89 @@
 ---
-title: Governance Roles
-created: 2025-07-14
-status: 
-category: 
-difficulty: 
-language: pl
+
+title: Governance Roles  
+created: 2025-07-14  
+status:  
+category: data governance  
+difficulty: średni  
+language: pl  
 tags:
-  - 
+
+- governance
+- zarządzanie dostępem
+- role
+- uprawnienia
+- dane  
 aliases:
-  - 
+- role governance
+- role zarządzające
+- role zarządzania danymi
+
 ---
+
 # 🎯 Definicja
+
+**Governance Roles** (role zarządzania) to zestawy uprawnień definiujące, jakie akcje użytkownik lub grupa użytkowników może wykonać na danych zasobach w systemie zarządzania danymi. Role te są przypisywane bezpośrednio do użytkowników lub grup (np. za pośrednictwem integracji z systemem tożsamości, jak Keycloak) i służą do kontrolowania dostępu oraz ról w procesach zarządzania jakością i cyklem życia danych.
 
 # 🔑 Kluczowe punkty
 
+- Role governance można przypisać użytkownikom lub rolom zewnętrznym (np. z Keycloak).
+- Określają one poziomy dostępu do danych obiektów (nodes), takich jak systemy, zasoby danych, raporty, słowniki pojęć itp.
+- Tylko użytkownicy z rolą **ONE Administrator** mogą zarządzać rolami governance.
+- Role definiują uprawnienia od odczytu metadanych po pełen dostęp obejmujący modyfikację struktur aplikacyjnych.
+- Zakres uprawnień obejmuje m.in.: odczyt danych, edycję, operacje systemowe, publikację, przypisywanie stewardów.
+
 # 📚 Szczegółowe wyjaśnienie
 
+## Typowe role governance
+
+|Rola|Opis|
+|---|---|
+|**ONE Administrator**|Ma pełny dostęp do konfiguracji systemu, może zarządzać modelami, grupami i typami danych. Główny zarządca aplikacji i struktury danych.|
+|**ONE Operator**|Może wykonywać operacje systemowe na zasobach (np. indeksowanie, synchronizacja z LDAP), ale nie ma dostępu do samych danych.|
+|**Data Owner**|Reprezentuje odpowiedzialność biznesową za dane w obrębie domeny lub jednostki (np. dział, domena danych). Ustala oczekiwania jakościowe i nadzoruje innych uczestników procesu.|
+|**Data Steward**|Zarządza cyklem życia zasobów danych (technicznych i biznesowych), monitoruje jakość danych, publikuje, opisuje, kataloguje.|
+|**Data Consumer**|Ograniczone uprawnienia do przeglądania jedynie metadanych; nie mogą edytować ani przeglądać treści danych. Często użytkownik końcowy lub analityk.|
+
+## Poziomy dostępu w ramach roli
+
+|Poziom dostępu|Opis|
+|---|---|
+|**Full Access**|Pełne uprawnienia: tworzenie, edycja, publikacja, udostępnianie, usuwanie zasobów.|
+|**Editing Access**|Możliwość edycji wersji roboczych, bez publikowania, udostępniania ani usuwania.|
+|**Operate Access**|Uruchamianie działań technicznych (np. reindeksacja, synchronizacja użytkowników) bez wglądu do danych.|
+|**View Data Access**|Podgląd metadanych i danych rzeczywistych, bez edycji.|
+|**Share View Access**|Umożliwia udostępnianie danych innym użytkownikom w trybie tylko do odczytu.|
+|**View Page Access**|Uprawnienia do wyświetlania stron głównych (landing pages) i ich segmentów.|
+|**View Metadata Access**|Dostęp jedynie do metadanych (np. typ pola, data ostatniej aktualizacji).|
+|**Share Metadata Access**|Udostępnianie metadanych innym użytkownikom w trybie tylko do odczytu.|
+
+## Zasady przypiszania ról
+
+- Rola może być przypisana:
+    - użytkownikowi (indywidualnie),
+    - grupie użytkowników,
+    - roli pochodzącej z systemu IAM (np. Keycloak).
+- Nadanie roli wpływa tylko na zakres uprawnień do elementów wskazanych na poziomie kontekstu (np. system, słownik, tabela).
+
 # 💡 Przykład zastosowania
-## 📌 Źródła
 
-## 👽 Brudnopis
-Governance Roles represent the different action sets available on specific nodes for a specific access level. Governance Roles can be assigned to either a user or a role from KeyCloak. Both are essential to regulate access for groups. Governance Roles aggregate the access levels in ONE that can be later assigned to users or groups, You can see the list Of existing roles by navigating to Global Settings Governance Roles. Only users with the ONE Administrator role can manage governance roles.
-ONE Administrator changes the application model and settings, manage group hierarchies, and create new entity types. These users ensure that the overall consistency Of the metamodel is preserved. ONE admins are the supreme authorities in the management Of ONE and can manage access. ONE Operator performs actions on all data assets that change ONE workflows. These users cannot modify the application model and settings , nor can they access the assets. Data Owner defines the data quality requirements of a specific department. division or data domain. They work with a team of ONE operators and other roles to ensure the data governance criteria are met. Data owners are usually senior business managers.
-Data Steward works with both technical assets, like tables, fields, files, systems, or models, and business assets, like business terms, acronyms, KPIs, or reports. These users manage the life cycle Of assets, track data quality, and create reports for Data Owners. Data Consumer works with metadata only. They are business or technical users with limited knowledge of data management. AS such, they can view metadata but are not allowed to view actual data values.
+W organizacji z wdrożoną platformą data governance:
 
-Each Governance Role defines the access levels on the list Of nodes. Full access: is a complete set of permissions to an asset. including the permissions to delete, create, publish, and share. Editing access: This allows the user to edit drafts on the corresponding node. The editor cannot share access to the node with other users or groups or delete or publish assets. Operate access: Allows to trigger operation actions on the corresponding asset, such as reindexing OpenSearch, synchronizing users from KeyCloak, View data access: Viewers can view all data and metadata but can't edit anything. Share view access allows other users and groups view real data, to review assets, and add comments. View page access: Allows viewers to view the landing pages and their content. Making changes to landing pages is not allowed. View metadata access: Viewers can view metadata but Cannot edit anything. Share view metadata access allows Other users and groups to access only metadata,
+- Joanna (Data Steward) ma pełen dostęp do słowników danych domeny "Finanse" — może edytować definicje, mapować systemy baz danych i publikować katalogi biznesowe.
+- Marek (Data Consumer) widzi tylko metadane katalogu, bez możliwości ich edycji i bez dostępu do rzeczywistych danych osobowych czy transakcyjnych.
+- Administrator (ONE Admin) kontroluje przypisanie ról, strukturę grup, sychronizację uprawnień z systemem tożsamości.
+
+# 📌 Źródła
+
+- Dokumentacja Ataccama ONE: Governance Roles – Global Settings
+- Dokumentacja Narzędzi RBAC / IAM jak Keycloak
+- [https://dataedo.com/kb/data-glossary/data-steward-data-owner-data-consumer](https://dataedo.com/kb/data-glossary/data-steward-data-owner-data-consumer)
+- [https://www.immuta.com/blog/data-governance-roles-responsibilities/](https://www.immuta.com/blog/data-governance-roles-responsibilities/)
+
+# 👽 Brudnopis
+
+- Role = agregat uprawnień według typu użytkownika i typu zasobu
+- Role można przypisać bezpośrednio lub zintegrować z extern. systemami (Keycloak, LDAP)
+- Hierarchia ról: Administrator > Owner > Steward > Operator > Consumer
+- Poziomy działań: view, share, edit, publish, delete, operate (różnicowane na dane vs. metadane)
+- Typowe przypadki użycia: zarządzanie katalogami danych, uprawnienia do słowników, polityki udostępniania metadanych i danych rzeczywistych.

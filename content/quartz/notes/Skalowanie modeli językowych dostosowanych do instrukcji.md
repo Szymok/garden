@@ -1,53 +1,88 @@
 ---
-title: Skalowanie modeli językowych dostosowanych do instrukcji
-tags: 
+
+title: Skalowanie modeli językowych dostosowanych do instrukcji  
+created: 2025-07-16  
+status: Final  
+category: LLM  
+difficulty: zaawansowany  
+language: pl  
+tags:
+
+- instruction tuning
+- LLM
+- finetuning
+- chain-of-thought
+- Flan-T5
+- Flan-PaLM  
 aliases:
+- scaling instruction tuned LLM
+- Flan-PaLM
+- zero-shot CoT
+
 ---
-## Co nowego?
-![[Pasted image 20231007165150.png]]
 
-Niniejszy artykuł analizuje korzyści płynące ze skalowania dostrajania instrukcji oraz sposób, w jaki poprawia ono wydajność w różnych modelach (PaLM, T5), konfiguracjach podpowiedzi (zero-shot, few-shot, CoT) i benchmarkach (MMLU, TyDiQA). Zostało to zbadane w następujących aspektach: skalowanie liczby zadań (1,8 tys. zadań), skalowanie rozmiaru modelu i dostrajanie na danych łańcucha myśli (wykorzystano 9 zestawów danych).
+# 🎯 Definicja
 
-Procedura dostrajania:
+Skalowanie modeli językowych dostosowanych do instrukcji (ang. instruction-tuned LLMs) to proces trenowania modeli językowych na dużych korpusach zadań sformułowanych jako instrukcje, z dodatkiem lub bez łańcucha myśli (Chain-of-Thought, CoT). Celem jest poprawa ogólnej użyteczności modeli, możliwości rozumowania, uogólniania i wielojęzyczności w zadaniach, których model wcześniej nie widział — szczególnie w trybach zero-shot i few-shot.
 
-- 1,8 tys. zadań zostało sformułowanych jako instrukcje i wykorzystanych do dostrojenia modelu
-- Użyto zarówno z przykładami, jak i bez nich, a także z CoT i bez niego.
-Zadania dostrajające i zadania wstrzymane pokazano poniżej:
+# 🔑 Kluczowe punkty
 
-![[Pasted image 20231007165850.png]]
+- **Skalowanie liczby zadań i rozmiaru modelu** prowadzi do sukcesywnych przyrostów wydajności w różnych benchmarkach (MMLU, GSM8K, TyDiQA, BIG-Bench).
+- **Dostrajanie z użyciem Chain-of-Thought (CoT)** poprawia zdolności rozumowania — szczególnie w zadaniach krok po kroku oraz matematycznych.
+- **Technika self-consistency** wraz z CoT osiąga wyniki state-of-the-art — przez generowanie wielu rozwiązań i wybieranie spójnego.
+- **Modele takie jak Flan-PaLM i Flan-T5** wykazują wyraźną poprawę także w pytaniach otwartych i wielojęzycznych.
+- **Zero-shot CoT aktywowane frazą „pomyślmy krok po kroku”** działa tylko po wcześniejszym fine-tuningu na takim stylu rozumowania.
 
-## Możliwości i kluczowe wyniki
+# 📚 Szczegółowe wyjaśnienie
 
-- Dostrajanie instrukcji dobrze skaluje się z liczbą zadań i rozmiarem modelu; sugeruje to potrzebę dalszego skalowania liczby zadań i rozmiaru modelu
-- Dodanie zbiorów danych CoT do dostrajania zapewnia dobrą wydajność w zadaniach rozumowania.
-- Flan-PaLM poprawił zdolności wielojęzyczne; 14,9% poprawy w przypadku jednorazowego TyDiQA; 8,1% poprawy w przypadku rozumowania arytmetycznego w niedostatecznie reprezentowanych językach.
-- Plan-PaLM osiąga również dobre wyniki w generowaniu pytań otwartych, co jest dobrym wskaźnikiem poprawy użyteczności.
-- Poprawia wydajność w benchmarkach odpowiedzialnej sztucznej inteligencji (RAI)
-- Modele Flan-T5 z dostrojonymi instrukcjami wykazują silne możliwości kilkukrotnego wykonania i przewyższają publiczny punkt kontrolny, taki jak T5.
+## Mechanizm działania
 
-**Wyniki skalowania liczby zadań dostrajania i rozmiaru modelu:** Oczekuje się, że skalowanie zarówno rozmiaru modelu, jak i liczby zadań dostrajania będzie nadal poprawiać wydajność, chociaż skalowanie liczby zadań przyniosło mniejsze zyski.
+### Dostrajanie instrukcji
 
-![[Pasted image 20231007165923.png]]
+Modele są trenowane na dużym zbiorze zróżnicowanych zadań (1,800+) przekształconych w instrukcje – zawierających przykłady, pytania, konteksty oraz oczekiwane odpowiedzi. W przypadku CoT, odpowiedzi zawierają logiczne kroki rozumowania prowadzące do rozwiązania. Modele mogą wtedy uczyć się zarówno interpretacji poleceń, jak i strategii rozwiązywania.
 
-Wyniki podczas dostrajania przy użyciu danych innych niż CoT i CoT: Wspólne dostrajanie na danych non-CoT i CoT poprawia wydajność w obu ocenach, w porównaniu do dostrajania tylko na jednym lub drugim.
+### Typowe warianty konfiguracji
 
-![[Pasted image 20231007165935.png]]
+- **Zero-shot**: brak przykładów, tylko instrukcja
+- **Few-shot**: kilka przykładów rozwiązanych zadań
+- **CoT**: każda odpowiedź to sekwencja myśli prowadząca do rezultatu
+- **Z self-consistency**: generacja wielu ścieżek rozumowania i wybór dominującej odpowiedzi
 
-Ponadto, samokonsekwencja w połączeniu z CoT osiąga wyniki SoTA w kilku benchmarkach. CoT + self-consistency również znacząco poprawia wyniki w benchmarkach obejmujących problemy matematyczne (np. MGSM, GSM8K).
+## Wyniki i efekty skalowania
 
-![[Pasted image 20231007165944.png]]
+- Skalowanie liczby zadań i rozmiaru modelu przynosi korzyści, choć wzrost zmniejsza się po pewnym progu.
+- Wspólne trenowanie na danych CoT i klasycznych (non-CoT) daje lepsze wyniki niż osobne trenowanie tylko na jednym typie.
+- Modele po takim dostrojeniu przewyższają bazowe checkpointy (np. T5 → Flan-T5, PaLM → Flan-PaLM).
 
-Finetuning CoT odblokowuje rozumowanie typu zero-shot, aktywowane przez frazę "pomyślmy krok po kroku", w zadaniach BIG-Bench. Ogólnie rzecz biorąc, zero-shot CoT Flan-PaLM przewyższa zero-shot CoT PaLM bez dostrajania.
+## Efekty w zadaniach
 
-![[Pasted image 20231007165955.png]]
+- **Rozumowanie matematyczne**: Flan-PaLM z CoT + self-consistency osiąga SoTA na benchmarku GSM8K.
+- **Wielojęzyczność**: 14,9% poprawy w TyDiQA; wzrost wyników w słabo reprezentowanych językach.
+- **Open-ended QA**: lepsza kontrola długości, spójności i stosowania instrukcji.
+- **Zero-shot CoT**: Flan-PaLM potrafi lepiej użyć "pomyślmy krok po kroku" niż oryginalny PaLM.
 
-Poniżej znajduje się kilka demonstracji Zero-Shot CoT dla PaLM i Flan-PaLM w niewidocznych zadaniach.
+# 💡 Przykład zastosowania
 
-![[Pasted image 20231007170005.png]]Poniżej znajduje się więcej przykładów dla podpowiedzi zero-shot. Pokazuje to, jak model PaLM zmaga się z powtórzeniami i nie odpowiada na instrukcje w ustawieniu zerowym, w którym Flan-PaLM jest w stanie dobrze sobie radzić. Kilka przykładów może złagodzić te błędy.
+Narzędzie analityczne oparte na LLM zostało wdrożone w firmie doradczej. Dzięki Flan-PaLM, wytrenowanemu na szerokim zestawie zadań instrukcyjnych i CoT, asystent AI może:
 
-![[Pasted image 20231007170014.png]]
+- Analizować dane finansowe, zadając pytania typu "Przeanalizuj trend EBITDA dla tej firmy w podziale rocznym"
+- Tworzyć scenariusze "krok po kroku" z poprawną logiką, również w językach obcych
+- Działać nawet bez dostarczonych przykładów (zero-shot), co znacznie skraca czas wdrożenia
 
-Poniżej znajduje się kilka przykładów demonstrujących więcej możliwości modelu Flan-PALM na kilku różnych typach trudnych pytań otwartych:
+Model odpowiada zwięźle, krokowo i uwzględnia złożoność zapytań — co wcześniej nie było możliwe bez rozbudowanego few-shot promptowania.
 
-![[Pasted image 20231007170025.png]]![[Pasted image 20231007170029.png]]![[Pasted image 20231007170032.png]]
+## 📌 Źródła
 
+[https://arxiv.org/abs/2210.11416](https://arxiv.org/abs/2210.11416) – Flan-PaLM: Scaling Instruction-Finetuned Language Models  
+[https://ai.googleblog.com/2022/11/flan-palm-scaling-instruction-finetuned.html](https://ai.googleblog.com/2022/11/flan-palm-scaling-instruction-finetuned.html)  
+[https://platform.openai.com/docs/guides/gpt-best-practices](https://platform.openai.com/docs/guides/gpt-best-practices) (ograniczenia zero-shot CoT)
+
+## 👽 Brudnopis
+
+- Modele trenowane na 1800 instrukcjach → wszechstronniejszy → mniej hallucinacji
+- CoT + SC = nowy standard dla reasoning-heavy tasks
+- Podpowiedź „Pomyślmy krok po kroku” działa tylko po wcześniejszym CoT finetuningu
+- Flan-PaLM/T5 → poprawa w QA, wnioskowaniu wieloetapowym, wielojęzycznym, odpowiadaniu na pytania otwarte
+- Widoczna poprawa w MMLU, GSM8K, BIG-Bench
+- Mniejszy model z instrukcjami przewyższa większy bez nich
+- Rekomendacja: kombinacja danych + technik generacyjnych + kontrola odpowiedzi via SC ụzọ
