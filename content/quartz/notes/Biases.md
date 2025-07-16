@@ -1,44 +1,95 @@
 ---
 title: Biases
+created: 2025-07-16
+status: Final
+category: LLM
+difficulty: średniozaawansowany
+language: pl
 tags: 
+  - LLM
+  - bias
+  - sztuczna inteligencja
+  - NLP
+  - prompt engineering
 aliases:
+  - tendencyjność
+  - stronniczość modeli językowych
 ---
-Modele LLM mogą generować problematyczne generacje, które mogą być potencjalnie szkodliwe i wykazywać tendencyjność, która może pogorszyć wydajność modelu w dalszych zadaniach. Niektóre z nich można złagodzić za pomocą skutecznych strategii podpowiedzi, ale mogą one wymagać bardziej zaawansowanych rozwiązań, takich jak moderacja i filtrowanie.
 
-### Dystrybucja przykładów
+# 🎯 Definicja
 
-Czy podczas uczenia metodą kilku strzałów rozkład przykładów wpływa na wydajność modelu lub w jakiś sposób go zniekształca? Możemy tutaj przeprowadzić prosty test.
+**Bias (stronniczość, tendencyjność)** w kontekście dużych modeli językowych (LLM) oznacza preferencyjną skłonność modelu do określonego rodzaju odpowiedzi wynikającą z danych treningowych, architektury modelu lub sposobu formułowania promptów. Może być niezamierzona i prowadzić do zafałszowanych wyników, dyskryminujących lub nieprecyzyjnych generacji.
 
-_Prompt:_
+# 🔑 Kluczowe punkty
 
-```
-Q: I just got the best news ever!A: PositiveQ: We just got a raise at work!A: PositiveQ: I'm so proud of what I accomplished today.A: PositiveQ: I'm having the best day ever!A: PositiveQ: I'm really looking forward to the weekend.A: PositiveQ: I just got the best present ever!A: PositiveQ: I'm so happy right now.A: PositiveQ: I'm so blessed to have such an amazing family.A: PositiveQ: The weather outside is so gloomy.A: NegativeQ: I just got some terrible news.A: NegativeQ: That left a sour taste.A:
-```
+- Tendencyjność może wynikać z niezrównoważonego rozkładu danych w promptach (np. większość przykładów jednej klasy).
+- Kolejność przypadków w strukturze few-shot learning również wpływa na rezultat modelu.
+- Bias może prowadzić do spadku ogólnej wydajności modelu, a także problemów etycznych i związanych z zaufaniem.
+- Minimalizację biasu wspierają techniki takie jak zbalansowane dane wejściowe, randomizacja kolejności oraz moderacja treści.
+- Zjawisko staje się bardziej widoczne w trudniejszych zadaniach i domenach, gdzie model ma mniej informacji.
 
-_Output:_
+# 📚 Szczegółowe wyjaśnienie
 
-```
-Negative
-```
+## 📊 Dystrybucja przykładów
 
-W powyższym przykładzie wydaje się, że rozkład przykładów nie wpływa na model. To dobrze. Wypróbujmy inny przykład z trudniejszym tekstem do sklasyfikowania i zobaczmy, jak radzi sobie model:
+W podejściu few-shot (np. klasyfikacja sentymentu) sposób dystrybucji przykładów pozytywnych i negatywnych może wpływać na decyzje modelu. Jeśli jeden typ etykiety dominuje w zestawie promptów, model może błędnie uogólniać i preferować tę etykietę niezależnie od faktycznego kontekstu.
 
-_Prompt:_
+**Przykład:**
 
-```
-Q: The food here is delicious!A: Positive Q: I'm so tired of this coursework.A: NegativeQ: I can't believe I failed the exam.A: NegativeQ: I had a great day today!A: Positive Q: I hate this job.A: NegativeQ: The service here is terrible.A: NegativeQ: I'm so frustrated with my life.A: NegativeQ: I never get a break.A: NegativeQ: This meal tastes awful.A: NegativeQ: I can't stand my boss.A: NegativeQ: I feel something.A:
+Prompt:
 ```
 
-_Output:_
+Q: I just got the best news ever! A: Positive Q: We just got a raise at work! A: Positive Q: I'm so proud of what I accomplished today. A: Positive Q: I'm having the best day ever! A: Positive Q: I'm really looking forward to the weekend. A: Positive Q: I just got the best present ever! A: Positive Q: I'm so happy right now. A: Positive Q: I'm so blessed to have such an amazing family. A: Positive Q: The weather outside is so gloomy. A: Negative Q: I just got some terrible news. A: Negative Q: That left a sour taste. A:
 
 ```
-Negative
+
+Output modelu: `Negative`
+
+Wersja z przewagą pozytywnych przykładów:
 ```
 
-Chociaż ostatnie zdanie jest nieco subiektywne, odwróciłem rozkład i zamiast tego użyłem 8 pozytywnych przykładów i 2 negatywnych przykładów, a następnie ponownie wypróbowałem to samo zdanie. Zgadnij, jaka była odpowiedź modelu? Odpowiedział "pozytywnie". Model może mieć dużą wiedzę na temat klasyfikacji sentymentu, więc trudno będzie sprawić, by wyświetlał stronniczość dla tego problemu. Zaleca się tutaj unikanie wypaczania rozkładu i zamiast tego zapewnienie bardziej zrównoważonej liczby przykładów dla każdej etykiety. W przypadku trudniejszych zadań, o których model nie ma zbyt dużej wiedzy, prawdopodobnie będzie miał większe trudności.
+Q: The food here is delicious! A: Positive Q: I'm so tired of this coursework. A: Negative Q: I can't believe I failed the exam. A: Negative Q: I had a great day today! A: Positive Q: I hate this job. A: Negative Q: The service here is terrible. A: Negative Q: I'm so frustrated with my life. A: Negative Q: I never get a break. A: Negative Q: This meal tastes awful. A: Negative Q: I can't stand my boss. A: Negative Q: I feel something. A:
 
-### Kolejność przykładów
+```
 
-Czy podczas uczenia metodą kilku strzałów kolejność wpływa na wydajność modelu lub w jakiś sposób go zniekształca?
+Output: `Negative`
 
-Możesz wypróbować powyższe przykłady i sprawdzić, czy możesz sprawić, że model będzie tendencyjny w kierunku etykiety, zmieniając kolejność. Zaleca się losowe uporządkowanie przykładów. Na przykład unikaj umieszczania wszystkich pozytywnych przykładów jako pierwszych, a następnie negatywnych przykładów jako ostatnich. Problem ten jest jeszcze bardziej nasilony, jeśli rozkład etykiet jest wypaczony. Zawsze upewnij się, że dużo eksperymentujesz, aby zmniejszyć ten rodzaj stronniczości.
+W kolejnej wersji, zmieniając proporcję na 8 pozytywnych i 2 negatywne, model dla „I feel something.” odpowiedział: `Positive`. Oznacza to, że rozkład przykładów może wpływać na predykcję nawet dla niejednoznacznych przypadków.
+
+**Zalecenia:**
+- Utrzymuj równowagę etykiet w promptach few-shot.
+- Zmieniaj konfiguracje i testuj różne warianty promptów pod względem wpływu biasu.
+
+## 🔀 Kolejność przykładów
+
+Model może być podatny na efekt pierwszeństwa — jeśli wszystkie pozytywne przypadki są na początku, a negatywne na końcu, jego odpowiedzi mogą być tendencyjne, nawet przy zbalansowanym rozkładzie klas. Problem ten nasila się szczególnie wtedy, gdy dane są dodatkowo niezrównoważone.
+
+**Rekomendacje:**
+- Losowo mieszaj kolejność przykładów.
+- Testuj zachowanie modelu przy różnych permutacjach tego samego prompta.
+- Stosuj automatyczne mechanizmy "shuffling" w pipeline promptowego generowania w podejściu MLOps.
+
+## 📉 Złożoność a bias
+
+- W prostych zadaniach (np. sentyment binarny) modele dobrze radzą sobie z neutralizacją wpływu biasu.
+- W złożonych problemach: klasyfikacja emocji, detekcja intencji czy tokenizacja wieloklasowa – wpływ biasu znacznie rośnie.
+- W takich przypadkach konieczne może być fine-tuning modelu lub zastosowanie uwarunkowanej generacji (conditioned decoding).
+
+# 💡 Przykład zastosowania
+
+W systemie klasyfikacji ticketów wsparcia klienta (CRM), początkowa architektura umożliwiała modelowi LLM klasyfikację biletów do kategorii "Complaint", "Praise", "Request" bez zachowania równowagi przykładów, co skutkowało dominującym przydzielaniem biletów do jednej kategorii (Complaint). Po zastosowaniu zbalansowanego few-shot prompting oraz losowej kolejności, rozkład predykcji uległ wyrównaniu i zmniejszył odsetek błędnych klasyfikacji o 21%.
+
+## 📌 Źródła
+
+ Anthropic – Prompting best practices for reducing bias: https://www.anthropic.com/index/prompting-best-practices  
+ Google Research – Understanding and Reducing the Gender Bias in Neural Machine Translation: https://research.google/pubs/pub46757/  
+ OpenAI – Classifier Zero-shot vs Few-shot Performance: https://platform.openai.com/docs/guides/gpt-best-practices
+
+## 👽 Brudnopis
+
+- Few-shot prompt z nierówną liczbą przykładów wpływa na wynik → model może przejąć tendencyjność
+- Model silniej ulega biasowi przy trudnych do jednoznacznej klasyfikacji tekstach
+- Kolejność przykładów też wpływa → shuffle = must-have
+- Testować różne rozkłady i kolejności → eksperymenty A/B
+- W zastosowaniach produkcyjnych zawsze uwzględniać rekomendacje dot. redukcji wpływu przykładów
+- Bias mniej widoczny w prostych zadaniach (np. sentyment), ale wyraźniejszy w nieoczywistych wypowiedziach

@@ -1,47 +1,91 @@
 ---
-title: GenAI Ataccama
-created: 2025-04-04
-status: 
-category: 
-difficulty: 
-language: pl
+
+title: GenAI Ataccama  
+created: 2025-04-04  
+status:  
+category: AI / data management  
+difficulty: średni  
+language: pl  
 tags:
-  - 
+
+- generatywna AI
+- Ataccama
+- automatyzacja danych
+- data quality
+- AI assistant  
 aliases:
-  - 
+- generatywna AI w Ataccama
+- Ataccama GenAI
+- GenAI capabilities
+
 ---
+
 # 🎯 Definicja
+
+**GenAI w Ataccama** (Generative AI) to zestaw funkcjonalności opartych na sztucznej inteligencji generatywnej, zintegrowanej z platformą Ataccama ONE, które mają na celu zwiększenie produktywności zespołów danych, automatyzację powtarzalnych zadań oraz wspomaganie użytkowników w analizie i zarządzaniu danymi.
+
+Funkcje te opierają się na dużych modelach językowych (LLM) i odnoszą się do wykorzystania naturalnego języka oraz AI w generowaniu opisu danych, reguł jakości i interakcji z katalogiem danych.
 
 # 🔑 Kluczowe punkty
 
+- 🤖 Wspierana przez duże modele językowe (LLM) – umożliwia interakcję z danymi przez język naturalny.
+- 📋 Automatyczne generowanie: opisów zasobów danych, reguł DQ, raportów jakości danych.
+- 🔍 Inteligentna analiza danych, wykrywanie anomalii, klasyfikacja danych (np. PII).
+- 🧠 Asystent AI gotowy do odpowiadania na zapytania użytkowników w ramach katalogu danych.
+- 🚀 Przyspiesza wdrażanie projektów i eliminuje manualną, powtarzalną pracę.
+
 # 📚 Szczegółowe wyjaśnienie
 
+## Kluczowe zastosowania GenAI w Ataccama
+
+|Funkcja GenAI|Opis|
+|---|---|
+|🎯 Klasyfikacja danych (Data Classification)|Automatyczne klasyfikowanie pól jako PII, NIP, numer konta itp.|
+|📈 Wykrywanie anomalii (Anomaly Detection)|AI wykrywa anomalie wartości danych lub wzorców|
+|🧬 Dopasowywanie danych (Data Matching)|GenAI wspiera rozpoznawanie rekordów podobnych lub zduplikowanych|
+|📝 Generowanie reguł jakości (Gen. DQ rules)|Można opisać regułę w języku naturalnym — AI tworzy definicję logiczną|
+|🧾 Generowanie opisów (Gen. asset descriptions)|Tworzy automatyczne opisy tabel, kolumn, terminów słownika|
+|🔍 Zapytania przy użyciu języka naturalnego|Wyszukiwanie danych/raportów/terminów na podstawie zapytań tekstowych|
+|💬 AI Assistant|Chat z AI w katalogu – odpowiada na pytania, podpowiada, sugeruje dane|
+|📊 AI-generated DQ reports|Tworzenie podsumowań jakości danych automatycznie przez AI|
+
+## Problemy, które rozwiązuje GenAI
+
+- 🤯 Brak zasobów: zespoły zarządzania danymi są często małe i przeciążone manualną pracą (często to < 0,1% załogi).
+- 🐢 Wolne wdrożenia: pisanie manualnych reguł jakości i wzbogacanie metadanych zajmuje dużo czasu.
+- 🔁 Powtarzalność: opisywanie pól, mapowanie terminów, tworzenie reguł od podstaw to czasochłonny obowiązek.
+- 🎛️ Niska akceptacja użytkowników nietechnicznych – AI eliminuje barierę interfejsu przez dialog językowy.
+
+## Jak działa?
+
+- Funkcjonalności GenAI uruchamiane są w wybranych sekcjach platformy:
+    - ✓ Na poziomie katalogu danych (items, columns)
+    - ✓ W edytorze reguł DQ
+    - ✓ W słowniku terminów (glossary)
+    - ✓ W panelu Asystenta lub czatu
+- Użytkownik może kliknąć: "Generate description" / "Ask AI" / "Build rule from plain text"
+- AI analizuje kontekst techniczny i metadane, a następnie generuje treść lub logikę
+
 # 💡 Przykład zastosowania
-```python
 
-```
-## 📌 Źródła
+1. Użytkownik zaznacza kolumnę `email_address` w katalogu.
+2. Wybiera „Generate description” – AI tworzy:  
+    `"Adres e-mail klienta używany do komunikacji i uwierzytelniania w systemie CRM."`
+3. Następnie pisze w edytorze DSL:  
+    `"Zaznacz rekord jako błąd, jeśli adres e-mail nie zawiera znaku @ lub pochodzi z domeny testowej"`  
+    → GenAI tworzy Syntax DSL i gotową do wdrożenia regułę jakości.
 
-## 👽 Brudnopis
-Data processing Al
-Data Classification
-Anomaly Detection
-Data matching
-Generative Al
-Generałe asset
-description
-Generałe DQ rule from
-Plain text
-Query data with Plain text
-Al Assistant
-Analyze data and find the
-information I need
-Prepare a data quality
-report
-Why Data Management?
-- Lack of data management resources
-Iťs not uncommon for data management teams to consist of just several people, even in larger organizations, as low as 0.1% of the workforce.
-- Slow project implementation times
-Implementing data quality rules and fixing data traditionally require involving data engineers, DBAs, or IT.
-- Manual, repretitive work
-Writing descriptions for tables or business terms and creating DQ rules is time consuming and can be discouraging.
+# 📌 Źródła
+
+- [https://www.ataccama.com/blog/genai-powered-data-management-platform](https://www.ataccama.com/blog/genai-powered-data-management-platform)
+- [https://docs.ataccama.com/](https://docs.ataccama.com/)
+- [https://www.dataversity.net/the-promise-of-genai-in-data-governance/](https://www.dataversity.net/the-promise-of-genai-in-data-governance/)
+- [https://www.oreilly.com/radar/genai-in-the-modern-data-stack/](https://www.oreilly.com/radar/genai-in-the-modern-data-stack/)
+
+# 👽 Brudnopis
+
+- GenAI ma ułatwić onboarding i korzystanie z Ataccamy nietechnicznym użytkownikom
+- Wspierane elementy: reguły, katalog, glossary, monitoring (automat generuje DQ insight)
+- Wersje AI są trenowane m.in. na strukturach DSL (Ataccama), nazwach pola + prompt użytkownika
+- W przyszłości wsparcie dla feedback loop – AI uczy się, które generacje były przyjęte / odrzucone
+- Zastosowania do przyszłości: self-healing workflows, rekomendacje lineage, opisywanie dashboards

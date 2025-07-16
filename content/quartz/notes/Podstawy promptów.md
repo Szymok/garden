@@ -1,113 +1,155 @@
 ---
-title: Podstawy promptów
+
+title: Podstawy promptów  
+created: 2025-03-31  
+status:  
+category: sztuczna inteligencja / prompt engineering  
+difficulty: podstawowy  
+language: pl  
 tags:
-  - prompt
-  - basic
+
+- prompt
+- basic
+- LLM
+- inżynieria promptów  
 aliases:
-  - wiadomość
+- wiadomość
+- podstawy promtowania
+
 ---
-Za pomocą prostych promptów można wiele osiągnąć, ale jakość wyników zależy od tego, ile informacji zostanie przekazanych i jak dobrze zostaną one opracowane. Prompt może zawierać informacje, takie jak instrukcja lub pytanie, które przekazujesz modelowi i zawierać inne szczegóły, takie jak kontekst, dane wejściowe lub przykłady. Możesz użyć tych elementów, aby lepiej poinstruować model i w rezultacie uzyskać lepsze wyniki.
 
-Zacznijmy od omówienia podstawowego przykładu prostego promptu:
+# 🎯 Definicja
 
-_Prompt_
+**Prompt** to instrukcja lub zapytanie przekazywane modelowi językowemu (LLM), które określa, co model ma wygenerować. Może zawierać pytanie, polecenie, szablon tekstowy, dane kontekstowe lub przykłady. Jakość promptu w dużym stopniu decyduje o jakości odpowiedzi wygenerowanej przez model.
+
+# 🔑 Kluczowe punkty
+
+- ✍️ Prompt może być prosty (np. jedno zdanie) albo złożony (wielozdaniowa instrukcja z przykładami).
+- 🎯 Zadaniem prompta jest nakierowanie modelu na konkretną czynność, np. tłumaczenie, streszczenie, klasyfikację.
+- 🧠 Modele LLM potrafią samodzielnie uczyć się struktury zadania na podstawie promptu i kontekstu.
+- 💡 Format promptu wpływa na jakość, trafność i długość wygenerowanej odpowiedzi.
+- 📈 Stosuje się różne techniki: Zero-Shot, Few-Shot, Chain-of-Thought, aby poprawić skuteczność promptowania.
+
+# 📚 Szczegółowe wyjaśnienie
+
+## Co można zawrzeć w promptcie?
+
+- **Instrukcję**: co ma zostać zrobione  
+    np. „Przetłumacz ten tekst na niemiecki: ...”
+    
+- **Kontekst**: dodatkowe informacje  
+    np. kilka zdań z dokumentu jako wprowadzenie
+    
+- **Dane wejściowe**: to, co model ma przetworzyć  
+    np. `"This product is amazing!"`
+    
+- **Przykłady**: (dla Few-Shot Prompting)  
+    np. zadanie + oczekiwana odpowiedź
+    
+
+### 🔹 Przykład prostego promptu:
 
 ```
 The sky is
 ```
 
-_Output:_
+→ Output:
 
 ```
-blueThe sky is blue on a clear day. On a cloudy day, the sky may be gray or white.
+blue. The sky is blue on a clear day...
 ```
 
-Jak widać, model językowy generuje kontynuację ciągów, które mają sens w kontekście "The sky is". Wynik może być nieoczekiwany lub daleki od zadania, które chcesz wykonać.
-
-Ten podstawowy przykład podkreśla również konieczność zapewnienia szerszego kontekstu lub instrukcji dotyczących tego, co konkretnie chcesz osiągnąć.
-
-Spróbujmy to trochę poprawić:
-
-_Prompt:_
+### 🔸 Ulepszony prompt:
 
 ```
 Complete the sentence: The sky is
 ```
 
-_Output:_
+→ Output:
 
 ```
-so  beautiful today.
+so beautiful today.
 ```
 
-Czy nie lepiej? Cóż, kazałeś modelowi dokończyć zdanie, więc wynik wygląda o wiele lepiej, ponieważ podąża dokładnie za tym, co kazałeś mu zrobić ("dokończ zdanie"). Takie podejście polegające na projektowaniu optymalnych promptów w celu poinstruowania modelu do wykonania zadania jest określane mianem [inżynierii promptów](Prompt%20Engineering%20Guide).
+Dodanie instrukcji powoduje, że model generuje spójną i zgodną odpowiedź.
 
-Powyższy przykład jest podstawową ilustracją tego, co jest możliwe w dzisiejszych modelach [LLM](LLM). Dzisiejsze modele [LLM](LLM) są w stanie wykonywać wszelkiego rodzaju zaawansowane zadania, od podsumowywania tekstu, przez rozumowanie matematyczne, po generowanie kodu.
+## Formatowanie promptów
 
-## Formatowanie promtów
+Najczęściej spotykane formaty:
 
-Powyżej wypróbowałeś bardzo prosty prompt. Standardowa zachęta ma następujący format:
-
-```
-<Question>?
-```
-
-or
+#### 🟩 Instrukcja:
 
 ```
-<Instruction>
+Translate the following sentence into French:
+"I love learning."
 ```
 
-Można to sformatować w formacie odpowiedzi na pytanie (QA), który jest standardem w wielu zbiorach danych QA, w następujący sposób:
+#### 🟦 QA (question–answer):
 
 ```
-Q: <Question>?
+Q: What is the capital of Spain?
+A: Madrid
+Q: What is the capital of France?
 A:
 ```
 
-Gdy prompting odbywa się w powyższy sposób, jest to również określane jako [Zero-Shot Prompting](Zero-Shot%20Prompting), tj. bezpośrednio podsuwasz modelowi odpowiedź bez żadnych przykładów lub demonstracji dotyczących zadania, które chcesz wykonać. Niektóre duże modele językowe [LLM](LLM) mają zdolność do wykonywania [Zero-Shot Prompting](Zero-Shot%20Prompting), ale zależy to od złożoności i wiedzy na temat danego zadania.
+Ten format wykorzystywany jest w Zero-Shot Prompting, czyli bez przykładów — tylko pytanie i oczekiwana odpowiedź.
 
-Biorąc pod uwagę powyższy standardowy format, jedną z popularnych i skutecznych technik promptingu jest [Few-Shot Prompting](Few-Shot%20Prompting), w którym dostarczasz przykłady (tj. demonstracje). Możesz sformatować kilka podpowiedzi w następujący sposób:
+## Few-Shot Prompting – nauka przez przykład
 
-```
-<Question>?
-<Answer>
-<Question>?
-<Answer>
-<Question>?
-<Answer>
-<Question>?
-```
-
-Wersja w formacie QA wyglądałaby następująco:
+Dodanie kilku przykładów w promptcie umożliwia modelowi uczenie się zadania kontekstowo (tzw. in-context learning):
 
 ```
-Q: <Question>?
-A: <Answer>
-Q: <Question>?
-A: <Answer>
-Q: <Question>?
-A: <Answer>
-Q: <Question>?
-A:
-```
-
-Należy pamiętać, że korzystanie z formatu QA nie jest wymagane. Format podpowiedzi zależy od wykonywanego zadania. Na przykład możesz wykonać proste zadanie klasyfikacji i podać przykłady, które demonstrują zadanie w następujący sposób:
-
-_Prompt:_
-
-```
-This is awesome! // Positive
-This is bad! // Negative
-Wow that movie was rad! // Positive
+This is awesome! // Positive  
+This is bad! // Negative  
+Wow that movie was rad! // Positive  
 What a horrible show! //
 ```
 
-_Output:_
+→ Output:
 
 ```
 Negative
 ```
 
-Kilka podpowiedzi umożliwia uczenie się w kontekście, czyli zdolność modeli językowych do uczenia się zadań na podstawie kilku demonstracji.
+### Dlaczego to działa?
 
+LLM nie zna reguł klasyfikowania emocji, ale potrafi wyciągać wnioski ze wzorców widocznych w promptcie. To czyni Few-Shot Prompting potężną i uniwersalną techniką – bez potrzeby trenowania modelu!
+
+## 🧠 O czym pamiętać podczas pracy z promptami?
+
+- Prompt najlepiej konstruować jasno i konkretnie.
+- Dobrą praktyką jest testowanie różnych wariantów.
+- W przypadku zadań złożonych (np. rozumowanie) warto stosować Chain-of-Thought Prompting.
+- Spójny format znacznie zwiększa jakość wyników (np. używanie stałego schematu „Q: ... A: ...”).
+
+# 💡 Przykład zastosowania w kodzie
+
+```python
+prompt = """
+Translate into Spanish:
+I am learning how to write prompts.
+"""
+
+response = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+    messages=[{"role": "user", "content": prompt}]
+)
+
+print(response['choices'][0]['message']['content'])
+```
+
+# 📌 Źródła
+
+- [OpenAI Prompt Guide](https://platform.openai.com/docs)
+- [Prompt Engineering Guide](https://www.promptingguide.ai)
+- [Learn Prompting](https://learnprompting.org)
+- [Prompt Engineering Patterns survey](https://arxiv.org/abs/2302.11382)
+
+# 👽 Brudnopis
+
+- Prompt = rozmowa z modelem → im lepiej zapytasz, tym dokładniej odpowie
+- Zero vs Few Shot – balans między eksperckością modelu a twoją kontrolą
+- Dalsze tematy: temperatura, top-p, formatowanie, Chain-of-Thought, RAG
+- Prompt ≠ kod → to język zrozumiały dla człowieka
+- Dobry prompt = precyzja + przykład + format + kontekst

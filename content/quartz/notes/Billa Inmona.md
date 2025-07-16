@@ -1,3 +1,0 @@
----
-title: Billa Inmona
----

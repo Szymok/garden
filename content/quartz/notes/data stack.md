@@ -1,3 +1,0 @@
----
-title: stos danych
----
