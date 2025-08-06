@@ -20,7 +20,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Data Mesh** to nowoczesna, zdecentralizowana architektura danych, w której dane są organizowane, zarządzane i udostępniane jako **produkty domenowe**. Model ten zakłada, że zespoły domenowe — nie centralne działy danych — są odpowiedzialne zarówno za pozyskiwanie, jak i publikację danych. Główne idee to: **domenowość**, **samodzielność zespołów**, **wspólna platforma infrastrukturalna** i **postrzeganie danych jako produktu**.
+**[[Siatka danych|Data Mesh]]** to nowoczesna, zdecentralizowana architektura danych, w której dane są organizowane, zarządzane i udostępniane jako **produkty domenowe**. Model ten zakłada, że zespoły domenowe — nie centralne działy danych — są odpowiedzialne zarówno za pozyskiwanie, jak i publikację danych. Główne idee to: **domenowość**, **samodzielność zespołów**, **wspólna platforma infrastrukturalna** i **postrzeganie danych jako produktu**.
 
 # 🔑 Kluczowe punkty
 
@@ -41,7 +41,7 @@ Zgodnie z [artykułem na MartinFowler.com](https://martinfowler.com/articles/dat
 - Skutkują długim czasem dostarczania nowych źródeł danych (niska responsywność).
 - Wymagają dużych, wyspecjalizowanych zespołów inżynierów danych, pracujących pod presją wielu interesariuszy.
 
-## Cechy architektury Data Mesh
+## Cechy architektury [[Siatka danych|Data Mesh]]
 
 ### 1. Dane jako produkt (`Data as a Product`)
 
@@ -61,7 +61,7 @@ Chociaż dane są zdecentralizowane, ich interoperacyjność i bezpieczeństwo z
 
 ## Główna zmiana paradygmatu
 
-|Tradycyjne Data Lake / DWH|Data Mesh|
+|Tradycyjne Data Lake / DWH|[[Siatka danych\|Data Mesh]]|
 |---|---|
 |Centralizacja danych|Decentralizacja danych|
 |Fokus na ETL|Fokus na dane jako produkt|
@@ -71,20 +71,20 @@ Chociaż dane są zdecentralizowane, ich interoperacyjność i bezpieczeństwo z
 
 # 💡 Przykład zastosowania
 
-Enterprise SaaS dostarczający narzędzia HR wprowadza architekturę Data Mesh, w której zespoły odpowiedzialne za „kandydatów”, „proces onboardingu” i „rekrutację” publikują własne produkty danych. Każdy produkt ma opisany schemat, SLA, katalogową rejestrację i standardy jakości danych. Konsumenci danych (analitycy, zespoły ML) mogą niezależnie odnaleźć, przetworzyć i skorzystać z danych — bez udziału centralnego zespołu ETL. Platforma dostarcza wspólne narzędzia do orkiestracji, wersjonowania i monitoringu danych.
+Enterprise SaaS dostarczający narzędzia HR wprowadza architekturę [[Siatka danych|Data Mesh]], w której zespoły odpowiedzialne za „kandydatów”, „proces onboardingu” i „rekrutację” publikują własne produkty danych. Każdy produkt ma opisany schemat, SLA, katalogową rejestrację i standardy jakości danych. Konsumenci danych (analitycy, zespoły [[Uczenie Maszynowe|ML]]) mogą niezależnie odnaleźć, przetworzyć i skorzystać z danych — bez udziału centralnego zespołu ETL. Platforma dostarcza wspólne narzędzia do orkiestracji, wersjonowania i monitoringu danych.
 
 ## 📌 Źródła
 
-- [Martin Fowler — Data Mesh](https://martinfowler.com/articles/data-monolith-to-mesh.html)
-- Zebratech Blog [Data Mesh vs. Data Lake](https://zebratech.io/blog/data-mesh-vs-data-lake)
+- [Martin Fowler — [[Siatka danych|Data Mesh]]](https://martinfowler.com/articles/data-monolith-to-mesh.html)
+- Zebratech Blog [[[Siatka danych|Data Mesh]] vs. Data Lake](https://zebratech.io/blog/data-mesh-vs-data-lake)
 - Data as a Product — sitowiec
 
 ## 👽 Brudnopis
 
 - Architektura Mesh = rozbicie centralnego data lake na zestaw wspierających się produktów danych
 - Każda domena publikuje własny zestaw danych wg wspólnej platformy
-- Wymaga DevOps/[[Inżynieria Danych|DataOps]] mindset + szerzenie kultury produktowej
-- Katalog danych jako repozytorium dostępnych assetów
+- Wymaga [[DevOps]]/[[Inżynieria Danych|DataOps]] mindset + szerzenie kultury produktowej
+- [[Data Catalog|Katalog danych]] jako repozytorium dostępnych assetów
 - Standardy = klucz do unifikacji: identyfikatory, formaty, metadane
-- Infrastructure as a Platform = DuckDB, dbt, Dagster, DataHub, Iceberg
+- Infrastructure as a Platform = [[DuckDB]], [[dbt]], [[Dagster]], DataHub, [[Apache Iceberg|Iceberg]]
 - Koszty operacyjne → mniejsze zespoły, szybsze prototypowanie, lepsza jakość końcowa

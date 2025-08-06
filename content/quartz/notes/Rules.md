@@ -27,8 +27,8 @@ aliases:
 # 🔑 Kluczowe punkty
 
 - 📦 W Ataccama wyróżniamy dwa główne typy reguł:
-    1. Detection Rules – służą do wykrywania terminów słownikowych na poziomie atrybutów.
-    2. Data Quality Evaluation Rules – służą do walidacji, monitorowania i oceny jakości danych.
+    1. [[Detection Rules]] – służą do wykrywania terminów słownikowych na poziomie atrybutów.
+    2. [[Data Quality Evaluation Rules]] – służą do walidacji, monitorowania i oceny jakości danych.
 - ⚙️ Reguły mogą być konfigurowane przez:
     - Condition Builder (interfejs graficzny),
     - Advanced Expression (język wyrażeń logicznych, np. DSL),
@@ -71,7 +71,7 @@ Złożony komponent użycia w pipeline przetwarzania, np. maskowanie, czyszczeni
 
 ## Gdzie są stosowane reguły?
 
-- Tabele w katalogu danych (Catalog Items)
+- Tabele w katalogu danych ([[Catalog Items]])
 - Pojedyncze kolumny / atrybuty
 - Dane zidentyfikowane jako PII lub krytyczne
 - Terminy przypisane w słowniku biznesowym
@@ -97,7 +97,7 @@ Użytkownik przypina tę regułę do wszystkich kolumn przypisanych do terminu �
 # 👽 Brudnopis
 
 - W [[Inżynieria Danych|DataOps]] → rules = repeatable logic block + reusable
-- Detection Rules → przypisywane przy Data Discovery / Profilowanie
+- [[Detection Rules]] → przypisywane przy Data Discovery / Profilowanie
 - DQ Rules → zasilają dashboard jakości, alerty, raporty kierunkowe
 - Dobrze ustawić statusy: Passed / Warning / Failed → automatyzacja flagowania
 - Rule repo = centrum wiedzy dziedzinowej + checklist Quality Management Framework---
@@ -105,7 +105,7 @@ Użytkownik przypina tę regułę do wszystkich kolumn przypisanych do terminu �
 title: Rules  
 created: 2025-04-01  
 status:  
-category: data governance / jakość danych  
+category: [[data governance]] / jakość danych  
 difficulty: średni  
 language: pl  
 tags:
@@ -113,7 +113,7 @@ tags:
 - reguły
 - jakość danych
 - wykrywanie terminów
-- transformacja danych
+- [[transformacja danych]]
 - walidacja  
     aliases:
 - reguły danych
@@ -129,8 +129,8 @@ tags:
 # 🔑 Kluczowe punkty
 
 - 📦 W Ataccama wyróżniamy dwa główne typy reguł:
-    1. Detection Rules – służą do wykrywania terminów słownikowych na poziomie atrybutów.
-    2. Data Quality Evaluation Rules – służą do walidacji, monitorowania i oceny jakości danych.
+    1. [[Detection Rules]] – służą do wykrywania terminów słownikowych na poziomie atrybutów.
+    2. [[Data Quality Evaluation Rules]] – służą do walidacji, monitorowania i oceny jakości danych.
 - ⚙️ Reguły mogą być konfigurowane przez:
     - Condition Builder (interfejs graficzny),
     - Advanced Expression (język wyrażeń logicznych, np. DSL),
@@ -173,7 +173,7 @@ Złożony komponent użycia w pipeline przetwarzania, np. maskowanie, czyszczeni
 
 ## Gdzie są stosowane reguły?
 
-- Tabele w katalogu danych (Catalog Items)
+- Tabele w katalogu danych ([[Catalog Items]])
 - Pojedyncze kolumny / atrybuty
 - Dane zidentyfikowane jako PII lub krytyczne
 - Terminy przypisane w słowniku biznesowym
@@ -199,7 +199,7 @@ Użytkownik przypina tę regułę do wszystkich kolumn przypisanych do terminu �
 # 👽 Brudnopis
 
 - W [[Inżynieria Danych|DataOps]] → rules = repeatable logic block + reusable
-- Detection Rules → przypisywane przy Data Discovery / Profilowanie
+- [[Detection Rules]] → przypisywane przy Data Discovery / Profilowanie
 - DQ Rules → zasilają dashboard jakości, alerty, raporty kierunkowe
 - Dobrze ustawić statusy: Passed / Warning / Failed → automatyzacja flagowania
 - Rule repo = centrum wiedzy dziedzinowej + checklist Quality Management Framework

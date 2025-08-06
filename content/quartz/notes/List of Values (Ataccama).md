@@ -28,8 +28,8 @@ aliases:
 
 - 📦 LOV to referencyjna lista akceptowalnych lub standardowych wartości dla danego pola (np. statusy: "aktywne", "nieaktywne", "oczekujące").
 - 🧪 Wykorzystywana w regułach jakości danych do walidacji — np. czy wartość pola znajduje się na liście dopuszczalnych.
-- 🔄 Obsługiwane są zarówno statyczne listy wpisywane ręcznie, jak i dynamiczne listy importowane z plików lub systemów zewnętrznych (np. MDM, API).
-- 🔍 LOV są używane w Condition Builder podczas definiowania Detection Rules oraz Data Quality Rules.
+- 🔄 Obsługiwane są zarówno statyczne listy wpisywane ręcznie, jak i dynamiczne listy importowane z plików lub systemów zewnętrznych (np. [[Master Data Management (MDM)|MDM]], API).
+- 🔍 LOV są używane w Condition Builder podczas definiowania Detection [[Rules]] oraz Data Quality [[Rules]].
 - 🧠 Mogą być mapowane do terminów słownika i używane w przypisaniach semantycznych.
 
 # 📚 Szczegółowe wyjaśnienie
@@ -39,7 +39,7 @@ aliases:
 1. **Walidacja danych w profilowaniu i regułach DQ**
     
     - Przykład: Kolumna `order_status` powinna mieć tylko wartości z listy: `["NEW", "PROCESSING", "SHIPPED", "CANCELLED"]`.
-2. **Wykrywanie terminów biznesowych (Detection Rules)**
+2. **Wykrywanie terminów biznesowych ([[Detection Rules]])**
     
     - LOV może być wskazana jako referencja do zdefiniowania warunku, np. „is from reference data”.
 3. **Filtrowanie atrybutów katalogu**
@@ -93,7 +93,7 @@ if record["kraj_pochodzenia"] not in country_codes_LOV:
 # 👽 Brudnopis
 
 - LOV ≠ słownik terminów — to konkretna lista wartości (referencja), nie definicja semantyczna
-- Często używana w integracji z MDM (np. listy państw, klasyfikacje PKD)
+- Często używana w integracji z [[Master Data Management (MDM)|MDM]] (np. listy państw, klasyfikacje PKD)
 - W systemach klasy Ataccama, Collibra — LOV = podstawa do validacji i automatyzacji przypisań
 - Przypisane LOV mogą zmieniać się dynamicznie — potrzebne audytowalne wersjonowanie
 - Warto powiązać LOV z rolami stewardów i odpowiedzialnością domenową

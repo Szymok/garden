@@ -21,7 +21,7 @@ aliases:
 
 # 🎯 Definicja
 
-[**Dagster**](https://dagster.io/) to nowoczesna platforma do **orkiestracji danych** i budowy pipelines oparta na modelu "software-defined assets". Umożliwia tworzenie, testowanie, wdrażanie oraz monitorowanie zadań ETL/ELT i projektów danych z pełną obserwowalnością oraz kontrolą jakości. Stawia na podejście deklaratywne, transparentność oraz rozwój zgodny ze standardami inżynierii oprogramowania.
+[**Dagster**](https://dagster.io/) to nowoczesna platforma do **orkiestracji danych** i budowy pipelines oparta na modelu "software-defined assets". Umożliwia tworzenie, testowanie, wdrażanie oraz monitorowanie zadań ETL/ELT i projektów danych z pełną obserwowalnością oraz kontrolą jakości. Stawia na [[Deklaratywność|podejście deklaratywne]], transparentność oraz rozwój zgodny ze standardami inżynierii oprogramowania.
 
 # 🔑 Kluczowe punkty
 
@@ -29,8 +29,8 @@ aliases:
 - Posiada **wbudowaną genealogię danych (data lineage)** i **obserwowalność** każdej transformacji i zależności.
 - Wspiera **lokalne testowanie, środowiska staging**, współdzielone katalogi, deploye i kontrolę wersji assetów.
 - Ułatwia **śledzenie świeżości danych**, metadanych i statusów aktywów (data freshness & health checks).
-- Integruje się z narzędziami ekosystemu open source: dbt, Airbyte, Snowflake, S3, PowerBI, DuckDB i więcej.
-- Zaprojektowany z myślą o zespołach [[Inżynieria Danych|DataOps]]/AI/ML oraz inżynierach danych – wysoka ergonomia pracy programistycznej.
+- Integruje się z narzędziami ekosystemu open source: [[dbt]], Airbyte, Snowflake, S3, PowerBI, [[DuckDB]] i więcej.
+- Zaprojektowany z myślą o zespołach [[Inżynieria Danych|DataOps]]/AI/[[Uczenie Maszynowe|ML]] oraz inżynierach danych – wysoka ergonomia pracy programistycznej.
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -38,9 +38,9 @@ aliases:
 
 ### 1. Asset-based orchestration
 
-Dagster pozwala modelować dane jako aktywa (`@asset`) — np. tabele, modele ML, wykresy. Aktywa te mają zależności, są wersjonowane i posiadają własne reguły update'ów (np. bazujące na świeżości upstream).
+Dagster pozwala modelować dane jako aktywa (`@asset`) — np. tabele, modele [[Uczenie Maszynowe|ML]], [[Wizualizacja|wykresy]]. Aktywa te mają zależności, są wersjonowane i posiadają własne reguły update'ów (np. bazujące na świeżości upstream).
 
-### 2. Deklaratywność i modularność
+### 2. [[Deklaratywność]] i modularność
 
 Pipeline to nie task po tasku (imperatywne DAGi jak w Airflow), ale zależności między aktywami. Zbudowany na Pythonie DAG opisuje _co zależy od czego_, nie _w jakiej kolejności to wykonać_.
 
@@ -72,7 +72,7 @@ Każdy run rejestruje dane wyjściowe, logi, metadata file-level i kolumnową. P
 
 # 💡 Przykład zastosowania
 
-Firma e-commerce integruje dane z Airbyte (synchronizacja z API i baz), przekształca je z użyciem dbt, a następnie prezentuje raporty w Power BI. Dagster jako warstwa orkiestracji:
+Firma e-commerce integruje dane z Airbyte (synchronizacja z API i baz), przekształca je z użyciem [[dbt]], a następnie prezentuje raporty w Power [[Business Intelligence|BI]]. Dagster jako warstwa orkiestracji:
 
 - Wyzwala pipeline po pojawieniu się nowych danych w S3,
 - Obsługuje wersjonowanie tabelek po stronie Snowflake,
@@ -82,7 +82,7 @@ Firma e-commerce integruje dane z Airbyte (synchronizacja z API i baz), przekszt
 ## 📌 Źródła
 
 - [Oficjalna strona Dagster](https://dagster.io)
-- [Blog – Modern Data Stack with Dagster](https://dagster.io/blog/)
+- [Blog – Modern [[Stos danych|Data Stack]] with Dagster](https://dagster.io/blog/)
 - [GitHub – dagster-io/dagster](https://github.com/dagster-io/dagster)
 - [ETL with Dagster – darmowy kurs (2025)](https://dagster.io/etl-course)
 
@@ -92,7 +92,7 @@ Firma e-commerce integruje dane z Airbyte (synchronizacja z API i baz), przekszt
 - dekleratywna orkiestracja DAG = clean DAGs, odporność na zależności
 - genialna dla [[Inżynieria Danych|DataOps]]: retries, run logs, asset freshness
 - wygodniejszy niż airflow: brak kodowania imperatywnego + łatwiejsze testy
-- stale się rozwija, kluczowy gracz open data stack obok dbt/airbyte/superset
+- stale się rozwija, kluczowy gracz [[Stos Danych Otwartych|open data stack]] obok [[dbt]]/airbyte/superset
 - UI = wszystko: lineage, aktualność, podgląd danych, scheduler
 
 ---

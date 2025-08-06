@@ -21,21 +21,21 @@ aliases:
 
 # 🎯 Definicja
 
-**Prompting Applications** to kategoria technik i wzorców wykorzystujących zaawansowane podejście do tworzenia promptów dla dużych modeli językowych (LLM), takich jak GPT-4, Claude czy Mistral, w celu wykonywania praktycznych, złożonych lub interaktywnych zadań. Zamiast pojedynczych zapytań, aplikacje promptowe wykorzystują kompozycję poleceń, stany kontekstowe, instrukcję + dane, a czasami dodatkową logikę w kodzie do osiągnięcia pożądanego zachowania.
+**Prompting Applications** to kategoria technik i wzorców wykorzystujących zaawansowane podejście do tworzenia promptów dla dużych modeli językowych ([[Base LLM|LLM]]), takich jak [[GPT-4]], Claude czy Mistral, w celu wykonywania praktycznych, złożonych lub interaktywnych zadań. Zamiast pojedynczych zapytań, aplikacje promptowe wykorzystują kompozycję poleceń, stany kontekstowe, instrukcję + dane, a czasami dodatkową logikę w kodzie do osiągnięcia pożądanego zachowania.
 
 # 🔑 Kluczowe koncepty
 
 - **Prompt jako program (prompt-as-code)** – prompty jako deklaratywne instrukcje zawierające instrukcje logiczne i przebiegi: pętle, rozgałęzienia, kontrola przepływu.
 - **Agenci i narzędzia** – łączenie modeli językowych z narzędziami zewnętrznymi (kalkulator, przeglądarka, kod interpreter).
 - **Kompozycja promptów** – budowa aplikacji złożonej z wielu kroków: łańcuchy promptów, planowanie, zarządzanie stanem odpowiedzi.
-- **Retrieval-Augmented Generation (RAG)** – generacja odpowiedzi na podstawie dokumentów zewnętrznych pozyskanych za pomocą wyszukiwania semantycznego.
+- **[[Retrieval Augmented Generation (RAG)|Retrieval-Augmented Generation]] ([[RAG]])** – generacja odpowiedzi na podstawie dokumentów zewnętrznych pozyskanych za pomocą wyszukiwania semantycznego.
 - **System instrukcji funkcjonalnych** – modele rozpoznają intencję funkcji (np. struktura JSON, YAML, Markdown itd.) dla łatwiejszego parsowania wyników.
 
 # 📚 Przykładowe typy aplikacji opartych na promptach
 
 ## 1. Chatbot z osobowością
 
-> Twórz agenta, który odgrywa rolę np. przewodnika muzealnego, psychologa AI, konsultanta sprzedaży czy postaci literackiej. Prompty zawierają style, instrukcje i tonalność wypowiedzi.
+> Twórz agenta, który odgrywa rolę np. przewodnika muzealnego, psychologa [[Uczenie Maszynowe|AI]], konsultanta sprzedaży czy postaci literackiej. Prompty zawierają style, instrukcje i tonalność wypowiedzi.
 
 ## 2. Planowanie i rozwiązywanie zadań
 
@@ -46,7 +46,7 @@ aliases:
 - zbieranie informacji
 - integracja i wyciąganie wniosków
 
-👉 W połączeniu z agentami i frameworkami jak LangChain, LlamaIndex.
+👉 W połączeniu z agentami i frameworkami jak [[LangChain]], [[LlamaIndex]].
 
 ## 3. Przetwarzanie półstrukturalnych danych
 
@@ -55,7 +55,7 @@ aliases:
 - tekst → JSON
 - dokument → podsumowanie
 - e-mail → analiza encji (NER)
-- PDF → wyodrębnione fakty
+- PDF → wyodrębnione [[fakty]]
 
 ## 4. Automatyczne pisanie kodu i asystenci techniczni
 

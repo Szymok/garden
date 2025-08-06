@@ -28,7 +28,7 @@ aliases:
 - BI przekształca dane surowe w raporty, metryki i wizualizacje wspierające decyzje.
 - Główne komponenty BI to: raporty, dashboardy, eksploracje danych, i alerty czasowe.
 - BI promuje hasło „jednego źródła prawdy” — spójność danych w całej organizacji.
-- Narzędzia BI są dostępne także dla użytkowników nietechnicznych (tzw. samoobsługowe BI).
+- [[Narzędzia Business Intelligence|Narzędzia BI]] są dostępne także dla użytkowników nietechnicznych (tzw. samoobsługowe BI).
 - BI ściśle współpracuje z inżynierią danych, przekształceniami danych (ETL/ELT) i modelowaniem semantycznym.
 
 # 📚 Szczegółowe wyjaśnienie
@@ -43,9 +43,9 @@ BI pozwala uzyskać prosty i spójny przegląd działalności biznesowej przez p
 
 Powtarzalne zadania związane z raportowaniem, budżetowaniem i prognozowaniem są automatyzowane. Dane są aktualizowane dynamicznie – brak konieczności manualnej aktualizacji arkuszy kalkulacyjnych.
 
-### 📈 Roll-up & Drill-down
+### 📈 [[Rollup|Roll-up]] & Drill-down
 
-- **Roll-up**: Zagregowany przegląd wskaźników, np. kwartalna sprzedaż wg regionów.
+- **[[Rollup|Roll-up]]**: Zagregowany przegląd wskaźników, np. kwartalna sprzedaż wg regionów.
 - **Drill-down**: Możliwość „rozbicia” danych w głąb szczegółów – np. do poziomu konkretnej transakcji.
 
 ### 🧩 Jedno źródło prawdy
@@ -62,7 +62,7 @@ Z pomocą narzędzi BI użytkownicy biznesowi (np. marketing, sprzedaż, HR) mog
 - **Analityk BI**: Tworzy raporty, dashboardy, współpracuje z biznesem.
 - **Inżynier BI/Inżynier danych**: Udostępnia jakość i transformację danych do modelu hurtowni, dostraja wydajność zapytań.
 
-## Typowe narzędzia BI
+## Typowe [[Narzędzia Business Intelligence|narzędzia BI]]
 
 - Power BI
 - Tableau
@@ -73,7 +73,7 @@ Z pomocą narzędzi BI użytkownicy biznesowi (np. marketing, sprzedaż, HR) mog
 
 # 💡 Przykład zastosowania
 
-Firma logistyczna korzysta z Power BI do śledzenia wskaźników efektywności dostaw. Menedżerowie mają pulpit z KPI (średni czas dostawy, odsetek reklamacji, wykorzystanie floty), który aktualizuje się codziennie. Gdy metryka „czas dostawy” odbiega od normy, analityk wykonuje drill-down i odkrywa, że problem dotyczy konkretnej trasy w regionie południowym. Dzięki temu decyzje naprawcze są podejmowane szybciej i są oparte na sprawdzonych danych.
+Firma logistyczna korzysta z Power BI do śledzenia wskaźników efektywności dostaw. Menedżerowie mają pulpit z [[KPI]] (średni czas dostawy, odsetek reklamacji, wykorzystanie floty), który aktualizuje się codziennie. Gdy metryka „czas dostawy” odbiega od normy, analityk wykonuje drill-down i odkrywa, że problem dotyczy konkretnej trasy w regionie południowym. Dzięki temu decyzje naprawcze są podejmowane szybciej i są oparte na sprawdzonych danych.
 
 ## 📌 Źródła
 
@@ -83,9 +83,9 @@ Firma logistyczna korzysta z Power BI do śledzenia wskaźników efektywności d
 
 # 👽 Brudnopis
 
-- BI = transformacja danych w insighty → decyzje
-- Cechy: roll-up, drill-down, one source of truth, automation, self-service
+- BI = [[transformacja danych]] w insighty → decyzje
+- Cechy: [[Rollup|roll-up]], drill-down, one source of truth, automation, self-service
 - Język: SQL, narzędzia: Power BI, Tableau, Looker, Metabase
-- Rola: dashboardy, KPI, współpraca z [[Inżynieria Danych|Data Engineering]]
+- Rola: dashboardy, [[KPI]], współpraca z [[Inżynieria Danych|Data Engineering]]
 - Przykład: “czas dostawy” odstaje → drilldown → wykrycie regionu/problemu
-- Self-service pozwala każdemu analizować swoje KPI bez wsparcia IT
+- Self-service pozwala każdemu analizować swoje [[KPI]] bez wsparcia IT

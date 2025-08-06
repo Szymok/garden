@@ -21,7 +21,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Deployment modeli uczenia maszynowego** to proces przeniesienia wytrenowanego modelu z fazy eksperymentalnej (rozwoju) do środowiska produkcyjnego, gdzie model realnie obsługuje zapytania użytkowników lub systemów. Jest to kluczowy element cyklu życia ML – umożliwia wykorzystanie predykcji modelu w aplikacjach, API, automatyzacji oraz podejmowaniu decyzji biznesowych.
+**Deployment modeli uczenia maszynowego** to proces przeniesienia wytrenowanego modelu z fazy eksperymentalnej (rozwoju) do środowiska produkcyjnego, gdzie model realnie obsługuje zapytania użytkowników lub systemów. Jest to kluczowy element cyklu życia [[Uczenie Maszynowe|ML]] – umożliwia wykorzystanie predykcji modelu w aplikacjach, API, automatyzacji oraz podejmowaniu decyzji biznesowych.
 
 # 🔑 Kluczowe aspekty procesu
 
@@ -35,7 +35,7 @@ aliases:
 
 # 📚 Szczegółowe wyjaśnienie
 
-## Typowe etapy deploymentu modeli ML
+## Typowe etapy deploymentu modeli [[Uczenie Maszynowe|ML]]
 
 1. **Przygotowanie i trening modelu**
     - Identyfikacja problemu, zebranie/budowa odpowiedniego zbioru danych.
@@ -52,7 +52,7 @@ aliases:
     - Pipeline'y CI/CD: automatyczne budowanie, testowanie i deployment, deployment blue-green/canary/rolling.
 4. **Serwowanie modelu**
     - Dedicated API: serwer modele (TensorFlow Serving, TorchServe, ONNX Runtime) lub własne mikroserwisy.
-    - Modele serverless: KServe, AWS Lambda, OpenShift Serverless – automatyczna skalowalność, płatność za realne użycie.
+    - Modele serverless: KServe, AWS [[Architektura Lambda|Lambda]], OpenShift Serverless – automatyczna skalowalność, płatność za realne użycie.
     - Możliwość AB testingu, shadow deploy, rollback w razie regresji.
 5. **Monitorowanie i utrzymanie**
     - Monitoring funkcjonalny (pomiary performance, latency).
@@ -63,7 +63,7 @@ aliases:
 
 Zespół buduje klasyfikator obrazów – od pobrania i pre-processing kolekcji zdjęć, przez trening w Jupyterze i analizę macierzy pomyłek, po wdrożenie modelu jako REST API w FastAPI/Docker na Kubernetesie. Używa Gradio do szybkiego prototypowania dem, MLflow do śledzenia wersji, OpenShift Pipelines do CI/CD oraz promuje automatyzację monitoringu i retrainingu przy drifcie danych.
 
-# ✅ Najlepsze praktyki deploymentu modeli ML
+# ✅ Najlepsze praktyki deploymentu modeli [[Uczenie Maszynowe|ML]]
 
 |Obszar|Przykłady dobrych praktyk|
 |---|---|
@@ -79,7 +79,7 @@ Zespół buduje klasyfikator obrazów – od pobrania i pre-processing kolekcji 
 
 # 📌 Źródła
 
-- [EITT: Intensywne Warsztaty ML](https://eitt.pl/technologie/machine-learning-z-pythonem-intensywne-warsztaty/)
+- [EITT: Intensywne Warsztaty [[Uczenie Maszynowe|ML]]](https://eitt.pl/technologie/machine-learning-z-pythonem-intensywne-warsztaty/)
 - [ICM: Praktyki MLOps dla deploymentów](https://studia.icm.edu.pl/industrializing-machine-learning-solutions-overview-of-mlops-practices-for-ml-projects/)
 - [Hostersi: Bezpieczeństwo ML Deployment](https://www.hostersi.pl/aktualnosci-aws/7-sposobow-na-poprawe-bezpieczenstwa-przeplywow-pracy-uczenia-maszynowego/)
 - [EITT: Orkiestracja ML na Kubernetes/OpenShift](https://eitt.pl/baza-wiedzy/kubernetes-openshift-orkiestracja-ml-kontenery/)
@@ -92,6 +92,6 @@ Zespół buduje klasyfikator obrazów – od pobrania i pre-processing kolekcji 
 - Automatyzacja retrainów, monitoring metryk jakości i kosztów.
 - Blue-Green, Canary, Shadow deployment = zero downtime.
 - Modes: batch, online, edge (Arduino/Jetson).
-- ML + DevOps = MLOps, kluczowe w [[Inżynieria Danych|Data Engineering]].
+- [[Uczenie Maszynowe|ML]] + [[DevOps]] = MLOps, kluczowe w [[Inżynieria Danych|Data Engineering]].
 
 ---

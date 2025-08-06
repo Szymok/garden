@@ -22,7 +22,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Data Observability** to zdolność systemu do automatycznego monitorowania stanu, jakości i ruchu danych w całym ekosystemie danych. Konfiguracja Data Observability polega na ustawieniu reguł, metryk i powiadomień dotyczących informacji, które mają być obserwowane oraz tego, jak często i w jakiej formie użytkownik ma być informowany o ewentualnych problemach z danymi.
+**[[Data Observability]]** to zdolność systemu do automatycznego monitorowania stanu, jakości i ruchu danych w całym ekosystemie danych. Konfiguracja [[Data Observability]] polega na ustawieniu reguł, metryk i powiadomień dotyczących informacji, które mają być obserwowane oraz tego, jak często i w jakiej formie użytkownik ma być informowany o ewentualnych problemach z danymi.
 
 # 🔑 Kluczowe punkty
 
@@ -34,13 +34,13 @@ aliases:
 
 # 📚 Szczegółowe wyjaśnienie
 
-## Jak skonfigurować Data Observability?
+## Jak skonfigurować [[Data Observability]]?
 
 Po zakończeniu procesu Data Discovery w wybranym źródle (np. baza danych, plik, jezioro danych):
 
 ### 1. Konfiguracja nowej obserwowalności
 
-1. Przejdź do zakładki **Data Observability** w widoku źródła danych.
+1. Przejdź do zakładki **[[Data Observability]]** w widoku źródła danych.
 2. Kliknij ikonę ⚙️ (Ustawienia) → Nowa konfiguracja.
 3. Wybierz zakres obserwacji: całość, konkretne tabele, kolumny lub metryki.
 4. Ustaw częstotliwość (np. codziennie, co godzinę).
@@ -48,7 +48,7 @@ Po zakończeniu procesu Data Discovery w wybranym źródle (np. baza danych, pli
 
 ### 2. Edycja istniejącej konfiguracji
 
-1. Otwórz źródło danych > zakładka **Data Observability**.
+1. Otwórz [[Data Source|źródło danych]] > zakładka **[[Data Observability]]**.
 2. Kliknij ikonę ustawień lub użyj menu z trzema kropkami `⋮` przy istniejącej konfiguracji.
 3. Zmień harmonogram, zakres danych lub aktywuj dodatkowe alerty.
 
@@ -65,7 +65,7 @@ Po zakończeniu procesu Data Discovery w wybranym źródle (np. baza danych, pli
 ## Tryby konfiguracji
 
 - **Podstawowa (Basic):** szybkie ustawienia dla kluczowych metryk, bez pisania reguł.
-- **Zaawansowana (Advanced):** niestandardowe formuły, połączenia z DQ Engine lub integracja z regułami DQ platform (np. Ataccama DQ, Soda SQL, dbt tests).
+- **Zaawansowana (Advanced):** niestandardowe formuły, połączenia z DQ Engine lub integracja z regułami DQ platform (np. Ataccama DQ, Soda SQL, [[dbt]] tests).
 
 # 💡 Przykład zastosowania
 
@@ -101,5 +101,5 @@ W tym przykładzie konfigurujemy system do monitorowania trzech metryk codzienni
 - „Observe what matters” – nie wszystko trzeba monitorować, tylko krytyczne dane
 - lifecycle = discovery → configure → run → alert → feedback
 - Wyzwalacze czasowe vs. zdarzeniowe
-- Integracje: Airflow/Prefect → trigger if issue, dbt → execute test + alert
-- [[Inżynieria Danych|DataOps]]: observability + lineage + testing = pełen monitoring jakości danych
+- Integracje: [[Apache Airflow|Airflow]]/Prefect → trigger if issue, [[dbt]] → execute test + alert
+- [[Inżynieria Danych|DataOps]]: observability + lineage + testing = pełen [[Data Observability|monitoring jakości danych]]

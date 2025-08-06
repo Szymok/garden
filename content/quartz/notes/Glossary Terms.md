@@ -52,13 +52,13 @@ Terminy są przypisywane do:
     - Na podstawie reguł:
         - opartych na metadanych (np. nazwa kolumny zawiera "email"),
         - opartych na danych (np. wzorce danych odpowiadają numerowi telefonu),
-        - opartych na jednym i drugim (inteligentne dopasowanie AI/ML).
+        - opartych na jednym i drugim (inteligentne dopasowanie AI/[[Uczenie Maszynowe|ML]]).
 
 ## Zakładki dostępne w widoku terminu
 
 |Zakładka|Zawartość|
 |---|---|
-|**Overview**|Informacje ogólne, relacje, właściciele, propozycje przypisań, statystyki występowania|
+|**Overview**|[[Informacje ogólne]], relacje, właściciele, propozycje przypisań, statystyki występowania|
 |**Occurrence**|Lista miejsc przypisania terminu (katalog, atrybuty, systemy)|
 |**Data Quality**|Przegląd jakości danych w miejscach, gdzie termin został przypisany|
 |**History**|Historia zmian terminu, przegląd wersji i edycji|
@@ -97,8 +97,8 @@ Relacje typu: `parent of`, `derived from`, `equivalent of`, `defined in`, itd., 
 
 # 👽 Brudnopis
 
-- Terms = most między biznesem a danymi → uspójnienie języka między IT, BI i zarządem
+- Terms = most między biznesem a danymi → uspójnienie języka między IT, [[Business Intelligence|BI]] i zarządem
 - W nowoczesnych systemach (Collibra, Ataccama, Alation): terminy wyzwalają workflow i kontrolę jakości
 - AI suggestion + validation loop = Smart Glossary
 - History = lineage pojęciowe, zmiany znaczenia, merge/split z innymi pojęciami
-- Wspierają data catalog, data quality, policy enforcement, data access, DQ dashboards
+- Wspierają [[data catalog]], data quality, policy enforcement, data access, DQ dashboards

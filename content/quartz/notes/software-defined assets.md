@@ -21,7 +21,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Software-Defined Assets (SDA)**, czyli zasoby zdefiniowane programowo, to podejście do zarządzania danymi, w którym zasoby danych (tabele, modele, metryki) są deklarowane bezpośrednio w kodzie – jako funkcje w systemie orkiestracyjnym. Koncepcja została zaproponowana i zaimplementowana przez zespół **Dagster**, jako fundament **deklaratywnej orkiestracji danych**. SDA zapewniają pełne odwzorowanie pochodzenia danych (_data lineage_), reproducowalność i możliwość zarządzania przepływami danych przy pomocy wersjonowanego kodu.
+**Software-Defined Assets (SDA)**, czyli zasoby zdefiniowane programowo, to podejście do zarządzania danymi, w którym zasoby danych (tabele, modele, metryki) są deklarowane bezpośrednio w kodzie – jako funkcje w systemie orkiestracyjnym. Koncepcja została zaproponowana i zaimplementowana przez zespół **[[Dagster]]**, jako fundament **deklaratywnej orkiestracji danych**. SDA zapewniają pełne odwzorowanie pochodzenia danych (_data lineage_), reproducowalność i możliwość zarządzania przepływami danych przy pomocy wersjonowanego kodu.
 
 # 🔑 Kluczowe punkty
 
@@ -37,20 +37,20 @@ aliases:
 
 ⛔️ W podejściu klasycznym (imperatywnym):
 
-- Tworzysz DAG (np. w Airflow), który operuje na zadaniach – nie na konkretnych danych.
+- Tworzysz DAG (np. w [[Apache Airflow|Airflow]]), który operuje na zadaniach – nie na konkretnych danych.
 - Aby zrozumieć przepływ danych, trzeba analizować kod poszczególnych zadań i zależności.
 
 ✅ W Software-Defined Assets:
 
 - Definiujesz dane jako wyjście funkcji — np. `@asset def customer_orders()`.
 - Każdy zasób ma ścisły input/output i nazwę stanowiącą element globalnego modelu danych.
-- Dagster orkiestruje zależności między zasobami automatycznie na podstawie ich sygnatury.
+- [[Dagster]] orkiestruje zależności między zasobami automatycznie na podstawie ich sygnatury.
 
 ## Kluczowe właściwości SDA
 
 |Właściwość|Opis|
 |---|---|
-|Deklaratywność|Skupia się na _co_ ma być osiągnięte – a nie _jak_ to zrealizować.|
+|[[Deklaratywność]]|Skupia się na _co_ ma być osiągnięte – a nie _jak_ to zrealizować.|
 |Izolacja i testowalność|Każdy asset to funkcja – można ją testować jednostkowo.|
 |Wersjonowalność|Każda zmiana definicji zasobu może być kontrolowana przez system VCS.|
 |Obserwowalna linia dziedziczenia|Orchestrator zna, skąd pochodzą dane i kto z nich korzysta.|
@@ -59,9 +59,9 @@ aliases:
 ## Zastosowania
 
 - Budowanie wersjonowalnych i testowalnych pipeline’ów o wysokiej przejrzystości.
-- Orkiestracja zestawów danych z precyzyjnym modelem zależności: danych wejściowych, miar, modeli ML.
+- Orkiestracja zestawów danych z precyzyjnym modelem zależności: danych wejściowych, miar, modeli [[Uczenie Maszynowe|ML]].
 - Automatyczna dokumentacja i monitoring linii pochodzenia danych.
-- Budowa warstwy semantycznej na assetach, np. Modele w dbt jako SDA w Dagsterze.
+- Budowa warstwy semantycznej na assetach, np. Modele w [[dbt]] jako SDA w Dagsterze.
 
 ## Integracja z paradygmatem funkcjonalnym
 
@@ -80,21 +80,21 @@ Zespół danych buduje pipeline do generowania prognoz sprzedaży sklepowej. Kor
 - `forecast_model` otrzymuje dane `clean_sales` oraz metadane kalendarzowe.
 - Wszystkie trzy funkcje/zasoby są zdefiniowane w kodzie DAG i wersjonowane w repozytorium Git.
 
-Dagster buduje DAG automatycznie, raportuje szczelność lineage i oferuje view panel SDAs.
+[[Dagster]] buduje DAG automatycznie, raportuje szczelność lineage i oferuje view panel SDAs.
 
 ## 📌 Źródła
 
-- [Functional [[Inżynieria Danych|Data Engineering]] — Maxime Beauchemin](https://maximebeauchemin.medium.com/functional-data-engineering-a-modern-paradigm-for-batch-data-processing-2327ec32c42a)
-- [Dagster Logic Overview](https://docs.dagster.io/concepts/assets/software-defined-assets)
+- [Functional [[Inżynieria Danych|Data Engineering]] — [[Maxime Beauchemin]]](https://maximebeauchemin.medium.com/functional-data-engineering-a-modern-paradigm-for-batch-data-processing-2327ec32c42a)
+- [[[Dagster]] Logic Overview](https://docs.dagster.io/concepts/assets/software-defined-assets)
 - [Community Day Video 2023 – Dagster](https://www.youtube.com/live/An78xLxM9zQ?feature=share)
 - [Trendy w Orkiestracji Danych – Airbyte Blog](https://airbyte.com/blog/data-orchestration-trends)
 
 # 👽 Brudnopis
 
 - SDA = asset as function → czysto funkcyjne postrzeganie pipeline'u
-- Dagster = orchestrator understands data, not just steps
+- [[Dagster]] = orchestrator understands data, not just steps
 - DRY, testowalność, modularność, lineage visibility
 - zamiast: DAG 100 tasków → assety 1:1 jako funkcje
 - powrót do danych, nie procesu: co, nie jak
-- SDA x dbt: asset = model
+- SDA x [[dbt]]: asset = model
 - Przyszłość orkiestracji? Headless pipelines z semantyczną warstwą assetów jako API
