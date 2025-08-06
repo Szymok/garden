@@ -22,7 +22,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Lasy losowe** (Random Forest) to złożony model machine learning typu ensemble, który buduje wiele drzew decyzyjnych (każde na losowo wybranej próbce danych oraz z losowym podzbiorem cech) i uśrednia ich decyzje (klasyfikacja: głosowanie, regresja: średnia) w celu uzyskania bardziej stabilnych i odpornych na przeuczenie predykcji.
+**Lasy losowe** (Random Forest) to złożony model [[Uczenie Maszynowe|machine learning]] typu ensemble, który buduje wiele drzew decyzyjnych (każde na losowo wybranej próbce danych oraz z losowym podzbiorem cech) i uśrednia ich decyzje (klasyfikacja: głosowanie, regresja: średnia) w celu uzyskania bardziej stabilnych i odpornych na przeuczenie predykcji.
 
 # 🔑 Kluczowe punkty
 

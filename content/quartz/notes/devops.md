@@ -87,7 +87,7 @@ Zespół produktowy wykorzystuje DevOps do codziennego wdrażania zmian w aplika
 - Kiedyś: deweloper pisze → admin wdraża
 - Dziś: jeden zespół, wspólna odpowiedzialność
 - Automatyczne testy + monitoring + rollback → jakościowy deployment
-- DevOps w data stack: dbt + Airbyte + Airflow + CI/CD = [[Inżynieria Danych|DataOps]] v2
+- DevOps w data stack: [[dbt]] + Airbyte + [[Apache Airflow|Airflow]] + CI/CD = [[Inżynieria Danych|DataOps]] v2
 - Narzędzia: Git, Docker, Kubernetes, Terraform, Jenkins, ArgoCD, CircleCI
 
 ---

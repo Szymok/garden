@@ -22,14 +22,14 @@ aliases:
 
 # 🎯 Definicja
 
-**Profiling (profilowanie danych)** to proces systematycznej analizy zawartości zbioru danych w celu uzyskania informacji o ich strukturze, jakości, rozkładzie wartości i innych właściwościach. Profilowanie pomaga użytkownikom lepiej zrozumieć dane, wykrywać nieprawidłowości i przygotować się do dalszej transformacji, wzbogacania, walidacji lub udostępniania danych.
+**Profiling ([[Data Profiling|profilowanie danych]])** to proces systematycznej analizy zawartości zbioru danych w celu uzyskania informacji o ich strukturze, jakości, rozkładzie wartości i innych właściwościach. Profilowanie pomaga użytkownikom lepiej zrozumieć dane, wykrywać nieprawidłowości i przygotować się do dalszej transformacji, wzbogacania, walidacji lub udostępniania danych.
 
 # 🔑 Kluczowe punkty
 
 - 📌 Profilowanie to pierwszy krok w procesach zarządzania jakością i odkrywania danych (data discovery).
 - 🔎 Umożliwia zrozumienie struktury danych, takich jak liczba kolumn, ich typy, zakresy oraz występowanie braków (NULL).
 - 🧠 Służy jako podstawa do automatyzowanego przypisania terminów biznesowych, reguł jakości i klasyfikatorów danych.
-- 🔄 Może być wykonywane ręcznie (manual profiling) lub automatycznie (profilowanie cykliczne).
+- 🔄 Może być wykonywane ręcznie ([[manual profiling]]) lub automatycznie (profilowanie cykliczne).
 - 📈 Wyniki profilowania prezentowane są w formie statystyk, wizualizacji, wykresów i metadanych analitycznych.
 
 # 📚 Szczegółowe wyjaśnienie
@@ -42,10 +42,10 @@ Profilowanie jest niezbędne do efektywnego zarządzania danymi na poziomie:
 
 W narzędziach takich jak Ataccama ONE, Collibra czy Microsoft Purview, wyniki profilowania są zapisywane jako metadane i zasilają inne moduły:
 
-- katalog danych (Data Catalog),
+- [[Data Catalog|katalog danych]] ([[Data Catalog]]),
 - słownik pojęć (Glossary),
-- reguły jakościowe (Data Quality Rules),
-- alerty i obserwowalność danych (Data Observability),
+- reguły jakościowe (Data Quality [[Rules]]),
+- alerty i [[Data Observability|obserwowalność danych]] ([[Data Observability]]),
 - przypisania terminów (Glossary Term Detection).
 
 ## Typowe metryki generowane podczas profilowania
@@ -62,7 +62,7 @@ W narzędziach takich jak Ataccama ONE, Collibra czy Microsoft Purview, wyniki p
 
 # 💡 Przykład zastosowania
 
-Firma planuje włączyć nowe źródło danych z tabelą `klienci_raw`.
+Firma planuje włączyć nowe [[Data Source|źródło danych]] z tabelą `klienci_raw`.
 
 - Zespół danych uruchamia **profilowanie tej tabeli** w narzędziu Ataccama ONE.
 - Profilowanie wykazuje:

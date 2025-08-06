@@ -31,7 +31,7 @@ aliases:
 
 ## Architektura rozwiązania i wyzwania
 
-W nowoczesnych środowiskach Data Governance, każda aplikacja (np. katalog, narzędzie do data quality, hurtownia danych) może posiadać własny model metadanych. Synchronizacja oznacza przepływ informacji takich jak: listy tabel, definicje atrybutów, statusy jakości danych, opisy biznesowe, lineage.
+W nowoczesnych środowiskach [[Data Governance]], każda aplikacja (np. katalog, narzędzie do data quality, hurtownia danych) może posiadać własny model metadanych. Synchronizacja oznacza przepływ informacji takich jak: listy tabel, definicje atrybutów, statusy jakości danych, opisy biznesowe, lineage.
 
 ### Wyzwania techniczne
 
@@ -91,9 +91,9 @@ for index, row in tables.iterrows():
 
 # 👽 Brudnopis
 
-- Synchronizacja metadanych = podstawowy element architektury data governance.
+- Synchronizacja metadanych = podstawowy element architektury [[data governance]].
 - W praktyce: mapping formatów, eksport/import CSV, custom API integration, troubleshooting wersji.
 - Kluczowe wyzwania: różnorodność modeli, niestabilność API, wymagana elastyczność narzędziowa.
-- Przykład: Collibra <-> Ataccama, Data Quality <-> Data Catalog.
+- Przykład: Collibra <-> Ataccama, Data Quality <-> [[Data Catalog]].
 - Raportowanie jakości atrybutów – spójność i automatyzacja przy wielu źródłach danych/metadanych.
 - Obrazek: Solution Architecture – przepływ metadanych między źródłami, narzędziami DQ, katalogami.

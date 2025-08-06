@@ -22,19 +22,19 @@ aliases:
 
 # 🎯 Definicja
 
-**Governance Roles** (role zarządzania) to zestawy uprawnień definiujące, jakie akcje użytkownik lub grupa użytkowników może wykonać na danych zasobach w systemie zarządzania danymi. Role te są przypisywane bezpośrednio do użytkowników lub grup (np. za pośrednictwem integracji z systemem tożsamości, jak Keycloak) i służą do kontrolowania dostępu oraz ról w procesach zarządzania jakością i cyklem życia danych.
+**Governance [[Roles]]** ([[Roles|role]] zarządzania) to zestawy uprawnień definiujące, jakie akcje użytkownik lub grupa użytkowników może wykonać na danych zasobach w systemie zarządzania danymi. [[Roles|Role]] te są przypisywane bezpośrednio do użytkowników lub grup (np. za pośrednictwem integracji z systemem tożsamości, jak [[Keycloak]]) i służą do kontrolowania dostępu oraz ról w procesach zarządzania jakością i cyklem życia danych.
 
 # 🔑 Kluczowe punkty
 
-- Role governance można przypisać użytkownikom lub rolom zewnętrznym (np. z Keycloak).
+- [[Roles|Role]] governance można przypisać użytkownikom lub rolom zewnętrznym (np. z [[Keycloak]]).
 - Określają one poziomy dostępu do danych obiektów (nodes), takich jak systemy, zasoby danych, raporty, słowniki pojęć itp.
 - Tylko użytkownicy z rolą **ONE Administrator** mogą zarządzać rolami governance.
-- Role definiują uprawnienia od odczytu metadanych po pełen dostęp obejmujący modyfikację struktur aplikacyjnych.
+- [[Roles|Role]] definiują uprawnienia od odczytu metadanych po pełen dostęp obejmujący modyfikację struktur aplikacyjnych.
 - Zakres uprawnień obejmuje m.in.: odczyt danych, edycję, operacje systemowe, publikację, przypisywanie stewardów.
 
 # 📚 Szczegółowe wyjaśnienie
 
-## Typowe role governance
+## Typowe [[Roles|role]] governance
 
 |Rola|Opis|
 |---|---|
@@ -62,12 +62,12 @@ aliases:
 - Rola może być przypisana:
     - użytkownikowi (indywidualnie),
     - grupie użytkowników,
-    - roli pochodzącej z systemu IAM (np. Keycloak).
+    - roli pochodzącej z systemu IAM (np. [[Keycloak]]).
 - Nadanie roli wpływa tylko na zakres uprawnień do elementów wskazanych na poziomie kontekstu (np. system, słownik, tabela).
 
 # 💡 Przykład zastosowania
 
-W organizacji z wdrożoną platformą data governance:
+W organizacji z wdrożoną platformą [[data governance]]:
 
 - Joanna (Data Steward) ma pełen dostęp do słowników danych domeny "Finanse" — może edytować definicje, mapować systemy baz danych i publikować katalogi biznesowe.
 - Marek (Data Consumer) widzi tylko metadane katalogu, bez możliwości ich edycji i bez dostępu do rzeczywistych danych osobowych czy transakcyjnych.
@@ -75,15 +75,15 @@ W organizacji z wdrożoną platformą data governance:
 
 # 📌 Źródła
 
-- Dokumentacja Ataccama ONE: Governance Roles – Global Settings
-- Dokumentacja Narzędzi RBAC / IAM jak Keycloak
+- Dokumentacja Ataccama ONE: Governance [[Roles]] – Global Settings
+- Dokumentacja Narzędzi RBAC / IAM jak [[Keycloak]]
 - [https://dataedo.com/kb/data-glossary/data-steward-data-owner-data-consumer](https://dataedo.com/kb/data-glossary/data-steward-data-owner-data-consumer)
 - [https://www.immuta.com/blog/data-governance-roles-responsibilities/](https://www.immuta.com/blog/data-governance-roles-responsibilities/)
 
 # 👽 Brudnopis
 
-- Role = agregat uprawnień według typu użytkownika i typu zasobu
-- Role można przypisać bezpośrednio lub zintegrować z extern. systemami (Keycloak, LDAP)
+- [[Roles|Role]] = agregat uprawnień według typu użytkownika i typu zasobu
+- [[Roles|Role]] można przypisać bezpośrednio lub zintegrować z extern. systemami ([[Keycloak]], LDAP)
 - Hierarchia ról: Administrator > Owner > Steward > Operator > Consumer
 - Poziomy działań: view, share, edit, publish, delete, operate (różnicowane na dane vs. metadane)
 - Typowe przypadki użycia: zarządzanie katalogami danych, uprawnienia do słowników, polityki udostępniania metadanych i danych rzeczywistych.

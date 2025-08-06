@@ -22,15 +22,15 @@ aliases:
 
 # 🎯 Definicja
 
-**[[Inżynieria Danych|DataOps]] (Data Operations)** to zestaw praktyk, metod i narzędzi mających na celu zautomatyzowanie, ustandaryzowanie i zwiększenie niezawodności procesów związanych z tworzeniem, przetwarzaniem i wdrażaniem danych oraz produktów danych. Bazuje na filozofii DevOps, przenosząc ją w świat danych, zapewniając krótsze cykle wdrożeniowe, wyższą jakość i transparentność danych.
+**[[Inżynieria Danych|DataOps]] (Data Operations)** to zestaw praktyk, metod i narzędzi mających na celu zautomatyzowanie, ustandaryzowanie i zwiększenie niezawodności procesów związanych z tworzeniem, przetwarzaniem i wdrażaniem danych oraz produktów danych. Bazuje na filozofii [[DevOps]], przenosząc ją w świat danych, zapewniając krótsze cykle wdrożeniowe, wyższą jakość i transparentność danych.
 
 # 🔑 Kluczowe punkty
 
-- 🔄 Łączy **procesy inżynierii danych** i **zarządzania danymi** z zasadami DevOps – automatyzacja, ciągła integracja, monitorowanie i feedback.
+- 🔄 Łączy **procesy inżynierii danych** i **zarządzania danymi** z zasadami [[DevOps]] – automatyzacja, ciągła integracja, monitorowanie i feedback.
 - 👥 Sprzyja **współpracy interdyscyplinarnej**: inżynierowie danych, analitycy, naukowcy danych, właściciele produktów, QA.
 - 📊 Pomaga utrzymać **jakość i zgodność danych**, umożliwiając szybsze iteracje produktowe i podejmowanie decyzji opartych na danych.
 - ⚙️ Obejmuje narzędzia CI/CD dla danych, testy danych, monitoring pipeline’ów, zarządzanie metadanymi i wersjonowanie danych.
-- 🚀 Kluczowy w podejściu **Data as a Product** i **modern data stack** – dane traktowane są jak aktywo z własnym cyklem życia, testami i właścicielem.
+- 🚀 Kluczowy w podejściu **Data as a Product** i **[[Nowoczesny Stos Danych|modern data stack]]** – dane traktowane są jak aktywo z własnym cyklem życia, testami i właścicielem.
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -55,23 +55,23 @@ aliases:
 
 ## Powiązania z innymi koncepcjami
 
-|Koncepcja|Powiązanie z [[Inżynieria Danych|DataOps]]|
-|---|---|
-|DevOps|Podejście „CI/CD + feedback loop”|
-|MLOps|DataOps stanowi fundament dobrej inżynierii danych dla ML|
-|Data Mesh|DataOps to operacjonalizacja domen danych, zgodna z zasadą „Data-as-a-Product”|
-|FinOps|Monitorowanie kosztów przetwarzania danych w chmurze|
-|Data Stewardship|Planowanie opieki nad danymi, testy, lineage, właściciele danych|
+| Koncepcja        | Powiązanie z [[Inżynieria Danych]]                                             | [[Inżynieria Danych\|DataOps]] |
+| ---------------- | ------------------------------------------------------------------------------ | ------------------------------ |
+| DevOps           | Podejście „CI/CD + feedback loop”                                              |                                |
+| MLOps            | DataOps stanowi fundament dobrej inżynierii danych dla ML                      |                                |
+| [[Data Mesh]]        | DataOps to operacjonalizacja domen danych, zgodna z zasadą „Data-as-a-Product” |                                |
+| FinOps           | Monitorowanie kosztów przetwarzania danych w chmurze                           |                                |
+| Data Stewardship | Planowanie opieki nad danymi, testy, lineage, właściciele danych               |                                |
 
 # 💡 Przykład zastosowania
 
-Firma wdraża platformę analityczną opartą o Snowflake i dbt, uzupełnioną o Airflow do orchestration i Great Expectations do testów jakości danych. Zespół DataOps:
+Firma wdraża platformę analityczną opartą o Snowflake i [[dbt]], uzupełnioną o Airflow do orchestration i Great Expectations do testów jakości danych. Zespół DataOps:
 
-- wersjonuje wszystkie transformacje dbt w GitHubie,
+- wersjonuje wszystkie transformacje [[dbt]] w GitHubie,
 - ustawia testy regresyjne i schematowe na dane wejściowe przez Great Expectations,
 - monitoruje odchylenia jakości danych w DAG-u Airflow,
 - wdraża automatycznie nowe wersje modeli danych co sprint, po przejściu testów integracyjnych,
-- raportuje błędy transformacji danych w czasie rzeczywistym do zespołu BI.
+- raportuje błędy transformacji danych w czasie rzeczywistym do zespołu [[Business Intelligence|BI]].
 
 # 📌 Źródła
 
@@ -84,8 +84,8 @@ Firma wdraża platformę analityczną opartą o Snowflake i dbt, uzupełnioną o
 
 # 👽 Brudnopis
 
-- DevOps dla danych — zmiana kultury pracy z danymi (ciagłość, kolaboracja, jakość)
+- [[DevOps]] dla danych — zmiana kultury pracy z danymi (ciagłość, kolaboracja, jakość)
 - Automation + visibility + quality
 - Niezbędny w świecie wielu źródeł, ELT, AI, raportowania on-demand
-- Narzędzia: dbt, Airflow, Dagster, Dagshub, Dayshape, Soda, Great Expectations
-- Pillary: orchestration, testy DQ, deployment modeli danych, kontrola zmian i lineage
+- Narzędzia: [[dbt]], Airflow, [[Dagster]], Dagshub, Dayshape, Soda, Great Expectations
+- Pillary: orchestration, testy DQ, [[deployment modeli]] danych, kontrola zmian i lineage

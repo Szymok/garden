@@ -26,9 +26,9 @@ aliases:
 
 # 🔑 Kluczowe punkty
 
-- 🔐 Role użytkowników mogą pochodzić z zewnętrznego dostawcy tożsamości (np. Keycloak, LDAP) albo być określane lokalnie.
-- 👥 Uprawnienia użytkowników są przypisywane na poziomie grup, obiektów (nodes), a także typów roli (governance roles).
-- ⚙️ Uprawnienia są zarządzane przez role oraz poziomy dostępu (Full Access, Operate, View Data, itd.).
+- 🔐 [[Roles|Role]] użytkowników mogą pochodzić z zewnętrznego dostawcy tożsamości (np. [[Keycloak]], LDAP) albo być określane lokalnie.
+- 👥 Uprawnienia użytkowników są przypisywane na poziomie grup, obiektów (nodes), a także typów roli (governance [[roles]]).
+- ⚙️ Uprawnienia są zarządzane przez [[Roles|role]] oraz poziomy dostępu (Full Access, Operate, View Data, itd.).
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -38,11 +38,11 @@ Proces user managementu może obejmować:
 
 - Rejestrację i onboardowanie użytkowników (np. przez SSO)
 - Przypisanie ról dostępu z poziomu zewnętrznego dostawcy tożsamości (np. `RDM_admin`, `DPP_user`)
-- Przypisanie governance roles w systemie wewnętrznym (np. `Data Steward`, `Owner`)
+- Przypisanie governance [[roles]] w systemie wewnętrznym (np. `Data Steward`, `Owner`)
 - Określenie poziomu dostępu do zasobów i operacji na danych: np. tylko podgląd (View Data), pełny dostęp (Full Access), operacje techniczne (Operate Access)
 - Grupowanie użytkowników według działów, domen, zakresu odpowiedzialności i projektów
 
-Przykładowa integracja z Keycloak:
+Przykładowa integracja z [[Keycloak]]:
 
 - Administrator loguje się do konsoli zarządzania i przypisuje użytkownikowi rolę `MMM_user` jako startowy dostęp.
 - Następnie użytkownik jest dodawany do grupy "Marketing Team" z rolą `Data Steward`, gdzie może zarządzać słownikami danych i metadanymi.
@@ -61,13 +61,13 @@ Równocześnie dane są klasyfikowane według poziomów ochrony (np. dane wrażl
 - [https://www.keycloak.org/docs/latest/server_admin/](https://www.keycloak.org/docs/latest/server_admin/)
 - [https://docs.ataccama.com/](https://docs.ataccama.com/)
 - [https://www.okta.com/identity-101/what-is-user-management/](https://www.okta.com/identity-101/what-is-user-management/)
-- Ataccama ONE – User & Role Management Best Practices
+- Ataccama ONE – User & [[Roles|Role]] Management Best Practices
 
 # 🏷️ Zobacz także
 
-- Governance Roles
-- Keycloak Roles
-- Group Isolation
+- [[Governance Roles]]
+- [[Keycloak]] [[Roles]]
+- [[Group Isolation]]
 - Data Ownership
 - RBAC vs ABAC
 

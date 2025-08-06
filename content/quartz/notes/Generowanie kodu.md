@@ -20,11 +20,11 @@ aliases:
 
 # 🎯 Definicja
 
-**Generowanie kodu** przez duże modele językowe (LLM), takie jak ChatGPT, polega na tworzeniu fragmentów kodu programistycznego na podstawie instrukcji w języku naturalnym. Modele mogą tworzyć funkcje, zapytania, klasy, schematy baz danych, debugować, uzupełniać oraz wyjaśniać kod w różnych językach programowania.
+**Generowanie kodu** przez duże modele językowe ([[Base LLM|LLM]]), takie jak ChatGPT, polega na tworzeniu fragmentów kodu programistycznego na podstawie instrukcji w języku naturalnym. Modele mogą tworzyć funkcje, zapytania, klasy, schematy baz danych, debugować, uzupełniać oraz wyjaśniać kod w różnych językach programowania.
 
 # 🔑 Kluczowe punkty
 
-- LLM mogą generować kod z instrukcji tekstowych albo komentarzy w kodzie.
+- [[Base LLM|LLM]] mogą generować kod z instrukcji tekstowych albo komentarzy w kodzie.
 - Najlepsze rezultaty osiąga się przy dobrej inżynierii promptów (np. komunikaty systemowe).
 - Możliwe są różne zadania: kodowanie, wyjaśnianie, debugowanie, edytowanie.
 - Modele dobrze radzą sobie z Pythonem, SQL, JavaScriptem i innymi głównymi językami programowania.
@@ -164,7 +164,7 @@ Model:
 
 **Uczeń programowania** korzysta z ChatGPT do nauki poprzez eksperymenty:
 
-- wpisuje komentarze zamiast kodu,
+- wpisuje [[komentarze]] zamiast kodu,
 - generuje zapytania SQL dla swojej bazy danych MySQL,
 - tworzy szkielet projektu w Pythonie,
 - zleca modelowi wyjaśnienie, gdzie jest błąd w kodzie.
@@ -177,7 +177,7 @@ Model:
 
 # 👽 Brudnopis
 
-- Modele radzą sobie coraz lepiej z kodem – GPT-4, Claude, Gemini, Copilot
+- Modele radzą sobie coraz lepiej z kodem – [[GPT-4]], Claude, Gemini, Copilot
 - Generowanie z komentarzy (prompt = comment → code) działa jak "AI pair programmer"
 - SQL, Python – dobre wsparcie, ale testować zawsze!
 - Braki: importy, typy danych, lub nieaktualne składnie

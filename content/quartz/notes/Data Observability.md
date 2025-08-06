@@ -26,7 +26,7 @@ aliases:
 
 # 🔑 Kluczowe punkty
 
-- 📊 Obejmuje monitorowanie jakości danych, wykrywanie anomalii oraz analizę zmian w schemacie i metadanych.
+- 📊 Obejmuje monitorowanie jakości danych, [[Anomaly Detection|wykrywanie anomalii]] oraz analizę zmian w schemacie i metadanych.
 - 🤖 W nowoczesnych rozwiązaniach wspiera się algorytmami AI do detekcji odstępstw i automatycznego mapowania terminów biznesowych.
 - 🔄 Ściśle powiązana z cyklem życia danych, katalogiem danych, słownikiem biznesowym i regułami jakości.
 - 🔔 Umożliwia automatyczne powiadamianie o problemach oraz harmonogramowanie analiz diagnostycznych.
@@ -40,7 +40,7 @@ aliases:
     
     - Analiza zgodności, kompletności, unikalności i rozkładów wartości.
     - Ustalanie reguł jakości (np. brak NULL, zakresy wartości, typy danych).
-2. **Wykrywanie anomalii (AI-powered anomaly detection)**
+2. **[[Anomaly Detection|Wykrywanie anomalii]] (AI-powered [[anomaly detection]])**
     
     - Algorytmy uczące się „norm” danych i wykrywające odstępstwa (np. nagłe spadki wolumenu, skoki wartości).
 3. **Zmiany w schematach (schema drift)**
@@ -94,7 +94,7 @@ Wszystko to widoczne w dashboardzie, z możliwością szybkiego zgłoszenia prob
 # 👽 Brudnopis
 
 - observability = jakość + detekcja + lineage + alerty
-- must-have w modern data stack, [[Inżynieria Danych|DataOps]], federacji danych i lakehouse
+- must-have w modern [[Stos danych|data stack]], [[Inżynieria Danych|DataOps]], federacji danych i [[Data Lakehouse|lakehouse]]
 - powiązanie z Data Discovery + SLA logiczne – które zestawy są stale wykorzystywane i potrzebują poziomu usług
 - AI-powered = autowykrywanie terminów, metryk, anomalii
 - przyszłość = samonaprawiające się pipeline’y z feedback loop z observability

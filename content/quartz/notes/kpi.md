@@ -25,9 +25,9 @@ aliases:
 
 # 🔑 Kluczowe punkty
 
-- KPI to miara sukcesu — monitoruje postęp wobec jasno ustalonych celów strategicznych lub operacyjnych.
+- KPI to [[miara]] sukcesu — monitoruje postęp wobec jasno ustalonych celów strategicznych lub operacyjnych.
 - Są zawsze jednoznacznie zdefiniowane, wymierne i powiązane z określonym okresem czasu.
-- Wspierają podejmowanie decyzji i zarządzanie poprzez fakty, bez subiektywnych interpretacji.
+- Wspierają podejmowanie decyzji i zarządzanie poprzez [[fakty]], bez subiektywnych interpretacji.
 - Każdy KPI powinien być powiązany z właścicielem, częstotliwością pomiaru i docelową wartością (targetem).
 - Rozróżnia się KPI biznesowe (np. wzrost przychodów, liczba nowych klientów) i techniczne (np. dostępność systemów, SLA).
 
@@ -53,20 +53,20 @@ aliases:
 |Konwersja użytkowników|Odsetek użytkowników wykonujących akcję docelową|(liczba konwersji / liczba użytkowników) *100%|
 |Churn rate|Procent rezygnujących klientów w danym okresie|(liczba utraconych / liczba w bazie na początku okresu) *100%|
 
-### KPI a miara
+### KPI a [[miara]]
 
-KPI to wyspecjalizowany przypadek **miary** — nie każda miara jest KPI, ale każdy KPI jest miarą. KPI kładą nacisk na wagę biznesową oraz ustalony docelowy poziom (target).
+KPI to wyspecjalizowany przypadek **miary** — nie każda [[miara]] jest KPI, ale każdy KPI jest miarą. KPI kładą nacisk na wagę biznesową oraz ustalony docelowy poziom (target).
 
 ## Zastosowanie KPI w ekosystemie danych
 
-- **Business Intelligence i raportowanie:** KPI stanowią podstawę dashboardów, raportów i systemów controllingowych.
+- **[[Business Intelligence]] i raportowanie:** KPI stanowią podstawę dashboardów, raportów i systemów controllingowych.
 - **Zarządzanie strategiczne:** Ułatwiają monitorowanie realizacji celów (np. celów rocznych, kwartalnych OKR).
 - **Performance management:** Pozwalają na audyt efektywności zespołów, projektów, produktów.
-- **Data Science & Machine Learning:** Często KPI są celem optymalizacji lub walidacji skuteczności modeli ML.
+- **Data Science & [[Uczenie Maszynowe|Machine Learning]]:** Często KPI są celem optymalizacji lub walidacji skuteczności modeli [[Uczenie Maszynowe|ML]].
 
 # 💡 Przykład zastosowania
 
-Firma SaaS definiuje „Churn Rate” oraz „Monthly Recurring Revenue (MRR)” jako KPI produktu. Zespół marketingu monitoruje ich zmiany tygodniowo na dashboardzie BI. Analiza trendu MRR wskazuje na skuteczność kolejnych kampanii, zaś wzrost churnu natychmiast uruchamia działania retention — dzięki czemu zarówno poziom sprzedaży, jak i lojalności klienta są pod stałą kontrolą.
+Firma SaaS definiuje „Churn Rate” oraz „Monthly Recurring Revenue (MRR)” jako KPI produktu. Zespół marketingu monitoruje ich zmiany tygodniowo na dashboardzie [[Business Intelligence|BI]]. Analiza trendu MRR wskazuje na skuteczność kolejnych kampanii, zaś wzrost churnu natychmiast uruchamia działania retention — dzięki czemu zarówno poziom sprzedaży, jak i lojalności klienta są pod stałą kontrolą.
 
 ## 📌 Źródła
 
@@ -79,6 +79,6 @@ Firma SaaS definiuje „Churn Rate” oraz „Monthly Recurring Revenue (MRR)”
 - KPI = wybrane miary biznesowe, kluczowe dla strategii/operacji
 - Cechy: mierzalność, relewantność, regularny pomiar, jasna definicja, target/odpowiedzialność
 - Przykłady: przychód, churn, NPS, uptime, ROI, konwersja, CAC, LTV
-- Różnica miara vs KPI — nie wszystkie agregaty to KPI; KPI = nacisk na wpływ na cel
+- Różnica [[miara]] vs KPI — nie wszystkie agregaty to KPI; KPI = nacisk na wpływ na cel
 - Biznes (zarząd, liderzy) monitoruje głównie KPI — ułatwia decyzje
-- [[Inżynieria Danych|DataOps]], BI, ML — KPI jako cel/model optymalizacji oraz raportowania
+- [[Inżynieria Danych|DataOps]], [[Business Intelligence|BI]], [[Uczenie Maszynowe|ML]] — KPI jako cel/model optymalizacji oraz raportowania

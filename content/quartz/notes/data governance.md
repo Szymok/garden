@@ -21,19 +21,19 @@ aliases:
 
 # 🎯 Definicja
 
-**Data Governance (zarządzanie danymi)** to zbiór ról, procesów, zasad, polityk, standardów i metryk, które zapewniają skuteczne i bezpieczne zarządzanie danymi w organizacji. Kluczowym celem jest zapewnienie, że dane są wysokiej jakości, zgodne z przepisami prawa, bezpieczne oraz dostępne dla odpowiednich użytkowników i aplikacji w odpowiednim czasie.
+**[[Zarządzanie Danymi|Data Governance]] ([[zarządzanie danymi]])** to zbiór ról, procesów, zasad, polityk, standardów i metryk, które zapewniają skuteczne i bezpieczne [[zarządzanie danymi]] w organizacji. Kluczowym celem jest zapewnienie, że dane są wysokiej jakości, zgodne z przepisami prawa, bezpieczne oraz dostępne dla odpowiednich użytkowników i aplikacji w odpowiednim czasie.
 
 # 🔑 Kluczowe punkty
 
 - 📐 Definiuje kto, co i kiedy – czyli kto może wykonać jakie operacje na jakich danych i w jakim kontekście.
 - 🔍 Wspiera jakość danych: kompletność, dokładność, aktualność, spójność.
-- 📊 Tworzy fundament analityki, BI i data-driven decision making poprzez spójne definicje danych i ich katalogowanie.
+- 📊 Tworzy fundament analityki, [[Business Intelligence|BI]] i data-driven decision making poprzez spójne definicje danych i ich katalogowanie.
 - 🔐 Wspomaga ochronę danych osobowych i zgodność z regulacjami (np. RODO, HIPAA).
 - 🤝 Eliminuje silosy danych i wspiera współdzielenie wiedzy i odpowiedzialności w całej organizacji.
 
 # 📚 Szczegółowe wyjaśnienie
 
-## Komponenty Data Governance
+## Komponenty [[Zarządzanie Danymi|Data Governance]]
 
 1. **Rola i odpowiedzialność**
     
@@ -48,7 +48,7 @@ aliases:
     - Wypełnianie, weryfikacja, zatwierdzanie i publikacja danych oraz metadanych.
 4. **Wordbook i metadane**
     
-    - Spójna definicja pól, terminów, jednostek miary – np. “KPI: customer churn rate”.
+    - Spójna definicja pól, terminów, jednostek miary – np. “[[KPI]]: customer churn rate”.
 5. **Zgodność (compliance)**
     
     - Zapewnienie zgodności z regulacjami typu GDPR/RODO, HIPAA, PCI DSS itd.
@@ -67,17 +67,17 @@ aliases:
 
 # 💡 Przykład zastosowania
 
-**Enterprise Data Catalog i zarządzanie danymi klienta:**
+**Enterprise [[Data Catalog]] i [[zarządzanie danymi]] klienta:**
 
 - Firma posiada dane klienta w 4 różnych systemach (CRM, ERP, billing, helpdesk).
 - Brak defi­nicji "klienta aktywnego", różne pola mają różne znaczenia.
-- Data Governance tworzy wspólny słownik danych i rejestruje go w katalogu.
+- [[Zarządzanie Danymi|Data Governance]] tworzy wspólny słownik danych i rejestruje go w katalogu.
 - Przypisuje Data Ownera dla każdej domeny tematycznej (np. sprzedaż, marketing).
 - Dane są wzbogacane, walidowane i prezentowane analitykom w jednolitej formie.
 
 # 📌 Źródła
 
-- [Talend: What is Data Governance?](https://www.talend.com/resources/what-is-data-governance/)
+- [Talend: What is [[Zarządzanie Danymi|Data Governance]]?](https://www.talend.com/resources/what-is-data-governance/)
 - [https://airbyte.com/blog/data-lake-lakehouse-guide-powered-by-table-formats-delta-lake-iceberg-hudi](https://airbyte.com/blog/data-lake-lakehouse-guide-powered-by-table-formats-delta-lake-iceberg-hudi)
 - [https://www.dataversity.net/category/data-topics/data-governance/](https://www.dataversity.net/category/data-topics/data-governance/)
 - [https://www.oracle.com/data-governance/](https://www.oracle.com/data-governance/)
@@ -86,10 +86,10 @@ aliases:
 # 👽 Brudnopis
 
 - Governance ≠ tylko compliance – to też jakość, katalog, odpowiedzialność i workflow
-- W Data Mesh – domenowy ownership jest fundamentem
+- W [[Data Mesh]] – domenowy ownership jest fundamentem
 - Narzędzia: Collibra, Alation, Ataccama ONE, Microsoft Purview, Informatica Axon
-- KPI: % danych spójnych, % opatrzonych stewardem, czas dostępu do danych, liczba błędów analizy z winy danych
-- Governance może objąć też modele ML: governance modeli + danych uczących (bias, provenance, drift)
-- Kluczowe dla Lakehouse i podejścia Data as a Product
+- [[KPI]]: % danych spójnych, % opatrzonych stewardem, czas dostępu do danych, liczba błędów analizy z winy danych
+- Governance może objąć też modele [[Uczenie Maszynowe|ML]]: governance modeli + danych uczących (bias, provenance, drift)
+- Kluczowe dla [[Data Lakehouse|Lakehouse]] i podejścia Data as a Product
 
-[¹] Talend — What is Data Governance: [https://www.talend.com/resources/what-is-data-governance/](https://www.talend.com/resources/what-is-data-governance/)
+[¹] Talend — What is [[Zarządzanie Danymi|Data Governance]]: [https://www.talend.com/resources/what-is-data-governance/](https://www.talend.com/resources/what-is-data-governance/)

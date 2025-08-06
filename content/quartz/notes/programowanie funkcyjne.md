@@ -21,13 +21,13 @@ aliases:
 
 # 🎯 Definicja
 
-**Programowanie funkcyjne** (ang. _functional programming_) to paradygmat programowania, który traktuje obliczenia jako ewaluację funkcji matematycznych. Kładzie nacisk na **czystość funkcji**, **niezmienność danych**, brak efektów ubocznych oraz deklaratywność kodu. Oznacza to, że wynik funkcji zależy tylko od jej argumentów wejściowych, a nie od kontekstu zewnętrznego czy stanu aplikacji.
+**Programowanie funkcyjne** (ang. _functional programming_) to paradygmat programowania, który traktuje obliczenia jako ewaluację funkcji matematycznych. Kładzie nacisk na **czystość funkcji**, **niezmienność danych**, brak efektów ubocznych oraz [[deklaratywność]] kodu. Oznacza to, że wynik funkcji zależy tylko od jej argumentów wejściowych, a nie od kontekstu zewnętrznego czy stanu aplikacji.
 
 # 🔑 Kluczowe punkty
 
 - **Czyste funkcje:** Funkcje, które zawsze dla tych samych argumentów zwracają ten sam wynik i nie mają skutków ubocznych.
 - **Niezmienność:** Zmienne nie zmieniają swojej wartości po zainicjowaniu (immutable data structures).
-- **Deklaratywność:** Opisuje _co_ należy zrobić zamiast _jak_ to zrobić krok po kroku.
+- **[[Deklaratywność]]:** Opisuje _co_ należy zrobić zamiast _jak_ to zrobić krok po kroku.
 - **Programowanie wyższego rzędu:** Możliwość przekazywania funkcji jako argumentów i zwracania ich jako wyników.
 - **Brak stanu globalnego:** Unikanie zmian zewnętrznych — cały stan przekazywany jest jawnie.
 
@@ -66,7 +66,7 @@ squares = map square [1, 2, 3, 4]
 
 ## Zastosowania w praktyce
 
-- **[[Inżynieria Danych|Data Engineering]]** – np. pipelines danych z zastosowaniem czystych transformacji (por. Funkcjonalny [[Inżynieria Danych|Data Engineering]]).
+- **[[Inżynieria Danych|Data Engineering]]** – np. [[Potoki przetwarzania danych|pipelines danych]] z zastosowaniem czystych transformacji (por. Funkcjonalny [[Inżynieria Danych|Data Engineering]]).
 - **Web development (React)** – paradygmaty funkcyjne w zarządzaniu komponentami i stanem.
 - **Programowanie rozproszone i równoległe** – brak stanu = mniej błędów przy concurrency.
 
@@ -75,7 +75,7 @@ squares = map square [1, 2, 3, 4]
 |Język|Opis|
 |---|---|
 |**Haskell**|Czysty język funkcyjny, silny typ systemu, brak efektów ubocznych.|
-|**Scala**|Hybryda funkcyjno-obiektowa, popularna w Sparku i [[Inżynieria Danych|data engineering]].|
+|**Scala**|Hybryda funkcyjno-obiektowa, popularna w Sparku i [[[[Inżynieria Danych]]|[[Inżynieria Danych\|data engineering]]]].|
 |**Elixir**|Funkcyjny język oparty o Erlanga – skalowalność systemów rozproszonych.|
 |**Clojure**|Funkcyjny język dla JVM, bogaty ekosystem i wsparcie dla immutability.|
 |**Python**|Nie jest stricte funkcyjny, ale obsługuje wiele koncepcji funkcyjnych.|
@@ -83,7 +83,7 @@ squares = map square [1, 2, 3, 4]
 
 # 💡 Przykład zastosowania
 
-W systemie przetwarzania danych zbudowanym na **dbt + Airflow**, zespoły wykorzystują czyste funkcje SQL bez efektów ubocznych, które transformują dane na podstawie zadeklarowanych modeli. Każdy model (`select`) opisuje jedynie _co_ powinno zostać uzyskane, a nie _w jaki sposób_ — jest to podejście zgodne z filozofią programowania funkcyjnego.
+W systemie przetwarzania danych zbudowanym na **[[dbt]] + [[Apache Airflow|Airflow]]**, zespoły wykorzystują czyste funkcje SQL bez efektów ubocznych, które transformują dane na podstawie zadeklarowanych modeli. Każdy model (`select`) opisuje jedynie _co_ powinno zostać uzyskane, a nie _w jaki sposób_ — jest to podejście zgodne z filozofią programowania funkcyjnego.
 
 ## 📌 Źródła
 
@@ -96,6 +96,6 @@ W systemie przetwarzania danych zbudowanym na **dbt + Airflow**, zespoły wykorz
 - czyste funkcje, brak side effectów, testowalność, ewaluacja leniwa, składanie funkcji
 - FP → lepsza modularność, mniej błędów, deterministyczny wynik
 - Python: `map`, `filter`, `reduce`, funkcje wyższego rzędu, lambda
-- Dobry styl w modelowaniu pipelines, transformacjach, ML preprocessing
-- DBA/BI: zrozumienie FP pomaga pisać lepsze modele logiczne (np. dbt, dagster SDA)
-- FP vs Imperatywność: opis -> rezultat, nie sekwencja instrukcji
+- Dobry styl w modelowaniu pipelines, transformacjach, [[Uczenie Maszynowe|ML]] preprocessing
+- DBA/[[Business Intelligence|BI]]: zrozumienie FP pomaga pisać lepsze modele logiczne (np. [[dbt]], [[dagster]] SDA)
+- FP vs [[Imperatywność]]: opis -> rezultat, nie sekwencja instrukcji

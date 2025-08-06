@@ -36,7 +36,7 @@ Parametry modelu, które decydują o wpływie danych wejściowych na wynik. Są 
 
 - Dane wejściowe → przechodzą przez warstwy modelu → wynik
 - Porównanie wyniku z prawdziwą etykietą → obliczenie błędu (funkcja strat)
-- Obliczanie gradientów → aktualizacja wag (gradient descent)
+- Obliczanie gradientów → aktualizacja wag ([[gradient]] descent)
 - Powtarzanie tego cyklu = nauka
 
 ## 📉 Funkcja strat (loss function)
@@ -49,7 +49,7 @@ Proces aktualizacji wag modelu, np. za pomocą algorytmu spadku gradientu. Dzię
 
 ## 💪 Model wytrenowany
 
-Np. **ResNet18** – model wytrenowany na dużym zbiorze danych (ImageNet), potrafiący rozpoznawać podstawowe cechy obrazu. Można go użyć jako punktu startowego (transfer learning).
+Np. **ResNet18** – model wytrenowany na dużym zbiorze danych (ImageNet), potrafiący rozpoznawać podstawowe cechy obrazu. Można go użyć jako punktu startowego ([[transfer learning]]).
 
 ## 🔧 Fine-Tuning
 
@@ -77,7 +77,7 @@ Użycie wytrenowanego i (ew. dowolnie) dostrojonego modelu do klasyfikacji nowyc
 - Modele przed erą DL (np. OneR, SVM, RF) wymagały ręcznego inżynierowania cech.
 - Głębokie sieci (np. CNN, RNN, Transformer) **same uczą się reprezentacji**.
 - Implementacja: PyTorch, TensorFlow, fastai.
-- Transfer learning powszechny w CV – przyspiesza i zwiększa skuteczność modeli.
+- [[Transfer learning]] powszechny w CV – przyspiesza i zwiększa skuteczność modeli.
 
 # 🧪 Przykład flow pracy z modelem (vision)
 
@@ -99,7 +99,7 @@ Użycie wytrenowanego i (ew. dowolnie) dostrojonego modelu do klasyfikacji nowyc
 ## 👽 Brudnopis
 
 - DL = automatyczne „feature engineering” + przygotowanie reprezentacji
-- TIMM = Złoty katalog CV modeli pretrained
+- TIMM = Złoty katalog CV modeli [[Pretrained models|pretrained]]
 - fastai = mniej kodu, a więcej gotowych potężnych narzędzi (API wysokiego poziomu)
 - Segmentacja = „klasyfikacja pikseli”
 - Show_batch = szybki feedback na jakość danych

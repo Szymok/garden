@@ -25,7 +25,7 @@ aliases:
 
 - **Dane jako produkt:** Organizacja danych wokół produktów danych i oddanie w ręce właścicieli domen.
 - **Zdarzenia zamiast wsadów:** Rejestrowanie świata przez zdarzenia, a nie wsadowe ładowanie danych.
-- **Kontrakty danych:** Formalizowane “umowy” na poziomie tabel źródłowych zabezpieczone w systemie.
+- **[[Kontrakty danych]]:** Formalizowane “umowy” na poziomie tabel źródłowych zabezpieczone w systemie.
 - **Peer review i współpraca:** Modelowanie i zmiany w danych są recenzowane przez szerokie grono (peer review).
 - **Miary i warstwa logiczna:** Centralna rola semantyki oraz miar — wyabstrahowanie złożoności, integracja na poziomie biznesowym.
 - **Automatyzacja i skalowalność:** Projektowanie z myśleniem “cloud-first”, modularność i łatwość evolucji architektury.
@@ -35,13 +35,13 @@ aliases:
 
 ## Mechanizmy działania
 
-### Modelowanie i zarządzanie danymi
+### Modelowanie i [[zarządzanie danymi]]
 
 - Stosowanie **kontraktów danych** zapewnia zgodność i przejrzystość w zakresie jakości oraz zakresu dostępnych danych.
 - Architektura event-driven – centralnym punktem są zdarzenia oraz ich semantyczny opis. Odchodzi się od typowych batchowych procesów ETL na rzecz logiki eventowej.
-- Modelowanie danych i logiki biznesowej odbywa się w warstwach: surowej (raw), modelowej (core), semantycznej (semantic/logic) i produktowej (data products).
+- [[Modelowanie danych]] i logiki biznesowej odbywa się w warstwach: surowej (raw), modelowej (core), semantycznej (semantic/logic) i produktowej (data products).
 
-### Warstwa semantyczna
+### [[Warstwa semantyczna]]
 
 - Tworzy “wspólny język” pomiędzy biznesem a technologią.
 - Przekształca surowe dane w zrozumiałe, standaryzowane i gotowe do użycia miary oraz wskaźniki, eliminując chaos pojęciowy.
@@ -68,13 +68,13 @@ W globalnej firmie e-commerce Data Warehouse Semantyczny pozwala na:
 
 - [Chad Sanderson: The Semantic Data Warehouse (LinkedIn)](https://www.linkedin.com/posts/chad-sanderson_im-very-happy-to-unveil-the-semantic-warehouse-activity-6958091220157964288-JSXj/)
 - [Bill Inmon – Fundamentals of Data Warehousing](https://www.inmon.com/pages/fundamentals-of-data-warehousing.php)
-- [dbt: Semantic Layer Overview](https://docs.getdbt.com/docs/semantic-layer/overview)
+- [[[dbt]]: Semantic Layer Overview](https://docs.getdbt.com/docs/semantic-layer/overview)
 
 # 👽 Brudnopis
 
 - Połączenie “klasycznego” podejścia (Inmon, biznes w centrum) z event-driven, semantyką i produktami danych.
-- Kontrakty danych jako automatyczne mechanizmy zarządzania jakością na wejściu i w modelu core.
+- [[Kontrakty danych]] jako automatyczne mechanizmy zarządzania jakością na wejściu i w modelu core.
 - Współpraca i peer review jako element procesu wdrożenia zmian – inspiracje z rozwoju software’u.
-- Warstwa semantyczna (np. warstwa miar w dbt) = most między tabelami modelu a raportami i modelami AI.
+- [[Warstwa semantyczna]] (np. warstwa miar w [[dbt]]) = most między tabelami modelu a raportami i modelami AI.
 - Ułatwia refaktoryzację i zmianę modeli danych — architektura cloud-first, modularność, automatyzacja zmian.
 - Realne case: e-commerce, fintechy, skale globalne, produkty danych opisywane kontraktami.

@@ -22,14 +22,14 @@ aliases:
 
 # 🎯 Definicja
 
-**SQL Catalog Item** to typ elementu w katalogu danych (Catalog Item), który został utworzony na podstawie zapytania SQL zamiast bezpośredniego odniesienia do fizycznej tabeli lub pliku danych. Taki element może agregować wiele źródeł danych, zawierać przekształcenia, filtrowania lub inne operacje SQL, i funkcjonować jako logiczne źródło danych w ramach katalogu.
+**SQL Catalog Item** to typ elementu w katalogu danych (Catalog Item), który został utworzony na podstawie zapytania SQL zamiast bezpośredniego odniesienia do fizycznej tabeli lub pliku danych. Taki element może agregować wiele źródeł danych, zawierać przekształcenia, filtrowania lub inne operacje SQL, i funkcjonować jako logiczne [[Data Source|źródło danych]] w ramach katalogu.
 
 # 🔑 Kluczowe punkty
 
 - 🧱 Tworzone na bazie zapytań SQL – mogą łączyć dane z wielu tabel, widoków lub schematów.
 - 🔄 Przydatne do tworzenia widoków operacyjnych, warstw analitycznych lub wersji przekształconych bez konieczności fizycznego materializowania danych.
-- ⚡ Wspierane przez połączenia typu JDBC, Hive Metastore, Snowflake, BigQuery itp.
-- 🎛️ Działa jak każdy inny element katalogu: można przypisać termin słownikowy, jakość danych, komentarze i reguły DQ.
+- ⚡ Wspierane przez połączenia typu JDBC, [[Apache Hive|Hive]] Metastore, Snowflake, BigQuery itp.
+- 🎛️ Działa jak każdy inny element katalogu: można przypisać termin słownikowy, jakość danych, [[komentarze]] i reguły DQ.
 - 🔒 Elastyczne, ale wymaga dokładnej kontroli zgodności zapytań SQL z jego źródłem (np. różnice dialektów).
 
 # 📚 Szczegółowe wyjaśnienie
@@ -40,7 +40,7 @@ aliases:
 |---|---|
 |🔗 Łączenie wielu tabel|Tworzenie jednego logicznego widoku biznesowego łączącego różne źródła (np. customer + transactions).|
 |🔄 Transformacje|Zastosowanie logiki biznesowej: filtrowanie, agregacje, obliczenia offline.|
-|🧱 Budowa warstw analitycznych|Stworzenie staging/intermediate layer dla modeli raportowych lub feature’ów ML.|
+|🧱 Budowa warstw analitycznych|Stworzenie staging/intermediate layer dla modeli raportowych lub feature’ów [[Uczenie Maszynowe\|ML]].|
 |🎯 Filtrowanie i selekcja danych|Tworzenie podzbiorów danych dla określonych przypadków użycia.|
 
 ### Co zawiera SQL Catalog Item?
@@ -72,7 +72,7 @@ WHERE c.region = 'EU'
 
 ### Główne kroki tworzenia SQL Catalog Item
 
-1. Przejdź do sekcji Data Catalog > + New Catalog Item > wybierz „SQL-based”.
+1. Przejdź do sekcji [[Data Catalog]] > + New Catalog Item > wybierz „SQL-based”.
 2. Wybierz istniejące połączenie (JDBC/Snowflake/BigQuery).
 3. Wklej zapytanie SQL do edytora.
 4. Przypisz nazwę, typ danych, opcjonalne opisy, tagi biznesowe.
@@ -109,5 +109,5 @@ create_sql_catalog_item(
 - SQL Item = lightweight extract / logic = lepsze niż materializacja, gdy chcesz szybki widok
 - Możesz mieć warstwy: Physical Table (raw) → SQL View (transformed) → Assigned to Glossary Term
 - Zachowuje wszystkie właściwości katalogowe = lineage, DQ, relationships
-- Często jako staging do modeli ML lub BI: mniej kosztowny niż pełny pipeline
+- Często jako staging do modeli [[Uczenie Maszynowe|ML]] lub [[Business Intelligence|BI]]: mniej kosztowny niż pełny pipeline
 - Uważać na dostępność – jak źródło odpada, SQL Item nie działa = warto monitorować lub materializować krytyczne widoki

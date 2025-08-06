@@ -80,9 +80,9 @@ Całość jest uruchamiana co godzinę w dbt Cloud za pomocą harmonogramu. Test
 # 👽 Brudnopis
 
 - ELT: dbt robi T (transform), Fivetran/Airbyte robi E+L
-- Standard in analytics engineering & modern data stack
+- Standard in analytics engineering & modern [[Stos danych|data stack]]
 - Workflow: sources → staging → core models → marts
 - testy: not_null, unique, accepted_values, relational integrity
 - Wersjonowanie w Git, CI/CD, testy automatyczne
 - dbt Cloud integruje scheduler, monitoring, lineage, CI
-- Zyskuje popularność w zespołach BI i inżynierii analitycznej
+- Zyskuje popularność w zespołach [[Business Intelligence|BI]] i inżynierii analitycznej

@@ -24,7 +24,7 @@ aliases:
 # 🔑 Kluczowe punkty
 
 - **Rozumowanie krok po kroku:** Model jest proszony o przeprowadzenie analizy lub przeliczeń przed sformułowaniem odpowiedzi.
-- **Efekt emergentny dużych modeli:** Skuteczność techniki CoT pojawia się dopiero w modelach LLM o odpowiedniej skali (zwykle powyżej 100 miliardów parametrów).
+- **Efekt emergentny dużych modeli:** Skuteczność techniki CoT pojawia się dopiero w modelach [[Base LLM|LLM]] o odpowiedniej skali (zwykle powyżej 100 miliardów parametrów).
 - **Połączenie z few-shot i zero-shot:** CoT może być wykorzystywane zarówno w promptach z kilkoma przykładami (few-shot), jak i bez żadnych przykładów (`zero-shot-CoT`), tylko z dodatkiem frazy aktywującej (“Let's think step by step”).
 - **Podnosi trafność odpowiedzi** w zadaniach arytmetycznych, logicznych, wyboru wielokrotnego, QA i reasoning.
 - **Auto-CoT** automatyzuje proces tworzenia łańcuchów myślowych przy użyciu modelu wstępnie pobudzanego heurystyką.
@@ -88,7 +88,7 @@ Model odpowiada skuteczniej, gdy użyje serii przemyśleń, a nie zgaduje od raz
 
 # 📌 Źródła
 
-- [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)
+- [Chain-of-Thought Prompting Elicits Reasoning in [[Base LLM|Large Language Models]]](https://arxiv.org/abs/2201.11903)
 - [Zero-shot CoT Prompting](https://arxiv.org/abs/2205.11916)
 - [Auto-CoT](https://arxiv.org/abs/2210.03057)
 - [PromptingGuide.ai - CoT](https://promptingguide.ai/techniques/chain-of-thought)

@@ -32,11 +32,11 @@ aliases:
 2. **Przechowywanie danych (Data Storage)**
     
     - 🗄️ Dane trafiają do repozytoriów: Data Lake, DWH, systemy plików, Buckets
-    - Popularne technologie: S3, ADLS, Snowflake, BigQuery, Delta Lake
+    - Popularne technologie: S3, ADLS, Snowflake, BigQuery, [[Delta Lake]]
 3. **Przetwarzanie danych (Data Processing)**
     
     - 🔄 Transformacja (ETL/ELT, mapowanie, walidacja, agregacja)
-    - Narzędzia: dbt, Apache Spark, Airflow, Databricks, Flink
+    - Narzędzia: [[dbt]], Apache Spark, [[Apache Airflow|Airflow]], Databricks, Flink
 4. **Zarządzanie jakością danych (Data Quality & Observability)**
     
     - 🧪 Walidacja danych, testy integralności, alerty błędów, reguły biznesowe
@@ -47,8 +47,8 @@ aliases:
     - Narzędzia: Ataccama ONE, Collibra, Alation, DataHub
 6. **Udostępnianie danych (Data Serving & Access)**
     
-    - 📡 Umożliwienie analityki/BI/ML: zapytania ad hoc, API, raporty, produkty danych
-    - Technologie: REST APIs, SQL Engines, BI tools (Power BI, Tableau), feature stores
+    - 📡 Umożliwienie analityki/[[Business Intelligence|BI]]/[[Uczenie Maszynowe|ML]]: zapytania ad hoc, API, raporty, produkty danych
+    - Technologie: REST APIs, SQL Engines, [[Business Intelligence|BI]] tools (Power [[Business Intelligence|BI]], Tableau), feature stores
 7. **Monitorowanie i optymalizacja (Monitoring & Optimization)**
     
     - 📊 Monitorowanie pipeline'ów, kosztów, opóźnień i anomalii
@@ -56,7 +56,7 @@ aliases:
 
 # 📚 Szczegółowe wyjaśnienie
 
-Cykl życia inżynierii danych nie jest modelem liniowym — to proces iteracyjny i cykliczny, który wymaga współpracy zespołów technicznych i biznesowych. W nowoczesnych środowiskach (np. data lakehouse, data mesh) różne etapy mogą być rozproszone pomiędzy domeny danych.
+Cykl życia inżynierii danych nie jest modelem liniowym — to proces iteracyjny i cykliczny, który wymaga współpracy zespołów technicznych i biznesowych. W nowoczesnych środowiskach (np. [[data lakehouse]], [[data mesh]]) różne etapy mogą być rozproszone pomiędzy domeny danych.
 
 ### Rola inżyniera danych w cyklu życia
 
@@ -64,10 +64,10 @@ Cykl życia inżynierii danych nie jest modelem liniowym — to proces iteracyjn
 |---|---|
 |Ingestion|Budowa konektorów, konfiguracja źródeł, monitorowanie|
 |Storage & Management|Dobór formatu (Parquet/Delta), schematy, partycjonowanie|
-|Processing|Pisanie transformacji (np. w SQL / PySpark / dbt)|
+|Processing|Pisanie transformacji (np. w SQL / PySpark / [[dbt]])|
 |Quality & Testing|Tworzenie reguł jakości, procesów walidacyjnych|
 |Metadata & Governance|Oznaczanie danych, przypisywanie stewardów, katalogowanie|
-|Serving / ML|Eksponowanie danych do ML, BI, dashboardów|
+|Serving / [[Uczenie Maszynowe\|ML]]|Eksponowanie danych do [[Uczenie Maszynowe\|ML]], [[Business Intelligence\|BI]], dashboardów|
 |Observability|CI/CD, alerty, udoskonalanie pipeline’ów, cost-metrics|
 
 # 💡 Przykład praktyczny
@@ -75,10 +75,10 @@ Cykl życia inżynierii danych nie jest modelem liniowym — to proces iteracyjn
 **Organizacja e-commerce:**
 
 - Dane z platformy zakupowej, aplikacji mobilnej i CRM są pobierane raz na godzinę (Airbyte).
-- Trafiają do Data Lake (S3), a następnie są przetwarzane ELT-em w dbt i zasilają hurtownię Snowflake.
+- Trafiają do Data Lake (S3), a następnie są przetwarzane ELT-em w [[dbt]] i zasilają hurtownię Snowflake.
 - Na danych uruchamiane są testy jakości: unikatowość ID zamówienia, typ numeryczny dla kwoty.
-- Katalog danych i lineage prowadzone są w Ataccama ONE.
-- Końcowi użytkownicy łączą się do źródła Snowflake, tworząc raporty w Power BI i modele ML.
+- [[Data Catalog|Katalog danych]] i lineage prowadzone są w Ataccama ONE.
+- Końcowi użytkownicy łączą się do źródła Snowflake, tworząc raporty w Power [[Business Intelligence|BI]] i modele [[Uczenie Maszynowe|ML]].
 
 # 📌 Źródła
 
@@ -90,7 +90,7 @@ Cykl życia inżynierii danych nie jest modelem liniowym — to proces iteracyjn
 # 👽 Brudnopis
 
 - Podział na warstwy: raw → staging → curated → marts
-- Pipeline orchestration: Airflow / Prefect / Dagster — glue całego cyklu
-- Data Observability ostatnio priorytetowe: alerty, lineage, impact analysis
+- Pipeline orchestration: Airflow / Prefect / [[Dagster]] — glue całego cyklu
+- [[Data Observability]] ostatnio priorytetowe: alerty, lineage, impact analysis
 - Maturity w organizacji: ścieżka od „scatter data” do „data products”
 - Każda faza to inny profil kompetencji: ingestion ≠ governance ≠ serving ≠ monitoring

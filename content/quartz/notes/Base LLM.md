@@ -20,7 +20,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Large Language Models (LLM)** to duże modele językowe wykorzystujące głębokie sieci neuronowe – zazwyczaj oparte na architekturze transformera – które uczą się przewidywania kolejnych słów w tekście. Trening oparty jest na bardzo prostym założeniu:
+**Large Language Models (LLM)** to duże modele językowe wykorzystujące [[Deep Learning|głębokie sieci neuronowe]] – zazwyczaj oparte na architekturze transformera – które uczą się przewidywania kolejnych słów w tekście. Trening oparty jest na bardzo prostym założeniu:
 
 > „Biorąc pod uwagę ten tekst, co powinno być dalej?”
 
@@ -53,13 +53,13 @@ LLM-y wykazują funkcjonalności, których nie mają mniejsze modele, np.:
 - rozumienie skomplikowanych instrukcji,
 - rozwiązywanie testów IQ lub zadań arytmetycznych.
 
-Zachowania te są wynikiem ilości danych i skali modelu – często zaskakując nawet twórców modeli: [GPT-4 Technical Report](https://cdn.openai.com/papers/gpt-4.pdf).
+Zachowania te są wynikiem ilości danych i skali modelu – często zaskakując nawet twórców modeli: [[[GPT-4]] Technical Report](https://cdn.openai.com/papers/gpt-4.pdf).
 
 # 🚧 Ograniczenia
 
 ### 1. Występowanie halucynacji
 
-Modele mogą generować błędne informacje, choć brzmią one przekonująco. → Zobacz: Halucynacje
+Modele mogą generować błędne informacje, choć brzmią one przekonująco. → Zobacz: [[Halucynacje]]
 
 ### 2. Przenoszenie biasów treningowych
 
@@ -75,7 +75,7 @@ Transformery mają maksymalną długość sekwencji (np. 8k, 32k tokenów), co w
 
 ### 4. Brak źródła prawdy
 
-Bazują wyłącznie na wzorcach z tekstu – nie mają zagwarantowanego dostępu do faktów (chyba że połączone z systemem RAG).
+Bazują wyłącznie na wzorcach z tekstu – nie mają zagwarantowanego dostępu do faktów (chyba że połączone z systemem [[RAG]]).
 
 # 💬 Niedeterministyczność
 
@@ -106,5 +106,5 @@ Answer:
 - Architektura transformer = podstawa: self-attention, dekodery, maskowanie przyszłych tokenów.
 - Token window = dostępne miejsce w modelu → wpływa na OKNO percepcji.
 - LLM ≠ Chatbot (ale może być jego silnikiem) → foundation model, konfigurowalny przez prompt.
-- Brak gwarancji prawdziwości → argument za integracją z bazami wiedzy, RAG czy search API.
+- Brak gwarancji prawdziwości → argument za integracją z bazami wiedzy, [[RAG]] czy search API.
 - Dalszy rozwój LLM = techniki fine-tuning, self-refinement, chain-of-thought, agent + tools.

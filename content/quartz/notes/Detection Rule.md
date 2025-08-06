@@ -21,7 +21,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Detection Rule (reguła wykrywania)** to reguła logiczna stosowana w systemach zarządzania jakością danych lub zarządzania metadanymi, służąca do automatycznego wykrywania zgodności danych z określonym warunkiem. Najczęstsze zastosowanie to wykrywanie terminów biznesowych w danych technicznych (np. kolumnach tabel), jako element procesu data discovery lub data observability.
+**Detection Rule (reguła wykrywania)** to reguła logiczna stosowana w systemach zarządzania jakością danych lub zarządzania metadanymi, służąca do automatycznego wykrywania zgodności danych z określonym warunkiem. Najczęstsze zastosowanie to wykrywanie terminów biznesowych w danych technicznych (np. kolumnach tabel), jako element procesu data discovery lub [[data observability]].
 
 # 🔑 Kluczowe punkty
 
@@ -37,7 +37,7 @@ aliases:
 
 ## Gdzie występuje reguła wykrywania?
 
-W narzędziach takich jak Ataccama ONE reguły wykrywania stanowią centralny element automatycznego powiązywania terminów biznesowych ze strukturami danych.
+W narzędziach takich jak Ataccama ONE [[Detection rules|reguły wykrywania]] stanowią centralny element automatycznego powiązywania terminów biznesowych ze strukturami danych.
 
 Etapy ich użycia to:
 

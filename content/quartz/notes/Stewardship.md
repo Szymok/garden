@@ -21,7 +21,7 @@ aliases:
 
 # 🔑 Kluczowe punkty
 
-- Określa właścicieli zasobów danych oraz ich role w zarządzaniu (governance).
+- Określa właścicieli zasobów danych oraz ich [[Roles|role]] w zarządzaniu (governance).
 - Umożliwia automatyczną konfigurację poziomów dostępu do danych.
 - Jest integralnym elementem mechanizmów kontroli dostępu i odpowiedzialności w systemach zarządzania danymi.
 - Działa zarówno dla nowych, jak i odziedziczonych zasobów danych.
@@ -31,14 +31,14 @@ aliases:
 
 ## Mechanizm działania Stewardship
 
-Funkcjonalność stewardship pozwala na przypisanie grupy właścicielskiej do danego zasobu danych (np. zestawu danych, raportu lub pipeline'u). W ramach tej grupy użytkownicy mają przypisane konkretne role governance, które determinują poziom dostępu oraz zakres odpowiedzialności za dany zasób.
+Funkcjonalność stewardship pozwala na przypisanie grupy właścicielskiej do danego zasobu danych (np. zestawu danych, raportu lub pipeline'u). W ramach tej grupy użytkownicy mają przypisane konkretne [[Governance Roles|role governance]], które determinują poziom dostępu oraz zakres odpowiedzialności za dany zasób.
 
 ## Zarządzanie dostępem i rolami
 
 Po przypisaniu grupy właścicielskiej:
 
 - _Grupa właścicielska_ automatycznie otrzymuje pełen dostęp do zasobu.
-- _Role governance_ (np. Data Owner, Steward) determinują indywidualne poziomy dostępu danych członków tej grupy.
+- _[[Governance Roles|Role governance]]_ (np. Data Owner, Steward) determinują indywidualne poziomy dostępu danych członków tej grupy.
 - Można modyfikować właścicielstwo istniejących danych – dostęp do opcji Stewardship znajduje się typowo w zakładce "Overview" danego zasobu.
 
 ## Dziedziczenie i konfiguracja
@@ -47,7 +47,7 @@ W przypadku zasobów, które nie są tworzone bezpośrednio (np. zimportowanych 
 
 ## Rola w ekosystemie danych
 
-Stewardship stanowi podstawę nowoczesnego Data Governance poprzez:
+Stewardship stanowi podstawę nowoczesnego [[Data Governance]] poprzez:
 
 - Regulowanie dostępu do danych.
 - Wspomaganie identyfikowalności (lineage) i audytowalności.
@@ -55,12 +55,12 @@ Stewardship stanowi podstawę nowoczesnego Data Governance poprzez:
 
 # 💡 Przykład zastosowania
 
-W firmie ubezpieczeniowej każde źródło danych dotyczące klientów (np. dane CRM, informacje o polisach, dane o interakcjach) posiada przypisaną grupę stewardship. Grupa ta zawiera przedstawicieli działu zgodności, analityków danych oraz właścicieli biznesowych. Każdy członek ma określoną rolę, np. "Data Steward", który może edytować metadane, oraz "Data Owner", który odpowiada za zgodność z RODO. Dzięki temu zachowany jest porządek i przejrzystość w zarządzaniu dostępem oraz jakością danych.
+W firmie ubezpieczeniowej każde [[Data Source|źródło danych]] dotyczące klientów (np. dane CRM, informacje o polisach, dane o interakcjach) posiada przypisaną grupę stewardship. Grupa ta zawiera przedstawicieli działu zgodności, analityków danych oraz właścicieli biznesowych. Każdy członek ma określoną rolę, np. "Data Steward", który może edytować metadane, oraz "Data Owner", który odpowiada za zgodność z RODO. Dzięki temu zachowany jest porządek i przejrzystość w zarządzaniu dostępem oraz jakością danych.
 
 ## 📌 Źródła
 
 - Ataccama Documentation – Stewardship Overview: [https://docs.ataccama.com/](https://docs.ataccama.com/)
-- Data Governance Institute: [https://www.datagovernance.com/adg_data_stewardship/](https://www.datagovernance.com/adg_data_stewardship/)
+- [[Data Governance]] Institute: [https://www.datagovernance.com/adg_data_stewardship/](https://www.datagovernance.com/adg_data_stewardship/)
 
 ## 👽 Brudnopis
 
