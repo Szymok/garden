@@ -40,9 +40,9 @@ aliases:
 
 - **Redukcja wymiarowości:** Pozwala zamienić dane np. z tysięcy pikseli w obrazie do kilku/kilkunastu współrzędnych latent space.
 - **Odszumianie/wygładzanie obrazów:** Autoencoder uczy się rekonstrukcji czystego obrazu, otrzymując jako wejście obraz z szumem.
-- **Wykrywanie anomalii:** Wysoki błąd rekonstrukcji może świadczyć o tym, że dany przypadek odbiega od typowego rozkładu danych.
+- **[[Anomaly Detection|Wykrywanie anomalii]]:** Wysoki błąd rekonstrukcji może świadczyć o tym, że dany przypadek odbiega od typowego rozkładu danych.
 - **Ekstrakcja cech pod kolejne algorytmy:** Latent space może być "feature input" do klasyfikatorów, klasteryzacji, sieci decyzyjnych itp.
-- **Generowanie danych:** Niektóre warianty, np. variational autoencoders (VAE), służą jako generatory nowe dane podobne do oryginału.
+- **[[Generowanie danych]]:** Niektóre warianty, np. variational autoencoders (VAE), służą jako generatory nowe dane podobne do oryginału.
 
 ## Loss function i trening
 
@@ -81,6 +81,6 @@ Autoencoder kompresuje obrazy np. z 256x256 pikseli do 32-wymiarowych wektorów,
 - Encoder + bottleneck + decoder
 - Loss function = reconstruction error (MSE etc)
 - Denoising AE, VAEs, AAE, contractive/sparse
-- Feature extraction, anomaly detection, synthetic data, dimensionality reduction, image processing
+- Feature extraction, [[anomaly detection]], synthetic data, dimensionality reduction, image processing
 - Przewaga nad PCA: modelowanie nieliniowe, większa elastyczność (deep, convolutional, seq2seq)
 - Przykłady: MNIST denoising, face recognition, latent space jako input do klasyfikatora

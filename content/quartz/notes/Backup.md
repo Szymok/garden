@@ -25,26 +25,26 @@ aliases:
 # 🔑 Kluczowe punkty
 
 - **Backup** chroni przed utratą danych wynikającą z awarii sprzętu, błędów aplikacji, działań użytkownika lub incydentów bezpieczeństwa.
-- W systemach klasy **Ataccama** można wykonywać zarówno backup bazy danych aplikacji, jak i kluczowych metadanych (np. modeli MMDM).
+- W systemach klasy **Ataccama** można wykonywać zarówno backup bazy danych aplikacji, jak i kluczowych metadanych (np. modeli [[Meta Meta Data Model (MMDM)|MMDM]]).
 - Backupy powinny być wykonywane regularnie (automatycznie lub manualnie) – najlepiej w trybie różnicowym lub pełnym.
 - Ważne jest testowanie planów odtwarzania danych (restore) w praktyce, by uniknąć "fałszywego poczucia bezpieczeństwa".
-- W aplikacjach z MMDM różne tryby działania wymuszają dostosowanie zakresu backupu – kopiowane mogą być nie tylko dane, ale także elementy modelowe, konfiguracje, oraz powiązane skrypty lub harmonogramy.
+- W aplikacjach z [[Meta Meta Data Model (MMDM)|MMDM]] różne tryby działania wymuszają dostosowanie zakresu backupu – kopiowane mogą być nie tylko dane, ale także elementy modelowe, konfiguracje, oraz powiązane skrypty lub harmonogramy.
 
 # 📚 Szczegółowe wyjaśnienie
 
 ## Typowe strategie backupu
 
-|Tryb backupu|Opis|Zastosowanie w Ataccamie/MMDM|
+|Tryb backupu|Opis|Zastosowanie w Ataccamie/[[Meta Meta Data Model (MMDM)\|MMDM]]|
 |---|---|---|
 |**Pełny (Full)**|Kopiuje całość wybranego zasobu|Cała DB lub komplet metadanych, konfiguracja|
 |**Przyrostowy (Incremental)**|Kopiuje tylko zmiany od ostatniego backupu pełnego|Dobre dla środowisk test/dev, ogranicza rozmiar|
 |**Różnicowy (Differential)**|Kopiuje zmiany względem ostatniego pełnego backupu|Często spotykane w produkcji, kompromis rozmiaru|
 
-## Backupy w Ataccamie oraz MMDM
+## Backupy w Ataccamie oraz [[Meta Meta Data Model (MMDM)|MMDM]]
 
-- **Ataccama ONE / MDM** oferuje dedykowane narzędzia do backupu konfiguracji aplikacji (meta-data), modelu danych, słowników oraz rzeczywistych danych produkcyjnych.
+- **Ataccama ONE / [[Master Data Management (MDM)|MDM]]** oferuje dedykowane narzędzia do backupu konfiguracji aplikacji (meta-data), modelu danych, słowników oraz rzeczywistych danych produkcyjnych.
 - Backup może być wykonywany manualnie (np. eksport konfiguracji przez GUI) lub automatycznie (skrypty/CLI, harmonogramy).
-- W środowiskach korzystających z Meta Meta Data Model (MMDM) należy dokładnie dokumentować oraz wersjonować backupy modeli i powiązanych obiektów – różne tryby działania aplikacji mogą wymagać odrębnych zakresów backupowanych danych (np. osobno definicje modeli, osobno instancje danych).
+- W środowiskach korzystających z [[Meta Meta Data Model (MMDM)]] należy dokładnie dokumentować oraz wersjonować backupy modeli i powiązanych obiektów – różne tryby działania aplikacji mogą wymagać odrębnych zakresów backupowanych danych (np. osobno definicje modeli, osobno instancje danych).
 - Dobrą praktyką jest utrzymywanie kopii backupów na systemach zewnętrznych (offsite, backup w chmurze) oraz regularna weryfikacja możliwości odtworzenia (restore).
 
 ## Tryby działania aplikacji – wpływ na backup
@@ -53,13 +53,13 @@ W zależności od konfiguracji i trybu operacyjnego aplikacji (np. wersjonowanie
 
 - **Tryb development:** backup modeli, schematów oraz nowych/zmienianych obiektów.
 - **Tryb produkcyjny:** regularne backupy całości systemu (DB + konfiguracja) w ustalonych oknach serwisowych.
-- **Tryb migracji/zmiany modelu:** dedykowany backup przed każdą większą aktualizacją MMDM.
+- **Tryb migracji/zmiany modelu:** dedykowany backup przed każdą większą aktualizacją [[Meta Meta Data Model (MMDM)|MMDM]].
 
 # 💡 Przykład zastosowania
 
-Załóżmy, że w środowisku Ataccama ONE wdrożono nową wersję modelu MMDM. Przed aktualizacją administrator wykonuje pełny backup:
+Załóżmy, że w środowisku Ataccama ONE wdrożono nową wersję modelu [[Meta Meta Data Model (MMDM)|MMDM]]. Przed aktualizacją administrator wykonuje pełny backup:
 
-- eksportuje konfigurację aplikacji i modelu MMDM przez narzędzie Ataccama,
+- eksportuje konfigurację aplikacji i modelu [[Meta Meta Data Model (MMDM)|MMDM]] przez narzędzie Ataccama,
 - wykonuje snapshot baz danych (np. przy pomocy zewnętrznego narzędzia do backupu SQL),
 - synchronizuje backup na zewnętrzny storage,
 - po udanej aktualizacji waliduje system, a w razie potrzeby przywraca stan sprzed wdrożenia.
@@ -85,7 +85,7 @@ shutil.copy("/opt/ataccama/config/mmdm-config.yaml",
 
 ## 👽 Brudnopis
 
-- Backup nie tylko jako dump SQL, ale też jako eksport meta-modelu (MMDM).
+- Backup nie tylko jako dump SQL, ale też jako eksport meta-modelu ([[Meta Meta Data Model (MMDM)|MMDM]]).
 - Testy restore obowiązkowo, szczególnie przy zmianie modelu.
 - Ataccama – backupy: przez GUI (eksport), CLI (skrypt), backup bazy.
 - Tryby działania: dev, prod, staging → różny zakres/zakres pełen przy migracji.

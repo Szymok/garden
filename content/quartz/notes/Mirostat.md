@@ -22,7 +22,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Mirostat** to technika dynamicznej regulacji dekodowania, zaprojektowana w celu **utrzymania stałego poziomu „zaskoczenia” (ang. surprisal)** podczas generowania tekstu przez duże modele językowe (LLM). W przeciwieństwie do klasycznych metod takich jak temperature, top-k czy top-p sampling, Mirostat _aktywnie dostosowuje rozkład wyboru tokenów w czasie rzeczywistym_, zmniejszając ryzyko halucynacji lub zbyt przewidywalnych odpowiedzi.
+**Mirostat** to technika dynamicznej regulacji dekodowania, zaprojektowana w celu **utrzymania stałego poziomu „zaskoczenia” (ang. surprisal)** podczas generowania tekstu przez duże modele językowe ([[Base LLM|LLM]]). W przeciwieństwie do klasycznych metod takich jak temperature, top-k czy top-p sampling, Mirostat _aktywnie dostosowuje rozkład wyboru tokenów w czasie rzeczywistym_, zmniejszając ryzyko halucynacji lub zbyt przewidywalnych odpowiedzi.
 
 # 🔑 Kluczowe punkty
 
@@ -75,7 +75,7 @@ aliases:
 
 ## Wsparcie w praktyce
 
-Mirostat jest dostępny w niektórych implementacjach lokalnych LLM i bibliotekach inferencyjnych, np.:
+Mirostat jest dostępny w niektórych implementacjach lokalnych [[Base LLM|LLM]] i bibliotekach inferencyjnych, np.:
 
 - **llama.cpp** – wsparcie dla `--mirostat`, `--tau`, `--eta`
 - **koboldcpp**, **olm**, **exllamav2** – zaawansowane tryby sterowania dekodowaniem
@@ -97,7 +97,7 @@ Model lokalny (np. LLaMA 2) generuje dialogi RPG. Gdy `temperature` = 1.0 powodu
 - mirostat = dynamiczne heater/cooler dla entropii: jak "klimatyzacja kreatywności"
 - kontroluje entropy outputu na poziomie token-picku
 - jakość > kontrol > stabilność — lepszy niż gołe temperature
-- dobre dla “długich promptów”, chains, role-play, fine-control
+- dobre dla “długich promptów”, chains, [[Roles|role]]-play, fine-control
 - mniej "zatkanych" halucynacji niż przy top-p z wysokim T
 - wymaga: target_surprisal + stopnień korekty (eta)
 

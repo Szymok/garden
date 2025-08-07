@@ -30,7 +30,7 @@ aliases:
 - Token może oznaczać np. słowo: _"kot"_, interpunkcję: _","_, kawałek słowa: _"pre"_, _"fix"_.
 - Różne modele wykorzystują różne strategie tokenizacji.
 - Tokenizacja jest **krok wstępnym** przed trenowaniem lub używaniem modelu NLP.
-- Liczenie tokenów ma znaczenie dla limitów wejściowych w LLM (np. GPT: 4k–128k tokenów).
+- Liczenie tokenów ma znaczenie dla limitów wejściowych w [[Base LLM|LLM]] (np. GPT: 4k–128k tokenów).
 
 # 📚 Rodzaje tokenizacji
 
@@ -87,7 +87,7 @@ Dla porównania:
 # 🧰 Narzędzia i biblioteki
 
 - Hugging Face Tokenizers: `tokenizers` (Rust/Python)
-- OpenAI `tiktoken`: do GPT-3.5, GPT-4
+- OpenAI `tiktoken`: do GPT-3.5, [[GPT-4]]
 - `spaCy`, `NLTK`
 - `SentencePiece` (Google)
 - `BPE`, `Unigram`, `WordPiece`
@@ -104,7 +104,7 @@ Dla porównania:
 
 - token ≠ słowo
 - tokeny = wektory/indeksy → embeddingi
-- modele LLM trenują na milionach tokenów, nie zdań
+- modele [[Base LLM|LLM]] trenują na milionach tokenów, nie zdań
 - tokenizer = preprocesor danych tekstowych → liczby
 - przekroczenie limitu = ucięcie promptu lub błędy API
 

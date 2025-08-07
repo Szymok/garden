@@ -21,12 +21,12 @@ aliases:
 
 # 🎯 Definicja
 
-**Manual Profiling (ręczne profilowanie danych)** to proces ręcznego uruchamiania analiz strukturalnych i jakościowych danych w źródle przy użyciu funkcji platformy katalogowania danych. Profilowanie pozwala użytkownikowi uzyskać szczegółowe informacje o zawartości, strukturze i jakości danych, zanim zostaną one użyte w dalszych procesach analitycznych, integracyjnych lub raportowych.
+**Manual [[Profiling]] (ręczne [[Data Profiling|profilowanie danych]])** to proces ręcznego uruchamiania analiz strukturalnych i jakościowych danych w źródle przy użyciu funkcji platformy katalogowania danych. Profilowanie pozwala użytkownikowi uzyskać szczegółowe informacje o zawartości, strukturze i jakości danych, zanim zostaną one użyte w dalszych procesach analitycznych, integracyjnych lub raportowych.
 
 # 🔑 Kluczowe punkty
 
 - 🧪 Profilowanie może obejmować tylko metadane, próbki danych lub pełną analizę jakościową.
-- ✋ W przeciwieństwie do automatycznego profilowania, manual profiling umożliwia dokładniejszą kontrolę zakresu i momentu analizy.
+- ✋ W przeciwieństwie do automatycznego profilowania, manual [[profiling]] umożliwia dokładniejszą kontrolę zakresu i momentu analizy.
 - 🎯 Trzy główne opcje profilowania:
     1. **Import to catalog** — tylko import metadanych (struktura tabel i kolumn),
     2. **Discover** — szybkie profilowanie próbki danych,
@@ -40,11 +40,11 @@ aliases:
 |---|---|
 |Import to catalog|Importuje tylko metadane (nazwy, typy danych, długości kolumn). Bez analizy jakościowej.|
 |Discover (profil próbki)|Analiza próbki danych — umożliwia szybkie poznanie rozkładów danych, typowych wartości, długości itp.|
-|Profile (pełne profilowanie)|Pełna analiza danych: null rate, unikalne wartości, min/max, długości, dystrybucje, wzorce, wykrywanie anomalii.|
+|Profile (pełne profilowanie)|Pełna [[analiza danych]]: null rate, unikalne wartości, min/max, długości, dystrybucje, wzorce, [[Anomaly Detection\|wykrywanie anomalii]].|
 
 ## Przebieg ręcznego profilowania
 
-1. Użytkownik przechodzi do sekcji **Connection Browser** i wybiera źródło danych.
+1. Użytkownik przechodzi do sekcji **Connection Browser** i wybiera [[Data Source|źródło danych]].
 2. Zaznacza konkretne zasoby (np. tabelę `orders`, `customers`, `products`).
 3. Wybiera odpowiednią akcję:
     - 🔹 Import to Catalog
@@ -88,8 +88,8 @@ Na tej podstawie Data Steward może:
 
 # 👽 Brudnopis
 
-- Profilowanie ≠ tylko struktura — to także insighty jakościowe i detekcja anomalii
+- Profilowanie ≠ tylko struktura — to także insighty jakościowe i [[Anomaly Detection|detekcja anomalii]]
 - Tryb „Discover”: szybkie, lekkie, tylko próbka (<= np. 1000 rekordów)
 - Pełne Profilowanie: najbogatsze, cięższe operacyjnie
-- Bardzo przydatne przed DQ, ML, mapowaniem terminów — poznaj dane zanim je zautomatyzujesz
-- Profilowanie może odpalać downstream: alerty, workflow, rekomendacje glossary terms
+- Bardzo przydatne przed DQ, [[Uczenie Maszynowe|ML]], mapowaniem terminów — poznaj dane zanim je zautomatyzujesz
+- Profilowanie może odpalać downstream: alerty, workflow, rekomendacje [[glossary terms]]

@@ -21,7 +21,7 @@ Ten **Słownik** oparty jest na koncepcji [Cyfrowego Ogrodu](https://jzhao.xyz/p
 # 🔑 Kluczowe punkty
 
 - **Struktura sieciowa:** Hasła nie są poukładane liniowo ani alfabetycznie, lecz powiązane siecią relacji, co sprzyja eksploracji i pogłębianiu rozumienia.
-- **Interaktywny graf powiązań:** Wizualizacja połączeń pomaga zobaczyć, jak tematy się przeplatają, odsłania nieoczywiste zależności — ukazuje mapę wiedzy zamiast listy.
+- **Interaktywny graf powiązań:** [[Wizualizacja]] połączeń pomaga zobaczyć, jak tematy się przeplatają, odsłania nieoczywiste zależności — ukazuje mapę wiedzy zamiast listy.
 - **Backlinki i nawigacja kontekstowa:** Każda notatka wskazuje odnośniki zwrotne — pozwala odkryć, które inne pojęcia odwołują się do wybranej notatki.
 - **Inspiracje:** Projekt bazuje na frameworku [Quartz](https://github.com/jackyzha0/quartz), który wywodzi się z idei cyfrowego ogrodu i networked thought.
 
@@ -40,7 +40,7 @@ Metafora ogrodu odzwierciedla nieliniowy, sieciowy i niedeterministyczny charakt
 
 ## Przykład działania
 
-Wchodząc w hasło „modelowanie danych”, możesz zobaczyć powiązania z innymi pojęciami (np. „modelowanie wymiarowe”, „hurtownia danych”, „ETL”), prześledzić ścieżki zależności i znaleźć odnośniki zwrotne.
+Wchodząc w hasło „[[modelowanie danych]]”, możesz zobaczyć powiązania z innymi pojęciami (np. „[[modelowanie wymiarowe]]”, „hurtownia danych”, „ETL”), prześledzić ścieżki zależności i znaleźć odnośniki zwrotne.
 
 ## Integracja, podziękowania, źródła
 

@@ -22,11 +22,11 @@ aliases:
 
 # 🎯 Definicja
 
-**Detection Rules** (reguły wykrywania) to reguły logiczne używane w procesie automatycznego przypisywania terminów słownikowych do atrybutów technicznych (np. kolumn w tabelach) w katalogu danych. Wykorzystywane są podczas procesu data discovery i służą do semantycznej klasyfikacji danych bez ingerencji ręcznej.
+**Detection [[Rules]]** (reguły wykrywania) to reguły logiczne używane w procesie automatycznego przypisywania terminów słownikowych do atrybutów technicznych (np. kolumn w tabelach) w katalogu danych. Wykorzystywane są podczas procesu data discovery i służą do semantycznej klasyfikacji danych bez ingerencji ręcznej.
 
 # 🔑 Kluczowe punkty
 
-- 🧠 Używane wyłącznie do automatycznego wykrywania i przypisywania terminów słownikowych (Glossary Terms).
+- 🧠 Używane wyłącznie do automatycznego wykrywania i przypisywania terminów słownikowych ([[Glossary Terms]]).
 - ⚙️ Nie są stosowane do sprawdzania jakości danych (tj. nie są używane w monitorowaniu ani raportowaniu DQ).
 - 🕸️ Można je łączyć z algorytmami AI, które sugerują przypisania na podstawie podobieństw i wzorców.
 - 🌐 Tworzy się je wyłącznie w interfejsie webowym (ONE Web) — nie są dostępne w One Desktop ani jako komponent do pobrania.
@@ -36,7 +36,7 @@ aliases:
 
 ## Główne zastosowanie
 
-Detection Rules są aktywowane w czasie profilowania danych lub uruchamiania procesu wykrywania (data discovery). Ich celem jest automatyczna identyfikacja, że dana kolumna odpowiada znanemu terminowi, np.:
+Detection [[Rules]] są aktywowane w czasie profilowania danych lub uruchamiania procesu wykrywania (data discovery). Ich celem jest automatyczna identyfikacja, że dana kolumna odpowiada znanemu terminowi, np.:
 
 - Kolumna `email_address` → przypisany termin: „Customer Email”
 - Kolumna `birth_date` → przypisany termin: „Date of Birth (DOB)”
@@ -47,7 +47,7 @@ Detection Rules są aktywowane w czasie profilowania danych lub uruchamiania pro
 - Długość danych w kolumnie mieści się w zadanym zakresie
 - Wartości danych pasują do wzorca (np. regex)
 - Typ danych jest zgodny z oczekiwanym (np. `STRING`, `DATE`)
-- Kolumna zawiera dane z referencyjnej listy wartości (LOV)
+- Kolumna zawiera dane z referencyjnej listy wartości ([[List of Values (Ataccama)|LOV]])
 
 ## Formaty konfiguracji
 
@@ -66,9 +66,9 @@ Detection Rules są aktywowane w czasie profilowania danych lub uruchamiania pro
 3. **Progi (Thresholds)** – definiowanie, z jaką pewnością AI musi zgadzać się z regułą, aby przypisanie zostało wykonane automatycznie.
     
 
-## Co NIE jest możliwe z Detection Rules:
+## Co NIE jest możliwe z Detection [[Rules]]:
 
-- ❌ Nie można ich stosować do **walidacji lub monitorowania jakości danych** (do tego służą Data Quality Evaluation Rules).
+- ❌ Nie można ich stosować do **walidacji lub monitorowania jakości danych** (do tego służą [[Data Quality Evaluation Rules]]).
 - ❌ Nie można ich używać jako komponentów w planach ONE Desktop.
 - ❌ Nie można ich wykorzystać do wyzwalaczy ani generowania alertów.
 - ❌ Nie można ich pobrać, eksportować ani uruchamiać manualnie na atrybucie — stosowane są automatycznie w czasie wywołania odkrywania danych (discovery).
@@ -101,7 +101,7 @@ Stosując taką regułę do kolumn `user_phone`, `mobile_number_phone`, system w
 
 # 👽 Brudnopis
 
-- To nie są "rules" DQ – tylko do etapu "interpretacji" danych
+- To nie są "[[rules]]" DQ – tylko do etapu "interpretacji" danych
 - Działają blisko AI (ich skuteczność można wzmacniać przez feedback loop)
 - Rekomendacja: używać wielu warunków oraz progów z ostrożnością
 - Typowy pipeline: discovery → detection → przypisanie → walidacja stewards

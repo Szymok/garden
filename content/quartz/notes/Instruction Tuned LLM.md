@@ -22,11 +22,11 @@ aliases:
 
 # 🎯 Definicja
 
-**Instruction Tuned LLM (Instruction-Tuned Large Language Model)** to model językowy przetrenowany lub dostrojony specjalnie pod kątem rozumienia i wykonywania poleceń użytkownika wyrażonych w języku naturalnym. Proces ten, znany jako **instruction tuning**, zwiększa użyteczność i sterowalność LLM w zastosowaniach praktycznych – np. w czatbotach, asystentach AI czy interfejsach w stylu „prompt-pytanie → odpowiedź”.
+**Instruction Tuned [[Base LLM|LLM]] (Instruction-Tuned Large Language Model)** to model językowy przetrenowany lub dostrojony specjalnie pod kątem rozumienia i wykonywania poleceń użytkownika wyrażonych w języku naturalnym. Proces ten, znany jako **instruction tuning**, zwiększa użyteczność i sterowalność [[Base LLM|LLM]] w zastosowaniach praktycznych – np. w czatbotach, asystentach AI czy interfejsach w stylu „prompt-pytanie → odpowiedź”.
 
 # 🔑 Kluczowe punkty
 
-- Instruction tuned LLM są dostrajane do wykonywania **zadanych poleceń** (np. „Stwórz listę...”, „Wytłumacz jak...”, „Zamień to na kod…”).
+- Instruction tuned [[Base LLM|LLM]] są dostrajane do wykonywania **zadanych poleceń** (np. „Stwórz listę...”, „Wytłumacz jak...”, „Zamień to na kod…”).
 - Trening uwzględnia pary: **instrukcja → oczekiwane działanie**, zamiast tradycyjnych danych predykcyjnych (np. następne słowo).
 - Modele te są lepiej przystosowane do interakcji z użytkownikiem w stylu zeroshot/fewshot/in-context learning.
 - Znane przykłady to: **OpenAI InstructGPT**, **ChatGPT**, **FLAN-T5**, **LLaMA 2-Chat**, **Mistral-Instruct**, **Databricks Dolly**.
@@ -36,7 +36,7 @@ aliases:
 
 ## Instruction Tuning — jak to działa?
 
-Instruction tuning polega na przetrenowaniu LLM na dedykowanych parach:
+Instruction tuning polega na przetrenowaniu [[Base LLM|LLM]] na dedykowanych parach:
 
 - **Input**: Naturalnie sformułowana instrukcja (prompt)
 - **Output**: Oczekiwana odpowiedź, zgodna z intencją użytkownika
@@ -60,9 +60,9 @@ Instruction tuning może być samodzielny lub łączony z technikami:
 - **SFT** (Supervised Fine-Tuning)
 - **RLHF**, gdzie tuning służy jako etap 1 (awareness of instructions).
 
-## Czym różni się Instruction-Tuned LLM od bazowego?
+## Czym różni się Instruction-Tuned [[Base LLM|LLM]] od bazowego?
 
-|Cecha|LLM (bazowy)|Instruction-Tuned LLM|
+|Cecha|[[Base LLM\|LLM]] (bazowy)|Instruction-Tuned [[Base LLM\|LLM]]|
 |---|---|---|
 |Styl interakcji|Kontynuacja tekstu|Reagowanie na polecenia|
 |Przykład użycia|Generuj kolejne zdanie|„Podsumuj poniższy tekst…”|
@@ -93,11 +93,11 @@ Model odpowiada logicznie, krok po kroku, przestrzegając instrukcji struktury o
 ## 👽 Brudnopis
 
 - instruction tuning ≠ RLHF (etap przed, nad/pod)
-- prompt: "Zrób X" — LLM wie, że musi wykonać instrukcję, nie tylko kontynuować tekst
+- prompt: "Zrób X" — [[Base LLM|LLM]] wie, że musi wykonać instrukcję, nie tylko kontynuować tekst
 - flan-t5 jako OTP do zadaniowości
 - modele tuned ≠ base = dużo łatwiejsze w użyciu out-of-the-box
 - trening często z crowdsourcingiem lub pseudo-labels (self-instruct)
-- każda aplikacja B2B potrzebuje interfejsu LLM → instrukcje mają sens via fine-tune
+- każda aplikacja B2B potrzebuje interfejsu [[Base LLM|LLM]] → instrukcje mają sens via fine-tune
 - vs cot/cof/s.cot: instruction tuning boostuje „gotowość do rozumienia celu”
 
 ---

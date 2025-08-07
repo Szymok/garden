@@ -21,25 +21,25 @@ aliases:
 
 # 🎯 Definicja
 
-**Wektorowe bazy danych** to wyspecjalizowane systemy zarządzania danymi, umożliwiające przechowywanie, indeksowanie i błyskawiczne wyszukiwanie danych w postaci wektorów. Znajdują kluczowe zastosowanie w architekturach wykorzystywanych przez najnowocześniejsze modele językowe (LLM) i systemy AI, szczególnie tam, gdzie istotna jest praca na danych nieustrukturyzowanych jak tekst, obrazy czy audio.
+**Wektorowe bazy danych** to wyspecjalizowane systemy zarządzania danymi, umożliwiające przechowywanie, indeksowanie i błyskawiczne wyszukiwanie danych w postaci wektorów. Znajdują kluczowe zastosowanie w architekturach wykorzystywanych przez najnowocześniejsze modele językowe ([[Base LLM|LLM]]) i systemy AI, szczególnie tam, gdzie istotna jest praca na danych nieustrukturyzowanych jak tekst, obrazy czy audio.
 
 # 🔑 Kluczowe punkty
 
 - Pozwalają na **buforowanie semantyczne** dzięki utrzymywaniu wektorowych reprezentacji kontekstu i podobieństw między zapytaniami.
 - Umożliwiają implementację **pamięci długoterminowej** dla modeli językowych, wspierając spójność interakcji w czasie.
 - Oferują **rozproszoną, skalowalną architekturę**, obsługującą zapytania na ogromnych wolumenach danych w czasie rzeczywistym.
-- Poprawiają **ogólną wydajność** aplikacji LLM poprzez szybkie wyszukiwanie, efektywne zarządzanie kontekstem i stabilność przetwarzania.
-- Są kluczowe dla rozwiązań typu RAG (Retrieval-Augmented Generation) i nowoczesnych chatbotów.
+- Poprawiają **ogólną wydajność** aplikacji [[Base LLM|LLM]] poprzez szybkie wyszukiwanie, efektywne zarządzanie kontekstem i stabilność przetwarzania.
+- Są kluczowe dla rozwiązań typu [[RAG]] ([[Retrieval Augmented Generation (RAG)|Retrieval-Augmented Generation]]) i nowoczesnych chatbotów.
 
 # 📚 Szczegółowe wyjaśnienie
 
 ## Buforowanie semantyczne
 
-Wektorowe DB przechowują semantyczne embeddingi (osadzenia) dokumentów, fraz czy nawet pojedynczych słów. Podczas obsługi zapytania, model porównuje embedding aktualnego wejścia do setek tysięcy już zapisanych. Jeśli znajdzie podobny wektor w „pamięci podręcznej”, potrafi natychmiast wykorzystać wcześniejsze konteksty — skutkuje to krótszym czasem odpowiedzi i mniejszym zużyciem zasobów obliczeniowych. Przykład: pytania zadane innymi słowami, ale o tym samym znaczeniu, prowadzą do spójnych, błyskawicznych odpowiedzi.
+Wektorowe DB przechowują semantyczne embeddingi (osadzenia) dokumentów, fraz czy nawet pojedynczych słów. Podczas obsługi zapytania, model porównuje [[embedding]] aktualnego wejścia do setek tysięcy już zapisanych. Jeśli znajdzie podobny wektor w „pamięci podręcznej”, potrafi natychmiast wykorzystać wcześniejsze konteksty — skutkuje to krótszym czasem odpowiedzi i mniejszym zużyciem zasobów obliczeniowych. Przykład: pytania zadane innymi słowami, ale o tym samym znaczeniu, prowadzą do spójnych, błyskawicznych odpowiedzi.
 
 ## Pamięć długoterminowa
 
-Dla efektywnego działania LLM model musi pamiętać wcześniejsze interakcje. Wektorowe bazy danych umożliwiają przechowywanie embeddingów z wielu poprzednich rozmów/wątków, zapewniając dostęp do historycznych kontekstów. Pozwala to na generowanie logicznie powiązanych i spójnych wypowiedzi nawet po długich sesjach — zarówno w chatbocie biznesowym, jak i narzędziach do obsługi klienta.
+Dla efektywnego działania [[Base LLM|LLM]] model musi pamiętać wcześniejsze interakcje. Wektorowe bazy danych umożliwiają przechowywanie embeddingów z wielu poprzednich rozmów/wątków, zapewniając dostęp do historycznych kontekstów. Pozwala to na generowanie logicznie powiązanych i spójnych wypowiedzi nawet po długich sesjach — zarówno w chatbocie biznesowym, jak i narzędziach do obsługi klienta.
 
 ## Architektura
 
@@ -65,8 +65,8 @@ OpenAI Cookbook – Using vector database with GPT
 
 ## 👽 Brudnopis
 
-- Wektorowe DB = szybkie porównania embeddingów, wydajne cache’owanie i „long-term memory” dla LLM/RAG.
+- Wektorowe DB = szybkie porównania embeddingów, wydajne cache’owanie i „long-term memory” dla [[Base LLM|LLM]]/[[RAG]].
 - Architektura: wysoka dostępność, horyzontalna skalowalność, rozproszony storage.
 - Nearest neighbor search → klucz do odpowiedzi kontekstowych.
-- Przykład: FAQ z wykorzystaniem Pinecone, oszczędności kosztów → mniej calli do LLM, mniejszy latency.
+- Przykład: FAQ z wykorzystaniem Pinecone, oszczędności kosztów → mniej calli do [[Base LLM|LLM]], mniejszy latency.
 - Benchmark: przewaga nad klasycznymi SQL/doc-store w semantyce i czasie odpowiedzi przy >100k rekordów.

@@ -45,12 +45,12 @@ aliases:
 
 - Szybka analiza dużych wolumenów danych (setki GB, miliardy wierszy) na laptopie lub serwerze.
 - „SQL nad Parquet”: Warstwa analityczna nad plikami Parquet bez potrzeby ładowania wszystkiego do zewnętrznej bazy.
-- Komponent w nowoczesnym stacku danych (np. w połączeniu z dbt, Superset, Meltano).
+- Komponent w nowoczesnym stacku danych (np. w połączeniu z [[dbt]], Superset, Meltano).
 - Alternatywa dla Excela i CSV w analizach biznesowych i data science.
 
 ## Przewagi i różnice względem innych rozwiązań
 
-|DuckDB|SQLite|Apache Druid / ClickHouse|
+|DuckDB|SQLite|[[Apache Druid]] / ClickHouse|
 |:--|:--|:--|
 |OLAP (analiza)|OLTP (transakcje)|OLAP rozproszony|
 |Kolumnowy silnik zapytań|Wierszowy silnik|Kolumnowy, skalowalny sieciowo|
@@ -60,7 +60,7 @@ aliases:
 
 ## Zintegrowany interfejs Python/SQL
 
-DuckDB doskonale współpracuje z Pandas i NumPy:
+DuckDB doskonale współpracuje z [[Pandas]] i [[NumPy]]:
 
 ```python
 import duckdb
@@ -74,22 +74,22 @@ print(arr)
 
 # 💡 Przykład zastosowania
 
-Firma analityczna analizuje 1,5 miliarda rekordów transakcji taxi NYC z ostatnich 10 lat. Zamiast ładować dane do wielkoskalowej hurtowni, przeprowadza całość analizy lokalnie na laptopie korzystając z DuckDB, SQL oraz Pandas, uzyskując wyniki w kilka sekund bez kosztów chmury i złożoności wdrożenia.
+Firma analityczna analizuje 1,5 miliarda rekordów transakcji taxi NYC z ostatnich 10 lat. Zamiast ładować dane do wielkoskalowej hurtowni, przeprowadza całość analizy lokalnie na laptopie korzystając z DuckDB, SQL oraz [[Pandas]], uzyskując wyniki w kilka sekund bez kosztów chmury i złożoności wdrożenia.
 
 # 📌 Źródła
 
 - DuckDB – Oficjalna strona i dokumentacja
 - „SQLite i DuckDB – Porównanie” (Simon Willison)
-- CIDR 2020: „Zarządzanie danymi dla nauki o danych – W kierunku osadzonej analizy”
+- CIDR 2020: „[[Zarządzanie danymi]] dla nauki o danych – W kierunku osadzonej analizy”
 
 # 👽 Brudnopis
 
-- OLAP single-file, zero-dependency, integracja z Pandas, Arrow, szybki odczyt Parquet i CSV
+- OLAP single-file, zero-dependency, integracja z [[Pandas]], Arrow, szybki odczyt Parquet i CSV
 - “SQLite do analityki” – porównanie, różnica: kolumnowy engine, obsługa dużych plików
-- Projekty: MotherDuck (cloud), Rill Data (BI), Stack MDS in-a-box
+- Projekty: MotherDuck (cloud), Rill Data ([[Business Intelligence|BI]]), Stack [[Nowoczesny Stos Danych|MDS]] in-a-box
 - Zero latency (in-process), alternatywa dla workbenchów opartych o Excela/CSV
 - Realne testy na miliardowych zbiorach na laptopie
-- Przydatność: szybka eksploracja danych, BI ad hoc, uczenie maszynowe prototypowo
+- Przydatność: szybka eksploracja danych, [[Business Intelligence|BI]] ad hoc, [[uczenie maszynowe]] prototypowo
 
 : DuckDB – dokumentacja i strona produktu  
 : Simon Willison, „SQLite and DuckDB: a comparison”  

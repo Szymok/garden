@@ -28,24 +28,24 @@ aliases:
 - Potoki automatyzują procesy **ekstrakcji (E)**, **transformacji (T)** i **ładownia danych (L)** – klasyczne **ETL** lub nowoczesne **ELT**.
 - Składają się z wielu etapów (steps/stages), które mogą działać synchronicznie, asynchronicznie lub strumieniowo.
 - Mogą działać wsadowo (batch) lub w czasie rzeczywistym (streaming).
-- Zarządzane za pomocą **orkiestratorów**: Airflow, Dagster, Prefect.
-- Stanowią trzon każdej nowoczesnej platformy danych i umożliwiają zasilanie downstream: BI, ML, dashboardów, raportów.
+- Zarządzane za pomocą **orkiestratorów**: [[Apache Airflow|Airflow]], [[Dagster]], Prefect.
+- Stanowią trzon każdej nowoczesnej platformy danych i umożliwiają zasilanie downstream: [[Business Intelligence|BI]], [[Uczenie Maszynowe|ML]], dashboardów, raportów.
 
 # 📚 Szczegółowe wyjaśnienie
 
 ## Typowa struktura potoku danych
 
-1. **Źródło danych (data source):**  
+1. **[[Data Source|Źródło danych]] ([[data source]]):**  
     Bazy danych OLTP, API, pliki CSV, IoT, media społecznościowe.
     
 2. **Ingestion (pobieranie):**  
     Narzędzia typu Airbyte, Fivetran, Kafka zbierają dane w surowej postaci.
     
-3. **Transformacja (data transformation):**  
-    Przetwarzanie, oczyszczanie, standaryzacja, łączenie źródeł (np. przez dbt, Spark, SQL).
+3. **Transformacja ([[Transformacja danych|data transformation]]):**  
+    Przetwarzanie, oczyszczanie, standaryzacja, łączenie źródeł (np. przez [[dbt]], Spark, SQL).
     
 4. **Ładowanie (loading/sink):**  
-    Zapis do systemów typu Snowflake, BigQuery, Redshift, S3, Delta Lake, Elasticsearch.
+    Zapis do systemów typu Snowflake, BigQuery, Redshift, S3, [[Delta Lake]], Elasticsearch.
     
 5. **Monitorowanie (observability):**  
     Walidacja jakości, alerty (testy: null check, expect range), logowanie run'ów.
@@ -62,7 +62,7 @@ aliases:
 
 ## Kluczowe cechy dobrze zaprojektowanego potoku
 
-- **Idempotentność** – ponowne wykonanie nie zmienia systemu.
+- **[[Idempotentność]]** – ponowne wykonanie nie zmienia systemu.
 - **Retry / Failure isolation** – odporność na błędy danego kroku.
 - **Logowanie i audyt** – obserwowalność każdego etapu runu.
 - **Skalowalność** – pozioma i automatyczna.
@@ -74,7 +74,7 @@ Zespół danych w firmie e-commerce tworzy potok danych, który codziennie:
 
 1. Pobiera dane z PostgreSQL i API reklamowego (Airbyte).
 2. Ładuje je do hurtowni BigQuery.
-3. Transformuje dane zamówień i sesji użytkownika do modelu wymiarowego (dbt).
+3. Transformuje dane zamówień i sesji użytkownika do modelu wymiarowego ([[dbt]]).
 4. Udostępnia dane analitykom w Lookerze i automatyzuje alerty w przypadku błędnych danych.
 
 ## 📌 Źródła
@@ -89,10 +89,10 @@ Zespół danych w firmie e-commerce tworzy potok danych, który codziennie:
 - data pipelines = plumbing dla informacji
 - różnica: ETL → transformacja wcześniej, ELT → na poziomie hurtowni
 - potoki są nadrzędne nad taskami / dagami – model systemowy
-- ważne dla ML (data ingestion + features + retraining) i analityki
+- ważne dla [[Uczenie Maszynowe|ML]] (data ingestion + features + retraining) i analityki
 - orchestration ≠ ingestion ≠ transformation – rozdzielone komponenty
-- narzędzia: Airbyte, dbt, Spark, Airflow, Dagster, Fivetran, Prefect
+- narzędzia: Airbyte, [[dbt]], Spark, [[Apache Airflow|Airflow]], [[Dagster]], Fivetran, Prefect
 - testy danych: Great Expectations, elementary, soda
-- context-aware pipelines → dynamic DAG (np. per client, per date)
+- context-aware pipelines → dynamic [[Skierowany Graf Acykliczny|DAG]] (np. per client, per date)
 
 ---

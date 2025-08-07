@@ -29,7 +29,7 @@ aliases:
 - **Modelowanie zależności:** Orkiestrator uwzględnia kolejność wykonania zadań, ich wzajemne powiązania i warunki wymagalności.
 - **Integracja heterogenicznych systemów:** Łączy systemy legacy, nowoczesne narzędzia chmurowe, jeziora danych (Data Lakes) i hurtownie danych (Data Warehouses).
 - **Automatyzacja i timing:** Uruchamia procesy na podstawie wyzwalaczy czasowych (schedule), warunków zdarzeniowych lub innych niestandardowych reguł.
-- **Wsparcie dla różnych technologii:** Obsługuje obliczenia w SQL, Pythonie oraz integrację z modelami ML w całym cyklu życia danych.
+- **Wsparcie dla różnych technologii:** Obsługuje obliczenia w SQL, Pythonie oraz integrację z modelami [[Uczenie Maszynowe|ML]] w całym cyklu życia danych.
 - **Przejście od potoków danych do produktów danych:** Orkiestracja nie tylko przetwarza dane, ale wspiera ich transformację w produkty biznesowe o wysokiej wartości.
 
 # 📚 Szczegółowe wyjaśnienie
@@ -47,24 +47,24 @@ Orkiestrator stanowi „centralny mózg” automatyzacji procesów danych w firm
 
 |Funkcja|Opis|
 |---|---|
-|Definiowanie pipeline’ów|Budowanie zadań i ich zależności, np. ETL, walidacja, agregacje, ML|
+|Definiowanie pipeline’ów|Budowanie zadań i ich zależności, np. ETL, walidacja, agregacje, [[Uczenie Maszynowe\|ML]]|
 |Integracja systemów|Łączenie źródeł danych legacy, chmury, API, baza danych|
 |Monitorowanie i alertowanie|Śledzenie statusu, powiadomienia o niepowodzeniach lub przekroczeniu SLA|
 |Automatyczne skalowanie|Umożliwianie elastycznego przydziału zasobów w chmurze na potrzeby uruchomień|
 |Orkiestracja zadań batch i streaming|Współbieżne przetwarzanie wsadowe i w czasie rzeczywistym|
 
-## Orkiestracja w kontekście [[Inżynieria Danych|DataOps]] i modern data stack
+## Orkiestracja w kontekście [[Inżynieria Danych|DataOps]] i [[Nowoczesny Stos Danych|modern data stack]]
 
 - Orkiestrator jest centralnym elementem pipeline’ów danych i produktywności zespołów [[Inżynieria Danych|DataOps]].
-- Pozwala synchronizować transformacje danych z narzędziami ETL/ELT (np. Airbyte, dbt).
-- Integruje się z BI, AI i ML, aby wyzwalać modele oraz analizy w odpowiednich momentach.
+- Pozwala synchronizować transformacje danych z narzędziami ETL/ELT (np. Airbyte, [[dbt]]).
+- Integruje się z [[Business Intelligence|BI]], [[Uczenie Maszynowe|AI]] i [[Uczenie Maszynowe|ML]], aby wyzwalać modele oraz analizy w odpowiednich momentach.
 - Umożliwia przejście od przetwarzania potokowego (pipeline-centric) do podejścia produktowego (data product-centric).
 
 ## Popularne narzędzia orkiestracji
 
-- **Apache Airflow:** Open source’owy system orkiestracji workflow, oparty na DAG-ach zadań i planowaniu harmonogramów.
+- **[[Apache Airflow]]:** Open source’owy system orkiestracji workflow, oparty na DAG-ach zadań i planowaniu harmonogramów.
 - **Prefect:** Elastyczne, nowoczesne narzędzie do orkiestracji z rozszerzonym monitoringiem i obsługą chmur.
-- **Dagster:** Orkiestracja workflow z naciskiem na zarządzanie jakością danych i typowanie pipeline’ów.
+- **[[Dagster]]:** Orkiestracja workflow z naciskiem na zarządzanie jakością danych i typowanie pipeline’ów.
 - **AWS Step Functions, Azure Data Factory:** Orkiestracja natywna w chmurach, z integracją usług i bezpieczeństwem.
 
 # 💡 Przykład zastosowania
@@ -72,18 +72,18 @@ Orkiestrator stanowi „centralny mózg” automatyzacji procesów danych w firm
 Firma zajmująca się sprzedażą detaliczną wdraża orkiestrator danych do koordynacji całego cyklu danych:
 
 1. Pobranie danych sprzedaży i logów aplikacyjnych do jeziora danych (Data Lake).
-2. Codzienne uruchomienie transformacji SQL w hurtowni danych (np. Snowflake) za pomocą dbt.
-3. Analiza danych w Pythonie, wykrywanie anomalii i budowa modeli predykcyjnych w ML.
-4. Publikacja wyników do narzędzi BI, raportowanie i informowanie biznesu.
+2. Codzienne uruchomienie transformacji SQL w hurtowni danych (np. Snowflake) za pomocą [[dbt]].
+3. [[Analiza danych]] w Pythonie, [[Anomaly Detection|wykrywanie anomalii]] i budowa modeli predykcyjnych w [[Uczenie Maszynowe|ML]].
+4. Publikacja wyników do narzędzi [[Business Intelligence|BI]], raportowanie i informowanie biznesu.
 5. Orkiestrator wyzwala poszczególne kroki według harmonogramów i monitoruje statusy, powiadamiając o błędach.
 
 # 📌 Źródła
 
-- Airbyte. Data Orchestration Trends: Shifting from Data Pipelines to Data Products.
+- Airbyte. Data Orchestration Trends: Shifting from [[Potoki przetwarzania danych|Data Pipelines]] to Data Products.
 - Apache Airflow Documentation: [https://airflow.apache.org/docs/](https://airflow.apache.org/docs/)
 - Prefect Documentation: [https://docs.prefect.io/](https://docs.prefect.io/)
 - Databricks Blog – Data Orchestration: [https://databricks.com/blog/](https://databricks.com/blog/)
-- Towards Data Science – Data Orchestration and Modern Data Stack
+- Towards Data Science – Data Orchestration and Modern [[Stos danych|Data Stack]]
 
 # 👽 Brudnopis
 
@@ -91,4 +91,4 @@ Firma zajmująca się sprzedażą detaliczną wdraża orkiestrator danych do koo
 - Przede wszystkim zarządza powiązaniami, zależnościami i wykonaniem złożonych danych i procesów analitycznych
 - Integruje starsze systemy i nowe, elastyczne narzędzia chmurowe
 - Wspiera logiczne wyzwalanie zadań (czas, event, warunek biznesowy)
-- Kluczowy element automatyzacji i skali w [[Inżynieria Danych|DataOps]] i AI/ML pipelines
+- Kluczowy element automatyzacji i skali w [[Inżynieria Danych|DataOps]] i AI/[[Uczenie Maszynowe|ML]] pipelines

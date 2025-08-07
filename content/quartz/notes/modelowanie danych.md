@@ -24,11 +24,11 @@ aliases:
 
 # 🔑 Kluczowe punkty
 
-- Organizuje i strukturyzuje dane według wybranych technik (np. ERD, modelowanie wymiarowe, 3NF).
+- Organizuje i strukturyzuje dane według wybranych technik (np. ERD, [[modelowanie wymiarowe]], 3NF).
 - Zapewnia spójność, integralność oraz przejrzystość danych w procesach IT i analizie biznesowej.
 - Model danych jest pomostem komunikacyjnym między zespołem IT, analitykami i użytkownikami biznesowymi.
 - Jest kluczowe do budowania skalowalnych, niezawodnych systemów oraz hurtowni danych i nowoczesnych ekosystemów data.
-- Przykłady: modelowanie relacyjne (tabele, klucze), modelowanie wymiarowe (fakty i wymiary), modele dokumentowe (NoSQL).
+- Przykłady: modelowanie relacyjne (tabele, klucze), [[modelowanie wymiarowe]] ([[fakty]] i [[wymiary]]), modele dokumentowe (NoSQL).
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -43,7 +43,7 @@ aliases:
 ## Kluczowe techniki modelowania
 
 - **Modelowanie relacyjne** – tabele, relacje, normalizacja (np. OLTP, 3NF).
-- **Modelowanie wymiarowe** – projektowanie struktur do hurtowni danych (np. schemat gwiazdy, faktów i wymiarów) .
+- **[[Modelowanie wymiarowe]]** – projektowanie struktur do hurtowni danych (np. schemat gwiazdy, faktów i wymiarów) .
 - **Modele dokumentowe/NoSQL** – elastyczne struktury, denormalizacja pod kątem konkretnego use case.
 - **Vault Data Modeling** – wersjonowanie i historization w dużych hurtowniach danych.
 
@@ -56,7 +56,7 @@ aliases:
 
 # 💡 Przykład zastosowania
 
-Projektując hurtownię danych dla firmy retail, wdraża się **model wymiarowy** – centralna tabela faktów przechowuje transakcje sprzedaży z kluczami do tabel wymiarowych: dat, produktów, klientów i sklepów. To podejście umożliwia szybkie i elastyczne raportowanie oraz analizy przekrojowe wg różnych wymiarów biznesowych.
+Projektując hurtownię danych dla firmy retail, wdraża się **model wymiarowy** – centralna [[Fakty|tabela faktów]] przechowuje transakcje sprzedaży z kluczami do tabel wymiarowych: dat, produktów, klientów i sklepów. To podejście umożliwia szybkie i elastyczne raportowanie oraz analizy przekrojowe wg różnych wymiarów biznesowych.
 
 ## 📌 Źródła
 
@@ -71,7 +71,7 @@ Projektując hurtownię danych dla firmy retail, wdraża się **model wymiarowy*
 - Wymiarowe (star/snowflake) ≠ relacyjne: każde ma osobne miejsce (OLAP vs OLTP).
 - Modele NoSQL → microservices, API, elastyczne dane.
 - Modelowanie = jeden kod komunikacji dla analityków/biznesu/IT.
-- Najczęstsze narzędzia: dbt, Lucidchart, dbdiagram, ERDPlus.
+- Najczęstsze narzędzia: [[dbt]], Lucidchart, dbdiagram, ERDPlus.
 - Diagramy i modele usprawniają testowanie, migracje, walidację jakości.
 - “Garbage in, garbage out” → modelowanie zapobiega chaosowi na wejściu.
 

@@ -21,35 +21,35 @@ aliases:
 
 # 🎯 Definicja
 
-**Tree of Thoughts (ToT)** to metoda strukturalnego rozumowania przy użyciu modeli językowych (LLM), która rozszerza klasyczne techniki podpowiadania, takie jak chain-of-thought, o możliwość eksploracji wielu alternatywnych ścieżek rozumowania na różnych etapach. Wprowadza drzewa myśli (sekwencji logicznych) i łączy zdolność LLM do generowania i oceniania hipotez z algorytmami wyszukiwania takimi jak BFS, DFS czy beam search.
+**Tree of Thoughts (ToT)** to metoda strukturalnego rozumowania przy użyciu modeli językowych ([[Base LLM|LLM]]), która rozszerza klasyczne techniki podpowiadania, takie jak chain-of-thought, o możliwość eksploracji wielu alternatywnych ścieżek rozumowania na różnych etapach. Wprowadza drzewa myśli (sekwencji logicznych) i łączy zdolność [[Base LLM|LLM]] do generowania i oceniania hipotez z algorytmami wyszukiwania takimi jak BFS, DFS czy beam search.
 
 ToT jest zaprojektowane z myślą o zadaniach wymagających planowania, eksploracji stanów i złożonego wnioskowania (np. łamigłówki, planowanie działań, kodowanie, pytania wieloetapowe).
 
 # 🔑 Kluczowe punkty
 
-- **Myślenie rozgałęzione:** LLM rozważa wiele alternatywnych myśli (ścieżek), zamiast jednej liniowej sekwencji.
+- **Myślenie rozgałęzione:** [[Base LLM|LLM]] rozważa wiele alternatywnych myśli (ścieżek), zamiast jednej liniowej sekwencji.
 - **Myśli jako węzły drzewa:** Każda myśl to potencjalnie wartościowy krok ku rozwiązaniu — może być rozwinięta dalej lub odrzucona.
-- **Metoda oceny:** LLM samo ocenia trafność wygenerowanych myśli: „pewny / możliwy / niemożliwy”.
+- **Metoda oceny:** [[Base LLM|LLM]] samo ocenia trafność wygenerowanych myśli: „pewny / możliwy / niemożliwy”.
 - **Integracja z wyszukiwaniem (BFS, DFS):** Możemy kontrolować eksplorację i backtracking.
 - **Możliwości rozszerzenia za pomocą RL:** Propozycja Longa uwzględnia „kontroler ToT” uczący się reguł nawigacji po drzewie.
 
 # 📚 Szczegółowe wyjaśnienie
 
-## Główna różnica względem chain-of-thought (CoT)
+## Główna różnica względem chain-of-thought ([[Chain-of-Thought Prompting|CoT]])
 
 |Cecha|Chain of Thought|Tree of Thoughts|
 |---|---|---|
 |Struktura|Liniowa sekwencja myśli|Drzewo możliwych ścieżek rozumowania|
 |Eksploracja|Jedna droga|Eksploracja wielu możliwości (lookahead)|
-|Ocena|Brak|Samoocena myśli pośrednich przez LLM|
+|Ocena|Brak|Samoocena myśli pośrednich przez [[Base LLM\|LLM]]|
 |Algorytmika|Prosta generacja|BFS / DFS / beam + ocena heurystyczna|
-|Zastosowanie|Zadania zero-shot/coT|Problemy z eksploracją, planowaniem, kodowaniem|
+|Zastosowanie|Zadania zero-shot/[[Chain-of-Thought Prompting\|coT]]|Problemy z eksploracją, planowaniem, kodowaniem|
 
 ## Jak działa Tree of Thoughts?
 
 1. **Problem** (np. matematyczny, decyzyjny) jest przekładany na serię rozwijalnych „myśli” — kroków logicznych prowadzących ku rozwiązaniu.
-2. **LLM generuje k myśli** na danym „poziomie” rozumowania — np. alternatywne działania, rozwiązania częściowe.
-3. **Każda myśl jest oceniana** przez LLM wg prostego schematu:
+2. **[[Base LLM|LLM]] generuje k myśli** na danym „poziomie” rozumowania — np. alternatywne działania, rozwiązania częściowe.
+3. **Każda myśl jest oceniana** przez [[Base LLM|LLM]] wg prostego schematu:
     - ✅ „pewny” — warto rozwijać
     - ❓ „możliwy” — warto zostawić
     - ❌ „niemożliwy” — odrzucić
@@ -69,7 +69,7 @@ ToT jest zaprojektowane z myślą o zadaniach wymagających planowania, eksplora
 - Zamiast sztywnych heurystyk (BFS/DFS), RL uczy się jak eksplorować efektywnie drzewo.
 - „Kontroler ToT” może wycofać się kilka poziomów, eksplorować agresywnie lub zachowawczo – jak AlphaGo.
 - Pozwala adaptować się do danych/problemów – możliwe uczenie przez samodzielną grę lub feedback.
-- LLM pełni wtedy funkcje: generująco-oceniającą, a kontroler – taktyczną.
+- [[Base LLM|LLM]] pełni wtedy funkcje: generująco-oceniającą, a kontroler – taktyczną.
 
 ## Tree-of-Thought Prompting (wersja uproszczona)
 
@@ -83,13 +83,13 @@ If any expert realises they're wrong at any point then they leave.
 The question is...
 ```
 
-Ten format zmusza LLM do równoległego rozważenia wielu punktów widzenia i ścieżek → efekt przypomina wielokierunkowe drzewo, ale bez algorytmu eksploracyjnego.
+Ten format zmusza [[Base LLM|LLM]] do równoległego rozważenia wielu punktów widzenia i ścieżek → efekt przypomina wielokierunkowe drzewo, ale bez algorytmu eksploracyjnego.
 
 # 💡 Przykład: Game of 24
 
 Gra polega na tym, by z 4 cyfr i działań arytmetycznych ułożyć wyrażenie dające wynik 24.
 
-1. LLM generuje 5 alternatywnych **myśli 1. poziomu** (np. możliwe pierwsze działania).
+1. [[Base LLM|LLM]] generuje 5 alternatywnych **myśli 1. poziomu** (np. możliwe pierwsze działania).
 2. Każda jest oceniona wg zasad (too high / good / impossible).
 3. System eksploruje dalej tylko sensem – reszta zostaje odcięta.
 4. Po trzech krokach jedna ścieżka prowadzi do rozwiązania.
@@ -99,13 +99,13 @@ Gra polega na tym, by z 4 cyfr i działań arytmetycznych ułożyć wyrażenie d
 - [Tree of Thoughts – Yao et al. 2023 (arXiv)](https://arxiv.org/abs/2305.10601)
 - [Tree-of-Thought Prompting – S. Hulbert (GitHub)](https://github.com/kyegomez/tree-of-thought-prompting)
 - [Reinforcement Fine-Tuning in ToT (Long et al.)](https://arxiv.org/abs/2308.09687)
-- [Prompt Engineering Guide – ToT Section](https://github.com/dair-ai/Prompt-Engineering-Guide#tree-of-thought)
+- [[[Prompt Engineering Guide]] – ToT Section](https://github.com/dair-ai/Prompt-Engineering-Guide#tree-of-thought)
 
 # 👽 Brudnopis
 
 - Chain-of-thought → Tree-of-thought: linia → rozgałęzienie (jak w grach)
-- Można łączyć ToT z RAG, self-consistency, majority vote
+- Można łączyć ToT z [[RAG]], [[self-consistency]], majority vote
 - Beam search = pozwala tylko np. top-5 ścieżek w przód
-- Końcowy wybór ścieżki można uzależnić od heurystyki, LLM vote lub kontrolera
+- Końcowy wybór ścieżki można uzależnić od heurystyki, [[Base LLM|LLM]] vote lub kontrolera
 - ToT pozwala lepiej rozwiązywać problemy, w których ważne są kilkakrokowe struktury
 - Aplikacje: kodowanie, zadania z eksploracją, reasoning wieloetapowy, planowanie dialogów

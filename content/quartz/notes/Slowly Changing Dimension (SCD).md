@@ -58,7 +58,7 @@ Bank śledzi historię adresów korespondencyjnych klientów. Dzięki SCD 2 moż
 ## 📌 Źródła
 
 - [Kimball Group: Easily Track Slowly Changing Dimension Changes with SCD Types](https://www.kimballgroup.com/2016/02/slowly-changing-dimensions/)
-- [Microsoft Learn: Implementacja Slowly Changing Dimensions](https://learn.microsoft.com/pl-pl/sql/integration-services/data-flow/transformations/slowly-changing-dimension-transformation)
+- [Microsoft Learn: Implementacja Slowly Changing [[Wymiary|Dimensions]]](https://learn.microsoft.com/pl-pl/sql/integration-services/data-flow/transformations/slowly-changing-dimension-transformation)
 - [Data Warehouse Concepts – SCD](https://www.datavaultacademy.com/scd-in-data-vault/)
 
 ## 👽 Brudnopis
@@ -66,5 +66,5 @@ Bank śledzi historię adresów korespondencyjnych klientów. Dzięki SCD 2 moż
 - SCD = przechowywanie historii zmian wymiarów, np. adresu klienta, departamentu.
 - SCD 1 nadpisuje, SCD 2 dodaje rekordy historyczne, SCD 3 przechowuje kilka wartości.
 - Kluczowe w Data Warehousingu do raportowania, analizy trendów, rekonstrukcji historii.
-- Implementacja: SQL, narzędzia ETL (SSIS, Informatica, dbt), wymagane kolumny: data od-do, status rekordu.
+- Implementacja: SQL, narzędzia ETL (SSIS, Informatica, [[dbt]]), wymagane kolumny: data od-do, status rekordu.
 - Realny przykład: zmiana danych klienta w bankowości – śledzenie, do kiedy obowiązywały dane adresowe.

@@ -39,15 +39,15 @@ aliases:
 - **Brak ograniczenia liczby poziomów:** Możliwe jest tworzenie bardzo złożonych i głębokich struktur — przydatne w dużych organizacjach lub w przypadku kilku warstw podprojektów.
 - **Elastyczność:** Grupy mogą być dowolnie tworzone i przekształcane, bez związku z oficjalną hierarchią służbową.
 
-## Role w grupie
+## [[Roles|Role]] w grupie
 
 - Każdy użytkownik posiada indywidualnie przypisaną **rolę** (np. Owner, Editor, Steward) w każdej grupie, do której należy.
 - Możliwa jest przynależność użytkownika do wielu grup równocześnie, z różnymi rolami.
 
 ## Zarządzanie grupami
 
-- Administrator (np. z rolą ONE Administrator) może dodawać/usuwać członków, przypisywać role i tworzyć podgrupy.
-- Lista grup oraz zarządzanie przypisaniami odbywa się przez Global Settings → User Management → Groups.
+- Administrator (np. z rolą ONE Administrator) może dodawać/usuwać członków, przypisywać [[Roles|role]] i tworzyć podgrupy.
+- Lista grup oraz zarządzanie przypisaniami odbywa się przez Global Settings → [[User Management]] → Groups.
 
 # 💡 Przykład zastosowania
 
@@ -66,7 +66,7 @@ W dużej firmie IT:
 # 📌 Źródła
 
 - Prezentacja Ataccama „Group hierarchies”
-- Ataccama ONE: Global Settings > User Management > Groups
+- Ataccama ONE: Global Settings > [[User Management]] > Groups
 - [https://docs.ataccama.com/](https://docs.ataccama.com/)
 - Praktyki RBAC/ABAC implementowane w systemach zarządzania dostępem
 
@@ -76,5 +76,5 @@ W dużej firmie IT:
 - Każdy użytkownik: rola osobno w każdej grupie (Owner/Editor/Steward/Member)
 - Możliwa wielokrotna przynależność (np. projekt cross-team)
 - Drzewo bez limitu głębokości; potomkowie i jeden rodzic
-- Zarządzanie (dodawanie/edycja) z poziomu global settings > user management
+- Zarządzanie (dodawanie/edycja) z poziomu global settings > [[user management]]
 - Zastosowania: kompleksowe uprawnienia, compliance, analityka dla projektów/produktów, realny podział kosztów i odpowiedzialności

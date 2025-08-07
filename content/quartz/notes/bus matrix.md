@@ -21,11 +21,11 @@ aliases:
 
 # 🎯 Definicja
 
-**Bus Matrix** (matryca szyny danych) to narzędzie koncepcyjne stosowane w modelowaniu wymiarowym i OLAP, służące do wizualnego przedstawienia powiązań pomiędzy możliwymi **miarami** (facts) a **wymiarami** (dimensions). Pozwala szybko zidentyfikować, które miary mogą być analizowane w kontekście określonych wymiarów – stanowiąc mapę logiczną modelu analitycznego, szczególnie przydatną w projektowaniu hurtowni danych oraz kostek OLAP (np. Microsoft SSAS).
+**Bus Matrix** (matryca szyny danych) to narzędzie koncepcyjne stosowane w modelowaniu wymiarowym i OLAP, służące do wizualnego przedstawienia powiązań pomiędzy możliwymi **miarami** ([[Fakty|facts]]) a **wymiarami** ([[Wymiary|dimensions]]). Pozwala szybko zidentyfikować, które miary mogą być analizowane w kontekście określonych wymiarów – stanowiąc mapę logiczną modelu analitycznego, szczególnie przydatną w projektowaniu hurtowni danych oraz kostek OLAP (np. Microsoft SSAS).
 
 # 🔑 Kluczowe punkty
 
-- Umożliwia projektantom modelu wymiarowego szybkie zobaczenie, które wymiary są współdzielone pomiędzy różnymi procesami biznesowymi lub obszarami danych (data marts).
+- Umożliwia projektantom modelu wymiarowego szybkie zobaczenie, które [[wymiary]] są współdzielone pomiędzy różnymi procesami biznesowymi lub obszarami danych (data marts).
 - Pozwala optymalnie planować integrację miar i wymiarów w kostkach OLAP.
 - Stanowi podstawę architektury „bus” według Kimballa: identyfikowania wspólnej szyny modeli wymiarowych.
 
@@ -42,14 +42,14 @@ Matryca prezentowana jest w formie dwuwymiarowej tabeli:
 |**Miara C**||✓|✓||
 
 - **Wiersze** odpowiadają tabelom faktów (miarom/analitycznym procesom biznesowym, np. Sprzedaż, Zwroty, Aktywności użytkownika).
-- **Kolumny** to wymiary (np. Klient, Produkt, Data, Kanał, Region).
-- Zaznaczenie (`✓`) oznacza, że dana miara jest dostępna do analizy w kontekście danego wymiaru.
+- **Kolumny** to [[wymiary]] (np. Klient, Produkt, Data, Kanał, Region).
+- Zaznaczenie (`✓`) oznacza, że dana [[miara]] jest dostępna do analizy w kontekście danego wymiaru.
 
 ## Funkcje i zalety bus matrix
 
-- **Projektowanie modelu wymiarowego:** pozwala na wykrycie i zaprojektowanie wspólnych wymiarów dla wielu procesów (reusable dimensions).
+- **Projektowanie modelu wymiarowego:** pozwala na wykrycie i zaprojektowanie wspólnych wymiarów dla wielu procesów (reusable [[Wymiary|dimensions]]).
 - **Optymalizacja modelowania OLAP:** wizualizuje możliwości analityczne — pomaga uniknąć duplikowania logiki w różnych kostkach czy data martach.
-- **Spójność raportowania BI:** zapewnia, że każdy raport korzystający z danego wymiaru lub miary będzie operował na tych samych definicjach i powiązaniach.
+- **Spójność raportowania [[Business Intelligence|BI]]:** zapewnia, że każdy raport korzystający z danego wymiaru lub miary będzie operował na tych samych definicjach i powiązaniach.
 
 ## Przykład konstrukcji bus matrix
 
@@ -70,9 +70,9 @@ W powyższej matrycy:
 
 Firma retail przygotowuje architekturę hurtowni danych i OLAP. Tworzy bus matrix, aby:
 
-- Określić wspólne wymiary dla różnych miar biznesowych (np. sprzedaż, zwroty, płatności).
-- Zaprojektować tzw. „conformed dimensions” – wymiary dzielone pomiędzy obszary/analityki (np. Klient, Data).
-- Uczyć zespoły BI i Data Science, z jakimi wymiarami mogą korzystać przy budowie dashboardów i analiz.
+- Określić wspólne [[wymiary]] dla różnych miar biznesowych (np. sprzedaż, zwroty, płatności).
+- Zaprojektować tzw. „conformed [[Wymiary|dimensions]]” – [[wymiary]] dzielone pomiędzy obszary/analityki (np. Klient, Data).
+- Uczyć zespoły [[Business Intelligence|BI]] i Data Science, z jakimi wymiarami mogą korzystać przy budowie dashboardów i analiz.
 
 Efekt: matryca służy jako „mapa drogowa” przy wdrażaniu nowych miar i modelowaniu kostek w Microsoft SSAS czy innych narzędziach OLAP.
 
@@ -81,12 +81,12 @@ Efekt: matryca służy jako „mapa drogowa” przy wdrażaniu nowych miar i mod
 - [Kimball Group – Importance of the Bus Matrix](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/the-data-warehouse-bus-matrix/)
 - [Microsoft Docs — OLAP Models and the Bus Matrix](https://learn.microsoft.com/en-us/sql/analysis-services/multidimensional-models/dimensional-models-olap)
 - [Star Schema and Bus Matrix – Vertabelo](https://vertabelo.com/blog/star-schema-and-the-bus-matrix/)
-- [Dimensional Modeling and Bus Matrix – eTutorials.org](https://etutorials.org/Business+Intelligence/complete+reference/Chapter+8.+Dimensional+Modeling+DWH/8.5+The+Bus+Matrix/)
+- [[[Modelowanie Wymiarowe|Dimensional Modeling]] and Bus Matrix – eTutorials.org](https://etutorials.org/Business+Intelligence/complete+reference/Chapter+8.+Dimensional+Modeling+DWH/8.5+The+Bus+Matrix/)
 
 # 👽 Brudnopis
 
 - Bus Matrix = centralna „szyna” wymiarów i miar dla Data Warehouse/OLAP (Kimball)
-- Projektujesz raz – reużywasz wszędzie (conformed dimensions)
+- Projektujesz raz – reużywasz wszędzie (conformed [[Wymiary|dimensions]])
 - Bez bus matrix: ryzyko powielania wymiarów, chaos w analityce
-- Stosowana głównie przy starcie projektów OLAP i BI, szczególnie multiple data marts
-- Krok: zidentyfikuj fakty/miary, następnie wymiary, potem buduj matrycę powiązań
+- Stosowana głównie przy starcie projektów OLAP i [[Business Intelligence|BI]], szczególnie multiple data marts
+- Krok: zidentyfikuj [[fakty]]/miary, następnie [[wymiary]], potem buduj matrycę powiązań

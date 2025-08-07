@@ -22,13 +22,13 @@ aliases:
 
 # 🎯 Definicja
 
-**Detection on Attribute (wykrywanie na poziomie atrybutu)** to proces przypisywania terminów biznesowych do konkretnych kolumn (atrybutów danych) w tabelach, z użyciem reguł logicznych lub mechanizmów opartych na AI. Działa jako element automatyzacji katalogowania danych oraz wspiera odkrywanie semantyki danych w ramach procesu data discovery i data observability.
+**Detection on Attribute (wykrywanie na poziomie atrybutu)** to proces przypisywania terminów biznesowych do konkretnych kolumn (atrybutów danych) w tabelach, z użyciem reguł logicznych lub mechanizmów opartych na AI. Działa jako element automatyzacji katalogowania danych oraz wspiera odkrywanie semantyki danych w ramach procesu data discovery i [[data observability]].
 
 # 🔑 Kluczowe punkty
 
 - 📍 Dotyczy pojedynczych kolumn (atrybutów) w danych technicznych.
 - ⚙️ Wspiera **automatyczne rozpoznawanie terminów biznesowych** przy pomocy:
-    - Reguł wykrywania (Detection Rules),
+    - Reguł wykrywania ([[Detection Rules]]),
     - Mechanizmów AI opartych na podobieństwie nazw i wartości.
 - 🚀 Można ustawić własne progi czułości (threshold) lub używać operatorów logicznych dla wielu reguł.
 - 🧠 Przypisania dokonywane są na etapie data discovery lub manualnie z poziomu widoku atrybutu.
@@ -38,16 +38,16 @@ aliases:
 
 ## Jak działa wykrywanie na poziomie atrybutu?
 
-Po zakończeniu procesu wykrycia danych w źródle (Data Discovery), użytkownik może przejść do widoku tabeli lub obiektu i otworzyć kartę **Settings → Detection on Attributes**, gdzie konfigurowane są reguły wykrywania i aktywowane mechanizmy AI.
+Po zakończeniu procesu wykrycia danych w źródle (Data Discovery), użytkownik może przejść do widoku tabeli lub obiektu i otworzyć kartę **Settings → Detection on Attributes**, gdzie konfigurowane są [[Detection rules|reguły wykrywania]] i aktywowane mechanizmy AI.
 
 ### 1. AI-based Detection
 
-- Wykorzystuje uczenie maszynowe oraz historię wcześniejszych przypisań, by zasugerować termin najbardziej dopasowany do danego atrybutu.
+- Wykorzystuje [[uczenie maszynowe]] oraz historię wcześniejszych przypisań, by zasugerować termin najbardziej dopasowany do danego atrybutu.
 - Przykład: pole `email_address` zostanie oznaczone jako "Customer Email" z dużym prawdopodobieństwem.
 
 ### 2. Rule-based Detection
 
-- Użytkownik może przypisać _jedną lub wiele reguł wykrywania (Detection Rules)_:
+- Użytkownik może przypisać _jedną lub wiele reguł wykrywania ([[Detection Rules]])_:
     - Reguły mogą działać na podstawie nazw kolumn, typów danych, wartości referencyjnych.
     - Przykład: reguła "email columns" dopasuje się do pól zawierających "email".
 
@@ -96,6 +96,6 @@ W interfejsie użytkownika taką regułę można zdefiniować za pomocą Conditi
 
 - Detekcja = semi-automatyczny krok łączenia technik z semantyką
 - AI: uczy się z historii powiązań + nazw + rozkładów wartości
-- Rules: dobry start, większa kontrola; AI: automatyzacja, szersze zastosowania
+- [[Rules]]: dobry start, większa kontrola; AI: automatyzacja, szersze zastosowania
 - Lineage = efektywne przypisanie terminów → uruchamia dziedziczne kontrole i raportowanie
-- Przydatna w MDM, Catalog, Quality i klasyfikacji wrażliwości (np. PII)
+- Przydatna w [[Master Data Management (MDM)|MDM]], Catalog, Quality i klasyfikacji wrażliwości (np. PII)

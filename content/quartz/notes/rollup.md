@@ -21,21 +21,21 @@ aliases:
 
 # 🎯 Definicja
 
-**Rollup** to technika agregacji danych, polegająca na ich podsumowaniu w mniej szczegółowej formie, często na wyższym poziomie hierarchii lub z większą granularnością czasową. Rollupy zmniejszają wolumen danych, przyspieszają zapytania analityczne i stanowią podstawę do budowy widoków BI oraz tabel agregujących (aggregate tables) w hurtowniach danych.
+**Rollup** to technika agregacji danych, polegająca na ich podsumowaniu w mniej szczegółowej formie, często na wyższym poziomie hierarchii lub z większą granularnością czasową. Rollupy zmniejszają wolumen danych, przyspieszają zapytania analityczne i stanowią podstawę do budowy widoków [[Business Intelligence|BI]] oraz tabel agregujących (aggregate tables) w hurtowniach danych.
 
 # 🔑 Kluczowe punkty
 
 - Rollup = **agregacja grupująca dane** według wyższych poziomów hierarchii (np. dzień → miesiąc, produkt → kategoria)
-- Używane w **data warehousach, OLAP**, systemach raportowych i dashboardach BI
+- Używane w **data warehousach, OLAP**, systemach raportowych i dashboardach [[Business Intelligence|BI]]
 - Rollupy mogą zmniejszyć liczbę wierszy o rzędy wielkości – mniej danych do przetwarzania
 - Są formą **preagregacji**, często materializowane jako tabele pomocnicze
-- Technikę Rollup można implementować manualnie (SQL) lub automatycznie (np. przez dbt, OLAP engine)
+- Technikę Rollup można implementować manualnie (SQL) lub automatycznie (np. przez [[dbt]], OLAP engine)
 
 # 📚 Szczegółowe wyjaśnienie
 
 ## Przykład: z dziennego do miesięcznego
 
-Tabela faktów sprzedaży na poziomie dziennym:
+[[Fakty|Tabela faktów]] sprzedaży na poziomie dziennym:
 
 |data|id_produktu|sprzedaż|
 |---|---|---|
@@ -50,9 +50,9 @@ Po rollupie do poziomu miesięcznego:
 
 ## Zastosowania
 
-- **Widoki BI / dashboardy** – odczyty dla licznych użytkowników nie spowalniają bazy
+- **Widoki [[Business Intelligence|BI]] / dashboardy** – odczyty dla licznych użytkowników nie spowalniają bazy
 - **Hurtownie danych (DWH)** – tabele agregujące przyspieszają zapytania OLAP
-- **Modelowanie wymiarowe** – podstawowy mechanizm w hierarchiach czasu, regionu, produktu
+- **[[Modelowanie wymiarowe]]** – podstawowy mechanizm w hierarchiach czasu, regionu, produktu
 - **Raporty zbiorcze** – gdzie szczegóły nie są potrzebne na każdym poziomie
 
 ## Implementacja – SQL (GROUP BY ROLLUP)
@@ -83,7 +83,7 @@ Wynik zawiera:
 
 # 💡 Przykład zastosowania
 
-Zespół analiz biznesowych tworzy widoki w Looker z codziennymi danymi transakcyjnymi. Aby przyspieszyć dashboard z wykresami kwartalnych przychodów wg województwa, tworzą rollup w dbt, który agreguje dane na poziomie miesiąc/województwo i zapisuje je jako `table: sales_rollup`.
+Zespół analiz biznesowych tworzy widoki w Looker z codziennymi danymi transakcyjnymi. Aby przyspieszyć dashboard z wykresami kwartalnych przychodów wg województwa, tworzą rollup w [[dbt]], który agreguje dane na poziomie miesiąc/województwo i zapisuje je jako `table: sales_rollup`.
 
 Wyszukiwanie danych odbywa się teraz 5x szybciej, a obciążenie zapytań do tabeli źródłowej spadło o 90%.
 
@@ -98,7 +98,7 @@ Wyszukiwanie danych odbywa się teraz 5x szybciej, a obciążenie zapytań do ta
 
 - rollup = suma na poziomie agregatu
 - vs brute-force agregacja: rollup jest zoptymalizowany
-- dbt: tworzenie tabel materiałowanych z preagregacją
+- [[dbt]]: tworzenie tabel materiałowanych z preagregacją
 - OLAP cubes: n-dimensional rollups
 - W Looker = aggte function z persist_table: true
 - rollup można cache'ować, inkrementalnie uzupełniać (np. przez `is_incremental()`)

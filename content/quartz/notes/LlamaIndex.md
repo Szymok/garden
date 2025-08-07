@@ -21,11 +21,11 @@ aliases:
 
 # 🎯 Definicja
 
-**LlamaIndex** to otwartoźródłowa ramka programistyczna, umożliwiająca integrację dużych modeli językowych (LLM) z prywatnymi lub domenowymi źródłami danych. Pozwala programistom i firmom na budowanie aplikacji, które mogą bezpośrednio pobierać, strukturyzować, przeszukiwać oraz analizować własne dane w połączeniu z mocą LLM — zarówno lokalnie jak i w chmurze. Dostępny jest dla Pythona i Typescripta, a jego architektura ułatwia tworzenie i wdrażanie rozwiązań klasy Retrieval-Augmented Generation (RAG).
+**LlamaIndex** to otwartoźródłowa ramka programistyczna, umożliwiająca integrację dużych modeli językowych ([[Base LLM|LLM]]) z prywatnymi lub domenowymi źródłami danych. Pozwala programistom i firmom na budowanie aplikacji, które mogą bezpośrednio pobierać, strukturyzować, przeszukiwać oraz analizować własne dane w połączeniu z mocą [[Base LLM|LLM]] — zarówno lokalnie jak i w chmurze. Dostępny jest dla Pythona i Typescripta, a jego architektura ułatwia tworzenie i wdrażanie rozwiązań klasy [[Retrieval Augmented Generation (RAG)|Retrieval-Augmented Generation]] ([[RAG]]).
 
 # 🔑 Kluczowe punkty
 
-- Umożliwia łatwe i szybkie tworzenie aplikacji RAG (Retrieval-Augmented Generation) — łączących LLM z własną bazą wiedzy.
+- Umożliwia łatwe i szybkie tworzenie aplikacji [[RAG]] ([[Retrieval Augmented Generation (RAG)|Retrieval-Augmented Generation]]) — łączących [[Base LLM|LLM]] z własną bazą wiedzy.
 - Obsługuje wiele źródeł danych: pliki, bazy SQL/NoSQL, API, S3, strony WWW i inne repozytoria.
 - Zawiera pięć podstawowych modułów: konektory danych, indeksy, silniki, agenty oraz integracje z aplikacjami.
 - Pozwala budować zarówno proste chatboty, jak i zaawansowane wyszukiwarki oraz półautonomiczne systemy analityczne.
@@ -35,12 +35,12 @@ aliases:
 
 ## Do czego wykorzystujemy LlamaIndex?
 
-LlamaIndex wykorzystywany jest do rozwiązywania kluczowego problemu: jak połączyć duży model językowy z własnymi, aktualnymi danymi firmowymi lub prywatnymi? Dzięki temu LLM podczas generowania odpowiedzi może korzystać nie tylko ze swojej "wiedzy wbudowanej", ale także z najnowszych, zewnętrznych informacji, znajdujących się w dokumentach, bazach lub plikach użytkownika. Typowe zastosowania to:
+LlamaIndex wykorzystywany jest do rozwiązywania kluczowego problemu: jak połączyć duży model językowy z własnymi, aktualnymi danymi firmowymi lub prywatnymi? Dzięki temu [[Base LLM|LLM]] podczas generowania odpowiedzi może korzystać nie tylko ze swojej "wiedzy wbudowanej", ale także z najnowszych, zewnętrznych informacji, znajdujących się w dokumentach, bazach lub plikach użytkownika. Typowe zastosowania to:
 
 - Budowanie chatbotów i asystentów wspieranych własną bazą wiedzy
 - Automatyzacja raportowania, generowanie podsumowań, ekstrakcja insightów z dokumentów
 - Systemy Q&A i przeszukiwanie semantyczne
-- Integracja wiedzy domenowej z LLM w narzędziach biznesowych
+- Integracja wiedzy domenowej z [[Base LLM|LLM]] w narzędziach biznesowych
 - Budowa agentów wykonujących półautonomiczne zadania analityczne
 
 ## Jak zbudowane jest LlamaIndex?
@@ -57,7 +57,7 @@ Wysokopoziomowe API LlamaIndex pozwalają zbudować kompletną aplikację do pob
 
 # 💡 Przykład zastosowania
 
-Firma prawnicza implementuje własnego chatbota, który potrafi odpowiadać na pytania klientów w oparciu o archiwa pism sądowych, przepisy i wewnętrzną dokumentację. LlamaIndex pozwala na zintegrowanie tych danych (PDF, Word, bazy danych) z LLM, stworzenie indeksu wektorowego i implementację wyszukiwania semantycznego. Prawnicy mogą zadawać pytania wyszukując konkretne sprawy czy interpretacje, a LLM generuje odpowiedzi w oparciu o rzeczywiste firmowe dane, a nie tylko publiczną wiedzę modelu.
+Firma prawnicza implementuje własnego chatbota, który potrafi odpowiadać na pytania klientów w oparciu o archiwa pism sądowych, przepisy i wewnętrzną dokumentację. LlamaIndex pozwala na zintegrowanie tych danych (PDF, Word, bazy danych) z [[Base LLM|LLM]], stworzenie indeksu wektorowego i implementację wyszukiwania semantycznego. Prawnicy mogą zadawać pytania wyszukując konkretne sprawy czy interpretacje, a [[Base LLM|LLM]] generuje odpowiedzi w oparciu o rzeczywiste firmowe dane, a nie tylko publiczną wiedzę modelu.
 
 ## 📌 Źródła
 
@@ -67,9 +67,9 @@ Firma prawnicza implementuje własnego chatbota, który potrafi odpowiadać na p
 
 ## 👽 Brudnopis
 
-- LlamaIndex = warstwa pośrednia pomiędzy prywatną bazą wiedzy a LLM
+- LlamaIndex = warstwa pośrednia pomiędzy prywatną bazą wiedzy a [[Base LLM|LLM]]
 - Moduły: konektory (input), indeksy (retrieval), silniki (wyszukiwanie), agenci (logika/zadania), integracje (aplikacje/aplikacje low-code)
 - Główne API: simple query, download, indexing, retrieval, advanced agents
 - Może korzystać z Pinecone, FAISS, OpenSearch, lokalnych baz
-- Łatwe prototypowanie, wsparcie dla RAG, automatyzacja workflow
+- Łatwe prototypowanie, wsparcie dla [[RAG]], automatyzacja workflow
 - Przykład: chatbot lub Q&A na własnym repozytorium dokumentów (np. umowy, case studies)

@@ -22,11 +22,11 @@ aliases:
 
 # 🎯 Definicja
 
-**Sources** w kontekście platformy Ataccama ONE to zarejestrowane źródła danych, które stanowią podstawę do dalszych operacji zarządzania danymi — takich jak profilowanie, data discovery, katalogowanie, klasyfikacja, ocena jakości oraz dokumentacja techniczna i biznesowa. Źródła można tworzyć i konfigurować manualnie w sekcji **Data Catalog → Sources**.
+**Sources** w kontekście platformy Ataccama ONE to zarejestrowane źródła danych, które stanowią podstawę do dalszych operacji zarządzania danymi — takich jak profilowanie, data discovery, katalogowanie, klasyfikacja, ocena jakości oraz dokumentacja techniczna i biznesowa. Źródła można tworzyć i konfigurować manualnie w sekcji **[[Data Catalog]] → Sources**.
 
 # 🔑 Kluczowe punkty
 
-- 🔌 Źródło danych definiuje punkt wejścia do danych – np. baza danych, Data Lake, S3 bucket, JDBC, REST API.
+- 🔌 [[Data Source|Źródło danych]] definiuje punkt wejścia do danych – np. baza danych, Data Lake, S3 bucket, JDBC, REST API.
 - 🛠️ Do jednego źródła można przypisać wiele połączeń (connections), nawet różnego typu.
 - 👥 W ramach źródła można zarządzać poświadczeniami i dostępami dla różnych użytkowników.
 - ⚙️ Obsługiwane działania to: testowanie połączenia, discovery danych, pełne profilowanie, uruchomienie pipeline’u dokumentującego.
@@ -61,7 +61,7 @@ Sekcja **Sources** w Ataccama ONE umożliwia:
 - Nazwa źródła i typ (np. „CRM_PROD – PostgreSQL DB”).
 - Lista połączeń (Connection Name, URL, status).
 - Przypisane poświadczenia – do każdego połączenia może być przypisanych wiele credential profiles.
-- Aktywne procesy Discover / Profiling / Documentation History.
+- Aktywne procesy Discover / [[Profiling]] / Documentation History.
 - Uprawnienia: kto może użyć źródła i w jakim zakresie.
 - Monitorowanie: ostatnie działania, błędy, harmonogramy.
 
@@ -69,7 +69,7 @@ Sekcja **Sources** w Ataccama ONE umożliwia:
 
 1. 🛠️ Administrator dodaje źródło „Salesforce_Prod_API” z poświadczeniem OAuth2.
 2. 🔎 Użytkownik uruchamia Discovery, by zidentyfikować strukturę danych i dodać ją do Katalogu.
-3. 🧪 Kolejny użytkownik włącza opcję Manual Profiling na obiektach typu „Customer Record”.
+3. 🧪 Kolejny użytkownik włącza opcję [[Manual Profiling]] na obiektach typu „Customer Record”.
 4. 📊 Analizy DQ oraz przypisanie terminów słownikowych następuje automatycznie.
 5. 🧹 Nieaktualne lub zduplikowane źródła są usuwane przy użyciu „Instant delete”.
 
@@ -78,7 +78,7 @@ Sekcja **Sources** w Ataccama ONE umożliwia:
 ```python
 # Pseudokod opisujący konfigurację źródła danych w systemie katalogowym
 create_source(
-    name="Azure_Finance_Lakehouse",
+    name="Azure_Finance_Data Lakehouse|Lakehouse",
     type="Azure Blob Storage",
     connections=[
         {"name": "prod-conn", "container": "finance", "auth": "KeyVaultRef"},
@@ -100,7 +100,7 @@ create_source(
 # 👽 Brudnopis
 
 - „Source” to logiczny kontener dla jednego lub wielu połączeń do danego systemu.
-- Kluczowy obiekt startowy pod wszystkie procesy: profiling, DQ, observability, lineage.
+- Kluczowy obiekt startowy pod wszystkie procesy: [[profiling]], DQ, observability, lineage.
 - Możliwość osobnych creds per env → jedna definicja używana w wielu flow.
 - Warto przypisywać źródło do domeny danych lub grup ownershipowych.
 - Best practice: wersjonować zmiany i dbać o naming conventions (np. `ENV_SYSTEM_TYP`).

@@ -25,10 +25,10 @@ aliases:
 # 🔑 Kluczowe punkty
 
 - **Źródłem jest hurtownia/analityka, celem – systemy operacyjne (np. CRM, systemy marketingowe).**
-- Służy do _wdrożenia insightów w działaniu_ – od BI do „actionable analytics”.
+- Służy do _wdrożenia insightów w działaniu_ – od [[Business Intelligence|BI]] do „actionable analytics”.
 - Proces obejmuje ekstrakcję, mapowanie i transformację rekordów pod wymogi docelowych aplikacji.
 - Stanowi pomost między analityką a operacją biznesową – np. automatyzuje personalizację kontaktu, scoring leadów, segmentację klientów itp.
-- Współczesne Reverse ETL wpisuje się w paradygmat “Data Activation” i rozwoju architektury Data Mesh.
+- Współczesne Reverse ETL wpisuje się w paradygmat “Data Activation” i rozwoju architektury [[Data Mesh]].
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -41,7 +41,7 @@ Odwrócony ETL odwraca klasyczny kierunek przepływu danych:
 
 Kluczowe kroki obejmują:
 
-1. **Wybór i przygotowanie danych w hurtowni** (np. modele scoringowe, segmentacje, predykcje ML, statystyki).
+1. **Wybór i przygotowanie danych w hurtowni** (np. modele scoringowe, segmentacje, predykcje [[Uczenie Maszynowe|ML]], statystyki).
 2. **Transformacja i mapowanie do formatu oraz schematu akceptowanego przez system docelowy** (np. API CRM, tabelka CSV, rekord w marketing automation).
 3. **Automatyczne ładowanie/aktualizacja rekordów** w narzędziach biznesowych — np. nadpisywanie custom fields w Salesforce, tworzenie audience w Google Ads/Meta.
 
@@ -58,14 +58,14 @@ Reverse ETL wysokiej klasy pozwala na:
 - **Enrichment operacyjny:** aktualizacja pól niestandardowych na kontaktach, leadach i kontach w systemach CRM według kalkulacji analitycznych (np. LTV, churn, propensity to buy).
 - **Zarządzanie triggerami workflow w automatyzacji biznesowej** (np. scoring leadów uruchamia dedykowaną kampanię).
 
-## Powiązanie z Master Data Management (MDM)
+## Powiązanie z [[Master Data Management (MDM)|Master Data Management]] ([[Master Data Management (MDM)|MDM]])
 
-Reverse ETL rozwiązuje część wyzwań znanych z MDM:
+Reverse ETL rozwiązuje część wyzwań znanych z [[Master Data Management (MDM)|MDM]]:
 
 - Synchronizuje spójne, oczyszczone dane z hurtowni do rozproszonych systemów domenowych.
 - Ułatwia utrzymanie zgodności i aktualności kluczowych atrybutów klienta/produktu w operacjach.
 
-Dla wielu firm reverse ETL jest praktyczną alternatywą lub uzupełnieniem klasycznych workflow MDM.
+Dla wielu firm reverse ETL jest praktyczną alternatywą lub uzupełnieniem klasycznych workflow [[Master Data Management (MDM)|MDM]].
 
 # 💡 Przykład zastosowania
 
@@ -80,16 +80,16 @@ Podnosząc jakość obsługi i automatyzując personalizację, firma zwiększył
 ## 📌 Źródła
 
 - [Wyjaśnienie Reverse ETL – Airbyte Blog](https://airbyte.com/blog/reverse-etl#so-what-is-a-reverse-etl)
-- [Preset.io – Reshaping Data Engineering (Maxime Beauchemin)](https://preset.io/blog/reshaping-data-engineering/)
+- [Preset.io – Reshaping [[Inżynieria Danych|Data Engineering]] ([[Maxime Beauchemin]])](https://preset.io/blog/reshaping-data-engineering/)
 - [Hightouch: Co to jest reverse ETL?](https://hightouch.com/blog/what-is-reverse-etl/)
-- [dbt: Reverse ETL](https://docs.getdbt.com/docs/reverse-etl)
+- [[[dbt]]: Reverse ETL](https://docs.getdbt.com/docs/reverse-etl)
 
 # 👽 Brudnopis
 
 - Odwrócony ETL = dane z hurtowni → do CRM, helpdesk, systemy martech/salestech.
-- Konkretny usecase: enrichment, scoring, audience creation, ML in prod.
+- Konkretny usecase: enrichment, scoring, audience creation, [[Uczenie Maszynowe|ML]] in prod.
 - Proces: wybór danych w warehouse → mapping → load przez API → monitoring.
 - Inspiracja: master data sync/operacyjny enrichment historycznie przez custom ETL, teraz API tool (Airbyte, Hightouch, Census).
 - Korzyść: actionable data, natychmiastowa reakcja, eliminacja ręcznych integracji.
-- Narzędzia: Airbyte, Hightouch, Census, Polytomic, RelationalAI, dbt reverse ETL.
+- Narzędzia: Airbyte, Hightouch, Census, Polytomic, RelationalAI, [[dbt]] reverse ETL.
 - Zachować wersjonowanie, lineage i monitoring synchronizacji.

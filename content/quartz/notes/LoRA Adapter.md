@@ -22,7 +22,7 @@ aliases:
 
 # 🎯 Definicja
 
-**LoRA Adapter** (skrót: _Low-Rank Adaptation of Large Language Models_) to technika efektywnego dostrajania dużych modeli językowych (LLM), która polega na „zamrożeniu” oryginalnych wag modelu i modyfikacji tylko niewielkich, dodanych parametrów o niskiej randze (low-rank). LoRA umożliwia szybkie, oszczędne i efektywne dostrajanie modeli bez konieczności trenowania wszystkich ich wag.
+**LoRA Adapter** (skrót: _Low-Rank Adaptation of [[Base LLM|Large Language Models]]_) to technika efektywnego dostrajania dużych modeli językowych ([[Base LLM|LLM]]), która polega na „zamrożeniu” oryginalnych wag modelu i modyfikacji tylko niewielkich, dodanych parametrów o niskiej randze (low-rank). LoRA umożliwia szybkie, oszczędne i efektywne dostrajanie modeli bez konieczności trenowania wszystkich ich wag.
 
 # 🔑 Kluczowe punkty
 
@@ -58,13 +58,13 @@ Zamiast uczyć W (duży, pełnowymiarowy tensor), LoRA uczy niewielkie A i B —
 ## Gdzie używamy LoRA?
 
 - Dostrajanie modeli typu LLaMA, Mistral, BLOOM, GPTQ baz modeli do specyficznych zadań.
-- Tworzenie _personalizowanych_ lub _domenowych_ wersji LLM.
+- Tworzenie _personalizowanych_ lub _domenowych_ wersji [[Base LLM|LLM]].
 - Chatboty z zachowaniem tożsamości i stylu konwersacji.
-- Fine-tuning z RAG (Retrieval-Augmented Generation).
+- Fine-tuning z [[RAG]] ([[Retrieval Augmented Generation (RAG)|Retrieval-Augmented Generation]]).
 - Popularne środowiska:
     - Hugging Face (`peft`, `transformers`)
     - QLoRA (Quantized LoRA – połączenie kvantyzacji + adapterów)
-    - Axolotl / Open LLM Leaderboard
+    - Axolotl / Open [[Base LLM|LLM]] Leaderboard
 
 # 💡 Przykład kodu z użyciem Hugging Face `peft`
 
@@ -89,7 +89,7 @@ model = get_peft_model(model, lora_config)
 
 - Modele są najpierw `4-bit quantized` (np. z bitsandbytes), potem dostrajane z LoRA.
 - Trenujesz ogromne modele (np. Llama 65B) **na jednej karcie A100 40GB**.
-- Rewolucja w dostępności LLM dla małych zespołów i projektów open-source.
+- Rewolucja w dostępności [[Base LLM|LLM]] dla małych zespołów i projektów open-source.
 
 # ✅ Zalety LoRA
 
@@ -117,7 +117,7 @@ model = get_peft_model(model, lora_config)
 
 ## 👽 Brudnopis
 
-- LoRA = plug-in tuning do LLM 🤖
+- LoRA = plug-in tuning do [[Base LLM|LLM]] 🤖
 - LoraConfig → decyduje gdzie dokładnie „wstawić” adaptery
 - QLoRA = LoRA + 4bit quant – open tuning dla każdego
 - Dobrze działa z LLaMA/Mistral, pod zadania typu chatbot, klasyfikacja, summarization

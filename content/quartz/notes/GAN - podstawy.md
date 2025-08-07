@@ -53,7 +53,7 @@ min_G max_D V(D, G) = E[log D(x)] + E[log(1 - D(G(z)))]
 |**Generator (G)**|Tworzy dane przypominające dane rzeczywiste z losowego wejścia z|
 |**Dyskryminator (D)**|Klasyfikuje próbki jako prawdziwe lub fałszywe. Dąży do perfekcyjnego rozpoznawania rzeczywistych danych.|
 
-Strukturalnie zwykle są to głębokie sieci neuronowe — np. CNN w przypadku generowania obrazów (DCGAN) lub RNN dla generatywnej mowy.
+Strukturalnie zwykle są to [[Deep Learning|głębokie sieci neuronowe]] — np. CNN w przypadku generowania obrazów (DCGAN) lub RNN dla generatywnej mowy.
 
 Architektury GAN można rozbudowywać:
 
@@ -70,7 +70,7 @@ Trening GAN-a różni się od klasycznego uczenia:
     - Trenuj D na danych prawdziwych i fałszywych
     - Trenuj G, aby lepiej oszukiwał D
 2. Stabilność treningu to wyzwanie — typowe problemy:
-    - Gradient vanishing/exploding
+    - [[Gradient]] vanishing/exploding
     - Mode collapse (generator zwraca podobne próbki)
 3. Techniki stabilizacji:
     - Label smoothing
@@ -85,7 +85,7 @@ Trening GAN-a różni się od klasycznego uczenia:
 ## 📌 Źródła
 
 - Ian Goodfellow et al., _Generative Adversarial Nets_ (2014): [https://arxiv.org/abs/1406.2661](https://arxiv.org/abs/1406.2661)
-- Deep Learning Specialization by Andrew Ng (GANs module)
+- [[Deep Learning]] Specialization by Andrew Ng (GANs module)
 - GAN Hacks: [https://github.com/soumith/ganhacks](https://github.com/soumith/ganhacks)
 - Papers with Code – GAN Benchmarks: [https://paperswithcode.com/task/image-generation](https://paperswithcode.com/task/image-generation)
 

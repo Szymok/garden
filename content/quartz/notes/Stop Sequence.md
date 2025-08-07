@@ -106,7 +106,7 @@ Model zakończy odpowiedź przed kolejną repliką „User:”, umożliwiając p
 
 ## 👽 Brudnopis
 
-- Pozornie prosty mechanizm – krytyczny dla integracji LLM w aplikacjach
+- Pozornie prosty mechanizm – krytyczny dla integracji [[Base LLM|LLM]] w aplikacjach
 - W prompt chaining — konieczny do określenia granic dla wyjścia częściowego
 - Działa na poziomie tokenów – „stop” = zawiera całą sekwencję tokenów w generacji
 - Stop sequence ≠ limit — nie wpływa na max_tokens, tylko przerywa wcześniej

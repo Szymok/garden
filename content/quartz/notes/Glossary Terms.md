@@ -101,4 +101,4 @@ Relacje typu: `parent of`, `derived from`, `equivalent of`, `defined in`, itd., 
 - W nowoczesnych systemach (Collibra, Ataccama, Alation): terminy wyzwalają workflow i kontrolę jakości
 - AI suggestion + validation loop = Smart Glossary
 - History = lineage pojęciowe, zmiany znaczenia, merge/split z innymi pojęciami
-- Wspierają [[data catalog]], data quality, policy enforcement, data access, DQ dashboards
+- Wspierają [[data catalog]], data quality, policy enforcement, data access, DQ [[Analiza Danych|dashboards]]

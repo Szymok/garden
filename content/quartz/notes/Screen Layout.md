@@ -38,7 +38,7 @@ aliases:
 - **Listing / Custom Screens:** Definiowanie rozmieszczenia widgetów, zmiana nazw zakładek, ikon, filtrowania domyślnego.
 - **Szczegóły encji:** Możliwość ukrywania, grupowania, zmiany kolejności properties/traits.
 - **Widżety:** Layout kontroluje, które widgety/komponenty pojawią się na stronie (np. property card, related items, custom cards) oraz w jakim układzie (kolumny/rzędy).
-- **Zakładka Fetch Rules:** Umożliwia wyświetlanie tylko wybranych encji na podstawie określonych reguł filtrowania.
+- **Zakładka Fetch [[Rules]]:** Umożliwia wyświetlanie tylko wybranych encji na podstawie określonych reguł filtrowania.
 - Dla administratorów dostępna jest opcja natychmiastowego publikowania zmian dla wszystkich użytkowników.
 
 ### Edycja Screen Layout
@@ -78,6 +78,6 @@ Zespół stewardów danych wdraża nową właściwość ("wrażliwość danych")
 - Każda encja może mieć dedykowany layout > widgety: property, trait, powiązania (related), custom cards
 - Ukrywanie i grupowanie property, wsparcie dla niestandardowych widgetów
 - Możliwość customizacji bez kodowania, szybka zmiana na produkcji
-- Fetch Rules = filtracja obiektów po warunkach (np. listing tylko aktywnych)
+- Fetch [[Rules]] = filtracja obiektów po warunkach (np. listing tylko aktywnych)
 - Przykład: zmiana layoutu po dodaniu property, reorganizacja widgetów, uproszczenie dla userów
 - Layout nie zmienia modelu danych, dotyczy tylko warstwy prezentacji

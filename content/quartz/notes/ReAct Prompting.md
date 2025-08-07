@@ -17,15 +17,15 @@ aliases:
 
 # 🎯 Definicja
 
-**ReAct Prompting** to podejście do podpowiadania w dużych modelach językowych (LLM), które łączy generowanie werbalnych śladów rozumowania ("Thoughts") z podejmowaniem działań ("Actions"), bazujących na interakcji z narzędziami zewnętrznymi. Zaproponowane przez Yao i in. (2022), ReAct umożliwia modelom językowym jednoczesne planowanie kroków logicznych oraz wykonywanie działań, takich jak wyszukiwanie informacji, w sposób iteracyjny i adaptacyjny.
+**ReAct Prompting** to podejście do podpowiadania w dużych modelach językowych ([[Base LLM|LLM]]), które łączy generowanie werbalnych śladów rozumowania ("Thoughts") z podejmowaniem działań ("Actions"), bazujących na interakcji z narzędziami zewnętrznymi. Zaproponowane przez Yao i in. (2022), ReAct umożliwia modelom językowym jednoczesne planowanie kroków logicznych oraz wykonywanie działań, takich jak wyszukiwanie informacji, w sposób iteracyjny i adaptacyjny.
 
 # 🔑 Kluczowe punkty
 
-- 🧠 **Połączenie rozumowania i działania**: LLM generują na przemian kroki rozumowania (np. analiza pytania) oraz działania (np. zapytania do wyszukiwarki).
+- 🧠 **Połączenie rozumowania i działania**: [[Base LLM|LLM]] generują na przemian kroki rozumowania (np. analiza pytania) oraz działania (np. zapytania do wyszukiwarki).
 - 🔄 **Interakcja z narzędziami zewnętrznymi**: Działania mogą angażować zewnętrzne źródła wiedzy, zwiększając dokładność i adekwatność odpowiedzi.
-- 🔍 **Lepiej radzi sobie w zadaniach wymagających wiedzy**: Przewyższa konwencjonalne podejścia (jak CoT i Act) w zadaniach takich jak HotpotQA, Fever, WebShop i ALFWorld.
+- 🔍 **Lepiej radzi sobie w zadaniach wymagających wiedzy**: Przewyższa konwencjonalne podejścia (jak [[Chain-of-Thought Prompting|CoT]] i Act) w zadaniach takich jak HotpotQA, Fever, WebShop i ALFWorld.
 - ❗ **Lepsza interpretowalność**: Sekwencja myśli i działań poprawia transparentność działania modelu i ułatwia diagnozowanie błędów.
-- 🔧 **Wsparcie w środowiskach takich jak LangChain**: Framework ReAct znajduje praktyczne zastosowanie w budowaniach agentów LLM.
+- 🔧 **Wsparcie w środowiskach takich jak [[LangChain]]**: Framework ReAct znajduje praktyczne zastosowanie w budowaniach agentów [[Base LLM|LLM]].
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -47,11 +47,11 @@ Question: What is the elevation range for the area that the eastern sector of th
 
 ```
 
-## ReAct vs. CoT vs. Act
+## ReAct vs. [[Chain-of-Thought Prompting|CoT]] vs. Act
 
 | Metoda | Zalety | Wady |
 |-------|--------|------|
-| Chain of Thought (CoT) | Dobrze modeluje proces myślenia | Halucynacje, brak sprawdzania faktów |
+| Chain of Thought ([[Chain-of-Thought Prompting\|CoT]]) | Dobrze modeluje proces myślenia | [[Halucynacje]], brak sprawdzania faktów |
 | Act | Bezpośrednie działania | Brak logicznej ścieżki rozumowania |
 | 📌 ReAct | Łączy zalety obu metod | Zależność od jakości informacji z zewnątrz |
 
@@ -62,11 +62,11 @@ Question: What is the elevation range for the area that the eastern sector of th
 
 # 💡 Przykład zastosowania
 
-### Agent z ReAct w LangChain
+### Agent z ReAct w [[LangChain]]
 
-Za pomocą LangChain można zbudować agenta, który:
+Za pomocą [[LangChain]] można zbudować agenta, który:
 
-- wykorzystuje LLM (np. Davinci, ChatGPT),
+- wykorzystuje [[Base LLM|LLM]] (np. Davinci, ChatGPT),
 - integruje się z Google Search API,
 - wykonuje obliczenia przez wbudowane narzędzia,
 - iteracyjnie kombinuje rozumowanie i akcje w stylu ReAct.
@@ -89,8 +89,8 @@ Efekt: agent wyszukuje informacje, przetwarza dane i dostarcza wynik końcowy z 
 
 - ReAct = Reasoning + Acting
 - Autorzy: Yao et al.
-- Przewyższa CoT w zadaniach decyzyjnych
-- ReAct w LangChain wykorzystuje agenta typu `zero-shot-react-description`
+- Przewyższa [[Chain-of-Thought Prompting|CoT]] w zadaniach decyzyjnych
+- ReAct w [[LangChain]] wykorzystuje agenta typu `zero-shot-react-description`
 - Cykliczne myślenie → działanie → obserwacja aż po osiągnięcie celu
 - W środowiskach takich jak WebShop model musi np. porównać produkty → wymaga rozumowania i wyszukiwania danych zewnętrznych
 - Może służyć jako podstawa do budowania autonomicznych agentów sterowanych promptami

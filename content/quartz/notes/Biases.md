@@ -18,7 +18,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Bias (stronniczość, tendencyjność)** w kontekście dużych modeli językowych (LLM) oznacza preferencyjną skłonność modelu do określonego rodzaju odpowiedzi wynikającą z danych treningowych, architektury modelu lub sposobu formułowania promptów. Może być niezamierzona i prowadzić do zafałszowanych wyników, dyskryminujących lub nieprecyzyjnych generacji.
+**Bias (stronniczość, tendencyjność)** w kontekście dużych modeli językowych ([[Base LLM|LLM]]) oznacza preferencyjną skłonność modelu do określonego rodzaju odpowiedzi wynikającą z danych treningowych, architektury modelu lub sposobu formułowania promptów. Może być niezamierzona i prowadzić do zafałszowanych wyników, dyskryminujących lub nieprecyzyjnych generacji.
 
 # 🔑 Kluczowe punkty
 
@@ -72,12 +72,12 @@ Model może być podatny na efekt pierwszeństwa — jeśli wszystkie pozytywne 
 ## 📉 Złożoność a bias
 
 - W prostych zadaniach (np. sentyment binarny) modele dobrze radzą sobie z neutralizacją wpływu biasu.
-- W złożonych problemach: klasyfikacja emocji, detekcja intencji czy tokenizacja wieloklasowa – wpływ biasu znacznie rośnie.
+- W złożonych problemach: klasyfikacja emocji, detekcja intencji czy [[tokenizacja]] wieloklasowa – wpływ biasu znacznie rośnie.
 - W takich przypadkach konieczne może być fine-tuning modelu lub zastosowanie uwarunkowanej generacji (conditioned decoding).
 
 # 💡 Przykład zastosowania
 
-W systemie klasyfikacji ticketów wsparcia klienta (CRM), początkowa architektura umożliwiała modelowi LLM klasyfikację biletów do kategorii "Complaint", "Praise", "Request" bez zachowania równowagi przykładów, co skutkowało dominującym przydzielaniem biletów do jednej kategorii (Complaint). Po zastosowaniu zbalansowanego few-shot prompting oraz losowej kolejności, rozkład predykcji uległ wyrównaniu i zmniejszył odsetek błędnych klasyfikacji o 21%.
+W systemie klasyfikacji ticketów wsparcia klienta (CRM), początkowa architektura umożliwiała modelowi [[Base LLM|LLM]] klasyfikację biletów do kategorii "Complaint", "Praise", "Request" bez zachowania równowagi przykładów, co skutkowało dominującym przydzielaniem biletów do jednej kategorii (Complaint). Po zastosowaniu zbalansowanego [[few-shot prompting]] oraz losowej kolejności, rozkład predykcji uległ wyrównaniu i zmniejszył odsetek błędnych klasyfikacji o 21%.
 
 ## 📌 Źródła
 

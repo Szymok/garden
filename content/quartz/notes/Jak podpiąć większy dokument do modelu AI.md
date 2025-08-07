@@ -22,7 +22,7 @@ aliases:
 
 # 🎯 Problem
 
-Duże modele językowe (LLM), takie jak ChatGPT, Claude czy Mistral, zostały wytrenowane na ogromnych zbiorach danych, ale **nie mają dostępu do Twoich dokumentów**, chyba że je im podasz. Co jednak zrobić, gdy dokument jest zbyt długi, a liczba tokenów wejściowych modelu jest ograniczona (np. max 4k–100k tokenów)?
+Duże modele językowe ([[Base LLM|LLM]]), takie jak ChatGPT, Claude czy Mistral, zostały wytrenowane na ogromnych zbiorach danych, ale **nie mają dostępu do Twoich dokumentów**, chyba że je im podasz. Co jednak zrobić, gdy dokument jest zbyt długi, a liczba tokenów wejściowych modelu jest ograniczona (np. max 4k–100k tokenów)?
 
 Rozwiązaniem jest **inteligentna integracja dokumentów** - tak, aby model był w stanie je przetworzyć w całości lub kontekstowo, bez halucynacji i bez obciążania promptu.
 
@@ -44,12 +44,12 @@ Model nie widzi naraz całego dokumentu, ale „uczy się” struktury częścia
 
 👉 Użyj narzędzi typu:
 
-- LangChain/LLamaIndex (chunkowanie + routing promptu)
+- [[LangChain]]/[[LLamaIndex]] (chunkowanie + routing promptu)
 - Pojedynczy prompt z `###Section:` delimiters
 
-## 2. RAG – Retrieval-Augmented Generation
+## 2. [[RAG]] – [[Retrieval Augmented Generation (RAG)|Retrieval-Augmented Generation]]
 
-**RAG (Retrieval-Augmented Generation)** to podejście, w którym:
+**[[RAG]] ([[Retrieval Augmented Generation (RAG)|Retrieval-Augmented Generation]])** to podejście, w którym:
 
 - Dokument konwertowany jest do embeddingów (wektorowa reprezentacja znaczenia).
 - Wszystkie fragmenty dokumentu są wrzucane do **wektorowej bazy danych** (np. FAISS, Pinecone, Weaviate).
@@ -59,9 +59,9 @@ Dzięki temu model **odpowiada trafnie na pytania na podstawie realnych fragment
 
 👉 Narzędzia:
 
-- LangChain + FAISS
-- LlamaIndex
-- Airbyte + OpenAI + Qdrant (pluginy open RAG)
+- [[LangChain]] + FAISS
+- [[LlamaIndex]]
+- Airbyte + OpenAI + Qdrant (pluginy open [[RAG]])
 - Groq, Vectara, PrivateGPT
 
 ## 3. Metadata filtering & routing
@@ -115,6 +115,6 @@ Firma prawna analizuje nowy akt ustawowy liczący 120 stron. Zamiast przesyłać
 - Split na podstawie struktury: `###`, `\n\n`, `---`, metadane, spisy treści
 - Można też kompresować: streszczenie każdej sekcji + metaprompt
 - Prompt typu: „Na podstawie poniższych fragmentów odpowiedz”
-- limit kontekstu GPT-4-turbo = ~128k tokenów (ale trzeba uważać na koszt i długość odpowiedzi)
+- limit kontekstu [[GPT-4]]-turbo = ~128k tokenów (ale trzeba uważać na koszt i długość odpowiedzi)
 
 ---

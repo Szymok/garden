@@ -29,8 +29,8 @@ aliases:
 - 🧩 Tworzy „jedyną wersję prawdy” (single source of truth) dla najważniejszych encji biznesowych.
 - 🔄 Integruje dane pochodzące z różnych systemów (ERP, CRM, MDM, e-commerce, hurtownie).
 - 🧼 Wspiera kontrolę jakości danych — deduplikacja, walidacja, standaryzacja, reguły spójności.
-- 🛡️ Ma kluczowe znaczenie dla zgodności z regulacjami (np. RODO), audytu, BI oraz systemów rekomendacyjnych.
-- ⚙️ Często realizowany przy pomocy specjalistycznych platform MDM (np. Informatica, IBM InfoSphere, Ataccama ONE MDM, SAP Master Data Governance).
+- 🛡️ Ma kluczowe znaczenie dla zgodności z regulacjami (np. RODO), audytu, [[Business Intelligence|BI]] oraz systemów rekomendacyjnych.
+- ⚙️ Często realizowany przy pomocy specjalistycznych platform MDM (np. Informatica, IBM InfoSphere, Ataccama ONE MDM, SAP Master [[Data Governance]]).
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -53,11 +53,11 @@ To dane często używane i konieczne do prawidłowego działania wielu procesów
 |Proces|Opis|
 |---|---|
 |Integracja danych|Łączenie danych z różnych źródeł w jedną strukturę|
-|Profilowanie danych|Diagnoza jakości danych (kompletność, unikalność, typy błędów)|
+|[[Data Profiling\|Profilowanie danych]]|Diagnoza jakości danych (kompletność, unikalność, typy błędów)|
 |Standaryzacja danych|Ujednolicanie nazw, formatów, reprezentacji|
 |Deduplikacja i matchowanie|Wyszukiwanie i scalanie zduplikowanych rekordów (np. klientów)|
 |Golden Record|Tworzenie referencyjnej wersji rekordu na podstawie źródeł|
-|Data Stewardship|Zatwierdzanie zmian, walidacje manualne przez właścicieli danych|
+|Data [[Stewardship]]|Zatwierdzanie zmian, walidacje manualne przez właścicieli danych|
 
 ## Style wdrożeń MDM
 
@@ -68,7 +68,7 @@ To dane często używane i konieczne do prawidłowego działania wielu procesów
 
 # 💡 Przykład zastosowania
 
-**Zarządzanie danymi klientów (Customer MDM):**  
+**[[Zarządzanie danymi]] klientów (Customer MDM):**  
 W firmie telekomunikacyjnej informacje o kliencie mogą znajdować się:
 
 - w CRM: imię i nazwisko, kontakt, historia rozmów
@@ -92,8 +92,8 @@ MDM umożliwia:
 
 # 👽 Brudnopis
 
-- Data Fabric i Data Mesh często korzystają z MDM jako punkty spójności.
-- Modern MDM integruje AI/ML do deduplikacji, predykcji złotych rekordów.
-- Ataccama MDM obsługuje match rules, workflows, masterowanie, korekty przez stewardów.
+- Data Fabric i [[Data Mesh]] często korzystają z MDM jako punkty spójności.
+- Modern MDM integruje AI/[[Uczenie Maszynowe|ML]] do deduplikacji, predykcji złotych rekordów.
+- Ataccama MDM obsługuje match [[rules]], workflows, masterowanie, korekty przez stewardów.
 - MDM to nie baza danych — to meta warstwa zarządzania i konsolidacji danych referencyjnych.
 - Kluczowe jest zdefiniowanie właścicieli (Data Owners) i opiekunów domen (Stewards).

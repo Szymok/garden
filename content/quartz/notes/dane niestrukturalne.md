@@ -40,7 +40,7 @@ Inne typowe przykłady:
 - dokumenty (PDF, Word, tekst), raporty
 - zdjęcia i filmy (obrazy, wideo)
 - transkrypcje rozmów, audio, notatki głosowe
-- komentarze z social mediów, czaty, recenzje
+- [[komentarze]] z social mediów, czaty, recenzje
 - wyniki ankiet (odpowiedzi otwarte)
 
 ## Porównanie: dane niestrukturalne vs. strukturalne
@@ -53,13 +53,13 @@ Inne typowe przykłady:
 |Łatwość przetwarzania maszynowego|wysoka|wymagają preprocesingu lub ekstrakcji|
 |Przykłady|imię, wiek, ID, adres|tekst e-maila, plik JPEG, wpis na Twitterze|
 
-## Transformacja danych niestrukturalnych
+## [[Transformacja danych]] niestrukturalnych
 
 Aby dane niestrukturalne mogły być użyte do analizy, muszą najpierw zostać przekształcone w format strukturalny np. w ramach procesów:
 
 - ETL – Extract, Transform, Load
 - ELT – Extract, Load, Transform
-- Transformacja danych – ekstrakcja encji, tokenizacja tekstu, konwersja audio do tekstu (ASR), OCR
+- [[Transformacja danych]] – ekstrakcja encji, [[tokenizacja]] tekstu, konwersja audio do tekstu (ASR), OCR
 - Entity Recognition – np. wykrywanie nazw własnych, dat, lokalizacji z tekstu
 
 Po transformacji, oryginalne dane mogą wyglądać tak:

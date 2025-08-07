@@ -22,14 +22,14 @@ aliases:
 
 # 🎯 Definicja
 
-**Generowanie danych przy użyciu LLM (Large Language Models)** to praktyka wykorzystania modeli językowych (np. GPT-4, Claude, Mistral) do tworzenia **syntetycznych przykładów danych**, takich jak teksty, etykiety, pytania, klasyfikacje czy całe zbiory treningowe, w celu wykorzystania ich w zadaniach uczenia maszynowego, testowania modeli, budowania prototypów lub analiz jakościowych.
+**Generowanie danych przy użyciu [[Base LLM|LLM]] ([[Base LLM|Large Language Models]])** to praktyka wykorzystania modeli językowych (np. [[GPT-4]], Claude, Mistral) do tworzenia **syntetycznych przykładów danych**, takich jak teksty, etykiety, pytania, klasyfikacje czy całe zbiory treningowe, w celu wykorzystania ich w zadaniach uczenia maszynowego, testowania modeli, budowania prototypów lub analiz jakościowych.
 
 Dzięki elastyczności w rozumieniu kontekstu i poleceń, modele te są szczególnie skuteczne w szybkim tworzeniu zróżnicowanych i logicznie spójnych próbek.
 
 # 🔑 Kluczowe cechy
 
 - Generowanie danych może zastąpić lub uzupełnić rzeczywiste rekordy — szczególnie tam, gdzie dane są kosztowne, wrażliwe lub trudno dostępne.
-- Modele LLM mogą działać jako **syntetyczni anotatorzy**, tworząc dane oznaczone (labeled) dla klasyfikatorów, ekstraktorów, tłumaczy itp.
+- Modele [[Base LLM|LLM]] mogą działać jako **syntetyczni anotatorzy**, tworząc dane oznaczone (labeled) dla klasyfikatorów, ekstraktorów, tłumaczy itp.
 - Możesz decydować o:
     - **złożoności przykładów**
     - **rozmieszczeniu klas (balans pozytywne/negatywne)**
@@ -77,13 +77,13 @@ A: Negative
 
 # 🧠 Zastosowania
 
-- Tworzenie danych syntetycznych do treningu modeli ML/NLP
+- Tworzenie danych syntetycznych do treningu modeli [[Uczenie Maszynowe|ML]]/NLP
 - Uzupełnianie niedoreprezentowanych klas (np. balancing klas)
 - Testowanie klasyfikatorów, modeli ekstrakcji, systemów rekomendacyjnych
 - Symulowanie użytkowników, zapytań, błędnych danych
-- Walidacja promptów w aplikacjach opartych na LLM (np. RAG)
+- Walidacja promptów w aplikacjach opartych na [[Base LLM|LLM]] (np. [[RAG]])
 
-# 💡 Inne przykłady zastosowania promptów
+# 💡 Inne przykłady [[Prompting Applications|zastosowania promptów]]
 
 ## 1. Generowanie pytań do quizów
 
@@ -130,7 +130,7 @@ Label each as "toxic" or "non-toxic".
 
 - Prompty = narzędzia do budowy własnej bazy etykiet & danych
 - Możesz iterować prompty → 200+ przykładów w batchu
-- LLM jak "asystent anotacyjny"
+- [[Base LLM|LLM]] jak "asystent anotacyjny"
 - 🧪 Red teaming promptów: generuj dane wyzwalające błędy systemu
 - 🌀 Z promptów do datasetu → CSV / JSON do fine-tuningu czy ewaluacji
 

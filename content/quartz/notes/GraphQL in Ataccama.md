@@ -27,8 +27,8 @@ aliases:
 
 - 🧠 Umożliwia programistom i integratorom tworzenie własnych zapytań po danych w stylu deklaratywnym.
 - ⚙️ Działa w modelu "tylko to, co potrzebne" — klient sam określa strukturę odpowiedzi.
-- 🚀 Umożliwia dostęp do zasobów takich jak: obiekty katalogowe, reguły jakości, terminy słownikowe, lineage, użytkownicy.
-- 🔐 Wspiera uwierzytelnienie (np. token JWT) i kontrolę dostępu poprzez role.
+- 🚀 Umożliwia [[Sharing access to assets|dostęp do zasobów]] takich jak: obiekty katalogowe, reguły jakości, [[Glossary Terms|terminy słownikowe]], lineage, użytkownicy.
+- 🔐 Wspiera uwierzytelnienie (np. token JWT) i kontrolę dostępu poprzez [[Roles|role]].
 - 📦 Nadaje się do tworzenia własnych interfejsów użytkownika, mikrofrontendów, wizualizacji niestandardowych, automatyzacji.
 
 # 📚 Szczegółowe wyjaśnienie
@@ -37,9 +37,9 @@ aliases:
 
 **GraphQL** to alternatywa dla REST, opracowana przez Facebooka, w której klient sam precyzyjnie definiuje, jakie dane są mu potrzebne. W odpowiedzi serwer zwraca tylko to, co zostało zadeklarowane. W Ataccama GraphQL pozwala m.in. na:
 
-- pobieranie szczegółów katalogu danych (Catalog Items),
+- pobieranie szczegółów katalogu danych ([[Catalog Items]]),
 - dostęp do metryk jakości (Data Quality Scores),
-- eksplorację terminów słownikowych i powiązanych reguł (Glossary Terms),
+- eksplorację terminów słownikowych i powiązanych reguł ([[Glossary Terms]]),
 - tworzenie własnych przeglądarek danych, workflow, dashboardów.
 
 ## Przykładowe zapytanie
@@ -65,14 +65,14 @@ query {
 }
 ```
 
-To zapytanie pobiera nazwę, opis, dane źródła, terminy słownikowe i wynik DQ dla podanego elementu katalogowego.
+To zapytanie pobiera nazwę, opis, dane źródła, [[Glossary Terms|terminy słownikowe]] i wynik DQ dla podanego elementu katalogowego.
 
 ## Typowe operacje i obiekty
 
 |Obiekt|Opis|
 |---|---|
 |`catalogItem`|Dane katalogowe (tabele, widoki, pliki)|
-|`glossaryTerm`|Terminy słownikowe i ich połączenia|
+|`glossaryTerm`|[[Glossary Terms\|Terminy słownikowe]] i ich połączenia|
 |`dqRuleInstance`|Instancje reguł jakości danych|
 |`dataSource`|Informacje o źródłach danych|
 |`qualityScore`|Wyniki profilowania i ewaluacji DQ|
@@ -83,7 +83,7 @@ GraphQL umożliwia też paginację, filtrowanie i sortowanie wyników; opcjonaln
 # 💡 Przykład zastosowania
 
 1. **Automatyzacja audytu jakości danych**  
-    Skrypt pobierający z API co tydzień wszystkie obiekty z jakością poniżej 80% i zapisujący je do dashboardu w Power BI.
+    Skrypt pobierający z API co tydzień wszystkie obiekty z jakością poniżej 80% i zapisujący je do dashboardu w Power [[Business Intelligence|BI]].
     
 2. **Tworzenie własnej aplikacji frontowej**  
     Frontend React, który za pomocą GraphQL API buduje mapę liniową pomiędzy słownikami pojęciowymi a obiektami w katalogu.
@@ -106,4 +106,4 @@ GraphQL umożliwia też paginację, filtrowanie i sortowanie wyników; opcjonaln
 - Ułatwienie dla citizen devs, którzy chcą eksplorować dane bez znajomości szczegółów REST API
 - Przyszłościowo: GraphQL jako warstwa pośrednia między komponentami low-code
 - Rekomendacja: dokumentacja SDL (schema definition language) dla custom typów i relacji
-- Możliwa integracja z systemami Data Mesh, aplikacjami BI, Excel, botami AI
+- Możliwa integracja z systemami [[Data Mesh]], aplikacjami [[Business Intelligence|BI]], Excel, botami AI

@@ -20,7 +20,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Funkcja aktywacji** to funkcja matematyczna stosowana w sztucznych neuronach w sieciach neuronowych. Określa ona, czy dany neuron powinien być aktywowany (czyli przekazać sygnał dalej), transformując sumę ważoną wejść neuronu na sygnał wyjściowy. Wprowadza nieliniowość do modelu, co umożliwia sieciom głębokiego uczenia uczenie się złożonych zależności.
+**Funkcja aktywacji** to funkcja matematyczna stosowana w sztucznych neuronach w sieciach neuronowych. Określa ona, czy dany [[neuron]] powinien być aktywowany (czyli przekazać sygnał dalej), transformując sumę ważoną wejść neuronu na sygnał wyjściowy. Wprowadza nieliniowość do modelu, co umożliwia sieciom głębokiego uczenia uczenie się złożonych zależności.
 
 # 🔑 Kluczowe punkty
 
@@ -36,10 +36,10 @@ aliases:
 
 |Nazwa|Wzór matematyczny|Zalety|Wady|
 |---|---|---|---|
-|**ReLU**|`f(x) = max(0, x)`|szybkie obliczenia, eliminacja zanikającego gradientu|"martwe neurony", brak aktywacji dla x < 0|
+|**[[ReLU]]**|`f(x) = max(0, x)`|szybkie obliczenia, eliminacja zanikającego gradientu|"martwe neurony", brak aktywacji dla x < 0|
 |**Sigmoid**|`f(x) = 1 / (1 + e^(-x))`|interpretowalność jako prawdopodobieństwo|problem zanikającego gradientu, nasycenie|
 |**Tanh**|`f(x) = tanh(x)`|wartości między -1 a 1, lepsze niż sigmoid|nadal podatna na zanikanie gradientu|
-|**Leaky ReLU**|`f(x) = x dla x>0, ax dla x<0`|rozwiązuje problem martwych neuronów|wybór parametru `a` może być arbitralny|
+|**Leaky [[ReLU]]**|`f(x) = x dla x>0, ax dla x<0`|rozwiązuje problem martwych neuronów|wybór parametru `a` może być arbitralny|
 |**Softmax**|`f(xᵢ) = exp(xᵢ) / Σ exp(xⱼ)`|normalizuje wyjścia jako rozkład prawd.|tylko dla warstw wyjściowych (klasyfikacja)|
 
 ## Po co jest funkcja aktywacji?
@@ -51,7 +51,7 @@ aliases:
 
 ## Wpływ na trening modelu
 
-- ReLU i jego warianty są obecnie standardem w ukrywanych warstwach sieci neuronowych.
+- [[ReLU]] i jego warianty są obecnie standardem w ukrywanych warstwach sieci neuronowych.
 - Dla klasyfikacji wieloklasowej na końcu sieci stosuje się `Softmax`, a dla binarnej – `Sigmoid`.
 - Źle dobrana funkcja aktywacji może spowolnić lub uniemożliwić konwergencję modelu.
 
@@ -59,7 +59,7 @@ aliases:
 
 W modelu konwolucyjnej sieci neuronowej (CNN), np. do rozpoznawania obrazów, stosuje się:
 
-- **ReLU** w warstwach ukrytych dla wydajności i redukcji problemu zaniku gradientu.
+- **[[ReLU]]** w warstwach ukrytych dla wydajności i redukcji problemu zaniku gradientu.
 - **Softmax** w warstwie wyjściowej, aby zwrócić prawdopodobieństwa przynależności do klas (np. „pies”, „kot”, „samochód”).
 
 **Przykładowy kod (PyTorch):**
@@ -84,9 +84,9 @@ model = nn.Sequential(
 
 ## 👽 Brudnopis
 
-- Funkcja aktywacji = kluczowy element sieci neuronowej.
+- Funkcja aktywacji = kluczowy [[Neuron|element sieci neuronowej]].
 - Bez niej brak możliwości nauki nieliniowych zależności.
-- ReLU: najbardziej wydajna (prosta), ale może dezaktywować neuron.
+- [[ReLU]]: najbardziej wydajna (prosta), ale może dezaktywować [[neuron]].
 - Softmax: typowa dla warstwy wyjściowej (multi-class)
 - Sigmoid i Tanh coraz rzadziej używane ze względu na problemy gradientowe.
 - Głębokość sieci wymaga dobrze dobranej aktywacji ze względu na propagację gradientu.

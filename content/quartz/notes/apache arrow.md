@@ -28,7 +28,7 @@ aliases:
 
 - Bazuje na **formatowaniu kolumnowym** i strukturze danych zapisanych w RAM — zoptymalizowanej pod kątem nowoczesnych procesorów i CPU cache.
 - Umożliwia współdzielenie danych pomiędzy językami, systemami i narzędziami (np. Python ↔ R ↔ Spark).
-- Apache Arrow to **standard wymiany danych** dla wielu projektów open source (np. Pandas, DuckDB, Parquet, Spark, Polars).
+- Apache Arrow to **standard wymiany danych** dla wielu projektów open source (np. [[Pandas]], [[DuckDB]], Parquet, Spark, Polars).
 - Eliminuje konieczność konwersji serializacji (JSON, CSV, protobuf itd.) — jedno wspólne API danych.
 - Wspiera strumieniowanie danych i dostarcza zintegrowany format „zero-copy”.
 
@@ -73,10 +73,10 @@ with pa.output_stream("dane.arrow") as sink:
 
 |Obszar|Jak pomaga Apache Arrow|
 |---|---|
-|**Data Science (Analytics)**|Szybka integracja Pandas, Numpy, Polars|
+|**Data Science (Analytics)**|Szybka integracja [[Pandas]], [[Numpy]], Polars|
 |**ETL & Big Data**|Szybkie dzielenie danych pomiędzy Spark ↔ Python|
-|**Lakehouse**|Format transportowy pomiędzy silnikami (Arrow ↔ Parquet)|
-|**SQL Engines**|Używany jako backend format w DuckDB, DataFusion, etc|
+|**[[Data Lakehouse\|Lakehouse]]**|Format transportowy pomiędzy silnikami (Arrow ↔ Parquet)|
+|**SQL Engines**|Używany jako backend format w [[DuckDB]], DataFusion, etc|
 |**Cloud/Streaming**|Kompatybilny z Kafka, Arrow Flight, gRPC zero-copy|
 
 ## Apache Arrow vs inne formaty
@@ -86,11 +86,11 @@ with pa.output_stream("dane.arrow") as sink:
 |**Arrow**|kolumnowy (w pamięci)|wymiana, compute in-memory|
 |**Parquet**|kolumnowy (na dysku)|storage + kompresja|
 |**CSV / JSON**|wierszowy (tekstowy)|wymiana, czytelność|
-|**ORC**|kolumnowy (na dysku)|storage w Hive|
+|**[[ORC]]**|kolumnowy (na dysku)|storage w [[Apache Hive\|Hive]]|
 
 # 💡 Przykład zastosowania
 
-System analityczny o wysokiej częstotliwości używa Apache Arrow do pośredniczenia między silnikiem Spark a aplikacją ML w Pythonie. Dzięki temu nie trzeba eksportować danych do CSV czy JSON — wszystko działa w pamięci, w czasie rzeczywistym, przy minimalnym opóźnieniu i bez konwersji.
+System analityczny o wysokiej częstotliwości używa Apache Arrow do pośredniczenia między silnikiem Spark a aplikacją [[Uczenie Maszynowe|ML]] w Pythonie. Dzięki temu nie trzeba eksportować danych do CSV czy JSON — wszystko działa w pamięci, w czasie rzeczywistym, przy minimalnym opóźnieniu i bez konwersji.
 
 ## 📌 Źródła
 
@@ -101,11 +101,11 @@ System analityczny o wysokiej częstotliwości używa Apache Arrow do pośrednic
 
 ## 👽 Brudnopis
 
-- Arrow = większa interoperacyjność p. open data stack
+- Arrow = większa interoperacyjność p. [[Stos Danych Otwartych|open data stack]]
 - Flight = RPC z transferem danych → zerokopiowy, streamingowy replacement for REST
 - Zmusza do myślenia w kolumnach, nie rekordach
 - staje się standardem "RAM-native format" real-time compute
-- DuckDB / Polars – mają natywne wsparcie dla Arrow jako primarnego typu
+- [[DuckDB]] / Polars – mają natywne wsparcie dla Arrow jako primarnego typu
 - Zero-copy + stream-friendly → idealne do dużych ilości danych w locie
 
 ---

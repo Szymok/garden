@@ -40,7 +40,7 @@ CDP spełnia kilka kluczowych funkcji:
 1. **Zbieranie danych (Data Ingestion):**  
     Dane spływają z różnych źródeł – strony WWW, aplikacji, POS, e-maili, systemów CRM. CDP przyjmuje zdarzenia (np. kliknięcia, zakupy) i atrybuty (np. wiek, lokalizacja).
     
-2. **Integracja i wzbogacanie danych:**  
+2. **Integracja i [[Data Enrichment|wzbogacanie danych]]:**  
     CDP porządkuje dane, identyfikuje tych samych klientów w wielu kanałach (ID stitching). Tworzy pojedynczy widok klienta.
     
 3. **Utrzymanie jakości danych:**  
@@ -60,7 +60,7 @@ CDP spełnia kilka kluczowych funkcji:
 |**CDP**|Zbieranie i integracja danych klienta|Szeroki (różne kanały)|Tak|PII – znany użytkownik|
 |**CRM**|Zarządzanie relacjami z klientami|Głównie sprzedaż i support|Częściowo|PII|
 |**DMP**|Targetowanie reklam (adtech)|Zanonimizowane|Nie|Anonimowe ID (cookies)|
-|**BI**|Raportowanie i analiza|Atrybutowe|Nie|Agregaty i miary|
+|**[[Business Intelligence\|BI]]**|Raportowanie i analiza|Atrybutowe|Nie|[[Rollup\|Agregaty]] i miary|
 
 ## Zastosowania
 

@@ -36,8 +36,8 @@ aliases:
 
 - Dane przechowywane są w osobnych blokach dla każdej kolumny tabeli.
 - Umożliwia szybkie agregacje, selektywne pobieranie wybranych kolumn i skuteczną kompresję.
-- Idealne do hurtowni danych, BI, raportowania – zapytania odczytujące wybrane kolumny z milionów wierszy.
-- Przykłady: **Apache Druid**, **ClickHouse**, **BigQuery**, **Snowflake**.
+- Idealne do hurtowni danych, [[Business Intelligence|BI]], raportowania – zapytania odczytujące wybrane kolumny z milionów wierszy.
+- Przykłady: **[[Apache Druid]]**, **ClickHouse**, **BigQuery**, **Snowflake**.
 
 **Zalety:**
 
@@ -67,7 +67,7 @@ aliases:
 
 |Technika|Przykłady zastosowania|Typowe bazy danych|
 |---|---|---|
-|Kolumnowe|Analityka, BI, hurtownie|Druid, BigQuery, ClickHouse|
+|Kolumnowe|Analityka, [[Business Intelligence\|BI]], hurtownie|Druid, BigQuery, ClickHouse|
 |Wierszowe|OLTP, systemy operacyjne|MySQL, Postgres, Oracle|
 
 ## Silnik wektorowy
@@ -79,9 +79,9 @@ aliases:
 
 **Przykłady silników:**
 
-- **DuckDB** – analizy OLAP na laptopie, Python, R.
-- **Photon Engine (Databricks)** – analiza danych w chmurze.
-- **Apache Arrow, Polars** (engine typu dataframe).
+- **[[DuckDB]]** – analizy OLAP na laptopie, Python, R.
+- **Photon Engine (Databricks)** – [[analiza danych]] w chmurze.
+- **[[Apache Arrow]], Polars** (engine typu [[DataFrames|dataframe]]).
 
 **Zalety:**
 
@@ -103,6 +103,6 @@ Analizy danych clickstream w platformie e-commerce: dane z milionów odsłon są
 
 - Kolumnowe – skanowanie, kompresja, agregacje, OLAP.
 - Wierszowe – CRUD, OLTP, wydajne aktualizacje pojedynczych rekordów.
-- Wektorowe – przetwarzanie masowe, SIMD, cache locality, DuckDB, Databricks Photon.
-- Wybór zależy od przypadku i obciążenia (transakcje vs analityka vs ML).
-- Bazy: DuckDB = wektorowy + kolumnowy, Druid = kolumnowy/OLAP, Postgres/MySQL = wierszowy.
+- Wektorowe – przetwarzanie masowe, SIMD, cache locality, [[DuckDB]], Databricks Photon.
+- Wybór zależy od przypadku i obciążenia (transakcje vs analityka vs [[Uczenie Maszynowe|ML]]).
+- Bazy: [[DuckDB]] = wektorowy + kolumnowy, Druid = kolumnowy/OLAP, Postgres/MySQL = wierszowy.

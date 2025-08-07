@@ -21,40 +21,40 @@ aliases:
 
 # 🎯 Definicja
 
-**Prompting Techniques** (Techniki tworzenia promptów) to zbiory strategii i wzorców stosowanych do skutecznego komunikowania się z dużymi modelami językowymi (LLM, np. GPT-4, Claude, Mistral, Llama) w celu uzyskania dokładnych, spójnych i przydatnych odpowiedzi. Właściwie zaprojektowany prompt definiuje nie tylko intencję, ale także kontekst, styl i format działania modelu.
+**Prompting Techniques** (Techniki tworzenia promptów) to zbiory strategii i wzorców stosowanych do skutecznego komunikowania się z dużymi modelami językowymi ([[Base LLM|LLM]], np. [[GPT-4]], Claude, Mistral, Llama) w celu uzyskania dokładnych, spójnych i przydatnych odpowiedzi. Właściwie zaprojektowany prompt definiuje nie tylko intencję, ale także kontekst, styl i format działania modelu.
 
 # 🔑 Kluczowe koncepcje
 
-- Odpowiednie zaprojektowanie promtu prowadzi do lepszego i bardziej użytecznego działania LLM.
-- Techniki promptowania pozwalają:
+- Odpowiednie zaprojektowanie promtu prowadzi do lepszego i bardziej użytecznego działania [[Base LLM|LLM]].
+- [[Prompt techniques|Techniki promptowania]] pozwalają:
     - poprawić trafność odpowiedzi,
     - zwiększyć kreatywność lub kontrolę,
     - rozbić złożone zadania na kroki,
     - wymusić określoną strukturę wyjściową.
 - W zależności od przypadku użycia — inne techniki będą skuteczniejsze.
 
-# 🧠 Techniki promptowania
+# 🧠 [[Prompt techniques|Techniki promptowania]]
 
 |Technika|Opis|
 |---|---|
-|**Zero-shot prompting**|Model otrzymuje tylko instrukcję — bez przykładów|
-|**Few-shot prompting**|Dodanie kilku przykładów, by „nauczyć” model struktury i kontekstu|
-|**Chain-of-Thought (CoT)**|Model generuje odpowiedź krok po kroku jako proces rozumowania|
+|**[[Zero-shot prompting]]**|Model otrzymuje tylko instrukcję — bez przykładów|
+|**[[Few-shot prompting]]**|Dodanie kilku przykładów, by „nauczyć” model struktury i kontekstu|
+|**Chain-of-Thought ([[Chain-of-Thought Prompting\|CoT]])**|Model generuje odpowiedź krok po kroku jako proces rozumowania|
 |**Reframing promptów**|Zmiana perspektywy pytania (np. jako ekspert, nauczyciel)|
-|**Role prompting**|Wyznaczenie roli modelu ("Zachowuj się jak psycholog...")|
+|**[[Roles\|Role]] prompting**|Wyznaczenie roli modelu ("Zachowuj się jak psycholog...")|
 |**Instruction + context**|Jasna komenda oraz dołączony materiał/kontekst do analizy|
 |**Refleksja / self-correction**|Proszenie modelu o analizę lub poprawienie własnej odpowiedzi|
 |**Multi-turn (chained prompts)**|Podzielone zadanie na wiele kroków i iteracyjna analiza|
 
 # 📚 Przykłady zastosowania
 
-## 1. Zero-shot Prompting
+## 1. [[Zero-shot Prompting]]
 
 „Przeanalizuj sentyment zdania: »To jest najlepsze, co mnie dzisiaj spotkało!«”
 
 → ✅ model rozpozna pozytywny sentyment mimo braku przykładów.
 
-## 2. Few-shot Prompting
+## 2. [[Few-shot Prompting]]
 
 ```text
 Tekst: "Nie podobał mi się ten produkt."  
@@ -74,7 +74,7 @@ Pytanie: Anna ma 3 jabłka, kupiła jeszcze 2. Każde kosztowało 1 zł. Ile wyd
 Odpowiedź: Po pierwsze, Anna miała 3 jabłka. Kupiła jeszcze 2, więc ma łącznie 5. Kupiła 2 → wydała 2 zł.
 ```
 
-## 4. Role Prompt
+## 4. [[Roles|Role]] Prompt
 
 „Jesteś ekspertem ds. bezpieczeństwa IT. Przeanalizuj poniższy atak i doradź jak się bronić.”
 
@@ -96,7 +96,7 @@ Odpowiedź: Po pierwsze, Anna miała 3 jabłka. Kupiła jeszcze 2, więc ma łą
 # ✅ Podsumowanie
 
 - Prompty są jak programy — ich składnia i struktura wpływają na wynik.
-- Z pomocą technik promptowania zwiększasz kontrolę i precyzję wyników z LLM.
+- Z pomocą technik promptowania zwiększasz kontrolę i precyzję wyników z [[Base LLM|LLM]].
 - Najlepsze zastosowania obejmują NLP, analitykę, interfejsy dialogowe, kodowanie i wiele innych.
 
 # 📌 Źródła
@@ -109,10 +109,10 @@ Odpowiedź: Po pierwsze, Anna miała 3 jabłka. Kupiła jeszcze 2, więc ma łą
 
 ## 👽 Brudnopis
 
-- prompt engineering = UX dla LLM
+- prompt engineering = UX dla [[Base LLM|LLM]]
 - prompt chaining = pipeline logiczny → toolformer style
 - tricki: quote, canonical form, instrukcja + dane wejściowe
-- CoT = must przy reasoning, code, math
+- [[Chain-of-Thought Prompting|CoT]] = must przy reasoning, code, math
 - Warto dodać: scoring promptów, feedback loop
 
 ---

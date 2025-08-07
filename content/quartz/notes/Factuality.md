@@ -20,21 +20,21 @@ aliases:
 
 # 🎯 Definicja
 
-**Factuality** w kontekście dużych modeli językowych (LLM) oznacza stopień, w jakim odpowiedzi generowane przez model są zgodne z rzeczywistością, oparte na zweryfikowanych faktach i nie zawierają zmyśleń (tzw. halucynacji). Poprawa factuality to kluczowy cel inżynierii promptów i projektowania nowoczesnych systemów opartych na AI.
+**Factuality** w kontekście dużych modeli językowych ([[Base LLM|LLM]]) oznacza stopień, w jakim odpowiedzi generowane przez model są zgodne z rzeczywistością, oparte na zweryfikowanych faktach i nie zawierają zmyśleń (tzw. halucynacji). Poprawa factuality to kluczowy cel inżynierii promptów i projektowania nowoczesnych systemów opartych na [[Uczenie Maszynowe|AI]].
 
 # 🔑 Kluczowe punkty
 
-- **LLM mogą „halucynować”** – generować informacje brzmiące prawdziwie, lecz nieistniejące w rzeczywistości.
-- **Odpowiednie promptowanie** modelu, kontekst i przykłady mogą znacząco ograniczyć halucynacje i zwiększyć dokładność.
+- **[[Base LLM|LLM]] mogą „halucynować”** – generować informacje brzmiące prawdziwie, lecz nieistniejące w rzeczywistości.
+- **Odpowiednie promptowanie** modelu, kontekst i przykłady mogą znacząco ograniczyć [[halucynacje]] i zwiększyć dokładność.
 - **Warto wymagać, by model przyznawał się do niewiedzy** ("Nie wiem", "?") zamiast zgadywać lub wymyślać.
 - **Dostarczanie źródeł kontekstowych** (np. fragmentów tekstów, konkretnych faktów) minimalizuje ryzyko generowania nieprawdziwych treści.
 - **Optymalizacja parametrów generacji** jak temperatura, top_p i inne ogranicza kreatywność na rzecz precyzji.
 
-# 📚 Jak zwiększyć factuality w LLM? 
+# 📚 Jak zwiększyć factuality w [[Base LLM|LLM]]? 
 
 ## 1. Dodanie kontekstu/faktów do promptu
 
-Umieszczając w prompcie fragmenty tekstów, artykułów lub informacje z baz wiedzy (np. Wikipedia), wyraźnie wskazujesz modelowi, na czym ma bazować w odpowiedzi. To przykład podejścia retrieval-augmented generation (RAG).
+Umieszczając w prompcie fragmenty tekstów, artykułów lub informacje z baz wiedzy (np. Wikipedia), wyraźnie wskazujesz modelowi, na czym ma bazować w odpowiedzi. To przykład podejścia [[Retrieval Augmented Generation (RAG)|retrieval-augmented generation]] ([[RAG]]).
 
 **Przykład:**
 
@@ -61,7 +61,7 @@ Model, widząc taki wzorzec, chętniej przyzna się do niewiedzy zamiast zmyśla
 
 ## 3. Regulacja parametrów generacji
 
-Obniż temperaturę (temperature) i/lub top_p (nucleus sampling) w API, by model był mniej kreatywny i bardziej przewidywalny. Dodatkowo, w promptach zalecaj precyzję i powstrzymaj się od zgadywania.
+Obniż temperaturę (temperature) i/lub top_p ([[Top P|nucleus sampling]]) w API, by model był mniej kreatywny i bardziej przewidywalny. Dodatkowo, w promptach zalecaj precyzję i powstrzymaj się od zgadywania.
 
 **Przykład instrukcji:**
 
@@ -77,9 +77,9 @@ Dodaj do promptu warunek: nie odpowiadaj bez cytatu albo napisz „brak danych�
 
 # 💡 Jak jeszcze poprawić factuality?
 
-- **Używanie systemu z zewnętrznym wyszukiwaniem** (np. LangChain + Google/Bing/Wikipedia API), by najpierw wyszukiwać fakty, a dopiero potem generować odpowiedź.
+- **Używanie systemu z zewnętrznym wyszukiwaniem** (np. [[LangChain]] + Google/Bing/Wikipedia API), by najpierw wyszukiwać [[fakty]], a dopiero potem generować odpowiedź.
 - **Weryfikacja ex post** – każda odpowiedź modelu może być ponownie sprawdzona, np. przez drugi model lub dedykowany algorytm fakt-checkingowy.
-- **Explicit reasoning** – stosowanie łańcucha myśli (chain-of-thought, CoT) z prośbą o uzasadnienie odpowiedzi zwiększa szanse na wyłapanie zmyśleń.
+- **Explicit reasoning** – stosowanie łańcucha myśli (chain-of-thought, [[Chain-of-Thought Prompting|CoT]]) z prośbą o uzasadnienie odpowiedzi zwiększa szanse na wyłapanie zmyśleń.
 
 # 📌 Podsumowanie w tabeli
 
@@ -113,7 +113,7 @@ Model, ćwiczony na takich promptach, będzie lepiej unikał halucynacji faktów
 
 - Factuality = ograniczenie halucynacji, odpowiedzi opartych na domysłach
 - Efektywne: wzorce pytań z "?", explicit chain-of-thought, kontekst source, niska temperatura
-- Najlepsze efekty przy RAG i silnym promptowaniu z asetami źródłowymi
+- Najlepsze efekty przy [[RAG]] i silnym promptowaniu z asetami źródłowymi
 - Możliwość łączenia: explicit reasoning + context + hybrydy z narzędziami
 - Propozycja: test na nieistniejące nazwiska, fantasy, liczby losowe, entiti o małej popularności
 - Zawsze pilnować, by model miał prawo napisać "nie wiem", nawet kosztem mniejszego "odczuwanego" IQ

@@ -28,26 +28,26 @@ aliases:
 - **ELT:** Ładowanie surowych danych do hurtowni — transformacje wykonywane na miejscu przez silnik systemu docelowego.
 - **Wydajność:** ELT korzysta z optymalizacji i skalowalności nowoczesnych rozwiązań chmurowych/warehousów.
 - **Elastyczność:** ELT ułatwia późniejsze modyfikacje i eksperymenty, ETL wymaga wcześniejszego przewidzenia wszystkich przypadków użycia.
-- **Demokratyzacja pracy z danymi:** ELT (np. dbt, SQL) otwiera możliwość transformacji analitykom, nie tylko inżynierom.
+- **Demokratyzacja pracy z danymi:** ELT (np. [[dbt]], SQL) otwiera możliwość transformacji analitykom, nie tylko inżynierom.
 
 # 📚 Szczegółowe wyjaśnienie
 
 ## ETL – klasyczny paradygmat
 
 - Dane są najpierw pobierane z systemu źródłowego, następnie oczyszczane, scalane, mapowane i dopiero potem ładowane do systemu docelowego (np. Oracle, Teradata).
-- Typowe środowiska ETL: BI lat 90. i 2000, gdzie miejsce przechowywania było drogie a transformacje musiały minimalizować objętość transferowanych danych.
+- Typowe środowiska ETL: [[Business Intelligence|BI]] lat 90. i 2000, gdzie miejsce przechowywania było drogie a transformacje musiały minimalizować objętość transferowanych danych.
 - Narzędzia: Informatica, IBM DataStage, SSIS, Talend.
 
 ## ELT – nowoczesne podejście chmurowe
 
-- Pozyskujemy dane ze źródeł, ładujemy je “as is” do wysoko skalowalnej hurtowni lub lakehouse’a (np. Snowflake, BigQuery, Redshift).
-- Transformacje wykonywane są w docelowej bazie — szybciej, taniej i z możliwością versionowania oraz testowania (np. dbt).
-- Narzędzia: dbt, Dataform (transformacje); Airbyte, Fivetran, Meltano (Extract + Load); orchestratory: Airflow, Dagster.
+- Pozyskujemy dane ze źródeł, ładujemy je “as is” do wysoko skalowalnej hurtowni lub [[Data Lakehouse|lakehouse]]’a (np. Snowflake, BigQuery, Redshift).
+- Transformacje wykonywane są w docelowej bazie — szybciej, taniej i z możliwością versionowania oraz testowania (np. [[dbt]]).
+- Narzędzia: [[dbt]], Dataform (transformacje); Airbyte, Fivetran, Meltano (Extract + Load); orchestratory: [[Apache Airflow|Airflow]], [[Dagster]].
 
 ## Ilustracja podejścia
 
 - **ETL:** Extract → Transform → Load
-- **ELT:** Extract → Load → Transform (transformacje na surowych danych w hurtowni SQL/lakehouse)
+- **ELT:** Extract → Load → Transform (transformacje na surowych danych w hurtowni SQL/[[Data Lakehouse|lakehouse]])
 
 # ⚖️ Tabela porównawcza ETL vs ELT
 
@@ -58,7 +58,7 @@ aliases:
 |Elastyczność raportowania|Ograniczona do zdefiniowanych T|Maksymalna, raporty “ad hoc”|
 |Koszty zmian|Wysokie – reprocessing danych|Niskie – dane surowe zawsze dostępne|
 |Wymagania techniczne|Programista/inżynier ETL|Analityk SQL, data engineer|
-|Typowe platformy|On-premise, klasyczna hurtownia|Chmura, cloud warehouse/lakehouse|
+|Typowe platformy|On-premise, klasyczna hurtownia|Chmura, cloud warehouse/[[Data Lakehouse\|lakehouse]]|
 
 # 🚧 Wady ETL w porównaniu z ELT
 
@@ -73,7 +73,7 @@ aliases:
 Instytucja finansowa korzysta z narzędzia SSIS do pobierania dziennych danych o transakcjach, filtruje niepotrzebne rekordy i zarządza typami pól przed załadowaniem do hurtowni Oracle. Dane w hurtowni zawierają tylko zdefiniowane wcześniej miary i wymiarów — ponowna zmiana raportu wymaga kosztownego reprocessingu całości źródeł.
 
 **ELT:**  
-Start-up e-commerce wykorzystuje Airbyte i dbt do ładowania wszystkich danych clickstream “as is” do BigQuery, gdzie analitycy samodzielnie modelują i testują transformacje SQL bez dotykania oryginalnych rekordów. Firma zyskuje szybki czas wdrożenia oraz natychmiastowy dostęp do surowej historii.
+Start-up e-commerce wykorzystuje Airbyte i [[dbt]] do ładowania wszystkich danych clickstream “as is” do BigQuery, gdzie analitycy samodzielnie modelują i testują transformacje SQL bez dotykania oryginalnych rekordów. Firma zyskuje szybki czas wdrożenia oraz natychmiastowy dostęp do surowej historii.
 
 # 🤖 Porównanie narzędzi ETL i ELT
 
@@ -90,7 +90,7 @@ Szczegółowa porównywarka narzędzi, w tym integracje ze źródłami i miejsca
 # 👽 Brudnopis
 
 - ETL: transformacja upstream, stricte pipeline, schema on write, bardziej kontrola jakości
-- ELT: raw data, transformacje SQL/dbt, versionowanie, elastyczny downstream
+- ELT: raw data, transformacje SQL/[[dbt]], versionowanie, elastyczny downstream
 - Nowoczesne integratory (Fivetran, Airbyte, Meltano), warehouse’y (BigQuery, Snowflake)
 - Różnice kosztowe, wydajnościowe, team skills
 - Przykład: startup vs korporacja, e-commerce vs bankowość

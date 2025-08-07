@@ -22,12 +22,12 @@ aliases:
 
 # 🎯 Definicja
 
-**Simple Model Extensions (SME)** to mechanizm w Ataccama ONE umożliwiający rozszerzanie modelu metadanych o dodatkowe, konfigurowalne właściwości przypisywane do standardowych encji systemowych, takich jak źródła danych, elementy katalogowe, terminy słownikowe, reguły jakości i inne. Dzięki temu można dodawać własne atrybuty opisu bez konieczności tworzenia dedykowanego modelu specjalistycznego.
+**Simple Model Extensions (SME)** to mechanizm w Ataccama ONE umożliwiający rozszerzanie modelu metadanych o dodatkowe, konfigurowalne właściwości przypisywane do standardowych encji systemowych, takich jak źródła danych, elementy katalogowe, [[Glossary Terms|terminy słownikowe]], reguły jakości i inne. Dzięki temu można dodawać własne atrybuty opisu bez konieczności tworzenia dedykowanego modelu specjalistycznego.
 
 # 🔑 Kluczowe punkty
 
 - 🧩 Umożliwiają dodawanie pól użytkownika na poziomie obiektów modelu metadanych (np. `business_criticality`, `compliance_tag`, `business_owner`).
-- ⚙️ Obsługiwane typy danych: tekst, liczba, boolean, data, lista (LOV), odniesienie (reference).
+- ⚙️ Obsługiwane typy danych: tekst, liczba, boolean, data, lista ([[List of Values (Ataccama)|LOV]]), odniesienie (reference).
 - 🏷️ Pola mogą być wykorzystywane w filtrach, widokach tabelarycznych, workflow lub regułach walidacji.
 - 🔁 Fields typu „Reference” pozwalają na powiązanie z innymi obiektami (np. relacja do właściciela jako user object).
 - 🔐 Działają zgodnie z uprawnieniami – mogą być widoczne globalnie, projektowo lub lokalnie.
@@ -53,12 +53,12 @@ Standardowy model Ataccama ONE obejmuje zestaw predefiniowanych pól dla każdeg
 |Boolean|Pole typu prawda/fałsz|
 |Number|Wartość liczby całkowitej lub zmiennoprzecinkowej|
 |Date|Data (np. data przeglądu, od kiedy obowiązuje)|
-|List (LOV)|Lista dopuszczalnych wartości, np. `["Low", "Medium", "High"]`|
+|List ([[List of Values (Ataccama)\|LOV]])|[[List of Values (Ataccama)\|Lista dopuszczalnych wartości]], np. `["Low", "Medium", "High"]`|
 |Reference|Odniesienie do innego obiektu z systemu, np. innego użytkownika, reguły|
 
 ## Gdzie stosować SME?
 
-- 🌐 Globalnie – np. każde źródło danych ma przypisany „Data Owner”.
+- 🌐 Globalnie – np. każde [[Data Source|źródło danych]] ma przypisany „Data Owner”.
 - 🗂️ W obrębie katalogu – nadanie tagów, kategorii i klasyfikatorów niestandardowych.
 - 📖 W słowniku pojęć – np. dowiązanie obiektu z zewnętrznego repozytorium (referencja do dokumentacji).
 - 📏 W regułach jakości – np. „aktywna reguła DQ?” typu Boolean.
@@ -77,7 +77,7 @@ Standardowy model Ataccama ONE obejmuje zestaw predefiniowanych pól dla każdeg
 
 # 💡 Przykład zastosowania
 
-Dodanie pola „Compliance Impact” typu `LOV` do każdego elementu katalogowego, z trzema wartościami: `Low`, `Moderate`, `Critical`.
+Dodanie pola „Compliance Impact” typu `List of Values (Ataccama)|LOV` do każdego elementu katalogowego, z trzema wartościami: `Low`, `Moderate`, `Critical`.
 
 ```python
 create_model_extension(
@@ -105,4 +105,4 @@ Pole to można potem używać do filtrowania obiektów podczas audytu lub budowa
 - Pozwala zrezygnować z Excela / Confluence jako repozytorium „meta-metadanych”
 - Alternatywa do budowy własnego modelu customowego – szybciej, łatwiej zarządzać
 - Można łączyć z workflow, raportami, wyszukiwarką, widokami agregacyjnymi
-- Dobrze działa z LOV i typem referencyjnym jako „manager” lub „dokument bazowy”
+- Dobrze działa z [[List of Values (Ataccama)|LOV]] i typem referencyjnym jako „manager” lub „dokument bazowy”

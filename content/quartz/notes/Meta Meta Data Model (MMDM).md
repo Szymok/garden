@@ -23,7 +23,7 @@ aliases:
 
 - **Opisuje strukturę metadanych**: MMDM definiuje zasady, typy obiektów, ich właściwości i zależności między nimi w modelu metadanych Ataccama.
 - **Oddziela logikę aplikacyjną od struktury danych**: Modyfikacje MMDM zmieniają sposób, w jaki system obsługuje nowe typy encji, relacje, dziedziczenie i atrybuty – bez konieczności przeprogramowywania aplikacji.
-- **Graficzna wizualizacja**: MMDM można eksplorować i edytować przez graficzny model w sekcji Organization → Application Settings → Metadata Model.
+- **Graficzna [[wizualizacja]]**: MMDM można eksplorować i edytować przez graficzny model w sekcji Organization → Application Settings → Metadata Model.
 - **Rola uprawnień**: Do edytowania MMDM wymagana jest rola z uprawnieniem `application-admin`.
 - **Model napędzany metadanymi (metadata-driven)**: System Ataccama wykorzystuje MMDM do generowania interfejsów, walidacji i zachowań biznesowych na podstawie dynamicznie zdefiniowanego modelu.
 
@@ -34,14 +34,14 @@ aliases:
 W klasycznym podejściu metadane opisują dane (np. tabela: Product ma kolumnę Name). MMDM idzie poziom wyżej: definiuje, _jak_ opisujemy te tabele i kolumny — czyli struktury, typy encji i zasady relacji między nimi.
 
 - **Obiekty modelu**: Każdy element MMDM opisuje typ encji (np. Person, Dataset) oraz możliwe właściwości, relacje, dziedziczenie.
-- **Dziedziczenie i relacje**: Pozwala na tworzenie hierarchii typów oraz referencje – np. encja Person może mieć relacje do ról (Role), a dziedziczenie atrybutów umożliwia reużywalność schematów.
+- **Dziedziczenie i relacje**: Pozwala na tworzenie hierarchii typów oraz referencje – np. encja Person może mieć relacje do ról ([[Roles|Role]]), a dziedziczenie atrybutów umożliwia reużywalność schematów.
 
 ### Typy relacji i własności:
 
-- **AEE (Array of Embedding Entities)** – lista encji wbudowanych w inne obiekty (np. lista adresów osoby – integralna część encji; usuwane razem z obiektem głównym).
+- **AEE (Array of [[Embedding]] Entities)** – lista encji wbudowanych w inne obiekty (np. lista adresów osoby – integralna część encji; usuwane razem z obiektem głównym).
 - **SRE (Single of Referencing Entities)** – pojedyncze referencje do niezależnych obiektów (np. rola przypisana osobie; samodzielne życie, nieusuwane automatycznie).
-- **Embedding vs. Referencing**:
-    - _Embedding_: część składowa, usuwana wraz z głównym obiektem.
+- **[[Embedding]] vs. Referencing**:
+    - _[[Embedding]]_: część składowa, usuwana wraz z głównym obiektem.
     - _Referencing_: powiązanie do istniejącego obiektu, pozostaje po usunięciu odnośnika.
 
 ## Modyfikacja w Ataccama ONE
@@ -86,5 +86,5 @@ class Claim(Document):
 - Edycja MMDM powoduje nowe encje, dziedziczenie, typy relacji w całym Ataccama ONE.
 - Graficzny edytor, uprawnienia “application-admin”.
 - Wpływa na generowanie interfejsu, mechanizmy walidacji, automatyczne akcje.
-- Typy relacji: embedding (część integralna), referencing (dowiązanie do innych, autonomicznych obiektów).
+- Typy relacji: [[embedding]] (część integralna), referencing (dowiązanie do innych, autonomicznych obiektów).
 - Zmiana metadanych = wpływ na zachowania biznesowe; zmiana meta-metadanych = wpływ na strukturę całej aplikacji (metadata-driven).

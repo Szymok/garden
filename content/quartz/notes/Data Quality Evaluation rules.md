@@ -21,7 +21,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Data Quality Evaluation Rules** (reguły ewaluacji jakości danych) to zestandaryzowane reguły walidacyjne stosowane do oceny poprawności, spójności, kompletności i zgodności danych w ramach obiektów katalogowych (Catalog Items). Reguły te są podstawowym narzędziem pomiaru i monitorowania jakości danych w systemach data governance, takich jak Ataccama ONE.
+**Data Quality Evaluation [[Rules]]** (reguły ewaluacji jakości danych) to zestandaryzowane reguły walidacyjne stosowane do oceny poprawności, spójności, kompletności i zgodności danych w ramach obiektów katalogowych ([[Catalog Items]]). Reguły te są podstawowym narzędziem pomiaru i monitorowania jakości danych w systemach [[data governance]], takich jak Ataccama ONE.
 
 # 🔑 Kluczowe punkty
 

@@ -41,17 +41,17 @@ Zasady działania klasyfikacji:
 
 - Dane są oznaczane ikoną kłódki – sygnałem ograniczeń widoczności.
 - Użytkownicy/grupy bez przypisanego tagu nie mogą przeglądać, edytować ani eksportować danych.
-- Widoczność danych profilowych (profilowanie danych) i insightów jakości danych (DQ insights) również jest ograniczona dla danych sklasyfikowanych.
+- Widoczność danych profilowych ([[Data Profiling|profilowanie danych]]) i insightów jakości danych (DQ insights) również jest ograniczona dla danych sklasyfikowanych.
 - Osoby z pełnym dostępem (Full access) mogą przeglądać klasyfikowane dane oraz udzielać dostępu innym.
 
-## Integracja z procesami Data Governance
+## Integracja z procesami [[Data Governance]]
 
 Data Protection Classification pełni kluczową rolę w zapewnieniu:
 
 - zgodności z lokalnymi i globalnymi regulacjami prawnymi,
 - bezpieczeństwa informacji wrażliwych,
 - przejrzystości w zarządzaniu dostępami,
-- kontroli w ramach modelu ról (Role-Based Access Control – RBAC).
+- kontroli w ramach modelu ról ([[Roles|Role]]-Based Access Control – RBAC).
 
 # 💡 Przykład zastosowania
 
@@ -60,7 +60,7 @@ W organizacji przetwarzającej dane klientów (np. bank), administrator danych m
 ## 📌 Źródła
 
 - [Ataccama Documentation – Data Protection Classification](https://docs.ataccama.com/)
-- [Data Classification: A Data Governance Best Practice – DATAVERSITY](https://www.dataversity.net/data-classification-a-data-governance-best-practice/)
+- [Data Classification: A [[Data Governance]] Best Practice – DATAVERSITY](https://www.dataversity.net/data-classification-a-data-governance-best-practice/)
 
 ## 👽 Brudnopis
 
@@ -69,6 +69,6 @@ W organizacji przetwarzającej dane klientów (np. bank), administrator danych m
 - Blokowanie nieautoryzowanego dostępu.
 - Ikona kłódki = dane zastrzeżone.
 - Kluczowe dla RODO, HIPAA, PCI-DSS.
-- Zarządzanie poprzez dostęp oparty o role i przypisanie tagu.
+- Zarządzanie poprzez dostęp oparty o [[Roles|role]] i przypisanie tagu.
 - Dostęp do profilowania i DQ insights też kontrolowany.
 - Przykład: dane klientów w bankowości, tylko compliance ma pełny dostęp.

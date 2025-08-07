@@ -40,7 +40,7 @@ W SQL Server znajduje się kilka wbudowanych baz danych systemowych:
 
 - Zawiera:
     - **Loginy** (logins) – konta użytkowników mające dostęp do serwera SQL
-    - **Role serwerowe** – przypisania uprawnień na poziomie serwera
+    - **[[Roles|Role]] serwerowe** – przypisania uprawnień na poziomie serwera
     - Możliwa integracja z Active Directory
 
 ## Server Objects

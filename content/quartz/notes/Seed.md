@@ -43,4 +43,4 @@ W tym przypadku ustawienie seeda na wartość 42 gwarantuje, że każdorazowe ur
 ## 📌 Źródła
 
 - Dokumentacja Python: random.seed()
-- "Introduction to Machine Learning" - Alpaydin Ethem
+- "Introduction to [[Uczenie Maszynowe|Machine Learning]]" - Alpaydin Ethem

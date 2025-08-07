@@ -26,7 +26,7 @@ aliases:
 
 - **Trzy bramy (forget, input, output)** decydują, które informacje zachować, które nadpisać oraz kiedy generować wyjście.
 - **Przechowywanie długoterminowych zależności:** LSTM uczy się, które dane są istotne na różnych etapach sekwencji (np. w zdaniach, sygnałach, muzyce).
-- **Rozwiązuje “vanishing gradient problem”** – stabilnie uczy się na długich sekwencjach.
+- **Rozwiązuje “vanishing [[gradient]] problem”** – stabilnie uczy się na długich sekwencjach.
 - **Szerokie zastosowania:** Rozpoznawanie mowy, przetwarzanie języka naturalnego, komponowanie muzyki, analiza szeregów czasowych, rozwój leków.
 - **Podstawa nowoczesnych narzędzi do generowania tekstu** i przetwarzania sygnałów sekwencyjnych.
 
@@ -76,9 +76,9 @@ W nowoczesnych narzędziach do generowania tekstu (np. predykcja następnego sł
 
 # 👽 Brudnopis
 
-- LSTM = special Recurrent Neural Network resisting vanishing gradient
+- LSTM = special Recurrent Neural Network resisting vanishing [[gradient]]
 - Architecture: cell state, 3 gates (forget/input/output)
 - Bramy = dynamiczne sterowanie zapomnieniem, zapisem, wyjściem
-- Szerokie zastosowania: tekst, voice, series (np. prognozy pogodowe, wykrywanie anomalii)
+- Szerokie zastosowania: tekst, voice, series (np. prognozy pogodowe, [[Anomaly Detection|wykrywanie anomalii]])
 - Przewaga nad klasycznym RNN
 - Komponent istotny w generowaniu tekstu i uczeniu sekwencji

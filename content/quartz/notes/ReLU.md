@@ -28,7 +28,7 @@ aliases:
 - Znacznie przyspiesza uczenie głębokich sieci dzięki małemu kosztowi obliczeniowemu.
 - Unika zjawiska saturacji, typowego dla funkcji sigmoid i tanh.
 - Działa dobrze w warstwach ukrytych sieci neuronowych.
-- Może prowadzić do problemu tzw. "martwych neuronów" — neurony w których gradient wynosi 0 i przestają się uczyć.
+- Może prowadzić do problemu tzw. "martwych neuronów" — neurony w których [[gradient]] wynosi 0 i przestają się uczyć.
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -53,7 +53,7 @@ Na wykresie funkcja przypomina odciętą od dołu prostą. Przepuszcza tylko dod
 
 - **Prostota implementacji** — nie wymaga kosztownych operacji takich jak wykładniki.
 - **Szybka propagacja gradientów.**
-- **Mniejsze ryzyko wystąpienia vanishing gradient (niż np. sigmoid lub tanh).**
+- **Mniejsze ryzyko wystąpienia vanishing [[gradient]] (niż np. sigmoid lub tanh).**
 
 ## Wady i ograniczenia
 
@@ -97,4 +97,4 @@ ReLU aktywuje neurony tylko dla wartości większych od zera – dzięki temu si
 - część standardowej warstwy aktywacji w pytorch/keras
 - aktywuje tylko, gdy wejście > 0
 - idea: tylko dodatnie sygnały przechodzą dalej
-- przykład kodu dla torch/keras + visualization wykresu? (do rozbudowania)
+- przykład kodu dla torch/keras + [[Wizualizacja|visualization]] wykresu? (do rozbudowania)

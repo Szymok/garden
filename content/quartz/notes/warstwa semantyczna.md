@@ -20,11 +20,11 @@ aliases:
 
 # 🎯 Definicja
 
-**Warstwa Semantyczna (ang. Semantic Layer)** to pośrednia warstwa logiczna łącząca dane surowe ze źródeł i przekształcone modele w hurtowni z aplikacjami analitycznymi, BI oraz innymi narzędziami końcowymi. Umożliwia spójne i centralne definiowanie miar oraz wymiarów — zapewniając jednolitą interpretację danych, bez względu na to, z którego narzędzia użytkownik korzysta. Warstwa ta tłumaczy zapytania użytkowników lub aplikacji na instrukcje SQL, REST lub GraphQL — bez potrzeby reimplementacji logiki po stronie BI.
+**Warstwa Semantyczna (ang. Semantic Layer)** to pośrednia warstwa logiczna łącząca dane surowe ze źródeł i przekształcone modele w hurtowni z aplikacjami analitycznymi, [[Business Intelligence|BI]] oraz innymi narzędziami końcowymi. Umożliwia spójne i centralne definiowanie miar oraz wymiarów — zapewniając jednolitą interpretację danych, bez względu na to, z którego narzędzia użytkownik korzysta. Warstwa ta tłumaczy zapytania użytkowników lub aplikacji na instrukcje SQL, REST lub GraphQL — bez potrzeby reimplementacji logiki po stronie [[Business Intelligence|BI]].
 
 # 🔑 Kluczowe punkty
 
-- **Jedna definicja miar i metryk** dostępna we wszystkich systemach konsumenckich (BI, notatniki, aplikacje).
+- **Jedna definicja miar i metryk** dostępna we wszystkich systemach konsumenckich ([[Business Intelligence|BI]], [[Notatniki (Notebooks)|notatniki]], aplikacje).
 - **Separacja logiki od warstw prezentacyjnych** – dzięki czemu zmiana definicji wskaźnika nie powoduje chaosu downstream.
 - **Standaryzacja i demokratyzacja danych** – użytkownicy biznesowi i techniczni korzystają z tej samej logiki raportowej.
 - **Obsługuje wiele formatów zapytań** – SQL, REST, GraphQL.
@@ -34,7 +34,7 @@ aliases:
 
 ## Co obejmuje Semantyczna Warstwa?
 
-- **Definicje miar** (np. MRR, LTV, churn rate), więcej: Warstwa Miary
+- **Definicje miar** (np. MRR, LTV, churn rate), więcej: [[Warstwa Miary]]
 - **Powiązania wymiarów** (np. klient, region, produkt)
 - **Logika czasu (daty, zakresy, agregacje)**
 - **Tłumaczenie języka zapytania** (np. użytkownik pyta RESTem lub przez dashboard → zapytanie SQL)
@@ -42,7 +42,7 @@ aliases:
 
 ## Dlaczego warto wdrożyć?
 
-W organizacji bez warstwy semantycznej, każda aplikacja (BI, Python, Looker, dashboard) implementuje swoje własne wersje KPI (np. różnych “aktywnych użytkowników”). Efektem są niespójne wskaźniki, brak zaufania do danych i powielona logika.
+W organizacji bez warstwy semantycznej, każda aplikacja ([[Business Intelligence|BI]], Python, Looker, dashboard) implementuje swoje własne wersje [[KPI]] (np. różnych “aktywnych użytkowników”). Efektem są niespójne wskaźniki, brak zaufania do danych i powielona logika.
 
 Dzięki warstwie semantycznej:
 
@@ -54,10 +54,10 @@ Dzięki warstwie semantycznej:
 
 |Narzędzie|Opis|
 |---|---|
-|dbt Semantic Layer|Definicje metryk, dostępne przez API|
-|Cube.dev|Headless BI z cache, GraphQL, REST|
+|[[dbt]] Semantic Layer|Definicje metryk, dostępne przez API|
+|Cube.dev|Headless [[Business Intelligence\|BI]] z cache, GraphQL, REST|
 |LookML (Looker)|Semantyczne modele + przeliczane metryki|
-|Lightdash|Open Source warstwa semantyczna dla dbt|
+|Lightdash|Open Source warstwa semantyczna dla [[dbt]]|
 |MetricFlow (Transform)|DSL do definiowania metryk + deduplikacja logiki|
 
 ## Architektura — gdzie leży warstwa semantyczna?
@@ -69,21 +69,21 @@ Warstwa transformacji (ETL, dbt)
         ↓
 🎯 Warstwa semantyczna (miary, wymiary, uprawnienia)
         ↓
-🧑 BI / Dashboards / ML / API / aplikacje danych
+🧑 [[Business Intelligence|BI]] / [[Analiza Danych|Dashboards]] / [[Uczenie Maszynowe|[[Uczenie Maszynowe|ML]] / API / aplikacje danych
 ```
 
-## Kluczowy komponent → Warstwa Miary
+## Kluczowy komponent → [[Warstwa Miary]]
 
-Podwarstwa semantyczna — Warstwa Miary — zawiera logikę agregacji metryk i definicje KPI. Zapewnia zasadę DRY (Don’t Repeat Yourself) i kontrolę wersji metryk.
+Podwarstwa semantyczna — [[Warstwa Miary]] — zawiera logikę agregacji metryk i definicje [[KPI]]. Zapewnia zasadę DRY (Don’t Repeat Yourself) i kontrolę wersji metryk.
 
 # 💡 Przykład zastosowania
 
 Organizacja SaaS definiuje miarę "Monthly Active User (MAU)" w jednym miejscu — warstwie semantycznej.  
 Dzięki temu:
 
-- Dashboard w Looker, notatnik w Jupyterze oraz raport w Power BI pokazują tę samą wartość.
+- Dashboard w Looker, notatnik w Jupyterze oraz raport w Power [[Business Intelligence|BI]] pokazują tę samą wartość.
 - Zmiana definicji (np. tylko użytkownicy z pełnym onboardingiem) skutkuje automatyczną aktualizacją raportów i alertów we wszystkich kanałach.
-- Zespół ML korzysta z semantycznej warstwy w GraphQL API do tränowania modeli churnów, co daje spójność definicji między raportowaniem a działaniami predykcyjnymi.
+- Zespół [[Uczenie Maszynowe|ML]] korzysta z semantycznej warstwy w GraphQL API do tränowania modeli churnów, co daje spójność definicji między raportowaniem a działaniami predykcyjnymi.
 
 ## 📌 Źródła
 
@@ -94,10 +94,10 @@ Dzięki temu:
 
 # 👽 Brudnopis
 
-- Główne zadanie: abstrakcja warstwy danych, deklaratywna definicja miar → eksport do BI
+- Główne zadanie: abstrakcja warstwy danych, deklaratywna definicja miar → eksport do [[Business Intelligence|BI]]
 - Wsparcie: SQL, REST, GraphQL → klient wybiera, backend tłumaczy
 - reużycie metryk (DRY), kontrola zmian, audyt
 - spójność LTV/ARR/MAU w organizacji: jedno źródło prawdy
-- narzędzia: dbt metrics, Cube API, Lightdash, LookML, AtScale, MetricFlow
-- relacja: Semantyczna = model + logic + metadata (+ warstwa miary)
-- nowy standard w MDS 2.0 i headless BI
+- narzędzia: [[dbt]] metrics, Cube API, Lightdash, LookML, AtScale, MetricFlow
+- relacja: Semantyczna = model + logic + metadata (+ [[warstwa miary]])
+- nowy standard w [[Nowoczesny Stos Danych|MDS]] 2.0 i headless [[Business Intelligence|BI]]

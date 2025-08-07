@@ -21,7 +21,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Jinja** to szybki, ekspresyjny silnik szablonów tekstowych oparty na języku Python, który pozwala dynamicznie tworzyć treści poprzez wstawianie wartości, warunków i pętli w ramach szablonów. Jinja2 jest szeroko wykorzystywany w aplikacjach webowych (Flask, Django), narzędziach DevOps oraz — szczególnie — w **data engineeringu**, m.in. w narzędziu dbt.
+**Jinja** to szybki, ekspresyjny silnik szablonów tekstowych oparty na języku Python, który pozwala dynamicznie tworzyć treści poprzez wstawianie wartości, warunków i pętli w ramach szablonów. Jinja2 jest szeroko wykorzystywany w aplikacjach webowych (Flask, Django), narzędziach [[DevOps]] oraz — szczególnie — w **data engineeringu**, m.in. w narzędziu [[dbt]].
 
 # 🔑 Kluczowe punkty
 
@@ -66,12 +66,12 @@ WHERE is_active = true
 {% endif %}
 ```
 
-## Zastosowanie w dbt
+## Zastosowanie w [[dbt]]
 
-W kontekście dbt (data build tool):
+W kontekście [[dbt]] ([[dbt|data build tool]]):
 
 - Szablony `.sql` są renderowane przy każdym przebudowaniu modelu.
-- Wewnętrzne zmienne jak `{{ ref() }}`, `{{ var() }}`, `{{ config() }}` są obsługiwane przez parser dbt + silnik Jinja.
+- Wewnętrzne zmienne jak `{{ ref() }}`, `{{ var() }}`, `{{ config() }}` są obsługiwane przez parser [[dbt]] + silnik Jinja.
 - Można pisać makra w plikach `.sql` lub `.yml` i wykorzystywać je wielokrotnie.
 
 Przykład:
@@ -86,7 +86,7 @@ Przykład:
 
 - Dynamika zapytań SQL (filtry, warunki, generatory kolumn)
 - Generowanie stron HTML (np. ze zmiennej treści)
-- Konfiguracje YAML (np. Ansible, dbt manifest, GitHub workflows)
+- Konfiguracje YAML (np. Ansible, [[dbt]] manifest, GitHub workflows)
 - Szablonowanie kodów testowych, dokumentacyjnych lub mailowych
 
 # 💡 Przykład użycia
@@ -96,7 +96,7 @@ Zespół inżynierii danych chce stworzyć 30 modeli SQL zawierających różne 
 ## 📌 Źródła
 
 - Oficjalna dokumentacja: [https://jinja.palletsprojects.com/](https://jinja.palletsprojects.com/)
-- dbt docs: [https://docs.getdbt.com/docs/build/jinja-macros](https://docs.getdbt.com/docs/build/jinja-macros)
+- [[dbt]] docs: [https://docs.getdbt.com/docs/build/jinja-macros](https://docs.getdbt.com/docs/build/jinja-macros)
 - Intro tutorial: [https://realpython.com/primer-on-jinja-templating/](https://realpython.com/primer-on-jinja-templating/)
 - Jinja Cheatsheet: [https://quickref.me/jinja](https://quickref.me/jinja)
 
@@ -104,7 +104,7 @@ Zespół inżynierii danych chce stworzyć 30 modeli SQL zawierających różne 
 
 - render() = funkcja w Pythonie do przetworzenia szablonu
 - Można łączyć Jinja z YAML, JSON, Markdown
-- Dużo użycia w: Airflow, dbt, cookiecutter, mkdocs, static site generators
+- Dużo użycia w: [[Apache Airflow|Airflow]], [[dbt]], cookiecutter, mkdocs, static site generators
 - Wrażliwy na wcięcia i spacje → kluczowe w YAML
 - Możliwość tworzenia filtrów własnych: `{{ name | upper }}`
 

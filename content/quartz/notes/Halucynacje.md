@@ -22,7 +22,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Halucynacje** w kontekście sztucznej inteligencji (AI), a w szczególności dużych modeli językowych (LLM), to zjawisko, w którym model generuje **pozornie poprawne, ale nieprawdziwe lub niesprawdzone informacje**. Jest to istotny problem w zastosowaniach, gdzie oczekuje się wysokiej precyzji i faktograficznej poprawności.
+**Halucynacje** w kontekście sztucznej inteligencji (AI), a w szczególności dużych modeli językowych ([[Base LLM|LLM]]), to zjawisko, w którym model generuje **pozornie poprawne, ale nieprawdziwe lub niesprawdzone informacje**. Jest to istotny problem w zastosowaniach, gdzie oczekuje się wysokiej precyzji i faktograficznej poprawności.
 
 # 🔑 Kluczowe punkty
 
@@ -56,15 +56,15 @@ aliases:
 
 ## Przyczyny halucynacji
 
-- **Modele predykcyjne** — LLM są przewidywaczami tokenów, nie bazami wiedzy.
+- **Modele predykcyjne** — [[Base LLM|LLM]] są przewidywaczami tokenów, nie bazami wiedzy.
 - **Brak odniesienia do źródeł** — model nie ma dostępu do weryfikowalnych danych w czasie generacji.
 - **Zbyt ogólny prompt** — brak kontekstu lub konkretnych ograniczeń.
 - **Niski próg kontrolny** — ustawienia samplingów (temperature, top-p) sprzyjają kreatywności, kosztem faktów.
-- **Brak anchoringu do źródeł** – np. RAG lub zewnętrzne bazy wiedzy.
+- **Brak anchoringu do źródeł** – np. [[RAG]] lub zewnętrzne bazy wiedzy.
 
 ## Sposoby przeciwdziałania
 
-- Wykorzystanie **Retrieval-Augmented Generation (RAG)** – model korzysta z aktualnej bazy dokumentów.
+- Wykorzystanie **[[Retrieval Augmented Generation (RAG)|Retrieval-Augmented Generation]] ([[RAG]])** – model korzysta z aktualnej bazy dokumentów.
 - Dodanie do promptu: "_If the answer is unknown, respond with ‘I don't know’_".
 - Ograniczenie kreatywności modelu – `temperature=0`, `top_p` ograniczony.
 - Filtrowanie wyników – systemowe reguły, walidacja post factum.
@@ -73,7 +73,7 @@ aliases:
 
 # 💡 Przykład zastosowania
 
-System automatyzujący generowanie raportów finansowych na podstawie danych transakcyjnych często “dopisuje” wygenerowane interpretacje bez pokrycia w danych wejściowych. Po wdrożeniu RAG oraz ograniczeniu temperatury model zaczął generować spójniejsze i bardziej przyziemne odpowiedzi, a dodatkowo zaznacza fragmenty tekstu oryginalnego, na których oparł swoje wnioski.
+System automatyzujący generowanie raportów finansowych na podstawie danych transakcyjnych często “dopisuje” wygenerowane interpretacje bez pokrycia w danych wejściowych. Po wdrożeniu [[RAG]] oraz ograniczeniu temperatury model zaczął generować spójniejsze i bardziej przyziemne odpowiedzi, a dodatkowo zaznacza fragmenty tekstu oryginalnego, na których oparł swoje wnioski.
 
 ## 📌 Źródła
 
@@ -85,10 +85,10 @@ System automatyzujący generowanie raportów finansowych na podstawie danych tra
 ## 👽 Brudnopis
 
 - Halucynacja = brak przywiązania do prawdy przy wysokim „zaufaniu” modelu
-- Model zgaduje tokeny, nie fakty
-- Czemu LLM „zmyśla”? Bo celem jest przewidzieć ciąg znaków, nie „być prawdziwym”
-- Szczególnie „toksyczne” w LLM-code (np. Python – nieistniejące biblioteki)
+- Model zgaduje tokeny, nie [[fakty]]
+- Czemu [[Base LLM|LLM]] „zmyśla”? Bo celem jest przewidzieć ciąg znaków, nie „być prawdziwym”
+- Szczególnie „toksyczne” w [[Base LLM|LLM]]-code (np. Python – nieistniejące biblioteki)
 - Powiązane: hallucinatory confidence, confabulation bias
-- „Źródło?” → challenge dla LLM, które nie bazują na anchorowanych danych
+- „Źródło?” → challenge dla [[Base LLM|LLM]], które nie bazują na anchorowanych danych
 
 ---

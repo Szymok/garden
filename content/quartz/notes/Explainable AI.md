@@ -53,11 +53,11 @@ aliases:
 ## Explainability vs Interpretability
 
 - **Interpretability** – stopień, w jakim człowiek może zrozumieć strukturę/model (np. regresja liniowa).
-- **Explainability** – umiejętność _wyjaśniania_ działania złożonych, często czarnych skrzynek (np. sieci neuronowe), najczęściej przez warstwę interpretacyjną.
+- **Explainability** – umiejętność _wyjaśniania_ działania złożonych, często czarnych skrzynek (np. [[sieci neuronowe]]), najczęściej przez warstwę interpretacyjną.
 
 ## Wyzwania XAI
 
-- Ograniczona przejrzystość modeli typu black-box (np. DL, LLM)
+- Ograniczona przejrzystość modeli typu black-box (np. [[Deep Learning|DL]], [[Base LLM|LLM]])
 - Ryzyko zbytniego uproszczenia (faithfulness vs comprehensibility)
 - Trade-off: dokładność vs wyjaśnialność
 - Wymogi regulacyjne dla AI – wyjaśnialność staje się obowiązkiem
@@ -80,7 +80,7 @@ W instytucji finansowej model predykcyjny ocenia ryzyko kredytowe. Na poziomie k
 - SHAP = interpretacja → kontekst wpływu featurów
 - LIME = działa przez lokalne linearyzowanie black boxa
 - faithfulness ≠ intelligibility → zrozumiałe != w pełni zgodne z modelowym wnętrzem
-- rosnące znaczenie przy RLHF i LLM: „dlaczego wygenerował taki tekst”
+- rosnące znaczenie przy RLHF i [[Base LLM|LLM]]: „dlaczego wygenerował taki tekst”
 - narzędzia: SHAP, LIME, Captum (PyTorch), What-If Tool (TF), ELI5
 
 ---

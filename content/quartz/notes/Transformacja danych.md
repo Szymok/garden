@@ -26,7 +26,7 @@ aliases:
 
 # 🔑 Kluczowe punkty
 
-- Fundamentalny etap integracji danych (ETL/ELT/EtLT).
+- Fundamentalny etap integracji danych (ETL/ELT/[[EtLT]]).
 - Obejmuje operacje syntaktyczne (format) i semantyczne (znaczenie danych).
 - Zwiększa wartość danych przez optymalizację ich przydatności analitycznej.
 - Wspiera standaryzację, porównywalność i spójność danych w organizacji.
@@ -41,7 +41,7 @@ Typowe rodzaje transformacji obejmują:
 |Rodzaj transformacji|Przykład / Cel|
 |---|---|
 |Normalizacja|Ujednolicenie formatów dat, wartości tekstowych|
-|Agregacja|Sumy, średnie, KPI – np. miesięczna sprzedaż|
+|Agregacja|Sumy, średnie, [[KPI]] – np. miesięczna sprzedaż|
 |Wzbogacanie (Enrichment)|Dodanie lokalizacji do danych IP|
 |Czystość danych (Data Cleaning)|Usuwanie duplikatów i błędnych wartości|
 |Mapowanie i zamiana wartości|"Y" → true, "N" → false|
@@ -53,14 +53,14 @@ Typowe rodzaje transformacji obejmują:
 Transformacja danych jest integralną częścią podejść integracyjnych:
 
 - **ETL (Extract, Transform, Load)** – transformacja odbywa się przed załadowaniem do systemu docelowego.
-- **ELT (Extract, Load, Transform)** – dane są przetwarzane już po załadowaniu do hurtowni danych (np. dbt w Snowflake).
-- **EtLT** – hybrydowy model, w którym część transformacji „oczyszczającej” działa już w warstwie ekstrakcji/object storage.
+- **ELT (Extract, Load, Transform)** – dane są przetwarzane już po załadowaniu do hurtowni danych (np. [[dbt]] w Snowflake).
+- **[[EtLT]]** – hybrydowy model, w którym część transformacji „oczyszczającej” działa już w warstwie ekstrakcji/object storage.
 
 ## Korzyści z transformacji danych
 
 - **Lepsza jakość danych:** spójność, kompletność, poprawność.
 - **Efektywność przechowywania i przetwarzania:** lepsze wykorzystanie indeksów, kompresji.
-- **Zgodność z wymaganiami systemów downstream (np. hurtownia, model ML).**
+- **Zgodność z wymaganiami systemów downstream (np. hurtownia, model [[Uczenie Maszynowe|ML]]).**
 - **Rozszerzona semantyka:** pozwala na lepsze zrozumienie kontekstu (np. klasyfikacja typów klientów).
 
 ## Rola w analityce danych
@@ -68,8 +68,8 @@ Transformacja danych jest integralną częścią podejść integracyjnych:
 Transformacja danych przygotowuje dane do dalszego wykorzystania:
 
 - analizy ad-hoc i dashboardów,
-- eksploracji OLAP (np. w Druid, DuckDB),
-- trenowania modeli ML (danych wejściowych do feature store’ów).
+- eksploracji OLAP (np. w Druid, [[DuckDB]]),
+- trenowania modeli [[Uczenie Maszynowe|ML]] (danych wejściowych do feature store’ów).
 
 # 💡 Przykład zastosowania
 
@@ -92,15 +92,15 @@ Otrzymany zestaw danych staje się podstawą dla systemu rekomendacji produktowe
 ## 📌 Źródła
 
 - [What is Data Transformation – Talend](https://www.talend.com/resources/what-is-data-transformation/)
-- [ETL vs ELT in Modern Data Architectures – Databricks](https://www.databricks.com/discover/blog/etl-vs-elt-modern-data-architecture)
+- [[[ETL kontra ELT|ETL vs ELT]] in Modern Data Architectures – Databricks](https://www.databricks.com/discover/blog/etl-vs-elt-modern-data-architecture)
 - [Data Cleaning and Transformation – IBM Glossary](https://www.ibm.com/topics/data-cleaning)
 
 ## 👽 Brudnopis
 
 - podstawowe działania: oczyszczanie, mapowanie, filtrowanie, agregacje, formatowanie
-- ETL (transformacja przed) vs ELT (transformacja po – np. dbt)
+- ETL (transformacja przed) vs ELT (transformacja po – np. [[dbt]])
 - enrichment = np. lookup po IP ⇒ lokalizacja
 - transformation = zmiana wartości + zapewnienie jakości + semantyka
-- transformacja jako warstwa pośrednia: staging → core → mart (moduł dbt)
+- transformacja jako warstwa pośrednia: staging → core → mart (moduł [[dbt]])
 - przykład: NLP parsing tekstu (“Użytkownik X ma 45 lat”) → structured table
 - agregacje sprzedaży miesięczne, zmiana strefy czasowej, join z CRM, obliczenia ROI, itp.

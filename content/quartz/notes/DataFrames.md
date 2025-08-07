@@ -22,7 +22,7 @@ aliases:
 
 # 🎯 Definicja
 
-**DataFrame** to podstawowa struktura danych używana w analizie danych, reprezentująca uporządkowaną dwuwymiarową tabelę danych (podobną do arkusza kalkulacyjnego lub tabeli SQL), gdzie kolumny mają nazwy i typy danych. DataFrames są wykorzystywane m.in. w bibliotekach takich jak Pandas (Python) i PySpark (Spark) w celu wydajnej manipulacji i analizy danych.
+**DataFrame** to podstawowa [[Strukturyzacja danych|struktura danych]] używana w analizie danych, reprezentująca uporządkowaną dwuwymiarową tabelę danych (podobną do arkusza kalkulacyjnego lub tabeli SQL), gdzie kolumny mają nazwy i typy danych. DataFrames są wykorzystywane m.in. w bibliotekach takich jak [[Pandas]] (Python) i PySpark (Spark) w celu wydajnej manipulacji i analizy danych.
 
 # 🔑 Kluczowe punkty
 
@@ -33,9 +33,9 @@ aliases:
 
 # 📚 Szczegółowe wyjaśnienie
 
-## DataFrame w Pandas (Python)
+## DataFrame w [[Pandas]] (Python)
 
-Pandas DataFrame to jedna z najczęściej używanych struktur danych w analizie danych w języku Python. Idealnie nadaje się do pracy z danymi CSV, Excel, SQL, JSON.
+[[Pandas]] DataFrame to jedna z najczęściej używanych struktur danych w analizie danych w języku Python. Idealnie nadaje się do pracy z danymi CSV, Excel, SQL, JSON.
 
 ```python
 import pandas as pd
@@ -89,7 +89,7 @@ df.show()
 
 # 💡 Przykład zastosowania
 
-Analityk danych przygotowuje dzienny raport sprzedaży. Używa Pandas do wczytania arkusza Excel, przekształca dane w DataFrame, wylicza średnią wartość koszyka, filtruje produkty premium i eksportuje wynik do nowego pliku CSV. W środowisku big data – te same operacje realizuje w PySpark, ale skaluje je na miliony rekordów dziennie.
+Analityk danych przygotowuje dzienny raport sprzedaży. Używa [[Pandas]] do wczytania arkusza Excel, przekształca dane w DataFrame, wylicza średnią wartość koszyka, filtruje produkty premium i eksportuje wynik do nowego pliku CSV. W środowisku big data – te same operacje realizuje w PySpark, ale skaluje je na miliony rekordów dziennie.
 
 # 📌 Źródła
 
@@ -101,7 +101,7 @@ Analityk danych przygotowuje dzienny raport sprzedaży. Używa Pandas do wczytan
 # 👽 Brudnopis
 
 - DataFrame = struktura tabelaryczna: kolumny + indeks
-- Pandas: nano- i mikro-dane (od setek do milionów rekordów)
+- [[Pandas]]: nano- i mikro-dane (od setek do milionów rekordów)
 - PySpark: big data (GB–PB, rozproszone środowisko, Spark SQL)
-- Dobre do ETL, analizy, ML, raportowania
+- Dobre do ETL, analizy, [[Uczenie Maszynowe|ML]], raportowania
 - Możliwość konwersji do JSON, tabel SQL, CSV, Parquet, Arrow itp.

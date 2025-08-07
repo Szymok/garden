@@ -26,9 +26,9 @@ aliases:
 
 # 🔑 Kluczowe punkty
 
-- 🔄 Serializacja: konwersja obiektu (np. słownika, listy, modelu ML) do postaci binarnej.
+- 🔄 Serializacja: konwersja obiektu (np. słownika, listy, modelu [[Uczenie Maszynowe|ML]]) do postaci binarnej.
 - 📦 Deserializacja: odtworzenie oryginalnego obiektu z pliku `.pkl` lub bajtowego strumienia danych.
-- 💾 Umożliwia trwałe zapisywanie obiektów do pliku — np. po treningu modelu ML.
+- 💾 Umożliwia trwałe zapisywanie obiektów do pliku — np. po treningu modelu [[Uczenie Maszynowe|ML]].
 - ⚠️ Nie jest bezpieczny dla niezaufanych źródeł — może wykonywać złośliwy kod przy ładowaniu.
 - 🐍 Standardowy sposób przechowywania danych i modeli w ekosystemie Pythona i scikit-learn.
 
@@ -59,7 +59,7 @@ print(loaded_data)  # {'name': 'Alice', 'age': 30}
 
 ## Typowe zastosowania
 
-- Zapisywanie wytrenowanych modeli ML (np. z wykorzystaniem `scikit-learn`, `xgboost`)
+- Zapisywanie wytrenowanych modeli [[Uczenie Maszynowe|ML]] (np. z wykorzystaniem `scikit-learn`, `xgboost`)
 - Przechowywanie cache’u danych
 - Serializacja wyszukiwarek (np. wektorowych) lub słowników NLP
 - Transport danych między funkcjami/skryptami bez ponownego przeliczania
@@ -102,4 +102,4 @@ Alternatywy dla bezpieczeństwa i interoperacyjności:
 - Obsługa klas własnych i zagnieżdżeń, ale brak interoperacyjności między językami
 - "rb" / "wb": read/write binary – ważne!
 - `.pkl`, `.pickle` – rozszerzenia standardowe
-- Szybki zapis/odczyt do cache/pomiędzy notatnikami w środowisku ML
+- Szybki zapis/odczyt do cache/pomiędzy notatnikami w środowisku [[Uczenie Maszynowe|ML]]

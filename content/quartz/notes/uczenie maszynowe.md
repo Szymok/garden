@@ -49,10 +49,10 @@ aliases:
 Zobacz: Algorytmy
 
 - Regresja liniowa i logistyczna
-- Drzewa decyzyjne & Random Forest
+- Drzewa decyzyjne & [[Lasy losowe|Random Forest]]
 - KNN (k-nearest neighbors)
 - SVM (support vector machines)
-- Sieci neuronowe / deep learning (CNN, RNN, Transformers)
+- [[Sieci neuronowe]] / [[deep learning]] (CNN, RNN, Transformers)
 - K-means, DBSCAN, PCA (dla nienadzorowanego ML)
 
 ## Proces tworzenia modelu ML
@@ -71,7 +71,7 @@ Platforma e-commerce wykorzystuje ML do:
 - **segmentacji klientów** pod kątem kampanii marketingowych (unsupervised learning),
 - przewidywania ryzyka porzucania koszyka (supervised classification).
 
-System korzysta z danych z wielu źródeł, modeluje je przy użyciu Random Forest oraz trenowanego modelu XGBoost.
+System korzysta z danych z wielu źródeł, modeluje je przy użyciu [[Lasy losowe|Random Forest]] oraz trenowanego modelu XGBoost.
 
 # 📌 Źródła
 

@@ -39,8 +39,8 @@ aliases:
 1. **Warstwa batch (batch layer):**
     
     - Gromadzi wszystkie historyczne dane i przetwarza je okresowo.
-    - Wynik: tzw. batch views — agregaty, obliczenia, modele tworzone z pełnego zestawu danych.
-    - Technologie: Hadoop MapReduce, Spark Batch, Hive, BigQuery.
+    - Wynik: tzw. batch views — [[Rollup|agregaty]], obliczenia, modele tworzone z pełnego zestawu danych.
+    - Technologie: Hadoop MapReduce, Spark Batch, [[Apache Hive|Hive]], BigQuery.
 2. **Warstwa speed (speed layer):**
     
     - Przetwarza dane strumieniowo, w wysokiej częstotliwości — aby dostarczyć **świeże dane** pomiędzy wsadami.
@@ -75,7 +75,7 @@ aliases:
 
 # 💡 Przykład zastosowania
 
-Serwis transakcyjny analizuje dane o zakupach użytkowników. Warstwa speed oblicza wskaźniki konwersji i popularności produktów w czasie rzeczywistym, na potrzeby dashboardów marketingowych. Warstwa batch co godzinę wykonuje dokładne obliczenia KPI, które są używane do raportów okresowych i modeli predykcyjnych.
+Serwis transakcyjny analizuje dane o zakupach użytkowników. Warstwa speed oblicza wskaźniki konwersji i popularności produktów w czasie rzeczywistym, na potrzeby dashboardów marketingowych. Warstwa batch co godzinę wykonuje dokładne obliczenia [[KPI]], które są używane do raportów okresowych i modeli predykcyjnych.
 
 ## 📌 Źródła
 
@@ -90,7 +90,7 @@ Serwis transakcyjny analizuje dane o zakupach użytkowników. Warstwa speed obli
 - serving → merge logiczne VIEW
 - MapReduce zbyt wolne – potrzeba speed layer → Spark Streaming
 - Duplikacja logiki i stanu → koszt ang. engineering & data QA
-- Lakehouse + stream unifikacja → trend przejścia na architekturę jednolitą
+- [[Data Lakehouse|Lakehouse]] + stream unifikacja → trend przejścia na architekturę jednolitą
 - Kiedy warto: równoważenie precyzji z latencją, np. monitoring, analityka zachowań
 - Amazon, Netflix, Twitter – historyczne wdrożenia lambda
 

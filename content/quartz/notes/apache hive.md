@@ -60,9 +60,9 @@ GROUP BY customer_id;
 
 ## Przykłady zastosowań
 
-- **Analityka wsadowa na dużych wolumenach danych** — analiza danych logów użytkowników, przetwarzanie danych IoT, raportowanie marketingowe.
+- **Analityka wsadowa na dużych wolumenach danych** — [[analiza danych]] logów użytkowników, przetwarzanie danych IoT, raportowanie marketingowe.
 - **ETL (Extract, Transform, Load):** partiowe ładowanie i przekształcanie danych do Data Lake lub innych warstw analitycznych.
-- **Kompatybilność z narzędziami BI** — takie jak Tableau, Qlik poprzez konektory JDBC/ODBC.
+- **Kompatybilność z narzędziami [[Business Intelligence|BI]]** — takie jak Tableau, Qlik poprzez konektory JDBC/ODBC.
 
 # 💡 Praktyczny przypadek użycia
 
@@ -83,8 +83,8 @@ GROUP BY customer_id;
 # 👽 Brudnopis
 
 - Hive = alternatywa dla klasycznych DWH w ekosystemie Hadoop.
-- Format danych: najczęściej Parquet, ORC, tekst (csv, tsv).
+- Format danych: najczęściej Parquet, [[ORC]], tekst (csv, tsv).
 - Użycie Metastore (często współdzielony z Hive, Spark, Presto, Trino).
-- Popularny jako katalog w lakehouse (wraz z Iceberg, Delta etc.).
+- Popularny jako katalog w [[Data Lakehouse|lakehouse]] (wraz z [[Apache Iceberg|Iceberg]], Delta etc.).
 - Tez/Spark jako silniki – poprawa czasu odpowiedzi względem MapReduce.
-- Brak update/delete w klasycznym Hadoop -> obsługiwane przez custom storage formats (ACID extensions).
+- Brak update/delete w klasycznym Hadoop -> obsługiwane przez custom storage formats ([[Transakcje ACID|ACID]] extensions).

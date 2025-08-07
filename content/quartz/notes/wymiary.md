@@ -21,7 +21,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Wymiary** (ang. _dimensions_) to atrybuty opisowe lub kategoryczne, które służą do segmentacji, filtrowania, grupowania oraz analizowania danych ilościowych (miar). Stanowią kontekst analityczny dla danych biznesowych i są podstawowym elementem modelowania danych w systemach OLAP, hurtowniach danych oraz narzędziach Business Intelligence.
+**Wymiary** (ang. _dimensions_) to atrybuty opisowe lub kategoryczne, które służą do segmentacji, filtrowania, grupowania oraz analizowania danych ilościowych (miar). Stanowią kontekst analityczny dla danych biznesowych i są podstawowym elementem modelowania danych w systemach OLAP, hurtowniach danych oraz narzędziach [[Business Intelligence]].
 
 # 🔑 Kluczowe punkty
 
@@ -29,7 +29,7 @@ aliases:
 - Stanowią kontekst dla interpretacji metryk (np. sprzedaż wg regionu i czasu).
 - Są elementem schematu gwiazdy (_star schema_) w modelowaniu wymiarowym.
 - Wiele systemów OLAP wykorzystuje hierarchie wymiarów (np. Rok → Miesiąc → Dzień).
-- Kluczowe dla realizacji operacji typu roll-up i drill-down w raportowaniu.
+- Kluczowe dla realizacji operacji typu [[Rollup|roll-up]] i drill-down w raportowaniu.
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -48,9 +48,9 @@ W analizach miary są często agregowane względem wymiarów. Np.:
 
 > "Liczba zamówień wg miesiąca i kanału sprzedaży"
 
-### Wymiary vs Fakty (Miary)
+### Wymiary vs [[Fakty]] (Miary)
 
-||Wymiar|Fakt (Miara)|
+||Wymiar|Fakt ([[Miara]])|
 |---|---|---|
 |Typ danych|Kategoryczne / opisowe|Ilościowe / metryczne|
 |Służy do|segmentacji, grupowania, filtrowania|obliczeń, porównań, metryk|
@@ -58,7 +58,7 @@ W analizach miary są często agregowane względem wymiarów. Np.:
 
 ## Hierarchie wymiarów
 
-Hierarchie pozwalają na operacje typu roll-up i drill-down. Przykład:
+Hierarchie pozwalają na operacje typu [[Rollup|roll-up]] i drill-down. Przykład:
 
 - Wymiar: Czas  
     → Hierarchia: Rok → Kwartał → Miesiąc → Dzień
@@ -74,20 +74,20 @@ W modelowaniu Kimballa wymiary takie jak „Czas” lub „Klient” są współ
 Analityk buduje raport przedstawiający tygodniową sprzedaż według kategorii produktów i lokalizacji.
 
 - Wymiary: Data (→ Tydzień), Produkt (→ Kategoria), Miasto
-- Miara: SUMA wartość sprzedaży  
+- [[Miara]]: SUMA wartość sprzedaży  
     Dzięki wymiarom możliwe jest stworzenie tabeli przestawnej oraz wykresu dynamicznego pokazującego trendy wg interesujących segmentów.
 
 ## 📌 Źródła
 
-- [Kimball Group – Dimensional Modeling Techniques](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/dimensional-modeling-techniques/)
+- [Kimball Group – [[Modelowanie Wymiarowe|Dimensional Modeling]] Techniques](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/dimensional-modeling-techniques/)
 - [Wikipedia: Dimension (data warehouse)](https://en.wikipedia.org/wiki/Dimension_\(data_warehouse\))
-- [dbt Docs – dimensions in metrics](https://docs.getdbt.com/docs/semantic-layer/metrics/)
+- [[[dbt]] Docs – dimensions in metrics](https://docs.getdbt.com/docs/semantic-layer/metrics/)
 
 # 👽 Brudnopis
 
 - Wymiar = kontekst dla liczby, np. segment, produkt, kraj, KWARTAŁ
-- Hierarchia = umożliwia roll-up/drill-down → np. SKU → Produkt → Marka
+- Hierarchia = umożliwia [[Rollup|roll-up]]/drill-down → np. SKU → Produkt → Marka
 - Business-friendly: „Chcę przychodów wg regionów i miesięcy" = wymiar „region” + „czas”
 - Wymiar wspólny = conformed → Customer ID = ten sam ID w Sales & Return
-- vs Miary = dane liczbowe (fakty), które analizujesz wg wymiarów
-- W BI (Power BI, Looker) – tabelki przestawne są „pivot” wg wymiarów (wiersze, kolumny)
+- vs Miary = dane liczbowe ([[fakty]]), które analizujesz wg wymiarów
+- W [[Business Intelligence|BI]] (Power [[Business Intelligence|BI]], Looker) – tabelki przestawne są „pivot” wg wymiarów (wiersze, kolumny)

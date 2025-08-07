@@ -23,21 +23,21 @@ aliases:
 
 # 🎯 Definicja
 
-**Wektorowe bazy danych (Vector Databases)** to wyspecjalizowane systemy bazodanowe zaprojektowane do przechowywania, indeksowania i szybkiego wyszukiwania wektorów (embeddingów) – czyli wielowymiarowych reprezentacji numerycznych danych (tekstów, obrazów, audio itp.). W kontekście dużych modeli językowych (LLM), stanowią podstawową strukturę do realizacji semantycznego wyszukiwania, zadawania pytań do dokumentów (RAG), filtrowania danych i porównań kontekstowych.
+**Wektorowe bazy danych (Vector Databases)** to wyspecjalizowane systemy bazodanowe zaprojektowane do przechowywania, indeksowania i szybkiego wyszukiwania wektorów (embeddingów) – czyli wielowymiarowych reprezentacji numerycznych danych (tekstów, obrazów, audio itp.). W kontekście dużych modeli językowych ([[Base LLM|LLM]]), stanowią podstawową strukturę do realizacji semantycznego wyszukiwania, zadawania pytań do dokumentów ([[RAG]]), filtrowania danych i porównań kontekstowych.
 
 # 🔑 Kluczowe punkty
 
 - Przechowują wysokowymiarowe dane wektorowe (np. 384D, 768D) wygenerowane przez modele językowe.
 - Umożliwiają operacje podobieństwa (k-NN, cosine similarity, ANN) zoptymalizowane do miliardów punktów.
-- Wspierają semantyczne wyszukiwanie (semantic search), rekomendacje, RAG i systemy QA.
-- Integrują się bezpośrednio z narzędziami LLM (np. LangChain, Haystack, OpenAI plugins).
+- Wspierają semantyczne wyszukiwanie (semantic search), rekomendacje, [[RAG]] i systemy QA.
+- Integrują się bezpośrednio z narzędziami [[Base LLM|LLM]] (np. [[LangChain]], Haystack, OpenAI plugins).
 - Stosują zaawansowane struktury indeksujące (HNSW, FAISS, IVF, PQ) dla ekstremalnej wydajności.
 
 # 📚 Szczegółowe wyjaśnienie
 
 ## Jak działają?
 
-Po przekształceniu tekstu przez model (np. OpenAI Embedding API, BERT-as-service, SentenceTransformers) — tekst zostaje zakodowany jako wektor. Baza:
+Po przekształceniu tekstu przez model (np. OpenAI [[Embedding]] API, BERT-as-service, SentenceTransformers) — tekst zostaje zakodowany jako wektor. Baza:
 
 1. Indeksuje nowy wektor w przestrzeni wielowymiarowej.
 2. Pozwala zadawać zapytania również jako wektor.
@@ -53,7 +53,7 @@ Po przekształceniu tekstu przez model (np. OpenAI Embedding API, BERT-as-servic
 
 ## Przykłady zastosowań:
 
-- **Retrieval-Augmented Generation (RAG)** – uzupełnianie kontekstu LLM o najbardziej dopasowane treści
+- **[[Retrieval Augmented Generation (RAG)|Retrieval-Augmented Generation]] (RAG)** – uzupełnianie kontekstu [[Base LLM|LLM]] o najbardziej dopasowane treści
 - **Rekomendacje kontekstowe** – dobierane wg podobieństwa semantycznego, a nie tylko reguł biznesowych
 - **Wyszukiwanie semantyczne** – np. „pokaż mi faktury związane z opóźnioną dostawą laptopów”
 - **Wirtualni asystenci AI** – dostęp do wiedzy firmowej zapisanej w embeddingach (PDF-y, strony, bazy wiedzy)
@@ -66,32 +66,32 @@ Po przekształceniu tekstu przez model (np. OpenAI Embedding API, BERT-as-servic
 |**FAISS**|Open-source od Meta AI – szybka, lokalna, wspiera wiele algorytmów ANN|
 |**Weaviate**|Open-source z wbudowanym NLP, tagami - SQL-like query DSL|
 |**Qdrant**|Napisana w Rust, wysoka szybkość i dokładność|
-|**ChromaDB**|Lekka lokalna, idealna dla Chatbotów RAG offline|
+|**ChromaDB**|Lekka lokalna, idealna dla Chatbotów [[RAG]] offline|
 |**Milvus**|Rozproszona, wspiera miliardy wektorów, dobra do big-scale scenariuszy|
 
 # 💡 Przykład zastosowania
 
-Firma konsultingowa tworzy LLM-asystenta do przeszukiwania dokumentacji projektowej (PDF, Word, email).
+Firma konsultingowa tworzy [[Base LLM|LLM]]-asystenta do przeszukiwania dokumentacji projektowej (PDF, Word, email).
 
 - Dokumenty są przekształcane przez Sentence-BERT w embeddingi i ładowane do bazy Weaviate.
 - Użytkownik wpisuje zapytanie: "Jakie były ryzyka wykryte podczas wdrożenia SAP we Francji?"
-- Zapytanie zamieniane jest na embedding, Weaviate zwraca 3 najbliższe wektory (fragmenty dokumentów).
-- LLM (np. GPT) generuje odpowiedź na podstawie tych kontekstów (RAG pipeline).
+- Zapytanie zamieniane jest na [[embedding]], Weaviate zwraca 3 najbliższe wektory (fragmenty dokumentów).
+- [[Base LLM|LLM]] (np. GPT) generuje odpowiedź na podstawie tych kontekstów ([[RAG]] pipeline).
 - Dzięki temu asystent udziela logicznej, cytowalnej, precyzyjnej odpowiedzi „na źródłach”, z zachowaniem aktualnej wiedzy.
 
 ## 📌 Źródła
 
-- [Pinecone – Czym jest vector DB?](https://www.pinecone.io/learn/vector-database/)
+- [Pinecone – Czym jest [[Baza wektorowa|vector DB]]?](https://www.pinecone.io/learn/vector-database/)
 - [FAISS – Facebook AI Similarity Search](https://github.com/facebookresearch/faiss)
 - [Weaviate – vector database explained](https://weaviate.io/developers/weaviate)
 - [Qdrant – Introduction and benchmark](https://qdrant.tech/documentation/)
-- [LangChain – Integracja z vector stores](https://docs.langchain.com/docs/integrations/vectorstores/)
+- [[[LangChain]] – Integracja z vector stores](https://docs.langchain.com/docs/integrations/vectorstores/)
 
 ## 👽 Brudnopis
 
 - wektor = reprezentacja tekstu w N-wymiarze → porównywanie przez similarity
-- zastosowanie: RAG, semantyczne QA, podobieństwo → dla LLM
+- zastosowanie: [[RAG]], semantyczne QA, podobieństwo → dla [[Base LLM|LLM]]
 - Różnica w stosunku do klasycznego search (np. Elastic): nie zależy od miejsca słów, tylko od znaczenia
-- Integracja LLM + vector store ≈ nowoczesna pamięć kontekstowa
-- typowy flow: input → embedding → top-k retrieval → prompt → output
+- Integracja [[Base LLM|LLM]] + vector store ≈ nowoczesna pamięć kontekstowa
+- typowy flow: input → [[embedding]] → top-k retrieval → prompt → output
 - coraz bardziej podstawowy komponent każdej wartwej architektury AI opartej na dokumentach / wiedzy domainowej

@@ -24,7 +24,7 @@ aliases:
 
 **Embedding** to sposób reprezentowania danych — zwłaszcza tekstowych — w postaci **wektorów liczb** w przestrzeni o ustalonym wymiarze. Te reprezentacje w postaci embeddingów odzwierciedlają **semantyczne podobieństwa** i relacje między słowami, zdaniami lub dokumentami, co umożliwia ich przetwarzanie przez modele uczenia maszynowego.
 
-Embeddingi są kluczowe w takich zadaniach jak: wyszukiwanie semantyczne, klasyfikacja tekstów, klasteryzacja, rekomendacje, RAG (Retrieval Augmented Generation) i modele językowe.
+Embeddingi są kluczowe w takich zadaniach jak: wyszukiwanie semantyczne, klasyfikacja tekstów, klasteryzacja, rekomendacje, [[RAG]] (Retrieval Augmented Generation) i modele językowe.
 
 # 🔑 Kluczowe punkty
 
@@ -62,7 +62,7 @@ Embeddingi są kluczowe w takich zadaniach jak: wyszukiwanie semantyczne, klasyf
 
 - `BERT`, `RoBERTa`, `DistilBERT` + warstwa agregująca (`CLS`, mean pooling, concat)
 - `Sentence-BERT` – dostrojony do tworzenia sensownych reprezentacji zdań
-- Embeddingi OpenAI (np. `text-embedding-ada-002`) – do semantycznego wyszukiwania i RAG
+- Embeddingi OpenAI (np. `text-embedding-ada-002`) – do semantycznego wyszukiwania i [[RAG]]
 - `Universal Sentence Encoder` (Google)
 
 ### Zalety
@@ -85,7 +85,7 @@ print(f"Podobieństwo kosinusowe: {similarity.item():.2f}")
 
 # 💡 Przykład zastosowania
 
-W systemie przeszukiwania dokumentacji technicznej zapytania użytkownika są zamieniane na embedding (wektor) i porównywane z embeddingami rozdziałów dokumentów. Następnie wybrane materiały o największym podobieństwie są zwracane użytkownikowi lub dołączane jako kontekst do modelu językowego (RAG).
+W systemie przeszukiwania dokumentacji technicznej zapytania użytkownika są zamieniane na embedding (wektor) i porównywane z embeddingami rozdziałów dokumentów. Następnie wybrane materiały o największym podobieństwie są zwracane użytkownikowi lub dołączane jako kontekst do modelu językowego ([[RAG]]).
 
 # 📌 Źródła
 
@@ -101,7 +101,7 @@ W systemie przeszukiwania dokumentacji technicznej zapytania użytkownika są za
 - Używane w wyszukiwarkach semantycznych, Matchers, klasyfikatorach
 - Wektory = dense, np. 384-elementowe → np. cosine similarity
 - W NLP = fundament nowoczesnych modeli w pytaniu/odpowiedzi
-- RAG, Vectordb (Qdrant, Pinecone) opierają się na embeddingach
+- [[RAG]], Vectordb (Qdrant, Pinecone) opierają się na embeddingach
 - Open source: Hugginface Transformers, sentence-transformers
 
 ---

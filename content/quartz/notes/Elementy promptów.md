@@ -47,7 +47,7 @@ Prompty mogą być:
 - **Bardzo proste** („Kto był pierwszym prezydentem Polski?”)
 - **Rozbudowane/podzielone na sekcje** (wieloelementowe instrukcje z kontekstem, przykładem i oczekiwanym formatem wyjściowym)
 - **Kontekstowe** (nawiązujące do wcześniejszych rozmów lub sytuacji)
-- **Warunkowe lub instruktażowe** (wielokrokowe, scenariusze „jeśli... to wtedy...”, role, ograniczenia)
+- **Warunkowe lub instruktażowe** (wielokrokowe, scenariusze „jeśli... to wtedy...”, [[Roles|role]], ograniczenia)
 
 Przemyślane uwzględnienie wszystkich użytecznych elementów promptu jest jednym z fundamentów skutecznej pracy z modelami AI – im bardziej zrozumiała i kompletna będzie instrukcja, tym większa szansa na adekwatny, precyzyjny rezultat.
 
@@ -77,7 +77,7 @@ Output indicator:
 - Konkretny cel promptu = jasna instrukcja + odpowiedni kontekst + sample input/output
 - Output indicator może wskazywać styl: ekspercki, laicki, tabela, markdown
 - Prompty iteracyjne = zadanie + feedback i poprawka
-- Role-based prompt = „Jako X, wykonaj Y…”
+- [[Roles|Role]]-based prompt = „Jako X, wykonaj Y…”
 - Przemieszanie elementów = duża elastyczność – skuteczność zależna od jakości instrukcji
 
 ---

@@ -123,7 +123,7 @@ pg(10, 1, 5, 2, 2)
 
 ## Dobry styl — jasno, bez nadmiaru
 
-Aby uniknąć gadatliwych odpowiedzi LLM, można dodać:
+Aby uniknąć gadatliwych odpowiedzi [[Base LLM|LLM]], można dodać:
 
 ```text
 DO NOT SAY ANYTHING ELSE UNLESS YOU DON'T UNDERSTAND THE FUNCTION
@@ -150,15 +150,15 @@ To podejście jest świetne do:
 
 - ChatGPT-Next-Web – wsparcie wielu promptów/startowych komend
 - PromptAppGPT – tworzenie niskokodowych aplikacji promptowych
-- LangChain / marvin / AutoGPT – integracja promptów z logiką programistyczną
-- Notatniki, vaulty, markdown – idealne do tworzenia bibliotek prompt functions
+- [[LangChain]] / marvin / AutoGPT – integracja promptów z logiką programistyczną
+- [[Notatniki (Notebooks)|Notatniki]], vaulty, markdown – idealne do tworzenia bibliotek prompt functions
 - Prompt chaining – konstrukcja bardziej rozbudowanych aplikacji (prompt pipeline)
 
 # 🧠 Podsumowanie
 
 Funkcje promptów to sposób uzyskiwania spójnego, powtarzalnego i łatwego do utrzymania interfejsu z modelami językowymi. Model „promptowania jako funkcji” pozwala traktować naturalny język tak, jakby był językiem programowania — przy jednoczesnym zachowaniu jego elastyczności.
 
-To doskonałe rozwiązanie do codziennej automatyzacji, eksperymentów lub nawet budowy własnego osobistego agenta LLM.
+To doskonałe rozwiązanie do codziennej automatyzacji, eksperymentów lub nawet budowy własnego osobistego agenta [[Base LLM|LLM]].
 
 ## 👽 Brudnopis
 

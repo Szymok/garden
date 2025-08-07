@@ -27,7 +27,7 @@ aliases:
 
 - Umożliwiają tworzenie i testowanie kodu (Python, R, SQL itd.), opisywanie kroków oraz prezentowanie wyników w jednym miejscu.
 - Ułatwiają współpracę dzięki dostępowi przez przeglądarkę, wersjonowaniu, komentarzom i integracji z narzędziami chmurowymi.
-- Wspierają eksperymenty, uczenie maszynowe, ETL, dokumentację oraz dzielenie się wiedzą w zespołach danych.
+- Wspierają eksperymenty, [[uczenie maszynowe]], ETL, dokumentację oraz dzielenie się wiedzą w zespołach danych.
 - Popularne zarówno w edukacji, jak i środowisku produkcyjnym oraz analityce biznesowej.
 
 # 📚 Najpopularniejsze notatniki — przegląd
@@ -39,7 +39,7 @@ aliases:
 - **JupyterHub**
     - Wydanie Jupytera do pracy zespołowej i na serwerach — pozwala wielu użytkownikom współdzielić środowisko.
 - **Apache Zeppelin**
-    - Notatnik do Big Data, integruje się m.in. ze Spark, Flink, Hive i innymi narzędziami analitycznymi.
+    - Notatnik do Big Data, integruje się m.in. ze Spark, Flink, [[Apache Hive|Hive]] i innymi narzędziami analitycznymi.
 - **Databricks Notebooks**
     - Rozbudowane notatniki w środowisku Databricks, zintegrowane z Apache Spark i chmurą, często wykorzystywane w firmach data-driven.
 
@@ -53,24 +53,24 @@ aliases:
 ## 2. Nowa generacja notatników (Cloud & Collaboration)
 
 - **HEX**
-    - Chmurowe notatniki z pełną obsługą zespołów, workflow i integracji z narzędziami BI. Ułatwiają szybkie budowanie aplikacji analitycznych bez kodowania frontendu.
+    - Chmurowe notatniki z pełną obsługą zespołów, workflow i integracji z narzędziami [[Business Intelligence|BI]]. Ułatwiają szybkie budowanie aplikacji analitycznych bez kodowania frontendu.
 - **Deepnote**
-    - Notatniki wysoce zorientowane na współpracę, wersjonowanie dokumentów, komentarze, obsługę różnych języków i integrację z GitHubem.
+    - Notatniki wysoce zorientowane na współpracę, wersjonowanie dokumentów, [[komentarze]], obsługę różnych języków i integrację z GitHubem.
 - **Count.co**
     - Modernistyczne notatniki wizualne, wspomagające analityków w SQL i Pythonie z naciskiem na szybkie prototypowanie i dzielenie się insightami.
 
 |Nazwa|Współpraca|Integracja z chmurą|Funkcje dodatkowe|
 |---|---|---|---|
-|HEX|Pełna|Pełna|Workflow, BI, app-building|
-|Deepnote|Pełna|Pełna|Komentarze, wersje, Git|
+|HEX|Pełna|Pełna|Workflow, [[Business Intelligence\|BI]], app-building|
+|Deepnote|Pełna|Pełna|[[Komentarze]], wersje, Git|
 |Count.co|Pełna|Pełna|SQL/Python, dashboard, no-code widgets|
 
 # 💡 Praktyczne zastosowania
 
 - Analiza eksploracyjna i prototypowanie
-- Trening i testowanie modeli ML bez konieczności budowania pełnych aplikacji
+- Trening i testowanie modeli [[Uczenie Maszynowe|ML]] bez konieczności budowania pełnych aplikacji
 - Tworzenie customowych pipeline’ów ETL
-- Wizualizacja danych oraz dzielenie się dokumentacją techniczną i biznesową
+- [[Wizualizacja]] danych oraz dzielenie się dokumentacją techniczną i biznesową
 - Edukacja — idealne środowisko do nauki programowania i analizy danych
 
 # 📌 Wskazówki i praktyka
@@ -78,12 +78,12 @@ aliases:
 - Wybierz środowisko dostosowane do potrzeb zespołu (czy liczy się współpraca, integracja z chmurą, czy big data).
 - Rozważ wykorzystanie menedżera pakietów (Conda, Pip) do kontroli środowisk w klasycznych notatnikach.
 - Notatniki w chmurze (Hex, Deepnote, Count.co) zapewniają łatwe wersjonowanie i szybkie wdrożenia, ale mogą być płatne.
-- Integracje z repozytoriami kodu i narzędziami BI pozwalają na szybkie przechodzenie od kodu do dashboardu lub raportu wykonawczego.
+- Integracje z repozytoriami kodu i narzędziami [[Business Intelligence|BI]] pozwalają na szybkie przechodzenie od kodu do dashboardu lub raportu wykonawczego.
 
 # 👽 Brudnopis
 
-- Notatnik = kod + opis + wizualizacja; historia open science, szerokiej adopcji data science
+- Notatnik = kod + opis + [[wizualizacja]]; historia open science, szerokiej adopcji data science
 - Naas — automatyzacje wokół Jupytera
 - Nowa fala notebooków „cloud-native” – kolaboracja jak w Google Docs dla danych
 - Zeppeliny i Databricks — ciagłość od Big Data do self-service analytics
-- Trwa trend w kierunku „notebook as app” i BI dla zespołów produktowych
+- Trwa trend w kierunku „notebook as app” i [[Business Intelligence|BI]] dla zespołów produktowych

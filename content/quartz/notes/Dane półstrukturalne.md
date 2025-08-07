@@ -45,7 +45,7 @@ Przykład (JSON w bazie danych jako tekst):
 
 ## Transformacja do danych strukturalnych
 
-Transformacja danych półstrukturalnych, np. JSON w kolumnie tekstowej, na strukturę tabelaryczną polega na:
+[[Transformacja danych]] półstrukturalnych, np. JSON w kolumnie tekstowej, na strukturę tabelaryczną polega na:
 
 - Parsowaniu JSON/XML.
 - Mapowaniu kluczy do poszczególnych kolumn.
@@ -58,7 +58,7 @@ Po transformacji:
 |1|"Mary X"|
 |2|"John D"|
 
-Proces ten może być zautomatyzowany w narzędziach takich jak Airbyte, dbt, Apache NiFi czy funkcjach SQL (np. funkcje `jsonb_extract_path` w PostgreSQL).
+Proces ten może być zautomatyzowany w narzędziach takich jak Airbyte, [[dbt]], Apache NiFi czy funkcjach SQL (np. funkcje `jsonb_extract_path` w PostgreSQL).
 
 ## Typowe zastosowania
 
@@ -81,6 +81,6 @@ Zespół analityczny w e-commerce gromadzi logi zdarzeń (clickstream) z aplikac
 
 - Dane półstrukturalne = JSON, XML, Parquet, logi, Avro, lista eventów w Kafka/S3.
 - JSON jako tekst/klucz-wartość → parsowanie do struktur SQL (funkcje jsonb).
-- Używane w integracji, BI, analityce, Lakehouse; elastyczna struktura i dynamiczność.
+- Używane w integracji, [[Business Intelligence|BI]], analityce, [[Data Lakehouse|Lakehouse]]; elastyczna struktura i dynamiczność.
 - ETL/ELT: najczęściej moment „zdejmowania” struktur do tabeli (json > kolumny).
 - Data Lake = przechowywanie półstrukturalne + warstwa transformująca downstream.

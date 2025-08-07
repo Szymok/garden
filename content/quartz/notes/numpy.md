@@ -27,7 +27,7 @@ aliases:
 
 - 📦 Dostarcza potężny obiekt: **np.ndarray** – n-wymiarowe tablice z obsługą operacji wektorowych.
 - ⚡ Wydajność – operacje wykonywane są w C pod maską (dużo szybsze od klasycznych pętli Pythona).
-- 🧪 Często używana jako fundament bibliotek takich jak **pandas**, **scipy**, **scikit-learn**, **tensorflow** i **pytorch**.
+- 🧪 Często używana jako fundament bibliotek takich jak **[[pandas]]**, **scipy**, **scikit-learn**, **tensorflow** i **pytorch**.
 - ➗ Obsługuje operacje macierzowe, algebrę liniową, statystyki, transformaty Fouriera i inne przekształcenia numeryczne.
 
 # 📚 Przykłady zastosowania
@@ -84,7 +84,7 @@ print(a + b)
 
 # 💡 Przykład zastosowania
 
-**Uczenie maszynowe / przetwarzanie danych:**
+**[[Uczenie maszynowe]] / przetwarzanie danych:**
 
 - Normalizacja danych wejściowych (`(x - mean) / std`)
 - Obliczanie metryk (MAE, MSE, RMSE) z macierzy błędów

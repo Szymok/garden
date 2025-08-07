@@ -27,7 +27,7 @@ aliases:
 
 - **Brak kopiowania danych:** Dostęp w czasie rzeczywistym do rozproszonych zbiorów bez ich migracji czy duplikacji.
 - **Silniki federacyjne:** Wykorzystuje technologie, które umożliwiają jednoczesne zapytania do różnych typów źródeł danych przy użyciu jednego języka zapytań (zwykle SQL).
-- **Jednolity model dostępu:** Agreguje różne typy baz w jeden logiczny widok dostępny dla użytkowników, BI, narzędzi data science.
+- **Jednolity model dostępu:** Agreguje różne typy baz w jeden logiczny widok dostępny dla użytkowników, [[Business Intelligence|BI]], narzędzi data science.
 - **Elastyczność i szybkie prototypowanie:** Pozwala szybko tworzyć integracje ad hoc i prototypy raportów bez kosztu budowania pełnych pipeline’ów ETL/ELT.
 - **Kluczowa dla architektur hybrydowych i cloud:** Szeroko wykorzystywana w środowiskach multi-cloud i hybrydowych, gdzie dane są rozsiane po wielu platformach.
 
@@ -37,18 +37,18 @@ aliases:
 
 Obie techniki opierają się na ideałch warstwy logicznej nad źródłami danych, jednak:
 
-- **Wirtualizacja danych** to szerszy termin, obejmujący prezentację dowolnych zbiorów jako logicznej warstwy (np. bazy danych, pliki, API).
+- **[[Wirtualizacja danych]]** to szerszy termin, obejmujący prezentację dowolnych zbiorów jako logicznej warstwy (np. bazy danych, pliki, API).
 - **Federacja danych** koncentruje się na silnikach zapytań, które umożliwiają wykonywanie zapytań (np. SQL) na różnych źródłach w jednym zapytaniu, dbając o rozdział i łączenie wyników.
 
 ## Silniki federacyjne — przegląd
 
 |Silnik|Kluczowe cechy|
 |---|---|
-|**Trino**|Otwartoźródłowy, zoptymalizowany pod federację i duże analizy, szeroka integracja (SQL, S3, Delta Lake, NoSQL)|
+|**Trino**|Otwartoźródłowy, zoptymalizowany pod federację i duże analizy, szeroka integracja (SQL, S3, [[Delta Lake]], NoSQL)|
 |**Presto**|Oryginalny projekt federacji SQL według Facebooka, przoduje w zapytaniach rozproszonych, szybki rozwój społeczności|
-|**Spark SQL**|Integracja federacyjna przez JDBC i data source connectors, szerokie wsparcie dla big data|
+|**Spark SQL**|Integracja federacyjna przez JDBC i [[data source]] connectors, szerokie wsparcie dla big data|
 |**Denodo**|Komercyjna platforma do federacji i wirtualizacji z zaawansowanymi narzędziami do modelowania|
-|**Dremio**|Akceleracja i federacja danych w locie, wsparcie dla narzędzi BI, silnik Apache Arrow|
+|**Dremio**|Akceleracja i federacja danych w locie, wsparcie dla narzędzi [[Business Intelligence\|BI]], silnik [[Apache Arrow]]|
 
 ## Jak działa federacja danych?
 
@@ -71,7 +71,7 @@ Obie techniki opierają się na ideałch warstwy logicznej nad źródłami danyc
 
 # 💡 Przykład zastosowania
 
-Międzynarodowa korporacja finansowa wykorzystuje silnik Trino do stworzenia zunifikowanego modelu analizy danych. Trino pobiera dane z bazy Oracle (CRM), Hadoop (historyczne logi), plików CSV w S3 i hurtowni Redshift. Analitycy mogą jednym zapytaniem SQL porównywać bieżące transakcje z archiwalnymi dane o klientach bez potrzeby kopiowania wszystkich danych do wspólnej hurtowni. Prototypy raportów oraz modele ML są budowane na świeżych, federacyjnie połączonych danych, bez potrzeby budowania pipeline’ów przetwarzających wszystkie zbiory.
+Międzynarodowa korporacja finansowa wykorzystuje silnik Trino do stworzenia zunifikowanego modelu analizy danych. Trino pobiera dane z bazy Oracle (CRM), Hadoop (historyczne logi), plików CSV w S3 i hurtowni Redshift. Analitycy mogą jednym zapytaniem SQL porównywać bieżące transakcje z archiwalnymi dane o klientach bez potrzeby kopiowania wszystkich danych do wspólnej hurtowni. Prototypy raportów oraz modele [[Uczenie Maszynowe|ML]] są budowane na świeżych, federacyjnie połączonych danych, bez potrzeby budowania pipeline’ów przetwarzających wszystkie zbiory.
 
 ## 📌 Źródła
 
@@ -87,4 +87,4 @@ Międzynarodowa korporacja finansowa wykorzystuje silnik Trino do stworzenia zun
 - Różnica z wirtualizacją: federacja = query execution, pushdown, join na różnych źródłach; wirtualizacja = model logiczny/warstwa prezentacyjna
 - Zalety: szybkie prototypy, elastyczność, brak potrzeby ETL upfront, koszty tylko zapytania
 - Wady: performance zależy od źródeł, możliwe trudności w security/mappingu, nie zastąpi w 100% hurtowni
-- Usecase: multi-cloud, ad hoc BI, jednorazowe analizy, agregacje online, PoC, eksploracja rozproszonych zbiorów
+- Usecase: multi-cloud, ad hoc [[Business Intelligence|BI]], jednorazowe analizy, agregacje online, PoC, eksploracja rozproszonych zbiorów

@@ -28,13 +28,13 @@ aliases:
 
 - 🔢 Parametr **K** określa liczbę najlepszych słów branych pod uwagę przy generowaniu kolejnego tokena.
 - 🎯 Zwiększa trafność logiczną i spójność odpowiedzi przez ograniczenie przestrzeni wyboru.
-- 🎲 Jest jedną z metod tzw. **probabilistycznego dekodowania**, obok np. top-p (nucleus sampling) czy klasycznego greedy search.
+- 🎲 Jest jedną z metod tzw. **probabilistycznego dekodowania**, obok np. top-p ([[Top P|nucleus sampling]]) czy klasycznego greedy search.
 - 📉 Gdy K jest małe – odpowiedzi są bardzo przewidywalne; przy dużym K – zbliżamy się do pełnego samplingowania (bardziej kreatywne).
 - 🤖 Używana powszechnie w systemach NLP: czatbotach, tłumaczeniach maszynowych, generowaniu tekstu.
 
 # 📚 Szczegółowe wyjaśnienie
 
-W klasycznym generowaniu tekstu model predykcyjny (np. LLM) oblicza **rozkład prawdopodobieństwa** dla wszystkich słów w słowniku jako kolejne możliwe tokeny.
+W klasycznym generowaniu tekstu model predykcyjny (np. [[Base LLM|LLM]]) oblicza **rozkład prawdopodobieństwa** dla wszystkich słów w słowniku jako kolejne możliwe tokeny.
 
 Top-K Sampling działa tak:
 
@@ -54,7 +54,7 @@ Top-K Sampling działa tak:
 
 # 💡 Przykład zastosowania
 
-Model LLM generuje następne słowo po frazie:
+Model [[Base LLM|LLM]] generuje następne słowo po frazie:
 
 > "Chmura obliczeniowa pozwala na..."
 

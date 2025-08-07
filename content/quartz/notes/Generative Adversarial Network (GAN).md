@@ -19,7 +19,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Generative Adversarial Network (GAN)** to klasa modeli głębokiego uczenia, w której dwie sieci neuronowe – _generator_ i _dyskryminator_ – rywalizują ze sobą w procesie, którego celem jest tworzenie nowych, realistycznych danych (np. obrazów, dźwięków, tekstów) na podstawie statystyki oryginalnych danych treningowych.
+**Generative Adversarial Network (GAN)** to klasa modeli głębokiego uczenia, w której dwie [[sieci neuronowe]] – _generator_ i _dyskryminator_ – rywalizują ze sobą w procesie, którego celem jest tworzenie nowych, realistycznych danych (np. obrazów, dźwięków, tekstów) na podstawie statystyki oryginalnych danych treningowych.
 
 # 🔑 Kluczowe punkty
 
@@ -45,7 +45,7 @@ Z czasem generator tworzy na tyle realistyczne dane, że nawet doświadczony dys
 - **Kolorowanie i rekonstrukcja obrazów** (np. ze starych zdjęć czarno-białych)
 - **Tworzenie deepfake’ów** (video i audio)
 - **Transfer stylów (Style Transfer)**
-- **Tworzenie symulowanych zbiorów danych** do treningu innych modeli AI
+- **Tworzenie symulowanych zbiorów danych** do treningu innych modeli [[Uczenie Maszynowe|AI]]
 - **Syntetyczna generacja pacjentów dla badań medycznych**
 - **Tworzenie sztucznej muzyki lub efektów specjalnych do filmów**
 

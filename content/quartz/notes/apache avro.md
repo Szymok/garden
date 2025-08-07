@@ -38,7 +38,7 @@ aliases:
 
 - **Wiąże dane z ich schematem** – każda porcja danych może zawierać kompletny schemat lub nagłówek wskazujący na zarejestrowany schemat.
 - **Bezproblemowa serializacja i deserializacja** – niezależna od języka (cross-language).
-- **Ewolucja schematu (schema evolution)** – można zmieniać schematy (dodawać pola, zmieniać typy) bez łamania zgodności wstecznej.
+- **[[Ewolucja schematu]] ([[Ewolucja Schematu|schema evolution]])** – można zmieniać schematy (dodawać pola, zmieniać typy) bez łamania zgodności wstecznej.
 - **Brak klas generowanych kodem (jak np. w Avro vs Thrift vs Protobuf)** – działa dynamicznie.
 - Optymalny rozmiar i szybkość dla Big Data i przesyłania strumieniowego.
 
@@ -83,14 +83,14 @@ with open("user.avro", "wb") as out:
 |**Avro**|Binarne|Tak|Kafka, Hadoop, streaming pipelines|
 |**JSON**|Tekstowy|Nie|API, debugowanie|
 |**Parquet**|Kolumnowy|Tak|Hurtownie danych, analizy OLAP|
-|**ORC**|Kolumnowy|Tak|Hive, optymalne dla dużych zapytań|
+|**[[ORC]]**|Kolumnowy|Tak|[[Apache Hive\|Hive]], optymalne dla dużych zapytań|
 |**Protobuf/Thrift**|Binarne|Tak|RPC, komunikacja mikrousług|
 
 ## Dlaczego Avro?
 
 - Wydajna serializacja, kompaktowe formaty wysyłkowe
 - Idealny dla dużych systemów event-driven (Kafka, Pulsar)
-- Bezpieczny przy rozwoju – ewolucja schematu
+- Bezpieczny przy rozwoju – [[ewolucja schematu]]
 - Odczyt danych niezależnie od języka źródłowego
 
 # 💡 Przykład zastosowania
