@@ -20,12 +20,12 @@ aliases:
 
 # 🎯 Definicja
 
-**Data Source (źródło danych)** to system, zbiór, repozytorium lub fizyczny nośnik, z którego pochodzą dane używane w organizacji — np. baza danych, plik, API, data lake, hurtownia danych czy narzędzie analityczne. Źródło danych jest punktem wejścia dla procesu profilowania, katalogowania i zarządzania danymi w narzędziach data governance i katalogach danych.
+**Data Source (źródło danych)** to system, zbiór, repozytorium lub fizyczny nośnik, z którego pochodzą dane używane w organizacji — np. baza danych, plik, API, data lake, hurtownia danych czy narzędzie analityczne. Źródło danych jest punktem wejścia dla procesu profilowania, katalogowania i zarządzania danymi w narzędziach [[data governance]] i katalogach danych.
 
 # 🔑 Kluczowe punkty
 
 - Data source to pierwsza referencja w katalogu danych czy systemie metadata management — pozwala rejestrować, profilować i monitorować pochodzenie danych.
-- W platformach data governance można przeglądać profilowane tabele, pliki i inne zasoby powiązane z danym źródłem.
+- W platformach [[data governance]] można przeglądać profilowane tabele, pliki i inne zasoby powiązane z danym źródłem.
 - Źródła danych mogą być różnorodne: relacyjne bazy danych, pliki (CSV, Parquet, JSON), platformy chmurowe, API, systemy SaaS.
 - Każde źródło w katalogu posiada własny blok metadanych (np. typ źródła, lokalizacja, historia zmian, właściciel, status aktualizacji).
 - W narzędziach takich jak Ataccama, edycja źródła (np. zmiana parametrów połączenia, harmonogram dokumentowania, usuwanie, wersjonowanie) odbywa się przez graficzny interfejs.

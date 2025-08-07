@@ -20,15 +20,15 @@ aliases:
 
 # 🎯 Definicja
 
-**Strukturyzacja danych** to proces przekształcania danych niestrukturalnych lub półstrukturalnych w dane o zdefiniowanej strukturze, które można łatwo przetwarzać, analizować i przechowywać w systemach informacyjnych. Celem strukturyzacji jest ułatwienie dalszej analizy danych, ich integracji oraz wykorzystania w procesach automatycznych, takich jak raportowanie, uczenie maszynowe czy systemy rekomendacyjne.
+**Strukturyzacja danych** to proces przekształcania danych niestrukturalnych lub półstrukturalnych w dane o zdefiniowanej strukturze, które można łatwo przetwarzać, analizować i przechowywać w systemach informacyjnych. Celem strukturyzacji jest ułatwienie dalszej analizy danych, ich integracji oraz wykorzystania w procesach automatycznych, takich jak raportowanie, [[uczenie maszynowe]] czy systemy rekomendacyjne.
 
 # 🔑 Kluczowe punkty
 
 - Strukturyzacja nadaje danym **jednolitą formę** – np. w postaci tabel, rekordów, JSON, CSV, relacyjnych encji.
 - Pomaga w **oczyszczeniu i przygotowaniu danych** do analizy lub modelowania.
 - Jest częścią szerszego procesu **przygotowania danych**: ekstrakcja → czyszczenie → transformacja → strukturyzacja.
-- Strukturyzacja ułatwia też analizę powtarzalności, eksport danych lub ich wizualizację (np. w BI).
-- Przykładowe narzędzia: Python (pandas, regex), Spark, Apify, NLP toolkity, ETL/ELT pipeline.
+- Strukturyzacja ułatwia też analizę powtarzalności, eksport danych lub ich wizualizację (np. w [[Business Intelligence|BI]]).
+- Przykładowe narzędzia: Python ([[pandas]], regex), Spark, Apify, NLP toolkity, ETL/ELT pipeline.
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -44,7 +44,7 @@ aliases:
 
 - Wydobywanie pól z dokumentu tekstowego (NLP + regex)
 - Mapowanie nazw kolumn do ustandaryzowanego schematu
-- Segmentacja i tokenizacja treści (np. na zdania, akapity)
+- Segmentacja i [[tokenizacja]] treści (np. na zdania, akapity)
 - Parsowanie danych z plików półstrukturalnych do formatu tabeli
 - Detekcja i standaryzacja typów (np. data jako string → datetime)
 
@@ -52,7 +52,7 @@ aliases:
 
 - **Regex & pattern matching** — wyodrębnianie elementów (np. e-maili, dat, numerów).
 - **Natural Language Processing (NLP)** — np. ekstrakcja nazw własnych, klasyfikacja encji.
-- **ETL/ELT pipelines** — transformacja danych w drodze z systemów źródłowych do hurtowni.
+- **ETL/ELT pipelines** — [[transformacja danych]] w drodze z systemów źródłowych do hurtowni.
 - **OCR + strukturyzacja** — konwertowanie dokumentów skanowanych na dane tabelaryczne.
 - **Rule-based mapping** — przypisywanie danych do predefiniowanych struktur.
 
@@ -78,8 +78,8 @@ Dzięki użyciu narzędzi NLP i reguł ekstrakcji, system przekształca opinie w
 - Strukturyzacja = "wrzucenie danych w szablon"; często po OCR, NLP, scraping
 - Przekształcenie półstrukturalnych danych w relacyjne
 - Część preprocessing data → normalization → typyzacja → mapping pól
-- Ułatwia eksplorację, dashboardy, modele ML
+- Ułatwia eksplorację, dashboardy, modele [[Uczenie Maszynowe|ML]]
 - Kluczowe narzędzie w no-code/low-code parserach (np. Apify, Zapier, Talend)
-- Structured data → indexowalne, przeszukiwalne, zgodne z RAG
+- Structured data → indexowalne, przeszukiwalne, zgodne z [[RAG]]
 
 ---

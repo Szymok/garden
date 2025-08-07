@@ -22,21 +22,21 @@ aliases:
 
 # 🎯 Definicja
 
-**Skierowany Graf Acykliczny (DAG, ang. Directed Acyclic Graph)** to struktura danych składająca się z zestawu wierzchołków (węzłów) i skierowanych krawędzi między nimi, przy czym graf nie zawiera żadnych cykli — nie da się wrócić do punktu wyjścia przez serię połączeń. DAG umożliwia jednoznaczne uporządkowanie zadań lub zależności w przetwarzaniu danych, co czyni go idealnym do modelowania potoków danych i procesów transformacji.
+**Skierowany Graf Acykliczny (DAG, ang. Directed Acyclic Graph)** to [[Strukturyzacja danych|struktura danych]] składająca się z zestawu wierzchołków (węzłów) i skierowanych krawędzi między nimi, przy czym graf nie zawiera żadnych cykli — nie da się wrócić do punktu wyjścia przez serię połączeń. DAG umożliwia jednoznaczne uporządkowanie zadań lub zależności w przetwarzaniu danych, co czyni go idealnym do modelowania potoków danych i procesów transformacji.
 
 # 🔑 Kluczowe punkty
 
 - **Skierowany**: każda krawędź ma kierunek (od węzła rodzica do dziecka).
 - **Acykliczny**: brak możliwości utworzenia pętli — nie można wrócić do tego samego węzła.
 - **Kolejność zależności**: Graf wyraża zależności między krokami procesu (np. ETL, transformacji danych).
-- **Idempotencja i retry**: dzięki strukturze DAG, możliwe jest bezpieczne ponowne uruchamianie tylko wybranych fragmentów procesu.
+- **[[Idempotentność|Idempotencja]] i retry**: dzięki strukturze DAG, możliwe jest bezpieczne ponowne uruchamianie tylko wybranych fragmentów procesu.
 - **Zastosowanie w Data Engineeringu — orkiestracja, lineage, obserwowalność.**
 
 # 📚 Szczegółowe wyjaśnienie
 
 ## Zastosowanie DAG w inżynierii danych
 
-W systemach takich jak **Apache Airflow**, **Dagster**, **Prefect** czy **dbt**, DAG reprezentuje potok przetwarzania danych:
+W systemach takich jak **Apache [[Apache Airflow|Airflow]]**, **[[Dagster]]**, **Prefect** czy **[[dbt]]**, DAG reprezentuje potok przetwarzania danych:
 
 - **Węzeł (node)**: oznacza krok w potoku (np. ekstrakcję, transformację, agregację).
 - **Krawędź (edge)**: reprezentuje zależność — jeden krok musi zakończyć się sukcesem, by drugi mógł się rozpocząć.
@@ -45,7 +45,7 @@ W systemach takich jak **Apache Airflow**, **Dagster**, **Prefect** czy **dbt**,
 ## Cechy funkcjonalne DAG
 
 - **Deterministyczność**: przy tych samych danych wejściowych – te same wyniki.
-- **Idempotencja**: każdy krok może być bezpiecznie uruchomiony wielokrotnie – patrz: Idempotentność.
+- **[[Idempotentność|Idempotencja]]**: każdy krok może być bezpiecznie uruchomiony wielokrotnie – patrz: [[Idempotentność]].
 - **Debuggowanie i retry**: w przypadku błędu można powtórzyć tylko problematyczny krok, a nie cały potok.
 - **Rozszerzalność**: łatwo dodawać nowe węzły i zależności bez przebudowy całego workflow.
 
@@ -53,9 +53,9 @@ W systemach takich jak **Apache Airflow**, **Dagster**, **Prefect** czy **dbt**,
 
 |Narzędzie|Opis|
 |---|---|
-|**Apache Airflow**|Planowanie i zarządzanie złożonymi pipeline’ami danych|
-|**Dagster**|Podejście typu "data asset-oriented" z deklaratywnym API|
-|**dbt**|Modelowanie danych w SQL jako DAG transformacji|
+|**[[Apache Airflow]]**|Planowanie i zarządzanie złożonymi pipeline’ami danych|
+|**[[Dagster]]**|Podejście typu "[[Data Source\|data asset]]-oriented" z deklaratywnym API|
+|**[[dbt]]**|[[Modelowanie danych]] w SQL jako DAG transformacji|
 |**Prefect**|Nowoczesna orkiestracja z retry, caching, task runnerami|
 
 ## Przykład graficzny DAG
@@ -97,7 +97,7 @@ Wszystkie kroki są modelowane jako DAG. Jeśli podczas agregacji (Task C) wyst�
 - DAG: Directed → każde połączenie ma kierunek
 - Acykliczny → brak cykli, nie ma pętli
 - DAG ≠ drzewo — mogą być wierzchołki z wieloma parentami
-- Istotne w przetwarzaniu danych, BI, orkiestracji
-- Struktura bazowa np. w dbt: każdy model SQL to węzeł DAG
+- Istotne w przetwarzaniu danych, [[Business Intelligence|BI]], orkiestracji
+- Struktura bazowa np. w [[dbt]]: każdy model SQL to węzeł DAG
 - Retry, flow control, impact analysis, parallelism → wszystko dostępne dzięki DAG
 - DAG = mapowanie zależności logicznych między taskami – nie wykres ładowania danych

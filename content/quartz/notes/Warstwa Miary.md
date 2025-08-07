@@ -21,14 +21,14 @@ aliases:
 
 # 🎯 Definicja
 
-**Warstwa miary (ang. metrics layer, metrics store)** to niezależna warstwa architektury danych, w której definiuje się i centralnie przechowuje miary biznesowe oraz powiązane z nimi wymiary i logikę agregacji. Jej celem jest zagwarantowanie spójnych definicji metryk w całej organizacji, niezależnie od używanego narzędzia BI czy aplikacji. Warstwa miary jest kluczowym komponentem nowoczesnej Warstwy Semantycznej.
+**Warstwa miary (ang. metrics layer, metrics store)** to niezależna warstwa architektury danych, w której definiuje się i centralnie przechowuje miary biznesowe oraz powiązane z nimi [[wymiary]] i logikę agregacji. Jej celem jest zagwarantowanie spójnych definicji metryk w całej organizacji, niezależnie od używanego narzędzia [[Business Intelligence|BI]] czy aplikacji. Warstwa miary jest kluczowym komponentem nowoczesnej Warstwy Semantycznej.
 
 # 🔑 Kluczowe punkty
 
 - **Jedna definicja miary** („single source of truth”) — logika jest opisana raz i wykorzystywana w wielu narzędziach.
-- **Spójność raportowania** — wszyscy użytkownicy korzystają z tych samych, centralnie zarządzanych formuł KPI.
+- **Spójność raportowania** — wszyscy użytkownicy korzystają z tych samych, centralnie zarządzanych formuł [[KPI]].
 - **Automatyzacja i reużywalność** — metryki definiuje się w pliku konfiguracyjnym (najczęściej YAML), a ich obsługę zapewniają API.
-- **Integracja z BI oraz aplikacjami** — warstwa miary jest powiązana zarówno z narzędziami raportowymi, jak i procesami analitycznymi lub ML.
+- **Integracja z [[Business Intelligence|BI]] oraz aplikacjami** — warstwa miary jest powiązana zarówno z narzędziami raportowymi, jak i procesami analitycznymi lub [[Uczenie Maszynowe|ML]].
 - **Optymalizacja i cache** — zaawansowane implementacje pozwalają na cache’owanie wyników i optymalizację często wykorzystywanych metryk.
 
 # 📚 Szczegółowe wyjaśnienie
@@ -36,9 +36,9 @@ aliases:
 ## Mechanizm działania
 
 - **Definicja miar i wymiarów:**  
-    Miary (np. przychód, liczba użytkowników) oraz wymiary (np. czas, produkt, region) są definiowane w deklaratywnych plikach – najczęściej YAML.
+    Miary (np. przychód, liczba użytkowników) oraz [[wymiary]] (np. czas, produkt, region) są definiowane w deklaratywnych plikach – najczęściej YAML.
 - **Warstwa API:**  
-    Dostęp do miar odbywa się poprzez API, co pozwala integratorom i BI elastycznie pobierać dane na żądanie, niezależnie od narzędzia czy raportu.
+    Dostęp do miar odbywa się poprzez API, co pozwala integratorom i [[Business Intelligence|BI]] elastycznie pobierać dane na żądanie, niezależnie od narzędzia czy raportu.
 - **DRY (Don't Repeat Yourself):**  
     Zasada unikania duplikatów – jedna definicja miary służy wszystkim konsumentom, minimalizując ryzyko nieporozumień i błędów logicznych.
 - **Integracja z warstwą semantyczną:**  
@@ -46,24 +46,24 @@ aliases:
 
 ## Przykłady technologii i narzędzi
 
-- **dbt Metrics Layer** – centralne miejsce definiowania miar i agregacji, udostępnianych do dowolnych narzędzi downstream.
-- **Transform, Lightdash, Cube**, **Mode Metrics Store** – narzędzia umożliwiające centralizację logiki miar niezależnie od BI.
+- **[[dbt]] Metrics Layer** – centralne miejsce definiowania miar i agregacji, udostępnianych do dowolnych narzędzi downstream.
+- **Transform, Lightdash, Cube**, **Mode Metrics Store** – narzędzia umożliwiające centralizację logiki miar niezależnie od [[Business Intelligence|BI]].
 - **LookML Metrics Layer** (Looker) – warstwa miar jako integralny element modelu LookML.
 
 ## Korzyści z wdrożenia warstwy miary
 
-- Eliminacja niespójności w definiowaniu KPI czy metryk dla raportów BI.
+- Eliminacja niespójności w definiowaniu [[KPI]] czy metryk dla raportów [[Business Intelligence|BI]].
 - Łatwiejsze zmiany — aktualizacja definicji miary automatycznie wpłynie na wszystkie zależne raporty.
 - Jedno spojrzenie na wydajność organizacji — spójność raportowania między zespołami i narzędziami.
-- Umożliwia zaawansowane analizy, machine learning oraz automatyzację procesów (np. predykcja, segmentacja).
+- Umożliwia zaawansowane analizy, [[Uczenie Maszynowe|machine learning]] oraz automatyzację procesów (np. predykcja, segmentacja).
 
 # 💡 Przykład zastosowania
 
-W globalnej korporacji e-commerce miara _Customer Lifetime Value (LTV)_ jest definiowana centralnie w warstwie miary (dbt Metrics Layer) jako suma przychodów na klienta przez czas jego istnienia minus koszty pozyskania. Ta sama logika wykorzystywana jest:
+W globalnej korporacji e-commerce [[miara]] _Customer Lifetime Value (LTV)_ jest definiowana centralnie w warstwie miary ([[dbt]] Metrics Layer) jako suma przychodów na klienta przez czas jego istnienia minus koszty pozyskania. Ta sama logika wykorzystywana jest:
 
 - w dashboardzie sprzedażowym (Looker),
-- w raportowaniu finansowym (Power BI),
-- oraz w pipeline’ach ML przewidujących churn.
+- w raportowaniu finansowym (Power [[Business Intelligence|BI]]),
+- oraz w pipeline’ach [[Uczenie Maszynowe|ML]] przewidujących churn.
 
 Zmiana sposobu liczenia LTV w jednym miejscu natychmiast aktualizuje wszystkie raporty i modele — eliminując rozbieżności definicji w całej organizacji.
 
@@ -75,8 +75,8 @@ Zmiana sposobu liczenia LTV w jednym miejscu natychmiast aktualizuje wszystkie r
 
 # 👽 Brudnopis
 
-- Warstwa miary = definicje miar (metrics), serwowane API lub buildowane w modelu semantycznym (np. dbt, Cube, Lightdash, Looker).
-- DRY principle – raz zdefiniowana miara trafia do BI, ML, dashboardów, analityki — koniec duplikowania SQL/logiki KPI.
+- Warstwa miary = definicje miar (metrics), serwowane API lub buildowane w modelu semantycznym (np. [[dbt]], Cube, Lightdash, Looker).
+- DRY principle – raz zdefiniowana [[miara]] trafia do [[Business Intelligence|BI]], [[Uczenie Maszynowe|ML]], dashboardów, analityki — koniec duplikowania SQL/logiki [[KPI]].
 - YAML do deklarowania, cache do wydajności, API do integracji.
 - Eliminacja glue code i manualnych poprawek podyktowanych ad hoc zmianami.
-- Przykład: LTV, ARR, Net Revenue, Churn Rate – spójną logikę wywołuje dowolne narzędzie (BI/ML).
+- Przykład: LTV, ARR, Net Revenue, Churn Rate – spójną logikę wywołuje dowolne narzędzie ([[Business Intelligence|BI]]/[[Uczenie Maszynowe|ML]]).

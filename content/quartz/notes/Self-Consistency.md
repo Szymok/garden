@@ -18,14 +18,14 @@ aliases:
 
 # 🎯 Definicja
 
-**Self-Consistency** to zaawansowana technika inżynierii promptów wykorzystywana w kontekście **Chain-of-Thought Promptingu (CoT)**. Polega na wygenerowaniu wielu niezależnych ścieżek rozumowania dla danego zadania i wybraniu najbardziej **spójnej odpowiedzi** (najczęściej pojawiającej się konkluzji). Zamiast polegać na pojedynczym, często heurystycznym wyniku, Self-Consistency zwiększa niezawodność i trafność odpowiedzi przez **agregację wielu próbek reasoningowych**.
+**Self-Consistency** to zaawansowana technika inżynierii promptów wykorzystywana w kontekście **Chain-of-Thought Promptingu ([[Chain-of-Thought Prompting|CoT]])**. Polega na wygenerowaniu wielu niezależnych ścieżek rozumowania dla danego zadania i wybraniu najbardziej **spójnej odpowiedzi** (najczęściej pojawiającej się konkluzji). Zamiast polegać na pojedynczym, często heurystycznym wyniku, Self-Consistency zwiększa niezawodność i trafność odpowiedzi przez **agregację wielu próbek reasoningowych**.
 
 # 🔑 Kluczowe punkty
 
-- Technika opiera się na probabilistycznym próbkowaniu wielu odpowiedzi z użyciem CoT + sampling (np. temperature sampling).
+- Technika opiera się na probabilistycznym próbkowaniu wielu odpowiedzi z użyciem [[Chain-of-Thought Prompting|CoT]] + sampling (np. temperature sampling).
 - Finalna odpowiedź wybierana jest przez majority vote spośród wygenerowanych wyników.
 - Zwiększa trafność odpowiedzi w zadaniach wymagających wieloetapowego rozumowania (np. arytmetyka, zdroworozsądkowa inferencja).
-- Zastępuje deterministyczne podejście typu greedy decoding w promptach few-shot (lub zero-shot) CoT.
+- Zastępuje deterministyczne podejście typu greedy decoding w promptach few-shot (lub zero-shot) [[Chain-of-Thought Prompting|CoT]].
 - Efektywność rośnie przy większej liczbie próbek, ale też kosztem obliczeniowym.
 
 # 📚 Szczegółowe wyjaśnienie
@@ -37,9 +37,9 @@ aliases:
 3. Analizowane są końcowe odpowiedzi z każdego przekładu reasoningowego.
 4. Wybierana jest **najczęściej występująca odpowiedź końcowa** (majority vote).
 
-### Porównanie z klasycznym CoT
+### Porównanie z klasycznym [[Chain-of-Thought Prompting|CoT]]
 
-| Cecha                     | Chain-of-Thought Prompting     | Self-Consistency              |
+| Cecha                     | [[Chain-of-Thought Prompting]]     | Self-Consistency              |
 |---------------------------|--------------------------------|-------------------------------|
 | Liczba odpowiedzi         | 1                              | N (np. 10–20)                 |
 | Metoda wyboru             | Greedy decoding                | Sampling + voting             |
@@ -75,14 +75,14 @@ Wybierana jest odpowiedź najczęściej powtarzająca się – tutaj **67**, kt�
 # 📌 Źródła
 
 [1] Google Research – Self-Consistency Improves Chain of Thought Reasoning in Language Models: https://arxiv.org/abs/2203.11171  
-[2] Prompt Engineering Guide – Self-Consistency Prompting: https://github.com/dair-ai/Prompt-Engineering-Guide  
+[2] [[Prompt Engineering Guide]] – Self-Consistency Prompting: https://github.com/dair-ai/Prompt-Engineering-Guide  
 [3] OpenAI Cookbook – Chain-of-thought examples: https://github.com/openai/openai-cookbook/blob/main/examples/How_to_generate_reasoning_with_Chain_of_Thought.ipynb
 
 ## 👽 Brudnopis
 
 - Self-Consistency = sampling wielu reasoningów + voting.
-- Lepsza niż pojedyncze greedy CoT – mniej wrażliwa na "fluke".
+- Lepsza niż pojedyncze greedy [[Chain-of-Thought Prompting|CoT]] – mniej wrażliwa na "fluke".
 - Wymaga zwiększonego budżetu obliczeniowego.
 - Sprawdza się w testach typu GSM8K, BigBench Reasoning.
 - Sampling kluczowy – temperature ~0.75, Top-k ~40.
-- Można zautomatyzować np. w pipeline Retrieval-Augmented CoT.
+- Można zautomatyzować np. w pipeline Retrieval-Augmented [[Chain-of-Thought Prompting|CoT]].

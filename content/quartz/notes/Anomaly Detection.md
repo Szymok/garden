@@ -31,7 +31,7 @@ aliases:
 - 📈 Wspiera dwa typy modeli:
     - **Model niezależny od czasu** – porównuje obserwację do rozkładu danych bez uwzględnienia trendów czasowych.
     - **Model zależny od czasu (time-series)** – identyfikuje anomalie względem trendów czasowych (potrzebuje min. 6 cykli profilu danych).
-- 🧠 Mechanizmy AI/ML stosowane są do wykrywania nietypowych wzorców bez predefiniowanych reguł.
+- 🧠 Mechanizmy AI/[[Uczenie Maszynowe|ML]] stosowane są do wykrywania nietypowych wzorców bez predefiniowanych reguł.
 - 🚨 Detekcja anomalii może wywołać alerty i integrować się z systemami observability i dashboardami jakości danych.
 
 # 📚 Szczegółowe wyjaśnienie

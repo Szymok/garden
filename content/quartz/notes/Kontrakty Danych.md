@@ -24,10 +24,10 @@ aliases:
 
 # 🔑 Kluczowe punkty
 
-- **Abstrakcja nad danymi:** Oddziela produkcję danych (np. mikroserwisy, bazy operacyjne) od ich konsumpcji analitycznej lub ML, ustalając umowę co do struktury, zakresu i jakości danych.
+- **Abstrakcja nad danymi:** Oddziela produkcję danych (np. mikroserwisy, bazy operacyjne) od ich konsumpcji analitycznej lub [[Uczenie Maszynowe|ML]], ustalając umowę co do struktury, zakresu i jakości danych.
 - **Egzekwowalny interfejs:** Kontrakt można sprawdzać i wymuszać (np. za pomocą Rejestru Schematów, Protobuf, testów jakości, narzędzi typu Great Expectations).
 - **Zarządzanie zmianą:** Ułatwia rozsądne wersjonowanie i ewolucję schematów bez ryzyka destrukcyjnych modyfikacji lub awarii w downstream.
-- **Element Data Governance:** Przenosi zarządzanie danymi z poziomu ogólnych zasad do praktycznych, egzekwowalnych reguł i oczekiwań.
+- **Element [[Data Governance]]:** Przenosi [[zarządzanie danymi]] z poziomu ogólnych zasad do praktycznych, egzekwowalnych reguł i oczekiwań.
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -57,18 +57,18 @@ Przykładowo, w organizacji korzystającej z Apache Kafka i Protobuf, kontrakt j
 - **Great Expectations:** Definiowanie i testowanie oczekiwań dotyczących danych.
 - **API analityczne (GraphQL, REST):** Określanie typu/zakresu zwracanych danych.
 
-## Kontrakty a nowoczesny stos danych
+## Kontrakty a [[nowoczesny stos danych]]
 
-Kontrakty danych nie zastępują klasycznych potoków ETL/ELT lub narzędzi Data Stack. Są uzupełnieniem (warstwą walidacji i deklaratywnych interfejsów), a nie alternatywą – ułatwiają wczesne wychwycenie zmian destrukcyjnych i szybki prototyping źródeł danych.
+Kontrakty danych nie zastępują klasycznych potoków ETL/ELT lub narzędzi [[Stos danych|Data Stack]]. Są uzupełnieniem (warstwą walidacji i deklaratywnych interfejsów), a nie alternatywą – ułatwiają wczesne wychwycenie zmian destrukcyjnych i szybki prototyping źródeł danych.
 
-## Kontekst: kontrakt danych vs Data Mesh
+## Kontekst: kontrakt danych vs [[Data Mesh]]
 
-- **Data Mesh** wprowadza mikroserwisową organizację danych, ale nie narzuca, _jakie_ dane są publikowane, ani nie waliduje ich formy zgodnie z oczekiwaniami konsumenta.
-- **Kontrakt Danych** uściśla tę relację: narzuca formalny, weryfikowalny interfejs danych (np. poprzez automatyczne testy i schematy), wspomaga Data Governance na poziomie implementacyjnym.
+- **[[Data Mesh]]** wprowadza mikroserwisową organizację danych, ale nie narzuca, _jakie_ dane są publikowane, ani nie waliduje ich formy zgodnie z oczekiwaniami konsumenta.
+- **Kontrakt Danych** uściśla tę relację: narzuca formalny, weryfikowalny interfejs danych (np. poprzez automatyczne testy i schematy), wspomaga [[Data Governance]] na poziomie implementacyjnym.
 
 # 💡 Przykład zastosowania
 
-W firmie logistycznej zespoły developmentu utrzymujące systemy transportowe dostarczają zdarzenia biznesowe przez Apache Kafka, każde opisane kontraktem (Protobuf + Schema Registry). Konsumenci z działów analityki/ML mają pewność, że dane o trasach, ładunkach i dostawach zachowują zgodny format, są kompletne i odporne na nieautoryzowane zmiany. Przy zmianie schematu, pipeline ML automatycznie odrzuci niezgodne dane i wygeneruje alert – zapobiegając incydentom jakościowym.
+W firmie logistycznej zespoły developmentu utrzymujące systemy transportowe dostarczają zdarzenia biznesowe przez Apache Kafka, każde opisane kontraktem (Protobuf + Schema Registry). Konsumenci z działów analityki/[[Uczenie Maszynowe|ML]] mają pewność, że dane o trasach, ładunkach i dostawach zachowują zgodny format, są kompletne i odporne na nieautoryzowane zmiany. Przy zmianie schematu, pipeline [[Uczenie Maszynowe|ML]] automatycznie odrzuci niezgodne dane i wygeneruje alert – zapobiegając incydentom jakościowym.
 
 # 📌 Źródła
 
@@ -81,6 +81,6 @@ W firmie logistycznej zespoły developmentu utrzymujące systemy transportowe do
 
 - Kontrakty: umowa producent — konsument danych; schemat, walidacja, egzekwowanie
 - Protobuf + Kafka, Schema Registry (Confluent), walidacja jakości, zmiany weryfikowane automatycznie
-- Porównanie z Data Mesh: mesh = organizacja, kontrakt = mechanizm walidacji/zgodności
+- Porównanie z [[Data Mesh]]: mesh = organizacja, kontrakt = mechanizm walidacji/zgodności
 - Praktyczne narzędzia: Great Expectations, GraphQL/REST Schema, deklaratywne “data contract” jako kod
-- Usecase: ML pipeline źle działa? Można wyłapać breaking change już na wejściu, zamiast w downstream
+- Usecase: [[Uczenie Maszynowe|ML]] pipeline źle działa? Można wyłapać breaking change już na wejściu, zamiast w downstream

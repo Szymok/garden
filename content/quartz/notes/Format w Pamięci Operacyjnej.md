@@ -22,7 +22,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Format w pamięci operacyjnej** (ang. _in-memory format_) to struktura danych zaprojektowana do przechowywania i przetwarzania danych bezpośrednio w pamięci RAM, z optymalizacją pod kątem szybkiego dostępu, obliczeń wektorowych i równoległego przetwarzania. Format ten różni się od formatów przechowywania (dyskowych) tym, że stawia nacisk na szybkość wykonania i interaktywność, a nie na kompresję, zgodność czy trwałość danych.
+**Format w pamięci operacyjnej** (ang. _in-memory format_) to [[Strukturyzacja danych|struktura danych]] zaprojektowana do przechowywania i przetwarzania danych bezpośrednio w pamięci RAM, z optymalizacją pod kątem szybkiego dostępu, obliczeń wektorowych i równoległego przetwarzania. Format ten różni się od formatów przechowywania (dyskowych) tym, że stawia nacisk na szybkość wykonania i interaktywność, a nie na kompresję, zgodność czy trwałość danych.
 
 # 🔑 Kluczowe punkty
 
@@ -30,7 +30,7 @@ aliases:
 - Wspiera równoległość (np. SIMD) i cache-friendly layout.
 - Optymalny dla analityki interaktywnej, przetwarzania batchowego i uczenia maszynowego.
 - Format danych _in-memory_ może być tymczasowy i ulotny – nie przechowujemy go na dysku.
-- Przeciwieństwem są formaty plików “na dysku” jak (Parquet, ORC, Avro) – przeznaczone do długoterminowego przechowywania.
+- Przeciwieństwem są formaty plików “na dysku” jak (Parquet, [[ORC]], Avro) – przeznaczone do długoterminowego przechowywania.
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -45,11 +45,11 @@ aliases:
 
 |Format|Opis|
 |---|---|
-|Apache Arrow|Kolumnowy format in-memory z interoperacyjnością i wsparciem dla wielu języków|
-|NumPy|Klasyczna biblioteka macierzy numerycznych w Pythonie, zoptymalizowana dla dopasowania pamięci|
-|Pandas (DataFrame)|Abstrakcja nad tablicami NumPy; przetwarza dane tabelaryczne z metadanymi|
-|Spark DataFrame|Wspólna abstrakcja API nad rozproszonymi zbiorami, reprezentowanymi jako kolumnowe formaty RAM|
-|Polars|Ramka danych Arrow-native odczytywana i modyfikowalna szybciej niż Pandas|
+|[[Apache Arrow]]|Kolumnowy format in-memory z interoperacyjnością i wsparciem dla wielu języków|
+|[[NumPy]]|Klasyczna biblioteka macierzy numerycznych w Pythonie, zoptymalizowana dla dopasowania pamięci|
+|[[Pandas]] ([[DataFrames\|DataFrame]])|Abstrakcja nad tablicami [[NumPy]]; przetwarza dane tabelaryczne z metadanymi|
+|Spark [[DataFrames\|DataFrame]]|Wspólna abstrakcja API nad rozproszonymi zbiorami, reprezentowanymi jako kolumnowe formaty RAM|
+|Polars|Ramka danych Arrow-native odczytywana i modyfikowalna szybciej niż [[Pandas]]|
 
 ## Główne różnice względem formatów dyskowych (np. Parquet):
 
@@ -57,24 +57,24 @@ aliases:
 |---|---|---|
 |Miejsce działania|RAM|Dysk|
 |Optymalizacja|Szybkość obliczeń|Rozmiar/zgodność|
-|Użycie|ML, analityka, transformacje|Archiwizacja, data lakes|
+|Użycie|[[Uczenie Maszynowe\|ML]], analityka, transformacje|Archiwizacja, data lakes|
 |Interoperacyjność językowa|Często specyficzne (z wyj. Arrow)|Wysoka|
 |Typowy cykl życia|Tymczasowy, krótkoterminowy|Trwały, długoterminowy|
 
 ## In-memory w nowoczesnej inżynierii danych
 
-Nowoczesne platformy analityczne (np. DuckDB, Dask, Spark) często wykorzystują formaty in-memory jako pośrednią warstwę wykonawczą, umożliwiając:
+Nowoczesne platformy analityczne (np. [[DuckDB]], Dask, Spark) często wykorzystują formaty in-memory jako pośrednią warstwę wykonawczą, umożliwiając:
 
 - szybki filtr i agregację danych,
-- predykcję i trenowanie modeli ML,
+- predykcję i trenowanie modeli [[Uczenie Maszynowe|ML]],
 - operacje eksploracyjne (analiza ad hoc, prototypowanie data science).
 
 # 💡 Przykład zastosowania
 
-Zespół zajmujący się danymi marketingowymi używa DuckDB w Jupyter Notebook do eksploracji 100 mln rekordów danych z kampanii reklamowych. Dzięki zastosowaniu Arrow-native formatów w pamięci DuckDB może:
+Zespół zajmujący się danymi marketingowymi używa [[DuckDB]] w Jupyter Notebook do eksploracji 100 mln rekordów danych z kampanii reklamowych. Dzięki zastosowaniu Arrow-native formatów w pamięci [[DuckDB]] może:
 
 - wczytać dane bezpośrednio z Parquet (zero-copy),
-- filtrować i agregować dane bez ładowania ich całości do Pandas,
+- filtrować i agregować dane bez ładowania ich całości do [[Pandas]],
 - trenować model klasyfikujący typ kampanii w czasie poniżej 1 sekundy.
 
 ## 📌 Źródła
@@ -88,7 +88,7 @@ Zespół zajmujący się danymi marketingowymi używa DuckDB w Jupyter Notebook 
 
 - In-memory = RAM-ready structures, vs Data Lake formats (storage-optimized)
 - Arrow jako protokół wymiany między językami, nie tylko format – pandas.arrow_backend
-- DuckDB jako engine bezpośrednio na Arrow, zero-copy SQL
+- [[DuckDB]] jako engine bezpośrednio na Arrow, zero-copy SQL
 - NumPy = liczby; Pandas = dane tabelaryczne; Spark = RAM + kolumny (vs row)
-- Machine Learning, feature engineering, interactive analytics → 100% in-memory
+- [[Uczenie Maszynowe|Machine Learning]], feature engineering, interactive analytics → 100% in-memory
 - Porównanie: Parquet = taniość, Arrow = szybkość

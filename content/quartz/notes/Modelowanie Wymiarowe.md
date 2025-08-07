@@ -25,7 +25,7 @@ aliases:
 # 🔑 Kluczowe punkty
 
 - **Struktura prostych modeli:** Zastosowanie tabel faktów oraz wymiarów upraszcza eksplorację danych.
-- **Optymalizacja pod analizy BI:** Ułatwia szybkie i intuicyjne raportowanie.
+- **Optymalizacja pod analizy [[Business Intelligence|BI]]:** Ułatwia szybkie i intuicyjne raportowanie.
 - **Podejście bottom-up:** Najpierw modeluje się pojedyncze obszary/procesy biznesowe, potem je integruje.
 - **Typowe układy:** Schemat gwiazdy (_star schema_) oraz płatka śniegu (_snowflake schema_).
 - **Przyjazność dla użytkowników biznesowych:** Łatwość interpretacji struktury danych w raportach.
@@ -37,21 +37,21 @@ aliases:
 Model wymiarowy powstaje poprzez:
 
 - Zdefiniowanie kluczowego procesu biznesowego (np. sprzedaż)
-- Określenie miar ilościowych (fakty — liczby, wartości, kwoty)
-- Identyfikację perspektyw analizy (wymiary — czas, produkt, region)
+- Określenie miar ilościowych ([[fakty]] — liczby, wartości, kwoty)
+- Identyfikację perspektyw analizy ([[wymiary]] — czas, produkt, region)
 - Budowę relacji klucz obcy–klucz główny do powiązania faktów z wymiarami
 
-### Tabele faktów i wymiary
+### Tabele faktów i [[wymiary]]
 
 |Typ tabeli|Opis|
 |---|---|
-|**Fakty**|Zawierają dane ilościowe; rejestrują zdarzenia (np. sprzedaż, logi)|
-|**Wymiary**|Opisują szczegóły związane z faktami (np. produkt, klient, czas)|
+|**[[Fakty]]**|Zawierają [[Fakty\|dane ilościowe]]; rejestrują zdarzenia (np. sprzedaż, logi)|
+|**[[Wymiary]]**|Opisują szczegóły związane z faktami (np. produkt, klient, czas)|
 
 ### Schemat gwiazdy i płatka śniegu
 
-- **Star Schema**: tabela faktów otoczona bezpośrednio przez wymiary
-- **Snowflake Schema**: wymiary dodatkowo znormalizowane do podwymiarów
+- **Star Schema**: [[Fakty|tabela faktów]] otoczona bezpośrednio przez [[wymiary]]
+- **Snowflake Schema**: [[wymiary]] dodatkowo znormalizowane do podwymiarów
 
 ## Podejście bottom-up (Kimball) vs. top-down (Inmon)
 
@@ -67,7 +67,7 @@ Model wymiarowy powstaje poprzez:
 
 # 💡 Przykład zastosowania
 
-Sieć sklepów detalicznych wdraża modelowanie wymiarowe w swojej hurtowni danych. W modelu sprzedażowym tabela faktów rejestruje każdą transakcję, a powiązane tabele wymiarów opisują: klienta, produkt, sklep, datę, pracownika. Dzięki temu menedżer może szybko analizować sprzedaż tygodniową wg miasta, kategorii produktu czy kanału sprzedaży. Każdy raport BI budowany jest na prostych, czytelnych powiązaniach — bez konieczności znajomości złożonego modelu transakcyjnego.
+Sieć sklepów detalicznych wdraża modelowanie wymiarowe w swojej hurtowni danych. W modelu sprzedażowym [[Fakty|tabela faktów]] rejestruje każdą transakcję, a powiązane tabele wymiarów opisują: klienta, produkt, sklep, datę, pracownika. Dzięki temu menedżer może szybko analizować sprzedaż tygodniową wg miasta, kategorii produktu czy kanału sprzedaży. Każdy raport [[Business Intelligence|BI]] budowany jest na prostych, czytelnych powiązaniach — bez konieczności znajomości złożonego modelu transakcyjnego.
 
 ## 📌 Źródła
 
@@ -77,9 +77,9 @@ Sieć sklepów detalicznych wdraża modelowanie wymiarowe w swojej hurtowni dany
 
 # 👽 Brudnopis
 
-- DM = prostota dla BI, tabele faktów i tabel wymiarów, szybkie raporty, Kimball
-- Star schema – fakty centralnie, wymiary naokoło; snowflake – wymiary znormalizowane
+- DM = prostota dla [[Business Intelligence|BI]], tabele faktów i tabel wymiarów, szybkie raporty, Kimball
+- Star schema – [[fakty]] centralnie, [[wymiary]] naokoło; snowflake – [[wymiary]] znormalizowane
 - Kimball = bottom-up, szybkie wdrożenia biznesowe, potem integracja (Data Warehouse Bus)
 - Inmon = top-down, całościowy ERD, potem data marts
 - Przykład: retail – raport sprzedaży tygodniowej wg sklepu, produktu, klienta, kanału
-- BI lean-friendly, łatwy rozwój, szybka wartość dla biznesu
+- [[Business Intelligence|BI]] lean-friendly, łatwy rozwój, szybka wartość dla biznesu

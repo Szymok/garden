@@ -20,7 +20,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Projektowanie promptów** to iteracyjny proces tworzenia jasnych, precyzyjnych instrukcji dla modeli AI, którego celem jest uzyskiwanie powtarzalnych, wysokiej jakości odpowiedzi. Dobre prompty wykorzystują prostotę, jasność polecenia i właściwe dawkowanie kontekstu, umożliwiając skuteczną komunikację z LLM.
+**Projektowanie promptów** to iteracyjny proces tworzenia jasnych, precyzyjnych instrukcji dla modeli AI, którego celem jest uzyskiwanie powtarzalnych, wysokiej jakości odpowiedzi. Dobre prompty wykorzystują prostotę, jasność polecenia i właściwe dawkowanie kontekstu, umożliwiając skuteczną komunikację z [[Base LLM|LLM]].
 
 # 🔑 Kluczowe zasady
 
@@ -82,10 +82,10 @@ Place: Champalimaud Centre for the Unknown, Lizbona
 
 ## 5. Testowanie formatów promptów
 
-> Dla modeli (zwłaszcza LLM) warto rozważyć:
+> Dla modeli (zwłaszcza [[Base LLM|LLM]]) warto rozważyć:
 
 - separator instrukcji i kontekstu (`###`, `---`)
-- przykłady wejścia-wyjścia (few-shot prompting)
+- przykłady wejścia-wyjścia ([[few-shot prompting]])
 - jasne wymagania co do długości/wyniku ("wymień 3 rzeczy", "zwróć JSON", "podaj jako listę")
 
 # 💡 Przykład rozbudowanego promptu
@@ -104,7 +104,7 @@ Output format: Jedno zdanie, styl popularnonaukowy.
 
 - promptingguide.ai/best-practices
 - OpenAI Cookbook: Prompt engineering best practices
-- DeepLearning.AI – ChatGPT Prompt Engineering for Developers
+- DeepLearning.AI – [[ChatGPT Prompt Engineering]] for Developers
 
 ## 👽 Brudnopis
 

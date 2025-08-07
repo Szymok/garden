@@ -90,7 +90,7 @@ Cykl życia inżynierii danych nie jest modelem liniowym — to proces iteracyjn
 # 👽 Brudnopis
 
 - Podział na warstwy: raw → staging → curated → marts
-- Pipeline orchestration: Airflow / Prefect / [[Dagster]] — glue całego cyklu
+- Pipeline orchestration: [[Apache Airflow|Airflow]] / Prefect / [[Dagster]] — glue całego cyklu
 - [[Data Observability]] ostatnio priorytetowe: alerty, lineage, impact analysis
 - Maturity w organizacji: ścieżka od „scatter data” do „data products”
 - Każda faza to inny profil kompetencji: ingestion ≠ governance ≠ serving ≠ monitoring

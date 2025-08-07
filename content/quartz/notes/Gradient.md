@@ -71,16 +71,16 @@ W sieci neuronowej uczącej się rozpoznawania cyfr MNIST, parametrami są wagi 
 
 ## 📌 Źródła
 
-- Deep Learning — I. Goodfellow, Y. Bengio, A. Courville
-- MIT 6.S191 — Introduction to Deep Learning (Lecture Notes)
-- Neural Networks and Deep Learning — M. Nielsen
+- [[Deep Learning]] — I. Goodfellow, Y. Bengio, A. Courville
+- MIT 6.S191 — Introduction to [[Deep Learning]] (Lecture Notes)
+- Neural Networks and [[Deep Learning]] — M. Nielsen
 - PyTorch Docs — [https://pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html](https://pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html)
 
 ## 👽 Brudnopis
 
 - gradient = wektor kierunku zmiany
 - najprostsza forma — pochodna
-- sieci neuronowe: gradienty propagowane przez warstwy → aktualizacja wag
+- [[sieci neuronowe]]: gradienty propagowane przez warstwy → aktualizacja wag
 - możliwe problemy: vanishing gradients (sigmoid, RNN), exploding gradients
 - różne optymalizatory = różne sposoby wykorzystania gradientu: SGD, Adam, Adagrad
 - autograd = automatyczne liczenie gradientów (np. w PyTorch, TensorFlow)

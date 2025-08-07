@@ -21,15 +21,15 @@ aliases:
 
 # 🎯 Definicja
 
-**Delta Lake** to warstwa przechowywania danych typu open-source zaprojektowana do pracy na jeziorach danych (Data Lake), która dodaje funkcjonalności ACID, versioning oraz walidację do plików przechowywanych w formacie **Apache Parquet**. Umożliwia budowanie architektur typu **Lakehouse**, łącząc elastyczność data lake z niezawodnością hurtowni danych.
+**Delta Lake** to [[warstwa przechowywania]] danych typu open-source zaprojektowana do pracy na jeziorach danych (Data Lake), która dodaje funkcjonalności [[Transakcje ACID|ACID]], versioning oraz walidację do plików przechowywanych w formacie **[[Apache Parquet]]**. Umożliwia budowanie architektur typu **[[Data Lakehouse|Lakehouse]]**, łącząc elastyczność data lake z niezawodnością hurtowni danych.
 
 # 🔑 Kluczowe punkty
 
-- Umożliwia operacje **ACID** (Atomicity, Consistency, Isolation, Durability) na zbiorach danych w jeziorze.
+- Umożliwia operacje **[[Transakcje ACID|ACID]]** (Atomicity, Consistency, Isolation, Durability) na zbiorach danych w jeziorze.
 - Przechowuje dane jako **pliki Parquet**, z dodatkowymi metadanymi śledzącymi transakcje (DeltaLog).
 - Obsługuje **time travel** — zapytania do danych sprzed określonego punktu w czasie.
 - Integruje się z Apache Spark, Databricks, Presto/Trino, Snowflake i innymi systemami.
-- Umożliwia streaming i batch w ramach jednej tabeli (unifikacja architektury lambda i Kappa).
+- Umożliwia streaming i batch w ramach jednej tabeli (unifikacja architektury [[Architektura Lambda|lambda]] i Kappa).
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -58,7 +58,7 @@ spark.read.format("delta").load("/mnt/raw/delta/events")
 
 |Funkcja|Opis|
 |---|---|
-|**ACID Transactions**|Gwarantuje spójność danych w warunkach współbieżnego dostępu.|
+|**[[Transakcje ACID\|ACID]] Transactions**|Gwarantuje spójność danych w warunkach współbieżnego dostępu.|
 |**Upsert (MERGE)**|Możliwość aktualizacji i scalania rekordów bez pełnego nadpisu.|
 |**Time Travel**|Możliwość przeglądania danych z przeszłości.|
 |**Schema Enforcement**|Walidacja struktury danych przy zapisie.|
@@ -66,14 +66,14 @@ spark.read.format("delta").load("/mnt/raw/delta/events")
 
 ## Zastosowania praktyczne
 
-- Budowa **data lakehouse** — połączenie elastyczności data lakes z niezawodnością DWH.
-- **Zasilanie modeli ML** – uproszczony dostęp do wersjonowanych danych treningowych.
+- Budowa **[[data lakehouse]]** — połączenie elastyczności data lakes z niezawodnością DWH.
+- **Zasilanie modeli [[Uczenie Maszynowe|ML]]** – uproszczony dostęp do wersjonowanych danych treningowych.
 - **ETL i pipeline’y danych** – bezpieczne i spójne przetwarzanie danych wsadowych i streamingowych.
 - **Obsługa danych operacyjnych** – upserty i bieżące aktualizacje np. statusów systemowych.
 
 # 💡 Przykład zastosowania
 
-W nowoczesnej platformie e-commerce architektura Lakehouse oparta na Delta Lake pozwala zarówno analitykom biznesowym, jak i zespołom ML, pracować na tym samym źródle danych. Logi transakcyjne są zapisywane jako strumień na bieżąco (streaming), a modele rekomendacyjne są trenowane na migawkach z tygodnia (batch). Dzięki upsertom można łatwo usuwać błędy pobrań danych przy zachowaniu spójności analitycznej.
+W nowoczesnej platformie e-commerce architektura [[Data Lakehouse|Lakehouse]] oparta na Delta Lake pozwala zarówno analitykom biznesowym, jak i zespołom [[Uczenie Maszynowe|ML]], pracować na tym samym źródle danych. Logi transakcyjne są zapisywane jako strumień na bieżąco (streaming), a modele rekomendacyjne są trenowane na migawkach z tygodnia (batch). Dzięki upsertom można łatwo usuwać błędy pobrań danych przy zachowaniu spójności analitycznej.
 
 ## 📌 Źródła
 
@@ -84,10 +84,10 @@ W nowoczesnej platformie e-commerce architektura Lakehouse oparta na Delta Lake 
 ## 👽 Brudnopis
 
 - Delta Lake = Parquet + metadane + log transakcji
-- Lakehouse = DataLake + ACID + szybki SQL → unifikacja DW i DL
+- [[Data Lakehouse|Lakehouse]] = DataLake + [[Transakcje ACID|ACID]] + szybki SQL → unifikacja DW i [[Deep Learning|DL]]
 - MERGE INTO = upsert bez kosztownego nadpisywania całych plików
 - Time Travel → `VERSION AS OF` lub `TIMESTAMP AS OF`
-- Zintegrowane z Spark, Databricks, Iceberg, Presto
-- Alternatywy: Apache Hudi, Apache Iceberg
-- Rozwiązuje problem „plików jako źródło danych” → dodaje transakcyjność i walidację schematu
+- Zintegrowane z Spark, Databricks, [[Apache Iceberg|Iceberg]], Presto
+- Alternatywy: [[Apache Hudi]], [[Apache Iceberg]]
+- Rozwiązuje problem „plików jako [[Data Source|źródło danych]]” → dodaje transakcyjność i walidację schematu
 - Obsługa Z-ordering, optimize, vacuum dla wydajności i czyszczenia

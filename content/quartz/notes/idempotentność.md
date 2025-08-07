@@ -43,10 +43,10 @@ aliases:
 |`app.get('/data')` – żądanie GET|✅ Tak|GET nie zmienia stanu, zawsze ten sam rezultat|
 |`app.post('/register')` – żądanie POST|❌ Nie|POST dodaje rekord — może tworzyć duplikaty|
 
-## Idempotentność w pipelines danych
+## Idempotentność w [[Potoki przetwarzania danych|pipelines danych]]
 
-- **Przykład 1:** job Airflow pobiera dane z API i zapisuje do hurtowni – jeśli operacja jest idempotentna (np. przez `MERGE` lub `UPSERT`), można bezpiecznie ją powtórzyć bez utraty integralności.
-- **Przykład 2:** model w dbt przelicza "monthly_revenue" – każde uruchomienie `dbt run` daje ten sam wynik, bo dane źródłowe są wersjonowane (append-only), a obliczenia są nadpisywane.
+- **Przykład 1:** job [[Apache Airflow|Airflow]] pobiera dane z API i zapisuje do hurtowni – jeśli operacja jest idempotentna (np. przez `MERGE` lub `UPSERT`), można bezpiecznie ją powtórzyć bez utraty integralności.
+- **Przykład 2:** model w [[dbt]] przelicza "monthly_revenue" – każde uruchomienie `dbt run` daje ten sam wynik, bo dane źródłowe są wersjonowane (append-only), a obliczenia są nadpisywane.
 
 ## Jak osiągnąć idempotentność?
 
@@ -60,7 +60,7 @@ aliases:
 
 - ✅ Możliwość restartu z dowolnego kroku bez skutków ubocznych.
 - ✅ Łatwiejsze debugowanie i audytowanie.
-- ✅ Niezawodność w pipeline’ach i automatyzacji (Airflow, Dagster, dbt).
+- ✅ Niezawodność w pipeline’ach i automatyzacji ([[Apache Airflow|Airflow]], [[Dagster]], [[dbt]]).
 - ✅ Uproszczenie retry i disaster recovery bez ręcznego czyszczenia stanu.
 
 # 💡 Przykład zastosowania
@@ -77,8 +77,8 @@ Zespół danych przetwarza codzienne raporty sprzedaży od partnerów zewnętrzn
 
 - `f(f(x)) = f(x)` – matematyczna definicja idempotencji
 - klasyczne w REST: GET i DELETE → bez efektu przy drugim wykonaniu
-- ETL/ELT – transformacje nie powinny powielać rekordów (czysty SQL, dbt)
-- airflow retry → bezpieczny tylko przy idempotentnych taskach
+- ETL/ELT – transformacje nie powinny powielać rekordów (czysty SQL, [[dbt]])
+- [[Apache Airflow|airflow]] retry → bezpieczny tylko przy idempotentnych taskach
 - append-only + snapshot + overwrite = sekrety idempotentnych danych
-- potoki danych muszą to tolerować = jakość, niezawodność, automatyczna naprawa
+- [[Potoki przetwarzania danych|potoki danych]] muszą to tolerować = jakość, niezawodność, automatyczna naprawa
 - related: czyste funkcje, retryability, disaster recovery, lineage & observability

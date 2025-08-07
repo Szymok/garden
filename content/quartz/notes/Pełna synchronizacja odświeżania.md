@@ -78,7 +78,7 @@ W przypadku API dostawcy reklam, które nie udostępnia znacznika `updated_at`, 
 - Append = trzeba deduplikować (np. `primary key`, `hash`, `generation`)
 - Overwrite robi drop + insert, przydaje się tam, gdzie są delecje
 - Generacja `_airbyte_generation_id` przy każdej synchronizacji
-- Nieefektywne dla danych > 1M rekordów – przejdź na inkrementalne lub RAG
+- Nieefektywne dla danych > 1M rekordów – przejdź na inkrementalne lub [[RAG]]
 - Dobry fallback gdy nie działa tryb inkrementalny (brak kolumny timestamp lub ID)
 
 ---

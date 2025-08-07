@@ -50,14 +50,14 @@ Szeregi czasowe są kluczowym elementem wielu dziedzin:
 - **Exponential Smoothing (ETS)** – ważenie starszych obserwacji mniej niż nowszych
 - **Prophet (Facebook)** – model dekonstrukcyjny (trend + sezonowość + święta)
 
-### 🔹 Modele ML/DL
+### 🔹 Modele [[Uczenie Maszynowe|ML]]/[[Deep Learning|DL]]
 
 - **XGBoost / LightGBM** – z funkcjami opóźnień/lags
-- **Random Forest z cechami czasowymi**
-- **LSTM / GRU (RNN)** – sieci neuronowe do sekwencji danych
+- **[[Lasy losowe|Random Forest]] z cechami czasowymi**
+- **LSTM / GRU (RNN)** – [[sieci neuronowe]] do sekwencji danych
 - **CNN / Transformer** – zaawansowane podejście z modelowaniem czasowo-przestrzennym
 
-⚠️ Modele ML lepiej przewidują, ale są często trudniejsze do wyjaśnienia (czarne skrzynki). Z pomocą przychodzi np. **Permutation Importance**, SHAP, PDP.
+⚠️ Modele [[Uczenie Maszynowe|ML]] lepiej przewidują, ale są często trudniejsze do wyjaśnienia (czarne skrzynki). Z pomocą przychodzi np. **Permutation Importance**, SHAP, PDP.
 
 # ¶ Naiwna prognoza
 
@@ -98,14 +98,14 @@ Sukcesywny układ chronologiczny pozwala przewidywać przyszłość bez przeciek
 
 ## ❌ Wady
 
-- ⚠️ Modele ML trudne do wyjaśnienia (brak przejrzystości)
+- ⚠️ Modele [[Uczenie Maszynowe|ML]] trudne do wyjaśnienia (brak przejrzystości)
 - 📊 Duża ilość danych + inżynieria cech = spore zasoby obliczeniowe
 - 🔁 Często występują nieliniowe, zmienne w czasie zależności (konieczność adaptacji modelu)
 - ❌ Wysoka podatność na przerwy w danych, zmiany w sezonowości, regresje covidowe/wojenne
 
 # 💡 Praktyczny przykład
 
-Zespół prognozowania zużycia energii gromadzi historię pomiarów z 15-minutowych interwałów z liczników. Wyciągają lag features (opóźnienia), rolling averages (średnie kroczące), oznaczenia świąt i pór roku. Testowany jest model XGBoost z 30-dniowym oknem lookback. Wyniki walidowane przez rolling window. Model deployed w Airflow z monitoringiem MAPE i retraining co 7 dni.
+Zespół prognozowania zużycia energii gromadzi historię pomiarów z 15-minutowych interwałów z liczników. Wyciągają lag features (opóźnienia), rolling averages (średnie kroczące), oznaczenia świąt i pór roku. Testowany jest model XGBoost z 30-dniowym oknem lookback. Wyniki walidowane przez rolling window. Model deployed w [[Apache Airflow|Airflow]] z monitoringiem MAPE i retraining co 7 dni.
 
 ## 📌 Źródła
 
@@ -119,9 +119,9 @@ Zespół prognozowania zużycia energii gromadzi historię pomiarów z 15-minuto
 - szereg = wartości z etykietą czasową
 - Trend ↑↓, Sezonowość ♻️, Lag ⬅️
 - rolling, expanding, shift()
-- klasyka: ARIMA → teraz ML (XGB + lag features)
+- klasyka: ARIMA → teraz [[Uczenie Maszynowe|ML]] (XGB + lag features)
 - Ramię CIops: aktualizacja modelu, drift detection, walidacja on-line
 - nie shuffle! chronologia to wszystko
 - taski: forecasting, detection (anomalie), klasyfikacja (post-label)
 - Prophet → szybki, elastyczny, mityczny default w firmach 👼
-- Dobre KPI: MAE, RMSE, MAPE (%) → porównanie do naïve = sanity check
+- Dobre [[KPI]]: MAE, RMSE, MAPE (%) → porównanie do naïve = sanity check

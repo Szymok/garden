@@ -76,20 +76,20 @@ Po normalizacji Airbyte utworzy:
 ## Rodzaje normalizacji w Airbyte
 
 - **Basic normalization** (domyślna + prosty schemat relacyjny dla JSON)
-- **Custom dbt-based normalization** — generuje projekt dbt i pozwala go dostosować do potrzeb
+- **Custom [[dbt]]-based normalization** — generuje projekt [[dbt]] i pozwala go dostosować do potrzeb
 
 # 💡 Przykład zastosowania
 
 Firma SaaS synchronizuje dane użytkowników z publicznego API do Snowflake. API zwraca dane jako zagnieżdżone JSON-y. Airbyte wykonuje regularne odczyty danych i po włączeniu opcji „Enable normalization”:
 
 - Automatycznie przekształca rekordy do zestawu relacyjnych tabel.
-- Każda podtabela (np. adresy, role, statusy) ląduje w niezależnej tabeli z kluczem.
+- Każda podtabela (np. adresy, [[Roles|role]], statusy) ląduje w niezależnej tabeli z kluczem.
 - Proces redukuje potrzebę ręcznego pisania parserów JSON, obniżając koszt integracji.
 
 ## 📌 Źródła
 
 - [Airbyte Docs – Normalization](https://docs.airbyte.com/cloud/core-concepts#normalization)
-- [Airbyte GitHub – dbt-normalization repository](https://github.com/airbytehq/airbyte/tree/master/airbyte-integrations/bases/base-normalization)
+- [Airbyte GitHub – [[dbt]]-normalization repository](https://github.com/airbytehq/airbyte/tree/master/airbyte-integrations/bases/base-normalization)
 - Normalizacja Bazy Danych
 
 ## 👽 Brudnopis
@@ -97,5 +97,5 @@ Firma SaaS synchronizuje dane użytkowników z publicznego API do Snowflake. API
 - Normalizacja Airbyte ≠ klasyczna normalizacja bazy danych
 - Przekształcanie JSON → tabele, automatycznie: flatten, typy, relacje
 - Włączana per-connector jako opcja
-- Custom dbt = advanced use → można overrideować przekształcenia
-- Schemat działania: extract → (normalize) → load → (downstream dbt/BI/ML)
+- Custom [[dbt]] = advanced use → można overrideować przekształcenia
+- Schemat działania: extract → (normalize) → load → (downstream [[dbt]]/[[Business Intelligence|BI]]/[[Uczenie Maszynowe|ML]])

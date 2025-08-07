@@ -25,10 +25,10 @@ aliases:
 # 🔑 Kluczowe punkty
 
 - Dane pozostają w źródłowych systemach – nie są kopiowane ani agregowane przed zapytaniem.
-- Warstwa wirtualizacji umożliwia tworzenie semantycznych modeli biznesowych (np. kostki OLAP, widoki logiczne) dostępnych dla różnych narzędzi BI i użytkowników.
-- Zapytania są tłumaczone i wykonywane w locie na odpowiednich źródłach; często optymalizowane przez mechanizmy push-down i buforowanie w pamięci.
+- Warstwa wirtualizacji umożliwia tworzenie semantycznych modeli biznesowych (np. kostki OLAP, widoki logiczne) dostępnych dla różnych narzędzi [[Business Intelligence|BI]] i użytkowników.
+- Zapytania są tłumaczone i wykonywane w locie na odpowiednich źródłach; często optymalizowane przez mechanizmy [[push-down]] i buforowanie w pamięci.
 - Idealna dla środowisk z wieloma systemami źródłowymi o stosunkowo wysokiej wydajności i spójnych czasach odpowiedzi.
-- Ściśle powiązana z federacją danych (konsolidacja wielu źródeł) i technikami push-down (delegacja operacji do źródeł danych).
+- Ściśle powiązana z federacją danych (konsolidacja wielu źródeł) i technikami [[push-down]] (delegacja operacji do źródeł danych).
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -36,12 +36,12 @@ aliases:
 
 1. **Połączenie z wieloma źródłami:**  
     Warstwa wirtualizacji integruje różnorodne źródła – bazy relacyjne, hurtownie danych, API, pliki, cloud storage.
-2. **Warstwa semantyczna:**  
+2. **[[Warstwa semantyczna]]:**  
     Projektujesz modele danych, które odpowiadają strukturze biznesowej (np. tabele logiczne, kostki), niezależnie od fizycznej lokalizacji i formatu źródeł.
 3. **On-demand execution:**  
     Zapytania kierowane do warstwy wirtualnej są tłumaczone i optymalizowane, a cała logika wykonania (joiny, agregacje) realizowana jest bezpośrednio na źródłach, jeśli to możliwe.
 4. **Buforowanie i optymalizacja:**  
-    Technologie takie jak Apache Arrow buforują i przetwarzają zestawy wyników w pamięci RAM, poprawiając wydajność i redukując czas odpowiedzi.
+    Technologie takie jak [[Apache Arrow]] buforują i przetwarzają zestawy wyników w pamięci RAM, poprawiając wydajność i redukując czas odpowiedzi.
 5. **Brak kopiowania danych:**  
     Fizyczna migracja i wcześniejsze agregacje są zbędne; dane trafiają do użytkownika tylko w momencie zapytania.
 
@@ -51,39 +51,39 @@ aliases:
 - **Denodo:** Rozbudowane narzędzie do federacji i wirtualizacji danych, wspierające szeroką gamę źródeł.
 - **Presto/Trino:** Silniki federacyjne umożliwiające rozproszone kwerendy na wielu backendach.
 
-### Kluczowa rola Apache Arrow
+### Kluczowa rola [[Apache Arrow]]
 
-- Apache Arrow zapewnia wspólny format pamięci, szybki transfer i przetwarzanie danych wektorowych – optymalizacja pod warstwy wirtualne i ad hoc query.
+- [[Apache Arrow]] zapewnia wspólny format pamięci, szybki transfer i przetwarzanie danych wektorowych – optymalizacja pod warstwy wirtualne i ad hoc query.
 
 ## Zastosowania
 
-- Raportowanie BI z wielu źródeł bez centralnego Data Warehouse.
+- Raportowanie [[Business Intelligence|BI]] z wielu źródeł bez centralnego Data Warehouse.
 - Analizy ad hoc na danych rozproszonych po systemach operacyjnych firmy.
 - Szybkie prototypowanie i iteracja zapytań bez kosztu ETL.
 
 ## Integracja z federacją danych i push-downs
 
-- **Federacja danych**: Konsolidacja i łączenie zapytań na zbiorach z różnych źródeł w czasie rzeczywistym, bez ETL.
-- **Push-down**: Delegowanie kosztownych operacji (filtrowanie, agregacja) do źródłowych silników baz danych.
-- **Warstwa semantyczna**: Pozwala użytkownikom odwoływać się do modeli logicznych, a nie do detali technicznych źródeł.
+- **[[Federacja danych]]**: Konsolidacja i łączenie zapytań na zbiorach z różnych źródeł w czasie rzeczywistym, bez ETL.
+- **[[Push-down]]**: Delegowanie kosztownych operacji (filtrowanie, agregacja) do źródłowych silników baz danych.
+- **[[Warstwa semantyczna]]**: Pozwala użytkownikom odwoływać się do modeli logicznych, a nie do detali technicznych źródeł.
 
 # 💡 Przykład zastosowania
 
-Międzynarodowa firma technologiczna korzysta z Dremio, aby zintegrować dane z baz Oracle, SAP oraz plików Parquet w S3 – bez fizycznego kopiowania danych do centralnej hurtowni. Zespoły BI mają dostęp do ujednoliconego modelu semantycznego, mogą tworzyć kostki OLAP i dashboardy w Power BI, a zapytania analityczne są realizowane w locie, z push-downem logicznych operacji do systemów źródłowych i optymalizacją przy użyciu Apache Arrow.
+Międzynarodowa firma technologiczna korzysta z Dremio, aby zintegrować dane z baz Oracle, SAP oraz plików Parquet w S3 – bez fizycznego kopiowania danych do centralnej hurtowni. Zespoły [[Business Intelligence|BI]] mają dostęp do ujednoliconego modelu semantycznego, mogą tworzyć kostki OLAP i dashboardy w Power [[Business Intelligence|BI]], a zapytania analityczne są realizowane w locie, z push-downem logicznych operacji do systemów źródłowych i optymalizacją przy użyciu [[Apache Arrow]].
 
 ## 📌 Źródła
 
 - [Dremio – What is Data Virtualization?](https://www.dremio.com/wiki/data-virtualization/)
 - [Denodo – What is Data Virtualization?](https://www.denodo.com/en/data-virtualization)
-- [Apache Arrow – Dokumentacja](https://arrow.apache.org/)
+- [[[Apache Arrow]] – Dokumentacja](https://arrow.apache.org/)
 - [TechTarget – Data Virtualization explained](https://www.techtarget.com/searchdatamanagement/definition/data-virtualization)
 
 # 👽 Brudnopis
 
-- Virtualization = BI i analityka bez ETL, push-down na źródłach, Apache Arrow
+- Virtualization = [[Business Intelligence|BI]] i analityka bez ETL, [[push-down]] na źródłach, [[Apache Arrow]]
 - Modele semantyczne σ join/federacja kilku źródeł w jednym query context
 - Dremio, Denodo, IBM Data Virtualization Manager
-- Warstwy: źródła → federacja → logika biznesowa/model → ekspozycja do BI/query
+- Warstwy: źródła → federacja → logika biznesowa/model → ekspozycja do [[Business Intelligence|BI]]/query
 - Przewaga: szybkie prototypy, query na aktualnych danych, brak kopiowania/latency ETL
 - Wady: performance ograniczony przez źródła, raczej nie stosować dla obciążeń operacyjnych/masowych batch
 - Real-case: FAQ, dashboardy Ad Hoc, testowanie nowych źródeł, fast POC dla [[Inżynieria Danych|DataOps]]

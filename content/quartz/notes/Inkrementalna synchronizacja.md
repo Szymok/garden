@@ -37,7 +37,7 @@ aliases:
 1. Airbyte uruchamia zapytanie do źródła (np. bazy danych), które wybiera **tylko te rekordy, których kursor (np. `updated_at`) jest większy niż największy kursor z poprzedniej synchronizacji**.
 2. Wybrane rekordy są przesyłane do systemu docelowego (np. hurtowni danych).
 3. W trybie Append w docelowej tabeli jest zachowywana każda wersja pobranego rekordu („history”).
-4. W trybie Deduped History dodatkowo budowana jest deduplikowana tabela bieżąca — zawiera _tylko najnowszą wersję każdego rekordu_ (dot. np. SCD — Slowly Changing Dimension).
+4. W trybie Deduped History dodatkowo budowana jest deduplikowana tabela bieżąca — zawiera _tylko najnowszą wersję każdego rekordu_ (dot. np. [[Slowly Changing Dimension (SCD)|SCD]] — [[Slowly Changing Dimension (SCD)|Slowly Changing Dimension]]).
 5. Sukces każdej synchronizacji jest zapamiętywany — tzw. checkpoint (punkt kontrolny), co pozwala systemowi wznowić synchronizację od miejsca, w którym poprzednio przerwano (mechanizm checkpointingu).
 
 ## Ograniczenia
@@ -70,13 +70,13 @@ W integracji MS SQL → BigQuery za pomocą Airbyte, synchronizacja inkrementaln
 
 - inkrementalnie = tylko to, co nowe/zmienione (“delta” obsługiwana przez kursor)
 - wydajność: nawet >10 MBps [MongoDB]
-- historyczny append vs deduped-table (SCD)
+- historyczny append vs deduped-table ([[Slowly Changing Dimension (SCD)|SCD]])
 - brak wsparcia dla usunięć chyba że is_deleted/CDC/full refresh
 - checkpointing — odporność na przerwanie synchronizacji
 - default dla dużych, często zmienianych tabel
 - Problem: „ghost records” bez CDC/usuwalnych flag
 - Airbyte: tryby sync — incremental, full, CDC (jeśli obsługuje źródło)
-- Normalizacja przez dbt
+- Normalizacja przez [[dbt]]
 - Tryby sync, kontrolowane przez panel Airbyte
 - Doświadczenia: w praktyce 90%+ integracji to inkrementalne sync na `updated_at`/`last_modified`
 

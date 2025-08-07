@@ -20,16 +20,16 @@ aliases:
 
 # 🎯 Definicja
 
-**Pandas** to popularna open-source’owa biblioteka do analizy danych w języku Python, służąca do wygodnego i wydajnego manipulowania danymi w formie tabelarycznej. Oferuje dwie główne struktury danych: **Series** (dla jednowymiarowych danych) oraz **DataFrame** (dla danych dwuwymiarowych – podobnych do arkusza kalkulacyjnego lub tabel SQL).
+**Pandas** to popularna open-source’owa biblioteka do analizy danych w języku Python, służąca do wygodnego i wydajnego manipulowania danymi w formie tabelarycznej. Oferuje dwie główne struktury danych: **Series** (dla jednowymiarowych danych) oraz **[[DataFrames|DataFrame]]** (dla danych dwuwymiarowych – podobnych do arkusza kalkulacyjnego lub tabel SQL).
 
 Pandas jest podstawowym narzędziem wykorzystywanym w zadaniach inżynierii danych, analityki, modelowania, oczyszczania danych oraz budowy ETL/ELT w środowiskach lokalnych i interaktywnych, takich jak Jupyter Notebook.
 
 # 🔑 Kluczowe punkty
 
 - Udostępnia bogaty zestaw funkcji do filtrowania, agregacji, transformacji i łączenia danych.
-- Struktura DataFrame przypomina tabelę w SQL lub arkuszu kalkulacyjnym.
+- Struktura [[DataFrames|DataFrame]] przypomina tabelę w SQL lub arkuszu kalkulacyjnym.
 - Wspiera ładowanie danych z formatów CSV, Excel, JSON, Parquet, SQL i API.
-- Umożliwia szybkie operacje wektorowe (dzięki wykorzystaniu NumPy).
+- Umożliwia szybkie operacje wektorowe (dzięki wykorzystaniu [[NumPy]]).
 - Świetnie nadaje się do prototypowania, eksploracji i analizy ad hoc.
 - Jest zoptymalizowany do pracy z danymi do kilkuset milionów rekordów — przy większych zbiorach warto rozważyć np. Polars lub PySpark.
 
@@ -76,16 +76,16 @@ df.groupby("imie").agg({"wiek": "mean"})
 
 |Biblioteka|Opis|
 |---|---|
-|**NumPy**|Wektorowe operacje matematyczne – fundament Pandas|
-|**Polars**|Szybsza alternatywa dla Pandas, oparta na Apache Arrow|
+|**[[NumPy]]**|Wektorowe operacje matematyczne – fundament Pandas|
+|**Polars**|Szybsza alternatywa dla Pandas, oparta na [[Apache Arrow]]|
 |**Dask**|Rozproszona wersja Pandas dla dużych zbiorów na wielu rdzeniach|
 |**Koalas**|Interfejs Pandas na Spark (obecnie część PySpark)|
 
 ## Przykłady użycia w praktyce
 
 - Eksploracja danych z CSV i Exceli
-- Budowa modeli ML (np. feature engineering z Pandas + scikit-learn)
-- Testowanie transformacji danych, które będą potem implementowane w dbt/SQL
+- Budowa modeli [[Uczenie Maszynowe|ML]] (np. feature engineering z Pandas + scikit-learn)
+- Testowanie transformacji danych, które będą potem implementowane w [[dbt]]/SQL
 - ETL lokalny lub lekkie API do przetwarzania danych w mikroserwisie
 
 # 💡 Przykład zastosowania
@@ -108,7 +108,7 @@ weekly_diff = weekly.diff()
 weekly_diff.plot()
 ```
 
-W kilkunastu linijkach prototypuje wskaźniki, które później stają się KPI i będą wdrożone w hurtowni.
+W kilkunastu linijkach prototypuje wskaźniki, które później stają się [[KPI]] i będą wdrożone w hurtowni.
 
 ## 📌 Źródła
 
@@ -118,9 +118,9 @@ W kilkunastu linijkach prototypuje wskaźniki, które później stają się KPI 
 
 # 👽 Brudnopis
 
-- Pandas ≈ Excel na sterydach + NumPy w tyle
+- Pandas ≈ Excel na sterydach + [[NumPy]] w tyle
 - Wczytaj, przekształć, przekaż — idealne do eksploracji lub API transformacyjnych
 - Główne ograniczenie: pamięć RAM i wydajność przy dużych zbiorach
-- Interoperacyjność: Pandas → Arrow → pyarrow/parquet/DuckDB
+- Interoperacyjność: Pandas → Arrow → pyarrow/parquet/[[DuckDB]]
 - Futures: pandas 3.x, typy statyczne, integracja z polars/pyarrow
-- Złoty standard: transformacja danych do 1GB – Pandas, 10GB+ – Spark/Polars/Dask
+- Złoty standard: [[transformacja danych]] do 1GB – Pandas, 10GB+ – Spark/Polars/Dask

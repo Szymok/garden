@@ -29,7 +29,7 @@ aliases:
 - **Wysoka skuteczność:** Model osiąga top 10% zdających w symulowanym egzaminie adwokackim; jest bardzo silny w testach MMLU, HellaSwag i innych benchmarkach.
 - **Poprawiona rzeczowość:** Udoskonalenia obejmują lepszą sterowalność, spójność odpowiedzi i zmniejszoną halucynacyjność w porównaniu do GPT-3.5.
 - **Obsługa system promptów:** „System” prompt definiuje styl i sposób zachowania modelu w czasie całej interakcji.
-- **Zaawansowane techniki promptowania:** GPT-4 świetnie radzi sobie z instrukcjami few-shot, chain-of-thought, samokonsystencji oraz technikami steering.
+- **Zaawansowane [[Prompt techniques|techniki promptowania]]:** GPT-4 świetnie radzi sobie z instrukcjami few-shot, chain-of-thought, samokonsystencji oraz technikami steering.
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -67,15 +67,15 @@ To polecenie będzie nadpisywać dalsze prośby użytkownika w zakresie formatu.
 - Często nie posiada wiedzy o aktualnych wydarzeniach po wrześniu 2021 r.
 - Model może nie radzić sobie z mniej popularnymi językami lub specjalistycznymi dziedzinami.
 - Ograniczona dostępność multimodalności (API tekstowe publicznie udostępnione, wejścia obrazowe dopiero planowane).
-- Pełna skuteczność zależy od jakości i precyzji prompów (w tym chain-of-thought czy self-consistency).
+- Pełna skuteczność zależy od jakości i precyzji prompów (w tym chain-of-thought czy [[self-consistency]]).
 
 ## Techniki inżynierii podpowiedzi
 
-- **Few-shot prompting:** Umożliwia dostarczenie kilku przykładowych wejść/wyjść bez pełnego fine-tuningu.
-- **Chain-of-Thought Prompting:** Zachęca do wyjaśniania rozumowania krok po kroku dla zadań złożonych.
-- **Self-Consistency:** Pozyskuje wiele reasoningów i wybiera najczęstszy rezultat, zwiększając jakość predykcji.
+- **[[Few-shot prompting]]:** Umożliwia dostarczenie kilku przykładowych wejść/wyjść bez pełnego fine-tuningu.
+- **[[Chain-of-Thought Prompting]]:** Zachęca do wyjaśniania rozumowania krok po kroku dla zadań złożonych.
+- **[[Self-Consistency]]:** Pozyskuje wiele reasoningów i wybiera najczęstszy rezultat, zwiększając jakość predykcji.
 - **System prompt steering:** Precyzyjnie ustala styl, ton, język i format odpowiedzi.
-- **Augmented context:** Łączenie z bazami wektorowymi lub narzędziami RAG (Retrieval-Augmented Generation) dla poprawy jakości i faktograficzności odpowiedzi.
+- **Augmented context:** Łączenie z bazami wektorowymi lub narzędziami [[RAG]] ([[Retrieval Augmented Generation (RAG)|Retrieval-Augmented Generation]]) dla poprawy jakości i faktograficzności odpowiedzi.
 
 # 💡 Przykład zastosowania
 
@@ -88,13 +88,13 @@ Pozwala to osiągnąć powtarzalność i przewidywalność wyników w codziennyc
 
 - OpenAI - [GPT-4 Technical Report](https://cdn.openai.com/papers/gpt-4.pdf)
 - OpenAI Blog — Introducing GPT-4
-- Prompt Engineering Guide — [https://www.promptingguide.ai/models/gpt-4](https://www.promptingguide.ai/models/gpt-4)
+- [[Prompt Engineering Guide]] — [https://www.promptingguide.ai/models/gpt-4](https://www.promptingguide.ai/models/gpt-4)
 
 ## 👽 Brudnopis
 
 - GPT-4: multimodalny, bardzo wysoka skuteczność reasoningowa, odporność na zamianę stylu promptu
 - System prompts = spójność i sterowalność, zwłaszcza dla enterprise
-- Self-Consistency, Chain-of-Thought oraz Augmented Context – najlepsze wyniki dla najtrudniejszych tasków
+- [[Self-Consistency]], Chain-of-Thought oraz Augmented Context – najlepsze wyniki dla najtrudniejszych tasków
 - Hallucynacje i błędy nadal obecne — potrzeba walidacji
 - Wydajność top-10% — testy prawnicze i MMLU
 - Benchmarki: TruthfulQA, HellaSwag, MMLU — przewaga nad GPT-3.5

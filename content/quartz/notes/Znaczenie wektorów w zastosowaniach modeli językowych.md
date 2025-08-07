@@ -20,19 +20,19 @@ aliases:
 ---
 # 🎯 Definicja
 
-**Wektory semantyczne** (embeddingi) to wielowymiarowe reprezentacje numeryczne tekstu (słów, zdań, dokumentów), używane przez modele językowe do przechwytywania znaczenia oraz kontekstowych zależności między elementami języka. Dzięki nim systemy sztucznej inteligencji — takie jak LLM-y (Large Language Models) — mogą lepiej zrozumieć i generować spójny tekst, a także efektywnie przeszukiwać informacje w oparciu o znaczenie, a nie tylko o dokładne dopasowanie słów kluczowych.
+**Wektory semantyczne** (embeddingi) to wielowymiarowe reprezentacje numeryczne tekstu (słów, zdań, dokumentów), używane przez modele językowe do przechwytywania znaczenia oraz kontekstowych zależności między elementami języka. Dzięki nim systemy sztucznej inteligencji — takie jak [[Base LLM|LLM]]-y ([[Base LLM|Large Language Models]]) — mogą lepiej zrozumieć i generować spójny tekst, a także efektywnie przeszukiwać informacje w oparciu o znaczenie, a nie tylko o dokładne dopasowanie słów kluczowych.
 
 # 🔑 Kluczowe punkty
 
 - Wektory odwzorowują semantykę języka naturalnego w przestrzeni matematycznej.
-- Są centralnym mechanizmem działania LLM oraz nowoczesnych wyszukiwarek semantycznych (np. RAG, embeddings search).
+- Są centralnym mechanizmem działania [[Base LLM|LLM]] oraz nowoczesnych wyszukiwarek semantycznych (np. [[RAG]], embeddings search).
 - Umożliwiają zastosowania takie jak chat z dokumentacją, rekomendacje, analizy podobieństwa.
 - Przechowywane i przeszukiwane w bazach wektorowych (vector stores), np. FAISS, Pinecone, Weaviate.
 - Pozwalają mierzyć kontekst, intencję i relacje między słowami, frazami i dokumentami.
 
 # 📚 Szczegółowe wyjaśnienie
 
-## Jak działają wektory w NLP i LLM?
+## Jak działają wektory w NLP i [[Base LLM|LLM]]?
 
 Modele językowe, takie jak GPT, BERT czy PaLM, kodują tekst wejściowy do reprezentacji wektorowej — czyli listy liczb (embeddingu) — zachowującej informacje o znaczeniu, składni i kontekście. Te wektory powstają w wysokowymiarowej przestrzeni (często 384, 768, 1536 wymiarów), w której:
 
@@ -49,18 +49,18 @@ Przykład koncepcji:
 
 ### 💬 1. Zrozumienie kontekstu w dialogu (Conversational AI)
 
-W chatbotach opartych na LLM wektory kodują historię rozmowy i znaczenie poszczególnych wypowiedzi. Umożliwia to generowanie adekwatnych i naturalnych odpowiedzi, niezależnie od długości dialogu czy wcześniejszych tematów.
+W chatbotach opartych na [[Base LLM|LLM]] wektory kodują historię rozmowy i znaczenie poszczególnych wypowiedzi. Umożliwia to generowanie adekwatnych i naturalnych odpowiedzi, niezależnie od długości dialogu czy wcześniejszych tematów.
 
 ### 🔎 2. Semantyczne wyszukiwanie (semantic search)
 
 Zamiast dopasowywać kluczowe słowa, zapytania są przekształcane w embeddingi, które porównywane są z indeksem dokumentów w bazie wektorowej:
 
 - użycie wektorów pozwala na „pytania znaczeniowe” (np. „pomóż mi znaleźć zasady RODO”),
-- wspiera zastosowania typu RAG (Retrieval-Augmented Generation).
+- wspiera zastosowania typu [[RAG]] (Retrieval-Augmented Generation).
 
 ### 🎯 3. Rekomendacje
 
-Wektory kodują preferencje użytkowników (embedding profilu) oraz właściwości obiektów (embedding produktów, filmów itd.). Bliskość wektorów pozwala polecać podobne zasoby:
+Wektory kodują preferencje użytkowników ([[embedding]] profilu) oraz właściwości obiektów ([[embedding]] produktów, filmów itd.). Bliskość wektorów pozwala polecać podobne zasoby:
 
 - Użytkownik (wektor): preferencja = „thrillery psychologiczne z lat 80.”
 - Silnik rekomendacyjny wyszukuje filmy o zbliżonych embeddingach.
@@ -73,24 +73,24 @@ Embeddingi są wykorzystywane do:
 - wyszukiwania semantycznie podobnych dokumentów (semantically similar retrieval),
 - klasyfikacji tekstu/motywu/intencji (NLP tasks).
 
-# 💡 Wektory w systemie RAG (Retrieval-Augmented Generation)
+# 💡 Wektory w systemie [[RAG]] (Retrieval-Augmented Generation)
 
-W klasycznym LLM odpowiedzi bazują wyłącznie na wiedzy modelu. W RAG zapytanie najpierw przekształca się w wektor i przeszukuje bazę dokumentów (embedding index). Odpowiedź LLM jest generowana na podstawie odszukanych wyników — aktualnych, źródłowych i updejtowalnych.
+W klasycznym [[Base LLM|LLM]] odpowiedzi bazują wyłącznie na wiedzy modelu. W [[RAG]] zapytanie najpierw przekształca się w wektor i przeszukuje bazę dokumentów ([[embedding]] [[index]]). Odpowiedź [[Base LLM|LLM]] jest generowana na podstawie odszukanych wyników — aktualnych, źródłowych i updejtowalnych.
 
 Schemat:
 
 ```
-Zapytanie → embedding → wyszukiwanie wektorowe → [top-k dokumentów] → LLM → odpowiedź
+Zapytanie → embedding → wyszukiwanie wektorowe → [top-k dokumentów] → Base Base LLM|LLM|Base LLM|LLM → odpowiedź
 ```
 
 ## Przykładowe bazy wektorowe
 
-|Baza wektorowa|Cechy|
+|[[Baza wektorowa]]|Cechy|
 |---|---|
 |FAISS|Open-source, Facebook, szybkie przeszukiwanie offline|
 |Pinecone|Usługa SaaS o wysokiej wydajności|
 |Weaviate|Wbudowane embeddingi + metadata store|
-|Chroma|Lekka, lokalna baza, popularna w projektach RAG|
+|Chroma|Lekka, lokalna baza, popularna w projektach [[RAG]]|
 |Qdrant|Rust-performance, feature-rich|
 
 # 📌 Źródła
@@ -103,9 +103,9 @@ Zapytanie → embedding → wyszukiwanie wektorowe → [top-k dokumentów] → L
 # 👽 Brudnopis
 
 - Wektory = mapa semantyczna tekstu → geometryczne odległości = „rozumienie”
-- Embedding = [token → liczby → zbiory liczb → pozycja w przestrzeni]
+- [[Embedding]] = [token → liczby → zbiory liczb → pozycja w przestrzeni]
 - Podobieństwo kosinusowe, ANN indexing (FAISS, IVF, HNSW)
-- LLM = dekoder + wektory kontekstu; wyszukiwanie = query embedding + index
+- [[Base LLM|LLM]] = dekoder + wektory kontekstu; wyszukiwanie = query [[embedding]] + [[index]]
 - AI as API = zapytanie tekstowe → wektor → wyniki + generacja → odpowiedź
 - Użyteczność: semantic search w dokumentach, PDF-y, Slack, Notion, FAQ
 - Ważne dla e‑commerce, GPT-Chatbotów, narzędzi typu Copilot, interaktywne interfejsy

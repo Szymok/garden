@@ -18,19 +18,19 @@ aliases:
 ---
 # 🎯 Definicja
 
-**Multimodal Chain-of-Thought Prompting** (Multimodalne podpowiadanie łańcucha myśli, Multimodal-CoT) to rozszerzenie klasycznego podejścia CoT, w którym modele językowe wykorzystują zarówno tekst, jak i dane wizualne (np. obrazy, wykresy) w celu realizacji złożonego rozumowania i uzyskania bardziej kompletnych odpowiedzi. Model przechodzi przez dwuetapowy proces: najpierw generuje przesłanki na podstawie multimodalnych informacji, a następnie na ich podstawie wnioskuje o odpowiedzi.
+**Multimodal [[Chain-of-Thought Prompting]]** (Multimodalne podpowiadanie łańcucha myśli, Multimodal-[[Chain-of-Thought Prompting|CoT]]) to rozszerzenie klasycznego podejścia [[Chain-of-Thought Prompting|CoT]], w którym modele językowe wykorzystują zarówno tekst, jak i dane wizualne (np. obrazy, [[Wizualizacja|wykresy]]) w celu realizacji złożonego rozumowania i uzyskania bardziej kompletnych odpowiedzi. Model przechodzi przez dwuetapowy proces: najpierw generuje przesłanki na podstawie multimodalnych informacji, a następnie na ich podstawie wnioskuje o odpowiedzi.
 
 # 🔑 Kluczowe punkty
 
 - **Dwa etapy rozumowania:** Najpierw generowanie przesłanek z danych tekstowych i wizualnych; następnie użycie tych przesłanek do udzielenia odpowiedzi.
-- **Pokonanie ograniczeń CoT:** Tradycyjne CoT skupia się wyłącznie na tekście, podczas gdy Multimodal-CoT pozwala integrować wiele modalności (język + obraz).
-- **Wyższa skuteczność:** Multimodalny model CoT z ok. 1 mld parametrów przewyższa GPT-3.5 na benchmarku ScienceQA, mimo znacznie mniejszej wielkości.
+- **Pokonanie ograniczeń [[Chain-of-Thought Prompting|CoT]]:** Tradycyjne [[Chain-of-Thought Prompting|CoT]] skupia się wyłącznie na tekście, podczas gdy Multimodal-[[Chain-of-Thought Prompting|CoT]] pozwala integrować wiele modalności (język + obraz).
+- **Wyższa skuteczność:** Multimodalny model [[Chain-of-Thought Prompting|CoT]] z ok. 1 mld parametrów przewyższa GPT-3.5 na benchmarku ScienceQA, mimo znacznie mniejszej wielkości.
 - **Redukcja halucynacji:** Integracja danych wizualnych pomaga modelowi generować bardziej realistyczne i uzasadnione przesłanki, co ogranicza ryzyko “halucynacji” odpowiedzi.
 - **Zastosowania:** Nauka, edukacja, testy wielomodalne, systemy ekspertowe z dostępem do tekstu i obrazu.
 
 # 📚 Szczegółowe wyjaśnienie
 
-## Jak działa Multimodal CoT?
+## Jak działa Multimodal [[Chain-of-Thought Prompting|CoT]]?
 
 Multimodalny łańcuch myśli obejmuje dwa główne kroki:
 
@@ -41,9 +41,9 @@ Multimodalny łańcuch myśli obejmuje dwa główne kroki:
     Do modelu trafia tekst, obraz oraz wygenerowana przesłanka z pierwszego kroku, na podstawie których formułowana jest finalna odpowiedź.
     
 
-## Przewaga nad klasycznym CoT
+## Przewaga nad klasycznym [[Chain-of-Thought Prompting|CoT]]
 
-||Klasyczne CoT|Multimodal CoT|
+||Klasyczne [[Chain-of-Thought Prompting\|CoT]]|Multimodal [[Chain-of-Thought Prompting\|CoT]]|
 |---|---|---|
 |Wejście|Tekst|Tekst + Obraz|
 |Przesłanki|Tylko tekstowe|Tekstowe + wizualne|
@@ -52,13 +52,13 @@ Multimodalny łańcuch myśli obejmuje dwa główne kroki:
 
 ## Wyniki benchmarków
 
-- Multimodal-CoT (model ~1B) przewyższył GPT-3.5 CoT na ScienceQA, osiągając najwyższy wynik wśród testowanych metod na pytaniach wymagających interpretacji tekstów i obrazów.
+- Multimodal-[[Chain-of-Thought Prompting|CoT]] (model ~1B) przewyższył GPT-3.5 [[Chain-of-Thought Prompting|CoT]] na ScienceQA, osiągając najwyższy wynik wśród testowanych metod na pytaniach wymagających interpretacji tekstów i obrazów.
 - Analiza wykazała lepszą konwergencję procesu uczenia oraz mniejszą tendencję do generowania fałszywych przesłanek i odpowiedzi.
 
 # 💡 Przykład zastosowania
 
 **Przykład:**  
-Model LLM dostaje pytanie naukowe z obrazem mikroskopowym.
+Model [[Base LLM|LLM]] dostaje pytanie naukowe z obrazem mikroskopowym.
 
 1. Generuje multimodalną przesłankę: rozpoznaje struktury na obrazie, łączy je z opisem tekstowym i instrukcją pytania.
 2. Na podstawie tej przesłanki wnioskuje, które odpowiedzi są poprawne (np. klasyfikuje komórki jako patologiczne).
@@ -75,8 +75,8 @@ Takie podejście sprawdza się w quizach naukowych (ScienceQA), testach maturaln
 # 👽 Brudnopis
 
 - Kluczowe: dwufazowy mechanizm – przesłanki multimodalne i wnioskowanie odpowiedzi
-- ScienceQA = benchmark z pytaniami tekstowo-obrazowymi - Multimodal-CoT przewyższa GPT-3.5 CoT
+- ScienceQA = benchmark z pytaniami tekstowo-obrazowymi - Multimodal-CoT przewyższa GPT-3.5 [[Chain-of-Thought Prompting|CoT]]
 - Redukcja halucynacji – więcej danych wejściowych = mniej błędnych przesłanek
 - Możliwe aplikacje: edukacja, medycyna, systemy z multimodalną percepcją
-- Modele 1B lepsze niż duże LLM typowo-tekstowe na zadaniach wizualnych
+- Modele 1B lepsze niż duże [[Base LLM|LLM]] typowo-tekstowe na zadaniach wizualnych
 - Inspiracja: “Language is not all you need” – potrzeba integracji percepcji i języka

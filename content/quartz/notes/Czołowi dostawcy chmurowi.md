@@ -21,23 +21,23 @@ aliases:
 
 # 🎯 Definicja
 
-Czołowi dostawcy usług chmurowych oferują zróżnicowane platformy i narzędzia do skalowalnego przechowywania, przetwarzania oraz analizy danych. Swoje rozwiązania kierują zarówno do małych firm, jak i największych korporacji, wspierając digitalizację, rozwój AI/ML i analityki biznesowej. Najbardziej znaczącymi globalnie graczami są Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP), a na rynku rozwiązań analitycznych i magazynów danych — Databricks oraz Snowflake.
+Czołowi dostawcy usług chmurowych oferują zróżnicowane platformy i narzędzia do skalowalnego przechowywania, przetwarzania oraz analizy danych. Swoje rozwiązania kierują zarówno do małych firm, jak i największych korporacji, wspierając digitalizację, rozwój AI/[[Uczenie Maszynowe|ML]] i analityki biznesowej. Najbardziej znaczącymi globalnie graczami są Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP), a na rynku rozwiązań analitycznych i magazynów danych — Databricks oraz Snowflake.
 
 # 🔑 Kluczowe punkty
 
 - **AWS, Azure, Google Cloud** – liderzy, którzy posiadają największy globalny zasięg i kompleksowe oferty IaaS, PaaS, SaaS.
-- **Databricks, Snowflake** – wyspecjalizowane platformy, które skupiają się na analityce danych, lakehouse oraz skalowalnych hurtowniach danych.
+- **Databricks, Snowflake** – wyspecjalizowane platformy, które skupiają się na analityce danych, [[Data Lakehouse|lakehouse]] oraz skalowalnych hurtowniach danych.
 - **Rosnący trend multi-cloud** – coraz więcej firm łączy usługi kilku dostawców dla większej elastyczności, wysokiej dostępności i optymalizacji kosztów.
 - **Bezpieczeństwo i compliance** – czołowi dostawcy gwarantują zaawansowane mechanizmy ochrony i liczne certyfikaty zgodności.
 
 # 📚 Przegląd największych dostawców chmurowych (2025)
 
-|Dostawca|Udział w rynku (2025)|Kluczowe cechy|Oferta analityki/lakehouse|
+|Dostawca|Udział w rynku (2025)|Kluczowe cechy|Oferta analityki/[[Data Lakehouse\|lakehouse]]|
 |---|---|---|---|
-|**Amazon Web Services (AWS)**|~30-34%|Najszersze portfolio usług, globalna infrastruktura, wsparcie dla AI/ML, ekosystem partnerów|Redshift, S3, EMR, serwisy AI, integracje z Databricks, Snowflake|
+|**Amazon Web Services (AWS)**|~30-34%|Najszersze portfolio usług, globalna infrastruktura, wsparcie dla AI/[[Uczenie Maszynowe\|ML]], ekosystem partnerów|Redshift, S3, EMR, serwisy AI, integracje z Databricks, Snowflake|
 |**Microsoft Azure**|~20-23%|Mocna pozycja w sektorze enterprise, wsparcie hybrydowe, integracja z MS Office|Synapse Analytics, Data Lake, Azure Databricks, wsparcie Snowflake|
-|**Google Cloud Platform (GCP)**|~12%|Zaawansowana analityka BigQuery, AI/ML, rozbudowana oferta dla startupów|BigQuery, Cloud Storage, Vertex AI, integracje lakehouse|
-|**Databricks**|-|Platforma oparta o Apache Spark, open lakehouse, Delta Lake, silny nacisk na AI/ML i data science|Databricks Lakehouse, Databricks SQL, Delta Lake, Unity Catalog|
+|**Google Cloud Platform (GCP)**|~12%|Zaawansowana analityka BigQuery, AI/[[Uczenie Maszynowe\|ML]], rozbudowana oferta dla startupów|BigQuery, Cloud Storage, Vertex AI, integracje [[Data Lakehouse\|lakehouse]]|
+|**Databricks**|-|Platforma oparta o Apache Spark, open [[Data Lakehouse\|lakehouse]], [[Delta Lake]], silny nacisk na AI/[[Uczenie Maszynowe\|ML]] i data science|Databricks [[Data Lakehouse\|Lakehouse]], Databricks SQL, [[Delta Lake]], Unity Catalog|
 |**Snowflake**|-|Natywna chmura, wydajne, elastyczne Data Warehouse, silna separacja compute/storage|Snowflake Data Cloud, elastyczny multi-cloud, szybkie skalowanie, natywna obsługa ELT|
 
 # Szczegółowa charakterystyka
@@ -45,23 +45,23 @@ Czołowi dostawcy usług chmurowych oferują zróżnicowane platformy i narzędz
 ## 1. Amazon Web Services (AWS)
 
 - Ponad 200 usług chmurowych, globalny zasięg i sieć partnerów.
-- Kluczowe rozwiązania dla danych: Redshift (cloud DWH), S3 (data lake), integracja z narzędziami lakehouse.
+- Kluczowe rozwiązania dla danych: Redshift (cloud DWH), S3 (data lake), integracja z narzędziami [[Data Lakehouse|lakehouse]].
 - Lider rynku pod względem dojrzałości, skali i bezpieczeństwa.
 
 ## 2. Microsoft Azure
 
 - Rozbudowana oferta usług dla przedsiębiorstw, zaawansowane bezpieczeństwo i compliance.
-- Kluczowe narzędzia: Azure Synapse Analytics, Data Lake, Power BI, wsparcie dla Databricks i Snowflake jako natywnych rozwiązań.
+- Kluczowe narzędzia: Azure Synapse Analytics, Data Lake, Power [[Business Intelligence|BI]], wsparcie dla Databricks i Snowflake jako natywnych rozwiązań.
 
 ## 3. Google Cloud Platform (GCP)
 
-- Najbardziej znany z BigQuery (zaawansowana hurtownia danych w chmurze) i zintegrowanych usług AI/ML.
-- Mocny nacisk na nowoczesne podejście do analityki danych, lakehouse, obsługa RAG (Retrieval-Augmented Generation).
+- Najbardziej znany z BigQuery (zaawansowana hurtownia danych w chmurze) i zintegrowanych usług AI/[[Uczenie Maszynowe|ML]].
+- Mocny nacisk na nowoczesne podejście do analityki danych, [[Data Lakehouse|lakehouse]], obsługa [[RAG]] (Retrieval-Augmented Generation).
 
 ## 4. Databricks
 
-- Platforma Lakehouse, która łączy zalety hurtowni danych i data lake.
-- Oparta na Delta Lake – integruje batch, streaming, BI i AI na jednej platformie.
+- Platforma [[Data Lakehouse|Lakehouse]], która łączy zalety hurtowni danych i data lake.
+- Oparta na [[Delta Lake]] – integruje batch, streaming, [[Business Intelligence|BI]] i AI na jednej platformie.
 - Unity Catalog zapewnia centralizowane zarządzanie i bezpieczeństwo.
 
 ## 5. Snowflake
@@ -75,8 +75,8 @@ Czołowi dostawcy usług chmurowych oferują zróżnicowane platformy i narzędz
 W nowoczesnych wdrożeniach środowisk analitycznych firmy bardzo często łączą ofertę kilku chmurowych dostawców:
 
 - Przechowywanie surowych danych w S3 (AWS), BigQuery (GCP) lub Azure Data Lake.
-- Przetwarzanie i analityka w Databricks Lakehouse oraz hurtowni Snowflake.
-- Integracja z narzędziami BI (Power BI, Tableau) oraz wsparcie szybkiego prototypowania AI/ML.
+- Przetwarzanie i analityka w Databricks [[Data Lakehouse|Lakehouse]] oraz hurtowni Snowflake.
+- Integracja z narzędziami [[Business Intelligence|BI]] (Power [[Business Intelligence|BI]], Tableau) oraz wsparcie szybkiego prototypowania AI/[[Uczenie Maszynowe|ML]].
 
 # 📌 Źródła
 
@@ -93,7 +93,7 @@ W nowoczesnych wdrożeniach środowisk analitycznych firmy bardzo często łącz
 # 👽 Brudnopis
 
 - Liderzy rynku: AWS, Azure, GCP – ponad 65% udziału w rynku IaaS/PaaS.
-- Databricks: lakehouse, AI/ML, streaming + batch.
+- Databricks: [[Data Lakehouse|lakehouse]], AI/[[Uczenie Maszynowe|ML]], streaming + batch.
 - Snowflake: DWH as a service, automatyczne skalowanie, full SaaS.
 - Multi-cloud = elastyczność, mniejsze ryzyko, lepsza optymalizacja kosztów.
-- Trendy: cloud-native DWH, lakehouse, governance, AI-native platforms.
+- Trendy: cloud-native DWH, [[Data Lakehouse|lakehouse]], governance, AI-native platforms.

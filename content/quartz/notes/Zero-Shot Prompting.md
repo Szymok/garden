@@ -20,21 +20,21 @@ aliases:
 
 # 🎯 Definicja
 
-**Zero-shot prompting** to technika konstruowania promptów dla dużych modeli językowych (LLM), w której **nie podajemy modelowi żadnych przykładów ani demonstracji zadania**. Wystarcza sama, jasna instrukcja – model otrzymuje polecenie i wykonuje zadanie, polegając wyłącznie na swojej ogólnej, wyuczonej wiedzy i umiejętności generalizacji.
+**Zero-shot prompting** to technika konstruowania promptów dla dużych modeli językowych ([[Base LLM|LLM]]), w której **nie podajemy modelowi żadnych przykładów ani demonstracji zadania**. Wystarcza sama, jasna instrukcja – model otrzymuje polecenie i wykonuje zadanie, polegając wyłącznie na swojej ogólnej, wyuczonej wiedzy i umiejętności generalizacji.
 
 # 🔑 Kluczowe punkty
 
-- Model LLM **nie otrzymuje przykładów ani demonstracji konkretnego zadania** – wystarcza sama instrukcja słowna.
+- Model [[Base LLM|LLM]] **nie otrzymuje przykładów ani demonstracji konkretnego zadania** – wystarcza sama instrukcja słowna.
 - Wydajność zero-shot zależy od klarowności promptu i szerokości wiedzy modelu po pretrenowaniu.
 - Zero-shot nie wymaga żadnego dodatkowego fine-tuningu ani uczenia na danych specyficznych dla zadania.
-- Modele LLM wykonują zadania od „zera” dzięki wiedzy z ogromnych, zróżnicowanych zbiorów tekstów użytych podczas treningu.
-- Jeśli zero-shot prompting nie wystarcza, poleca się przejść do few-shot prompting, czyli dodać do promptu konkretne przykłady wykonania zadania.
+- Modele [[Base LLM|LLM]] wykonują zadania od „zera” dzięki wiedzy z ogromnych, zróżnicowanych zbiorów tekstów użytych podczas treningu.
+- Jeśli zero-shot prompting nie wystarcza, poleca się przejść do [[few-shot prompting]], czyli dodać do promptu konkretne przykłady wykonania zadania.
 
 # 📚 Szczegółowe wyjaśnienie
 
 ## Jak działa zero-shot prompting?
 
-Model LLM, taki jak GPT-3 lub GPT-4, otrzymuje wyłącznie instrukcję z opisem zadania, np. „Przetłumacz poniższe zdanie na hiszpański”, „Podsumuj podany tekst”, „Zaklasyfikuj sentyment: neutralny, pozytywny lub negatywny”.
+Model [[Base LLM|LLM]], taki jak GPT-3 lub [[GPT-4]], otrzymuje wyłącznie instrukcję z opisem zadania, np. „Przetłumacz poniższe zdanie na hiszpański”, „Podsumuj podany tekst”, „Zaklasyfikuj sentyment: neutralny, pozytywny lub negatywny”.
 
 Model na podstawie treningowej wiedzy rozpoznaje, **czego oczekuje użytkownik** i wykonuje zadanie bez konieczności uczenia się na konkretnych przykładach tego typu zapytań.
 
@@ -70,8 +70,8 @@ Inne przykłady:
 ## Wady i ograniczenia
 
 - Jakość wyniku często zależy od zwięzłości i precyzji promptu.
-- W zadaniach skomplikowanych, nieintuicyjnych lub wymagających specjalnego formatu odpowiedzi zero-shot często daje gorsze rezultaty niż **few-shot prompting**.
-- Modele mogą popełniać błędy interpretacyjne („halucynacje”), jeśli polecenie nie jest jednoznaczne.
+- W zadaniach skomplikowanych, nieintuicyjnych lub wymagających specjalnego formatu odpowiedzi zero-shot często daje gorsze rezultaty niż **[[few-shot prompting]]**.
+- Modele mogą popełniać błędy interpretacyjne („[[halucynacje]]”), jeśli polecenie nie jest jednoznaczne.
 
 ## Zero-shot vs. Few-shot vs. One-shot
 
@@ -84,7 +84,7 @@ Inne przykłady:
 
 ## Wpływ tuningowania instrukcji
 
-Recent research confirms that **instruction tuning** (pretrenowanie LLM na dużych zbiorach poleceń) oraz RLHF (uczenie ze wzmocnieniem z ludzkimi informacjami zwrotnymi) znacząco poprawiają efektywność zero-shot prompting. Przykładem takich modeli jest ChatGPT.
+Recent research confirms that **instruction tuning** (pretrenowanie [[Base LLM|LLM]] na dużych zbiorach poleceń) oraz RLHF (uczenie ze wzmocnieniem z ludzkimi informacjami zwrotnymi) znacząco poprawiają efektywność zero-shot prompting. Przykładem takich modeli jest ChatGPT.
 
 # 💡 Przykład zastosowania
 
@@ -107,7 +107,7 @@ Model na podstawie treści maila klasyfikuje jego typ – bez wcześniejszych pr
 - Zero-shot = „wykonaj zadanie”, bez przykładów
 - Test efektywności: prosta klasyfikacja, generacje, Q&A
 - Gdy nie działa – przejdź do few-shot (prompt + przykłady)
-- RLHF & instruction-tuned models wyraźnie podnoszą skuteczność zero-shot
+- RLHF & [[Instruction Tuned LLM|instruction-tuned models]] wyraźnie podnoszą skuteczność zero-shot
 - Praktyczne: szybka eksploracja możliwości modelu, zadania nieprzewidziane podczas treningu
 - W praktyce: ChatGPT, Claude, Gemini, Llama-2, Mistral
 

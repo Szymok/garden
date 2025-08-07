@@ -19,21 +19,21 @@ aliases:
 
 # 🎯 Definicja
 
-**Few-Shot Prompting** to technika podpowiadania, w której dostarczamy dużemu modelowi językowemu (LLM) kilka demonstracyjnych przykładów zadania w samym promptcie. Te demonstracje pełnią rolę wzorców, na podstawie których model generuje odpowiedzi na nowe, nieznane przypadki – bez potrzeby dodatkowego uczenia.
+**Few-Shot Prompting** to technika podpowiadania, w której dostarczamy dużemu modelowi językowemu ([[Base LLM|LLM]]) kilka demonstracyjnych przykładów zadania w samym promptcie. Te demonstracje pełnią rolę wzorców, na podstawie których model generuje odpowiedzi na nowe, nieznane przypadki – bez potrzeby dodatkowego uczenia.
 
 # 🔑 Kluczowe punkty
 
 - Model uczy się „w kontekście” – wystarczy od 1 do kilku przykładów (tzw. 1-shot, 3-shot, 5-shot... prompting).
 - Format i spójność demonstracji istotnie wpływają na skuteczność – nawet losowe etykiety przy zachowaniu formatu pomagają modelowi zorientować się w zadaniu.
 - Few-shot pozwala na dynamiczną specjalizację modelu bez potrzeby kosztownego fine-tuningu.
-- Wydajność few-shot rośnie wraz ze skalą modelu – technika stała się efektywna dzięki dużym LLM.
+- Wydajność few-shot rośnie wraz ze skalą modelu – technika stała się efektywna dzięki dużym [[Base LLM|LLM]].
 - Ma ograniczenia w zadaniach wymagających wieloetapowego rozumowania lub skomplikowanej logiki.
 
 # 📚 Szczegółowe wyjaśnienie
 
 ## Jak działa Few-Shot Prompting?
 
-Model LLM otrzymuje prompt zawierający kilka demonstracji wejście–wyjście (input–output):
+Model [[Base LLM|LLM]] otrzymuje prompt zawierający kilka demonstracji wejście–wyjście (input–output):
 
 ```
 A "whatpu" is a small, furry animal native to Tanzania.
@@ -68,7 +68,7 @@ Model przewiduje: `Negative`
 
 - **Nie radzi sobie z wieloetapowym rozumowaniem** – model może popełnić błędy logiczne nawet przy licznych przykładach.
 - **Format i jakość demonstracji kluczowa** – niespójność formatu lub chaotyczne przykłady mogą pogorszyć wyniki.
-- **W zadaniach wymagających wyjaśnienia procesu (reasoning)** lepsze efekty daje Chain-of-Thought Prompting (CoT).
+- **W zadaniach wymagających wyjaśnienia procesu (reasoning)** lepsze efekty daje [[Chain-of-Thought Prompting]] ([[Chain-of-Thought Prompting|CoT]]).
 
 **Przykład ograniczeń:**
 
@@ -76,12 +76,12 @@ Model przewiduje: `Negative`
 The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. A: 
 ```
 
-Model poprawia odpowiedź dopiero po dołączeniu serii przykładów, a i tak nie zawsze skutecznie – konieczne rozbicie na etapy (CoT).
+Model poprawia odpowiedź dopiero po dołączeniu serii przykładów, a i tak nie zawsze skutecznie – konieczne rozbicie na etapy ([[Chain-of-Thought Prompting|CoT]]).
 
 |Technika|Plusy|Minusy|
 |---|---|---|
 |Few-Shot Prompting|Prostota, brak fine-tune, szybkie wdrożenie|Słabiej działa przy złożonych zadaniach|
-|Chain-of-Thought Prompting|Lepsze reasoning, wieloetapowe zadania|Większy prompt, wyższy koszt obliczeniowy|
+|[[Chain-of-Thought Prompting]]|Lepsze reasoning, wieloetapowe zadania|Większy prompt, wyższy koszt obliczeniowy|
 
 # 💡 Przykład zastosowania
 
@@ -99,7 +99,7 @@ Such a disappointing experience. //
 Model generuje: `Negative`
 
 **W praktyce:**  
-W data science Few-Shot Prompting pozwala szybko testować nowe zadania na LLM (np. klasyfikacja, parafrazowanie, generowanie przykładów, ekstrakcja informacji) – wystarczy kilka dobrze dobranych demonstracji zamiast czasochłonnego uczenia modelu.
+W data science Few-Shot Prompting pozwala szybko testować nowe zadania na [[Base LLM|LLM]] (np. klasyfikacja, parafrazowanie, generowanie przykładów, ekstrakcja informacji) – wystarczy kilka dobrze dobranych demonstracji zamiast czasochłonnego uczenia modelu.
 
 # 📌 Źródła
 
@@ -113,6 +113,6 @@ W data science Few-Shot Prompting pozwala szybko testować nowe zadania na LLM (
 
 - Few-shot = prompty wzorcowe, wysoka elastyczność
 - Im większy model, tym lepsza generalizacja (skala ważna, efekt Touvron/Min)
-- Losowe etykiety i formaty coraz mniej szkodzą – odporność nowoczesnych LLM
-- Ograniczenie reasoning – konieczność przejścia na CoT lub inne techniki
+- Losowe etykiety i formaty coraz mniej szkodzą – odporność nowoczesnych [[Base LLM|LLM]]
+- Ograniczenie reasoning – konieczność przejścia na [[Chain-of-Thought Prompting|CoT]] lub inne techniki
 - Praktyczne use-case: rozpoznawanie sentymentu, Q&A eksperckie, ekstrakcja encji, tłumaczenie z przykładów

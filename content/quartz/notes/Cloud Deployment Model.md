@@ -102,7 +102,7 @@ Kombinacja zarówno chmury publicznej, jak i prywatnej. Umożliwia elastyczne za
 
 # 💡 Przykład zastosowania
 
-Międzynarodowy bank wdrożył model hybrydowy: dane bankowe klientów są przechowywane lokalnie w prywatnej chmurze w celu spełnienia wymagań regulatora, natomiast analizę danych i trenowanie modeli ML prowadzi w chmurze publicznej Microsoft Azure. Dzięki temu zyskał elastyczność i zwiększoną wydajność przy zachowaniu zgodności z RODO i lokalnymi wymogami prawnymi.
+Międzynarodowy bank wdrożył model hybrydowy: dane bankowe klientów są przechowywane lokalnie w prywatnej chmurze w celu spełnienia wymagań regulatora, natomiast analizę danych i trenowanie modeli [[Uczenie Maszynowe|ML]] prowadzi w chmurze publicznej Microsoft Azure. Dzięki temu zyskał elastyczność i zwiększoną wydajność przy zachowaniu zgodności z RODO i lokalnymi wymogami prawnymi.
 
 ## 📌 Źródła
 
@@ -114,4 +114,4 @@ Międzynarodowy bank wdrożył model hybrydowy: dane bankowe klientów są przec
 - Public: wszystko u dostawcy (AWS, Azure, GCP), brak sprzętu, szybki start, PAYG, minusy – bezpieczeństwo, brak kontroli.
 - Private: na własnym sprzęcie / DC, wolniejsza, dużo CapEx, kontrola, spełnia normy compliance.
 - Hybrid: połączenie, elastyczność, integracja potrzebna (VPN, peering), ale też złożoność i kosztowna eksploatacja.
-- Firmy łączą modele: np. backup w chmurze, produkcja lokalnie.
+- Firmy łączą modele: np. [[backup]] w chmurze, produkcja lokalnie.

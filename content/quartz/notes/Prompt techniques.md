@@ -17,7 +17,7 @@ aliases:
 ---
 # 🎯 Definicja
 
-**Prompt techniques** to zestaw strategii tworzenia efektywnych promptów (poleceń) dla dużych modeli językowych (LLM), które umożliwiają uzyskiwanie bardziej trafnych, logicznych i użytecznych odpowiedzi w zależności od typu zadania (klasyfikacja, generacja tekstu, QA itd.).
+**Prompt techniques** to zestaw strategii tworzenia efektywnych promptów (poleceń) dla dużych modeli językowych ([[Base LLM|LLM]]), które umożliwiają uzyskiwanie bardziej trafnych, logicznych i użytecznych odpowiedzi w zależności od typu zadania (klasyfikacja, generacja tekstu, QA itd.).
 
 # 🔑 Kluczowe punkty
 
@@ -28,14 +28,14 @@ aliases:
 
 # 📚 Szczegółowe wyjaśnienie
 
-## Zero-shot prompting
+## [[Zero-shot prompting]]
 
 Najprostsza forma – model otrzymuje wyłącznie instrukcję, bez przykładów. Sprawdza się dobrze w zadaniach, dla których językowy kontekst jest wystarczający.
 
 **Przykład:**  
 „Przetłumacz na niemiecki: ‘Jak się masz?’”
 
-## Few-shot prompting
+## [[Few-shot prompting]]
 
 Modelowi przekazuje się kilka przykładów oczekiwanych wejść/wyjść, co stanowi kontekst do wnioskowania.
 
@@ -45,7 +45,7 @@ Modelowi przekazuje się kilka przykładów oczekiwanych wejść/wyjść, co sta
     Ang. = 'cat', Fr. = 'chat'  
     Ang. = 'house', Fr. = …”
 
-## Chain-of-thought (CoT)
+## Chain-of-thought ([[Chain-of-Thought Prompting|CoT]])
 
 Model prowadzi krok po kroku ścieżkę rozumowania zamiast od razu zwracać odpowiedź.
 
@@ -57,13 +57,13 @@ Model prowadzi krok po kroku ścieżkę rozumowania zamiast od razu zwracać odp
 **Przykład:**  
 „Ile jabłek zostanie, jeśli masz 10 jabłek i zjesz 4? Pomyśl krok po kroku.”
 
-## Tree-of-thought (ToT)
+## Tree-of-thought ([[Tree of Thoughts (ToT)|ToT]])
 
-Zaawansowana forma CoT – zamiast jednej liniowej ścieżki, model rozgałęzia możliwe scenariusze, analizując każdą opcję.
+Zaawansowana forma [[Chain-of-Thought Prompting|CoT]] – zamiast jednej liniowej ścieżki, model rozgałęzia możliwe scenariusze, analizując każdą opcję.
 
 **Zastosowanie:**
 
-- generowanie kodu,
+- [[generowanie kodu]],
 - planowanie strategiczne,
 - podejmowanie decyzji z wieloma zmiennymi.
 
@@ -76,7 +76,7 @@ Specjalna forma podpowiedzi zawierająca ukryte sterowanie np. przez narzucone s
 
 # 💡 Przykład zastosowania
 
-Model LLM wykorzystywany w aplikacji do onboardingu pracowników, w której użytkownik pyta:  
+Model [[Base LLM|LLM]] wykorzystywany w aplikacji do onboardingu pracowników, w której użytkownik pyta:  
 „Jak mogę zarejestrować urlop?”
 
 Zamiast jedynie dać odpowiedź, stosujemy chain-of-thought:
@@ -87,7 +87,7 @@ To podejście zwiększa zrozumienie procesu przez użytkownika oraz podnosi wiar
 
 # 📌 Źródła
 
-Prompt Engineering Guide: [https://github.com/dair-ai/Prompt-Engineering-Guide](https://github.com/dair-ai/Prompt-Engineering-Guide)  
+[[Prompt Engineering Guide]]: [https://github.com/dair-ai/Prompt-Engineering-Guide](https://github.com/dair-ai/Prompt-Engineering-Guide)  
 Efficient Prompt Engineering Techniques – AssemblyAI: [https://www.assemblyai.com/blog](https://www.assemblyai.com/blog)  
 "Prompt Engineering for LLMs" – Microsoft Learn: [https://learn.microsoft.com/en-us/training/modules/prompt-engineering/](https://learn.microsoft.com/en-us/training/modules/prompt-engineering/)
 
@@ -95,7 +95,7 @@ Efficient Prompt Engineering Techniques – AssemblyAI: [https://www.assemblyai.
 
 - Prompt != tylko pytanie – to instrukcja sterująca działaniem modelu.
 - Typ promptu wpływa mocno na jakość i kontrolę nad wynikami.
-- CoT i ToT zwiększają interpretowalność działań LLM.
-- Możliwość łączenia technik np. few-shot + CoT.
+- [[Chain-of-Thought Prompting|CoT]] i [[Tree of Thoughts (ToT)|ToT]] zwiększają interpretowalność działań [[Base LLM|LLM]].
+- Możliwość łączenia technik np. few-shot + [[Chain-of-Thought Prompting|CoT]].
 - Prompt engineering ≠ fine-tuning, ale daje podobny efekt w niektórych scenariuszach.
-- Na obrazkach pokazano porównanie technik i przebieg działania CoT.
+- Na obrazkach pokazano porównanie technik i przebieg działania [[Chain-of-Thought Prompting|CoT]].

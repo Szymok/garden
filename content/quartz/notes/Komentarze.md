@@ -18,7 +18,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Komentarze (Comments)** to funkcja umożliwiająca użytkownikom pozostawianie informacji zwrotnych, zadawanie pytań lub dodawanie dodatkowego kontekstu do obiektów danych, takich jak elementy katalogu, terminy słownikowe czy reguły jakości danych. Komentarze są zapisywane w uporządkowany sposób i zawsze są powiązane z konkretnym obiektem.
+**Komentarze (Comments)** to funkcja umożliwiająca użytkownikom pozostawianie informacji zwrotnych, zadawanie pytań lub dodawanie dodatkowego kontekstu do obiektów danych, takich jak [[Catalog Items|elementy katalogu]], [[Glossary Terms|terminy słownikowe]] czy [[Data Quality Evaluation rules|reguły jakości danych]]. Komentarze są zapisywane w uporządkowany sposób i zawsze są powiązane z konkretnym obiektem.
 
 # 🔑 Kluczowe punkty
 
@@ -58,8 +58,8 @@ Komentarz przypięty do elementu katalogu zostaje zapisany i widoczny dla wszyst
 
 # 👽 Brudnopis
 
-- Komentarze = key enabler dla współpracy data governance
-- Czasami rozszerzane jako część systemu powiadomień związanych z ownership/stewardship
+- Komentarze = key enabler dla współpracy [[data governance]]
+- Czasami rozszerzane jako część systemu powiadomień związanych z ownership/[[stewardship]]
 - Mogą działać jako forma lightweight workflow zmian: "zasugerowano zmianę", "zaakceptowano", "odrzucono"
 - Integracje: email, Slack, webhooks
 

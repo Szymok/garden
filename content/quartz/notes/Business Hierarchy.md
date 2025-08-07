@@ -60,7 +60,7 @@ Terminy w słowniku (Business Glossary) mogą być ze sobą logicznie powiązane
 - wspólne dziedziczenie obiektów, reguł jakości i klasyfikacji,
 - relacje mogą być edytowalne i rozszerzalne.
 
-## Wpływ na zarządzanie danymi
+## Wpływ na [[zarządzanie danymi]]
 
 - 🧠 Ułatwia zrozumienie pojęć biznesowych i ich kontekstu organizacyjnego.
 - 📘 Pomaga w jednoznacznym przypisaniu danych do definicji i terminów, nawet jeśli nazwy kolumn różnią się między systemami.

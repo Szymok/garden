@@ -74,9 +74,9 @@ Zespół chce zbudować Open [[Stos danych|Data Stack]], więc wykorzystuje:
 
 ## 📌 Źródła
 
-- [Airbyte – The Open Data Stack](https://airbyte.com/blog/modern-open-data-stack-four-core-tools)
-- [Open Data Stack GitHub](https://github.com/airbytehq/open-data-stack/)
-- [Dagster Blog – DataStack 2.0](https://dagster.io/blog/evolution-iq-case-study)
+- [Airbyte – The Open [[Stos danych|Data Stack]]](https://airbyte.com/blog/modern-open-data-stack-four-core-tools)
+- [Open [[Stos danych|Data Stack]] GitHub](https://github.com/airbytehq/open-data-stack/)
+- [[[Dagster]] Blog – DataStack 2.0](https://dagster.io/blog/evolution-iq-case-study)
 - [ngods – blogpost](https://blog.devgenius.io/modern-data-stack-demo-5d75dcdfba50)
 
 ## 👽 Brudnopis

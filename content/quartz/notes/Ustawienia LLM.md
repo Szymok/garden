@@ -22,12 +22,12 @@ aliases:
 
 # 🎯 Definicja
 
-**Ustawienia LLM (Large Language Models)** to zestaw parametrów kontrolujących sposób generowania odpowiedzi przez modele językowe. Parametry te pozwalają dostosowywać styl, kreatywność, dokładność oraz deterministyczność tworzonych treści. Mogą być konfigurowane ręcznie przez użytkownika lub automatycznie przez API danej platformy.
+**Ustawienia [[Base LLM|LLM]] ([[Base LLM|Large Language Models]])** to zestaw parametrów kontrolujących sposób generowania odpowiedzi przez modele językowe. Parametry te pozwalają dostosowywać styl, kreatywność, dokładność oraz deterministyczność tworzonych treści. Mogą być konfigurowane ręcznie przez użytkownika lub automatycznie przez API danej platformy.
 
 # 🔑 Kluczowe punkty
 
 - 🔥 **Temperatura (temperature)** – wpływa na poziom kreatywności modelu (losowości).
-- 🎯 **Top-p (nucleus sampling)** – kontroluje zakres rozkładu prawdopodobieństwa słów rozważanych do wylosowania.
+- 🎯 **Top-p ([[Top P|nucleus sampling]])** – kontroluje zakres rozkładu prawdopodobieństwa słów rozważanych do wylosowania.
 - 🧠 Zmiana tych parametrów może radykalnie zmienić styl i jakość odpowiedzi.
 - 🧪 Dla zadań precyzyjnych (QA, DQ, przetwarzanie nazw technicznych): używamy **niższych wartości**.
 - 🎨 Dla zadań twórczych (generowanie historii, wierszy, marketingu): wartości **wyższe**.
@@ -44,7 +44,7 @@ Określa poziom „chaosu” w wyborze następnego tokenu. Zakres typowo: **0.0 
 
 > 🧪 Temperatura ≈ „Jak luźno trzymać się przewidywalnej odpowiedzi?”
 
-## Top-p (nucleus sampling)
+## Top-p ([[Top P|nucleus sampling]])
 
 Zamiast brać Top-K tokenów — bierze tylko te, których skumulowane prawdopodobieństwo przekracza określony próg **p**.
 

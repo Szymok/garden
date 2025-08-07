@@ -23,17 +23,17 @@ aliases:
 **ChatGPT** to zaawansowany model językowy wytrenowany przez OpenAI do interakcji w formacie konwersacyjnym. Dzięki zastosowaniu Reinforcement Learning from Human Feedback (RLHF), model radzi sobie nie tylko z wykonywaniem instrukcji w podpowiedzi, ale i z utrzymaniem spójności oraz kontekstu dialogu. Otwiera to nowe możliwości:
 
 - odpowiadanie na pytania,
-- generowanie kodu,
+- [[generowanie kodu]],
 - pisanie tekstów w określonym stylu,
 - asystowanie w zadaniach kreatywnych i naukowych.
 
 # 🔑 Kluczowe techniki inżynierii podpowiedzi (promptów)
 
 - **Prompt z określoną rolą i stylem** – jawne zadeklarowanie, kim ma być chatbot i jakim stylem odpowiadać.
-- **System prompt vs user prompt** – różnicowanie, czy instrukcja trafia do modelu w sekcji system ("You are an AI research assistant"), czy jako polecenie użytkownika.
+- **System prompt vs user prompt** – różnicowanie, czy instrukcja trafia do modelu w sekcji system ("You are an [[Uczenie Maszynowe|AI]] research assistant"), czy jako polecenie użytkownika.
 - **Formatuj rozmowy wieloobrotowe** – w API każda wypowiedź powinna mieć rolę (`system`, `user`, `assistant`) oraz odpowiedni kontekst.
 - **Instrukcje explicitne** – włączenie do promptu warunków, oczekiwanych formatów odpowiedzi ("Odpowiedz krótko", "Jeśli nie wiesz, napisz 'Niepewna odpowiedź'").
-- **Chain-of-thought i role prompting** – zachęcanie modelu do myślenia krok po kroku lub przyjmowania ról (np. ekspert naukowy, programista).
+- **Chain-of-thought i [[Roles|role]] prompting** – zachęcanie modelu do myślenia krok po kroku lub przyjmowania ról (np. ekspert naukowy, programista).
 
 # 📚 Przegląd praktycznych scenariuszy
 
@@ -86,7 +86,7 @@ Answer:
 
 # ⚙️ Ograniczenia i wyzwania
 
-- **Brak gwarancji nieomylności** – mimo RLHF model może generować halucynacje lub nieścisłości.
+- **Brak gwarancji nieomylności** – mimo RLHF model może generować [[halucynacje]] lub nieścisłości.
 - **Wrażliwość na prompt** – wąska/nieprecyzyjna instrukcja prowadzi do słabszych wyników, natomiast zbyt złożone prompty mogą generować rozbieżne odpowiedzi.
 - **Zmiany zachowań w zależności od wersji modelu** – niektóre strategie promptowania stają się mniej skuteczne po update wersji.
 - **Brak pamięci długoterminowej** – pomimo utrzymywania kontekstu konwersacji, ChatGPT nie pamięta informacji z wcześniejszych interakcji poza bieżącą sesją.
@@ -117,7 +117,7 @@ Oto wyselekcjonowana lista przeglądów naukowych, przewodników i źródeł na 
 - ChatGPT = model dialogowy, rola promptów jeszcze większa niż w GPT-3.
 - Intencja i tożsamość w promptcie → pełna kontrola nad stylem.
 - Najważniejsze praktyki: rolę deklarować w system prompt lub explicit user prompt.
-- Trendy (2023-2025): prompt chaining, few-shot + CoT, multi-agent compositional prompts.
-- Ograniczenia trzeba testować każdorazowo po zmianie wersji LLM.
+- Trendy (2023-2025): prompt chaining, few-shot + [[Chain-of-Thought Prompting|CoT]], multi-agent compositional prompts.
+- Ograniczenia trzeba testować każdorazowo po zmianie wersji [[Base LLM|LLM]].
 
 **Przegląd źródeł i dalszych lektur znajdziesz wyżej — część tekstów stanowi najnowszy stan wiedzy o ChatGPT i prompt engineering.**

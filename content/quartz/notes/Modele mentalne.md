@@ -41,7 +41,7 @@ Wskazuje, że każde uproszczenie rzeczywistości (np. model, plan, mapa) jest t
 Znajomość własnych ograniczeń oraz mocnych stron prowadzi do trafniejszych decyzji i unikania ryzykownych działań na nieznanym polu.
 
 **3. Myślenie od pierwszych zasad**  
-Rozkładanie problemów na elementarne, niepodważalne fakty i budowanie rozwiązania „od zera”, pomijając powszechne założenia i utarte schematy.
+Rozkładanie problemów na elementarne, niepodważalne [[fakty]] i budowanie rozwiązania „od zera”, pomijając powszechne założenia i utarte schematy.
 
 **4. Eksperyment myślowy**  
 Symulacja „co by było, gdyby” pozwala bez kosztów rzeczywistych testować skutki decyzji – powszechna metoda w filozofii, fizyce, innowacjach.

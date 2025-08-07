@@ -74,7 +74,7 @@ aliases:
 |Prompt Injection|Zmiana zachowania modelu przez dodane polecenie|Kontrola nad wyjściem modelu|
 |Prompt Leaking|Wyłudzenie fragmentów promptów z kodu aplikacji|Wycieki IP, przykłady, logika aplikacji|
 |Jailbreaking|"Odblokowywanie" cenzury lub ograniczeń modelu|Szkodliwe, nielegalne lub nieetyczne odpowiedzi|
-|Efekt Waluigi|Wzbudzanie zachowań przeciwnych przez odpowiednie role-play|Model "łatwiej" łamie zadane reguły przez kontekst|
+|Efekt Waluigi|Wzbudzanie zachowań przeciwnych przez odpowiednie [[Roles\|role]]-play|Model "łatwiej" łamie zadane reguły przez kontekst|
 
 # 🛡️ Taktyki obronne
 
@@ -97,27 +97,27 @@ Stosowanie formatów, które redukują ryzyko wstrzyknięcia (np. "quoted JSON",
 
 ## 4. Adversarial Prompt Detector
 
-Definiowanie osobnych agentów (np. LLM specjalnie szkolony do wykrywania złośliwych promptów), które analizują prompt przed dopuszczeniem go do systemu produkcyjnego.
+Definiowanie osobnych agentów (np. [[Base LLM|LLM]] specjalnie szkolony do wykrywania złośliwych promptów), które analizują prompt przed dopuszczeniem go do systemu produkcyjnego.
 
 ## 5. Model type / tuning
 
 Unikanie deploymentu modeli wyłącznie z finetuningu instrukcyjnego, na rzecz dodatkowego pretrainingu z przykładami (k-shot) lub precyzyjnego fine-tuningu na danych docelowych. Modele takie są mniej podatne na podstawowe prompt injection, choć nie są w pełni odporne.
 
-# 🏁 Praktyczne wskazówki dla projektantów i deweloperów LLM
+# 🏁 Praktyczne wskazówki dla projektantów i deweloperów [[Base LLM|LLM]]
 
 - **Waliduj dane wejściowe użytkownika** – cytowanie tekstu, usuwanie poleceń wykonywalnych.
 - **Nie dołączaj poufnych informacji, własności intelektualnej i przykładów zero-shot do promptu** na środowisku produkcyjnym.
 - **Buduj warstwę "filter/proxy"** oceniającą złożoność i intencję promptu przed dopuszczeniem do modelu (adversarial detector, whitelist, heurystyki).
 - **Regularnie testuj swoje modele** pod kątem podatności na najnowsze typy ataków — różne wersje modelu mogą mieć różną odporność.
-- **Monitoruj społeczność security LLM** – polegaj na listach przykładowych ataków, forach, repozytoriach (np. Jailbreak Chat, publikacje o Efekcie Waluigi).
+- **Monitoruj społeczność security [[Base LLM|LLM]]** – polegaj na listach przykładowych ataków, forach, repozytoriach (np. Jailbreak Chat, publikacje o Efekcie Waluigi).
 - **Wdrażaj polityki rollback** modelu w przypadku wykrycia eskalacji lub nowego wektora ataku.
 
 # 📚 Polecane materiały i ćwiczenia
 
-- Notatnik z ćwiczeniami: [Prompt Engineering Guide - Adversarial Notebook](https://github.com/dair-ai/Prompt-Engineering-Guide/blob/main/notebooks/pe-chatgpt-adversarial.ipynb)
+- Notatnik z ćwiczeniami: [[[Prompt Engineering Guide]] - Adversarial Notebook](https://github.com/dair-ai/Prompt-Engineering-Guide/blob/main/notebooks/pe-chatgpt-adversarial.ipynb)
 - Listy ataków i defense tactics: [Prompting Guide - Adversarial](https://www.promptingguide.ai/risks/adversarial)
 - **Warto eksperymentować:** implementuj prostą warstwę detekcji i monitoruj reakcje modelu na edge-case'y.
 
 # ✅ Podsumowanie
 
-Adversarial prompting jest kluczowym, otwartym wyzwaniem bezpieczeństwa LLM – dotyczy zarówno inżynierii promptów, inżynierii bezpieczeństwa, jak i praktyki wdrożeniowej. Stałe testowanie, rozwijanie własnych heurystyk oraz czerpanie z doświadczeń społeczności są obecnie najlepszym sposobem na minimalizację ryzyka prompt injection, prompt leaking i jailbreaking, zanim powstaną powszechnie efektywne, automatyczne rozwiązania na poziomie silnika.
+Adversarial prompting jest kluczowym, otwartym wyzwaniem bezpieczeństwa [[Base LLM|LLM]] – dotyczy zarówno inżynierii promptów, inżynierii bezpieczeństwa, jak i praktyki wdrożeniowej. Stałe testowanie, rozwijanie własnych heurystyk oraz czerpanie z doświadczeń społeczności są obecnie najlepszym sposobem na minimalizację ryzyka prompt injection, prompt leaking i jailbreaking, zanim powstaną powszechnie efektywne, automatyczne rozwiązania na poziomie silnika.

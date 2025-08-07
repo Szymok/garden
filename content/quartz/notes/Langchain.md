@@ -22,14 +22,14 @@ aliases:
 
 # 🎯 Definicja
 
-**LangChain** to framework open-source do tworzenia **aplikacji opartych na języku naturalnym i dużych modelach językowych (LLM)**, który upraszcza integrację modeli z zewnętrznymi źródłami wiedzy, narzędziami i interfejsami. Pozwala budować aplikacje z wykorzystaniem **łańcuchów przetwarzania językowego**, które zapewniają podejście modularne i skalowalne do workflow opartego na promptach, kontekście i agentach.
+**LangChain** to framework open-source do tworzenia **aplikacji opartych na języku naturalnym i dużych modelach językowych ([[Base LLM|LLM]])**, który upraszcza integrację modeli z zewnętrznymi źródłami wiedzy, narzędziami i interfejsami. Pozwala budować aplikacje z wykorzystaniem **łańcuchów przetwarzania językowego**, które zapewniają podejście modularne i skalowalne do workflow opartego na promptach, kontekście i agentach.
 
 # 🔑 Kluczowe punkty
 
-- Framework do budowania aplikacji z LLM zamiast pojedynczych promptów.
+- Framework do budowania aplikacji z [[Base LLM|LLM]] zamiast pojedynczych promptów.
 - Obsługuje **kompozycję komponentów**: pamięć, wejścia, przetwarzanie, akcje, narzędzia.
 - Integruje się z systemami zewnętrznymi: bazy wiedzy, wyszukiwarki, SQL, API REST, serwisy file storage.
-- Wspiera **RAG**, **agentów razonujących**, **multi-step workflows**, **orchestration pipelines**.
+- Wspiera **[[RAG]]**, **agentów razonujących**, **multi-step workflows**, **orchestration pipelines**.
 - Posiada wersje dla Pythona (`langchain`) i JavaScript/TypeScript (`langchain.js`).
 
 # 📚 Szczegółowe wyjaśnienie
@@ -38,12 +38,12 @@ aliases:
 
 |Warstwa|Funkcja|
 |---|---|
-|**LLM Wrapper**|Obsługa wielu dostawców LLM: OpenAI, HuggingFace, Cohere, Mistral itd.|
+|**[[Base LLM\|LLM]] Wrapper**|Obsługa wielu dostawców [[Base LLM\|LLM]]: OpenAI, HuggingFace, Cohere, Mistral itd.|
 |**Prompting**|PromptTemplates, ChatPromptTemplates, FewShotPrompt|
 |**Memory**|Utrzymywanie kontekstu rozmowy, np. ConversationBufferMemory|
-|**Chains**|Łączenie elementów w sekwencje operacji (Input → Prompt → LLM → Output)|
+|**Chains**|Łączenie elementów w sekwencje operacji (Input → Prompt → [[Base LLM\|LLM]] → Output)|
 |**Tools & Agents**|Integracja z zewnętrznymi narzędziami (Google, GitHub, Wikipedia, SQL)|
-|**Retrievers / RAG**|Łączenie z wektorowymi bazami danych (FAISS, Pinecone, Chroma)|
+|**Retrievers / [[RAG]]**|Łączenie z wektorowymi bazami danych (FAISS, Pinecone, Chroma)|
 
 ## Przykład działania prostego łańcucha
 
@@ -61,15 +61,15 @@ print(response)
 
 ## Typy gotowych komponentów
 
-- **LLMChain** – podstawowy łańcuch: prompt → LLM → output
+- **LLMChain** – podstawowy łańcuch: prompt → [[Base LLM|LLM]] → output
 - **SequentialChain** – wykonuje sekwencję zadań (output A → input B)
 - **SimpleSequentialChain** – tylko wejście–wyjście bez zmiennych pośrednich
 - **ConversationChain** – utrzymanie kontekstu dialogu
-- **RetrieverQA** – fetching wiedzy z dokumentów (RAG)
+- **RetrieverQA** – fetching wiedzy z dokumentów ([[RAG]])
 
 ## Agentowość
 
-LangChain obsługuje tzw. **agentów LLM**, którzy:
+LangChain obsługuje tzw. **agentów [[Base LLM|LLM]]**, którzy:
 
 - Otrzymują cel (prompt) i kontekst
 - Podejmują decyzję, jakich narzędzi użyć (np. wyszukiwarka, baza danych)
@@ -82,7 +82,7 @@ from langchain.agents import initialize_agent, Tool
 
 tools = [Tool.from_function(web_search), Tool.from_function(sql_query_tool)]
 
-agent = initialize_agent(tools, llm, agent_type="zero-shot-react-description")
+agent = initialize_agent(tools, Base LLMllm, agent_type="zero-shot-ReAct Prompting|react-description")
 result = agent.run("Ile meczów wygrał Real Madryt w 2023 roku?")
 ```
 
@@ -96,11 +96,11 @@ result = agent.run("Ile meczów wygrał Real Madryt w 2023 roku?")
 
 Firma wdraża aplikację do obsługi klienta opartą na wiedzy z dokumentów. Zamiast przesyłać cały kontekst w promptach, używa LangChain do:
 
-- podziału dokumentacji na chunki i osadzenia ich (embedding)
+- podziału dokumentacji na chunki i osadzenia ich ([[embedding]])
 - wyszukiwania relewantnych fragmentów zapytań użytkownika (retriever)
-- użycia LLM + prompt template + memory do wygenerowania odpowiedzi
+- użycia [[Base LLM|LLM]] + prompt template + memory do wygenerowania odpowiedzi
 
-Całość spięta jako RAG pipeline z ChatConversationalChain.
+Całość spięta jako [[RAG]] pipeline z ChatConversationalChain.
 
 # ✅ Zalety
 
@@ -121,9 +121,9 @@ Całość spięta jako RAG pipeline z ChatConversationalChain.
 ## 👽 Brudnopis
 
 - LangChain ≠ model → manager aplikacji AI
-- alternatywa: LlamaIndex (focus na dokumentach), Haystack
-- current best: `lc-serve`, agent-executor, RAG pipelines
+- alternatywa: [[LlamaIndex]] (focus na dokumentach), Haystack
+- current best: `lc-serve`, agent-executor, [[RAG]] pipelines
 - przykład: prompt chaining → retriever → tool → generation
-- duży potencjał w AI automacji, LLM workflow management
+- duży potencjał w AI automacji, [[Base LLM|LLM]] workflow management
 
 ---

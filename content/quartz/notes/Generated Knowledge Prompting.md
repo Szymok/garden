@@ -13,14 +13,14 @@ aliases:
 
 # 🎯 Definicja
 
-**Generated Knowledge Prompting (GKP)** to zaawansowana technika podpowiadania, w której model językowy (LLM) najpierw generuje pomocne, kontekstowe informacje (wiedzę), a dopiero potem wykorzystuje je jako część promptu do sformułowania właściwej odpowiedzi na zadanie. Celem GKP jest wzbogacenie procesu rozumowania modelu przez jawne tworzenie i integrację "wiedzy" – faktów, definicji, przykładów lub uwarunkowań istotnych dla danego pytania lub problemu.
+**Generated Knowledge Prompting (GKP)** to zaawansowana technika podpowiadania, w której model językowy ([[Base LLM|LLM]]) najpierw generuje pomocne, kontekstowe informacje (wiedzę), a dopiero potem wykorzystuje je jako część promptu do sformułowania właściwej odpowiedzi na zadanie. Celem GKP jest wzbogacenie procesu rozumowania modelu przez jawne tworzenie i integrację "wiedzy" – faktów, definicji, przykładów lub uwarunkowań istotnych dla danego pytania lub problemu.
 
 # 🔑 Kluczowe punkty
 
-- **Dwuetapowe podejście:** Najpierw LLM generuje wiedzę związaną z problemem, następnie wykorzystuje ją do wygenerowania odpowiedzi.
+- **Dwuetapowe podejście:** Najpierw [[Base LLM|LLM]] generuje wiedzę związaną z problemem, następnie wykorzystuje ją do wygenerowania odpowiedzi.
 - **Wzrost trafności i głębi odpowiedzi:** W zadaniach wymagających rozumowania ogólnego (commonsense reasoning) GKP istotnie podnosi jakość odpowiedzi, zwiększając skuteczność z ok. 64% do ponad 70% w testach takich jak CommonsenseQA.
 - **Możliwość stosowania w formacie single- lub dual-prompt:** Wiedza i odpowiedź mogą być generowane razem (single prompt) albo w dwóch krokach (dual prompt).
-- **Ujawnianie i korygowanie ograniczeń modelu:** GKP pozwala modelowi skorygować błędne intuicje lub domyślne halucynacje, przez eksplicytne odniesienia do wiedzy dziedzinowej.
+- **Ujawnianie i korygowanie ograniczeń modelu:** GKP pozwala modelowi skorygować błędne intuicje lub domyślne [[halucynacje]], przez eksplicytne odniesienia do wiedzy dziedzinowej.
 - **Technika skalowalna i uniwersalna:** Wprowadza automatyzację tworzenia "wskazówek" i pozwala objąć szerszy zakres tematyczny bez ręcznego programowania promptów.
 
 # 📚 Szczegółowe wyjaśnienie
@@ -85,7 +85,7 @@ Nie, w golfie chodzi o możliwie najniższy wynik. Zwycięża gracz z najmniejsz
 # 💡 Przykład zastosowania
 
 **Use case: Rozszerzanie promptów w AI do quizów naukowych**  
-Model najpierw generuje fakty (np. o dinozaurach), a potem odpowiada na dokładne pytanie – podnosząc czytelność, wiarygodność i trafność odpowiedzi w zadaniach edukacyjnych.
+Model najpierw generuje [[fakty]] (np. o dinozaurach), a potem odpowiada na dokładne pytanie – podnosząc czytelność, wiarygodność i trafność odpowiedzi w zadaniach edukacyjnych.
 
 **Use case: Tworzenie bloga lub raportu na bazie wiedzy** Prompt:
 
@@ -116,8 +116,8 @@ Akapit: Wilki odgrywają kluczową rolę...
 # 👽 Brudnopis
 
 - GKP = najpierw generuj wiedzę, potem twórz odpowiedź – explicit knowledge injection
-- Mechanizm: dwuetapowy prompt (fakty + zadanie) / single-prompt (oba naraz)
+- Mechanizm: dwuetapowy prompt ([[fakty]] + zadanie) / single-prompt (oba naraz)
 - Wpływ: znacząco wyższa trafność na zadaniach logiczno-faktograficznych (np. CommonsenseQA, ScienceQA)
-- Jakość zależna od zdolności LLM do generowania relewantnych faktów
+- Jakość zależna od zdolności [[Base LLM|LLM]] do generowania relewantnych faktów
 - Kaskadowe wykorzystanie wiedzy = lepsza interpretowalność, łatwiejszy audyt, wyciągnięcie efektów "na wierzch"
 - Ograniczenie: ryzyko halucynacji błędnych "faktów"; nie zawsze powstają wartościowe uzupełnienia

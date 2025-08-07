@@ -23,15 +23,15 @@ aliases:
 
 # 🎯 Definicja
 
-**Apache Iceberg** to nowoczesny, rozproszony format tabelowy dla jezior danych (Data Lakes), zaprojektowany z myślą o obsłudze ogromnych tabel w środowiskach big data (petabajtów danych, miliardów plików). Pozwala pracować z danymi w sposób spójny, transakcyjny i zgodny z paradygmatami Spark/Flink/Trino, ułatwiając budowę architektury typu **Lakehouse**.
+**Apache Iceberg** to nowoczesny, rozproszony format tabelowy dla jezior danych (Data Lakes), zaprojektowany z myślą o obsłudze ogromnych tabel w środowiskach big data (petabajtów danych, miliardów plików). Pozwala pracować z danymi w sposób spójny, transakcyjny i zgodny z paradygmatami Spark/Flink/Trino, ułatwiając budowę architektury typu **[[Data Lakehouse|Lakehouse]]**.
 
-Iceberg został opracowany przez Netflix, aby przezwyciężyć ograniczenia tradycyjnych tabel Hive, i od 2020 r. jest pełnoprawnym projektem Apache.
+Iceberg został opracowany przez Netflix, aby przezwyciężyć ograniczenia tradycyjnych tabel [[Apache Hive|Hive]], i od 2020 r. jest pełnoprawnym projektem Apache.
 
 # 🔑 Kluczowe cechy
 
-- ✨ Obsługuje w pełni **ACID**, **time travel**, **upsert/delete**, **schema evolution**
-- 📦 Format **niezależny od silnika i języka** – integruje się z Spark, Flink, Trino, Dremio, Hive
-- 📄 Pracuje na popularnych formatach danych: Parquet, ORC, Avro
+- ✨ Obsługuje w pełni **[[Transakcje ACID|ACID]]**, **time travel**, **upsert/delete**, **[[Ewolucja Schematu|schema evolution]]**
+- 📦 Format **niezależny od silnika i języka** – integruje się z Spark, Flink, Trino, Dremio, [[Apache Hive|Hive]]
+- 📄 Pracuje na popularnych formatach danych: Parquet, [[ORC]], Avro
 - 📈 Wspiera **snapshot-based querying**, **versioned data**, **metadata caching**
 - 🧊 Używany przez liderów branży (Netflix, Apple, Expedia, Adobe, Stripe)
 
@@ -59,7 +59,7 @@ Iceberg wspiera wiele rozwiązań analitycznych i streamowych:
 |Trino|✅ SQL query directly over Iceberg|
 |Dremio|✅ GUI + optymalizacje|
 |AWS Glue / Athena|✅ read-only|
-|Hive, Impala|częściowe/wsparcie zależne od wersji|
+|[[Apache Hive\|Hive]], Impala|częściowe/wsparcie zależne od wersji|
 
 ### Przykład użycia (Spark SQL):
 
@@ -74,16 +74,16 @@ PARTITIONED BY (date)
 LOCATION 's3://dataset/sales/iceberg_table';
 ```
 
-## Iceberg vs Delta Lake vs Hudi
+## Iceberg vs [[Delta Lake]] vs [[Apache Hudi|Hudi]]
 
-|Cecha|Iceberg|Delta Lake|Hudi|
+|Cecha|Iceberg|[[Delta Lake]]|[[Apache Hudi\|Hudi]]|
 |---|---|---|---|
-|ACID|✅|✅|✅|
+|[[Transakcje ACID\|ACID]]|✅|✅|✅|
 |Time Travel|✅|✅|✅|
 |Zoptymalizowany dla|OLAP|Spark-centric ETL|Write-heavy / streaming|
 |Multi-engine (Silniki)|Spark, Trino, Flink|głównie Spark|Spark, Flink|
 |Format pliku|Parquet (ew. Avro)|Parquet|Parquet + log files|
-|Metadata table catalog|✅ (REST, Hive, Glue)|❌ (własny Delta Log)|Hive-centric|
+|Metadata table catalog|✅ (REST, [[Apache Hive\|Hive]], Glue)|❌ (własny Delta Log)|[[Apache Hive\|Hive]]-centric|
 |Copy-on-write / MOR|Snapshot-based|COW|COW/MOR|
 |Partition Evolution|✅ (elastyczne)|❌ (statyczne)|❌ (manualne)|
 
@@ -103,12 +103,12 @@ Zapytania OLAP są efektywne, bo tylko nowe pliki snapshotu są skanowane, a kat
 
 ## 👽 Brudnopis
 
-- Iceberg = ACID + snapshot + reads on petabyte scale
+- Iceberg = [[Transakcje ACID|ACID]] + snapshot + reads on petabyte scale
 - Control plane: metadane poza storage → odczyt szybki
-- Snapshot-based ≠ log-based (jak w Hudi)
+- Snapshot-based ≠ log-based (jak w [[Apache Hudi|Hudi]])
 - Dowolne partycjonowanie – dynamiczne, ewoluujące
-- Metastore: Hive Metastore, AWS Glue, REST Catalog
+- Metastore: [[Apache Hive|Hive]] Metastore, AWS Glue, REST Catalog
 - Doskonałe do federacyjnych zapytań: Trino → Iceberg na S3
-- “Format tabel RDF dla Lakehouse” = most między DWH i DL
+- “Format tabel RDF dla [[Data Lakehouse|Lakehouse]]” = most między DWH i [[Deep Learning|DL]]
 
 ---

@@ -28,7 +28,7 @@ aliases:
 - **Min P** eliminuje z próbkowania tokeny o zbyt niskim prawdopodobieństwie – tzn. "odcina ogon" rozkładu tokenów.
 - Parametr ten działa podobnie do `top-p`, ale na podstawie _wartości minimalnej_, a nie _kumulatywnej sumy prawdopodobieństw_.
 - Zwiększenie wartości Min P prowadzi do mniejszej różnorodności wyników, ale wyższej spójności/sensowności.
-- Obniżenie Min P oznacza większą swobodę w wyborze tokenów, co może zwiększyć kreatywność, ale także hałas i halucynacje.
+- Obniżenie Min P oznacza większą swobodę w wyborze tokenów, co może zwiększyć kreatywność, ale także hałas i [[halucynacje]].
 - Min P jest używany w nowszych technikach kontroli generacji, np. w `typical sampling`.
 
 # 📚 Szczegółowe wyjaśnienie
@@ -65,7 +65,7 @@ Np. przy `min_p = 0.02`, tylko tokeny, które mają przynajmniej 2% prawdopodobi
 
 # 💡 Przykład zastosowania
 
-Podczas generowania e-maila handlowego przy użyciu LLM, użycie `min_p = 0.1` pozwala uzyskać bardziej rzeczowe, spójne zdania, unikając dziwnych lub przypadkowych wtrąceń, które mogłyby wynikać z domyślnego samplingowania tokenów, w którym tokeny o prawdopodobieństwie 0.01–0.02 nadal mogą zostać uwzględnione.
+Podczas generowania e-maila handlowego przy użyciu [[Base LLM|LLM]], użycie `min_p = 0.1` pozwala uzyskać bardziej rzeczowe, spójne zdania, unikając dziwnych lub przypadkowych wtrąceń, które mogłyby wynikać z domyślnego samplingowania tokenów, w którym tokeny o prawdopodobieństwie 0.01–0.02 nadal mogą zostać uwzględnione.
 
 W przypadku generowania fikcyjnej historii dla dzieci, model z `min_p = 0.01` pozwala na większą swobodę twórczą i niecodzienne zwroty akcji.
 
@@ -78,7 +78,7 @@ W przypadku generowania fikcyjnej historii dla dzieci, model z `min_p = 0.01` po
 
 ## 👽 Brudnopis
 
-- Min P ≠ Top P – zero kumulacji, opiera się na lokalnym minimum
+- Min P ≠ [[Top P]] – zero kumulacji, opiera się na lokalnym minimum
 - Zwiększając min_p → mniej losowe, bardziej formalne outputy
 - Wartość bardzo zależna od zastosowania – do kodu → wysokie, do bajek → niskie
 - Gdy używasz Min P bez temperature = 1.0 → masz dobrą kontrolę nad stylem

@@ -55,7 +55,7 @@ tokenizer = GPT2Tokenizer.from_pretrained(model_name)
 
 input_text = "Sztuczna inteligencja to"
 
-# [[notes/Tokenizacja|Tokenizacja]] i generowanie tekstu z różnymi temperaturami
+# [[notes/Tokenizacja|Tokenizacja i generowanie tekstu z różnymi temperaturami
 
 input_ids = tokenizer.encode(input_text, return_tensors="pt")
 

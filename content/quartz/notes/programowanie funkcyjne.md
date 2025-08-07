@@ -88,7 +88,7 @@ W systemie przetwarzania danych zbudowanym na **[[dbt]] + [[Apache Airflow|Airfl
 ## 📌 Źródła
 
 - [Functional Programming in Python – RealPython](https://realpython.com/python-functional-programming/)
-- [Functional [[Inżynieria Danych|Data Engineering]] — Maxime Beauchemin](https://maximebeauchemin.medium.com/functional-data-engineering-a-modern-paradigm-for-batch-data-processing-2327ec32c42a)
+- [Functional [[Inżynieria Danych|Data Engineering]] — [[Maxime Beauchemin]]](https://maximebeauchemin.medium.com/functional-data-engineering-a-modern-paradigm-for-batch-data-processing-2327ec32c42a)
 - [Intro to Functional Programming – freeCodeCamp](https://www.freecodecamp.org/news/introduction-to-functional-programming/)
 
 # 👽 Brudnopis

@@ -21,7 +21,7 @@ aliases:
 
 # 🎯 Definicja
 
-[**Dagster**](https://dagster.io/) to nowoczesna platforma do **orkiestracji danych** i budowy pipelines oparta na modelu "software-defined assets". Umożliwia tworzenie, testowanie, wdrażanie oraz monitorowanie zadań ETL/ELT i projektów danych z pełną obserwowalnością oraz kontrolą jakości. Stawia na [[Deklaratywność|podejście deklaratywne]], transparentność oraz rozwój zgodny ze standardami inżynierii oprogramowania.
+[**Dagster**](https://dagster.io/) to nowoczesna platforma do **orkiestracji danych** i budowy pipelines oparta na modelu "[[software-defined assets]]". Umożliwia tworzenie, testowanie, wdrażanie oraz monitorowanie zadań ETL/ELT i projektów danych z pełną obserwowalnością oraz kontrolą jakości. Stawia na [[Deklaratywność|podejście deklaratywne]], transparentność oraz rozwój zgodny ze standardami inżynierii oprogramowania.
 
 # 🔑 Kluczowe punkty
 
@@ -42,7 +42,7 @@ Dagster pozwala modelować dane jako aktywa (`@asset`) — np. tabele, modele [[
 
 ### 2. [[Deklaratywność]] i modularność
 
-Pipeline to nie task po tasku (imperatywne DAGi jak w Airflow), ale zależności między aktywami. Zbudowany na Pythonie DAG opisuje _co zależy od czego_, nie _w jakiej kolejności to wykonać_.
+Pipeline to nie task po tasku (imperatywne DAGi jak w [[Apache Airflow|Airflow]]), ale zależności między aktywami. Zbudowany na Pythonie DAG opisuje _co zależy od czego_, nie _w jakiej kolejności to wykonać_.
 
 ### 3. Obserwowalność
 
@@ -91,7 +91,7 @@ Firma e-commerce integruje dane z Airbyte (synchronizacja z API i baz), przekszt
 - dagster = SDK + orchestrator + lineage-sensitive platforma
 - dekleratywna orkiestracja DAG = clean DAGs, odporność na zależności
 - genialna dla [[Inżynieria Danych|DataOps]]: retries, run logs, asset freshness
-- wygodniejszy niż airflow: brak kodowania imperatywnego + łatwiejsze testy
+- wygodniejszy niż [[Apache Airflow|airflow]]: brak kodowania imperatywnego + łatwiejsze testy
 - stale się rozwija, kluczowy gracz [[Stos Danych Otwartych|open data stack]] obok [[dbt]]/airbyte/superset
 - UI = wszystko: lineage, aktualność, podgląd danych, scheduler
 

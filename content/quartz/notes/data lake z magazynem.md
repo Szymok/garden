@@ -28,8 +28,8 @@ aliases:
 
 - 🔗 Łączy **Data Lake** (np. Amazon S3, Azure Data Lake) + **hurtownię danych** (np. Snowflake, BigQuery, Redshift).
 - 🔄 Umożliwia **separację warstw przetwarzania** — dane surowe przechowywane są tanio, a przetwarzane i analizowane zgodnie z potrzebami.
-- ⚙️ Typowe podejście w modelach **modern data stack** i architekturze Lakehouse.
-- 📊 Umożliwia zaawansowaną analizę danych wykorzystując silniki SQL, ML i BI.
+- ⚙️ Typowe podejście w modelach **[[Nowoczesny Stos Danych|modern data stack]]** i architekturze [[Data Lakehouse|Lakehouse]].
+- 📊 Umożliwia zaawansowaną analizę danych wykorzystując silniki SQL, [[Uczenie Maszynowe|ML]] i [[Business Intelligence|BI]].
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -38,12 +38,12 @@ aliases:
 |Warstwa|Zadanie|Przykład|
 |---|---|---|
 |**Data Lake**|Przechowywanie plików surowych (raw)|Data z IoT, API, logi w S3, ADLS|
-|**Data Warehouse**|Strukturalna analiza i modelowanie danych|Obliczenia agregatów, raporty KPI|
+|**Data Warehouse**|Strukturalna analiza i [[modelowanie danych]]|Obliczenia agregatów, raporty [[KPI]]|
 
 Architektura umożliwia:
 
 - Pobieranie i trzymanie **dużych wolumenów danych surowych** w obiektowym storage (np. pliki JSON, Parquet).
-- Transformacje danych (ETL/ELT) w narzędziach takich jak: dbt, Spark, Databricks.
+- Transformacje danych (ETL/ELT) w narzędziach takich jak: [[dbt]], Spark, Databricks.
 - Ładowanie odpowiednio przetworzonych danych do hurtowni w celu wydajnych zapytań analitycznych.
 
 ## Zalety
@@ -51,13 +51,13 @@ Architektura umożliwia:
 - ✅ **Niższy koszt składowania** dzięki tanim warstwom danych (np. S3, ADLS).
 - ✅ **Wydajne zapytania** na danym zestawie – przeliczenia w warehouse (np. Redshift, BigQuery).
 - ✅ **Skalowalność i elastyczność** – dane mogą być trzymane as-is, bez narzucania schematów.
-- ✅ Zgodność z podejściami typu RAG (Retrieval Augmented Generation), Machine Learning, BI.
+- ✅ Zgodność z podejściami typu [[RAG]] (Retrieval Augmented Generation), [[Uczenie Maszynowe|Machine Learning]], [[Business Intelligence|BI]].
 
 ## Uwaga – wyzwania
 
 - 🧩 Złożoność infrastruktury: różne silniki, formaty, transformacje – wzrost kosztu utrzymania.
 - 🚦 Ilość kopiowanych danych może prowadzić do redundancji — konieczność wersjonowania i kontroli lineage.
-- ⚠️ Potrzeba silnego data governance, katalogów danych, zgodności typów, testów jakości danych.
+- ⚠️ Potrzeba silnego [[data governance]], katalogów danych, zgodności typów, testów jakości danych.
 
 # 💡 Przykład zastosowania
 
@@ -66,8 +66,8 @@ Architektura umożliwia:
 - Dane z kas fiskalnych i e-commerce zbierane są do AWS S3 (Data Lake).
 - Spark przez EMR przetwarza dane wsadowo (batch).
 - Oczyszczone i wzbogacone dane są ładowane do Snowflake.
-- Dział BI korzysta z Power BI do raportowania – raporty opierają się na hurtowni.
-- W przyszłości ta sama architektura umożliwia wytrenowanie modelu ML na danych z lake przy użyciu Databricks, bez potrzeby dublowania danych.
+- Dział [[Business Intelligence|BI]] korzysta z Power [[Business Intelligence|BI]] do raportowania – raporty opierają się na hurtowni.
+- W przyszłości ta sama architektura umożliwia wytrenowanie modelu [[Uczenie Maszynowe|ML]] na danych z lake przy użyciu Databricks, bez potrzeby dublowania danych.
 
 # 📌 Źródła
 
@@ -78,8 +78,8 @@ Architektura umożliwia:
 
 # 👽 Brudnopis
 
-- Architektura przejściowa między DSS a Lakehouse
+- Architektura przejściowa między DSS a [[Data Lakehouse|Lakehouse]]
 - Typowe zdublowanie procesów ETL/ELT → surowe -> staging -> curated -> analytical
 - Narzędzia: AWS S3 + Snowflake / Azure Data Lake + Synapse / GCS + BigQuery
-- dbt, Apache Airflow, Spark, Glue, Informatica – integracje warstw
-- Lakehouse = naturalna ewolucja tego podejścia – ulepszenie ACID + wersjonowanie + ML-ready
+- [[dbt]], [[Apache Airflow]], Spark, Glue, Informatica – integracje warstw
+- [[Data Lakehouse|Lakehouse]] = naturalna ewolucja tego podejścia – ulepszenie [[Transakcje ACID|ACID]] + wersjonowanie + [[Uczenie Maszynowe|ML]]-ready

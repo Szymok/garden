@@ -82,7 +82,7 @@ Zespół buduje klasyfikator obrazów – od pobrania i pre-processing kolekcji 
 - [EITT: Intensywne Warsztaty [[Uczenie Maszynowe|ML]]](https://eitt.pl/technologie/machine-learning-z-pythonem-intensywne-warsztaty/)
 - [ICM: Praktyki MLOps dla deploymentów](https://studia.icm.edu.pl/industrializing-machine-learning-solutions-overview-of-mlops-practices-for-ml-projects/)
 - [Hostersi: Bezpieczeństwo ML Deployment](https://www.hostersi.pl/aktualnosci-aws/7-sposobow-na-poprawe-bezpieczenstwa-przeplywow-pracy-uczenia-maszynowego/)
-- [EITT: Orkiestracja ML na Kubernetes/OpenShift](https://eitt.pl/baza-wiedzy/kubernetes-openshift-orkiestracja-ml-kontenery/)
+- [EITT: Orkiestracja [[Uczenie Maszynowe|ML]] na Kubernetes/OpenShift](https://eitt.pl/baza-wiedzy/kubernetes-openshift-orkiestracja-ml-kontenery/)
 - [DS Stream: Best Practices MLOps](https://www.dsstream.com/pl/post/najlepsze-praktyki-wdrazania-mlop-w-fmcg)
 
 ## 👽 Brudnopis

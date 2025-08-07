@@ -65,7 +65,7 @@ Firmowy wirtualny asystent HR analizuje ton pytania, wcześniejszą historię ro
 - Responsive AI = AI, które „rozumie” użytkownika w czasie rzeczywistym
 - Odpowiedź się różni w zależności od tonu, kontekstu sytuacji, historii interakcji
 - UX kluczowy – AI jako asystent, nie tylko silnik wiedzy
-- Komponenty: user profiling, sensing, context awareness, response strategy
+- Komponenty: user [[profiling]], sensing, context awareness, response strategy
 - Porównanie do adaptacyjnych UI, ale na poziomie decyzyjnym AI
 - Relacja z System 1/System 2 (Kahneman) – szybkie vs. przemyślane reakcje AI
 - Responsive AI ≠ Reaktywna AI — to AI, która przewiduje i dostosowuje

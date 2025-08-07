@@ -20,12 +20,12 @@ aliases:
 
 # 🎯 Definicja
 
-**Group Isolation (izolacja grup)** to mechanizm kontroli dostępu w systemach zarządzania danymi i zasobami, który ogranicza możliwość współdzielenia zasobów i przypisywania odpowiedzialności (stewardship) wyłącznie do określonej grupy użytkowników oraz jej podrzędnych jednostek. Pozwala to na odizolowanie części organizacji lub projektu w ramach większej struktury, zapewniając bezpieczeństwo i niezależność działania.
+**Group Isolation (izolacja grup)** to mechanizm kontroli dostępu w systemach zarządzania danymi i zasobami, który ogranicza możliwość współdzielenia zasobów i przypisywania odpowiedzialności ([[stewardship]]) wyłącznie do określonej grupy użytkowników oraz jej podrzędnych jednostek. Pozwala to na odizolowanie części organizacji lub projektu w ramach większej struktury, zapewniając bezpieczeństwo i niezależność działania.
 
 # 🔑 Kluczowe punkty
 
 - 🔒 Ograniczone współdzielenie: użytkownicy w izolowanej grupie mogą dzielić się zasobami tylko z innymi użytkownikami w tej samej grupie lub jej podgrupach.
-- 👥 Stewardship: przypisanie stewardów możliwe wyłącznie wewnątrz izolowanej gałęzi.
+- 👥 [[Stewardship]]: przypisanie stewardów możliwe wyłącznie wewnątrz izolowanej gałęzi.
 - 🔁 Dwustronne reguły izolacji: członkowie z dwóch izolowanych grup mogą współdzielić dane wyłącznie, jeśli nie przypisano jeszcze stewarda do zasobu.
 - 🧭 Brak wpływu na nadrzędne grupy: użytkownicy z grup nadrzędnych nie są objęci izolacją i mogą współdziałać zgodnie z zasadami ogólnego dostępu.
 - ✋ Zasoby udostępnione przed wprowadzeniem izolacji nie ulegają automatycznej zmianie – wymagane jest ich ręczne wycofanie.
@@ -63,7 +63,7 @@ Firma posiada trzy działy: R&D, HR i Finanse. Zespół R&D pracuje nad prototyp
 
 # 📌 Źródła
 
-- [https://docs.ataccama.com/](https://docs.ataccama.com/) (lub analogiczne źródła dokumentacji platform data governance)
+- [https://docs.ataccama.com/](https://docs.ataccama.com/) (lub analogiczne źródła dokumentacji platform [[data governance]])
 - [https://community.tableau.com/articles/best-practice-guide-access](https://community.tableau.com/articles/best-practice-guide-access)
 - Internal platform security policies and RBAC/ABAC documentation
 

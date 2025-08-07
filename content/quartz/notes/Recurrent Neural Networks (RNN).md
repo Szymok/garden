@@ -43,7 +43,7 @@ Formuła ogólna: $$ h_t = f(W_x x_t + W_h h_{t-1} + b) $$
 
 - $$ h_t $$ – nowy stan ukryty
 - $$ W_x, W_h $$ – wagi
-- $$ f $$ – nieliniowa funkcja aktywacji (np. tanh)
+- $$ f $$ – nieliniowa [[funkcja aktywacji]] (np. tanh)
 
 Ten obieg informacji (feedback loop) pozwala „przypominać sobie”, co było wcześniej w sekwencji.
 
@@ -53,7 +53,7 @@ Ten obieg informacji (feedback loop) pozwala „przypominać sobie”, co było 
 |---|---|
 |Przetwarzanie języka (NLP)|Analiza sentymentu, rozpoznawanie nazwanych encji, dialogi|
 |Tłumaczenie maszynowe|Sekwencja tekstu źródłowego → sekwencja tekstu docelowego|
-|Szeregi czasowe|Prognozy finansowe, zużycie energii, sensory IoT|
+|[[Szeregi czasowe]]|Prognozy finansowe, zużycie energii, sensory IoT|
 |Przetwarzanie audio|Rozpoznawanie mowy, muzyka|
 |Pismo ręczne|Rozpoznawanie sekwencji liter/cyfr|
 
@@ -67,7 +67,7 @@ Jedną z wad klasycznych RNN jest efekt **vanishing gradients** – podczas tren
 
 Rozwiązania:
 
-- **LSTM (Long Short-Term Memory)** – dodaje mechanizmy bramek pamięci
+- **LSTM ([[Long Short-term Memory Network (LSTM)|Long Short-Term Memory]])** – dodaje mechanizmy bramek pamięci
 - **GRU (Gated Recurrent Units)** – uproszczona alternatywa LSTM
 - **Transformers** – zupełnie inna, nienastępcza architektura bez zanikających gradientów
 
@@ -78,7 +78,7 @@ Firma logistyczna analizuje historyczne dane dostaw (czas nadejścia, opóźnien
 ## 📌 Źródła
 
 - [Understanding RNNs – Colah's Blog](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
-- [Vanishing Gradient Problem – DeepAI](https://deepai.org/machine-learning-glossary-and-terms/vanishing-gradient-problem)
+- [Vanishing [[Gradient]] Problem – DeepAI](https://deepai.org/machine-learning-glossary-and-terms/vanishing-gradient-problem)
 - [Stanford CS231n – RNNs Lecture](http://cs231n.stanford.edu/slides/2021/lecture13.pdf)
 
 ## 👽 Brudnopis
@@ -89,4 +89,4 @@ Firma logistyczna analizuje historyczne dane dostaw (czas nadejścia, opóźnien
 - jeśli s == długa sekwencja → class RNN == ✅ działa z SHA – zgaśnie
 - transformers = attention dostępne do wszystkiego, RNN = tylko do przodu
 - LSTM/GRU „wybiera”, co pamiętać — gate: input, forget, output
-- RNN dziś rzadziej stosowane — ustąpiły miejsca transformerom w NLP + Time Series (pyts, darts)
+- RNN dziś rzadziej stosowane — ustąpiły miejsca transformerom w NLP + [[Szeregi czasowe|Time Series]] (pyts, darts)

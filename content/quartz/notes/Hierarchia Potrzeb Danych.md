@@ -46,7 +46,7 @@ Bez niezawodnego i dostępnego magazynowania dalsze działania analityczne nie m
 
 Na tym poziomie organizacja zaczyna **dopływ danych** do swojej hurtowni. Dane są kopiowane ze źródeł takich jak bazy transakcyjne, aplikacje SaaS, logi systemowe czy API.
 
-Używane są narzędzia klasy **ETL/ELT**: **Airbyte, Fivetran, Stitch**, niestandardowe skrypty oraz orkiestratory typu **Airflow**.
+Używane są narzędzia klasy **ETL/ELT**: **Airbyte, Fivetran, Stitch**, niestandardowe skrypty oraz orkiestratory typu **[[Apache Airflow|Airflow]]**.
 
 Celem jest zapewnienie **rzetelnego i terminowego napływu surowych danych**.
 
@@ -54,7 +54,7 @@ Celem jest zapewnienie **rzetelnego i terminowego napływu surowych danych**.
 
 > Odpowiednik potrzeby przynależności i zrozumienia
 
-Na tym etapie dane surowe stają się użyteczne. Inżynierowie analityki (analytics engineers) wykorzystują narzędzia takie jak **dbt**, aby modelować i łączyć dane w sensowne struktury: tabele faktów, wymiary, lookupy.
+Na tym etapie dane surowe stają się użyteczne. Inżynierowie analityki (analytics engineers) wykorzystują narzędzia takie jak **[[dbt]]**, aby modelować i łączyć dane w sensowne struktury: tabele faktów, [[wymiary]], lookupy.
 
 To etap „mapowania sensu” – segmentacja klientów, transformacja dat, czyszczenie danych, tworzenie wskaźników biznesowych.
 
@@ -62,7 +62,7 @@ To etap „mapowania sensu” – segmentacja klientów, transformacja dat, czys
 
 > Odpowiednik potrzeby uznania
 
-Organizacja zaczyna wykorzystywać dane do **podejmowania decyzji**. Dane są prezentowane za pomocą narzędzi **BI** (np. **Looker**, **Power BI**, **Metabase**) w postaci dashboardów, KPI, raportów cyklicznych.
+Organizacja zaczyna wykorzystywać dane do **podejmowania decyzji**. Dane są prezentowane za pomocą narzędzi **[[Business Intelligence|BI]]** (np. **Looker**, **Power [[Business Intelligence|BI]]**, **Metabase**) w postaci dashboardów, [[KPI]], raportów cyklicznych.
 
 Na tym poziomie rośnie zaangażowanie użytkowników końcowych, którzy zaczynają ufać metrykom i korzystać z danych w praktyce.
 
@@ -78,7 +78,7 @@ Przykłady:
 - Przesłanie leadów do CRM na podstawie scoringu.
 - Aktualizacja systemu rekomendacyjnego w czasie rzeczywistym.
 
-Tutaj wykorzystywana jest technika **Reverse ETL** oraz orkiestracja AI/ML wspierająca dane akcyjne.
+Tutaj wykorzystywana jest technika **[[Odwrócony ETL|Reverse ETL]]** oraz orkiestracja AI/[[Uczenie Maszynowe|ML]] wspierająca dane akcyjne.
 
 Przykładowe narzędzia: **Grouparoo**, **Hightouch**, **Census**.
 
@@ -89,17 +89,17 @@ Firma SaaS rozpoczyna tworzenie platformy danych. Na początku wdraża Snowflake
 ## 📌 Źródła
 
 - Grouparoo Blog — [Data Hierarchy of Needs](https://www.grouparoo.com/blog/data-hierarchy-of-needs)
-- Mode — [Modern Data Stack: A Complete Guide](https://mode.com/blog/modern-data-stack/)
-- dbt Labs — [Analytics Engineering](https://www.getdbt.com/resources/what-is-analytics-engineering/)
+- Mode — [[[Nowoczesny Stos Danych|Modern Data Stack]]: A Complete Guide](https://mode.com/blog/modern-data-stack/)
+- [[dbt]] Labs — [Analytics Engineering](https://www.getdbt.com/resources/what-is-analytics-engineering/)
 
 ## 👽 Brudnopis
 
-- Hierarchia Maslowa → warunek konieczny: najpierw fundament (DWH), potem użycie (BI), potem produkt (reverse ETL)
-- Stopniowa ewolucja: Lake → Modeling → BI → Data activation
-- Zwróć uwagę na zależności między poziomami — brak EL → nie działa BI
-- Reverse ETL = zamknięcie pętli danych → aktywne działania/automatyzacja
+- Hierarchia Maslowa → warunek konieczny: najpierw fundament (DWH), potem użycie ([[Business Intelligence|BI]]), potem produkt ([[Odwrócony ETL|reverse ETL]])
+- Stopniowa ewolucja: Lake → Modeling → [[Business Intelligence|BI]] → [[Odwrócony ETL|Data activation]]
+- Zwróć uwagę na zależności między poziomami — brak EL → nie działa [[Business Intelligence|BI]]
+- [[Odwrócony ETL|Reverse ETL]] = zamknięcie pętli danych → aktywne działania/automatyzacja
 - Ciekawy kontrast: raport ≠ akcja → raport mówi co się stało, akcja coś robi
-- Narzędzia: DWH (Snowflake), ELT (Airbyte, Fivetran), modeling (dbt), BI (Looker), activation (Grouparoo)
+- Narzędzia: DWH (Snowflake), ELT (Airbyte, Fivetran), modeling ([[dbt]]), [[Business Intelligence|BI]] (Looker), activation (Grouparoo)
 - Ramy strategiczne dla rozwoju kompetencji danych w firmie
 
 ---

@@ -53,9 +53,9 @@ SELECT * FROM orders WHERE year = 2025;
 
 ## Przykłady zastosowań
 
-- **ETL/ELT**: Narzędzia takie jak dbt, Airbyte, Informatica, Talend, przy dobrej konfiguracji, potrafią zaprojektować zapytania tak, by transformacje wykonywały się bezpośrednio w źródle lub w hurtowni.
-- **Wirtualizacja danych (Data Virtualization)**: Narzędzia typu Denodo, Trino, Dremio wykorzystują push-down, aby unikać lokalnego przetwarzania danych.
-- **Warstwa semantyczna (Semantic Layer)**: Looker, Cube.dev, AtScale potrafią generować SQL push-down podczas renderowania dashboardów.
+- **ETL/ELT**: Narzędzia takie jak [[dbt]], Airbyte, Informatica, Talend, przy dobrej konfiguracji, potrafią zaprojektować zapytania tak, by transformacje wykonywały się bezpośrednio w źródle lub w hurtowni.
+- **[[Wirtualizacja danych]] ([[Wirtualizacja Danych|Data Virtualization]])**: Narzędzia typu Denodo, Trino, Dremio wykorzystują push-down, aby unikać lokalnego przetwarzania danych.
+- **[[Warstwa semantyczna]] (Semantic Layer)**: Looker, Cube.dev, AtScale potrafią generować SQL push-down podczas renderowania dashboardów.
 
 ## Korzyści z wykorzystania push-down
 
@@ -88,9 +88,9 @@ Zespół [[Inżynieria Danych|data engineering]] zbudował pipeline do kopiowani
 
 - Push-down = SQL wysyłany do źródła zamiast pobrania i transformacji lokalnie
 - Kluczowe w ELT (nie robi transformacji po pobraniu → szybciej, taniej)
-- Przykłady: dbt vs Python Pandas: dbt pushdown = SQL w silniku, Pandas lokalnie
-- Data Lake → pushdown do Delta/Parquet przez DuckDB, Presto
-- Siła nowoczesnych lakehouse: federacyjny SQL z push-down + vectorizzata
+- Przykłady: [[dbt]] vs Python [[Pandas]]: [[dbt]] pushdown = SQL w silniku, [[Pandas]] lokalnie
+- Data Lake → pushdown do Delta/Parquet przez [[DuckDB]], Presto
+- Siła nowoczesnych [[Data Lakehouse|lakehouse]]: federacyjny SQL z push-down + vectorizzata
 - Nie każdy konektor obsługuje pushdown (np. Airbyte legacy connector vs native JDBC)
 - Sprzężenie z cost-based planner – warunki, indeksy, sort merge join
 - Wady: limitacja logiki, zależność od wersji SQL w źródle, security na QL level

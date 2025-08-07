@@ -34,7 +34,7 @@ Warstwa przechowywania (ang. *Storage Layer*) to kluczowy komponent architektury
 
 Warstwa przechowywania pełni rolę centralnego repozytorium dla wszystkich danych w systemie. Może być zaprojektowana jako pojedyncze rozwiązanie lub jako hybrydowa infrastruktura, obejmująca różne technologie w zależności od potrzeb organizacji. 
 
-W zarządzaniu danymi kluczowe jest zapewnienie zgodności z regulacjami prawnymi, takimi jak RODO czy HIPAA, co oznacza odpowiednie zabezpieczenie i zarządzanie cyklem życia danych. W kontekście [[Uczenie Maszynowe|AI]] ważne jest również optymalizowanie wydajności dostępu do danych, aby procesy analityczne i [[notes/Modele|modele]] uczenia maszynowego działały efektywnie.
+W zarządzaniu danymi kluczowe jest zapewnienie zgodności z regulacjami prawnymi, takimi jak RODO czy HIPAA, co oznacza odpowiednie zabezpieczenie i [[DataOps|zarządzanie cyklem życia danych]]. W kontekście [[Uczenie Maszynowe|AI]] ważne jest również optymalizowanie wydajności dostępu do danych, aby procesy analityczne i [[notes/Modele|modele]] uczenia maszynowego działały efektywnie.
 
 # 💡 Przykład zastosowania
 ```python

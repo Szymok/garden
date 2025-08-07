@@ -19,9 +19,9 @@ aliases:
 
 # 🎯 Wprowadzenie
 
-Pomimo niezwykłej skuteczności dużych modeli językowych (LLM) i zaawansowania technik takich jak few-shot czy chain-of-thought, wdrożenie tych modeli w aplikacjach komercyjnych i operacyjnych wiąże się z realnym ryzykiem nadużyć, zagrożeń i wyzwań etyczno-społecznych.
+Pomimo niezwykłej skuteczności dużych modeli językowych ([[Base LLM|LLM]]) i zaawansowania technik takich jak few-shot czy chain-of-thought, wdrożenie tych modeli w aplikacjach komercyjnych i operacyjnych wiąże się z realnym ryzykiem nadużyć, zagrożeń i wyzwań etyczno-społecznych.
 
-Ten rozdział skupia się na głównych scenariuszach zagrożeń i oszustw, z jakimi należy się liczyć podczas wdrażania i zabezpieczania aplikacji LLM.
+Ten rozdział skupia się na głównych scenariuszach zagrożeń i oszustw, z jakimi należy się liczyć podczas wdrażania i zabezpieczania aplikacji [[Base LLM|LLM]].
 
 # 🔑 Kluczowe zagrożenia i nadużycia
 
@@ -32,7 +32,7 @@ Ten rozdział skupia się na głównych scenariuszach zagrożeń i oszustw, z ja
 
 ## 2. Szkodliwe zachowania i generowanie szkodliwych treści
 
-- **Toxicity i hate speech:** LLM mogą – zarówno bezpośrednio, jak i niezamierzenie – generować treści obraźliwe, dyskryminujące lub nieetyczne.
+- **Toxicity i hate speech:** [[Base LLM|LLM]] mogą – zarówno bezpośrednio, jak i niezamierzenie – generować treści obraźliwe, dyskryminujące lub nieetyczne.
 - **Porady o charakterze ryzykownym:** Modele mogą udzielać “porad” medycznych, prawnych lub finansowych bez odpowiedniej kwalifikacji, co niesie ryzyko prawne i dla użytkownika.
 
 ## 3. Uogólnianie i podatność na manipulacje
@@ -43,11 +43,11 @@ Ten rozdział skupia się na głównych scenariuszach zagrożeń i oszustw, z ja
 ## 4. Uprzedzenia i biasy (Bias, Social Bias)
 
 - **Wrodzone biasy:** Modele mogą reprodukować uprzedzenia obecne w danych treningowych, zwłaszcza te dotyczące płci, rasy, wieku, religii.
-- **Social bias:** LLM mogą nieświadomie faworyzować czy dyskryminować grupy społeczne, wzmacniać stereotypy czy nierówności.
+- **Social bias:** [[Base LLM|LLM]] mogą nieświadomie faworyzować czy dyskryminować grupy społeczne, wzmacniać stereotypy czy nierówności.
 
-## 5. Factuality – prawdziwość odpowiedzi
+## 5. [[Factuality]] – prawdziwość odpowiedzi
 
-- **Halucynacje:** Modele regularnie generują spójnie brzmiące, lecz całkowicie nieprawdziwe lub zmyślone odpowiedzi (fabrykowanie cytatów, tworzenie nieistniejących faktów).
+- **[[Halucynacje]]:** Modele regularnie generują spójnie brzmiące, lecz całkowicie nieprawdziwe lub zmyślone odpowiedzi (fabrykowanie cytatów, tworzenie nieistniejących faktów).
 - **Fałszywe poczucie pewności:** Model nie sygnalizuje niepewności, przez co użytkownik może uznać nieprawdziwą odpowiedź za wiarygodną.
 
 # 🛡️ Praktyki i strategie łagodzące
@@ -68,12 +68,12 @@ Ten rozdział skupia się na głównych scenariuszach zagrożeń i oszustw, z ja
 
 - Różnicowanie i audyt danych wejściowych podczas trenowania modeli.
 - Przeprowadzanie regularnych testów na występowanie biasów społecznych.
-- Transparentność logiki i explicite wyjaśnianie mechanizmów działania LLM.
+- Transparentność logiki i explicite wyjaśnianie mechanizmów działania [[Base LLM|LLM]].
 
-## Poprawa factuality i wiarygodności
+## Poprawa [[factuality]] i wiarygodności
 
 - Dawanie modelowi jawnie pozwolenia na przyznanie się do “nie wiem”, “brak danych”.
-- Uzupełnianie promptów o kontekst, cytaty źródłowe lub podejście RAG (retrieval-augmented generation).
+- Uzupełnianie promptów o kontekst, cytaty źródłowe lub podejście [[RAG]] ([[Retrieval Augmented Generation (RAG)|retrieval-augmented generation]]).
 - Weryfikacja odpowiedzi przez dedykowane algorytmy fact-checking (czasem przez drugi model).
 
 # 📝 Podsumowanie praktyczne
@@ -83,14 +83,14 @@ Ten rozdział skupia się na głównych scenariuszach zagrożeń i oszustw, z ja
 |Prompt Injection|Walidacja i rozdzielanie wejść|
 |Treści szkodliwe|Filtry, moderacja AI/human|
 |Uprzedzenia|Audyt, różnicowanie danych|
-|Halucynacje|Kontekst, RAG, fact-checking|
+|[[Halucynacje]]|Kontekst, [[RAG]], fact-checking|
 
-Realne zastosowanie LLM wymaga zarówno projektowania bezpiecznych promptów, jak i systematycznego audytu oraz integracji dodatkowych narzędzi (np. klasyfikatorów treści, sandboxów, testów bias/factuality) na każdym etapie rozwoju produktu opartego o AI.
+Realne zastosowanie [[Base LLM|LLM]] wymaga zarówno projektowania bezpiecznych promptów, jak i systematycznego audytu oraz integracji dodatkowych narzędzi (np. klasyfikatorów treści, sandboxów, testów bias/[[factuality]]) na każdym etapie rozwoju produktu opartego o AI.
 
 # 👽 Brudnopis
 
-- LLM = moc, ale i zagrożenia (prompt pollution, sygnały złośliwe, bias, halucynacje)
+- [[Base LLM|LLM]] = moc, ale i zagrożenia (prompt pollution, sygnały złośliwe, bias, [[halucynacje]])
 - Rynek: coraz więcej narzędzi do testów "prompt injection", classifier toxicity, governance
-- Audyt, interpretowalność, explainable AI – rośnie znaczenie w produkcyjnych wdrożeniach AI
+- Audyt, interpretowalność, [[explainable AI]] – rośnie znaczenie w produkcyjnych wdrożeniach AI
 - Bezpieczeństwo: testy adversarial, edukacja zespołów, feedback od użytkowników
 - Mechanizmy: explicit confidence, fallback systems, monitoring abuse/attack patterns

@@ -55,14 +55,14 @@ Analityk danych tworzy nowy zestaw danych "customer_ltv_2025" i wstępnie go tes
 
 - grupie **Marketing Analyst** z poziomem "read only",
 - grupie **Analytics Core** z poziomem "edit",
-- oraz grupie **Data Governance** z poziomem "stewardship".
+- oraz grupie **[[Data Governance]]** z poziomem "[[stewardship]]".
 
 Poprzez właściwe przypisanie dostępu zapewnił współdzielony model pracy bez ryzyka przypadkowego nadpisania danych przez osób nietechniczne.
 
 ## 📌 Źródła
 
 - Dokumentacja systemu dostępowego platformy danych (np. Ataccama, Collibra, etc.)
-- [Best Practices in Data Access Management – Dataversity](https://www.dataversity.net/best-practices-data-access-governance/)
+- [Best Practices in Data [[User Management|Access Management]] – Dataversity](https://www.dataversity.net/best-practices-data-access-governance/)
 
 ## 👽 Brudnopis
 

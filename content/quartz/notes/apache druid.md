@@ -27,7 +27,7 @@ aliases:
 - **Kolumnowy model danych:** wydajny magazyn danych idealny dla agregacji i filtrowania.
 - **Rozproszona architektura:** umożliwia poziome skalowanie przy dużych ilościach danych.
 - **Obsługa danych strumieniowych i wsadowych:** doskonała wydajność zarówno dla danych historycznych, jak i przyrostowych.
-- **OLAP-ready:** stworzony typowo pod analizy wielowymiarowe, eksploracje BI i pulpity operacyjne.
+- **OLAP-ready:** stworzony typowo pod analizy wielowymiarowe, eksploracje [[Business Intelligence|BI]] i pulpity operacyjne.
 - **Niskie opóźnienia zapytań:** nadaje się do analityki w czasie rzeczywistym.
 
 # 📚 Szczegółowe wyjaśnienie
@@ -61,7 +61,7 @@ Druid umożliwia zapytania:
 
 - **SQL** – zgodność z ANSI SQL
 - **JSON Query API** – oryginalny DSL
-- Integruje się z narzędziami BI (np. Superset, Tableau)
+- Integruje się z narzędziami [[Business Intelligence|BI]] (np. Superset, Tableau)
 
 # 💡 Przykład zastosowania
 
@@ -76,7 +76,7 @@ Platforma e-commerce analizuje miliony zdarzeń typu clickstream i transakcje u�
 ## 👽 Brudnopis
 
 - OLAP kolumnowy, silnie zoptymalizowany pod agregację online, low-latency + high-availability
-- Przypadki użycia: clickstream, metrics pipelines, fraud detection dashboards
+- Przypadki użycia: clickstream, metrics pipelines, fraud detection [[Analiza Danych|dashboards]]
 - Odczyty z Kafka, Kafka Connect, pliki wsadowe, REST API
 - Potężna wydajność bez potrzeby budowania skomplikowanej architektury kubernetesowej
 - Integruje się z Apache Superset, Looker, Grafana

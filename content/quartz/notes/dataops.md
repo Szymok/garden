@@ -57,19 +57,19 @@ aliases:
 
 | Koncepcja        | Powiązanie z [[Inżynieria Danych]]                                             | [[Inżynieria Danych\|DataOps]] |
 | ---------------- | ------------------------------------------------------------------------------ | ------------------------------ |
-| DevOps           | Podejście „CI/CD + feedback loop”                                              |                                |
-| MLOps            | DataOps stanowi fundament dobrej inżynierii danych dla ML                      |                                |
+| [[DevOps]]           | Podejście „CI/CD + feedback loop”                                              |                                |
+| MLOps            | [[Inżynieria Danych\|DataOps]] stanowi fundament dobrej inżynierii danych dla [[Uczenie Maszynowe\|ML]]                      |                                |
 | [[Data Mesh]]        | DataOps to operacjonalizacja domen danych, zgodna z zasadą „Data-as-a-Product” |                                |
 | FinOps           | Monitorowanie kosztów przetwarzania danych w chmurze                           |                                |
-| Data Stewardship | Planowanie opieki nad danymi, testy, lineage, właściciele danych               |                                |
+| Data [[Stewardship]] | Planowanie opieki nad danymi, testy, lineage, właściciele danych               |                                |
 
 # 💡 Przykład zastosowania
 
-Firma wdraża platformę analityczną opartą o Snowflake i [[dbt]], uzupełnioną o Airflow do orchestration i Great Expectations do testów jakości danych. Zespół DataOps:
+Firma wdraża platformę analityczną opartą o Snowflake i [[dbt]], uzupełnioną o [[Apache Airflow|Airflow]] do orchestration i Great Expectations do testów jakości danych. Zespół DataOps:
 
 - wersjonuje wszystkie transformacje [[dbt]] w GitHubie,
 - ustawia testy regresyjne i schematowe na dane wejściowe przez Great Expectations,
-- monitoruje odchylenia jakości danych w DAG-u Airflow,
+- monitoruje odchylenia jakości danych w DAG-u [[Apache Airflow|Airflow]],
 - wdraża automatycznie nowe wersje modeli danych co sprint, po przejściu testów integracyjnych,
 - raportuje błędy transformacji danych w czasie rzeczywistym do zespołu [[Business Intelligence|BI]].
 

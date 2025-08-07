@@ -30,7 +30,7 @@ aliases:
     - Restart notebooka przy awarii CUDA.
     - Zwalnianie niepotrzebnych obiektów (`del model` oraz `torch.cuda.empty_cache()`), by uniknąć restartu kernela.
     - Testowanie na małej próbce danych i pojedynczej epoce: szybkie oszacowanie potrzeb modelu.
-- **Gradient accumulation** pozwala trenować modele na małym batchu jakby trenowały na większym – dzielisz sumę gradientów przez liczbę minibatchey przed aktualizacją wag. Rozwiązuje problem małych batchy (niższa stabilność uczenia i większa wariancja wag).
+- **[[Gradient]] accumulation** pozwala trenować modele na małym batchu jakby trenowały na większym – dzielisz sumę gradientów przez liczbę minibatchey przed aktualizacją wag. Rozwiązuje problem małych batchy (niższa stabilność uczenia i większa wariancja wag).
 
 ## 2. Tworzenie i testowanie ensemble modeli
 
@@ -48,7 +48,7 @@ aliases:
 - `F.cross_entropy` łączy softmax (zamiana logitów na rozkład prawdopodobieństwa) i błąd (odejmuje prawdziwą klasę od predykcji).
 - Softmax: przelicza logity na prawdopodobieństwa.  
     $$ softmax(x_i) = \frac{e^{x_i}}{\sum_j e^{x_j}} $$
-- Cross-entropy: uporządkowana miara rozbieżności między przewidywaniem a rzeczywistą klasą.
+- Cross-entropy: uporządkowana [[miara]] rozbieżności między przewidywaniem a rzeczywistą klasą.
 - Problem: softmax zawsze zwraca sumę 1 – także dla niepasujących danych.
 
 ## 5. Filtrowanie kolaboracyjne – matematyka i praktyka
@@ -66,7 +66,7 @@ aliases:
 
 ### Embeddingi
 
-- Embedding użytkownika i filmu po lookupie tablicy (macierze typu `n_users x n_factors`, `n_movies x n_factors`).
+- [[Embedding]] użytkownika i filmu po lookupie tablicy (macierze typu `n_users x n_factors`, `n_movies x n_factors`).
 - Istota: embeddingi zastępują one-hot encoding matematycznym skrótem (przechowują gęstą reprezentację, a lookup = szybkie przemnożenie przez odpowiedni wiersz/kolumnę).
 
 ### Wybor liczby czynników ukrytych
@@ -82,7 +82,7 @@ aliases:
 
 ## 7. Implementacja w praktyce (fastai / PyTorch)
 
-- Użycie `CollabDataloaders.from_df` – stwórz dataloader z DataFrame ocen.
+- Użycie `CollabDataloaders.from_df` – stwórz dataloader z [[DataFrames|DataFrame]] ocen.
 - Zbuduj model poprzez klasę (np. `DotProduct`) – implementuj forward (iloczyn embeddingów, ew. biasy, sigmoida).
 - Trening: szybki, nawet na CPU; loss i metryki pozwalają monitorować jakość predykcji; tuning embeddingów przez SGD lub Adam.
 - **Sigmoida**: czasem stosowana by ograniczyć zakres przewidywań do np. [0, 5.5] (spłaszcza predykcje, mniej outlierów).
@@ -91,13 +91,13 @@ aliases:
 
 |Krok|Wskazówki|
 |---|---|
-|Trening dużych modeli|Gradient accumulation, batch size tuning, czyszczenie GPU|
+|Trening dużych modeli|[[Gradient]] accumulation, batch size tuning, czyszczenie GPU|
 |Ensemble|Średnie/spójne predykcje wielu modeli = stabilniejszy wynik|
 |Multi-target|Dziel output na bloki, monitoruj metryki i funkcję straty osobno|
 |Filtrowanie kolaboracyjne|Czynnikowanie: embeddingi, iloczyny skalarne, biasy, regularyzacja L2|
 |Praktyki regularne|Codzienne submission na Kaggle, notowanie wyników iteracji, eksperymenty z seedami|
 |Overfitting|Stosuj weight decay, nie przesadzaj z liczbą czynników ukrytych|
 
-**Podsumowanie**: Filtrowanie kolaboracyjne i nowoczesne podejście do budowy modeli głębokich (zarządzanie pamięcią, ensemble, multi-target) stanowią podstawę skutecznych systemów rekomendacyjnych i projektów ML tabularnych. Praktyka, testowanie i dobór strategii pod konkretne zadanie są tak samo ważne, jak architektura modelu.
+**Podsumowanie**: Filtrowanie kolaboracyjne i nowoczesne podejście do budowy modeli głębokich (zarządzanie pamięcią, ensemble, multi-target) stanowią podstawę skutecznych systemów rekomendacyjnych i projektów [[Uczenie Maszynowe|ML]] tabularnych. Praktyka, testowanie i dobór strategii pod konkretne zadanie są tak samo ważne, jak architektura modelu.
 
 ---

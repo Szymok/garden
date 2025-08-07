@@ -19,7 +19,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Fine-tuning LLM** to proces dostrajania wytrenowanego wcześniej dużego modelu językowego (Large Language Model) na nowym, specyficznym zbiorze danych w celu poprawy działania w określonych zastosowaniach, domenach lub stylach komunikacji.
+**Fine-tuning [[Base LLM|LLM]]** to proces dostrajania wytrenowanego wcześniej dużego modelu językowego (Large Language Model) na nowym, specyficznym zbiorze danych w celu poprawy działania w określonych zastosowaniach, domenach lub stylach komunikacji.
 
 # 🔑 Kluczowe punkty
 
@@ -43,7 +43,7 @@ aliases:
 - **Koszt i złożoność:** Mimo mniejszych zasobów niż pre-train, fine-tuning wymaga GPU/TPU, dedykowanych inżynierów i specjalistycznych danych, a także regularnych walidacji jakości modelu.
 - **Utrzymanie wersji:** Powstaje potrzeba zarządzania wieloma wersjami modelu dla różnych domen/zastosowań, co komplikuje MLOps i deployment.
 - **Ryzyko “catastrophic forgetting”:** Pełny fine-tuning może prowadzić do “wypierania” przez model wiedzy ogólnej na rzecz nowej — techniki PEFT ograniczają ten efekt.
-- **Brak elastyczności w dynamicznym świecie:** Jeśli wiedza domenowa szybko się starzeje, fine-tuned model może dawać nieaktualne odpowiedzi, bo nie uczy się "w locie" jak w hybrydach typu RAG.
+- **Brak elastyczności w dynamicznym świecie:** Jeśli wiedza domenowa szybko się starzeje, fine-tuned model może dawać nieaktualne odpowiedzi, bo nie uczy się "w locie" jak w hybrydach typu [[RAG]].
 - **Zależność od jakości i liczby danych:** Źle dobrane lub niezrównoważone dane do fine-tuningu prowadzą do pogorszenia jakości (overfitting, bias).
 
 ## Przykłady i rozwinięcia
@@ -53,12 +53,12 @@ aliases:
 
 ### Alternatywy i trendy
 
-- **Hybrid RAG + Fine-tuning:** Efektem synergii jest model korzystający z aktualnych baz wiedzy i precyzyjnych odpowiedzi dla kluczowych zadań.
+- **Hybrid [[RAG]] + Fine-tuning:** Efektem synergii jest model korzystający z aktualnych baz wiedzy i precyzyjnych odpowiedzi dla kluczowych zadań.
 - **PEFT (LoRA, QLoRA):** Minimalizuje koszty i wymagania sprzętowe umożliwiając tańszy i bezpieczniejszy fine-tuning.
 
 # 💡 Przykład zastosowania
 
-**Chatbot medyczny:** Fine-tuning LLM na dokumentacji klinicznej pozwala uzyskać model, który rozumie specjalistyczną terminologię, jest zgodny z wytycznymi i udziela konkretnych, niestandardowych odpowiedzi. To podejście sprawdza się tam, gdzie niezbędne jest ścisłe przestrzeganie wiedzy branżowej, ale nie sprawdzi się tam, gdzie pytania wymagają dostępu do aktualnych danych lub orzecznictwa (“żywa wiedza”).
+**Chatbot medyczny:** Fine-tuning [[Base LLM|LLM]] na dokumentacji klinicznej pozwala uzyskać model, który rozumie specjalistyczną terminologię, jest zgodny z wytycznymi i udziela konkretnych, niestandardowych odpowiedzi. To podejście sprawdza się tam, gdzie niezbędne jest ścisłe przestrzeganie wiedzy branżowej, ale nie sprawdzi się tam, gdzie pytania wymagają dostępu do aktualnych danych lub orzecznictwa (“żywa wiedza”).
 
 # 📌 Źródła
 
@@ -71,8 +71,8 @@ aliases:
 
 # 👽 Brudnopis
 
-- Fine-tuning ≠ RAG: fine-tuning dla zadań specyficznych, RAG lepszy dla aktualnych informacji.
+- Fine-tuning ≠ [[RAG]]: fine-tuning dla zadań specyficznych, [[RAG]] lepszy dla aktualnych informacji.
 - Plusy: precyzja, kontrola, domenowość, styl, tańszy od pre-train, PEFT/LoRA = oszczędność GPU.
 - Minusy: koszt GPU, potrzeba danych, wersjonowanie, “catastrophic forgetting”, utrzymanie, brak świeżości danych.
-- Przy dynamicznych domenach RAG lub hybryda daje większą elastyczność.
-- Trend: PEFT, LoRA, QLoRA, hybrid (RAG+Fine-tuning), alignment post fine-tuning.
+- Przy dynamicznych domenach [[RAG]] lub hybryda daje większą elastyczność.
+- Trend: PEFT, LoRA, QLoRA, hybrid ([[RAG]]+Fine-tuning), alignment post fine-tuning.

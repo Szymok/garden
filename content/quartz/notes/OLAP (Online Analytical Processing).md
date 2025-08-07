@@ -21,13 +21,13 @@ aliases:
 
 # 🎯 Definicja
 
-**OLAP (Online Analytical Processing)** to technika wielowymiarowej analizy danych biznesowych, umożliwiająca szybkie przetwarzanie złożonych zapytań analitycznych w hurtowniach danych. Kluczowym elementem OLAP jest **sześcian OLAP**, czyli zoptymalizowana struktura danych pozwalająca analizować miary w kontekście różnych wymiarów, takich jak czas, produkt czy lokalizacja.
+**OLAP (Online Analytical Processing)** to technika wielowymiarowej analizy danych biznesowych, umożliwiająca szybkie przetwarzanie złożonych zapytań analitycznych w hurtowniach danych. Kluczowym elementem OLAP jest **sześcian OLAP**, czyli zoptymalizowana [[Strukturyzacja danych|struktura danych]] pozwalająca analizować miary w kontekście różnych wymiarów, takich jak czas, produkt czy lokalizacja.
 
 # 🔑 Kluczowe punkty
 
 - **Wielowymiarowość** – dane analizowane są w wielu wymiarach jednocześnie (np. sprzedaż wg regionu, kwartału, produktu).
 - **Szybkie analizy ad-hoc** – OLAP wspiera natychmiastowe odpowiedzi na złożone pytania analityczne.
-- **Miary + Wymiary** – dane są organizowane w postaci miar numerycznych oraz wymiarów opisowych.
+- **Miary + [[Wymiary]]** – dane są organizowane w postaci miar numerycznych oraz wymiarów opisowych.
 - **Sześciany OLAP** – specjalna forma przechowywania danych zoptymalizowana pod kątem analizy, nie transakcji.
 - **Język MDX** – specjalistyczny język zapytań zaprojektowany do komunikacji z OLAP, szczególnie w środowiskach Microsoft.
 
@@ -38,13 +38,13 @@ aliases:
 W przeciwieństwie do OLTP, OLAP służy do wspierania decyzji biznesowych i umożliwia analizę danych historycznych. Dane są organizowane w tzw. **sześciany OLAP**, gdzie:
 
 - **Miary** (np. przychody, suma zamówień) są wartościami numerycznymi, które chcemy analizować.
-- **Wymiary** (np. czas, klient, produkt) stanowią kontekst, w którym analizujemy dane.
+- **[[Wymiary]]** (np. czas, klient, produkt) stanowią kontekst, w którym analizujemy dane.
 
 Użytkownicy mogą:
 
-- Drążyć (drill-down) i zagregować dane (roll-up),
+- Drążyć (drill-down) i zagregować dane ([[Rollup|roll-up]]),
 - Przeglądać przekroje danych z różnych perspektyw (np. pivot),
-- Analizować trendy, porównania i wartości wskaźnikowe (KPI).
+- Analizować trendy, porównania i wartości wskaźnikowe ([[KPI]]).
 
 ## Rodzaje OLAP
 
@@ -73,10 +73,10 @@ W korporacji detalicznej dane sprzedażowe są ładowane co noc do hurtowni dany
 
 ## 👽 Brudnopis
 
-- OLAP → zapytania analityczne na dużej liczbie danych, miary + wymiary
+- OLAP → zapytania analityczne na dużej liczbie danych, miary + [[wymiary]]
 - Sześcian OLAP = struktura wielowymiarowa z preagregacjami
 - MDX = język zapytań, alternatywa do SQL dla modelu wielowymiarowego
 - ROLAP wolniejszy, ale tańszy (działa na starszych hurtowniach)
 - MOLAP szybki, ale zużywa więcej zasobów
 - OLAP ↔ OLTP – analiza vs transakcje
-- Wspieranie decyzji biznesowych, raportowanie KPI, kokpity menedżerskie
+- Wspieranie decyzji biznesowych, raportowanie [[KPI]], kokpity menedżerskie

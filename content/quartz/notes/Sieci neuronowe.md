@@ -29,14 +29,14 @@ aliases:
 - 🧠 Sieci neuronowe uczą się poprzez proces optymalizacji wag (połączeń) na danych treningowych.
 - 🎛️ Składają się z warstw: wejściowej, ukrytych (ang. hidden) i wyjściowej.
 - 🔁 Sieci wielowarstwowe (MLP, DNN) mogą reprezentować złożoną nieliniową funkcję.
-- 🧮 Stosują funkcje aktywacji (np. ReLU, sigmoid, tanh) i propagację wsteczną (backpropagation).
-- 📦 Są podstawą uczenia głębokiego (deep learning) oraz nowoczesnych modeli jak CNN, RNN, LSTM czy transformery.
+- 🧮 Stosują funkcje aktywacji (np. [[ReLU]], sigmoid, tanh) i propagację wsteczną (backpropagation).
+- 📦 Są podstawą uczenia głębokiego ([[deep learning]]) oraz nowoczesnych modeli jak CNN, RNN, LSTM czy transformery.
 
 # 📚 Szczegółowe wyjaśnienie
 
 ## Struktura i działanie
 
-Sieć neuronowa to graficzny model funkcji, gdzie dane są przetwarzane przez kolejne warstwy neuronów. Każdy neuron:
+Sieć neuronowa to graficzny model funkcji, gdzie dane są przetwarzane przez kolejne warstwy neuronów. Każdy [[neuron]]:
 
 - Otrzymuje sygnały wejściowe, przemnaża je przez wagi,
 - Sumuje je i przepuszcza przez funkcję aktywacji,

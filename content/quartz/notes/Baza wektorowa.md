@@ -22,7 +22,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Baza wektorowa** (ang. _vector database_) to specjalny typ bazy danych przystosowany do **przechowywania, indeksowania i wyszukiwania danych w postaci reprezentacji wektorowych**, które powstały na przykład w wyniku zastosowania Embedding. W praktyce bazy te umożliwiają **wyszukiwanie semantyczne** – czyli odnajdywanie najbardziej podobnych znaczeniowo elementów, a nie tylko identycznych lub zgodnych z kluczem.
+**Baza wektorowa** (ang. _vector database_) to specjalny typ bazy danych przystosowany do **przechowywania, indeksowania i wyszukiwania danych w postaci reprezentacji wektorowych**, które powstały na przykład w wyniku zastosowania [[Embedding]]. W praktyce bazy te umożliwiają **wyszukiwanie semantyczne** – czyli odnajdywanie najbardziej podobnych znaczeniowo elementów, a nie tylko identycznych lub zgodnych z kluczem.
 
 # 🔑 Kluczowe różnice: baza klasyczna vs wektorowa
 
@@ -30,8 +30,8 @@ aliases:
 |---|---|---|
 |Typ danych|Tekst, liczby, daty, relacje|Wektory liczb (embeddingi)|
 |Wyszukiwanie|Dokładne dopasowanie (exact match)|Podobieństwo semantyczne (nearest neighbors)|
-|Klucz wyszukiwania|ID, tekst, warunki logiczne|Wektor zapytania (query embedding)|
-|Zastosowania|CRUD, raporty, e-commerce, logika biznesowa|AI/LLM, RAG, NLP, semantyczne wyszukiwanie|
+|Klucz wyszukiwania|ID, tekst, warunki logiczne|Wektor zapytania (query [[embedding]])|
+|Zastosowania|CRUD, raporty, e-commerce, logika biznesowa|AI/[[Base LLM\|LLM]], [[RAG]], NLP, semantyczne wyszukiwanie|
 |Wydajność|Optymalizacja zapytań, indeksy B-Tree|Indeksy wektorowe: IVF, HNSW, FAISS|
 
 # 📚 Szczegóły działania
@@ -42,7 +42,7 @@ Zamiast strukturalnego tekstu czy tabel, baza przechowuje **embeddingi** – np.
 
 ## Wyszukiwanie: podobieństwo kosinusowe lub euklidesowe
 
-Gdy użytkownik zadaje pytanie lub podaje tekst, najpierw jest on konwertowany na **embedding (wektor)**, a następnie baza **zwraca wektory najbardziej podobne (nearest neighbors)** w bazie – na podstawie podobieństwa (ang. similarity):
+Gdy użytkownik zadaje pytanie lub podaje tekst, najpierw jest on konwertowany na **[[embedding]] (wektor)**, a następnie baza **zwraca wektory najbardziej podobne (nearest neighbors)** w bazie – na podstawie podobieństwa (ang. similarity):
 
 ```text
 similarity = cos(ϑ) = (A · B) / (‖A‖‖B‖)
@@ -50,10 +50,10 @@ similarity = cos(ϑ) = (A · B) / (‖A‖‖B‖)
 
 # 🧠 Przykłady użycia bazy wektorowej
 
-- **Chatbot z RAG**: pytanie użytkownika → wektor zapytania → trafne dokumenty → odpowiedź zbudowana na znalezionych danych
+- **Chatbot z [[RAG]]**: pytanie użytkownika → wektor zapytania → trafne dokumenty → odpowiedź zbudowana na znalezionych danych
 - **System rekomendacji**: wektor profilu użytkownika vs produkty
 - **Wyszukiwanie kodu, obrazów (reverse search), wiadomości, PDF**
-- **Rozszerzanie kontekstu LLM**: semantyczne retrieval → context injection (`context-aware prompting`)
+- **Rozszerzanie kontekstu [[Base LLM|LLM]]**: semantyczne retrieval → context injection (`context-aware prompting`)
 
 # 💡 Przykład: FAISS i Pinecone
 
@@ -92,11 +92,11 @@ D, I = index.search(np.array(query_vec), k=3)
 
 # ✅ Porównanie do klasycznych baz
 
-|Czynność|Klasyczna baza|Baza wektorowa|
-|---|---|---|
-|Szukaj "analiza danych"|dopasuje frazę|znajdzie również "eksploracja danych", "analiza statystyczna", itp.|
-|Klucz główny|`id`, `email`|`embedding_vector`, zwykle z `metadata`|
-|Złożoność indeksu|B-tree/O(log n)|ANN – Approximate Nearest Neighbors, czasy ms|
+| Czynność                    | Klasyczna baza  | Baza wektorowa                                                      |
+| --------------------------- | --------------- | ------------------------------------------------------------------- |
+| Szukaj "[[analiza danych]]" | dopasuje frazę  | znajdzie również "eksploracja danych", "analiza statystyczna", itp. |
+| Klucz główny                | `id`, `email`   | `embedding_vector`, zwykle z `metadata`                             |
+| Złożoność indeksu           | B-tree/O(log n) | ANN – Approximate Nearest Neighbors, czasy ms                       |
 
 # 📌 Źródła
 
@@ -109,9 +109,9 @@ D, I = index.search(np.array(query_vec), k=3)
 
 ## 👽 Brudnopis
 
-- embedding → przejście z tekstu do przestrzeni semantycznej
-- klasyczne SQL/inverted index ≠ zrozumienie sensu
-- vdb = klucz dla RAG, NLP 2.0, semantycznych systemów asystujących
+- [[embedding]] → przejście z tekstu do przestrzeni semantycznej
+- klasyczne SQL/inverted [[index]] ≠ zrozumienie sensu
+- vdb = klucz dla [[RAG]], NLP 2.0, semantycznych systemów asystujących
 - łączenie bazy wektorowej z promptem jako kontekst, coraz popularniejsze
 
 ---

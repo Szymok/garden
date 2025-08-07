@@ -41,7 +41,7 @@ aliases:
 
 - **Wyszukiwanie semantyczne** — odnajdywanie podobnych dokumentów, obrazów lub użytkowników na podstawie zagnieżdżonych reprezentacji wektorowych.
 - **Systemy rekomendacji** — rekomendacje bazujące na podobieństwie i relacjach społecznych lub produktowych w sieci powiązań.
-- **RAG (Retrieval-Augmented Generation)** — generowanie odpowiedzi przez LLM z uwzględnieniem kontekstu pobieranego na podstawie wyszukiwania wektorowego i grafowego.
+- **RAG ([[Retrieval Augmented Generation (RAG)|Retrieval-Augmented Generation]])** — generowanie odpowiedzi przez [[Base LLM|LLM]] z uwzględnieniem kontekstu pobieranego na podstawie wyszukiwania wektorowego i grafowego.
 - **Analiza grafowa** — zaawansowane algorytmy takie jak spersonalizowany PageRank, społeczności, kluczowe węzły, najkrótsze ścieżki.
 - **Optymalizacja biznesowa i naukowa** — szybka analiza złożonych sieci (np. przepływy informacji, powiązania chemiczne, sieci transportowe).
 
@@ -53,7 +53,7 @@ aliases:
 
 ## Przykładowe technologie
 
-- **Pinecone** — gotowa, skalowalna baza wektorowa, integrująca się z systemami AI.
+- **Pinecone** — gotowa, skalowalna [[baza wektorowa]], integrująca się z systemami AI.
 - **Weaviate, Milvus:** wszechstronne, open-source'owe bazy do zarządzania wektorami o wysokiej wydajności.
 - **Neo4j z pluginami AI:** możliwość integracji algorytmów wektorowych z klasycznym grafem.
 - **Oracle 23c AI Vector Search:** integruje funkcje wektorowe z możliwościami bazy relacyjnej.
@@ -61,10 +61,10 @@ aliases:
 # 💡 Przykład zastosowania
 
 **Porównywanie opisów produktów:**  
-Gdy dwa produkty mają różne, ale podobne opisy (np. „czerwona sukienka wieczorowa” i „szkarłatna kreacja na bal”), klasyczna baza tekstowa nie zauważy relacji. Grafowa baza wektorowa powiąże węzły reprezentujące oba produkty na podstawie podobieństwa ich embeddingów, ułatwiając rekomendacje i semantyczne wyszukiwanie.
+Gdy dwa produkty mają różne, ale podobne opisy (np. „czerwona sukienka wieczorowa” i „szkarłatna kreacja na bal”), klasyczna baza tekstowa nie zauważy relacji. Grafowa [[baza wektorowa]] powiąże węzły reprezentujące oba produkty na podstawie podobieństwa ich embeddingów, ułatwiając rekomendacje i semantyczne wyszukiwanie.
 
-**RAG dla LLM:**  
-W hybrydowych systemach z LLM wyszukiwanie najbliższych sąsiadów (przez embeddingi i algorytmy k-NN) łączy się z przechodzeniem po grafie wiedzy, aby generować precyzyjne odpowiedzi — idealne dla asystentów AI, chatbotów, systemów eksperckich.
+**[[RAG]] dla [[Base LLM|LLM]]:**  
+W hybrydowych systemach z [[Base LLM|LLM]] wyszukiwanie najbliższych sąsiadów (przez embeddingi i algorytmy k-NN) łączy się z przechodzeniem po grafie wiedzy, aby generować precyzyjne odpowiedzi — idealne dla asystentów AI, chatbotów, systemów eksperckich.
 
 # 📌 Źródła
 
@@ -79,9 +79,9 @@ W hybrydowych systemach z LLM wyszukiwanie najbliższych sąsiadów (przez embed
 
 # 👽 Brudnopis
 
-- Grafowe serwowanie embeddingów / reprezentacji AI + relacje (meta-grafy)
+- Grafowe serwowanie embeddingów / reprezentacji [[Uczenie Maszynowe|AI]] + relacje (meta-grafy)
 - Grafy i wektory: hybrydowe podejście (węzły i krawędzie jako embeddingi z NN)
 - Problemy: sensowność relacji, indeksowanie, zarządzanie złożonością, performance przy miliardach rekordów
 - Użytkownik projektuje strukturę — nie każda relacja automatycznie ma sens
 - Przykłady: Pinecone, Weaviate, Milvus, Neo4j z vektoryzowaną analityką
-- Zastosowania w RAG, QA, wyszukiwaniu semantycznym, rekomendacjach, eksploracji wiedzy
+- Zastosowania w [[RAG]], QA, wyszukiwaniu semantycznym, rekomendacjach, eksploracji wiedzy

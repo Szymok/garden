@@ -29,7 +29,7 @@ Najczęściej osiąga się to poprzez trenowanie modeli na dużych zbiorach dany
 # 🔑 Kluczowe punkty
 
 - GenAI przekształca dane wejściowe w dane wyjściowe o podobnym stylu lub cechach.
-- Duże modele językowe (LLM, np. GPT, Claude, Llama) to najpopularniejsze aplikacje GenAI.
+- Duże modele językowe ([[Base LLM|LLM]], np. GPT, Claude, Llama) to najpopularniejsze aplikacje GenAI.
 - Modele uczą się semantyki i struktury danych, a następnie używają ich do tworzenia nowej zawartości.
 - Wspierają szereg zastosowań: **tworzenie treści**, **automaty generujące kod**, **asystenci konwersacyjni**, **generatywne obrazy** (np. DALL·E, Midjourney)
 - Wymagają dużych mocy obliczeniowych i zaawansowanej architektury (Transformers, Diffusion Models itd.)
@@ -44,11 +44,11 @@ Działają w oparciu o:
 
 - **Transformery** – np. GPT, które uczą się kontekstu tokenów i generują następny token
 - **Modele dyfuzyjne (diffusion models)** – używane w generowaniu grafiki i obrazów
-- **GANs (Generative Adversarial Networks)** – dwie sieci konkurujące w generowaniu i ocenie danych
+- **GANs ([[GAN - podstawy|Generative Adversarial Networks]])** – dwie sieci konkurujące w generowaniu i ocenie danych
 
-## LLM jako aplikacja GenAI
+## [[Base LLM|LLM]] jako aplikacja GenAI
 
-Duże Modele Językowe (LLM) takie jak GPT działają według zasady:
+Duże Modele Językowe ([[Base LLM|LLM]]) takie jak GPT działają według zasady:
 
 1. Wejście (prompt) jest tokenizowane
 2. Model przewiduje kolejne prawdopodobne tokeny
@@ -62,7 +62,7 @@ Duże Modele Językowe (LLM) takie jak GPT działają według zasady:
 - Typowe limity:
     - GPT-3: 4k tokenów
     - GPT-3.5-turbo: 16k–32k tokenów
-    - GPT-4-turbo: do 128k tokenów
+    - [[GPT-4]]-turbo: do 128k tokenów
     - Claude 2.1: do 200k tokenów
 
 Im większy kontekst, tym bardziej model "pamięta", ale też zwiększają się koszty i czas przetwarzania.
@@ -79,7 +79,7 @@ Im większy kontekst, tym bardziej model "pamięta", ale też zwiększają się 
 
 # 💡 Przykład zastosowania
 
-Zespół tworzy narzędzie do automatycznego generowania e-maili marketingowych. Korzystają z OpenAI GPT-4 poprzez API. Podają dane o odbiorcy, cel kampanii i styl – model generuje tekst, który po zatwierdzeniu trafia bezpośrednio do systemu CRM. Użytkownik może edytować prompt i zlecać poprawki typu „bardziej formalnie”, „dodaj ofertę specjalną”, itp.
+Zespół tworzy narzędzie do automatycznego generowania e-maili marketingowych. Korzystają z OpenAI [[GPT-4]] poprzez API. Podają dane o odbiorcy, cel kampanii i styl – model generuje tekst, który po zatwierdzeniu trafia bezpośrednio do systemu CRM. Użytkownik może edytować prompt i zlecać poprawki typu „bardziej formalnie”, „dodaj ofertę specjalną”, itp.
 
 # 📌 Źródła
 

@@ -37,7 +37,7 @@ aliases:
     - Zbiór danych zawiera tylko adresy IP. Wzbogacenie polega na dołączeniu informacji o kraju, regionie i mieście pobranych z zewnętrznej bazy IP-to-country (np. MaxMind GeoIP). Umożliwia to raportowanie według regionu oraz precyzyjne targetowanie marketingowe.
 2. **Demografia i scoring klientów**
     
-    - Lista klientów zawiera tylko identyfikatory. Enrichment polega na pobraniu (np. z DMP/CDP) wieku, płci, statusu kredytowego lub innej klasyfikacji. Zastosowanie: segmentacja rynku, personalizacja ofert.
+    - Lista klientów zawiera tylko identyfikatory. Enrichment polega na pobraniu (np. z DMP/[[Platforma Danych Klienta|CDP]]) wieku, płci, statusu kredytowego lub innej klasyfikacji. Zastosowanie: segmentacja rynku, personalizacja ofert.
 3. **Integracja danych produktowych**
     
     - Dane sprzedażowe zawierają tylko kody SKU. Dodanie informacji o nazwie produktu, kategorii, marce z katalogu głównego umożliwia analizy koszykowe lub rekomendacje.
@@ -70,8 +70,8 @@ Dane wyjściowe po wzbogaceniu:
 
 # 💡 Praktyczne zastosowania
 
-- **Analityka w BI**: tworzenie raportów przekrojowych (np. sprzedaż wg kraju).
-- **Data Science/Modelowanie ML**: wzbogacenie danych wejściowych o cechy zewnętrzne zwiększa precyzję modeli predykcyjnych.
+- **Analityka w [[Business Intelligence|BI]]**: tworzenie raportów przekrojowych (np. sprzedaż wg kraju).
+- **Data Science/Modelowanie [[Uczenie Maszynowe|ML]]**: wzbogacenie danych wejściowych o cechy zewnętrzne zwiększa precyzję modeli predykcyjnych.
 - **Personalizacja**: pogłębione profile klientów, lepsze rekomendacje produktów.
 - **Compliance i audyt**: hurtownie danych pełne informacji pozwalają lepiej zarządzać uprawnieniami, zgodnością i jakością.
 
@@ -84,8 +84,8 @@ Dane wyjściowe po wzbogaceniu:
 
 # 🛠️ Narzędzia popularne w data enrichment
 
-- **dbt** – transformacje i wzbogacanie danych w SQL w hurtowniach.
-- **Apache Spark, Pandas** – batchowe przetwarzanie i łączenie danych.
+- **[[dbt]]** – transformacje i wzbogacanie danych w SQL w hurtowniach.
+- **Apache Spark, [[Pandas]]** – batchowe przetwarzanie i łączenie danych.
 - **Airbyte/Fivetran** – automatyzacja pobierania danych z API i enrichment w ruchu.
 - **DataHub/Ataccama ONE, Collibra** – zarządzanie metadanymi i lineage wzbogacanych zbiorów.
 

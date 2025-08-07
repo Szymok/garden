@@ -17,11 +17,11 @@ aliases:
 
 # 🎯 Definicja
 
-**Custom Filter** w kontekście Ataccama ONE to niestandardowy filtr wyszukiwania/metadanych, umożliwiający zaawansowane zawężanie i wyszukiwanie zasobów, obiektów lub metadanych na podstawie własnych kryteriów użytkownika. Filtry te budowane są z użyciem języka AQL (Ataccama Query Language) i pozwalają tworzyć wyrażenia logiczne oparte na atrybutach modelu metadanych.
+**Custom Filter** w kontekście Ataccama ONE to niestandardowy filtr wyszukiwania/metadanych, umożliwiający zaawansowane zawężanie i wyszukiwanie zasobów, obiektów lub metadanych na podstawie własnych kryteriów użytkownika. Filtry te budowane są z użyciem języka [[AQL]] (Ataccama Query Language) i pozwalają tworzyć wyrażenia logiczne oparte na atrybutach modelu metadanych.
 
 # 🔑 Kluczowe punkty
 
-- Pozwala na zaawansowane przeszukiwanie zasobów/metadanych poprzez własne wyrażenia AQL.
+- Pozwala na zaawansowane przeszukiwanie zasobów/metadanych poprzez własne wyrażenia [[AQL]].
 - Obsługuje operatory logiczne (`AND`, `OR`, `NOT`), porównania (`=`, `!=`, `LIKE`, itp.), operacje na danych tekstowych, liczbowych i datach.
 - Może być wykorzystywany do filtracji, raportowania, automatyzacji zadań i masowych aktualizacji.
 - Wspiera budowanie personalizowanych dashboardów oraz powiadomień zależnych od wybranych zasobów.
@@ -31,7 +31,7 @@ aliases:
 
 ## Czym jest Custom Filter?
 
-Custom Filter umożliwia określenie własnych kryteriów wyszukiwania nad zestawami metadanych lub zasobów — np. tabel, pól, słowników — w Ataccama ONE. Dzięki wykorzystaniu AQL użytkownik ma pełną kontrolę nad logiką zapytania, np. można wyszukiwać tylko te źródła danych, które są aktywne, mają określone słowa kluczowe lub pochodzą z konkretnego katalogu.
+Custom Filter umożliwia określenie własnych kryteriów wyszukiwania nad zestawami metadanych lub zasobów — np. tabel, pól, słowników — w Ataccama ONE. Dzięki wykorzystaniu [[AQL]] użytkownik ma pełną kontrolę nad logiką zapytania, np. można wyszukiwać tylko te źródła danych, które są aktywne, mają określone słowa kluczowe lub pochodzą z konkretnego katalogu.
 
 ### Najważniejsze składniki Custom Filter:
 
@@ -39,7 +39,7 @@ Custom Filter umożliwia określenie własnych kryteriów wyszukiwania nad zesta
 - **Operatory:** `=`, `!=`, `>`, `<`, `LIKE` (dopasowanie do wzorca), `IN` (zawiera), `IS NULL`
 - **Logika:** łączenie warunków `AND`/`OR`, negacja `NOT`, grupowanie nawiasami `()`
 
-## Przykład składni AQL:
+## Przykład składni [[AQL]]:
 
 ```aql
 type = "Table" AND createdBy = "jan.kowalski" AND (status = "Active" OR status = "Reviewed")
@@ -79,7 +79,7 @@ W tym przypadku wyrażenie wyszukuje wszystkie aktywne tabele, których nazwa za
 # 👽 Brudnopis
 
 - Custom filter = wyszukiwanie/expression logiczne po metadanych
-- AQL: składnia SQL-podobna, typy, tagi, pola systemowe, statusy
+- [[AQL]]: składnia SQL-podobna, typy, tagi, pola systemowe, statusy
 - Przykład: type="Table", owner="Nowak", status="Active", description LIKE "_poufne_"
 - Praktyka: dashboardy, automatyzacja, powiadomienia, audyt użycia modeli
 - Protip: używać tagów systemowych oraz pól własnych (custom attributes) do finezyjnej filtracji

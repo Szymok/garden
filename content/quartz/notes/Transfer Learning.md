@@ -24,7 +24,7 @@ aliases:
 
 **Transfer Learning** (uczenie transferowe) to technika w uczeniu maszynowym, która polega na ponownym wykorzystaniu wiedzy zdobytej przez model podczas rozwiązywania jednego zadania (źródłowego) do przyspieszenia i ulepszenia uczenia się na zadaniu pokrewnym (docelowym).
 
-Zamiast trenować model od zera, stosuje się model wstępnie wytrenowany (pretrained model), który następnie jest **dostrajany (fine-tuned)** lub wykorzystywany jako ekstraktor cech (feature extractor) dla nowego przypadku użycia.
+Zamiast trenować model od zera, stosuje się model wstępnie wytrenowany ([[Pretrained models|pretrained]] model), który następnie jest **dostrajany (fine-tuned)** lub wykorzystywany jako ekstraktor cech (feature extractor) dla nowego przypadku użycia.
 
 # 🔑 Kluczowe punkty
 
@@ -42,7 +42,7 @@ Zamiast trenować model od zera, stosuje się model wstępnie wytrenowany (pretr
 |---|---|
 |**Feature Extraction**|Zamrożenie wag pretrenowanego modelu i wykorzystanie jego wyjść jako cech wejściowych do nowej warstwy klasyfikacji.|
 |**Fine-Tuning**|Dostosowanie (części lub całości) wag pretrenowanego modelu do nowego zadania na mniejszych danych.|
-|**Zero-shot / Few-shot**|Wykorzystywanie modelu bez ponownego treningu, tylko z odpowiednim sformułowaniem promptu (np. LLM).|
+|**Zero-shot / Few-shot**|Wykorzystywanie modelu bez ponownego treningu, tylko z odpowiednim sformułowaniem promptu (np. [[Base LLM\|LLM]]).|
 
 ## Proces Transfer Learningu
 
@@ -109,7 +109,7 @@ model.fc = torch.nn.Linear(2048, 3)  # np. 3 klasy chorób skóry
 
 ## 👽 Brudnopis
 
-- transfer learning = fundamentalna technika XXI w ML
+- transfer learning = fundamentalna technika XXI w [[Uczenie Maszynowe|ML]]
 - GPT = jeden wielki transfer modelu językowego + prompting
 - używany wszędzie: medycyna, NLP, wizja
 - fine-tune = adjust, feature extraction = zamrożenie

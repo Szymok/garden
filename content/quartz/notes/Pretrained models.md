@@ -26,7 +26,7 @@ aliases:
 # 🔑 Kluczowe punkty
 
 - **Pretrained model** to model “startowy”, który już nauczył się uniwersalnych zależności/patternów.
-- Jest podstawą dla technik takich jak **transfer learning** i **fine-tuning**.
+- Jest podstawą dla technik takich jak **[[transfer learning]]** i **fine-tuning**.
 - Znajduje zastosowanie w NLP, CV, audio, bioinformatyce i innych dziedzinach.
 - Może być używany „as-is” (zero-shot) lub dostosowany do konkretnego zadania (fine-tuned).
 - Przykłady: **BERT**, **GPT-2/3/4**, **ResNet**, **T5**, **CLIP**, **Vision Transformer (ViT)**.
@@ -60,14 +60,14 @@ aliases:
 
 # 💡 Przykład zastosowania
 
-Zamiast trenować model do klasyfikacji maili jako „spam” lub „nie-spam” od zera, inżynier ML korzysta z pretrained modelu BERT dostosowanego do języka polskiego (`herBERT`) i wykonuje fine-tuning na niewielkim zestawie z oznaczonymi wiadomościami e-mail. Model uzyskuje wysoką skuteczność przy znacznie mniejszych zasobach treningowych.
+Zamiast trenować model do klasyfikacji maili jako „spam” lub „nie-spam” od zera, inżynier [[Uczenie Maszynowe|ML]] korzysta z pretrained modelu BERT dostosowanego do języka polskiego (`herBERT`) i wykonuje fine-tuning na niewielkim zestawie z oznaczonymi wiadomościami e-mail. Model uzyskuje wysoką skuteczność przy znacznie mniejszych zasobach treningowych.
 
 ## 📌 Źródła
 
 - [https://huggingface.co/models](https://huggingface.co/models)
 - [https://pytorch.org/hub/](https://pytorch.org/hub/)
 - Google AI Blog: [https://ai.googleblog.com/](https://ai.googleblog.com/)
-- Stanford CS224N Notes - Transfer Learning
+- Stanford CS224N Notes - [[Transfer Learning]]
 
 ## 👽 Brudnopis
 

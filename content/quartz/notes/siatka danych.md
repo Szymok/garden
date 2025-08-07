@@ -22,11 +22,11 @@ aliases:
 
 # 🎯 Definicja
 
-**Siatka danych** (ang. _Data Mesh_) to zdecentralizowane podejście do architektury danych, w którym odpowiedzialność za dane jest rozproszona między zespoły domenowe. Zamiast centralnego zespołu zarządzającego całym pipeline’m danych, każda jednostka organizacyjna staje się właścicielem swoich danych jako produktu — odpowiedzialna za ich jakość, dostępność i udostępnianie w organizacji.
+**[[Data Mesh|Siatka danych]]** (ang. _[[Data Mesh]]_) to zdecentralizowane podejście do architektury danych, w którym odpowiedzialność za dane jest rozproszona między zespoły domenowe. Zamiast centralnego zespołu zarządzającego całym pipeline’m danych, każda jednostka organizacyjna staje się właścicielem swoich danych jako produktu — odpowiedzialna za ich jakość, dostępność i udostępnianie w organizacji.
 
 # 🔑 Kluczowe punkty
 
-- Siatka danych zmienia paradygmat: od **centralizacji danych (Data Lake / DWH)** do **federacji domen danych (Data as a Product)**.
+- [[Data Mesh|Siatka danych]] zmienia paradygmat: od **centralizacji danych (Data Lake / DWH)** do **federacji domen danych (Data as a Product)**.
 - Bazuje na czterech filarach:
     1. **Domenowość (domain ownership)**
     2. **Dane jako produkt (data as a product)**
@@ -38,9 +38,9 @@ aliases:
 
 # 📚 Szczegółowe wyjaśnienie
 
-## Centralizacja vs Data Mesh
+## Centralizacja vs [[Data Mesh]]
 
-|Cecha|Data Lake / DWH|Siatka danych (Data Mesh)|
+|Cecha|Data Lake / DWH|[[Data Mesh\|Siatka danych]] ([[Data Mesh]])|
 |---|---|---|
 |Odpowiedzialność|Centralny zespół danych|Zespoły domenowe|
 |Architektura|Scentralizowana|Rozproszona|
@@ -53,7 +53,7 @@ aliases:
 |Domena|Produkt danych|
 |---|---|
 |Marketing|Kampanie, leady, segmentacja|
-|Sprzedaż|Zamówienia, KPI sprzedażowe|
+|Sprzedaż|Zamówienia, [[KPI]] sprzedażowe|
 |Finanse|Analizy kosztów, przychody, faktury|
 |Obsługa klienta|Tickety, historie kontaktu|
 |Aplikacja mobilna|Aktywność użytkownika, logi wydarzeń|
@@ -61,27 +61,27 @@ aliases:
 ## Komponenty siatki danych
 
 - **Data Products**: publikowane przez zespoły, z określonym kontraktem (schemat, SLA, testy).
-- **Data Platform (self-serve)**: narzędzia udostępniające CI/CD, orkiestrację, katalogi, monitorowanie jakości (np. dbt, Airbyte, Dagster, Great Expectations, DataHub).
+- **Data Platform (self-serve)**: narzędzia udostępniające CI/CD, orkiestrację, katalogi, monitorowanie jakości (np. [[dbt]], Airbyte, [[Dagster]], Great Expectations, DataHub).
 - **Federated Governance**: definiuje wspólne minimum: nazewnictwo, polityki dostępu, bezpieczeństwo, lineage.
 
 # 💡 Przykład zastosowania
 
-Międzynarodowa firma kurierska wdrożyła architekturę Data Mesh, przypisując odpowiedzialność za dane do zespołów domenowych: logistyka, terminale, finanse. Zamiast wysyłać surowe dane do centralnego DWH, każda domena publikuje gotowy produkt danych w formacie Iceberg na S3, który następnie jest rejestrowany w katalogu danych i wykorzystywany przez zespoły BI oraz ML do dalszych analiz.
+Międzynarodowa firma kurierska wdrożyła architekturę [[Data Mesh]], przypisując odpowiedzialność za dane do zespołów domenowych: logistyka, terminale, finanse. Zamiast wysyłać surowe dane do centralnego DWH, każda domena publikuje gotowy produkt danych w formacie [[Apache Iceberg|Iceberg]] na S3, który następnie jest rejestrowany w katalogu danych i wykorzystywany przez zespoły [[Business Intelligence|BI]] oraz [[Uczenie Maszynowe|ML]] do dalszych analiz.
 
 # 📌 Źródła
 
 - [https://martinfowler.com/articles/data-monolith-to-mesh.html](https://martinfowler.com/articles/data-monolith-to-mesh.html)
 - Thoughtworks: [https://www.thoughtworks.com/en-pl/radar/techniques/data-mesh](https://www.thoughtworks.com/en-pl/radar/techniques/data-mesh)
-- Zhamak Dehghani – twórczyni pojęcia "Data Mesh"
+- Zhamak Dehghani – twórczyni pojęcia "[[Data Mesh]]"
 - [https://datameshlearning.substack.com/](https://datameshlearning.substack.com/)
 
 ## 👽 Brudnopis
 
-- Data Mesh = dane jako API, produkt, ownership
+- [[Data Mesh]] = dane jako API, produkt, ownership
 - Działa w dużych, złożonych firmach – mikroserwisy dla danych
-- Platforma: Airflow, dbt, DataHub = mesh-ready stack
-- Wyzwania: standaryzacja, katalogi, kontrakty danych
-- IDEAL: dbt + Iceberg + Kafka + DataHub + access layer
+- Platforma: [[Apache Airflow|Airflow]], [[dbt]], DataHub = mesh-ready stack
+- Wyzwania: standaryzacja, katalogi, [[kontrakty danych]]
+- IDEAL: [[dbt]] + [[Apache Iceberg|Iceberg]] + Kafka + DataHub + access layer
 - CI/CD dla produktów danych = testy + deployment + Wersje
 
 ---

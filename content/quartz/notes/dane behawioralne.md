@@ -30,7 +30,7 @@ aliases:
 - ⚙️ Zbierane są w czasie rzeczywistym, zazwyczaj jako zdarzenia (eventy) w formacie JSON.
 - 👥 Umożliwiają personalizację doświadczeń użytkownika, rekomendacje i optymalizację UX/UI.
 - 📈 Wspierają rozwój produktu (product analytics), predykcję zachowań, segmentację i scoring użytkowników.
-- 🔄 Wykorzystywane w marketing automation, CX, ML/AI, retencji i analizie ścieżek użytkownika.
+- 🔄 Wykorzystywane w marketing automation, CX, [[Uczenie Maszynowe|ML]]/AI, retencji i analizie ścieżek użytkownika.
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -51,9 +51,9 @@ Format: zwykle JSON lub schemat niestandardowy.
 ## Typowe źródła danych behawioralnych
 
 - Front-end aplikacji web/mobilnych (JavaScript SDK)
-- Systemy logowania (np. keycloak, auth providers)
+- Systemy logowania (np. [[keycloak]], auth providers)
 - Silniki e-commerce (Shopify, Magento)
-- Narzędzia CDP (Customer Data Platform): Segment, RudderStack
+- Narzędzia [[Platforma Danych Klienta|CDP]] ([[Platforma Danych Klienta|Customer Data Platform]]): Segment, RudderStack
 - Systemy monitorowania: Google Analytics, Snowplow, Piwik PRO
 - Trackery zdarzeń niestandardowych: Amplitude, Mixpanel, Heap
 
@@ -64,7 +64,7 @@ Format: zwykle JSON lub schemat niestandardowy.
 |Analityka produktu|Analiza ścieżek, feature adoption, testy A/B|
 |Obsługa klienta|Segmentacja klientów, scoring aktywności|
 |Marketing i remarketing|Retargeting na podstawie aktywności (np. porzucony koszyk)|
-|ML/AI personalizacja|Modele rekomendacji, klasyfikacja churn/no churn|
+|[[Uczenie Maszynowe\|ML]]/AI personalizacja|Modele rekomendacji, klasyfikacja churn/no churn|
 |Automatyzacje biznesowe|Triggerowanie e-maili po zdarzeniach użytkownika|
 
 # 💡 Dlaczego warto zbierać dane behawioralne?
@@ -76,14 +76,14 @@ Format: zwykle JSON lub schemat niestandardowy.
     Na podstawie danych można dostosować ścieżki użytkownika, treści i rekomendacje do rzeczywistych wzorców użytkowania.
     
 3. **Skuteczniejsze modele predykcyjne**  
-    Modele ML (np. churn prediction, scoring leadów) są bardziej precyzyjne, gdy uwzględniają aktualne i historyczne dane o zachowaniach.
+    Modele [[Uczenie Maszynowe|ML]] (np. churn prediction, scoring leadów) są bardziej precyzyjne, gdy uwzględniają aktualne i historyczne dane o zachowaniach.
     
 
 # 🛠️ Narzędzia do przetwarzania danych behawioralnych
 
 - Event streaming: Kafka, Segment, Snowplow, RudderStack
 - Hurtownie danych/Event storage: BigQuery, Snowflake, S3 + Airbyte
-- Transformacje: dbt, Spark, Flink, Dagster
+- Transformacje: [[dbt]], Spark, Flink, [[Dagster]]
 - Analityka frontowa: Mixpanel, Heap, PostHog, Amplitude
 - Monitoring i A/B Testing: Optimizely, VWO, Google Optimize
 
@@ -98,7 +98,7 @@ Format: zwykle JSON lub schemat niestandardowy.
 # 👽 Brudnopis
 
 - Dane behawioralne ≠ metadane ≠ dane transakcyjne — ale się uzupełniają
-- Kluczowy składnik CDP i real-time ML
-- Dane śledzące zdarzenia trzymane często w Data Lake, transformowane przez dbt na warstwę analityczną
+- Kluczowy składnik [[Platforma Danych Klienta|CDP]] i real-time [[Uczenie Maszynowe|ML]]
+- Dane śledzące zdarzenia trzymane często w Data Lake, transformowane przez [[dbt]] na warstwę analityczną
 - Istotne: zgodność z RODO/CCPA (prywatność, anonimizacja użytkownika)
 - Zdarzenia jako mini-historie użytkownika — idealne do uczenia sekwencyjnego i modeli RNN/LSTM/transformerów dla predykcji zachowań

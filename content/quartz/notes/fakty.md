@@ -26,7 +26,7 @@ aliases:
 
 - Fakty są zorientowane wokół **procesu biznesowego** (np. zakup, zamówienie, logowanie).
 - Są **mierzalne** — zazwyczaj liczbowe (ilość, wartość, czas trwania, cena).
-- Używane są do **analityki, raportowania, agregacji i miar KPI**.
+- Używane są do **analityki, raportowania, agregacji i miar [[KPI]]**.
 - Istnieją różne typy faktów: addytywne, póładdytywne, nieaddytywne.
 - Fakty są **łączone z wymiarami** za pomocą kluczy obcych (foreign keys).
 
@@ -50,9 +50,9 @@ aliases:
 |**Póładdytywne**|Dodawalne tylko w niektórych wymiarach (np. saldo – po czasie nie)|
 |**Nieaddytywne**|Nie da się ich sumować (np. średnia temperatura, procent konwersji)|
 
-## Fakty vs. wymiary
+## Fakty vs. [[wymiary]]
 
-|Fakty|Wymiary|
+|Fakty|[[Wymiary]]|
 |---|---|
 |Ilościowe, mierzalne|Opisowe, kontekstowe|
 |np. sprzedaż, koszt, ilość|np. klient, produkt, sklep, czas|
@@ -61,7 +61,7 @@ aliases:
 
 # 💡 Przykład zastosowania
 
-W hurtowni danych dla sieci handlowej tabela faktów rejestruje wszystkie transakcje sprzedaży. Analitycy mogą zsumować dane wg daty i produktu, aby uzyskać trendy sprzedaży lub policzyć łączną wartość zamówień wg klientów — co zasila dashboardy BI i raporty KPI.
+W hurtowni danych dla sieci handlowej tabela faktów rejestruje wszystkie transakcje sprzedaży. Analitycy mogą zsumować dane wg daty i produktu, aby uzyskać trendy sprzedaży lub policzyć łączną wartość zamówień wg klientów — co zasila dashboardy [[Business Intelligence|BI]] i raporty [[KPI]].
 
 ## 📌 Źródła
 
@@ -73,10 +73,10 @@ W hurtowni danych dla sieci handlowej tabela faktów rejestruje wszystkie transa
 
 - Fakty to „czynności mierzalne” – punkty transakcyjne: sprzedaż, wizyta, koszt
 - Są centralnym punktem modelu gwiazdy (star schema)
-- Don’t confuse: fakt ≠ zdarzenie logiczne → fakt to wartość + kontekst (wymiary)
+- Don’t confuse: fakt ≠ zdarzenie logiczne → fakt to wartość + kontekst ([[wymiary]])
 - Kluczowy podział: addytywność względem wymiarów
-- Istotne przy projektowaniu agregacji, miar w systemach BI
+- Istotne przy projektowaniu agregacji, miar w systemach [[Business Intelligence|BI]]
 - Często przechowywane jako dane partycjonowane po czasie (date_id)
-- Współgrają z walidacją typu SCD (wolnozmienne wymiary)
+- Współgrają z walidacją typu [[Slowly Changing Dimension (SCD)|SCD]] (wolnozmienne [[wymiary]])
 
 ---

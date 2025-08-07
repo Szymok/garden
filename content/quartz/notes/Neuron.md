@@ -31,7 +31,7 @@ Każdy neuron:
 1. Odbiera dane wejściowe — zazwyczaj jako wektor liczb.
 2. Mnoży każde wejście przez przypisaną wagę (ang. weight).
 3. Dodaje sumę ważoną oraz komponent zwany bias.
-4. Przetwarza sumę przez funkcję aktywacji (np. sigmoid, ReLU).
+4. Przetwarza sumę przez funkcję aktywacji (np. sigmoid, [[ReLU]]).
 5. Przekazuje wynik jako sygnał wyjściowy do kolejnej warstwy.
 
 Matematycznie:
@@ -52,7 +52,7 @@ output = activation(∑(input_i × weight_i) + bias)
 
 - Znajduje się pomiędzy warstwą wejściową a wyjściową.
 - Może zawierać wiele neuronów, które uczą się reprezentacji (cech) danych.
-- W głębokim uczeniu (deep learning) warstw pośrednich może być setki, a nawet tysiące.
+- W głębokim uczeniu ([[deep learning]]) warstw pośrednich może być setki, a nawet tysiące.
 - Właściwa nauka i ekstrakcja wzorców zachodzą właśnie tutaj.
 
 ## Neurony wyjściowe (output neurons)
@@ -82,16 +82,16 @@ W detekcji spamu pojedynczy e-mail jest przekształcany do wektora liczbowego (n
 # 📌 Źródła
 
 - [https://en.wikipedia.org/wiki/Artificial_neuron](https://en.wikipedia.org/wiki/Artificial_neuron)
-- Deep Learning — Ian Goodfellow, Yoshua Bengio, Aaron Courville
+- [[Deep Learning]] — Ian Goodfellow, Yoshua Bengio, Aaron Courville
 - [https://towardsdatascience.com/what-is-a-neuron-in-a-neural-network-4c7d8b7c5bd3](https://towardsdatascience.com/what-is-a-neuron-in-a-neural-network-4c7d8b7c5bd3)
 - [https://neuralnetworksanddeeplearning.com/](https://neuralnetworksanddeeplearning.com/)
 
 ## 👽 Brudnopis
 
 - neuron = jednostka przetwarzająca dane w sieciach AI
-- funkcja aktywacji = nieliniowość nadająca sieci zdolność aproksymacji dowolnej funkcji
+- [[funkcja aktywacji]] = nieliniowość nadająca sieci zdolność aproksymacji dowolnej funkcji
 - neurony łączone w warstwy = sieć (net)
-- relu, tanh, sigmoid – wybór funkcji ma wpływ na uczenie
+- [[relu]], tanh, sigmoid – wybór funkcji ma wpływ na uczenie
 - uczenie = modyfikacja wag i biasów każdego neuronu
 - neuron ≠ biologiczny odpowiednik (tylko model matematyczny inspirowany biologią)
 
