@@ -17,6 +17,7 @@ aliases:
 # 📚 Szczegółowe wyjaśnienie
 
 # 💡 Przykład zastosowania
+
 ## 📌 Źródła
 
 ## 👽 Brudnopis
