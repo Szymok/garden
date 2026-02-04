@@ -1,0 +1,3 @@
+- The platform uses **multiple PostgreSQL databases internally to store various data and metadata**.
+- These databases are **automatically installed or allocated in a cloud environment**.
+- However, the **customer is responsible for managing backups**.

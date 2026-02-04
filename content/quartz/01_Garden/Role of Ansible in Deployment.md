@@ -1,0 +1,6 @@
+- **Ansible** is an **open-source tool** designed for **deployment automation**.
+- It handles the **installation process**, which involves tasks such as copying Ataccama software packages and configuration.
+- The installation requires **configuration specific to your organisation's infrastructure**.
+    - Examples include providing server names or selecting optional components.
+- These necessary changes can be performed by either the **Ataccama Professional Services team** or by the customer, following the documentation provided in the package.
+- Once configured, **Ansible is run on a single machine**, referred to as the **Ansible controller**.
