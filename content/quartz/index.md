@@ -12,7 +12,7 @@ Sztuczna inteligencja to dziedzina nauki, która koncentruje się na tworzeniu m
 Analiza danych to proces badania i interpretacji zbiorów danych w celu wydobycia ukrytych wzorców, informacji i wskazówek. Pomaga podejmować lepsze decyzje biznesowe i odkrywać nowe możliwości.
 
 3. [[Inżynieria Danych]]
-[[Inżynieria danych]] to praktyka organizowania, przetwarzania i zarządzania dużymi zbiorami danych. Obejmuje etapy takie jak zbieranie, przekształcanie, ładowanie danych oraz projektowanie i zarządzanie systemami baz danych.
+[[Inżynieria Danych]] to praktyka organizowania, przetwarzania i zarządzania dużymi zbiorami danych. Obejmuje etapy takie jak zbieranie, przekształcanie, ładowanie danych oraz projektowanie i zarządzanie systemami baz danych.
 
 4. Data Governance
 Zarządzanie danymi (Data Governance) to zbiór zasad, procesów i struktur organizacyjnych, które mają na celu zapewnienie jakości, bezpieczeństwa, dostępności i zgodności danych w firmie. Jest to fundament do podejmowania decyzji opartych na danych i efektywnego zarządzania informacją.
@@ -38,7 +38,7 @@ Słownik Danych ciągle się rozwija, a poniżej wymieniam kilka kluczowych punk
 | [[Inżynieria Danych]]      | [Koncepty Inżynierii Danych](Koncepcje%20Inżynierii%20Danych.md), [Przewodniki po Inżynierii Danych](Przewodniki%20po%20Inżynierii%20Danych.md), [Cykle Życia Inżynierii Danych](Cykl%20Życia%20Inżynierii%20Danych.md) |
 | Architektura Danych          | [Magazyny Danych](Data%20Warehouse.md), [Jeziora Danych](Data%20Lake.md), [Lakehouse](Data%20Lakehouse.md) |
 | Przetwarzanie Danych       | [ELT](ELT.md), [ETL](ETL.md), [EtLT](EtLT.md), [Reverse ETL](Odwrócony%20ETL.md), [Integracja Danych](Integracja%20Danych.md) |
-| Formaty Danych          | [Apache Avro](Apache%20Avro.md), [Apache Parquet](notes/apache%20parquet), [Apache ORC](notes/apache%20orc.md) |
+| Formaty Danych          | [Apache Avro](Apache%20Avro.md), [Apache Parquet](apache%20parquet.md), [Apache ORC](notes/apache%20orc.md) |
 | Analiza Danych, BI    | [Analiza Danych](Analiza%20Danych.md), [Business Intelligence](Business%20Intelligence.md), [Narzędzia Business Intelligence](Narzędzia%20Business%20Intelligence.md) |
 | Sztuczna Inteligencja | [Uczenie Maszynowe](Uczenie%20Maszynowe.md) |
 | Programowanie| [Programowanie Funkcyjne](Programowanie%20Funkcyjne.md), [Funkcyjna Inżynieria Danych](notes/funkcyjny%20data%20engineering.md) |

@@ -1,0 +1,24 @@
+---
+title: How Does Serverless Computing Simplify Your Workloads
+created: 2026-01-15
+status: 
+category: 
+difficulty: 
+language: pl
+tags:
+  - 
+aliases:
+  - 
+---
+# 🎯 Definicja
+
+# 🔑 Kluczowe punkty
+
+# 📚 Szczegółowe wyjaśnienie
+
+# 💡 Przykład zastosowania
+
+## 📌 Źródła
+
+## 👽 Brudnopis
+Serverless computing removes the overhead of managing infrastructure and allowing you to focus on writing and deploying the code. So instead of provisioning and maintaining servers, you deploy functions or containers that run only when triggered. Now serveless doesn't mean that there are no servers. It means the cloud provider handles the server management for you. Now, traditionally, an application requires handling everything from networking and storage to virtualization and operating systems. Now with serverless computing, you only manage the code. AWS takes care of the infrastructure, scaling, and maintenance. And supporting languages include Python, Node.js, and Go among others, so this makes serverless flexible for various workloads. Now imagine you're shopping online. You browse for a product, you add it to cart, and proceed to checkout. Now the moment you click Place order, a series of events is triggered behind the scenes. Now with serverless computing, your actions, placing an order, activates a Lambda function. Now this function processes your order and updates the inventory in the database, notifies the shipping provider, and if payment is required, another function securely processes the transaction. These functions execute only when needed, scaling automatically to handle spikes in traffic such as holiday sales. So this ensures fast, cost‑efficient processing without the need for always‑on servers. Now think of AWS Lambda as a way to run code without needing to worry about the service at all. So instead of having your application run 24/7, Lambda only runs your code when something actually happens like a file upload, a user logging in, or a new item in the database. Now, because it is event‑driven, it scales automatically depending on how many requests are coming in. If there's one user or a million, Lambda to adjusts on his own, and it supports multiple programming languages to do so, so you don't need to manage anything. And another benefit is you're only charge when the code is actually running. So this means you're not paying for idle time, which can save you a lot of money, especially for apps that don't have constant traffic. And it's a great fit for real‑time use cases like data processing, streaming, and microservices. So depending on how long you want your functions to run, this could be a great cost optimizing way to deploy some applications. Now, AWS Fargate allows you to run containers without managing the servers or clusters. Now that's the key between Fargate and traditional container orchestration. Now in this diagram, the user triggers an event. Now this could be from anything from, once again, submitting a form, uploading a file, or hitting the API. Now when that happens, Fargate steps in and automatically launches containers to respond to that event. Now here's the important part. You see those nodes on the right? Normally, you'd be the one setting those up, patching them, securing them, and making sure they scale, but with Fargate, AWS manages all of that behind the scenes. So from your perspective, it's like saying, here's my container, run it when needed, scale it if necessary, and don't bother me with the service stuff. AWS Fargate takes the concept of containers and makes it easier to even manage. So instead of spinning up servers, installing software, and configuring clusters, Fargate handles all of that behind the scenes. Now what's really powerful is that Fargate integrates with both ECS and EKS. So whether you're using AWS's native Container Service or Kubernetes, you could still go serverless. And you can simply define your container and tell AWS how it should run. No servers, no provisioning, no scaling headaches, it just works. And because it automatically scales with demand, it's perfect for modern application architectures like microservices where you might need 2 containers now and 200 in a few minutes. Now one of the biggest advantages of serverless computing is how cost efficient it is. With traditional infrastructure, you're often paying for services 24/7, even when they're not doing anything. But with serverless like AWS Lambda and Fargate, you only pay when your code is actually running. Now, with Lambda, you're billed per millisecond of execution, so that means if your function runs for 50 ms, you only pay for those 50 ms. Now with Fargate, you pay based on the CPU and memory your containers use per task and only while they are running. So it's like paying for electricity only when you flip the switch, no usage, no charge, and that's why serverless is such a game changer for both startups and large‑scale applications.

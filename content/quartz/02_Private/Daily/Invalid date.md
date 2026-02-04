@@ -1,0 +1,25 @@
+---
+date: 2026-01-13
+tags:
+  - daily
+# --- METRYKI ---
+sleep_hours: 0         # Sen
+work_school_hours: 0   # Praca (5) i Szkoła (4)
+productive_hours: 0    # Czysta Produktywność (6) - Projekty, Deep Work
+social_hours: 0        # Social (1,2,3)
+relax_hobby_hours: 0   # Relaks (7,8)
+waste_hours: 0         # Waste (9)
+# --- INNE ---
+mood: 0
+---
+
+# 📅 Notatka z dnia 2026-01-13
+
+## ⏱️ Log Godzinowy (Szybki zapis)
+- **08-12**: 
+- **12-16**: 
+- **16-20**: 
+- **20-24**: 
+
+---
+## 🧠 Przemyślenia (Comments)

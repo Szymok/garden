@@ -1,0 +1,2 @@
+Ataccama best practises library!!
+![[Pasted image 20251114105815.png]]![[Pasted image 20251114105837.png]]![[Pasted image 20251114105957.png]]![[Pasted image 20251114110113.png]]![[Pasted image 20251114110510.png]]![[Pasted image 20251114111047.png]]![[Pasted image 20251114111248.png]]![[Pasted image 20251114111436.png]]
