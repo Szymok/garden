@@ -1,3 +1,0 @@
-# TED API Documentation
-
-‍

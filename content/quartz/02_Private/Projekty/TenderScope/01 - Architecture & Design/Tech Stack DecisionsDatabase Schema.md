@@ -1,3 +1,0 @@
-# Tech Stack DecisionsDatabase Schema
-
-‍

@@ -1,3 +1,0 @@
-# System ArchitectureTech Stack Decisions
-
-‍

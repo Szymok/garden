@@ -1,3 +1,0 @@
-# Competitive Landscape (Mimira, etc.)
-
-‍
