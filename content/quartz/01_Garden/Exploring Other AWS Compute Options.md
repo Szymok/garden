@@ -11,12 +11,22 @@ aliases:
   - 
 ---
 # 🎯 Definicja
+AWS oferuje szereg usług obliczeniowych wykraczających poza standardowe maszyny wirtualne (EC2), skupiając się na automatyzacji infrastruktury (IaC) oraz wsparciu dla środowisk hybrydowych.
 
 # 🔑 Kluczowe punkty
+- **CloudFormation (IaC):** Automatyzacja tworzenia całych środowisk (od EC2 po IAM) za pomocą szablonów JSON/YAML. Zapewnia spójność i powtarzalność.
+- **AWS Outposts:** Rozwiązanie hybrydowe, które przynosi sprzęt i usługi AWS bezpośrednio do lokalnego centrum danych (on-premises).
+- **Zalety automatyzacji:** Oszczędność czasu, eliminacja błędów ludzkich (np. błędna konfiguracja podsieci) i łatwość zarządzania wersjami infrastruktury.
 
 # 📚 Szczegółowe wyjaśnienie
+AWS to nie tylko "klocki" (VM, kontenery), ale także inteligentne sposoby ich składania.
+- **CloudFormation** pozwala opisać infrastrukturę jako kod. Dzięki temu ten sam szablon może być użyty do postawienia identycznego środowiska deweloperskiego, testowego i produkcyjnego.
+- **AWS Outposts** jest idealny dla branż o wysokich wymaganiach dotyczących opóźnień lub zgodności (np. finanse, ochrona zdrowia), gdzie dane muszą pozostać fizycznie blisko, ale firma chce korzystać z chmurowego modelu operacyjnego.
 
 # 💡 Przykład zastosowania
+- **Automatyzacja wdrożeń:** Użycie CloudFormation do automatycznego postawienia całej sieci (VPC), bazy danych i serwerów aplikacji jednym kliknięciem.
+- **Przetwarzanie brzegowe (Edge):** Wykorzystanie AWS Outposts w fabryce do analizy danych z czujników w czasie rzeczywistym, bez konieczności wysyłania ich do odległego regionu AWS.
+- **Zgodność (Compliance):** Przechowywanie wrażliwych danych na lokalnym sprzęcie Outposts przy jednoczesnym zarządzaniu nimi przez panel AWS.
 
 ## 📌 Źródła
 

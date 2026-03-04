@@ -11,12 +11,27 @@ aliases:
   - 
 ---
 # 🎯 Definicja
+**Amazon EC2** (Elastic Compute Cloud) to usługa chmurowa udostępniająca skalowalną moc obliczeniową w formie wirtualnych serwerów. Pozwala firmom na wynajmowanie mocy obliczeniowej zamiast posiadania i utrzymywania własnego sprzętu fizycznego.
 
 # 🔑 Kluczowe punkty
+- **Typy instancji:**
+  - **General Purpose:** Balans procesora, pamięci i sieci.
+  - **Compute Optimized:** Dla zadań wymagających dużej mocy obliczeniowej (np. serwery gier).
+  - **Memory Optimized:** Dla aplikacji operujących na dużych zbiorach danych w pamięci RAM.
+  - **Storage Optimized:** Dla szybkich operacji wejścia/wyjścia (bazy danych).
+  - **Accelerated Computing:** Wykorzystuje GPU (machine learning, renderowanie 3D).
+- **Elastyczność:** Możliwość uruchamiania i zatrzymywania instancji w dowolnym momencie.
+- **Model płatności:** Pay-as-you-go (płacisz tylko za to, co faktycznie wykorzystasz).
 
 # 📚 Szczegółowe wyjaśnienie
+EC2 zapewnia pełną kontrolę nad systemem operacyjnym i konfiguracją aplikacji, podczas gdy AWS zarządza warstwą fizyczną. Kluczowe funkcje wspierające to:
+- **Autoscaling:** Automatyczne dostosowywanie liczby serwerów do aktualnego zapotrzebowania.
+- **Load Balancing:** Rozdzielanie ruchu na wiele instancji w celu zwiększenia wydajności i niezawodności aplikacji.
 
 # 💡 Przykład zastosowania
+- **Hosting stron www:** Uruchomienie serwera Apache/Nginx na instancji typu General Purpose.
+- **Analiza Big Data:** Użycie instancji Memory Optimized do szybkiego przetwarzania danych w Sparku.
+- **Machine Learning:** Wykorzystanie instancji Accelerated Computing do trenowania modeli sieci neuronowych.
 
 ## 📌 Źródła
 

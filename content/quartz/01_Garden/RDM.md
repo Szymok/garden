@@ -11,12 +11,25 @@ aliases:
   - 
 ---
 # 🎯 Definicja
+**Ataccama RDM** (Reference Data Management) to moduł platformy Ataccama służący do centralnego zarządzania danymi referencyjnymi (słownikami), zapewniający ich spójność, jakość i poprawność w całej organizacji.
 
 # 🔑 Kluczowe punkty
+- **Interfejsy użytkownika:**
+  - **RDM Web App:** Zarządzanie danymi przez użytkowników biznesowych.
+  - **ONE Desktop (IDE):** Tworzenie modelu danych i procesów orkiestracji.
+  - **Admin Console:** Wdrażanie konfiguracji i monitoring.
+- **Model Danych:** Logika jest znormalizowana dla wydajności, ale prezentowana w sposób czytelny (de-normalizacja poprzez etykiety zamiast kluczy obcych).
+- **Validations & Enrichments:** Automatyczne sprawdzanie poprawności danych (domeny, wyrażenia, SQL) oraz ich automatyczne uzupełnianie (online enrichment).
 
 # 📚 Szczegółowe wyjaśnienie
+RDM umożliwia wersjonowanie danych za pomocą tzw. **Business Dates** (okresy ważności rekordów). Zmiany w danych mogą przechodzić przez procesy zatwierdzania (**Workflows**), gdzie np. Data Steward musi zaakceptować nową wartość przed jej publikacją.
+
+Proces wdrożenia (deployment) polega na wygenerowaniu plików konfiguracyjnych XML w ONE Desktop, a następnie ich wgraniu przez Admin Console, co pozwala na audyt zmian przed ich zastosowaniem.
 
 # 💡 Przykład zastosowania
+- **Zarządzanie kodami krajów:** Zapewnienie, że we wszystkich systemach (CRM, ERP) Polska jest oznaczona jako "PL" lub "POL", z automatyczną walidacją formatu.
+- **Workflow zatwierdzania:** Pracownik edytuje opis produktu, supervisor otrzymuje powiadomienie i musi zatwierdzić zmianę, zanim stanie się ona widoczna dla systemów zewnętrznych.
+- **Synchronizacja:** Automatyczne pobieranie kursów walut z zewnętrznej bazy danych i udostępnianie ich innym systemom poprzez Web Services.
 
 ## 📌 Źródła
 

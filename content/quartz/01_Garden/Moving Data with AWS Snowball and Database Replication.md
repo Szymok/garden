@@ -11,12 +11,23 @@ aliases:
   - 
 ---
 # 🎯 Definicja
+Przenoszenie danych na dużą skalę wymaga specjalistycznych narzędzi. AWS oferuje dwie główne usługi: **AWS Snowball** (fizyczne urządzenie do transferu offline) oraz **AWS DMS** (usługa online do migracji i replikacji baz danych).
 
 # 🔑 Kluczowe punkty
+- **AWS Snowball:** Fizyczne urządzenie do przesyłania terabajtów i petabajtów danych tam, gdzie transfer sieciowy jest zbyt wolny lub niepraktyczny. Dane są szyfrowane i śledzone end-to-end.
+- **AWS DMS (Database Migration Service):** Pozwala na migrację baz jednorodnych (np. Oracle do Oracle) i różnorodnych (np. SQL Server do MySQL) z minimalnym czasem przestoju.
+- **Replikacja w czasie rzeczywistym:** DMS synchronizuje dane z docelową bazą (RDS, Aurora, Redshift), podczas gdy źródłowa baza wciąż działa.
 
 # 📚 Szczegółowe wyjaśnienie
+Migracja danych to często najtrudniejsza część przejścia do chmury.
+- **Snowball** jest idealny dla lokalizacji z ograniczoną przepustowością łącza, gdzie wysyłanie danych przez internet zajęłoby tygodnie.
+- **DMS** rozwiązuje problem "zamrożenia" biznesu na czas migracji – baza źródłowa pozostaje dostępna dla użytkowników, a DMS dba o to, by każda zmiana trafiła do chmury.
 
 # 💡 Przykład zastosowania
+- **Backup korporacyjny:** Przenoszenie wieloletnich archiwów i kopii zapasowych serwerów za pomocą Snowball.
+- **Modernizacja bazy danych:** Upgrade starych systemów do nowoczesnych platform chmurowych (np. Aurora) bez wyłączania aplikacji.
+- **Migracja danych medycznych:** Przenoszenie wrażliwych danych przy zachowaniu pełnej ścieżki audytu i bezpieczeństwa (compliance).
+- **Setup hybrydowy:** Utrzymanie synchronizacji między bazą lokalną a chmurową podczas stopniowego przenoszenia infrastruktury.
 
 ## 📌 Źródła
 

@@ -11,12 +11,25 @@ aliases:
   - 
 ---
 # 🎯 Definicja
+**Serverless Computing** (przetwarzanie bezserwerowe) to model chmurowy, który eliminuje konieczność zarządzania infrastrukturą przez użytkownika. Zamiast konfigurować serwery, deweloper wdraża kod (funkcje), który uruchamia się automatycznie w odpowiedzi na konkretne zdarzenia.
 
 # 🔑 Kluczowe punkty
+- **Brak zarządzania serwerami:** Dostawca chmury (np. AWS) zajmuje się systemem operacyjnym, siecią, skalowaniem i konserwacją.
+- **Skalowanie sterowane zdarzeniami:** Funkcje uruchamiają się tylko wtedy, gdy są potrzebne (np. wgranie pliku, logowanie użytkownika). Skalują się od zera do milionów żądań bez ingerencji ręcznej.
+- **Efektywność kosztowa:** Płacisz tylko za czas wykonania kodu, a nie za bezczynny serwer działający 24/7.
 
 # 📚 Szczegółowe wyjaśnienie
+W tradycyjnym modelu aplikacja wymaga dbania o wszystko: od wirtualizacji po systemy operacyjne. Serverless przenosi ten ciężar na AWS. Usługi takie jak **AWS Lambda** pozwalają na uruchamianie kodu w wielu językach (Python, Node.js, Go).
+
+Model ten jest idealny dla obciążeń o zmiennym natężeniu (spikes), takich jak wyprzedaże świąteczne, ponieważ system automatycznie dopasowuje zasoby do liczby przychodzących żądań.
 
 # 💡 Przykład zastosowania
+- **E-commerce:** Użytkownik klika "Złóż zamówienie". Zdarzenie to wyzwala funkcję Lambda, która:
+  1. Aktualizuje stan magazynowy w bazie danych.
+  2. Powiadamia firmę kurierską.
+  3. Wyzwala inną funkcję do bezpiecznego przetworzenia płatności.
+- **Przetwarzanie danych:** Automatyczna zmiana rozmiaru zdjęcia natychmiast po tym, jak użytkownik wgra je do zasobnika S3.
+- **Backend API:** Tworzenie lekkich mikrousług, które są aktywowane tylko przy zapytaniach od użytkowników.
 
 ## 📌 Źródła
 

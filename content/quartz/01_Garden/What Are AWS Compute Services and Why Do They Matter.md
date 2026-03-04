@@ -11,12 +11,24 @@ aliases:
   - 
 ---
 # 🎯 Definicja
+Usługi obliczeniowe AWS (**Compute Services**) dostarczają moc procesową niezbędną do uruchamiania aplikacji w chmurze. Eliminują potrzebę zakupu, utrzymania i zarządzania fizycznymi serwerami, oferując w zamian elastyczne i skalowalne zasoby na żądanie.
 
 # 🔑 Kluczowe punkty
+- **Brak serwerów fizycznych:** Firma nie musi inwestować w sprzęt ani dbać o jego konserwację.
+- **Elastyczność:** Możliwość precyzyjnego doboru mocy obliczeniowej do potrzeb projektu.
+- **Skalowalność:** Zasoby mogą automatycznie rosnąć lub maleć wraz ze zmianami ruchu (demand).
+- **Dostępność:** Aplikacje uruchomione w chmurze są łatwiej dostępne dla użytkowników z całego świata.
 
 # 📚 Szczegółowe wyjaśnienie
+AWS Compute obejmuje różne podejścia do uruchamiania kodu:
+- **Amazon EC2:** Wirtualne maszyny dające pełną kontrolę (odpowiednik własnego komputera w chmurze).
+- **Amazon ECS (Elastic Container Service):** Zarządzanie skonteneryzowanymi aplikacjami, które można uruchamiać w spójny sposób na dowolnym systemie.
+- **AWS Lambda:** Model serverless, gdzie płaci się tylko za czas wykonania konkretnej funkcji, bez zarządzania systemem operacyjnym.
 
 # 💡 Przykład zastosowania
+- **Startupy:** Szybkie wdrażanie aplikacji bez ponoszenia ogromnych kosztów na start.
+- **E-commerce:** Obsługa nagłych skoków ruchu podczas promocji dzięki automatycznemu skalowaniu.
+- **Przetwarzanie danych:** Wykorzystanie dużej mocy obliczeniowej do szybkich analiz bez blokowania lokalnych stacji roboczych.
 
 ## 📌 Źródła
 

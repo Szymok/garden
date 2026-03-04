@@ -11,12 +11,22 @@ aliases:
   - 
 ---
 # 🎯 Definicja
+**Siedem Marnotrawstw** (The Seven Wastes) w rozwoju oprogramowania to koncepcja adaptująca japońskie zasady produkcji do świata IT. Marnotrawstwem jest wszystko, co nie prowadzi bezpośrednio do dostarczenia finalnego, działającego produktu klientowi.
 
 # 🔑 Kluczowe punkty
+- **Praca częściowo ukończona:** Funkcja gotowa w 90% to iluzja. Prawdziwe ukończenie następuje po testach i wdrożeniu na produkcję. Bez tego praca tylko "zalega w magazynie".
+- **Dodatkowe funkcje (Just in Case):** Tworzenie funkcji "na zapas", które mogą się przydać później, to marnotrawstwo miejsca, czasu i pieniędzy. Należy tworzyć "Just in Time".
+- **Złożone procesy (Extra processing):** Jeśli procesy nie są zwinne i zmuszają do budowania rzeczy przedwcześnie (bo później będzie trudno), to sygnał problemu z architekturą lub procesem.
 
 # 📚 Szczegółowe wyjaśnienie
+Marnotrawstwo często ukrywa się pod postacią "uczciwych szacunków". Programista mówi, że praca jest skończona, mając na myśli tylko logikę, podczas gdy połowa pracy (testy, dokumentacja, wdrożenie) wciąż pozostaje do zrobienia.
+
+Funkcje tworzone "na wszelki wypadek" są odpowiednikiem nadprodukcji części w fabryce, które zajmują miejsce na półce i mogą nigdy nie zostać użyte. Prawdziwa zwinność (Agile) polega na zdolności do reagowania na zmiany dokładnie wtedy, gdy one następują.
 
 # 💡 Przykład zastosowania
+- **Zbyt duże specyfikacje:** Dokumentowanie funkcji, które zostaną zrealizowane za rok (marnotrawstwo analizy).
+- **Kod bez testów:** Pozorna oszczędność czasu, która generuje ogromne marnotrawstwo na etapie manualnego testowania i naprawiania błędów na produkcji.
+- **Nieużywane funkcje:** Implementacja skomplikowanego systemu raportowania, którego klienci ostatecznie nie potrzebują.
 
 ## 📌 Źródła
 

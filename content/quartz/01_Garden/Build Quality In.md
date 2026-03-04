@@ -11,12 +11,22 @@ aliases:
   - 
 ---
 # 🎯 Definicja
+**Build Quality In** (Wbudowywanie Jakości) to zasada wywodząca się z Lean i Toyota Production System (TPS), która polega na zapobieganiu błędom na etapie ich powstawania, zamiast wykrywania ich po zakończeniu procesu. Celem jest sprawienie, aby proces był odporny na błędy (poka-yoke).
 
 # 🔑 Kluczowe punkty
+- **Zapobieganie vs Wykrywanie:** Inspekcja mająca na celu znalezienie błędów odbywa się *po* procesie. Inspekcja mająca na celu zapobieganie odbywa się *w trakcie* lub *przed* procesem.
+- **Poka-yoke (Error Avoidance):** Japoński termin oznaczający unikanie błędów poprzez odpowiednie projektowanie systemów i narzędzi.
+- **Odpowiedzialność:** Jakość jest wbudowana w każdą czynność, a nie dodawana jako osobny etap kontroli na końcu linii produkcyjnej.
 
 # 📚 Szczegółowe wyjaśnienie
+Wbudowywanie jakości zmienia podejście do błędów. Zamiast liczyć na to, że kontrola jakości (QA) wyłapie usterki przed wysyłką do klienta, staramy się zaprojektować system tak, aby błąd był fizycznie lub logicznie niemożliwy do popełnienia.
+
+Przykładem z życia codziennego jest wtyczka USB, której nie da się włożyć odwrotnie, czy bezpieczniki różnicowoprądowe (GFCI), które chronią przed porażeniem. W oprogramowaniu brak walidacji formularza w czasie rzeczywistym jest dziś postrzegany jako błąd sam w sobie, ponieważ standardem stało się zapobieganie błędnemu wypełnieniu pól już na etapie wprowadzania danych.
 
 # 💡 Przykład zastosowania
+- **UI/UX:** Maski wprowadzania danych (np. tylko cyfry w polu numeru telefonu), listy rozwijane zamiast pól tekstowych tam, gdzie to możliwe.
+- **DevOps/Security:** Zasada najmniejszych uprawnień (**Principle of Least Privilege**). Użytkownik ma tylko takie uprawnienia, jakich potrzebuje. Dzięki temu nie może przypadkowo wykonać operacji, do której nie powinien mieć dostępu – system "wbudował" tę barierę, zapobiegając pomyłce.
+- **Testy automatyczne:** Integracja testów jednostkowych bezpośrednio w cyklu budowania aplikacji, co zapobiega przejściu błędnego kodu do dalszych etapów.
 
 ## 📌 Źródła
 

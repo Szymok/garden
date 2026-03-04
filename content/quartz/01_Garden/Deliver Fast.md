@@ -11,12 +11,22 @@ aliases:
   - 
 ---
 # 🎯 Definicja
+**Szybkie Dostarczanie** (Deliver Fast) to zasada Lean, która nakazuje dostarczanie wartości w sposób wczesny i częsty. Celem nie jest pośpiech, ale jak najszybsze uzyskanie informacji zwrotnej (feedbacku) od użytkownika i rynku.
 
 # 🔑 Kluczowe punkty
+- **Wcześnie (Early):** Umożliwia feedback. Nawet niefunkcjonalna makieta pozwala zweryfikować założenia i uporządkować procesy (system dostarczania, kontrola wersji).
+- **Często (Often):** Zmiana cyklu z kwartalnego na tygodniowy drastycznie zmniejsza presję. Jeśli funkcja nie jest gotowa, może poczekać tydzień, a nie trzy miesiące.
+- **"Jeśli boli, rób to częściej":** Jeśli wdrożenie jest stresujące i trudne, należy je zautomatyzować i powtarzać tak często, aby stało się rutyną.
 
 # 📚 Szczegółowe wyjaśnienie
+Szybkie dostarczanie wynika bezpośrednio z zasad tworzenia wiedzy i odraczania zobowiązań. Przejście na częste wydania wymusza zmianę sposobu pracy – nie można robić rzeczy "tak samo, tylko szybciej". Trzeba robić rzeczy inaczej: automatyzować to, co wcześniej robiono ręcznie, i rezygnować z elementów, które nie są niezbędne.
+
+Częste dostarczanie eliminuje marnotrawstwo czasu poświęcanego na przygotowanie ogromnych, rzadkich wydań, które niosą ze sobą ogromne ryzyko błędu i stresu.
 
 # 💡 Przykład zastosowania
+- **Weekly Release vs Quarterly Release:** W cyklu tygodniowym błędy są mniejsze, łatwiejsze do naprawy, a procesy wdrożeniowe muszą być w pełni zautomatyzowane, co podnosi jakość.
+- **MVP (Minimum Viable Product):** Wypuszczenie podstawowej wersji funkcji, aby sprawdzić, czy klienci w ogóle jej potrzebują, zanim zainwestuje się miesiące pracy w pełne rozwiązanie.
+- **Automatyczne CI/CD:** System, który po każdym pushu do repozytorium buduje i testuje kod, dostarczając natychmiastowej wiedzy o jego stanie.
 
 ## 📌 Źródła
 

@@ -11,12 +11,22 @@ aliases:
   - 
 ---
 # 🎯 Definicja
+**Odroczone Zobowiązanie** (Defer Commitment) to zasada Lean polegająca na opóźnianiu nieodwracalnych decyzji tak długo, jak to możliwe, aby podejmować je w oparciu o jak najpełniejszą wiedzę.
 
 # 🔑 Kluczowe punkty
+- **Decyzje Odwracalne vs Nieodwracalne:** Kluczem jest rozróżnienie tych dwóch typów. Decyzje nieodwracalne wiążą się z długofalowymi konsekwencjami, więc chcemy je odsuwać w czasie.
+- **BDUF (Big Design Upfront):** Procesy projektowania wszystkiego na samym początku wymuszają wczesne zobowiązania przy wysokiej niepewności, co drastycznie zmniejsza przewidywalność projektu.
+- **Budowanie Wiedzy:** Proces tworzenia produktu to proces zbierania informacji potrzebnych do podjęcia właściwych decyzji. Im później podejmiemy decyzję, tym lepszą wiedzą dysponujemy.
 
 # 📚 Szczegółowe wyjaśnienie
+Wczesne planowanie i składanie obietnic (predykcje) paradoksalnie zmniejsza przewidywalność sukcesu, ponieważ są one oparte na najmniejszym możliwym poziomie wiedzy (początek projektu).
+
+Warto preferować wybory odwracalne. Jeśli mamy dwie opcje o podobnej wadze, zawsze lepiej wybrać tę, którą łatwiej będzie zmienić w przyszłości. Pozwala to na zachowanie dynamiki pracy bez "ugrzęźnięcia" w błędnych decyzjach podjętych zbyt wcześnie.
 
 # 💡 Przykład zastosowania
+- **Amazon i Zappos:** Ich sukces opiera się na łatwości zwrotów i refundacji. Klient może podjąć decyzję o zakupie (zobowiązanie), wiedząc, że jest ona odwracalna. Bez tego mechanizmu sprzedaż byłaby znacznie trudniejsza.
+- **Architektura oprogramowania:** Wybór konkretnej bazy danych lub frameworka można czasem odroczyć poprzez stosowanie warstw abstrakcji, co pozwala najpierw skupić się na logice biznesowej.
+- **Ubezpieczenie podróży:** Opłata za możliwość rezygnacji to w praktyce kupowanie "odwracalności" decyzji o wyjeździe.
 
 ## 📌 Źródła
 

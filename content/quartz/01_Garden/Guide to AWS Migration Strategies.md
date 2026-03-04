@@ -11,12 +11,24 @@ aliases:
   - 
 ---
 # 🎯 Definicja
+Migracja do AWS to proces przenoszenia aplikacji i danych do chmury w celu zwiększenia elastyczności, skalowalności i redukcji kosztów. Istnieje kilka strategii dopasowanych do różnych potrzeb biznesowych.
 
 # 🔑 Kluczowe punkty
+- **Rehost (Lift and Shift):** Przeniesienie aplikacji bez zmian w architekturze. Szybkie i niskie ryzyko.
+- **Replatform:** Wprowadzenie niewielkich optymalizacji (np. zmiana własnej bazy na usługę zarządzaną RDS), ale trzon aplikacji pozostaje bez zmian.
+- **Refactor:** Całkowita przebudowa aplikacji w celu pełnego wykorzystania zalet chmury (mikrousługi, autoskalowanie).
 
 # 📚 Szczegółowe wyjaśnienie
+Wybór strategii zależy od:
+1.  **Złożoności aplikacji:** Czy łatwo ją przenieść "jeden do jednego", czy wymaga przeprojektowania?
+2.  **Celów biznesowych:** Czy priorytetem jest szybkość migracji, oszczędność kosztów czy innowacyjność?
+3.  **Budżetu i zasobów:** Jakie środki możemy przeznaczyć na migrację w danej chwili?
+4.  **Zgodności i ryzyka:** Czy przepisy wymagają specyficznych metod zabezpieczenia danych?
 
 # 💡 Przykład zastosowania
+- **Rehost:** Firma musi szybko zamknąć własne centrum danych i przenosi maszyny wirtualne do EC2 bez żadnych modyfikacji.
+- **Replatform:** Podczas migracji firma decyduje się zastąpić lokalny serwer MySQL usługą Amazon RDS, aby pozbyć się zadań administracyjnych.
+- **Refactor:** Przerobienie monolitycznej aplikacji na architekturę opartą o funkcje Lambda i kontenery, aby płacić tylko za faktyczne zużycie zasobów i łatwiej wdrażać nowe funkcje.
 
 ## 📌 Źródła
 

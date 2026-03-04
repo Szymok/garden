@@ -11,12 +11,26 @@ aliases:
   - 
 ---
 # 🎯 Definicja
+**AWS Cloud Adoption Framework (CAF)** to ustrukturyzowane podejście pomagające organizacjom płynnie i bezpiecznie przenieść swoje operacje do chmury. Framework ten pozwala zsynchronizować technologiczną zmianę z celami biznesowymi firmy.
 
 # 🔑 Kluczowe punkty
+- **Sześć perspektyw CAF:**
+  1. **Biznes:** Koncentracja na wynikach i wartości biznesowej.
+  2. **Ludzie:** Rozwój umiejętności, zmiana ról i struktury organizacji.
+  3. **Governance (Zarządzanie):** Zgodność, kontrola i zarządzanie ryzykiem.
+  4. **Platforma:** Architektura infrastruktury i aplikacji.
+  5. **Bezpieczeństwo:** Tożsamość, dostęp i ochrona danych.
+  6. **Operacje:** Wydajność operacyjna i odporność systemów.
 
 # 📚 Szczegółowe wyjaśnienie
+Migracja do chmury to nie tylko kwestia technologii (jak przeniesienie baz danych z on-premise do RDS), ale przede wszystkim strategiczna decyzja biznesowa. Firmy decydują się na ten krok, ponieważ własne centra danych stają się zbyt wolne, drogie i ograniczają innowacyjność (np. konieczność ręcznego patchowania serwerów o 2 nad ranem).
+
+CAF minimalizuje zakłócenia w trakcie transformacji, dbając o to, by krytyczne systemy działały nieprzerwanie podczas przenoszenia ich do nowoczesnych usług chmurowych.
 
 # 💡 Przykład zastosowania
+- **Modernizacja baz danych:** Migracja lokalnych systemów transakcyjnych do Amazon RDS, co pozwala na automatyczne skalowanie i łatwiejszą konserwację.
+- **Przekwalifikowanie zespołu:** Wykorzystanie perspektywy "Ludzie" do zaplanowania szkoleń z AWS dla dotychczasowych administratorów serwerów fizycznych.
+- **Optymalizacja kosztów:** Perspektywa "Biznes" pomaga wyliczyć oszczędności wynikające z rezygnacji z utrzymywania własnych klimatyzowanych pomieszczeń serwerowych.
 
 ## 📌 Źródła
 
