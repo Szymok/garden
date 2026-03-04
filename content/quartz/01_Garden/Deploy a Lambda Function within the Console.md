@@ -11,12 +11,24 @@ aliases:
   - 
 ---
 # 🎯 Definicja
+**Wdrażanie funkcji Lambda przez Konsolę AWS** to najprostszy sposób na uruchomienie kodu w modelu serverless bez konieczności konfigurowania lokalnych narzędzi CLI czy potoków CI/CD. Pozwala na szybkie przetestowanie logiki w chmurze.
 
 # 🔑 Kluczowe punkty
+- **Brak serwerów:** Nie musisz martwić się o aprowizację czy skalowanie – AWS zajmuje się tym automatycznie.
+- **Konfiguracja roli (IAM):** Lambda potrzebuje uprawnień do logowania (CloudWatch Logs) oraz dostępu do innych zasobów.
+- **Wybór środowiska:** Możesz zacząć od zera ("Author from scratch"), użyć gotowego szablonu ("Blueprint") lub obrazu kontenera.
 
 # 📚 Szczegółowe wyjaśnienie
+Proces wdrażania w konsoli obejmuje kilka kroków:
+1.  **Wybór Dashboardu:** Przejście do usługi Lambda i wybranie "Create function".
+2.  **Podstawowe informacje:** Nadanie nazwy funkcji oraz wybór runtime'u (np. Python 3.13) i architektury (np. x86_64).
+3.  **Uprawnienia:** AWS domyślnie tworzy rolę wykonawczą, która umożliwia przesyłanie logów do CloudWatch, co jest kluczowe dla debugowania.
+4.  **Opcje dodatkowe:** Możliwość włączenia adresu URL funkcji (Function URL), tagowania czy podpięcia do VPC w celu dostępu do prywatnych zasobów.
 
 # 💡 Przykład zastosowania
+- **Prosty "Hello World":** Utworzenie funkcji w Pythonie, która zwraca powitanie, aby sprawdzić, czy system działa.
+- **Szybkie prototypowanie:** Napisanie małego skryptu w edytorze wbudowanym w konsolę, aby przetworzyć zdarzenie z S3 lub API Gateway bez budowania całego środowiska deweloperskiego.
+- **Testowanie uprawnień:** Szybka weryfikacja, czy dana rola IAM pozwala na wykonanie konkretnej operacji wewnątrz funkcji.
 
 ## 📌 Źródła
 

@@ -11,12 +11,23 @@ aliases:
   - 
 ---
 # 🎯 Definicja
+Strategia przygotowania do egzaminu AWS w zakresie ram adopcji chmury (CAF), usług zarządzanych oraz strategii migracyjnych. Skupia się na praktycznym zrozumieniu scenariuszy, a nie tylko na zapamiętywaniu terminów.
 
 # 🔑 Kluczowe punkty
+- **Sześć perspektyw CAF:** Biznes, Ludzie, Governance (zarządzanie), Platformy, Bezpieczeństwo i Operacje.
+- **Strategie Migracyjne (3 R's):** Rehost (szybki lift-and-shift), Replatform (lekkie optymalizacje), Refactor (pełna przebudowa).
+- **Narzędzia migracji danych:** AWS Snowball (offline, duże wolumeny), AWS DMS (online, replikacja baz danych).
+- **Analiza scenariuszy:** Egzamin testuje umiejętność doboru odpowiedniej usługi lub ścieżki migracji do konkretnego problemu biznesowego.
 
 # 📚 Szczegółowe wyjaśnienie
+Kluczem do sukcesu jest zrozumienie, kiedy użyć konkretnego narzędzia w zależności od ograniczeń:
+- Jeśli masz ograniczoną przepustowość łącza i ogromne ilości danych (terabajty/petabajty) -> wybierz **AWS Snowball**.
+- Jeśli musisz zminimalizować czas przestoju bazy danych podczas przenoszenia -> wybierz **AWS DMS**.
+- Jeśli priorytetem jest czas i niski koszt początkowy migracji -> wybierz **Rehost**.
 
 # 💡 Przykład zastosowania
+- **Case Study:** Firma chce przenieść swoją bazę SQL Server do chmury, ale nie chce zmieniać architektury aplikacji i musi to zrobić w weekend. Rozwiązanie: **Replatform** z użyciem **AWS DMS**, aby zsynchronizować dane w czasie rzeczywistym przed przełączeniem.
+- **Pytanie o CAF:** Która perspektywa CAF zajmuje się umiejętnościami pracowników i strukturą organizacyjną? Odpowiedź: **Ludzie (People)**.
 
 ## 📌 Źródła
 

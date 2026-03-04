@@ -11,12 +11,22 @@ aliases:
   - 
 ---
 # 🎯 Definicja
+Koncepcja **Lean** (szczupłe zarządzanie) wywodzi się z Japonii, z systemu produkcyjnego Toyoty (TPS). Jej fundamentem jest eliminacja marnotrawstwa poprzez umieszczenie człowieka i jego potencjału w centrum procesów przemysłowych.
 
 # 🔑 Kluczowe punkty
+- **Początki:** Sakichi Toyoda (XIX w.) obserwował swoją matkę przy krosnach i zauważył zbędne ruchy oraz powtarzalność, które można było zoptymalizować.
+- **Podejście humanistyczne:** Fundamentem Lean jest uwalnianie potencjału ludzkiego poprzez usuwanie czynności, które nie dodają wartości.
+- **Ewolucja:** Idee Sakichiego kontynuował jego syn Kiichiro, tworząc systemy, które stały się podstawą rewolucji przemysłowej w Japonii.
 
 # 📚 Szczegółowe wyjaśnienie
+Lean narodził się z analizy pracy manualnej (tkania), gdzie Sakichi Toyoda – uznawany za ojca japońskiej rewolucji przemysłowej – stworzył pierwsze automatyczne krosna parowe. Choć początkowo były one zawodne, przez dekady były udoskonalane, co doprowadziło do powstania giganta motoryzacyjnego.
+
+W kontekście oprogramowania (Lean Software Development), zasady te przekładają się na szukanie marnotrawstwa w procesie tworzenia kodu, komunikacji i dostarczania wartości klientowi.
 
 # 💡 Przykład zastosowania
+- **Analiza ruchów jałowych:** Tak jak Sakichi widział zbędne ruchy przy krosnach, tak w IT szukamy zbędnych spotkań, zbyt długich procesów zatwierdzania (approval) czy przełączania kontekstu między zadaniami.
+- **Automatyzacja:** Zastępowanie powtarzalnych, nudnych czynności (np. manualne testy regresji) skryptami, co uwalnia czas inżynierów na kreatywne rozwiązywanie problemów.
+- **Centrum procesów:** Projektowanie systemów CI/CD tak, aby wspierały dewelopera, a nie stanowiły dla niego przeszkodę.
 
 ## 📌 Źródła
 

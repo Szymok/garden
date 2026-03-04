@@ -11,12 +11,22 @@ aliases:
   - 
 ---
 # 🎯 Definicja
+**Tworzenie Jakości w kontekście Lean** to podejście do zarządzania projektami i procesami (w tym DevOps), które skupia się na praktycznym redukowaniu marnotrawstwa i szacunku do ludzi, wykorzystując analityczne metody poprawy efektywności.
 
 # 🔑 Kluczowe punkty
+- **Analiza Pareto (80/20):** 80% problemów (defektów) wynika z 20% przyczyn. Największy zysk z wdrożenia DevOps daje skupienie się na tym wąskim gardle.
+- **"Złe dzielnice" kodu:** Większość błędów w systemie zazwyczaj pochodzi z jednego, konkretnego obszaru kodu, którego wszyscy boją się modyfikować (fear-driven development). To tam należy zacząć poprawę jakości.
+- **Szacunek do ludzi jako priorytet:** Jeśli programista nie może debugować kodu lokalnie, jego praca jest wolna i frustrująca. Poprawa narzędzi pracy to forma szacunku i sposób na jakość.
 
 # 📚 Szczegółowe wyjaśnienie
+Wdrażanie jakości w Lean nie polega na dodawaniu skomplikowanych procedur, ale na ułatwianiu pracy. Przykładem marnotrawstwa i braku szacunku jest sytuacja, w której wdraża się zaawansowaną automatyzację wdrożeń (deployment automation), podczas gdy deweloperzy wciąż zmagają się z podstawowymi problemami, jak brak możliwości uruchomienia środowiska na własnym komputerze.
+
+Jakość wynika z empatii wobec użytkowników systemu – zarówno końcowych klientów, jak i współpracowników (np. inżynierów wsparcia). Dostarczenie im narzędzi "pierwszej klasy" do rozwiązywania problemów przekłada się na lepszą jakość całego produktu.
 
 # 💡 Przykład zastosowania
+- **Priorytetyzacja zgłoszeń od Supportu:** Traktowanie uwag inżynierów wsparcia dotyczących interfejsu administracyjnego jako priorytetu. Dzięki temu szybciej i lepiej obsługują oni klientów.
+- **Optymalizacja środowiska lokalnego:** Skupienie wysiłków na tym, aby każdy deweloper mógł łatwo i szybko uruchomić oraz debugować aplikację u siebie, co drastycznie zmniejsza liczbę błędów trafiających do repozytorium.
+- **Refaktoryzacja "trudnych" modułów:** Identyfikacja najbardziej awaryjnego modułu w systemie i poświęcenie czasu na jego uporządkowanie, zamiast ciągłego "łatania" go na szybko.
 
 ## 📌 Źródła
 

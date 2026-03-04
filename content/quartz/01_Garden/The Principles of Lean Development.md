@@ -11,12 +11,22 @@ aliases:
   - 
 ---
 # 🎯 Definicja
+**Zasady Rozwoju Lean** (Lean Development) skupiają się na maksymalizacji wartości poprzez systematyczną eliminację marnotrawstwa. Głównym założeniem jest to, że dążenie do eliminacji marnotrawstwa naturalnie prowadzi do zwiększenia szybkości dostarczania.
 
 # 🔑 Kluczowe punkty
+- **Marnotrawstwo (Waste):** To "główny diabeł" w praktykach Lean. Wszystko, co nie dodaje wartości, jest marnotrawstwem.
+- **Eliminacja marnotrawstwa = Szybkość:** Jeśli celujesz w szybkość, możesz zyskać szybkość, ale dostaniesz też marnotrawstwo. Jeśli celujesz w eliminację marnotrawstwa, zyskasz szybkość jako skutek uboczny.
+- **Przesuwanie wykrywania błędów (Shift Left):** Im wcześniej wykryjesz błąd (np. podczas pisania kodu, a nie po wdrożeniu przez klienta), tym mniejszy jest koszt jego naprawy.
 
 # 📚 Szczegółowe wyjaśnienie
+Koszt błędu rośnie drastycznie wraz z czasem jego wykrycia. Błąd znaleziony przez klienta to potężny koszt wizerunkowy i operacyjny. Błąd znaleziony na etapie code review jest tani. Najtańszy jest błąd, który programista wyłapie jeszcze przed jego popełnieniem – poprzez napisanie najpierw testu (Test-First Development).
+
+Pisanie kodu "test-first" zmusza do skupienia się na tym, czego możemy być pewni, i sprawia, że kod staje się prostszy i bardziej modularny.
 
 # 💡 Przykład zastosowania
+- **Test-Driven Development (TDD):** Pisanie testu przed implementacją funkcji, co eliminuje błędy na najwcześniejszym możliwym etapie.
+- **Code Review:** Sprawdzanie kodu krótko po commicie, co ogranicza rozprzestrzenianie się błędów w organizacji.
+- **Automatyczne testy integracyjne:** Zamiast kosztownych testów manualnych przed każdym wydaniem, co drastycznie skraca pętlę zwrotną.
 
 ## 📌 Źródła
 

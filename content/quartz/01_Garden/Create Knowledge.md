@@ -11,12 +11,22 @@ aliases:
   - 
 ---
 # 🎯 Definicja
+**Tworzenie Wiedzy** (Create Knowledge) to zasada Lean polegająca na systematycznym budowaniu pewności co do poprawności i jakości tworzonego oprogramowania. Wiedza ta nie jest tylko opinią, ale udokumentowanym faktem potwierdzonym przez dowody (np. testy automatyczne).
 
 # 🔑 Kluczowe punkty
+- **Wartość Pewności:** Często niedoceniana w technologii. Twierdzenie "ten kod działa" różni się od "jest pewne, że ten kod działa". To drugie to wiedza o wiedzy.
+- **Minimalizacja roli człowieka w testach:** Testowanie manualne jest ograniczone – po każdej naprawie błędu tester musi zaczynać od nowa. Automatyzacja pozwala utrzymać wiedzę o poprawności kodu przy każdym uruchomieniu.
+- **Akumulacja dowodów:** Wiedzę o gotowości wydania (release) buduje się poprzez sumę dowodów: testy automatyczne, code review, udane buildy, testy obciążeniowe.
 
 # 📚 Szczegółowe wyjaśnienie
+Tworzenie oprogramowania jest przewidywalnie nieprzewidywalne. Kultura wielu organizacji ma trudność z zaakceptowaniem faktu, że niespodzianki i błędy są nieuniknione. Zamiast udawać, że wszystko jest pod kontrolą, należy tworzyć systemy, które generują wiedzę o stanie faktycznym.
+
+W inżynierii mechanicznej (np. budowie mostu) test obciążenia 100 kg i 200 kg pozwala założyć, że 150 kg też zadziała. W oprogramowaniu tak nie jest – błąd może wystąpić w dowolnym, odizolowanym punkcie. Dlatego tworzenie wiedzy poprzez testy musi być ciągłe i powtarzalne.
 
 # 💡 Przykład zastosowania
+- **Automatyzacja testów:** Zamiast polegać na pamięci programisty, testy jednostkowe i integracyjne "zapisują" wiedzę o tym, jak system powinien się zachowywać.
+- **Proces Pull Request:** Wymóg pomyślnego buildu i testów przed mergem to mechanizm tworzenia wiedzy o jakości nowej funkcji.
+- **Monitoring i Logowanie:** Zbieranie danych z produkcji pozwala tworzyć wiedzę o tym, jak użytkownicy faktycznie korzystają z systemu i gdzie występują błędy.
 
 ## 📌 Źródła
 

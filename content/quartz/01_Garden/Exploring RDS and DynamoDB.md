@@ -11,12 +11,22 @@ aliases:
   - 
 ---
 # 🎯 Definicja
+AWS oferuje dwie główne zarządzalne usługi bazodanowe: **Amazon RDS** (relacyjna) oraz **Amazon DynamoDB** (NoSQL). Obie zdejmują z użytkownika ciężar zarządzania infrastrukturą, kopiami zapasowymi i skalowaniem.
 
 # 🔑 Kluczowe punkty
+- **Amazon RDS:** Obsługuje popularne silniki SQL (MySQL, PostgreSQL, SQL Server, Oracle). Idealna do tradycyjnych danych relacyjnych.
+- **Amazon DynamoDB:** Szybka i elastyczna baza NoSQL o wysokiej wydajności, doskonała dla nowoczesnych aplikacji wymagających niskich opóźnień.
+- **Wysoka dostępność:** RDS oferuje wdrożenia Multi-AZ (automatyczny failover), natomiast DynamoDB replikuje dane domyślnie.
 
 # 📚 Szczegółowe wyjaśnienie
+- **Automatyzacja w RDS:** Usługa zajmuje się rutynowymi zadaniami, takimi jak patchowanie systemu operacyjnego, robienie backupów (snapshots) oraz skalowanie mocy obliczeniowej.
+- **Read Replicas:** RDS pozwala tworzyć kopie bazy tylko do odczytu, co odciąża główną bazę w przypadku dużego ruchu analitycznego lub raportowego.
+- **Wydajność DynamoDB:** Jako usługa serverless, DynamoDB skaluje się automatycznie, radząc sobie z ogromną liczbą żądań na sekundę przy minimalnych opóźnieniach.
 
 # 💡 Przykład zastosowania
+- **RDS dla e-commerce:** Przechowywanie danych o zamówieniach i klientach w relacyjnej bazie (np. PostgreSQL) ze względu na potrzebę spójności transakcyjnej.
+- **DynamoDB dla gier/social media:** Przechowywanie wyników graczy lub sesji użytkowników, gdzie kluczowa jest prędkość zapisu i odczytu przy dużej skali.
+- **Read Replicas dla analityki:** Skierowanie ruchu z raportów PowerBI do repliki RDS, aby nie spowalniać działania głównego sklepu internetowego.
 
 ## 📌 Źródła
 
