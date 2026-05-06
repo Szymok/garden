@@ -1,37 +1,53 @@
-## 🎯 Definicja
+﻿---
+title: SQL Server 2025 — Wbudowane funkcje AI i wyszukiwanie wektorowe
+created: 2026-05-06
+status: 🌱 draft
+category: AI & ML
+difficulty: średni
+language: pl
+tags:
+  - sql-server
+  - vector-search
+  - rag
+  - ai
+  - t-sql
+aliases:
+  - SQL Server AI Features
+---
+## ðŸŽ¯ Definicja
 
-SQL Server 2025 wprowadza natywne wsparcie dla sztucznej inteligencji, integrując **wyszukiwanie wektorowe** i mechanizmy **RAG (Retrieval-Augmented Generation)** bezpośrednio z silnikiem bazy danych. Umożliwia to programistom wykonywanie zapytań semantycznych (opartych na znaczeniu, a nie słowach kluczowych) przy użyciu Transact-SQL (T-SQL) na danych przechowywanych lokalnie (on-premise).
+SQL Server 2025 wprowadza natywne wsparcie dla sztucznej inteligencji, integrujÄ…c **wyszukiwanie wektorowe** i mechanizmy **RAG (Retrieval-Augmented Generation)** bezpoÅ›rednio z silnikiem bazy danych. UmoÅ¼liwia to programistom wykonywanie zapytaÅ„ semantycznych (opartych na znaczeniu, a nie sÅ‚owach kluczowych) przy uÅ¼yciu Transact-SQL (T-SQL) na danych przechowywanych lokalnie (on-premise).
 
-## 🔑 Kluczowe punkty
+## ðŸ”‘ Kluczowe punkty
 
 - Wprowadzenie **natywnego typu danych `vector`** oraz indeksu **`DiskANN`** do ultra-szybkiego, semantycznego przeszukiwania wektorowego.
     
-- Możliwość budowania **rozwiązań RAG** (Retrieval-Augmented Generation) bezpośrednio w SQL Server, pozwalając na zadawanie pytań w języku naturalnym do lokalnych danych.
+- MoÅ¼liwoÅ›Ä‡ budowania **rozwiÄ…zaÅ„ RAG** (Retrieval-Augmented Generation) bezpoÅ›rednio w SQL Server, pozwalajÄ…c na zadawanie pytaÅ„ w jÄ™zyku naturalnym do lokalnych danych.
     
-- Integracja z T-SQL: Wyszukiwanie wektorowe jest dostępne z poziomu standardowych zapytań SQL, co eliminuje potrzebę przepisywania istniejących aplikacji (np. na Pythona).
+- Integracja z T-SQL: Wyszukiwanie wektorowe jest dostÄ™pne z poziomu standardowych zapytaÅ„ SQL, co eliminuje potrzebÄ™ przepisywania istniejÄ…cych aplikacji (np. na Pythona).
     
-- Elastyczność modeli: Możliwość łączenia się z modelami embeddingowymi w chmurze (np. przez Azure AI Foundry) lub **używania modeli lokalnych** (np. Llama), co zapewnia pełną suwerenność danych.
+- ElastycznoÅ›Ä‡ modeli: MoÅ¼liwoÅ›Ä‡ Å‚Ä…czenia siÄ™ z modelami embeddingowymi w chmurze (np. przez Azure AI Foundry) lub **uÅ¼ywania modeli lokalnych** (np. Llama), co zapewnia peÅ‚nÄ… suwerennoÅ›Ä‡ danych.
     
-- Pełna integracja z istniejącymi funkcjami **bezpieczeństwa SQL Server** (Row-Level Security, szyfrowanie, dynamiczne maskowanie, audyt).
+- PeÅ‚na integracja z istniejÄ…cymi funkcjami **bezpieczeÅ„stwa SQL Server** (Row-Level Security, szyfrowanie, dynamiczne maskowanie, audyt).
     
 
-## 📚 Szczegółowe wyjaśnienie
+## ðŸ“š SzczegÃ³Å‚owe wyjaÅ›nienie
 
-Tradycyjne wyszukiwanie tekstowe w SQL (np. za pomocą operatora `LIKE`) jest nieefektywne i bazuje na dopasowaniu bajtów, a nie na faktycznym znaczeniu tekstu. Full-Text Search jest lepszy, ale nadal ograniczony do słów kluczowych. SQL Server 2025 rozwiązuje ten problem, wprowadzając koncepcje znane z modeli GenAI.
+Tradycyjne wyszukiwanie tekstowe w SQL (np. za pomocÄ… operatora `LIKE`) jest nieefektywne i bazuje na dopasowaniu bajtÃ³w, a nie na faktycznym znaczeniu tekstu. Full-Text Search jest lepszy, ale nadal ograniczony do sÅ‚Ã³w kluczowych. SQL Server 2025 rozwiÄ…zuje ten problem, wprowadzajÄ…c koncepcje znane z modeli GenAI.
 
-Podstawą są **embeddingi** (wektoryzacja). Proces ten polega na przekształceniu dowolnych danych (tekstu, obrazu) za pomocą modelu LLM w wektor – wielowymiarową reprezentację liczbową jego znaczenia. Dwa teksty o podobnym znaczeniu, nawet jeśli używają różnych słów, będą miały podobne wektory w tej przestrzeni.
+PodstawÄ… sÄ… **embeddingi** (wektoryzacja). Proces ten polega na przeksztaÅ‚ceniu dowolnych danych (tekstu, obrazu) za pomocÄ… modelu LLM w wektor â€“ wielowymiarowÄ… reprezentacjÄ™ liczbowÄ… jego znaczenia. Dwa teksty o podobnym znaczeniu, nawet jeÅ›li uÅ¼ywajÄ… rÃ³Å¼nych sÅ‚Ã³w, bÄ™dÄ… miaÅ‚y podobne wektory w tej przestrzeni.
 
-Aby błyskawicznie przeszukiwać miliony takich wektorów, Microsoft zaimplementował nowy typ indeksu o nazwie **`DiskANN`**. Jest to struktura opracowana przez Microsoft Research, zoptymalizowana pod kątem dysków SSD, która pozwala na bardzo szybkie znajdowanie wektorów "najbliższych" (najbardziej podobnych) do wektora zapytania. Podobieństwo mierzone jest zazwyczaj za pomocą **miary cosinusowej** (cosine similarity).
+Aby bÅ‚yskawicznie przeszukiwaÄ‡ miliony takich wektorÃ³w, Microsoft zaimplementowaÅ‚ nowy typ indeksu o nazwie **`DiskANN`**. Jest to struktura opracowana przez Microsoft Research, zoptymalizowana pod kÄ…tem dyskÃ³w SSD, ktÃ³ra pozwala na bardzo szybkie znajdowanie wektorÃ³w "najbliÅ¼szych" (najbardziej podobnych) do wektora zapytania. PodobieÅ„stwo mierzone jest zazwyczaj za pomocÄ… **miary cosinusowej** (cosine similarity).
 
-Architektura RAG działa wewnątrz SQL Server. Gdy użytkownik zadaje pytanie w języku naturalnym (np. "szukam odzieży sportowej"), jest ono najpierw przekształcane w wektor (embedding) za pomocą wybranego modelu (lokalnego lub w chmurze). Następnie indeks `DiskANN` jest używany do błyskawicznego znalezienia najbardziej podobnych semantycznie rekordów (wektorów) w bazie danych. Na koniec te rekordy są zwracane jako wynik zapytania T-SQL. Co ważne, **to nie jest "trenowanie" modelu** – jest to zaawansowane, inteligentne wyszukiwanie.
+Architektura RAG dziaÅ‚a wewnÄ…trz SQL Server. Gdy uÅ¼ytkownik zadaje pytanie w jÄ™zyku naturalnym (np. "szukam odzieÅ¼y sportowej"), jest ono najpierw przeksztaÅ‚cane w wektor (embedding) za pomocÄ… wybranego modelu (lokalnego lub w chmurze). NastÄ™pnie indeks `DiskANN` jest uÅ¼ywany do bÅ‚yskawicznego znalezienia najbardziej podobnych semantycznie rekordÃ³w (wektorÃ³w) w bazie danych. Na koniec te rekordy sÄ… zwracane jako wynik zapytania T-SQL. Co waÅ¼ne, **to nie jest "trenowanie" modelu** â€“ jest to zaawansowane, inteligentne wyszukiwanie.
 
-## 💡 Przykład zastosowania
+## ðŸ’¡ PrzykÅ‚ad zastosowania
 
-Chcemy stworzyć semantyczną wyszukiwarkę produktów w sklepie internetowym, która rozumie intencje użytkownika.
+Chcemy stworzyÄ‡ semantycznÄ… wyszukiwarkÄ™ produktÃ³w w sklepie internetowym, ktÃ³ra rozumie intencje uÅ¼ytkownika.
 
-1. **Struktura:** Do tabeli `Products` dodajemy nową kolumnę `DescriptionVector vector(1536)`. Rozmiar `1536` jest typowy dla modeli takich jak `text-embedding-ada-002` od OpenAI.
+1. **Struktura:** Do tabeli `Products` dodajemy nowÄ… kolumnÄ™ `DescriptionVector vector(1536)`. Rozmiar `1536` jest typowy dla modeli takich jak `text-embedding-ada-002` od OpenAI.
     
-2. **Embedding:** Tworzymy proces (np. trigger lub zadanie wsadowe), który dla każdego produktu wysyła jego opis (`Description`) do modelu embeddingowego. Zwrócony wektor zapisuje w kolumnie `DescriptionVector`.
+2. **Embedding:** Tworzymy proces (np. trigger lub zadanie wsadowe), ktÃ³ry dla kaÅ¼dego produktu wysyÅ‚a jego opis (`Description`) do modelu embeddingowego. ZwrÃ³cony wektor zapisuje w kolumnie `DescriptionVector`.
     
 3. **Indeks:** Tworzymy indeks wektorowy na tej kolumnie:
     
@@ -40,4 +56,4 @@ CREATE VECTOR INDEX idx_vector_desc
 ON Products(DescriptionVector) 
 WITH (ALGORITHM = DISKANN, METRIC = COSINE);
 ```
-**Zapytanie:** Użytkownik wpisuje w wyszukiwarkę frazę "coś na wycieczkę w góry". Aplikacja tworzy embedding dla tej frazy (`@query_vector`) i wykonuje zapytanie T-SQL, które wyszukuje najbardziej podobne produkty.
+**Zapytanie:** UÅ¼ytkownik wpisuje w wyszukiwarkÄ™ frazÄ™ "coÅ› na wycieczkÄ™ w gÃ³ry". Aplikacja tworzy embedding dla tej frazy (`@query_vector`) i wykonuje zapytanie T-SQL, ktÃ³re wyszukuje najbardziej podobne produkty.
