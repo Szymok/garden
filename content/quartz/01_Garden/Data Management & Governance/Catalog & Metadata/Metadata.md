@@ -1,1 +1,13 @@
-Metadata, also known as MD, is utilized to describe the data. It encompasses: • the shape of the data, indicating the number of columns in a table. additional descriptions of the data, specifying the content of the table such as people data, product data, etc. Metadata can include: • • Relations to other tables and metadata assets. Business descriptions. Owners of the data. Lineage information (data origin). Data quality and monitoring information. Sums and duplicates counts (profiling). Computed information (number of columns in the table).
+﻿---
+title: Metadata
+created: 2026-05-06
+status: 🌱 draft
+category: Data Governance
+difficulty: średni
+language: en
+tags:
+  - metadata
+  - data-catalog
+  - data-governance
+---
+Metadata, also known as MD, is utilized to describe the data. It encompasses: â€¢ the shape of the data, indicating the number of columns in a table. additional descriptions of the data, specifying the content of the table such as people data, product data, etc. Metadata can include: â€¢ â€¢ Relations to other tables and metadata assets. Business descriptions. Owners of the data. Lineage information (data origin). Data quality and monitoring information. Sums and duplicates counts (profiling). Computed information (number of columns in the table).

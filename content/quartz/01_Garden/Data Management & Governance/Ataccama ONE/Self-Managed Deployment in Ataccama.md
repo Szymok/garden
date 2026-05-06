@@ -1,3 +1,16 @@
+﻿---
+title: Self-Managed Deployment in Ataccama
+created: 2026-05-06
+status: 🌱 draft
+category: Data Governance
+difficulty: średni
+language: en
+tags:
+  - ataccama
+  - deployment
+  - ansible
+  - self-managed
+---
 - The automated deployment process aims to deploy a **customised Ataccama ONE Platform installation** onto **customer-provided infrastructure**.
 - This installation includes:
     - Monitoring tools

@@ -1,3 +1,16 @@
+﻿---
+title: Role of Ansible in Deployment
+created: 2026-05-06
+status: 🌱 draft
+category: DevOps
+difficulty: średni
+language: en
+tags:
+  - ansible
+  - deployment
+  - automation
+  - ataccama
+---
 - **Ansible** is an **open-source tool** designed for **deployment automation**.
 - It handles the **installation process**, which involves tasks such as copying Ataccama software packages and configuration.
 - The installation requires **configuration specific to your organisation's infrastructure**.

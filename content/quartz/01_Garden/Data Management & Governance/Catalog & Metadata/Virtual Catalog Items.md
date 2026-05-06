@@ -1,12 +1,25 @@
+﻿---
+title: Virtual Catalog Items
+created: 2026-05-06
+status: 🌱 draft
+category: Data Governance
+difficulty: średni
+language: en
+tags:
+  - ataccama
+  - virtual-catalog
+  - catalog-items
+  - data-quality
+---
 Contain all data assets and metadata that were loaded from registered data sources and connections. Might include additional metadata such as information about data quality, relationships, lineage, anomalies, etc.
 Create a subset of existing catalog items, Manually determine which parts of data to use. Remove unwanted records (old, not compliant etc).
 Populate additional con tent beforehand. Prepare values to be delivered in higher quality. Apply transformations to improve data usability and consumption in the web application.
 Merge business-relevant datasets. Normalize values using other tables. Join data coming from various definition types.
-All Virtual Catalog Items are accessible as any other Catalog Items in the Knowledge Catalog section. Virtual catalog items are defined as *Manually created" in the Knowledge Catalog section. VC's can also be accessed via the Knowledge catalog Sources <Selected Source» Workspace —i «Selected folder). Catalog items tab in each source reflects the number of virtual catalog items stored in it.
+All Virtual Catalog Items are accessible as any other Catalog Items in the Knowledge Catalog section. Virtual catalog items are defined as *Manually created" in the Knowledge Catalog section. VC's can also be accessed via the Knowledge catalog Sources <Selected SourceÂ» Workspace â€”i Â«Selected folder). Catalog items tab in each source reflects the number of virtual catalog items stored in it.
 How to create?
 Select Catalog Items main node using the ONE Explorer tab. AS part Of the process, select an existing catalog item(if applicable), Add or Remove Columns. Select a Workspace to store the VCJ.
 Edit the resulting component in the ONE explorer tab and add the necessary steps depending on the business scenario. Save and publish the component in the implemented state will apply the changes to the web application. The new virtual catalog itern is available in Catalog Items and in the source you had selected to store the VCI.
 
 Difference Between Typical & Virtual Catalog
-Typical Catalog Item Shows data entities accessed by data source connections defined in the ONE Web applicatiom Imports, profiles, and evaluates data in the as—is state without any applied modifications. IS created, evaluated and managed primarily in the ONE Web application interface. Provides live preview of data in the Data tab. Supports both Full and Sample profiling. Can be subjected to all available Checks
+Typical Catalog Item Shows data entities accessed by data source connections defined in the ONE Web applicatiom Imports, profiles, and evaluates data in the asâ€”is state without any applied modifications. IS created, evaluated and managed primarily in the ONE Web application interface. Provides live preview of data in the Data tab. Supports both Full and Sample profiling. Can be subjected to all available Checks
 Virtual Catalog Item Can be used to modify existing Catalog Items. Al lows the creation and combination of different Catalog Items regardless of their source/connection type. Is configured in the ONE Desktop and deployed to the web application, Doesn't provide preview of data in the data tab. Doesn't support Sample Profiling. Can't be used for structural checks in Monitoring projects.
