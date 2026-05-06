@@ -1,7 +1,7 @@
----
+﻿---
 title: Automated Deployment
 created: 2026-02-23
-status: 
+status: 🌱 draft
 category: 
 difficulty: 
 language: pl
@@ -10,38 +10,38 @@ tags:
 aliases:
   - 
 ---
-# 🎯 Definicja
+# ðŸŽ¯ Definicja
 
-**Automatyczne Wdrożenie** (Automated Deployment) to proces automatyzacji przenoszenia kodu z repozytorium na środowiska docelowe (testowe, stagingowe, produkcyjne). Jest to kluczowy element cyklu rozwoju oprogramowania, który ma na celu eliminację błędów ludzkich, skrócenie czasu wdrożenia i budowanie pewności co do jakości wydania.
+**Automatyczne WdroÅ¼enie** (Automated Deployment) to proces automatyzacji przenoszenia kodu z repozytorium na Å›rodowiska docelowe (testowe, stagingowe, produkcyjne). Jest to kluczowy element cyklu rozwoju oprogramowania, ktÃ³ry ma na celu eliminacjÄ™ bÅ‚Ä™dÃ³w ludzkich, skrÃ³cenie czasu wdroÅ¼enia i budowanie pewnoÅ›ci co do jakoÅ›ci wydania.
 
-# 🔑 Kluczowe punkty
+# ðŸ”‘ Kluczowe punkty
 
-*   **Pewność (Certainty):** Proces wdrożenia to proces budowania pewności, że funkcja jest gotowa do produkcji (testy -> PR -> review -> staging).
-*   **Nie pozwól, by doskonałe było wrogiem dobrego:** Jeśli pełna automatyzacja jest niemożliwa, zacznij od automatyzacji części procesu (np. 50%).
-*   **Redukcja konfiguracji:** Dążenie do uniformizacji ścieżek i parametrów; uproszczenie 10 punktów konfiguracji do 2-3 funkcji.
-*   **Infrastructure as Code (IaC):** Automatyczne aprowizowanie środowisk (np. za pomocą ARM w Azure) pozwala na testowanie w izolacji.
-*   **Środowisko stagingowe:** Kluczowe dla uzyskania informacji zwrotnej od ludzi przed ostatecznym wypchnięciem na produkcję.
+*   **PewnoÅ›Ä‡ (Certainty):** Proces wdroÅ¼enia to proces budowania pewnoÅ›ci, Å¼e funkcja jest gotowa do produkcji (testy -> PR -> review -> staging).
+*   **Nie pozwÃ³l, by doskonaÅ‚e byÅ‚o wrogiem dobrego:** JeÅ›li peÅ‚na automatyzacja jest niemoÅ¼liwa, zacznij od automatyzacji czÄ™Å›ci procesu (np. 50%).
+*   **Redukcja konfiguracji:** DÄ…Å¼enie do uniformizacji Å›cieÅ¼ek i parametrÃ³w; uproszczenie 10 punktÃ³w konfiguracji do 2-3 funkcji.
+*   **Infrastructure as Code (IaC):** Automatyczne aprowizowanie Å›rodowisk (np. za pomocÄ… ARM w Azure) pozwala na testowanie w izolacji.
+*   **Åšrodowisko stagingowe:** Kluczowe dla uzyskania informacji zwrotnej od ludzi przed ostatecznym wypchniÄ™ciem na produkcjÄ™.
 
-# 📚 Szczegółowe wyjaśnienie
+# ðŸ“š SzczegÃ³Å‚owe wyjaÅ›nienie
 
-Ręczne wdrożenia, szczególnie w złożonych systemach z wieloma zależnościami, stają się "czarną magią" znaną tylko nielicznym, co prowadzi do stresujących wdrożeń w piątki wieczorem. Automatyzacja rozwiązuje ten problem poprzez powtarzalność.
+RÄ™czne wdroÅ¼enia, szczegÃ³lnie w zÅ‚oÅ¼onych systemach z wieloma zaleÅ¼noÅ›ciami, stajÄ… siÄ™ "czarnÄ… magiÄ…" znanÄ… tylko nielicznym, co prowadzi do stresujÄ…cych wdroÅ¼eÅ„ w piÄ…tki wieczorem. Automatyzacja rozwiÄ…zuje ten problem poprzez powtarzalnoÅ›Ä‡.
 
-Proces ten wspiera koncepcję "tworzenia wiedzy" (creating knowledge) z podejścia Lean. Każdy krok (testy jednostkowe, buildy PR, code review, testy na stagingu) dostarcza dowodów na to, że kod działa poprawnie.
+Proces ten wspiera koncepcjÄ™ "tworzenia wiedzy" (creating knowledge) z podejÅ›cia Lean. KaÅ¼dy krok (testy jednostkowe, buildy PR, code review, testy na stagingu) dostarcza dowodÃ³w na to, Å¼e kod dziaÅ‚a poprawnie.
 
-Przejście do rozwiązań chmurowych (np. Azure Resource Manager) dodatkowo ułatwia ten proces, oferując gotowe narzędzia do skalowania, zarządzania infrastrukturą jako kodem oraz integrację systemów CI/CD (build engine, release system i target deployment).
+PrzejÅ›cie do rozwiÄ…zaÅ„ chmurowych (np. Azure Resource Manager) dodatkowo uÅ‚atwia ten proces, oferujÄ…c gotowe narzÄ™dzia do skalowania, zarzÄ…dzania infrastrukturÄ… jako kodem oraz integracjÄ™ systemÃ³w CI/CD (build engine, release system i target deployment).
 
-# 💡 Przykład zastosowania
+# ðŸ’¡ PrzykÅ‚ad zastosowania
 
 **Power Workflow:**
-1.  Interesariusz otwiera zgłoszenie (ticket).
+1.  Interesariusz otwiera zgÅ‚oszenie (ticket).
 2.  Deweloper tworzy branch i pisze testy jednostkowe.
 3.  Pull Request (PR) wyzwala build testowy.
-4.  Po zatwierdzeniu PR, kod trafia do głównej gałęzi.
-5.  Skrypt IaC automatycznie stawia czyste środowisko testowe.
-6.  System wdraża aplikację i powiadamia interesariusza o gotowości do testów akceptacyjnych.
+4.  Po zatwierdzeniu PR, kod trafia do gÅ‚Ã³wnej gaÅ‚Ä™zi.
+5.  Skrypt IaC automatycznie stawia czyste Å›rodowisko testowe.
+6.  System wdraÅ¼a aplikacjÄ™ i powiadamia interesariusza o gotowoÅ›ci do testÃ³w akceptacyjnych.
 
-## 📌 Źródła
+## ðŸ“Œ Å¹rÃ³dÅ‚a
 
-## 👽 Brudnopis
+## ðŸ‘½ Brudnopis
 
 The number 1 win is our build. Number 2 is getting automated execution of a test suite.

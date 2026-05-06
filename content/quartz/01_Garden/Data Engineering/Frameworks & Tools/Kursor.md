@@ -1,8 +1,8 @@
----
+﻿---
 
 title: Kursor (Cursor)  
 created: 2025-07-16  
-status:  
+status: 🌱 draft
 category: airbyte  
 difficulty: podstawowy  
 language: pl  
@@ -15,33 +15,33 @@ tags:
 - data engineering  
 aliases:
 - cursor
-- wskaźnik synchronizacji
+- wskaÅºnik synchronizacji
 
 ---
 
-# 🎯 Definicja
+# ðŸŽ¯ Definicja
 
-**Kursor (Cursor)** w inżynierii danych i narzędziach takich jak Airbyte to specjalny wskaźnik (pole) używany podczas synchronizacji przyrostowej, który umożliwia śledzenie, które rekordy danych zostały już zreplikowane między źródłem a celem. Pozwala to kopiować tylko nowe lub zaktualizowane rekordy w każdej iteracji procesu synchronizacji.
+**Kursor (Cursor)** w inÅ¼ynierii danych i narzÄ™dziach takich jak Airbyte to specjalny wskaÅºnik (pole) uÅ¼ywany podczas synchronizacji przyrostowej, ktÃ³ry umoÅ¼liwia Å›ledzenie, ktÃ³re rekordy danych zostaÅ‚y juÅ¼ zreplikowane miÄ™dzy ÅºrÃ³dÅ‚em a celem. Pozwala to kopiowaÄ‡ tylko nowe lub zaktualizowane rekordy w kaÅ¼dej iteracji procesu synchronizacji.
 
-# 🔑 Kluczowe punkty
+# ðŸ”‘ Kluczowe punkty
 
-- **Kursor śledzi postęp synchronizacji inkrementalnej** – zapamiętuje ostatni zreplikowany rekord na podstawie wybranego pola (np. `updated_at`).
-- **Znacząco optymalizuje przepływ danych** – zamiast pełnej replikacji, przesyłane są wyłącznie nowe/zmienione dane.
-- **Pole kursora powinno być monotonicznie rosnące** (np. data utworzenia/aktualizacji, numer sekwencyjny, id).
-- **Airbyte automatycznie używa wartości kursora w zapytaniach** do systemu źródłowego – pobierając tylko świeże rekordy.
-- **Synchronizacja oparta na kursorach** to standard w skalowalnych, efektywnych pipeline’ach ETL/ELT.
+- **Kursor Å›ledzi postÄ™p synchronizacji inkrementalnej** â€“ zapamiÄ™tuje ostatni zreplikowany rekord na podstawie wybranego pola (np. `updated_at`).
+- **ZnaczÄ…co optymalizuje przepÅ‚yw danych** â€“ zamiast peÅ‚nej replikacji, przesyÅ‚ane sÄ… wyÅ‚Ä…cznie nowe/zmienione dane.
+- **Pole kursora powinno byÄ‡ monotonicznie rosnÄ…ce** (np. data utworzenia/aktualizacji, numer sekwencyjny, id).
+- **Airbyte automatycznie uÅ¼ywa wartoÅ›ci kursora w zapytaniach** do systemu ÅºrÃ³dÅ‚owego â€“ pobierajÄ…c tylko Å›wieÅ¼e rekordy.
+- **Synchronizacja oparta na kursorach** to standard w skalowalnych, efektywnych pipelineâ€™ach ETL/ELT.
 
-# 📚 Szczegółowe wyjaśnienie
+# ðŸ“š SzczegÃ³Å‚owe wyjaÅ›nienie
 
-## Jak działa kursor w synchronizacji przyrostowej?
+## Jak dziaÅ‚a kursor w synchronizacji przyrostowej?
 
 1. **Pierwsza synchronizacja:**
-    - Airbyte pobiera wszystkie rekordy ze źródła i zapisuje najwyższą wartość kursora.
+    - Airbyte pobiera wszystkie rekordy ze ÅºrÃ³dÅ‚a i zapisuje najwyÅ¼szÄ… wartoÅ›Ä‡ kursora.
 2. **Kolejne synchronizacje:**
-    - Zapytania do źródła zawierają warunek na pole kursora, np. `WHERE updated_at > [ostatni zapisany kursor]`.
-    - Pobierane są jedynie zmienione lub świeżo dodane rekordy.
+    - Zapytania do ÅºrÃ³dÅ‚a zawierajÄ… warunek na pole kursora, np. `WHERE updated_at > [ostatni zapisany kursor]`.
+    - Pobierane sÄ… jedynie zmienione lub Å›wieÅ¼o dodane rekordy.
 
-**Przykład praktyczny:**
+**PrzykÅ‚ad praktyczny:**
 
 - Pole kursora: `updated_at` (timestamp).
 - Ostatnia synchronizacja: max(`updated_at`) = 2025-07-12 16:00.
@@ -49,44 +49,44 @@ aliases:
 
 ## Zalety stosowania kursora
 
-- Redukcja obciążenia sieci i systemów – nie przesyłasz duplikatów.
-- Szybsze przetwarzanie dużych zbiorów (np. w codziennych pipeline’ach BI).
-- Zmniejsza ryzyko pominięcia lub podwójnej replikacji rekordów (gdy pole kursora monotoniczne i unikalne).
-- Pozwala na ciągły streaming lub zaplanowane batchowe odświeżanie danych.
+- Redukcja obciÄ…Å¼enia sieci i systemÃ³w â€“ nie przesyÅ‚asz duplikatÃ³w.
+- Szybsze przetwarzanie duÅ¼ych zbiorÃ³w (np. w codziennych pipelineâ€™ach BI).
+- Zmniejsza ryzyko pominiÄ™cia lub podwÃ³jnej replikacji rekordÃ³w (gdy pole kursora monotoniczne i unikalne).
+- Pozwala na ciÄ…gÅ‚y streaming lub zaplanowane batchowe odÅ›wieÅ¼anie danych.
 
-## Wybór pola kursora
+## WybÃ³r pola kursora
 
-- Najlepiej sprawdza się kolumna typu data/godzina (`updated_at`, `created_at`), ale równie dobrze może to być rosnąca liczba (np. id).
-- Pole musi być odporne na cofanie się wartości i powinno jasno wskazywać kolejność “nowości” rekordu.
-- Źle dobrane pole kursora może skutkować utratą części danych lub ponowną replikacją tych samych rekordów.
+- Najlepiej sprawdza siÄ™ kolumna typu data/godzina (`updated_at`, `created_at`), ale rÃ³wnie dobrze moÅ¼e to byÄ‡ rosnÄ…ca liczba (np. id).
+- Pole musi byÄ‡ odporne na cofanie siÄ™ wartoÅ›ci i powinno jasno wskazywaÄ‡ kolejnoÅ›Ä‡ â€œnowoÅ›ciâ€ rekordu.
+- Å¹le dobrane pole kursora moÅ¼e skutkowaÄ‡ utratÄ… czÄ™Å›ci danych lub ponownÄ… replikacjÄ… tych samych rekordÃ³w.
 
-# 💡 Przykład zastosowania w Airbyte
+# ðŸ’¡ PrzykÅ‚ad zastosowania w Airbyte
 
-**Przykład 1:**  
-Synchronizacja bazy Postgres z hurtownią Snowflake:
+**PrzykÅ‚ad 1:**  
+Synchronizacja bazy Postgres z hurtowniÄ… Snowflake:
 
 - Pole kursor: `last_modified`
-- Airbyte rejestruje max(`last_modified`) po każdym tasku.
+- Airbyte rejestruje max(`last_modified`) po kaÅ¼dym tasku.
 - Przy kolejnym uruchomieniu pipeline, pobiera tylko rekordy gdzie `last_modified` > ostatni kursor.
 
-**Przykład 2:**  
-API do systemów SaaS (np. CRM):
+**PrzykÅ‚ad 2:**  
+API do systemÃ³w SaaS (np. CRM):
 
-- API często udostępnia pole `lastSyncToken` lub `since_timestamp`.
-- Airbyte automatycznie uzupełnia wartość kursora na podstawie poprzedniego eksportu.
+- API czÄ™sto udostÄ™pnia pole `lastSyncToken` lub `since_timestamp`.
+- Airbyte automatycznie uzupeÅ‚nia wartoÅ›Ä‡ kursora na podstawie poprzedniego eksportu.
 
-# 📌 Źródła
+# ðŸ“Œ Å¹rÃ³dÅ‚a
 
 - [https://airbyte.com/tutorials/incremental-data-synchronization](https://airbyte.com/tutorials/incremental-data-synchronization)
 - [https://docs.airbyte.com/understanding-airbyte/sync-modes/incremental](https://docs.airbyte.com/understanding-airbyte/sync-modes/incremental)
 - [https://docs.airbyte.com/connector-development/cursor-field](https://docs.airbyte.com/connector-development/cursor-field)
 - [https://mode.com/sql-tutorial/sql-cursors/](https://mode.com/sql-tutorial/sql-cursors/)
 
-# 👽 Brudnopis
+# ðŸ‘½ Brudnopis
 
-- Kursor = wskaźnik synchronizacji, zapisuje “do którego momentu przetworzono dane”
-- Standard nie tylko w Airbyte, ale też Fivetran, Informatica, Talend, Apache NiFi
+- Kursor = wskaÅºnik synchronizacji, zapisuje â€œdo ktÃ³rego momentu przetworzono daneâ€
+- Standard nie tylko w Airbyte, ale teÅ¼ Fivetran, Informatica, Talend, Apache NiFi
 - Typowe sytuacje: codzienne zasilanie DWH, inkrementalny monitoring zmian (CDC)
-- Wyzwaniem: typ pola, obsługa opóźnień (lag), duplikaty, soft-delete
-- “Kursor czasowy” preferowany, ale można używać niepowtarzalnego id
-- W Airbyte obsługa field cursor na poziomie connectora i konfigurowalna w UI
+- Wyzwaniem: typ pola, obsÅ‚uga opÃ³ÅºnieÅ„ (lag), duplikaty, soft-delete
+- â€œKursor czasowyâ€ preferowany, ale moÅ¼na uÅ¼ywaÄ‡ niepowtarzalnego id
+- W Airbyte obsÅ‚uga field cursor na poziomie connectora i konfigurowalna w UI

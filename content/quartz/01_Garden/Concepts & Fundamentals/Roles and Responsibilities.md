@@ -1,7 +1,7 @@
----
+﻿---
 title: Roles and Responsibilities
 created: 2026-02-23
-status: 
+status: 🌱 draft
 category: 
 difficulty: 
 language: pl
@@ -10,38 +10,38 @@ tags:
 aliases:
   - 
 ---
-# 🎯 Definicja
+# ðŸŽ¯ Definicja
 
-**Role i Odpowiedzialności** w Data Governance określają strukturę zarządzania danymi, w której każda osoba i grupa ma przypisane konkretne zadania, od wyznaczania strategii po codzienne dbanie o jakość i bezpieczeństwo konkretnych zbiorów informacji.
+**Role i OdpowiedzialnoÅ›ci** w Data Governance okreÅ›lajÄ… strukturÄ™ zarzÄ…dzania danymi, w ktÃ³rej kaÅ¼da osoba i grupa ma przypisane konkretne zadania, od wyznaczania strategii po codzienne dbanie o jakoÅ›Ä‡ i bezpieczeÅ„stwo konkretnych zbiorÃ³w informacji.
 
-# 🔑 Kluczowe punkty
+# ðŸ”‘ Kluczowe punkty
 
-*   **Komitet Ładu Danych (Data Governance Committee):** Organ decyzyjny zarządzający politykami, budżetem, ryzykiem i komunikacją.
-*   **Data Stewards (Opiekunowie danych):** Osoby stosujące zasady ładu wewnątrz jednostek biznesowych (np. Sales, HR, Finance).
-*   **Data Owners (Właściciele danych):** Osoby podejmujące ostateczne decyzje dotyczące konkretnych zbiorów danych, np. zatwierdzanie dostępu.
+*   **Komitet Åadu Danych (Data Governance Committee):** Organ decyzyjny zarzÄ…dzajÄ…cy politykami, budÅ¼etem, ryzykiem i komunikacjÄ….
+*   **Data Stewards (Opiekunowie danych):** Osoby stosujÄ…ce zasady Å‚adu wewnÄ…trz jednostek biznesowych (np. Sales, HR, Finance).
+*   **Data Owners (WÅ‚aÅ›ciciele danych):** Osoby podejmujÄ…ce ostateczne decyzje dotyczÄ…ce konkretnych zbiorÃ³w danych, np. zatwierdzanie dostÄ™pu.
 *   **Personel IT i DBA:** Techniczni wykonawcy polityk (szyfrowanie, maskowanie, retencja, backup).
-*   **Wiedza to wspólna odpowiedzialność:** Pracownicy biznesowi również są częścią łańcucha bezpieczeństwa i jakości.
+*   **Wiedza to wspÃ³lna odpowiedzialnoÅ›Ä‡:** Pracownicy biznesowi rÃ³wnieÅ¼ sÄ… czÄ™Å›ciÄ… Å‚aÅ„cucha bezpieczeÅ„stwa i jakoÅ›ci.
 
-# 📚 Szczegółowe wyjaśnienie
+# ðŸ“š SzczegÃ³Å‚owe wyjaÅ›nienie
 
-Struktura ról jest zazwyczaj hierarchiczna:
-1.  **Poziom Strategiczny:** Komitet (Dyrektor Ładu, przedstawiciele IT i Prawa) wyznacza kierunek i dba o zgodność z celami zarządu.
-2.  **Poziom Taktyczny:** Data Stewards dbają o to, by zasady były stosowane w ich działach. Muszą znać specyfikę danych w swojej domenie.
-3.  **Poziom Operacyjny:** Data Owners zarządzają konkretnymi datasetami. Wiedzą, co zawierają dane i kto powinien mieć do nich wgląd.
-4.  **Wsparcie Techniczne:** Administratorzy Baz Danych (DBA) wdrażają techniczne środki kontroli, takie jak maskowanie danych czy monitorowanie dostępów.
+Struktura rÃ³l jest zazwyczaj hierarchiczna:
+1.  **Poziom Strategiczny:** Komitet (Dyrektor Åadu, przedstawiciele IT i Prawa) wyznacza kierunek i dba o zgodnoÅ›Ä‡ z celami zarzÄ…du.
+2.  **Poziom Taktyczny:** Data Stewards dbajÄ… o to, by zasady byÅ‚y stosowane w ich dziaÅ‚ach. MuszÄ… znaÄ‡ specyfikÄ™ danych w swojej domenie.
+3.  **Poziom Operacyjny:** Data Owners zarzÄ…dzajÄ… konkretnymi datasetami. WiedzÄ…, co zawierajÄ… dane i kto powinien mieÄ‡ do nich wglÄ…d.
+4.  **Wsparcie Techniczne:** Administratorzy Baz Danych (DBA) wdraÅ¼ajÄ… techniczne Å›rodki kontroli, takie jak maskowanie danych czy monitorowanie dostÄ™pÃ³w.
 
-Ważne jest zrozumienie, że ład danych to **odpowiedzialność współdzielona**. Bez zaangażowania użytkowników biznesowych (knowledge workers), którzy raportują błędy i sugerują poprawki, system nie będzie efektywny.
+WaÅ¼ne jest zrozumienie, Å¼e Å‚ad danych to **odpowiedzialnoÅ›Ä‡ wspÃ³Å‚dzielona**. Bez zaangaÅ¼owania uÅ¼ytkownikÃ³w biznesowych (knowledge workers), ktÃ³rzy raportujÄ… bÅ‚Ä™dy i sugerujÄ… poprawki, system nie bÄ™dzie efektywny.
 
-# 💡 Przykład zastosowania
+# ðŸ’¡ PrzykÅ‚ad zastosowania
 
-**Hierarchia w obszarze Sprzedaży:**
-*   **Jednostka biznesowa:** Sprzedaż.
-*   **Domeny danych:** Zamówienia, Leady, Klienci.
-*   **Zbiory danych (Datasets):** System ERP (dla zamówień), System lojalnościowy (dla punktów klientów).
-*   **Rola:** Właściciel danych systemu ERP podejmuje decyzję o przyznaniu dostępu nowemu pracownikowi działu sprzedaży, upewniając się, że jest to zgodne z polityką komitetu.
+**Hierarchia w obszarze SprzedaÅ¼y:**
+*   **Jednostka biznesowa:** SprzedaÅ¼.
+*   **Domeny danych:** ZamÃ³wienia, Leady, Klienci.
+*   **Zbiory danych (Datasets):** System ERP (dla zamÃ³wieÅ„), System lojalnoÅ›ciowy (dla punktÃ³w klientÃ³w).
+*   **Rola:** WÅ‚aÅ›ciciel danych systemu ERP podejmuje decyzjÄ™ o przyznaniu dostÄ™pu nowemu pracownikowi dziaÅ‚u sprzedaÅ¼y, upewniajÄ…c siÄ™, Å¼e jest to zgodne z politykÄ… komitetu.
 
-## 📌 Źródła
+## ðŸ“Œ Å¹rÃ³dÅ‚a
 
-## 👽 Brudnopis
+## ðŸ‘½ Brudnopis
 
 Let's talk about the roles and responsibilities inside data governance. First, there's the data governance committee.

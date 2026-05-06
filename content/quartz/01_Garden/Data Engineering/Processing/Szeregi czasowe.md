@@ -1,10 +1,10 @@
----
+﻿---
 
 title: Szeregi czasowe  
 created: 2025-07-16  
-status:  
+status: 🌱 draft
 category: Data Science  
-difficulty: średni  
+difficulty: Å›redni  
 language: pl  
 tags:
 
@@ -19,66 +19,66 @@ aliases:
 
 ---
 
-# 🎯 Definicja
+# ðŸŽ¯ Definicja
 
-**Szereg czasowy** to uporządkowany zbiór danych, w którym obserwacje są zarejestrowane w kolejnych odstępach czasu. Analiza szeregów czasowych koncentruje się na zrozumieniu trendów, sezonowości i zależności czasowych w danych w celu przewidywania przyszłych wartości.
+**Szereg czasowy** to uporzÄ…dkowany zbiÃ³r danych, w ktÃ³rym obserwacje sÄ… zarejestrowane w kolejnych odstÄ™pach czasu. Analiza szeregÃ³w czasowych koncentruje siÄ™ na zrozumieniu trendÃ³w, sezonowoÅ›ci i zaleÅ¼noÅ›ci czasowych w danych w celu przewidywania przyszÅ‚ych wartoÅ›ci.
 
-# 🔑 Kluczowe zastosowania
+# ðŸ”‘ Kluczowe zastosowania
 
-Szeregi czasowe są kluczowym elementem wielu dziedzin:
+Szeregi czasowe sÄ… kluczowym elementem wielu dziedzin:
 
-- 📈 **Prognozy gospodarcze** – np. PKB, inflacja, stopy procentowe
-- 🛒 **Prognozy sprzedaży** – analiza popytu, planowanie zapasów
-- 💹 **Rynki finansowe** – analiza giełdowa, surowce, kryptowaluty
-- 🌾 **Rolnictwo** – prognozy plonów, zużycie nawozów
-- 🔌 **Energetyka** – przewidywanie zużycia gazu, prądu, obciążeń
-- 🛠️ **Utrzymanie ruchu (predictive maintenance)** – monitorowanie parametrów sprzętu w czasie
+- ðŸ“ˆ **Prognozy gospodarcze** â€“ np. PKB, inflacja, stopy procentowe
+- ðŸ›’ **Prognozy sprzedaÅ¼y** â€“ analiza popytu, planowanie zapasÃ³w
+- ðŸ’¹ **Rynki finansowe** â€“ analiza gieÅ‚dowa, surowce, kryptowaluty
+- ðŸŒ¾ **Rolnictwo** â€“ prognozy plonÃ³w, zuÅ¼ycie nawozÃ³w
+- ðŸ”Œ **Energetyka** â€“ przewidywanie zuÅ¼ycia gazu, prÄ…du, obciÄ…Å¼eÅ„
+- ðŸ› ï¸ **Utrzymanie ruchu (predictive maintenance)** â€“ monitorowanie parametrÃ³w sprzÄ™tu w czasie
 
-# 📚 Kluczowe cechy analizy szeregów czasowych
+# ðŸ“š Kluczowe cechy analizy szeregÃ³w czasowych
 
-- **Autokorelacja** – obecna wartość zależy od przeszłych wartości
-- **Trend** – długoterminowa tendencja wzrostowa lub spadkowa
-- **Sezonowość** – cykliczność o znanych odstępach (np. tygodniowa, roczna)
-- **Stacjonarność** – rozkład prawdopodobieństwa nie zmienia się w czasie
-- **Szok** – nagłe, trudne do przewidzenia zmiany (np. pandemia, wojna)
+- **Autokorelacja** â€“ obecna wartoÅ›Ä‡ zaleÅ¼y od przeszÅ‚ych wartoÅ›ci
+- **Trend** â€“ dÅ‚ugoterminowa tendencja wzrostowa lub spadkowa
+- **SezonowoÅ›Ä‡** â€“ cyklicznoÅ›Ä‡ o znanych odstÄ™pach (np. tygodniowa, roczna)
+- **StacjonarnoÅ›Ä‡** â€“ rozkÅ‚ad prawdopodobieÅ„stwa nie zmienia siÄ™ w czasie
+- **Szok** â€“ nagÅ‚e, trudne do przewidzenia zmiany (np. pandemia, wojna)
 
-# 🛠️ Metody modelowania
+# ðŸ› ï¸ Metody modelowania
 
-### 🔹 Modele statystyczne
+### ðŸ”¹ Modele statystyczne
 
-- **ARIMA / SARIMA** – klasyczne modele autoregresji z uogólnieniem na sezonowość
-- **Exponential Smoothing (ETS)** – ważenie starszych obserwacji mniej niż nowszych
-- **Prophet (Facebook)** – model dekonstrukcyjny (trend + sezonowość + święta)
+- **ARIMA / SARIMA** â€“ klasyczne modele autoregresji z uogÃ³lnieniem na sezonowoÅ›Ä‡
+- **Exponential Smoothing (ETS)** â€“ waÅ¼enie starszych obserwacji mniej niÅ¼ nowszych
+- **Prophet (Facebook)** â€“ model dekonstrukcyjny (trend + sezonowoÅ›Ä‡ + Å›wiÄ™ta)
 
-### 🔹 Modele [[Uczenie Maszynowe|ML]]/[[Deep Learning|DL]]
+### ðŸ”¹ Modele [[Uczenie Maszynowe|ML]]/[[Deep Learning|DL]]
 
-- **XGBoost / LightGBM** – z funkcjami opóźnień/lags
+- **XGBoost / LightGBM** â€“ z funkcjami opÃ³ÅºnieÅ„/lags
 - **[[Lasy losowe|Random Forest]] z cechami czasowymi**
-- **LSTM / GRU (RNN)** – [[Sieci neuronowe]] do sekwencji danych
-- **CNN / Transformer** – zaawansowane podejście z modelowaniem czasowo-przestrzennym
+- **LSTM / GRU (RNN)** â€“ [[Sieci neuronowe]] do sekwencji danych
+- **CNN / Transformer** â€“ zaawansowane podejÅ›cie z modelowaniem czasowo-przestrzennym
 
-⚠️ Modele [[Uczenie Maszynowe|ML]] lepiej przewidują, ale są często trudniejsze do wyjaśnienia (czarne skrzynki). Z pomocą przychodzi np. **Permutation Importance**, SHAP, PDP.
+âš ï¸ Modele [[Uczenie Maszynowe|ML]] lepiej przewidujÄ…, ale sÄ… czÄ™sto trudniejsze do wyjaÅ›nienia (czarne skrzynki). Z pomocÄ… przychodzi np. **Permutation Importance**, SHAP, PDP.
 
-# ¶ Naiwna prognoza
+# Â¶ Naiwna prognoza
 
 Najprostszy punkt odniesienia:
 
-> „Jutro będzie tak samo jak dzisiaj”  
-> Model typu „naive”:
+> â€žJutro bÄ™dzie tak samo jak dzisiajâ€  
+> Model typu â€žnaiveâ€:
 
 ```python
-ŷ(t+1) = y(t)
+Å·(t+1) = y(t)
 ```
 
-To przydatna wartość bazowa — jeśli model „inteligentny” działa gorzej niż naiwna baza, coś jest nie tak 📉
+To przydatna wartoÅ›Ä‡ bazowa â€” jeÅ›li model â€žinteligentnyâ€ dziaÅ‚a gorzej niÅ¼ naiwna baza, coÅ› jest nie tak ðŸ“‰
 
-# ⚠️ Walidacja w szeregach czasowych
+# âš ï¸ Walidacja w szeregach czasowych
 
-W odróżnieniu od klasycznych danych:
+W odrÃ³Å¼nieniu od klasycznych danych:
 
-❌ **Nie działa klasyczna walidacja krzyżowa (KFold)** – bo miesza dane z przyszłości do trenowania!
+âŒ **Nie dziaÅ‚a klasyczna walidacja krzyÅ¼owa (KFold)** â€“ bo miesza dane z przyszÅ‚oÅ›ci do trenowania!
 
-✅ Zastosuj **TimeSeriesSplit** lub ręczne dzielenie danych w porządku czasowym:
+âœ… Zastosuj **TimeSeriesSplit** lub rÄ™czne dzielenie danych w porzÄ…dku czasowym:
 
 ```plaintext
 TRAIN                  TEST
@@ -86,42 +86,42 @@ TRAIN                  TEST
 [------train------]    [---]
 ```
 
-Sukcesywny układ chronologiczny pozwala przewidywać przyszłość bez przecieku danych.
+Sukcesywny ukÅ‚ad chronologiczny pozwala przewidywaÄ‡ przyszÅ‚oÅ›Ä‡ bez przecieku danych.
 
-![Time Series Split]([https://miro.medium.com/v2/resize:fit:700/format:webp/1*CckZCtB1tkIvzEIV8AH️](https://miro.medium.com/v2/resize:fit:700/format:webp/1*CckZCtB1tkIvzEIV8AH%EF%B8%8F) Zalety i ograniczenia
+![Time Series Split]([https://miro.medium.com/v2/resize:fit:700/format:webp/1*CckZCtB1tkIvzEIV8AHï¸](https://miro.medium.com/v2/resize:fit:700/format:webp/1*CckZCtB1tkIvzEIV8AH%EF%B8%8F) Zalety i ograniczenia
 
-## ✅ Zalety
+## âœ… Zalety
 
-- ⏩ Umożliwiają prognozowanie przyszłości na podstawie przeszłości
-- 🎯 Modelują zachowania cykliczne (np. święta, sezonowość)
-- 📈 Silne fundamenty statystyczne i możliwość interpretacji trendów
+- â© UmoÅ¼liwiajÄ… prognozowanie przyszÅ‚oÅ›ci na podstawie przeszÅ‚oÅ›ci
+- ðŸŽ¯ ModelujÄ… zachowania cykliczne (np. Å›wiÄ™ta, sezonowoÅ›Ä‡)
+- ðŸ“ˆ Silne fundamenty statystyczne i moÅ¼liwoÅ›Ä‡ interpretacji trendÃ³w
 
-## ❌ Wady
+## âŒ Wady
 
-- ⚠️ Modele [[Uczenie Maszynowe|ML]] trudne do wyjaśnienia (brak przejrzystości)
-- 📊 Duża ilość danych + inżynieria cech = spore zasoby obliczeniowe
-- 🔁 Często występują nieliniowe, zmienne w czasie zależności (konieczność adaptacji modelu)
-- ❌ Wysoka podatność na przerwy w danych, zmiany w sezonowości, regresje covidowe/wojenne
+- âš ï¸ Modele [[Uczenie Maszynowe|ML]] trudne do wyjaÅ›nienia (brak przejrzystoÅ›ci)
+- ðŸ“Š DuÅ¼a iloÅ›Ä‡ danych + inÅ¼ynieria cech = spore zasoby obliczeniowe
+- ðŸ” CzÄ™sto wystÄ™pujÄ… nieliniowe, zmienne w czasie zaleÅ¼noÅ›ci (koniecznoÅ›Ä‡ adaptacji modelu)
+- âŒ Wysoka podatnoÅ›Ä‡ na przerwy w danych, zmiany w sezonowoÅ›ci, regresje covidowe/wojenne
 
-# 💡 Praktyczny przykład
+# ðŸ’¡ Praktyczny przykÅ‚ad
 
-Zespół prognozowania zużycia energii gromadzi historię pomiarów z 15-minutowych interwałów z liczników. Wyciągają lag features (opóźnienia), rolling averages (średnie kroczące), oznaczenia świąt i pór roku. Testowany jest model XGBoost z 30-dniowym oknem lookback. Wyniki walidowane przez rolling window. Model deployed w [[Apache Airflow|Airflow]] z monitoringiem MAPE i retraining co 7 dni.
+ZespÃ³Å‚ prognozowania zuÅ¼ycia energii gromadzi historiÄ™ pomiarÃ³w z 15-minutowych interwaÅ‚Ã³w z licznikÃ³w. WyciÄ…gajÄ… lag features (opÃ³Åºnienia), rolling averages (Å›rednie kroczÄ…ce), oznaczenia Å›wiÄ…t i pÃ³r roku. Testowany jest model XGBoost z 30-dniowym oknem lookback. Wyniki walidowane przez rolling window. Model deployed w [[Apache Airflow|Airflow]] z monitoringiem MAPE i retraining co 7 dni.
 
-## 📌 Źródła
+## ðŸ“Œ Å¹rÃ³dÅ‚a
 
-- [Elements of Time Series in Python – Jason Brownlee](https://machinelearningmastery.com/time-series-forecasting/)
+- [Elements of Time Series in Python â€“ Jason Brownlee](https://machinelearningmastery.com/time-series-forecasting/)
 - [Facebook Prophet (docs)](https://facebook.github.io/prophet/)
-- [ARIMA Explained – Hyndman](https://otexts.com/fpp2/arima.html)
-- [Time Series Cross Validation Guide – sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html)
+- [ARIMA Explained â€“ Hyndman](https://otexts.com/fpp2/arima.html)
+- [Time Series Cross Validation Guide â€“ sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html)
 
-# 👽 Brudnopis
+# ðŸ‘½ Brudnopis
 
-- szereg = wartości z etykietą czasową
-- Trend ↑↓, Sezonowość ♻️, Lag ⬅️
+- szereg = wartoÅ›ci z etykietÄ… czasowÄ…
+- Trend â†‘â†“, SezonowoÅ›Ä‡ â™»ï¸, Lag â¬…ï¸
 - rolling, expanding, shift()
-- klasyka: ARIMA → teraz [[Uczenie Maszynowe|ML]] (XGB + lag features)
-- Ramię CIops: aktualizacja modelu, drift detection, walidacja on-line
+- klasyka: ARIMA â†’ teraz [[Uczenie Maszynowe|ML]] (XGB + lag features)
+- RamiÄ™ CIops: aktualizacja modelu, drift detection, walidacja on-line
 - nie shuffle! chronologia to wszystko
 - taski: forecasting, detection (anomalie), klasyfikacja (post-label)
-- Prophet → szybki, elastyczny, mityczny default w firmach 👼
-- Dobre [[KPI]]: MAE, RMSE, MAPE (%) → porównanie do naïve = sanity check
+- Prophet â†’ szybki, elastyczny, mityczny default w firmach ðŸ‘¼
+- Dobre [[KPI]]: MAE, RMSE, MAPE (%) â†’ porÃ³wnanie do naÃ¯ve = sanity check

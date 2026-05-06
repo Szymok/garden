@@ -1,42 +1,42 @@
----
+﻿---
 
-title: Dane półstrukturalne  
+title: Dane pÃ³Å‚strukturalne  
 created: 2025-07-15  
-status:  
-category: Inżynieria danych  
+status: 🌱 draft
+category: InÅ¼ynieria danych  
 difficulty: podstawowy  
 language: pl  
 tags:
 
-- dane półstrukturalne
-- inżynieria danych
+- dane pÃ³Å‚strukturalne
+- inÅ¼ynieria danych
 - koncepcja  
 aliases:
 - semi-structured data
 
 ---
 
-# 🎯 Definicja
+# ðŸŽ¯ Definicja
 
-**Dane półstrukturalne** to dane, które nie posiadają ściśle określonego schematu relacyjnego, ale są uporządkowane za pomocą tagów, znaczników, atrybutów czy struktur typu klucz-wartość. Najczęściej występują w postaci plików JSON, XML, YAML, Parquet czy Avro — ich schemat może być zmienny lub częściowy, lecz istnieją elementy umożliwiające rekonstrukcję lub „zrozumienie” zawartości przez maszyny.
+**Dane pÃ³Å‚strukturalne** to dane, ktÃ³re nie posiadajÄ… Å›ciÅ›le okreÅ›lonego schematu relacyjnego, ale sÄ… uporzÄ…dkowane za pomocÄ… tagÃ³w, znacznikÃ³w, atrybutÃ³w czy struktur typu klucz-wartoÅ›Ä‡. NajczÄ™Å›ciej wystÄ™pujÄ… w postaci plikÃ³w JSON, XML, YAML, Parquet czy Avro â€” ich schemat moÅ¼e byÄ‡ zmienny lub czÄ™Å›ciowy, lecz istniejÄ… elementy umoÅ¼liwiajÄ…ce rekonstrukcjÄ™ lub â€žzrozumienieâ€ zawartoÅ›ci przez maszyny.
 
-# 🔑 Kluczowe punkty
+# ðŸ”‘ Kluczowe punkty
 
-- Posiadają strukturę pozwalającą na odczyt i analizę, ale nie są związane stałym schematem tabeli.
-- Mogą zawierać różnej długości pola, zagnieżdżenia i kolekcje (np. listy, słowniki).
-- Przykłady: JSON, XML, pliki logów, eventy przesyłane przez API.
-- Łatwo przekształcić je do postaci strukturalnej w ramach integracji i transformacji danych, zwłaszcza w procesach ETL/ELT.
-- Umożliwiają elastyczne przechowywanie dynamicznych informacji – kluczowe w systemach analitycznych, chmurowych, platformach integracyjnych (np. Airbyte, Kafka, Data Lake).
+- PosiadajÄ… strukturÄ™ pozwalajÄ…cÄ… na odczyt i analizÄ™, ale nie sÄ… zwiÄ…zane staÅ‚ym schematem tabeli.
+- MogÄ… zawieraÄ‡ rÃ³Å¼nej dÅ‚ugoÅ›ci pola, zagnieÅ¼dÅ¼enia i kolekcje (np. listy, sÅ‚owniki).
+- PrzykÅ‚ady: JSON, XML, pliki logÃ³w, eventy przesyÅ‚ane przez API.
+- Åatwo przeksztaÅ‚ciÄ‡ je do postaci strukturalnej w ramach integracji i transformacji danych, zwÅ‚aszcza w procesach ETL/ELT.
+- UmoÅ¼liwiajÄ… elastyczne przechowywanie dynamicznych informacji â€“ kluczowe w systemach analitycznych, chmurowych, platformach integracyjnych (np. Airbyte, Kafka, Data Lake).
 
-# 📚 Szczegółowe wyjaśnienie
+# ðŸ“š SzczegÃ³Å‚owe wyjaÅ›nienie
 
-## Czym różnią się dane półstrukturalne od innych typów?
+## Czym rÃ³Å¼niÄ… siÄ™ dane pÃ³Å‚strukturalne od innych typÃ³w?
 
-- **Dane strukturalne:** posiadają sztywny, wyraźnie zdefiniowany schemat (np. tabele SQL, arkusze Excela).
-- **Dane nieustrukturyzowane:** nie mają regularnej struktury (np. teksty, obrazy, e-maile).
-- **Dane półstrukturalne:** są pomiędzy – mają metadane lub tagi, ułatwiając transformację do formatu tabelarycznego.
+- **Dane strukturalne:** posiadajÄ… sztywny, wyraÅºnie zdefiniowany schemat (np. tabele SQL, arkusze Excela).
+- **Dane nieustrukturyzowane:** nie majÄ… regularnej struktury (np. teksty, obrazy, e-maile).
+- **Dane pÃ³Å‚strukturalne:** sÄ… pomiÄ™dzy â€“ majÄ… metadane lub tagi, uÅ‚atwiajÄ…c transformacjÄ™ do formatu tabelarycznego.
 
-Przykład (JSON w bazie danych jako tekst):
+PrzykÅ‚ad (JSON w bazie danych jako tekst):
 
 ||_airbyte_data|
 |---|---|
@@ -45,11 +45,11 @@ Przykład (JSON w bazie danych jako tekst):
 
 ## Transformacja do danych strukturalnych
 
-[[Transformacja danych]] półstrukturalnych, np. JSON w kolumnie tekstowej, na strukturę tabelaryczną polega na:
+[[Transformacja danych]] pÃ³Å‚strukturalnych, np. JSON w kolumnie tekstowej, na strukturÄ™ tabelarycznÄ… polega na:
 
 - Parsowaniu JSON/XML.
-- Mapowaniu kluczy do poszczególnych kolumn.
-- Ustaleniu typu danych i walidacji wartości.
+- Mapowaniu kluczy do poszczegÃ³lnych kolumn.
+- Ustaleniu typu danych i walidacji wartoÅ›ci.
 
 Po transformacji:
 
@@ -58,29 +58,29 @@ Po transformacji:
 |1|"Mary X"|
 |2|"John D"|
 
-Proces ten może być zautomatyzowany w narzędziach takich jak Airbyte, [[dbt]], Apache NiFi czy funkcjach SQL (np. funkcje `jsonb_extract_path` w PostgreSQL).
+Proces ten moÅ¼e byÄ‡ zautomatyzowany w narzÄ™dziach takich jak Airbyte, [[dbt]], Apache NiFi czy funkcjach SQL (np. funkcje `jsonb_extract_path` w PostgreSQL).
 
 ## Typowe zastosowania
 
-- Magazyny danych (Data Lake) obsługujące pliki JSON, Avro, Parquet.
-- Integracja z API – wiele nowoczesnych usług zwraca dane jako JSON/XML.
-- Platformy streamingowe (Kafka, Pulsar) przechowujące komunikaty jako JSON.
-- ELT/ETL – dane półstrukturalne pobierane i transformowane do tabel faktów lub wymiarów.
+- Magazyny danych (Data Lake) obsÅ‚ugujÄ…ce pliki JSON, Avro, Parquet.
+- Integracja z API â€“ wiele nowoczesnych usÅ‚ug zwraca dane jako JSON/XML.
+- Platformy streamingowe (Kafka, Pulsar) przechowujÄ…ce komunikaty jako JSON.
+- ELT/ETL â€“ dane pÃ³Å‚strukturalne pobierane i transformowane do tabel faktÃ³w lub wymiarÃ³w.
 
-# 💡 Przykład zastosowania
+# ðŸ’¡ PrzykÅ‚ad zastosowania
 
-Zespół analityczny w e-commerce gromadzi logi zdarzeń (clickstream) z aplikacji mobilnej w formacie JSON (półstrukturalnym). Logi te są ładowane do Data Lake w surowej postaci, a następnie podczas procesu ELT są automatycznie „rozwijane” do ustrukturyzowanej tabeli, pozwalającej np. na analizę konwersji, segmentacji użytkowników i testów A/B w hurtowni danych.
+ZespÃ³Å‚ analityczny w e-commerce gromadzi logi zdarzeÅ„ (clickstream) z aplikacji mobilnej w formacie JSON (pÃ³Å‚strukturalnym). Logi te sÄ… Å‚adowane do Data Lake w surowej postaci, a nastÄ™pnie podczas procesu ELT sÄ… automatycznie â€žrozwijaneâ€ do ustrukturyzowanej tabeli, pozwalajÄ…cej np. na analizÄ™ konwersji, segmentacji uÅ¼ytkownikÃ³w i testÃ³w A/B w hurtowni danych.
 
-# 📌 Źródła
+# ðŸ“Œ Å¹rÃ³dÅ‚a
 
-- [What are Semi-Structured Data? — IBM](https://www.ibm.com/cloud/blog/semi-structured-data)
-- [Data Warehousing 101: Structured, Semi-Structured, and Unstructured Data — Databricks](https://www.databricks.com/glossary/semi-structured-data)
-- [JSON Functions and Operators – PostgreSQL Documentation](https://www.postgresql.org/docs/current/functions-json.html)
+- [What are Semi-Structured Data? â€” IBM](https://www.ibm.com/cloud/blog/semi-structured-data)
+- [Data Warehousing 101: Structured, Semi-Structured, and Unstructured Data â€” Databricks](https://www.databricks.com/glossary/semi-structured-data)
+- [JSON Functions and Operators â€“ PostgreSQL Documentation](https://www.postgresql.org/docs/current/functions-json.html)
 
-# 👽 Brudnopis
+# ðŸ‘½ Brudnopis
 
-- Dane półstrukturalne = JSON, XML, Parquet, logi, Avro, lista eventów w Kafka/S3.
-- JSON jako tekst/klucz-wartość → parsowanie do struktur SQL (funkcje jsonb).
-- Używane w integracji, [[Business Intelligence|BI]], analityce, [[Data Lakehouse|Lakehouse]]; elastyczna struktura i dynamiczność.
-- ETL/ELT: najczęściej moment „zdejmowania” struktur do tabeli (json > kolumny).
-- Data Lake = przechowywanie półstrukturalne + warstwa transformująca downstream.
+- Dane pÃ³Å‚strukturalne = JSON, XML, Parquet, logi, Avro, lista eventÃ³w w Kafka/S3.
+- JSON jako tekst/klucz-wartoÅ›Ä‡ â†’ parsowanie do struktur SQL (funkcje jsonb).
+- UÅ¼ywane w integracji, [[Business Intelligence|BI]], analityce, [[Data Lakehouse|Lakehouse]]; elastyczna struktura i dynamicznoÅ›Ä‡.
+- ETL/ELT: najczÄ™Å›ciej moment â€žzdejmowaniaâ€ struktur do tabeli (json > kolumny).
+- Data Lake = przechowywanie pÃ³Å‚strukturalne + warstwa transformujÄ…ca downstream.
