@@ -1,10 +1,10 @@
----
+﻿---
 
 title: Apache Spark  
 created: 2025-07-15  
-status:  
-category: Inżynieria danych  
-difficulty: średni  
+status: 🌱 draft
+category: InÅ¼ynieria danych  
+difficulty: Å›redni  
 language: pl  
 tags:
 
@@ -18,69 +18,69 @@ aliases:
 
 ---
 
-# 🎯 Definicja
+# ðŸŽ¯ Definicja
 
-**Apache Spark™** to otwartoźródłowy, wielojęzyczny silnik do rozproszonego przetwarzania dużych wolumenów danych, szeroko stosowany w inżynierii danych, uczeniu maszynowym oraz analityce Big Data. Spark umożliwia operacje zarówno na pojedynczych maszynach, jak i skalowalnych klastrach, oferując wysoką wydajność dzięki przetwarzaniu danych w pamięci (in-memory processing).
+**Apache Sparkâ„¢** to otwartoÅºrÃ³dÅ‚owy, wielojÄ™zyczny silnik do rozproszonego przetwarzania duÅ¼ych wolumenÃ³w danych, szeroko stosowany w inÅ¼ynierii danych, uczeniu maszynowym oraz analityce Big Data. Spark umoÅ¼liwia operacje zarÃ³wno na pojedynczych maszynach, jak i skalowalnych klastrach, oferujÄ…c wysokÄ… wydajnoÅ›Ä‡ dziÄ™ki przetwarzaniu danych w pamiÄ™ci (in-memory processing).
 
-# 🔑 Kluczowe punkty
+# ðŸ”‘ Kluczowe punkty
 
-- **Rozproszony silnik danych:** Obsługuje przetwarzanie danych na dużą skalę—idealny do Big Data.
-- **Wsparcie wielu języków:** Programowanie w Scala, Python (PySpark), Java, R, SQL.
-- **Przetwarzanie in-memory:** Znacząco przyspiesza analizy i obliczenia względem tradycyjnych systemów dyskowych (np. Hadoop MapReduce).
+- **Rozproszony silnik danych:** ObsÅ‚uguje przetwarzanie danych na duÅ¼Ä… skalÄ™â€”idealny do Big Data.
+- **Wsparcie wielu jÄ™zykÃ³w:** Programowanie w Scala, Python (PySpark), Java, R, SQL.
+- **Przetwarzanie in-memory:** ZnaczÄ…co przyspiesza analizy i obliczenia wzglÄ™dem tradycyjnych systemÃ³w dyskowych (np. Hadoop MapReduce).
 - **Modularna architektura:** Obejmuje Spark SQL, Spark Streaming (przetwarzanie strumieniowe), MLlib (uczenie maszynowe), GraphX (przetwarzanie grafowe).
-- **Integracja z chmurą:** Gotowy do uruchamiania w chmurach publicznych oraz w Kubernetes.
-- **Kompatybilność:** Łączy się z HDFS, S3, bazami relacyjnymi, Cassandra, Hive, Delta Lake itp.
+- **Integracja z chmurÄ…:** Gotowy do uruchamiania w chmurach publicznych oraz w Kubernetes.
+- **KompatybilnoÅ›Ä‡:** ÅÄ…czy siÄ™ z HDFS, S3, bazami relacyjnymi, Cassandra, Hive, Delta Lake itp.
 
-# 📚 Szczegółowe wyjaśnienie
+# ðŸ“š SzczegÃ³Å‚owe wyjaÅ›nienie
 
 ## Architektura
 
-Apache Spark działa w modelu master-worker, gdzie:
+Apache Spark dziaÅ‚a w modelu master-worker, gdzie:
 
-- **Driver** zarządza aplikacją i planuje zadania.
-- **Worker Nodes** wykonują faktyczne przetwarzanie (taski) na partycjach danych.
-- **Cluster Manager** (YARN, Mesos, Kubernetes, czy Spark Standalone) zarządza zasobami klastra.
+- **Driver** zarzÄ…dza aplikacjÄ… i planuje zadania.
+- **Worker Nodes** wykonujÄ… faktyczne przetwarzanie (taski) na partycjach danych.
+- **Cluster Manager** (YARN, Mesos, Kubernetes, czy Spark Standalone) zarzÄ…dza zasobami klastra.
 
 ### Przetwarzanie in-memory
 
-Silnik Spark trzyma obliczenia i główne zestawy danych w pamięci RAM, co pozwala efektywnie “drążyć” dane, wykonywać wielokrotne analizy ad-hoc i wysoce równolegle prowadzić eksperymenty z uczeniem maszynowym.
+Silnik Spark trzyma obliczenia i gÅ‚Ã³wne zestawy danych w pamiÄ™ci RAM, co pozwala efektywnie â€œdrÄ…Å¼yÄ‡â€ dane, wykonywaÄ‡ wielokrotne analizy ad-hoc i wysoce rÃ³wnolegle prowadziÄ‡ eksperymenty z uczeniem maszynowym.
 
-### Moduły Spark
+### ModuÅ‚y Spark
 
-|Moduł|Przeznaczenie|
+|ModuÅ‚|Przeznaczenie|
 |---|---|
 |**Spark SQL**|Analiza danych tablicowych i SQL|
 |**Spark Streaming**|Przetwarzanie danych strumieniowych (real time)|
 |**MLlib**|Wbudowana biblioteka uczenia maszynowego|
-|**GraphX**|Analiza grafów i relacji|
+|**GraphX**|Analiza grafÃ³w i relacji|
 
 ## Spark na Kubernetes
 
-Apache Spark obsługuje natywne uruchamianie w środowisku Kubernetes, które pozwala:
+Apache Spark obsÅ‚uguje natywne uruchamianie w Å›rodowisku Kubernetes, ktÃ³re pozwala:
 
-- **Automatycznie skalować** zasoby (pody workerów) do wymagań jobów.
-- **Zarządzać wdrożeniami** w modelu Infrastructure as Code.
-- **Ułatwiać integrację** z popularnymi narzędziami chmurowymi, monitorowaniem, CI/CD.
-- **Tworzyć środowiska multi-tenant** i dynamicznie dzielić klaster dla różnych zespołów/projektów.
+- **Automatycznie skalowaÄ‡** zasoby (pody workerÃ³w) do wymagaÅ„ jobÃ³w.
+- **ZarzÄ…dzaÄ‡ wdroÅ¼eniami** w modelu Infrastructure as Code.
+- **UÅ‚atwiaÄ‡ integracjÄ™** z popularnymi narzÄ™dziami chmurowymi, monitorowaniem, CI/CD.
+- **TworzyÄ‡ Å›rodowiska multi-tenant** i dynamicznie dzieliÄ‡ klaster dla rÃ³Å¼nych zespoÅ‚Ã³w/projektÃ³w.
 
-# 💡 Przykład zastosowania
+# ðŸ’¡ PrzykÅ‚ad zastosowania
 
-Firma telekomunikacyjna przetwarza miliardy rekordów billingowych i sygnałów połączeń w czasie rzeczywistym, wykorzystując Spark Streaming na platformie Kubernetes. Dane są analizowane pod kątem wykrywania fraudów, modelowania churnu i dynamicznej alokacji zasobów sieciowych, a modele maszyny uczącej są wdrażane w MLlib do przewidywania awarii i segmentacji klientów.
+Firma telekomunikacyjna przetwarza miliardy rekordÃ³w billingowych i sygnaÅ‚Ã³w poÅ‚Ä…czeÅ„ w czasie rzeczywistym, wykorzystujÄ…c Spark Streaming na platformie Kubernetes. Dane sÄ… analizowane pod kÄ…tem wykrywania fraudÃ³w, modelowania churnu i dynamicznej alokacji zasobÃ³w sieciowych, a modele maszyny uczÄ…cej sÄ… wdraÅ¼ane w MLlib do przewidywania awarii i segmentacji klientÃ³w.
 
-# 📌 Źródła
+# ðŸ“Œ Å¹rÃ³dÅ‚a
 
-- [Apache Spark – Oficjalna dokumentacja](https://spark.apache.org/docs/latest/)
-- [Przetwarzanie Big Data w Apache Spark – Databricks](https://databricks.com/glossary/what-is-apache-spark)
-- [Spark on Kubernetes – Kubernetes docs](https://spark.apache.org/docs/latest/running-on-kubernetes.html)
-- [Apache Spark – Overview – IBM Cloud](https://www.ibm.com/cloud/learn/apache-spark)
+- [Apache Spark â€“ Oficjalna dokumentacja](https://spark.apache.org/docs/latest/)
+- [Przetwarzanie Big Data w Apache Spark â€“ Databricks](https://databricks.com/glossary/what-is-apache-spark)
+- [Spark on Kubernetes â€“ Kubernetes docs](https://spark.apache.org/docs/latest/running-on-kubernetes.html)
+- [Apache Spark â€“ Overview â€“ IBM Cloud](https://www.ibm.com/cloud/learn/apache-spark)
 
-# 👽 Brudnopis
+# ðŸ‘½ Brudnopis
 
 - Silnik in-memory, rozproszony, batch & streaming + MLlib
 - Native cloud/K8s, dynamic scaling, integracja z Lakehouse i cloud storage (Delta Lake, S3)
-- PySpark jako główny interfejs do Data Engineering/ML na Spark
-- Popularne scenariusze: ETL batch, modele ML produkcyjnie, przetwarzanie clickstreamów, rekomendacje
+- PySpark jako gÅ‚Ã³wny interfejs do Data Engineering/ML na Spark
+- Popularne scenariusze: ETL batch, modele ML produkcyjnie, przetwarzanie clickstreamÃ³w, rekomendacje
 - Rywalizacja: Dask, Flink (streaming), Pandas/Polars (lokalnie), Databricks platforma (komercyjna Spark)
-- Unified approach: batch+stream+ML+SQL = jeden silnik dla całego pipeline’u danych
+- Unified approach: batch+stream+ML+SQL = jeden silnik dla caÅ‚ego pipelineâ€™u danych
 
 ---

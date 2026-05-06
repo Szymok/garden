@@ -1,7 +1,19 @@
 ---
-title: "Hurtownia Danych"
+title: "Hurtownia Danych (Data Warehouse)"
+created: 2025-07-16
+status: 🌱 draft
+category: Data Engineering
+difficulty: podstawowy
+language: pl
 tags:
-- inżynieria danych
+  - data-warehouse
+  - dwh
+  - inżynieria danych
+  - hurtownia-danych
+aliases:
+  - DWH
+  - EDW
+  - Data Warehouse
 ---
 Hurtownia Danych, w skrócie DWH, znana również jako Hurtownia Danych Przedsiębiorstwa (EDW), to tradycyjny sposób gromadzenia danych, stosowany od ponad 30 lat. Hurtownia Danych służy do [integracji danych](notes/integracja%20danych.md) z wielu różnych źródeł, stanowi punkt jednolitej prawdy i zarządzania danymi, w tym czyszczenia, tworzenia historii i łączenia danych. Zapewnia lepszy wgląd dla kadry zarządzającej w wyniki firmy za pomocą paneli zarządzania, raportów lub analiz ad hoc.
 

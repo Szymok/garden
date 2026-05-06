@@ -1,87 +1,87 @@
----
+﻿---
 
 title: Co to jest Data Lineage  
 created: 2025-07-15  
-status:  
-category: Inżynieria danych  
+status: 🌱 draft
+category: InÅ¼ynieria danych  
 difficulty: podstawowy  
 language: pl  
 tags:
 
-- inżynieria danych
+- inÅ¼ynieria danych
 - data lineage
 - monitoring danych
 - dokumentacja danych
 - analiza danych  
 aliases:
-- śledzenie pochodzenia danych
-- rodowód danych
+- Å›ledzenie pochodzenia danych
+- rodowÃ³d danych
 
 ---
 
-# 🎯 Definicja
+# ðŸŽ¯ Definicja
 
-**Data Lineage** (rodowód danych) to proces śledzenia ścieżki, jaką dane przebywają w organizacji — od momentu ich powstania w systemie źródłowym, przez kolejne etapy przetwarzania (np. integracja, transformacja), aż do ich końcowego wykorzystania w analizach, dashboardach czy modelach ML. Linia danych odpowiada na pytania: _skąd pochodzą dane, jak zostały zmienione, kto je modyfikował i gdzie są wykorzystywane_.
+**Data Lineage** (rodowÃ³d danych) to proces Å›ledzenia Å›cieÅ¼ki, jakÄ… dane przebywajÄ… w organizacji â€” od momentu ich powstania w systemie ÅºrÃ³dÅ‚owym, przez kolejne etapy przetwarzania (np. integracja, transformacja), aÅ¼ do ich koÅ„cowego wykorzystania w analizach, dashboardach czy modelach ML. Linia danych odpowiada na pytania: _skÄ…d pochodzÄ… dane, jak zostaÅ‚y zmienione, kto je modyfikowaÅ‚ i gdzie sÄ… wykorzystywane_.
 
-# 🔑 Kluczowe punkty
+# ðŸ”‘ Kluczowe punkty
 
-- Data Lineage zapewnia **widoczność przepływu danych** przez systemy, pipeline’y i transformacje.
-- Pomaga analizować wpływ zmian (impact analysis) i określić, co zostanie dotknięte zmianą upstream.
-- Niezbędne w audycie, zgodności regulacyjnej (np. RODO, SOX) i zarządzaniu jakością danych.
-- Ułatwia rozwiązywanie błędów i problemów wykrytych w metrykach lub raportach końcowych.
-- Może łączyć warstwy techniczne (SQL, pipelines) z warstwą semantyczną (produkty danych, miary BI).
+- Data Lineage zapewnia **widocznoÅ›Ä‡ przepÅ‚ywu danych** przez systemy, pipelineâ€™y i transformacje.
+- Pomaga analizowaÄ‡ wpÅ‚yw zmian (impact analysis) i okreÅ›liÄ‡, co zostanie dotkniÄ™te zmianÄ… upstream.
+- NiezbÄ™dne w audycie, zgodnoÅ›ci regulacyjnej (np. RODO, SOX) i zarzÄ…dzaniu jakoÅ›ciÄ… danych.
+- UÅ‚atwia rozwiÄ…zywanie bÅ‚Ä™dÃ³w i problemÃ³w wykrytych w metrykach lub raportach koÅ„cowych.
+- MoÅ¼e Å‚Ä…czyÄ‡ warstwy techniczne (SQL, pipelines) z warstwÄ… semantycznÄ… (produkty danych, miary BI).
 
-# 📚 Szczegółowe wyjaśnienie
+# ðŸ“š SzczegÃ³Å‚owe wyjaÅ›nienie
 
 ## Elementy Data Lineage
 
-- **Źródła danych** – skąd pochodzą: bazy produkcyjne, API, pliki.
-- **Transformacje** – co dzieje się z danymi: agregacja, oczyszczanie, anonimizacja, enrichment.
-- **Systemy pośrednie i docelowe** – gdzie dane są przechowywane i przetwarzane: staging, warehouse, lake.
-- **Użytkownicy i aplikacje** – kto lub co korzysta z danych: modele ML, dashboardy Power BI, visibility przez API.
+- **Å¹rÃ³dÅ‚a danych** â€“ skÄ…d pochodzÄ…: bazy produkcyjne, API, pliki.
+- **Transformacje** â€“ co dzieje siÄ™ z danymi: agregacja, oczyszczanie, anonimizacja, enrichment.
+- **Systemy poÅ›rednie i docelowe** â€“ gdzie dane sÄ… przechowywane i przetwarzane: staging, warehouse, lake.
+- **UÅ¼ytkownicy i aplikacje** â€“ kto lub co korzysta z danych: modele ML, dashboardy Power BI, visibility przez API.
 
 ## Typy lineage
 
-- **Technical lineage** – konkretne zależności między tabelami, kolumnami, jobami w repozytorium kodu (SQL, dbt DAG, Airflow).
-- **Business lineage** – zestawienie jak dane wpływają na wskaźniki, procesy biznesowe (np. “Miesięczna sprzedaż” używa danych ze źródła X, z atrybutów Y).
-- **Operational lineage** – informacje logujące kto, kiedy i jak modyfikował dane. Często używane w Data Governance.
+- **Technical lineage** â€“ konkretne zaleÅ¼noÅ›ci miÄ™dzy tabelami, kolumnami, jobami w repozytorium kodu (SQL, dbt DAG, Airflow).
+- **Business lineage** â€“ zestawienie jak dane wpÅ‚ywajÄ… na wskaÅºniki, procesy biznesowe (np. â€œMiesiÄ™czna sprzedaÅ¼â€ uÅ¼ywa danych ze ÅºrÃ³dÅ‚a X, z atrybutÃ³w Y).
+- **Operational lineage** â€“ informacje logujÄ…ce kto, kiedy i jak modyfikowaÅ‚ dane. CzÄ™sto uÅ¼ywane w Data Governance.
 
 ## Jak generowane jest Data Lineage?
 
-- Automatycznie: poprzez narzędzia ETL/ELT, dbt (DAG), systemy katalogowania (np. DataHub, Atlan, Collibra).
-- Ręcznie: dokumentacja tworzona i uzupełniana przez inżynierów danych.
-- Często: mix manualnego opisu i automatycznego zbierania metadanych (śledzenie DAG, query parsing).
+- Automatycznie: poprzez narzÄ™dzia ETL/ELT, dbt (DAG), systemy katalogowania (np. DataHub, Atlan, Collibra).
+- RÄ™cznie: dokumentacja tworzona i uzupeÅ‚niana przez inÅ¼ynierÃ³w danych.
+- CzÄ™sto: mix manualnego opisu i automatycznego zbierania metadanych (Å›ledzenie DAG, query parsing).
 
 ## Rola w ekosystemie danych
 
-- Wspiera strukturę odpowiedzialności (Data Ownership).
-- Ułatwia rozwiązywanie incydentów jakości danych (data observability).
-- Dokumentuje zależności w projektach dbt, Airflow czy Spark.
-- Ułatwia audyty i analizę zgodności (np. skąd pochodzi dana metryka KPI w raporcie zarządu).
+- Wspiera strukturÄ™ odpowiedzialnoÅ›ci (Data Ownership).
+- UÅ‚atwia rozwiÄ…zywanie incydentÃ³w jakoÅ›ci danych (data observability).
+- Dokumentuje zaleÅ¼noÅ›ci w projektach dbt, Airflow czy Spark.
+- UÅ‚atwia audyty i analizÄ™ zgodnoÅ›ci (np. skÄ…d pochodzi dana metryka KPI w raporcie zarzÄ…du).
 
-# 💡 Przykład zastosowania
+# ðŸ’¡ PrzykÅ‚ad zastosowania
 
-Zespół BI odkrywa, że wartości kolumny „przychód_miesięczny” są podejrzanie zaniżone. Dzięki systemowi Data Lineage analizują ścieżkę powstawania danej metryki:
+ZespÃ³Å‚ BI odkrywa, Å¼e wartoÅ›ci kolumny â€žprzychÃ³d_miesiÄ™cznyâ€ sÄ… podejrzanie zaniÅ¼one. DziÄ™ki systemowi Data Lineage analizujÄ… Å›cieÅ¼kÄ™ powstawania danej metryki:
 
-- Dane źródłowe pochodzą z systemu ERP →
-- Przechodzą przez job integracyjny Apache Airbyte →
-- Zapisują się do stagingowej tabeli w Snowflake →
-- Transformowane za pomocą pipeline dbt (model core__revenue) →
+- Dane ÅºrÃ³dÅ‚owe pochodzÄ… z systemu ERP â†’
+- PrzechodzÄ… przez job integracyjny Apache Airbyte â†’
+- ZapisujÄ… siÄ™ do stagingowej tabeli w Snowflake â†’
+- Transformowane za pomocÄ… pipeline dbt (model core__revenue) â†’
 - Wykorzystywane w metryce w Looker.
 
-Błąd został zidentyfikowany w joinie w modelu dbt – szybka naprawa zapobiegła propagacji błędnych danych do raportów zarządczych.
+BÅ‚Ä…d zostaÅ‚ zidentyfikowany w joinie w modelu dbt â€“ szybka naprawa zapobiegÅ‚a propagacji bÅ‚Ä™dnych danych do raportÃ³w zarzÄ…dczych.
 
-## 📌 Źródła
+## ðŸ“Œ Å¹rÃ³dÅ‚a
 
-- [What is Data Lineage? – IBM](https://www.ibm.com/topics/data-lineage)
-- [Data Lineage in Modern Data Stack – Alation](https://www.alation.com/blog/what-is-data-lineage/)
+- [What is Data Lineage? â€“ IBM](https://www.ibm.com/topics/data-lineage)
+- [Data Lineage in Modern Data Stack â€“ Alation](https://www.alation.com/blog/what-is-data-lineage/)
 - [dbt Docs & Lineage Graph](https://docs.getdbt.com/docs/building-a-dbt-project/documentation)
 
-## 👽 Brudnopis
+## ðŸ‘½ Brudnopis
 
-- Data Lineage = skąd pochodzi dane + co się z nimi działo + gdzie są wykorzystane
-- Visual DAG – jak w dbt → model A korzysta z tabeli B tworzonej z C → wartości z A wpływają na dashboard D
-- Pożyteczne m.in. w: debugowaniu danych, compliance, katalogowaniu, „auditability”
+- Data Lineage = skÄ…d pochodzi dane + co siÄ™ z nimi dziaÅ‚o + gdzie sÄ… wykorzystane
+- Visual DAG â€“ jak w dbt â†’ model A korzysta z tabeli B tworzonej z C â†’ wartoÅ›ci z A wpÅ‚ywajÄ… na dashboard D
+- PoÅ¼yteczne m.in. w: debugowaniu danych, compliance, katalogowaniu, â€žauditabilityâ€
 - Automatyzowane: dbt, Airflow, DataHub, Marquez, OpenMetadata
-- Działa w tandem z Data Contracts i katalogiem danych (Data Catalog)
-- Przykład: wartość KPI w Power BI, jak została policzona i które dane weszły w skład wskaźnika
+- DziaÅ‚a w tandem z Data Contracts i katalogiem danych (Data Catalog)
+- PrzykÅ‚ad: wartoÅ›Ä‡ KPI w Power BI, jak zostaÅ‚a policzona i ktÃ³re dane weszÅ‚y w skÅ‚ad wskaÅºnika

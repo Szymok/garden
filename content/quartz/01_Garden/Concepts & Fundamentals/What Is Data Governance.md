@@ -1,7 +1,7 @@
----
+﻿---
 title: What Is Data Governance
 created: 2026-02-23
-status: 
+status: 🌱 draft
 category: 
 difficulty: 
 language: pl
@@ -10,36 +10,36 @@ tags:
 aliases:
   - 
 ---
-# 🎯 Definicja
+# ðŸŽ¯ Definicja
 
-**Data Governance** (Ład Danych) to systematyczny nadzór nad zasobami danych organizacji w celu zapewnienia ich jakości, bezpieczeństwa, prywatności, zgodności (compliance) oraz użyteczności. Celem jest dopasowanie praktyk zarządzania danymi do celów biznesowych organizacji.
+**Data Governance** (Åad Danych) to systematyczny nadzÃ³r nad zasobami danych organizacji w celu zapewnienia ich jakoÅ›ci, bezpieczeÅ„stwa, prywatnoÅ›ci, zgodnoÅ›ci (compliance) oraz uÅ¼ytecznoÅ›ci. Celem jest dopasowanie praktyk zarzÄ…dzania danymi do celÃ³w biznesowych organizacji.
 
-# 🔑 Kluczowe punkty
+# ðŸ”‘ Kluczowe punkty
 
-*   **Jakość danych:** Zapewnienie, że dane są poprawne i godne zaufania (zasada "Garbage in, garbage out").
-*   **Bezpieczeństwo i prywatność:** Kontrola dostępu, szyfrowanie (at rest, in transit, in process), maskowanie danych oraz procedury bezpiecznego usuwania zbędnych danych.
-*   **Zgodność (Compliance):** Przestrzeganie regulacji prawnych i standardów branżowych w celu minimalizacji ryzyka prawnego.
-*   **Użyteczność i dostępność:** Maksymalizacja potencjału danych poprzez katalogi danych, słowniki biznesowe (data dictionaries) oraz śledzenie pochodzenia danych (data lineage).
-*   **Zarządzanie metadanymi:** Gromadzenie i utrzymywanie informacji o danych w celu zwiększenia zaufania i ułatwienia podejmowania decyzji opartych na danych.
+*   **JakoÅ›Ä‡ danych:** Zapewnienie, Å¼e dane sÄ… poprawne i godne zaufania (zasada "Garbage in, garbage out").
+*   **BezpieczeÅ„stwo i prywatnoÅ›Ä‡:** Kontrola dostÄ™pu, szyfrowanie (at rest, in transit, in process), maskowanie danych oraz procedury bezpiecznego usuwania zbÄ™dnych danych.
+*   **ZgodnoÅ›Ä‡ (Compliance):** Przestrzeganie regulacji prawnych i standardÃ³w branÅ¼owych w celu minimalizacji ryzyka prawnego.
+*   **UÅ¼ytecznoÅ›Ä‡ i dostÄ™pnoÅ›Ä‡:** Maksymalizacja potencjaÅ‚u danych poprzez katalogi danych, sÅ‚owniki biznesowe (data dictionaries) oraz Å›ledzenie pochodzenia danych (data lineage).
+*   **ZarzÄ…dzanie metadanymi:** Gromadzenie i utrzymywanie informacji o danych w celu zwiÄ™kszenia zaufania i uÅ‚atwienia podejmowania decyzji opartych na danych.
 
-# 📚 Szczegółowe wyjaśnienie
+# ðŸ“š SzczegÃ³Å‚owe wyjaÅ›nienie
 
-Współczesne organizacje są całkowicie zależne od danych pochodzących z baz operacyjnych, systemów analitycznych, IoT czy mediów społecznościowych. Ilość danych rośnie wykładniczo (od gigabajtów po petabajty), co rodzi potrzebę ich ścisłej kontroli.
+WspÃ³Å‚czesne organizacje sÄ… caÅ‚kowicie zaleÅ¼ne od danych pochodzÄ…cych z baz operacyjnych, systemÃ³w analitycznych, IoT czy mediÃ³w spoÅ‚ecznoÅ›ciowych. IloÅ›Ä‡ danych roÅ›nie wykÅ‚adniczo (od gigabajtÃ³w po petabajty), co rodzi potrzebÄ™ ich Å›cisÅ‚ej kontroli.
 
-Kontrola danych jest niezbędna z dwóch powodów:
-1.  **Pozytywny:** Maksymalizacja potencjału biznesowego i wartości danych.
-2.  **Negatywny:** Minimalizacja ryzyka kradzieży, nadużyć oraz strat wizerunkowych i finansowych.
+Kontrola danych jest niezbÄ™dna z dwÃ³ch powodÃ³w:
+1.  **Pozytywny:** Maksymalizacja potencjaÅ‚u biznesowego i wartoÅ›ci danych.
+2.  **Negatywny:** Minimalizacja ryzyka kradzieÅ¼y, naduÅ¼yÄ‡ oraz strat wizerunkowych i finansowych.
 
-Data Governance obejmuje procesy takie jak inspekcja źródeł danych, wdrażanie mechanizmów ochrony (np. maskowanie danych), oraz dokumentowanie wiedzy o danych, aby nie została ona utracona. Dzięki temu organizacja buduje zaufanie do produkowanych informacji, co prowadzi do lepszych decyzji biznesowych.
+Data Governance obejmuje procesy takie jak inspekcja ÅºrÃ³deÅ‚ danych, wdraÅ¼anie mechanizmÃ³w ochrony (np. maskowanie danych), oraz dokumentowanie wiedzy o danych, aby nie zostaÅ‚a ona utracona. DziÄ™ki temu organizacja buduje zaufanie do produkowanych informacji, co prowadzi do lepszych decyzji biznesowych.
 
-# 💡 Przykład zastosowania
+# ðŸ’¡ PrzykÅ‚ad zastosowania
 
-*   **Maskowanie danych:** Wyświetlanie tylko ostatnich czterech cyfr numeru karty kredytowej w systemach obsługi klienta.
-*   **Data Lineage:** Użytkownik przeglądający raport BI może prześledzić drogę każdego punktu danych aż do oryginalnego źródła, co pozwala zweryfikować poprawność wyliczeń.
-*   **Katalog Danych:** Pracownik szukający konkretnych informacji może szybko sprawdzić w katalogu, jakie dane są dostępne, kto jest ich właścicielem i jakie mają właściwości.
+*   **Maskowanie danych:** WyÅ›wietlanie tylko ostatnich czterech cyfr numeru karty kredytowej w systemach obsÅ‚ugi klienta.
+*   **Data Lineage:** UÅ¼ytkownik przeglÄ…dajÄ…cy raport BI moÅ¼e przeÅ›ledziÄ‡ drogÄ™ kaÅ¼dego punktu danych aÅ¼ do oryginalnego ÅºrÃ³dÅ‚a, co pozwala zweryfikowaÄ‡ poprawnoÅ›Ä‡ wyliczeÅ„.
+*   **Katalog Danych:** Pracownik szukajÄ…cy konkretnych informacji moÅ¼e szybko sprawdziÄ‡ w katalogu, jakie dane sÄ… dostÄ™pne, kto jest ich wÅ‚aÅ›cicielem i jakie majÄ… wÅ‚aÅ›ciwoÅ›ci.
 
-## 📌 Źródła
+## ðŸ“Œ Å¹rÃ³dÅ‚a
 
-## 👽 Brudnopis
+## ðŸ‘½ Brudnopis
 
 What is data governance? Every single modern organization is dependent on data, whether it's their databases that they use for operations and analysis, whether it is the data leaks once they've moved on and they started to do data science, big data, and advanced analytics.
