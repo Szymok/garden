@@ -3,7 +3,7 @@ title: 🪴 Ogród 5.3
 enableToc: false
 ---
 
-Witaj👋 w moim cyfrowym ogrodzie wiedzy! Tutaj znajdziesz rozmaite pojęcia z dziedziny sztucznej inteligencji, analizy danych i inżynierii danych. Zapraszam do krótkiego wypadu po najważniejszych definicjach:
+Witaj👋 w moim cyfrowym ogrodzie wiedzy! Tutaj znajdziesz rozmaite pojęcia z dziedziny sztucznej inteligencji, analizy danych i inżynierii danych. Zapraszam do krótkiego wypadu po najważniejszych definicjach: 
 
 1. Sztuczna Inteligencja (AI)
 Sztuczna inteligencja to dziedzina nauki, która koncentruje się na tworzeniu maszyn zdolnych do wykonywania zadań, które normalnie wymagałyby ludzkiego myślenia. Do technik AI należą uczenie maszynowe, przetwarzanie języka naturalnego i widzenie komputerowe.

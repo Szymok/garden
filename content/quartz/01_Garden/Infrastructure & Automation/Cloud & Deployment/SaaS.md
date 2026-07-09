@@ -1,4 +1,4 @@
-﻿---
+---
 title: SaaS
 created: 2026-01-14
 status: 🌱 draft
@@ -10,23 +10,23 @@ tags:
 aliases:
   - 
 ---
-# ðŸŽ¯ Definicja
-**SaaS** (Software as a Service) to model dostarczania oprogramowania w chmurze, w ktÃ³rym uÅ¼ytkownicy uzyskujÄ… dostÄ™p do aplikacji przez internet, nie muszÄ…c martwiÄ‡ siÄ™ o infrastrukturÄ™, instalacjÄ™ czy konserwacjÄ™.
+# 🎯 Definicja
+**SaaS** (Software as a Service) to model dostarczania oprogramowania w chmurze, w którym użytkownicy uzyskują dostęp do aplikacji przez internet, nie musząc martwić się o infrastrukturę, instalację czy konserwację.
 
-# ðŸ”‘ Kluczowe punkty
-- **Brak infrastruktury:** Dostawca hostuje i utrzymuje oprogramowanie na wÅ‚asnych serwerach.
-- **Åatwy dostÄ™p:** UÅ¼ytkownik loguje siÄ™ do aplikacji zazwyczaj przez przeglÄ…darkÄ™ internetowÄ….
-- **Model subskrypcyjny:** CzÄ™sto rozliczany w formie abonamentu, co eliminuje wysokie koszty poczÄ…tkowe zakupu licencji.
+# 🔑 Kluczowe punkty
+- **Brak infrastruktury:** Dostawca hostuje i utrzymuje oprogramowanie na własnych serwerach.
+- **Łatwy dostęp:** Użytkownik loguje się do aplikacji zazwyczaj przez przeglądarkę internetową.
+- **Model subskrypcyjny:** Często rozliczany w formie abonamentu, co eliminuje wysokie koszty początkowe zakupu licencji.
 
-# ðŸ“š SzczegÃ³Å‚owe wyjaÅ›nienie
-W modelu SaaS ciÄ™Å¼ar zarzÄ…dzania systemami operacyjnymi, bazami danych i fizycznym sprzÄ™tem spoczywa caÅ‚kowicie na dostawcy. UÅ¼ytkownik koÅ„cowy otrzymuje gotowy produkt, ktÃ³ry jest regularnie aktualizowany i zabezpieczany bez jego ingerencji.
+# 📚 Szczegółowe wyjaśnienie
+W modelu SaaS ciężar zarządzania systemami operacyjnymi, bazami danych i fizycznym sprzętem spoczywa całkowicie na dostawcy. Użytkownik końcowy otrzymuje gotowy produkt, który jest regularnie aktualizowany i zabezpieczany bez jego ingerencji.
 
-# ðŸ’¡ PrzykÅ‚ad zastosowania
-- **Gmail:** UÅ¼ywasz poczty e-mail bez instalowania serwera pocztowego.
-- **Microsoft 365:** DostÄ™p do Worda, Excela i innych narzÄ™dzi w chmurze.
-- **Salesforce:** ZarzÄ…dzanie relacjami z klientami (CRM) w peÅ‚ni online.
+# 💡 Przykład zastosowania
+- **Gmail:** Używasz poczty e-mail bez instalowania serwera pocztowego.
+- **Microsoft 365:** Dostęp do Worda, Excela i innych narzędzi w chmurze.
+- **Salesforce:** Zarządzanie relacjami z klientami (CRM) w pełni online.
 
-## ðŸ“Œ Å¹rÃ³dÅ‚a
+## 📌 Źródła
 
-## ðŸ‘½ Brudnopis
+## 👽 Brudnopis
 - **SaaS**: Users access applications online without worrying about infrastructure. The provider hosts and maintains the software, and users simply log in to use it. Examples include Gmail and Microsoft 365.

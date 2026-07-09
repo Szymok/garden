@@ -1,82 +1,82 @@
-﻿---
+---
 
 title: Sources Ataccama  
 created: 2025-04-03  
 status: 🌱 draft
-category: data catalog / zarzÄ…dzanie poÅ‚Ä…czeniami  
+category: data catalog / zarządzanie połączeniami  
 difficulty: podstawowy  
 language: pl  
 tags:
 
-- ÅºrÃ³dÅ‚a danych
+- źródła danych
 - Ataccama ONE
 - data catalog
 - data discovery
 - profiling  
 aliases:
-- ÅºrÃ³dÅ‚a Ataccama
+- źródła Ataccama
 - Ataccama data sources
-- katalog ÅºrÃ³deÅ‚ danych
+- katalog źródeł danych
 
 ---
 
-# ðŸŽ¯ Definicja
+# 🎯 Definicja
 
-**Sources** w kontekÅ›cie platformy Ataccama ONE to zarejestrowane ÅºrÃ³dÅ‚a danych, ktÃ³re stanowiÄ… podstawÄ™ do dalszych operacji zarzÄ…dzania danymi â€” takich jak profilowanie, data discovery, katalogowanie, klasyfikacja, ocena jakoÅ›ci oraz dokumentacja techniczna i biznesowa. Å¹rÃ³dÅ‚a moÅ¼na tworzyÄ‡ i konfigurowaÄ‡ manualnie w sekcji **[[Data Catalog]] â†’ Sources**.
+**Sources** w kontekście platformy Ataccama ONE to zarejestrowane źródła danych, które stanowią podstawę do dalszych operacji zarządzania danymi — takich jak profilowanie, data discovery, katalogowanie, klasyfikacja, ocena jakości oraz dokumentacja techniczna i biznesowa. Źródła można tworzyć i konfigurować manualnie w sekcji **[[Data Catalog]] → Sources**.
 
-# ðŸ”‘ Kluczowe punkty
+# 🔑 Kluczowe punkty
 
-- ðŸ”Œ [[Data Source|Å¹rÃ³dÅ‚o danych]] definiuje punkt wejÅ›cia do danych â€“ np. baza danych, Data Lake, S3 bucket, JDBC, REST API.
-- ðŸ› ï¸ Do jednego ÅºrÃ³dÅ‚a moÅ¼na przypisaÄ‡ wiele poÅ‚Ä…czeÅ„ (connections), nawet rÃ³Å¼nego typu.
-- ðŸ‘¥ W ramach ÅºrÃ³dÅ‚a moÅ¼na zarzÄ…dzaÄ‡ poÅ›wiadczeniami i dostÄ™pami dla rÃ³Å¼nych uÅ¼ytkownikÃ³w.
-- âš™ï¸ ObsÅ‚ugiwane dziaÅ‚ania to: testowanie poÅ‚Ä…czenia, discovery danych, peÅ‚ne profilowanie, uruchomienie pipelineâ€™u dokumentujÄ…cego.
-- ðŸ§¹ MoÅ¼na natychmiastowo usunÄ…Ä‡ ÅºrÃ³dÅ‚o jednym klikniÄ™ciem (â€žInstant deleteâ€).
+- 🔌 [[Data Source|Źródło danych]] definiuje punkt wejścia do danych – np. baza danych, Data Lake, S3 bucket, JDBC, REST API.
+- 🛠️ Do jednego źródła można przypisać wiele połączeń (connections), nawet różnego typu.
+- 👥 W ramach źródła można zarządzać poświadczeniami i dostępami dla różnych użytkowników.
+- ⚙️ Obsługiwane działania to: testowanie połączenia, discovery danych, pełne profilowanie, uruchomienie pipeline’u dokumentującego.
+- 🧹 Można natychmiastowo usunąć źródło jednym kliknięciem („Instant delete”).
 
-# ðŸ“š SzczegÃ³Å‚owe wyjaÅ›nienie
+# 📚 Szczegółowe wyjaśnienie
 
-## Jak dziaÅ‚a sekcja Sources?
+## Jak działa sekcja Sources?
 
-Sekcja **Sources** w Ataccama ONE umoÅ¼liwia:
+Sekcja **Sources** w Ataccama ONE umożliwia:
 
-- Dodawanie i konfiguracjÄ™ ÅºrÃ³deÅ‚ danych.
-- ZarzÄ…dzanie kilkoma poÅ‚Ä…czeniami pod jedno ÅºrÃ³dÅ‚o (np. rÃ³Å¼ne Å›rodowiska: DEV, PROD).
-- PrzeglÄ…d wczeÅ›niej zarejestrowanych ÅºrÃ³deÅ‚, statusÃ³w testu poÅ‚Ä…czeÅ„, historii operacji.
-- Uruchamianie Data Discovery i Profilowania w obrÄ™bie wybranego ÅºrÃ³dÅ‚a.
+- Dodawanie i konfigurację źródeł danych.
+- Zarządzanie kilkoma połączeniami pod jedno źródło (np. różne środowiska: DEV, PROD).
+- Przegląd wcześniej zarejestrowanych źródeł, statusów testu połączeń, historii operacji.
+- Uruchamianie Data Discovery i Profilowania w obrębie wybranego źródła.
 - Inicjowanie flows: dokumentacja, klasyfikacja, lineage.
 
-## ObsÅ‚ugiwane ÅºrÃ³dÅ‚a danych (przykÅ‚adowe)
+## Obsługiwane źródła danych (przykładowe)
 
-|Typ ÅºrÃ³dÅ‚a|PrzykÅ‚ad zastosowania|
+|Typ źródła|Przykład zastosowania|
 |---|---|
 |Amazon S3|Pliki JSON, Parquet, CSV w chmurze|
 |Snowflake|Hurtownia danych analitycznych|
 |PostgreSQL / Oracle|Bazy danych transakcyjne|
 |Google BigQuery|Analityka danych z Google Cloud|
-|Azure Blob Storage|Pliki stagingowe lub pÃ³Å‚strukturalne dane|
-|Generic JDBC|Uniwersalne ÅºrÃ³dÅ‚o z danym sterownikiem|
-|REST API|Dane SaaS, CRM, systemÃ³w zewnÄ™trznych|
+|Azure Blob Storage|Pliki stagingowe lub półstrukturalne dane|
+|Generic JDBC|Uniwersalne źródło z danym sterownikiem|
+|REST API|Dane SaaS, CRM, systemów zewnętrznych|
 
-## Elementy zarzÄ…dzania ÅºrÃ³dÅ‚em
+## Elementy zarządzania źródłem
 
-- Nazwa ÅºrÃ³dÅ‚a i typ (np. â€žCRM_PROD â€“ PostgreSQL DBâ€).
-- Lista poÅ‚Ä…czeÅ„ (Connection Name, URL, status).
-- Przypisane poÅ›wiadczenia â€“ do kaÅ¼dego poÅ‚Ä…czenia moÅ¼e byÄ‡ przypisanych wiele credential profiles.
+- Nazwa źródła i typ (np. „CRM_PROD – PostgreSQL DB”).
+- Lista połączeń (Connection Name, URL, status).
+- Przypisane poświadczenia – do każdego połączenia może być przypisanych wiele credential profiles.
 - Aktywne procesy Discover / [[Profiling]] / Documentation History.
-- Uprawnienia: kto moÅ¼e uÅ¼yÄ‡ ÅºrÃ³dÅ‚a i w jakim zakresie.
-- Monitorowanie: ostatnie dziaÅ‚ania, bÅ‚Ä™dy, harmonogramy.
+- Uprawnienia: kto może użyć źródła i w jakim zakresie.
+- Monitorowanie: ostatnie działania, błędy, harmonogramy.
 
-## PrzykÅ‚ad cyklu Å¼ycia ÅºrÃ³dÅ‚a
+## Przykład cyklu życia źródła
 
-1. ðŸ› ï¸ Administrator dodaje ÅºrÃ³dÅ‚o â€žSalesforce_Prod_APIâ€ z poÅ›wiadczeniem OAuth2.
-2. ðŸ”Ž UÅ¼ytkownik uruchamia Discovery, by zidentyfikowaÄ‡ strukturÄ™ danych i dodaÄ‡ jÄ… do Katalogu.
-3. ðŸ§ª Kolejny uÅ¼ytkownik wÅ‚Ä…cza opcjÄ™ [[Manual Profiling]] na obiektach typu â€žCustomer Recordâ€.
-4. ðŸ“Š Analizy DQ oraz przypisanie terminÃ³w sÅ‚ownikowych nastÄ™puje automatycznie.
-5. ðŸ§¹ Nieaktualne lub zduplikowane ÅºrÃ³dÅ‚a sÄ… usuwane przy uÅ¼yciu â€žInstant deleteâ€.
+1. 🛠️ Administrator dodaje źródło „Salesforce_Prod_API” z poświadczeniem OAuth2.
+2. 🔎 Użytkownik uruchamia Discovery, by zidentyfikować strukturę danych i dodać ją do Katalogu.
+3. 🧪 Kolejny użytkownik włącza opcję [[Manual Profiling]] na obiektach typu „Customer Record”.
+4. 📊 Analizy DQ oraz przypisanie terminów słownikowych następuje automatycznie.
+5. 🧹 Nieaktualne lub zduplikowane źródła są usuwane przy użyciu „Instant delete”.
 
-# ðŸ’¡ PrzykÅ‚ad zastosowania
+# 💡 Przykład zastosowania
 
 ```python
-# Pseudokod opisujÄ…cy konfiguracjÄ™ ÅºrÃ³dÅ‚a danych w systemie katalogowym
+# Pseudokod opisujący konfigurację źródła danych w systemie katalogowym
 create_source(
     name="Azure_Finance_Data Lakehouse|Lakehouse",
     type="Azure Blob Storage",
@@ -90,17 +90,17 @@ create_source(
 )
 ```
 
-# ðŸ“Œ Å¹rÃ³dÅ‚a
+# 📌 Źródła
 
 - [https://docs.ataccama.com/](https://docs.ataccama.com/)
 - [https://www.ataccama.com/platform/data-catalog](https://www.ataccama.com/platform/data-catalog)
 - [https://learn.microsoft.com/en-us/fabric/data/connectors-overview](https://learn.microsoft.com/en-us/fabric/data/connectors-overview)
 - [https://www.collibra.com/us/en/platform/data-sources](https://www.collibra.com/us/en/platform/data-sources)
 
-# ðŸ‘½ Brudnopis
+# 👽 Brudnopis
 
-- â€žSourceâ€ to logiczny kontener dla jednego lub wielu poÅ‚Ä…czeÅ„ do danego systemu.
+- „Source” to logiczny kontener dla jednego lub wielu połączeń do danego systemu.
 - Kluczowy obiekt startowy pod wszystkie procesy: [[Profiling]], DQ, observability, lineage.
-- MoÅ¼liwoÅ›Ä‡ osobnych creds per env â†’ jedna definicja uÅ¼ywana w wielu flow.
-- Warto przypisywaÄ‡ ÅºrÃ³dÅ‚o do domeny danych lub grup ownershipowych.
-- Best practice: wersjonowaÄ‡ zmiany i dbaÄ‡ o naming conventions (np. `ENV_SYSTEM_TYP`).
+- Możliwość osobnych creds per env → jedna definicja używana w wielu flow.
+- Warto przypisywać źródło do domeny danych lub grup ownershipowych.
+- Best practice: wersjonować zmiany i dbać o naming conventions (np. `ENV_SYSTEM_TYP`).

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Prompt techniques  
 created: 2025-07-16  
 status: 🌱 draft
@@ -15,51 +15,51 @@ tags:
 aliases:
 - techniki promptowania
 ---
-# ðŸŽ¯ Definicja
+# 🎯 Definicja
 
-**Prompt techniques** to zestaw strategii tworzenia efektywnych promptÃ³w (poleceÅ„) dla duÅ¼ych modeli jÄ™zykowych ([[Base LLM|LLM]]), ktÃ³re umoÅ¼liwiajÄ… uzyskiwanie bardziej trafnych, logicznych i uÅ¼ytecznych odpowiedzi w zaleÅ¼noÅ›ci od typu zadania (klasyfikacja, generacja tekstu, QA itd.).
+**Prompt techniques** to zestaw strategii tworzenia efektywnych promptów (poleceń) dla dużych modeli językowych ([[Base LLM|LLM]]), które umożliwiają uzyskiwanie bardziej trafnych, logicznych i użytecznych odpowiedzi w zależności od typu zadania (klasyfikacja, generacja tekstu, QA itd.).
 
-# ðŸ”‘ Kluczowe punkty
+# 🔑 Kluczowe punkty
 
-- ðŸ‘â€ðŸ—¨ Efektywny prompt = lepsze rozumienie celu przez model.
-- ðŸ§  IstniejÄ… rÃ³Å¼ne strategie: zero-shot, few-shot, chain-of-thought, tree-of-thought itd.
-- ðŸ§© WybÃ³r techniki zaleÅ¼y od trudnoÅ›ci zadania i potrzeby interpretowalnoÅ›ci.
-- âš™ï¸ Prompt engineering minimalizuje koniecznoÅ›Ä‡ fine-tuningu.
+- 👁‍🗨 Efektywny prompt = lepsze rozumienie celu przez model.
+- 🧠 Istnieją różne strategie: zero-shot, few-shot, chain-of-thought, tree-of-thought itd.
+- 🧩 Wybór techniki zależy od trudności zadania i potrzeby interpretowalności.
+- ⚙️ Prompt engineering minimalizuje konieczność fine-tuningu.
 
-# ðŸ“š SzczegÃ³Å‚owe wyjaÅ›nienie
+# 📚 Szczegółowe wyjaśnienie
 
 ## [[Zero-Shot Prompting]]
 
-Najprostsza forma â€“ model otrzymuje wyÅ‚Ä…cznie instrukcjÄ™, bez przykÅ‚adÃ³w. Sprawdza siÄ™ dobrze w zadaniach, dla ktÃ³rych jÄ™zykowy kontekst jest wystarczajÄ…cy.
+Najprostsza forma – model otrzymuje wyłącznie instrukcję, bez przykładów. Sprawdza się dobrze w zadaniach, dla których językowy kontekst jest wystarczający.
 
-**PrzykÅ‚ad:**  
-â€žPrzetÅ‚umacz na niemiecki: â€˜Jak siÄ™ masz?â€™â€
+**Przykład:**  
+„Przetłumacz na niemiecki: ‘Jak się masz?’”
 
 ## [[Few-Shot Prompting]]
 
-Modelowi przekazuje siÄ™ kilka przykÅ‚adÃ³w oczekiwanych wejÅ›Ä‡/wyjÅ›Ä‡, co stanowi kontekst do wnioskowania.
+Modelowi przekazuje się kilka przykładów oczekiwanych wejść/wyjść, co stanowi kontekst do wnioskowania.
 
-**PrzykÅ‚ad:**
+**Przykład:**
 
-- Input: â€žAng. = 'dog', Fr. = 'chien'  
+- Input: „Ang. = 'dog', Fr. = 'chien'  
     Ang. = 'cat', Fr. = 'chat'  
-    Ang. = 'house', Fr. = â€¦â€
+    Ang. = 'house', Fr. = …”
 
 ## Chain-of-thought ([[Chain-of-Thought Prompting|CoT]])
 
-Model prowadzi krok po kroku Å›cieÅ¼kÄ™ rozumowania zamiast od razu zwracaÄ‡ odpowiedÅº.
+Model prowadzi krok po kroku ścieżkę rozumowania zamiast od razu zwracać odpowiedź.
 
-**UÅ¼yteczne w:**
+**Użyteczne w:**
 
 - zadaniach logicznych,
-- zadaniach wymagajÄ…cych wieloetapowego myÅ›lenia (np. zadania matematyczne, QA).
+- zadaniach wymagających wieloetapowego myślenia (np. zadania matematyczne, QA).
 
-**PrzykÅ‚ad:**  
-â€žIle jabÅ‚ek zostanie, jeÅ›li masz 10 jabÅ‚ek i zjesz 4? PomyÅ›l krok po kroku.â€
+**Przykład:**  
+„Ile jabłek zostanie, jeśli masz 10 jabłek i zjesz 4? Pomyśl krok po kroku.”
 
 ## Tree-of-thought ([[Tree of Thoughts (ToT)|ToT]])
 
-Zaawansowana forma [[Chain-of-Thought Prompting|CoT]] â€“ zamiast jednej liniowej Å›cieÅ¼ki, model rozgaÅ‚Ä™zia moÅ¼liwe scenariusze, analizujÄ…c kaÅ¼dÄ… opcjÄ™.
+Zaawansowana forma [[Chain-of-Thought Prompting|CoT]] – zamiast jednej liniowej ścieżki, model rozgałęzia możliwe scenariusze, analizując każdą opcję.
 
 **Zastosowanie:**
 
@@ -69,33 +69,33 @@ Zaawansowana forma [[Chain-of-Thought Prompting|CoT]] â€“ zamiast jednej li
 
 ## Directional prompting
 
-Specjalna forma podpowiedzi zawierajÄ…ca ukryte sterowanie np. przez narzucone style ("pokaÅ¼ tylko wynik", "zachowuj siÄ™ jak ekspert").
+Specjalna forma podpowiedzi zawierająca ukryte sterowanie np. przez narzucone style ("pokaż tylko wynik", "zachowuj się jak ekspert").
 
-**PrzykÅ‚ad:**  
-â€žJako analityk danych, przeanalizuj i wypisz tylko rekomendacjÄ™.â€
+**Przykład:**  
+„Jako analityk danych, przeanalizuj i wypisz tylko rekomendację.”
 
-# ðŸ’¡ PrzykÅ‚ad zastosowania
+# 💡 Przykład zastosowania
 
-Model [[Base LLM|LLM]] wykorzystywany w aplikacji do onboardingu pracownikÃ³w, w ktÃ³rej uÅ¼ytkownik pyta:  
-â€žJak mogÄ™ zarejestrowaÄ‡ urlop?â€
+Model [[Base LLM|LLM]] wykorzystywany w aplikacji do onboardingu pracowników, w której użytkownik pyta:  
+„Jak mogę zarejestrować urlop?”
 
-Zamiast jedynie daÄ‡ odpowiedÅº, stosujemy chain-of-thought:
+Zamiast jedynie dać odpowiedź, stosujemy chain-of-thought:
 
-â€žAby zarejestrowaÄ‡ urlop, najpierw naleÅ¼y zalogowaÄ‡ siÄ™ do systemu HR. NastÄ™pnie...â€
+„Aby zarejestrować urlop, najpierw należy zalogować się do systemu HR. Następnie...”
 
-To podejÅ›cie zwiÄ™ksza zrozumienie procesu przez uÅ¼ytkownika oraz podnosi wiarygodnoÅ›Ä‡ systemu.
+To podejście zwiększa zrozumienie procesu przez użytkownika oraz podnosi wiarygodność systemu.
 
-# ðŸ“Œ Å¹rÃ³dÅ‚a
+# 📌 Źródła
 
 [[Prompt Engineering Guide]]: [https://github.com/dair-ai/Prompt-Engineering-Guide](https://github.com/dair-ai/Prompt-Engineering-Guide)  
-Efficient Prompt Engineering Techniques â€“ AssemblyAI: [https://www.assemblyai.com/blog](https://www.assemblyai.com/blog)  
-"Prompt Engineering for LLMs" â€“ Microsoft Learn: [https://learn.microsoft.com/en-us/training/modules/prompt-engineering/](https://learn.microsoft.com/en-us/training/modules/prompt-engineering/)
+Efficient Prompt Engineering Techniques – AssemblyAI: [https://www.assemblyai.com/blog](https://www.assemblyai.com/blog)  
+"Prompt Engineering for LLMs" – Microsoft Learn: [https://learn.microsoft.com/en-us/training/modules/prompt-engineering/](https://learn.microsoft.com/en-us/training/modules/prompt-engineering/)
 
-# ðŸ‘½ Brudnopis
+# 👽 Brudnopis
 
-- Prompt != tylko pytanie â€“ to instrukcja sterujÄ…ca dziaÅ‚aniem modelu.
-- Typ promptu wpÅ‚ywa mocno na jakoÅ›Ä‡ i kontrolÄ™ nad wynikami.
-- [[Chain-of-Thought Prompting|CoT]] i [[Tree of Thoughts (ToT)|ToT]] zwiÄ™kszajÄ… interpretowalnoÅ›Ä‡ dziaÅ‚aÅ„ [[Base LLM|LLM]].
-- MoÅ¼liwoÅ›Ä‡ Å‚Ä…czenia technik np. few-shot + [[Chain-of-Thought Prompting|CoT]].
-- Prompt engineering â‰  fine-tuning, ale daje podobny efekt w niektÃ³rych scenariuszach.
-- Na obrazkach pokazano porÃ³wnanie technik i przebieg dziaÅ‚ania [[Chain-of-Thought Prompting|CoT]].
+- Prompt != tylko pytanie – to instrukcja sterująca działaniem modelu.
+- Typ promptu wpływa mocno na jakość i kontrolę nad wynikami.
+- [[Chain-of-Thought Prompting|CoT]] i [[Tree of Thoughts (ToT)|ToT]] zwiększają interpretowalność działań [[Base LLM|LLM]].
+- Możliwość łączenia technik np. few-shot + [[Chain-of-Thought Prompting|CoT]].
+- Prompt engineering ≠ fine-tuning, ale daje podobny efekt w niektórych scenariuszach.
+- Na obrazkach pokazano porównanie technik i przebieg działania [[Chain-of-Thought Prompting|CoT]].

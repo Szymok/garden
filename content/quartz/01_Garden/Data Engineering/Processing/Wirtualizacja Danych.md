@@ -1,9 +1,9 @@
-﻿---
+---
 
 title: Wirtualizacja Danych  
 created: 2025-07-15  
 status: 🌱 draft
-category: InÅ¼ynieria danych  
+category: Inżynieria danych  
 difficulty: podstawowy  
 language: pl  
 tags:
@@ -18,72 +18,72 @@ aliases:
 
 ---
 
-# ðŸŽ¯ Definicja
+# 🎯 Definicja
 
-**Wirtualizacja Danych** to technika agregowania, prezentowania i zarzÄ…dzania dostÄ™pem do danych pochodzÄ…cych z wielu, czÄ™sto heterogenicznych systemÃ³w ÅºrÃ³dÅ‚owych w sposÃ³b jednolity i zcentralizowany â€“ bez fizycznego przenoszenia czy kopiowania danych. UÅ¼ytkownicy oraz aplikacje korzystajÄ… z wirtualnej warstwy logicznej, ktÃ³ra udostÄ™pnia dane na Å¼Ä…danie i maskuje zÅ‚oÅ¼onoÅ›Ä‡ i rÃ³Å¼norodnoÅ›Ä‡ ÅºrÃ³deÅ‚.
+**Wirtualizacja Danych** to technika agregowania, prezentowania i zarządzania dostępem do danych pochodzących z wielu, często heterogenicznych systemów źródłowych w sposób jednolity i zcentralizowany – bez fizycznego przenoszenia czy kopiowania danych. Użytkownicy oraz aplikacje korzystają z wirtualnej warstwy logicznej, która udostępnia dane na żądanie i maskuje złożoność i różnorodność źródeł.
 
-# ðŸ”‘ Kluczowe punkty
+# 🔑 Kluczowe punkty
 
-- Dane pozostajÄ… w ÅºrÃ³dÅ‚owych systemach â€“ nie sÄ… kopiowane ani agregowane przed zapytaniem.
-- Warstwa wirtualizacji umoÅ¼liwia tworzenie semantycznych modeli biznesowych (np. kostki OLAP, widoki logiczne) dostÄ™pnych dla rÃ³Å¼nych narzÄ™dzi [[Business Intelligence|BI]] i uÅ¼ytkownikÃ³w.
-- Zapytania sÄ… tÅ‚umaczone i wykonywane w locie na odpowiednich ÅºrÃ³dÅ‚ach; czÄ™sto optymalizowane przez mechanizmy [[Push-Down]] i buforowanie w pamiÄ™ci.
-- Idealna dla Å›rodowisk z wieloma systemami ÅºrÃ³dÅ‚owymi o stosunkowo wysokiej wydajnoÅ›ci i spÃ³jnych czasach odpowiedzi.
-- ÅšciÅ›le powiÄ…zana z federacjÄ… danych (konsolidacja wielu ÅºrÃ³deÅ‚) i technikami [[Push-Down]] (delegacja operacji do ÅºrÃ³deÅ‚ danych).
+- Dane pozostają w źródłowych systemach – nie są kopiowane ani agregowane przed zapytaniem.
+- Warstwa wirtualizacji umożliwia tworzenie semantycznych modeli biznesowych (np. kostki OLAP, widoki logiczne) dostępnych dla różnych narzędzi [[Business Intelligence|BI]] i użytkowników.
+- Zapytania są tłumaczone i wykonywane w locie na odpowiednich źródłach; często optymalizowane przez mechanizmy [[Push-Down]] i buforowanie w pamięci.
+- Idealna dla środowisk z wieloma systemami źródłowymi o stosunkowo wysokiej wydajności i spójnych czasach odpowiedzi.
+- Ściśle powiązana z federacją danych (konsolidacja wielu źródeł) i technikami [[Push-Down]] (delegacja operacji do źródeł danych).
 
-# ðŸ“š SzczegÃ³Å‚owe wyjaÅ›nienie
+# 📚 Szczegółowe wyjaśnienie
 
-## Jak dziaÅ‚a wirtualizacja danych?
+## Jak działa wirtualizacja danych?
 
-1. **PoÅ‚Ä…czenie z wieloma ÅºrÃ³dÅ‚ami:**  
-    Warstwa wirtualizacji integruje rÃ³Å¼norodne ÅºrÃ³dÅ‚a â€“ bazy relacyjne, hurtownie danych, API, pliki, cloud storage.
+1. **Połączenie z wieloma źródłami:**  
+    Warstwa wirtualizacji integruje różnorodne źródła – bazy relacyjne, hurtownie danych, API, pliki, cloud storage.
 2. **[[Warstwa Semantyczna]]:**  
-    Projektujesz modele danych, ktÃ³re odpowiadajÄ… strukturze biznesowej (np. tabele logiczne, kostki), niezaleÅ¼nie od fizycznej lokalizacji i formatu ÅºrÃ³deÅ‚.
+    Projektujesz modele danych, które odpowiadają strukturze biznesowej (np. tabele logiczne, kostki), niezależnie od fizycznej lokalizacji i formatu źródeł.
 3. **On-demand execution:**  
-    Zapytania kierowane do warstwy wirtualnej sÄ… tÅ‚umaczone i optymalizowane, a caÅ‚a logika wykonania (joiny, agregacje) realizowana jest bezpoÅ›rednio na ÅºrÃ³dÅ‚ach, jeÅ›li to moÅ¼liwe.
+    Zapytania kierowane do warstwy wirtualnej są tłumaczone i optymalizowane, a cała logika wykonania (joiny, agregacje) realizowana jest bezpośrednio na źródłach, jeśli to możliwe.
 4. **Buforowanie i optymalizacja:**  
-    Technologie takie jak [[Apache Arrow]] buforujÄ… i przetwarzajÄ… zestawy wynikÃ³w w pamiÄ™ci RAM, poprawiajÄ…c wydajnoÅ›Ä‡ i redukujÄ…c czas odpowiedzi.
+    Technologie takie jak [[Apache Arrow]] buforują i przetwarzają zestawy wyników w pamięci RAM, poprawiając wydajność i redukując czas odpowiedzi.
 5. **Brak kopiowania danych:**  
-    Fizyczna migracja i wczeÅ›niejsze agregacje sÄ… zbÄ™dne; dane trafiajÄ… do uÅ¼ytkownika tylko w momencie zapytania.
+    Fizyczna migracja i wcześniejsze agregacje są zbędne; dane trafiają do użytkownika tylko w momencie zapytania.
 
-## Typowe narzÄ™dzia i technologie
+## Typowe narzędzia i technologie
 
-- **Dremio:** Platforma Å‚Ä…czÄ…ca wirtualizacjÄ™ danych z analitykÄ… w locie, zoptymalizowana pod OLAP i modelowanie semantyczne.
-- **Denodo:** Rozbudowane narzÄ™dzie do federacji i wirtualizacji danych, wspierajÄ…ce szerokÄ… gamÄ™ ÅºrÃ³deÅ‚.
-- **Presto/Trino:** Silniki federacyjne umoÅ¼liwiajÄ…ce rozproszone kwerendy na wielu backendach.
+- **Dremio:** Platforma łącząca wirtualizację danych z analityką w locie, zoptymalizowana pod OLAP i modelowanie semantyczne.
+- **Denodo:** Rozbudowane narzędzie do federacji i wirtualizacji danych, wspierające szeroką gamę źródeł.
+- **Presto/Trino:** Silniki federacyjne umożliwiające rozproszone kwerendy na wielu backendach.
 
 ### Kluczowa rola [[Apache Arrow]]
 
-- [[Apache Arrow]] zapewnia wspÃ³lny format pamiÄ™ci, szybki transfer i przetwarzanie danych wektorowych â€“ optymalizacja pod warstwy wirtualne i ad hoc query.
+- [[Apache Arrow]] zapewnia wspólny format pamięci, szybki transfer i przetwarzanie danych wektorowych – optymalizacja pod warstwy wirtualne i ad hoc query.
 
 ## Zastosowania
 
-- Raportowanie [[Business Intelligence|BI]] z wielu ÅºrÃ³deÅ‚ bez centralnego Data Warehouse.
+- Raportowanie [[Business Intelligence|BI]] z wielu źródeł bez centralnego Data Warehouse.
 - Analizy ad hoc na danych rozproszonych po systemach operacyjnych firmy.
-- Szybkie prototypowanie i iteracja zapytaÅ„ bez kosztu ETL.
+- Szybkie prototypowanie i iteracja zapytań bez kosztu ETL.
 
-## Integracja z federacjÄ… danych i push-downs
+## Integracja z federacją danych i push-downs
 
-- **[[Federacja Danych]]**: Konsolidacja i Å‚Ä…czenie zapytaÅ„ na zbiorach z rÃ³Å¼nych ÅºrÃ³deÅ‚ w czasie rzeczywistym, bez ETL.
-- **[[Push-Down]]**: Delegowanie kosztownych operacji (filtrowanie, agregacja) do ÅºrÃ³dÅ‚owych silnikÃ³w baz danych.
-- **[[Warstwa Semantyczna]]**: Pozwala uÅ¼ytkownikom odwoÅ‚ywaÄ‡ siÄ™ do modeli logicznych, a nie do detali technicznych ÅºrÃ³deÅ‚.
+- **[[Federacja Danych]]**: Konsolidacja i łączenie zapytań na zbiorach z różnych źródeł w czasie rzeczywistym, bez ETL.
+- **[[Push-Down]]**: Delegowanie kosztownych operacji (filtrowanie, agregacja) do źródłowych silników baz danych.
+- **[[Warstwa Semantyczna]]**: Pozwala użytkownikom odwoływać się do modeli logicznych, a nie do detali technicznych źródeł.
 
-# ðŸ’¡ PrzykÅ‚ad zastosowania
+# 💡 Przykład zastosowania
 
-MiÄ™dzynarodowa firma technologiczna korzysta z Dremio, aby zintegrowaÄ‡ dane z baz Oracle, SAP oraz plikÃ³w Parquet w S3 â€“ bez fizycznego kopiowania danych do centralnej hurtowni. ZespoÅ‚y [[Business Intelligence|BI]] majÄ… dostÄ™p do ujednoliconego modelu semantycznego, mogÄ… tworzyÄ‡ kostki OLAP i dashboardy w Power [[Business Intelligence|BI]], a zapytania analityczne sÄ… realizowane w locie, z push-downem logicznych operacji do systemÃ³w ÅºrÃ³dÅ‚owych i optymalizacjÄ… przy uÅ¼yciu [[Apache Arrow]].
+Międzynarodowa firma technologiczna korzysta z Dremio, aby zintegrować dane z baz Oracle, SAP oraz plików Parquet w S3 – bez fizycznego kopiowania danych do centralnej hurtowni. Zespoły [[Business Intelligence|BI]] mają dostęp do ujednoliconego modelu semantycznego, mogą tworzyć kostki OLAP i dashboardy w Power [[Business Intelligence|BI]], a zapytania analityczne są realizowane w locie, z push-downem logicznych operacji do systemów źródłowych i optymalizacją przy użyciu [[Apache Arrow]].
 
-## ðŸ“Œ Å¹rÃ³dÅ‚a
+## 📌 Źródła
 
-- [Dremio â€“ What is Data Virtualization?](https://www.dremio.com/wiki/data-virtualization/)
-- [Denodo â€“ What is Data Virtualization?](https://www.denodo.com/en/data-virtualization)
-- [[[Apache Arrow]] â€“ Dokumentacja](https://arrow.apache.org/)
-- [TechTarget â€“ Data Virtualization explained](https://www.techtarget.com/searchdatamanagement/definition/data-virtualization)
+- [Dremio – What is Data Virtualization?](https://www.dremio.com/wiki/data-virtualization/)
+- [Denodo – What is Data Virtualization?](https://www.denodo.com/en/data-virtualization)
+- [[[Apache Arrow]] – Dokumentacja](https://arrow.apache.org/)
+- [TechTarget – Data Virtualization explained](https://www.techtarget.com/searchdatamanagement/definition/data-virtualization)
 
-# ðŸ‘½ Brudnopis
+# 👽 Brudnopis
 
-- Virtualization = [[Business Intelligence|BI]] i analityka bez ETL, [[Push-Down]] na ÅºrÃ³dÅ‚ach, [[Apache Arrow]]
-- Modele semantyczne Ïƒ join/federacja kilku ÅºrÃ³deÅ‚ w jednym query context
+- Virtualization = [[Business Intelligence|BI]] i analityka bez ETL, [[Push-Down]] na źródłach, [[Apache Arrow]]
+- Modele semantyczne σ join/federacja kilku źródeł w jednym query context
 - Dremio, Denodo, IBM Data Virtualization Manager
-- Warstwy: ÅºrÃ³dÅ‚a â†’ federacja â†’ logika biznesowa/model â†’ ekspozycja do [[Business Intelligence|BI]]/query
+- Warstwy: źródła → federacja → logika biznesowa/model → ekspozycja do [[Business Intelligence|BI]]/query
 - Przewaga: szybkie prototypy, query na aktualnych danych, brak kopiowania/latency ETL
-- Wady: performance ograniczony przez ÅºrÃ³dÅ‚a, raczej nie stosowaÄ‡ dla obciÄ…Å¼eÅ„ operacyjnych/masowych batch
-- Real-case: FAQ, dashboardy Ad Hoc, testowanie nowych ÅºrÃ³deÅ‚, fast POC dla [[InÅ¼ynieria Danych|DataOps]]
+- Wady: performance ograniczony przez źródła, raczej nie stosować dla obciążeń operacyjnych/masowych batch
+- Real-case: FAQ, dashboardy Ad Hoc, testowanie nowych źródeł, fast POC dla [[Inżynieria Danych|DataOps]]

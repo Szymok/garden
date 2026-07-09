@@ -1,14 +1,14 @@
-﻿---
+---
 
 title: Skierowany Graf Acykliczny (DAG - Directed Acyclic Graph)  
 created: 2025-07-15  
 status: 🌱 draft
-category: InÅ¼ynieria danych  
+category: Inżynieria danych  
 difficulty: podstawowy  
 language: pl  
 tags:
 
-- inÅ¼ynieria danych
+- inżynieria danych
 - DAG
 - grafy
 - orkiestracja danych
@@ -20,84 +20,84 @@ aliases:
 
 ---
 
-# ðŸŽ¯ Definicja
+# 🎯 Definicja
 
-**Skierowany Graf Acykliczny (DAG, ang. Directed Acyclic Graph)** to [[Strukturyzacja danych|struktura danych]] skÅ‚adajÄ…ca siÄ™ z zestawu wierzchoÅ‚kÃ³w (wÄ™zÅ‚Ã³w) i skierowanych krawÄ™dzi miÄ™dzy nimi, przy czym graf nie zawiera Å¼adnych cykli â€” nie da siÄ™ wrÃ³ciÄ‡ do punktu wyjÅ›cia przez seriÄ™ poÅ‚Ä…czeÅ„. DAG umoÅ¼liwia jednoznaczne uporzÄ…dkowanie zadaÅ„ lub zaleÅ¼noÅ›ci w przetwarzaniu danych, co czyni go idealnym do modelowania potokÃ³w danych i procesÃ³w transformacji.
+**Skierowany Graf Acykliczny (DAG, ang. Directed Acyclic Graph)** to [[Strukturyzacja danych|struktura danych]] składająca się z zestawu wierzchołków (węzłów) i skierowanych krawędzi między nimi, przy czym graf nie zawiera żadnych cykli — nie da się wrócić do punktu wyjścia przez serię połączeń. DAG umożliwia jednoznaczne uporządkowanie zadań lub zależności w przetwarzaniu danych, co czyni go idealnym do modelowania potoków danych i procesów transformacji.
 
-# ðŸ”‘ Kluczowe punkty
+# 🔑 Kluczowe punkty
 
-- **Skierowany**: kaÅ¼da krawÄ™dÅº ma kierunek (od wÄ™zÅ‚a rodzica do dziecka).
-- **Acykliczny**: brak moÅ¼liwoÅ›ci utworzenia pÄ™tli â€” nie moÅ¼na wrÃ³ciÄ‡ do tego samego wÄ™zÅ‚a.
-- **KolejnoÅ›Ä‡ zaleÅ¼noÅ›ci**: Graf wyraÅ¼a zaleÅ¼noÅ›ci miÄ™dzy krokami procesu (np. ETL, transformacji danych).
-- **[[IdempotentnoÅ›Ä‡|Idempotencja]] i retry**: dziÄ™ki strukturze DAG, moÅ¼liwe jest bezpieczne ponowne uruchamianie tylko wybranych fragmentÃ³w procesu.
-- **Zastosowanie w Data Engineeringu â€” orkiestracja, lineage, obserwowalnoÅ›Ä‡.**
+- **Skierowany**: każda krawędź ma kierunek (od węzła rodzica do dziecka).
+- **Acykliczny**: brak możliwości utworzenia pętli — nie można wrócić do tego samego węzła.
+- **Kolejność zależności**: Graf wyraża zależności między krokami procesu (np. ETL, transformacji danych).
+- **[[Idempotentność|Idempotencja]] i retry**: dzięki strukturze DAG, możliwe jest bezpieczne ponowne uruchamianie tylko wybranych fragmentów procesu.
+- **Zastosowanie w Data Engineeringu — orkiestracja, lineage, obserwowalność.**
 
-# ðŸ“š SzczegÃ³Å‚owe wyjaÅ›nienie
+# 📚 Szczegółowe wyjaśnienie
 
-## Zastosowanie DAG w inÅ¼ynierii danych
+## Zastosowanie DAG w inżynierii danych
 
 W systemach takich jak **Apache [[Apache Airflow|Airflow]]**, **[[Dagster]]**, **Prefect** czy **[[dbt]]**, DAG reprezentuje potok przetwarzania danych:
 
-- **WÄ™zeÅ‚ (node)**: oznacza krok w potoku (np. ekstrakcjÄ™, transformacjÄ™, agregacjÄ™).
-- **KrawÄ™dÅº (edge)**: reprezentuje zaleÅ¼noÅ›Ä‡ â€” jeden krok musi zakoÅ„czyÄ‡ siÄ™ sukcesem, by drugi mÃ³gÅ‚ siÄ™ rozpoczÄ…Ä‡.
-- **Flow danych**: DAG pozwala ustaliÄ‡, ktÃ³re zadania moÅ¼na uruchomiÄ‡ rÃ³wnolegle, a ktÃ³re muszÄ… nastÄ…piÄ‡ po sobie.
+- **Węzeł (node)**: oznacza krok w potoku (np. ekstrakcję, transformację, agregację).
+- **Krawędź (edge)**: reprezentuje zależność — jeden krok musi zakończyć się sukcesem, by drugi mógł się rozpocząć.
+- **Flow danych**: DAG pozwala ustalić, które zadania można uruchomić równolegle, a które muszą nastąpić po sobie.
 
 ## Cechy funkcjonalne DAG
 
-- **DeterministycznoÅ›Ä‡**: przy tych samych danych wejÅ›ciowych â€“ te same wyniki.
-- **[[IdempotentnoÅ›Ä‡|Idempotencja]]**: kaÅ¼dy krok moÅ¼e byÄ‡ bezpiecznie uruchomiony wielokrotnie â€“ patrz: [[IdempotentnoÅ›Ä‡]].
-- **Debuggowanie i retry**: w przypadku bÅ‚Ä™du moÅ¼na powtÃ³rzyÄ‡ tylko problematyczny krok, a nie caÅ‚y potok.
-- **RozszerzalnoÅ›Ä‡**: Å‚atwo dodawaÄ‡ nowe wÄ™zÅ‚y i zaleÅ¼noÅ›ci bez przebudowy caÅ‚ego workflow.
+- **Deterministyczność**: przy tych samych danych wejściowych – te same wyniki.
+- **[[Idempotentność|Idempotencja]]**: każdy krok może być bezpiecznie uruchomiony wielokrotnie – patrz: [[Idempotentność]].
+- **Debuggowanie i retry**: w przypadku błędu można powtórzyć tylko problematyczny krok, a nie cały potok.
+- **Rozszerzalność**: łatwo dodawać nowe węzły i zależności bez przebudowy całego workflow.
 
-## PrzykÅ‚adowe narzÄ™dzia wykorzystujÄ…ce DAG
+## Przykładowe narzędzia wykorzystujące DAG
 
-|NarzÄ™dzie|Opis|
+|Narzędzie|Opis|
 |---|---|
-|**[[Apache Airflow]]**|Planowanie i zarzÄ…dzanie zÅ‚oÅ¼onymi pipelineâ€™ami danych|
-|**[[Dagster]]**|PodejÅ›cie typu "[[Data Source\|data asset]]-oriented" z deklaratywnym API|
+|**[[Apache Airflow]]**|Planowanie i zarządzanie złożonymi pipeline’ami danych|
+|**[[Dagster]]**|Podejście typu "[[Data Source\|data asset]]-oriented" z deklaratywnym API|
 |**[[dbt]]**|[[Modelowanie Danych]] w SQL jako DAG transformacji|
 |**Prefect**|Nowoczesna orkiestracja z retry, caching, task runnerami|
 
-## PrzykÅ‚ad graficzny DAG
+## Przykład graficzny DAG
 
-PrzykÅ‚adowy DAG potoku danych:
+Przykładowy DAG potoku danych:
 
 ```
 raw_data_ingest
-       â†“
+       ↓
 transform_clean_data
-       â†“
+       ↓
 aggregate_to_metrics
-       â†“
+       ↓
 publish_to_dashboard
 ```
 
-KaÅ¼dy z tych krokÃ³w jest od siebie zaleÅ¼ny i moÅ¼e zostaÄ‡ uruchomiony tylko wtedy, gdy jego poprzednik zakoÅ„czy siÄ™ pomyÅ›lnie.
+Każdy z tych kroków jest od siebie zależny i może zostać uruchomiony tylko wtedy, gdy jego poprzednik zakończy się pomyślnie.
 
-# ðŸ’¡ PrzykÅ‚ad zastosowania
+# 💡 Przykład zastosowania
 
-W architekturze danych e-commerce, zespÃ³Å‚ buduje pipeline oparty o Apache Airflow, w ktÃ³rym:
+W architekturze danych e-commerce, zespół buduje pipeline oparty o Apache Airflow, w którym:
 
-- Task A: pobiera dane zamÃ³wieÅ„ z API (`extract_orders`)
+- Task A: pobiera dane zamówień z API (`extract_orders`)
 - Task B: oczyszcza dane (`clean_orders`)
 - Task C: agreguje dane dzienne (`agg_daily_orders`)
 - Task D: publikuje dane do Tableau (`update_dashboard`)
 
-Wszystkie kroki sÄ… modelowane jako DAG. JeÅ›li podczas agregacji (Task C) wystÄ…pi bÅ‚Ä…d, moÅ¼na ponownie uruchomiÄ‡ tylko ten krok â€” nie trzeba uruchamiaÄ‡ ekstrakcji ani integracji z Tableau. Struktura DAG pozwala rÃ³wnieÅ¼ na analizÄ™ pochodzenia danych (_data lineage_) i automatyczne planowanie przetwarzania (np. codzienna aktualizacja).
+Wszystkie kroki są modelowane jako DAG. Jeśli podczas agregacji (Task C) wystąpi błąd, można ponownie uruchomić tylko ten krok — nie trzeba uruchamiać ekstrakcji ani integracji z Tableau. Struktura DAG pozwala również na analizę pochodzenia danych (_data lineage_) i automatyczne planowanie przetwarzania (np. codzienna aktualizacja).
 
-## ðŸ“Œ Å¹rÃ³dÅ‚a
+## 📌 Źródła
 
 - [Airflow DAG Concepts](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html)
-- [Dagster â€” Asset Graphs and Lineage](https://docs.dagster.io/concepts/assets)
-- [dbt Docs â€” DAG](https://docs.getdbt.com/docs/build/building-models/graph-overview)
+- [Dagster — Asset Graphs and Lineage](https://docs.dagster.io/concepts/assets)
+- [dbt Docs — DAG](https://docs.getdbt.com/docs/build/building-models/graph-overview)
 - [Wikipedia: Directed Acyclic Graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph)
 
-# ðŸ‘½ Brudnopis
+# 👽 Brudnopis
 
-- DAG: Directed â†’ kaÅ¼de poÅ‚Ä…czenie ma kierunek
-- Acykliczny â†’ brak cykli, nie ma pÄ™tli
-- DAG â‰  drzewo â€” mogÄ… byÄ‡ wierzchoÅ‚ki z wieloma parentami
+- DAG: Directed → każde połączenie ma kierunek
+- Acykliczny → brak cykli, nie ma pętli
+- DAG ≠ drzewo — mogą być wierzchołki z wieloma parentami
 - Istotne w przetwarzaniu danych, [[Business Intelligence|BI]], orkiestracji
-- Struktura bazowa np. w [[dbt]]: kaÅ¼dy model SQL to wÄ™zeÅ‚ DAG
-- Retry, flow control, impact analysis, parallelism â†’ wszystko dostÄ™pne dziÄ™ki DAG
-- DAG = mapowanie zaleÅ¼noÅ›ci logicznych miÄ™dzy taskami â€“ nie wykres Å‚adowania danych
+- Struktura bazowa np. w [[dbt]]: każdy model SQL to węzeł DAG
+- Retry, flow control, impact analysis, parallelism → wszystko dostępne dzięki DAG
+- DAG = mapowanie zależności logicznych między taskami – nie wykres ładowania danych

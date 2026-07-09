@@ -1,4 +1,4 @@
-﻿---
+---
 title: Metadata Model Graph
 created: 2026-05-06
 status: 🌱 draft
@@ -12,7 +12,7 @@ tags:
   - entities
 ---
 To view the metadata graph, go to Global Settings > Metadata Model > Model Graph: 1. 2. 3. 4. Entity type filter: Metadata model entities are categorized into two types. To show all types of entities and their connections, select the All filter. System - Their instances and subtypes describe the configuration of the system layer.(Used internally by the application). Business - This type Of entity is governed by organization. They represent metadata that is important in a business sense. Metadata box: Connects to other entities with lines. To highlight the connections, hover over the line. Entities: Shown as boxes, with their properties listed inside. The connection type: Appears above the connections, for example, AEE, SRE, SEE, etc.
-To look for a specific entity, select the search icon in the upper-right corner and type the entity name. The entity you are looking for is shown and highlighted in green. Manage the graph size: â€¢ The icons in the lower-right corner can help with orienting and managing the graph size
+To look for a specific entity, select the search icon in the upper-right corner and type the entity name. The entity you are looking for is shown and highlighted in green. Manage the graph size: • The icons in the lower-right corner can help with orienting and managing the graph size
 Adding an object to the model graph is done through creating a new entity. Creating an entity in ONE strictly means defining a new entity type. This is done from the Global Settings (1) > Metadata Model (2). Each entity defines a section (or node) in the web application. Where the new entity is displayed depends on its position within Navigation (3)
 
 

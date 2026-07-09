@@ -1,10 +1,10 @@
-﻿---
+---
 
 title: Sieci neuronowe  
 created: 2025-03-31  
 status: 🌱 draft
 category: sztuczna inteligencja / uczenie maszynowe  
-difficulty: Å›redni  
+difficulty: średni  
 language: pl  
 tags:
 
@@ -20,68 +20,68 @@ aliases:
 
 ---
 
-# ðŸŽ¯ Definicja
+# 🎯 Definicja
 
-**Sieci neuronowe** (ang. Artificial Neural Networks, ANN) to klasa modeli w sztucznej inteligencji inspirowana strukturÄ… i dziaÅ‚aniem ludzkiego mÃ³zgu. SkÅ‚adajÄ… siÄ™ z warstw poÅ‚Ä…czonych ze sobÄ… sztucznych "neuronÃ³w", ktÃ³re przekazujÄ… i przeksztaÅ‚cajÄ… informacje, uczÄ…c siÄ™ odwzorowywaÄ‡ zÅ‚oÅ¼one relacje w danych na podstawie przykÅ‚adÃ³w treningowych.
+**Sieci neuronowe** (ang. Artificial Neural Networks, ANN) to klasa modeli w sztucznej inteligencji inspirowana strukturą i działaniem ludzkiego mózgu. Składają się z warstw połączonych ze sobą sztucznych "neuronów", które przekazują i przekształcają informacje, ucząc się odwzorowywać złożone relacje w danych na podstawie przykładów treningowych.
 
-# ðŸ”‘ Kluczowe punkty
+# 🔑 Kluczowe punkty
 
-- ðŸ§  Sieci neuronowe uczÄ… siÄ™ poprzez proces optymalizacji wag (poÅ‚Ä…czeÅ„) na danych treningowych.
-- ðŸŽ›ï¸ SkÅ‚adajÄ… siÄ™ z warstw: wejÅ›ciowej, ukrytych (ang. hidden) i wyjÅ›ciowej.
-- ðŸ” Sieci wielowarstwowe (MLP, DNN) mogÄ… reprezentowaÄ‡ zÅ‚oÅ¼onÄ… nieliniowÄ… funkcjÄ™.
-- ðŸ§® StosujÄ… funkcje aktywacji (np. [[ReLU]], sigmoid, tanh) i propagacjÄ™ wstecznÄ… (backpropagation).
-- ðŸ“¦ SÄ… podstawÄ… uczenia gÅ‚Ä™bokiego ([[Deep Learning]]) oraz nowoczesnych modeli jak CNN, RNN, LSTM czy transformery.
+- 🧠 Sieci neuronowe uczą się poprzez proces optymalizacji wag (połączeń) na danych treningowych.
+- 🎛️ Składają się z warstw: wejściowej, ukrytych (ang. hidden) i wyjściowej.
+- 🔁 Sieci wielowarstwowe (MLP, DNN) mogą reprezentować złożoną nieliniową funkcję.
+- 🧮 Stosują funkcje aktywacji (np. [[ReLU]], sigmoid, tanh) i propagację wsteczną (backpropagation).
+- 📦 Są podstawą uczenia głębokiego ([[Deep Learning]]) oraz nowoczesnych modeli jak CNN, RNN, LSTM czy transformery.
 
-# ðŸ“š SzczegÃ³Å‚owe wyjaÅ›nienie
+# 📚 Szczegółowe wyjaśnienie
 
-## Struktura i dziaÅ‚anie
+## Struktura i działanie
 
-SieÄ‡ neuronowa to graficzny model funkcji, gdzie dane sÄ… przetwarzane przez kolejne warstwy neuronÃ³w. KaÅ¼dy [[Neuron]]:
+Sieć neuronowa to graficzny model funkcji, gdzie dane są przetwarzane przez kolejne warstwy neuronów. Każdy [[Neuron]]:
 
-- Otrzymuje sygnaÅ‚y wejÅ›ciowe, przemnaÅ¼a je przez wagi,
-- Sumuje je i przepuszcza przez funkcjÄ™ aktywacji,
+- Otrzymuje sygnały wejściowe, przemnaża je przez wagi,
+- Sumuje je i przepuszcza przez funkcję aktywacji,
 - Przekazuje wynik do kolejnej warstwy.
 
 ### Warstwy
 
 |Warstwa|Rola|
 |---|---|
-|WejÅ›ciowa|Reprezentuje dane wejÅ›ciowe (np. piksele, cechy)|
-|Ukryte (hidden)|PrzetwarzajÄ… dane i uczÄ… siÄ™ reprezentacji poÅ›rednich|
-|WyjÅ›ciowa|Wytwarza koÅ„cowy wynik (np. klasyfikacja)|
+|Wejściowa|Reprezentuje dane wejściowe (np. piksele, cechy)|
+|Ukryte (hidden)|Przetwarzają dane i uczą się reprezentacji pośrednich|
+|Wyjściowa|Wytwarza końcowy wynik (np. klasyfikacja)|
 
 ## Typy sieci neuronowych
 
-- **MLP (Multi-Layer Perceptron)** â€“ klasyczna struktura, uÅ¼ywana w zadaniach klasyfikacyjnych i regresyjnych.
-- **CNN (Convolutional Neural Networks)** â€“ sieci do przetwarzania danych o strukturze siatki, np. obrazÃ³w.
-- **RNN (Recurrent Neural Networks)** â€“ sieci do sekwencji, np. tekstÃ³w, sygnaÅ‚Ã³w czasowych.
-- **LSTM/GRU** â€“ warianty RNN, lepiej radzÄ…ce sobie z zaleÅ¼noÅ›ciami dÅ‚ugoterminowymi.
-- **Transformery** â€“ nowoczesna architektura uÅ¼ywana m.in. w GPT, BERT â€“ dziaÅ‚a rÃ³wnolegle i skutecznie przetwarza dÅ‚ugie sekwencje.
+- **MLP (Multi-Layer Perceptron)** – klasyczna struktura, używana w zadaniach klasyfikacyjnych i regresyjnych.
+- **CNN (Convolutional Neural Networks)** – sieci do przetwarzania danych o strukturze siatki, np. obrazów.
+- **RNN (Recurrent Neural Networks)** – sieci do sekwencji, np. tekstów, sygnałów czasowych.
+- **LSTM/GRU** – warianty RNN, lepiej radzące sobie z zależnościami długoterminowymi.
+- **Transformery** – nowoczesna architektura używana m.in. w GPT, BERT – działa równolegle i skutecznie przetwarza długie sekwencje.
 
 ## Proces uczenia
 
-1. **Forward Pass** â€“ dane przechodzÄ… przez sieÄ‡ do wyniku koÅ„cowego.
-2. **Obliczenie bÅ‚Ä™du** â€“ wg funkcji kosztu (loss function), np. MSE, cross-entropy.
-3. **Backpropagation** â€“ propagacja bÅ‚Ä™du wstecz przez sieÄ‡.
-4. **Update wag** â€“ optymalizacja (np. SGD, Adam) aktualizuje wagi neuronÃ³w.
+1. **Forward Pass** – dane przechodzą przez sieć do wyniku końcowego.
+2. **Obliczenie błędu** – wg funkcji kosztu (loss function), np. MSE, cross-entropy.
+3. **Backpropagation** – propagacja błędu wstecz przez sieć.
+4. **Update wag** – optymalizacja (np. SGD, Adam) aktualizuje wagi neuronów.
 
-# ðŸ’¡ PrzykÅ‚ad zastosowania
+# 💡 Przykład zastosowania
 
 ```python
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
-# Tworzymy prostÄ… sieÄ‡ neuronowÄ… do klasyfikacji binarnej
+# Tworzymy prostą sieć neuronową do klasyfikacji binarnej
 model = Sequential([
     Dense(64, activation='relu', input_shape=(10,)),
     Dense(64, activation='relu'),
-    Dense(1, activation='sigmoid')  # Wynik: prawdopodobieÅ„stwo klasy 1
+    Dense(1, activation='sigmoid')  # Wynik: prawdopodobieństwo klasy 1
 ])
 
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 ```
 
-# ðŸ“Œ Å¹rÃ³dÅ‚a
+# 📌 Źródła
 
 - [https://cs231n.github.io/neural-networks-1/](https://cs231n.github.io/neural-networks-1/)
 - [https://www.tensorflow.org/learn](https://www.tensorflow.org/learn)
@@ -89,9 +89,9 @@ model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy']
 - [https://machinelearningmastery.com/neural-networks-crash-course/](https://machinelearningmastery.com/neural-networks-crash-course/)
 - [https://deepai.org/machine-learning-glossary-and-terms/neuronal-network](https://deepai.org/machine-learning-glossary-and-terms/neuronal-network)
 
-# ðŸ‘½ Brudnopis
+# 👽 Brudnopis
 
-- ðŸ¤¯ DuÅ¼a liczba parametrÃ³w = duÅ¼a zdolnoÅ›Ä‡ reprezentacji, ale teÅ¼ ryzyko overfittingu
-- ðŸ”§ Kluczowe aspekty: inicjalizacja wag, normalizacja danych, wybÃ³r liczby warstw i neuronÃ³w
-- ðŸ§ª OprÃ³cz klasycznych zastosowaÅ„ â€” wejÅ›cie do modeli generatywnych, RL i modeli multimodalnych
-- âœ¨ Nowoczesne architektury hybrydowe (np. ConvMixer, ViT) Å‚Ä…czÄ… zalety rÃ³Å¼nych podejÅ›Ä‡
+- 🤯 Duża liczba parametrów = duża zdolność reprezentacji, ale też ryzyko overfittingu
+- 🔧 Kluczowe aspekty: inicjalizacja wag, normalizacja danych, wybór liczby warstw i neuronów
+- 🧪 Oprócz klasycznych zastosowań — wejście do modeli generatywnych, RL i modeli multimodalnych
+- ✨ Nowoczesne architektury hybrydowe (np. ConvMixer, ViT) łączą zalety różnych podejść

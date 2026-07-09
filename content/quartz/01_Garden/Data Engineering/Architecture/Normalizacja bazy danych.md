@@ -1,14 +1,14 @@
-﻿---
+---
 
 title: Normalizacja bazy danych  
 created: 2025-07-15  
 status: 🌱 draft
-category: InÅ¼ynieria danych  
+category: Inżynieria danych  
 difficulty: podstawowy  
 language: pl  
 tags:
 
-- inÅ¼ynieria danych
+- inżynieria danych
 - normalizacja
 - relacyjne bazy danych
 - projektowanie danych
@@ -19,33 +19,33 @@ aliases:
 
 ---
 
-# ðŸŽ¯ Definicja
+# 🎯 Definicja
 
-**Normalizacja bazy danych** to proces systematycznego organizowania danych w relacyjnych bazach danych w taki sposÃ³b, aby zredukowaÄ‡ redundancjÄ™ i zapewniÄ‡ integralnoÅ›Ä‡ danych. Opiera siÄ™ na zestawie reguÅ‚ (tzw. form normalnych) zdefiniowanych przez Edgara F. Codda, twÃ³rcÄ™ modelu relacyjnego. DziÄ™ki normalizacji struktura bazy danych staje siÄ™ klarowna, spÃ³jna i Å‚atwa w utrzymaniu.
+**Normalizacja bazy danych** to proces systematycznego organizowania danych w relacyjnych bazach danych w taki sposób, aby zredukować redundancję i zapewnić integralność danych. Opiera się na zestawie reguł (tzw. form normalnych) zdefiniowanych przez Edgara F. Codda, twórcę modelu relacyjnego. Dzięki normalizacji struktura bazy danych staje się klarowna, spójna i łatwa w utrzymaniu.
 
-# ðŸ”‘ Kluczowe punkty
+# 🔑 Kluczowe punkty
 
-- Normalizacja eliminuje duplikaty danych i zapewnia spÃ³jnoÅ›Ä‡ informacji.
-- KaÅ¼dy etap normalizacji (1NF, 2NF, 3NF itp.) eliminuje okreÅ›lony typ nieoptymalnej zaleÅ¼noÅ›ci.
-- Proces bazuje na kluczach gÅ‚Ã³wnych, zaleÅ¼noÅ›ciach funkcjonalnych i dekompozycji tabel.
-- Nadmiarowa dekompozycja moÅ¼e prowadziÄ‡ do zÅ‚oÅ¼onych zapytaÅ„ â€“ dlatego czasami stosuje siÄ™ denormalizacjÄ™.
+- Normalizacja eliminuje duplikaty danych i zapewnia spójność informacji.
+- Każdy etap normalizacji (1NF, 2NF, 3NF itp.) eliminuje określony typ nieoptymalnej zależności.
+- Proces bazuje na kluczach głównych, zależnościach funkcjonalnych i dekompozycji tabel.
+- Nadmiarowa dekompozycja może prowadzić do złożonych zapytań – dlatego czasami stosuje się denormalizację.
 - Normalizacja jest fundamentem projektowania OLTP (Online Transaction Processing), a nie OLAP.
 
-# ðŸ“š SzczegÃ³Å‚owe wyjaÅ›nienie
+# 📚 Szczegółowe wyjaśnienie
 
 ## Kluczowe formy normalne
 
-### ðŸ”¹ Pierwsza Forma Normalna (1NF)
+### 🔹 Pierwsza Forma Normalna (1NF)
 
-- Tabela nie zawiera powtarzajÄ…cych siÄ™ grup (Å¼adnych kolumn tablicowych).
-- KaÅ¼de pole zawiera tylko jednÄ… wartoÅ›Ä‡ (atomowoÅ›Ä‡).
-- KaÅ¼dy wiersz ma unikalny identyfikator (klucz gÅ‚Ã³wny).
+- Tabela nie zawiera powtarzających się grup (żadnych kolumn tablicowych).
+- Każde pole zawiera tylko jedną wartość (atomowość).
+- Każdy wiersz ma unikalny identyfikator (klucz główny).
 
-**PrzykÅ‚ad naruszenia**:
+**Przykład naruszenia**:
 
 |ID|Produkty|
 |---|---|
-|1|Mleko, Chleb, MasÅ‚o|
+|1|Mleko, Chleb, Masło|
 
 **Po 1NF**:
 
@@ -53,51 +53,51 @@ aliases:
 |---|---|
 |1|Mleko|
 |1|Chleb|
-|1|MasÅ‚o|
+|1|Masło|
 
-### ðŸ”¹ Druga Forma Normalna (2NF)
+### 🔹 Druga Forma Normalna (2NF)
 
-- SpeÅ‚nia 1NF.
-- Wszystkie atrybuty nieprymarne sÄ… w peÅ‚ni zaleÅ¼ne od caÅ‚ego klucza gÅ‚Ã³wnego (nie tylko czÄ™Å›ci, jeÅ›li klucz jest zÅ‚oÅ¼ony).
-- Usuwa zaleÅ¼noÅ›ci czÄ™Å›ciowe.
+- Spełnia 1NF.
+- Wszystkie atrybuty nieprymarne są w pełni zależne od całego klucza głównego (nie tylko części, jeśli klucz jest złożony).
+- Usuwa zależności częściowe.
 
-**PrzykÅ‚ad naruszenia**: jeÅ›li mamy tabelÄ™ z kluczem zÅ‚oÅ¼onym (np. <NumerZamÃ³wienia, ProduktID>), a kolumna ProduktNazwa zaleÅ¼y tylko od ProduktID, to konieczna jest dekompozycja.
+**Przykład naruszenia**: jeśli mamy tabelę z kluczem złożonym (np. <NumerZamówienia, ProduktID>), a kolumna ProduktNazwa zależy tylko od ProduktID, to konieczna jest dekompozycja.
 
-### ðŸ”¹ Trzecia Forma Normalna (3NF)
+### 🔹 Trzecia Forma Normalna (3NF)
 
-- SpeÅ‚nia 2NF.
-- Å»aden atrybut nieprymarny nie zaleÅ¼y tranzytywnie od klucza gÅ‚Ã³wnego.
-- Eliminuje zaleÅ¼noÅ›ci przechodnie.
+- Spełnia 2NF.
+- Żaden atrybut nieprymarny nie zależy tranzytywnie od klucza głównego.
+- Eliminuje zależności przechodnie.
 
-**PrzykÅ‚ad naruszenia**:  
-JeÅ›li kolumna `Miasto` zaleÅ¼y od kolumny `KodPocztowy`, ktÃ³ra z kolei zaleÅ¼y od `IDKlienta`, to mamy zaleÅ¼noÅ›Ä‡ przechodniÄ… i naleÅ¼y wyodrÄ™bniÄ‡ `KodPocztowy` do osobnej tabeli.
+**Przykład naruszenia**:  
+Jeśli kolumna `Miasto` zależy od kolumny `KodPocztowy`, która z kolei zależy od `IDKlienta`, to mamy zależność przechodnią i należy wyodrębnić `KodPocztowy` do osobnej tabeli.
 
-## Denormalizacja â€“ celowe naruszenie reguÅ‚
+## Denormalizacja – celowe naruszenie reguł
 
-**Denormalizacja** to intencjonalne wprowadzenie nadmiarowoÅ›ci danych w celu poprawy wydajnoÅ›ci odczytu lub uproszczenia modelu. Jest standardem w projektach analitycznych (OLAP, hurtownie danych), gdzie kluczowe sÄ… szybkoÅ›Ä‡ zapytaÅ„ i prostota modelu, a nie peÅ‚na spÃ³jnoÅ›Ä‡ transakcyjna.
+**Denormalizacja** to intencjonalne wprowadzenie nadmiarowości danych w celu poprawy wydajności odczytu lub uproszczenia modelu. Jest standardem w projektach analitycznych (OLAP, hurtownie danych), gdzie kluczowe są szybkość zapytań i prostota modelu, a nie pełna spójność transakcyjna.
 
-**Kiedy stosowaÄ‡:**
+**Kiedy stosować:**
 
-- W modelach faktÃ³w i wymiarÃ³w (np. schemat gwiazdy).
-- W narzÄ™dziach BI i dashboardach (eliminacja wielu joinÃ³w).
-- Gdy dane sÄ… rzadko aktualizowane, a czÄ™sto odczytywane (np. raporty).
+- W modelach faktów i wymiarów (np. schemat gwiazdy).
+- W narzędziach BI i dashboardach (eliminacja wielu joinów).
+- Gdy dane są rzadko aktualizowane, a często odczytywane (np. raporty).
 
-# ðŸ’¡ PrzykÅ‚ad zastosowania
+# 💡 Przykład zastosowania
 
-W systemie sprzedaÅ¼y detalicznej tabela zamÃ³wieÅ„ zawiera informacje o kliencie, adresie dostawy oraz zamÃ³wionych produktach. W ramach 3NF dane o kliencie, adresie i produktach sÄ… trzymane w osobnych tabelach i doÅ‚Ä…czane przy pomocy kluczy. W hurtowni danych te same dane sÄ… denormalizowane do jednej tabeli analitycznej, zawierajÄ…cej powielenie nazw produktÃ³w i danych klientÃ³w â€“ wszystko po to, by umoÅ¼liwiÄ‡ szybkie agregacje bez potrzeby joinÃ³w.
+W systemie sprzedaży detalicznej tabela zamówień zawiera informacje o kliencie, adresie dostawy oraz zamówionych produktach. W ramach 3NF dane o kliencie, adresie i produktach są trzymane w osobnych tabelach i dołączane przy pomocy kluczy. W hurtowni danych te same dane są denormalizowane do jednej tabeli analitycznej, zawierającej powielenie nazw produktów i danych klientów – wszystko po to, by umożliwić szybkie agregacje bez potrzeby joinów.
 
-## ðŸ“Œ Å¹rÃ³dÅ‚a
+## 📌 Źródła
 
 - [Wikipedia: Database Normalization](https://en.wikipedia.org/wiki/Database_normalization)
 - [Vertabelo: What is Database Normalization?](https://vertabelo.com/blog/database-normalization-what-it-is-and-why-you-should-care/)
-- [Kimball Group â€“ Denormalization in Dimensional Modeling](https://www.kimballgroup.com/)
+- [Kimball Group – Denormalization in Dimensional Modeling](https://www.kimballgroup.com/)
 
-# ðŸ‘½ Brudnopis
+# 👽 Brudnopis
 
-- 1NF: atomowoÅ›Ä‡, bez kolumn list
-- 2NF: peÅ‚na zaleÅ¼noÅ›Ä‡ od caÅ‚ego klucza
-- 3NF: bez przechodnich zaleÅ¼noÅ›ci
-- OLTP: normalizacja dobra do aktualizacji, spÃ³jnoÅ›ci
-- OLAP: denormalizacja â†’ uproszczenie i wydajnoÅ›Ä‡ raportowania
-- Denormalizacja jako Å›wiadome zÅ‚amanie reguÅ‚ â†’ korzyÅ›ci w hurtowniach i BI
-- PrzykÅ‚ad: tabele faktÃ³w sprzedaÅ¼y z nazwami produktÃ³w = duplicate but faster joins
+- 1NF: atomowość, bez kolumn list
+- 2NF: pełna zależność od całego klucza
+- 3NF: bez przechodnich zależności
+- OLTP: normalizacja dobra do aktualizacji, spójności
+- OLAP: denormalizacja → uproszczenie i wydajność raportowania
+- Denormalizacja jako świadome złamanie reguł → korzyści w hurtowniach i BI
+- Przykład: tabele faktów sprzedaży z nazwami produktów = duplicate but faster joins

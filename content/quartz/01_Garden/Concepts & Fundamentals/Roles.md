@@ -1,75 +1,75 @@
-﻿---
+---
 
 title: Roles  
 created: 2025-05-21  
 status: 🌱 draft
-category: data governance / zarzÄ…dzanie dostÄ™pem  
+category: data governance / zarządzanie dostępem  
 difficulty: podstawowy  
 language: pl  
 tags:
 
-- role uÅ¼ytkownikÃ³w
-- kontrola dostÄ™pu
+- role użytkowników
+- kontrola dostępu
 - governance
 - metadane
 - katalog danych  
 aliases:
 - role
-- typy rÃ³l
-- dostÄ™p uÅ¼ytkownikÃ³w
+- typy ról
+- dostęp użytkowników
 
 ---
 
-# ðŸŽ¯ Definicja
+# 🎯 Definicja
 
-**Roles (role)** to zestawy uprawnieÅ„ przypisywane uÅ¼ytkownikom lub grupom, ktÃ³re definiujÄ…, co dana osoba moÅ¼e robiÄ‡ w systemie danych â€” w tym przeglÄ…daÄ‡, edytowaÄ‡, usuwaÄ‡, komentowaÄ‡ i zarzÄ…dzaÄ‡ obiektami w katalogu danych, sÅ‚owniku biznesowym, projektach, przepÅ‚ywach pracy czy konfiguracji.
+**Roles (role)** to zestawy uprawnień przypisywane użytkownikom lub grupom, które definiują, co dana osoba może robić w systemie danych — w tym przeglądać, edytować, usuwać, komentować i zarządzać obiektami w katalogu danych, słowniku biznesowym, projektach, przepływach pracy czy konfiguracji.
 
-# ðŸ”‘ Kluczowe punkty
+# 🔑 Kluczowe punkty
 
-- ðŸ” Role wskazujÄ… zakres kontroli uÅ¼ytkownika nad elementami systemu â€” np. edycja metadanych, akceptacja zmian, uruchamianie reguÅ‚.
-- ðŸ§± Role mogÄ… byÄ‡ przypisywane globalnie (np. przez system IAM: [[Keycloak]], AD) lub kontekstowo tylko dla danej grupy, katalogu lub projektu.
-- ðŸŽ›ï¸ KaÅ¼da rola agreguje zestaw uprawnieÅ„ ("action set") â€” moÅ¼na tworzyÄ‡ role predefiniowane lub zdefiniowane przez uÅ¼ytkownika.
-- ðŸ“ UÅ¼ytkownicy z danÄ… rolÄ… mogÄ… mieÄ‡ inny poziom dostÄ™pu do obiektÃ³w w katalogu: full, edit, view, comment-only.
+- 🔐 Role wskazują zakres kontroli użytkownika nad elementami systemu — np. edycja metadanych, akceptacja zmian, uruchamianie reguł.
+- 🧱 Role mogą być przypisywane globalnie (np. przez system IAM: [[Keycloak]], AD) lub kontekstowo tylko dla danej grupy, katalogu lub projektu.
+- 🎛️ Każda rola agreguje zestaw uprawnień ("action set") — można tworzyć role predefiniowane lub zdefiniowane przez użytkownika.
+- 📁 Użytkownicy z daną rolą mogą mieć inny poziom dostępu do obiektów w katalogu: full, edit, view, comment-only.
 
-# ðŸ“š SzczegÃ³Å‚owe wyjaÅ›nienie
+# 📚 Szczegółowe wyjaśnienie
 
-## PrzykÅ‚adowe role w systemie zarzÄ…dzania danymi (np. Ataccama ONE)
+## Przykładowe role w systemie zarządzania danymi (np. Ataccama ONE)
 
-|Rola|Zakres dziaÅ‚ania|
+|Rola|Zakres działania|
 |---|---|
-|`MMM_admin`|PeÅ‚ny dostÄ™p, konfiguracja katalogu, struktury, synchronizacji i zarzÄ…dzania|
-|`MMM_data-manager`|Edycja i publikacja metadanych, wspÃ³Å‚praca ze stewardami i wÅ‚aÅ›cicielami|
-|`Data Steward`|ZarzÄ…dzanie terminami, jakoÅ›ciÄ… danych, przypisaniami w sÅ‚owniku|
-|`Data Owner`|OdpowiedzialnoÅ›Ä‡ biznesowa, zatwierdzanie, zarzÄ…dzanie reputacjÄ… danych|
-|`Data Consumer`|Odczyt danych i metadanych, moÅ¼liwoÅ›Ä‡ komentowania|
+|`MMM_admin`|Pełny dostęp, konfiguracja katalogu, struktury, synchronizacji i zarządzania|
+|`MMM_data-manager`|Edycja i publikacja metadanych, współpraca ze stewardami i właścicielami|
+|`Data Steward`|Zarządzanie terminami, jakością danych, przypisaniami w słowniku|
+|`Data Owner`|Odpowiedzialność biznesowa, zatwierdzanie, zarządzanie reputacją danych|
+|`Data Consumer`|Odczyt danych i metadanych, możliwość komentowania|
 
-W praktyce, system automatycznie ustawia domyÅ›lnÄ… widocznoÅ›Ä‡ nowo dodanych obiektÃ³w w katalogu dla okreÅ›lonych rÃ³l â€” np. tylko `admin` i `data-manager` bÄ™dÄ… mogli je edytowaÄ‡.
+W praktyce, system automatycznie ustawia domyślną widoczność nowo dodanych obiektów w katalogu dla określonych ról — np. tylko `admin` i `data-manager` będą mogli je edytować.
 
-## Sterowanie dostÄ™pem i zakres rÃ³l
+## Sterowanie dostępem i zakres ról
 
-Rola = zbiÃ³r uprawnieÅ„ do tzw. â€žakcjiâ€:
+Rola = zbiór uprawnień do tzw. „akcji”:
 
-| Akcja uÅ¼ytkownika           | Czy dostÄ™pna? (zaleÅ¼nie od roli) |
+| Akcja użytkownika           | Czy dostępna? (zależnie od roli) |
 | --------------------------- | -------------------------------- |
-| `View metadata`             | âœ… viewer, steward                |
-| `Edit metadata`             | âœ… data-manager, steward          |
-| `Assign glossary terms`     | âœ… steward                        |
-| `Run rules / DQ checks`     | âœ… steward, manager               |
-| `Configure detection rules` | âŒ tylko `admin`                  |
+| `View metadata`             | ✅ viewer, steward                |
+| `Edit metadata`             | ✅ data-manager, steward          |
+| `Assign glossary terms`     | ✅ steward                        |
+| `Run rules / DQ checks`     | ✅ steward, manager               |
+| `Configure detection rules` | ❌ tylko `admin`                  |
 |                             |                                  |
 
-## Integracja z toÅ¼samoÅ›ciÄ…
+## Integracja z tożsamością
 
-W systemach obsÅ‚ugujÄ…cych SSO/IAM:
+W systemach obsługujących SSO/IAM:
 
-- Role mogÄ… pochodziÄ‡ z zewnÄ™trznego systemu (np. [[Keycloak]] role: `MMM_user`, `ONE_engine_admin`).
-- MoÅ¼liwe jest przypisywanie roli automatycznie przy pierwszym logowaniu.
-- Role mogÄ… byÄ‡ przekÅ‚adane lub synchronizowane z systemem RBAC w katalogu danych.
+- Role mogą pochodzić z zewnętrznego systemu (np. [[Keycloak]] role: `MMM_user`, `ONE_engine_admin`).
+- Możliwe jest przypisywanie roli automatycznie przy pierwszym logowaniu.
+- Role mogą być przekładane lub synchronizowane z systemem RBAC w katalogu danych.
 
-# ðŸ’¡ PrzykÅ‚ad zastosowania
+# 💡 Przykład zastosowania
 
 ```python
-# Przypisanie roli uÅ¼ytkownika w pseudokodzie lub API
+# Przypisanie roli użytkownika w pseudokodzie lub API
 
 assign_role(
   user="jan.kowalski@example.com",
@@ -77,20 +77,20 @@ assign_role(
   role="MMM_data-manager"
 )
 
-# UÅ¼ytkownik z tÄ… rolÄ… zyska moÅ¼liwoÅ›Ä‡ edycji metadanych katalogowych
+# Użytkownik z tą rolą zyska możliwość edycji metadanych katalogowych
 ```
 
-# ðŸ“Œ Å¹rÃ³dÅ‚a
+# 📌 Źródła
 
 - [https://docs.ataccama.com/](https://docs.ataccama.com/)
 - [https://www.keycloak.org/docs/latest/server_admin/](https://www.keycloak.org/docs/latest/server_admin/)
 - [https://learn.microsoft.com/en-us/entra/identity/role-based-access-control](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control)
 
-# ðŸ‘½ Brudnopis
+# 👽 Brudnopis
 
-- Rola = action bundle: zbiÃ³r uprawnieÅ„ â†’ okreÅ›la co uÅ¼ytkownik moÅ¼e robiÄ‡ i gdzie
+- Rola = action bundle: zbiór uprawnień → określa co użytkownik może robić i gdzie
 - Role: lokalne / systemowe / dziedziczone z IAM (np. [[Keycloak]], Azure AD)
-- DomyÅ›lne przypisanie visibility i editable: MMM_data-manager i wyÅ¼ej zaraz po dodaniu obiektÃ³w
-- MoÅ¼na przesÅ‚aniaÄ‡ uprawnienia przez `Share` lub `Assign role` API
-- Model skalowalny: user â†’ przynaleÅ¼noÅ›Ä‡ do grup/realmu â†’ przypisanie roli kontekstowej
-- NarzÄ™dzia: Ataccama ONE, Collibra, Alation, Informatica â€“ wspierajÄ… kontekstowe RBAC/ABAC
+- Domyślne przypisanie visibility i editable: MMM_data-manager i wyżej zaraz po dodaniu obiektów
+- Można przesłaniać uprawnienia przez `Share` lub `Assign role` API
+- Model skalowalny: user → przynależność do grup/realmu → przypisanie roli kontekstowej
+- Narzędzia: Ataccama ONE, Collibra, Alation, Informatica – wspierają kontekstowe RBAC/ABAC
