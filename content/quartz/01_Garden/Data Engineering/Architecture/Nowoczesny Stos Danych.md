@@ -21,21 +21,21 @@ aliases:
 
 # 🔑 Kluczowe punkty
 - **ELT zamiast ETL:** Najpierw ładujemy dane do chmury (Extract, Load), a potem je obrabiamy (Transform) mocą Warehouse'a.
-- **SQL Driven:** Większość transformacji dzieje się w SQL (np. [[dbt]]), co democratyzuje dostęp dla analityków.
-- **Best-of-Breed:** Wybierasz najlepsze narzędzie do każdej funkcji (Fivetran do rur, Snowflake jako baza, dbt do logiki, Looker do wykresów).
+- **[[SQL|SQL]] Driven:** Większość transformacji dzieje się w [[SQL|SQL]] (np. [[dbt]]), co democratyzuje dostęp dla analityków.
+- **Best-of-Breed:** Wybierasz najlepsze narzędzie do każdej funkcji (Fivetran do rur, [[Snowflake|Snowflake]] jako baza, [[dbt|dbt]] do logiki, Looker do wykresów).
 
 # 📚 Szczegółowe wyjaśnienie
 Klasyczny skład MDS:
-1.  **Ingestion:** Fivetran / Airbyte (Pobierz dane z Facebooka/Salesforce i wrzuć do bazy).
-2.  **Warehousing:** Snowflake / BigQuery / Databricks (Tutaj trzymamy dane).
-3.  **Transformation:** [[dbt]] (Tu piszemy SQL, który czyści dane).
-4.  **Orchestration:** Airflow / Dagster / Prefect (Dyrygent, który mówi "teraz ty").
+1.  **Ingestion:** Fivetran / [[Airbyte|Airbyte]] (Pobierz dane z Facebooka/Salesforce i wrzuć do bazy).
+2.  **Warehousing:** [[Snowflake|Snowflake]] / BigQuery / Databricks (Tutaj trzymamy dane).
+3.  **Transformation:** [[dbt]] (Tu piszemy [[SQL|SQL]], który czyści dane).
+4.  **Orchestration:** Airflow / [[Dagster|Dagster]] / Prefect (Dyrygent, który mówi "teraz ty").
 5.  **BI:** Looker / Tableau / Superset (Wykresy).
 6.  **Reverse ETL:** Hightouch (Wyślij wyniki z powrotem do CRM, np. "Ten klient jest VIP").
 
 # 💡 Przykład zastosowania
 Startup e-commerce.
-Zamiast zatrudniać 5 inżynierów do pisania skryptów w Pythonie, kupują Fivetran ($500/mc), podpinają Shopify i Google Ads. Dane lądują w Snowflake. Analityk pisze modele w dbt. W tydzień mają działającą analitykę, którą kiedyś budowano rok.
+Zamiast zatrudniać 5 inżynierów do pisania skryptów w Pythonie, kupują Fivetran ($500/mc), podpinają Shopify i Google Ads. Dane lądują w [[Snowflake|Snowflake]]. Analityk pisze modele w [[dbt|dbt]]. W tydzień mają działającą analitykę, którą kiedyś budowano rok.
 
 ## 📌 Źródła
 - "The Modern Data Stack: Past, Present, and Future" (a16z).

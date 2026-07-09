@@ -15,7 +15,7 @@ aliases:
   - Wymagania przedinstalacyjne Ataccama
 ---
 # 🎯 Definicja
-Lista kroków i zasobów, które muszą zostać przygotowane przez klienta przed uruchomieniem skryptów instalacyjnych Ansible platformy Ataccama ONE.
+Lista kroków i zasobów, które muszą zostać przygotowane przez klienta przed uruchomieniem skryptów instalacyjnych Ansible platformy [[Ataccama|Ataccama]] ONE.
 
 # 🔑 Kluczowe punkty
 - **Infrastruktura:** Serwery z OS, sieć, DNS (wewnętrzny i zewnętrzny), Firewall.
@@ -26,7 +26,7 @@ Lista kroków i zasobów, które muszą zostać przygotowane przez klienta przed
 Brak przygotowania któregokolwiek z punktów checklisty zazwyczaj kończy się błędem w połowie instalacji ("fail"). Kluczowe i najczęstsze punkty zapalne to:
 1. **Certyfikaty:** Często wygenerowane błędnie (np. self-signed zamiast z CA, albo brak łańcucha zaufania).
 2. **DNS:** Serwery nie widzą się po nazwach hostów.
-3. **Bazy danych:** Użytkownik bazy nie ma praw do tworzenia schematów (CREATE SCHEMA).
+3. **[[Bazy danych|Bazy danych]]:** Użytkownik bazy nie ma praw do tworzenia schematów (CREATE SCHEMA).
 
 # 💡 Przykład zastosowania
 Przed przyjazdem konsultanta, zespół IT Klienta powinien "odfajkować":

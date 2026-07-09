@@ -28,7 +28,7 @@ aliases:
 Potoki mogą być:
 - **Batch:** Przetwarzają dużą paczkę danych raz na dobę (np. raporty dzienne). Tanie i proste.
 - **Streaming:** Przetwarzają każdy rekord natychmiast po jego pojawieniu się (np. detekcja fraudów w transakcjach). Drogie i skomplikowane.
-Narzędzia: Airflow, Dagster, Prefect, Informatica, Talend.
+Narzędzia: Airflow, [[Dagster|Dagster]], Prefect, Informatica, Talend.
 
 # 💡 Przykład zastosowania
 Pipeline "Rekomendacje Netflixa":

@@ -27,9 +27,9 @@ aliases:
 
 - CDP integruje dane z różnych źródeł: e-commerce, media społecznościowe, działania offline, kampanie mailingowe, call center itp.
 - Umożliwia tworzenie **pełnego, aktualnego profilu klienta**, który może być wykorzystywany w czasie rzeczywistym.
-- Oczyszcza, deduplikuje i standaryzuje dane: **jakość danych jest kluczowa** dla trafnych analiz i personalizacji.
+- Oczyszcza, deduplikuje i standaryzuje dane: **[[Jakość Danych|jakość danych]] jest kluczowa** dla trafnych analiz i personalizacji.
 - Ułatwia segmentację, personalizację i automatyzację działań marketingowych.
-- Różni się od DMP (Data Management Platform) – CDP działa na poziomie danych PII (personally identifiable information), czyli identyfikowalnych użytkowników, a nie anonimowych cookies.
+- Różni się od DMP ([[Data Management|Data Management]] Platform) – CDP działa na poziomie danych PII (personally identifiable information), czyli identyfikowalnych użytkowników, a nie anonimowych cookies.
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -57,7 +57,7 @@ CDP spełnia kilka kluczowych funkcji:
 
 |System|Główna funkcja|Zakres danych|Personalizacja|Dane o użytkowniku|
 |---|---|---|---|---|
-|**CDP**|Zbieranie i integracja danych klienta|Szeroki (różne kanały)|Tak|PII – znany użytkownik|
+|**CDP**|Zbieranie i [[Integracja Danych|integracja danych]] klienta|Szeroki (różne kanały)|Tak|PII – znany użytkownik|
 |**CRM**|Zarządzanie relacjami z klientami|Głównie sprzedaż i support|Częściowo|PII|
 |**DMP**|Targetowanie reklam (adtech)|Zanonimizowane|Nie|Anonimowe ID (cookies)|
 |**[[Business Intelligence\|BI]]**|Raportowanie i analiza|Atrybutowe|Nie|[[Rollup\|Agregaty]] i miary|
@@ -83,7 +83,7 @@ Firma e-commerce wdraża CDP, aby lepiej śledzić zachowania zakupowe w sklepie
 ## 👽 Brudnopis
 
 - CDP = centralny hub danych o kliencie
-- Integracja danych all-channel & all-touchpoints
+- [[Integracja Danych|Integracja danych]] all-channel & all-touchpoints
 - Profile użytkownika = aktualne, jednorodne, możliwe do aktywacji
 - CDP ≠ CRM (bardziej analityczne), ≠ DMP (anonimowe, reklamowe)
 - API-first stack → łączenie CDP z systemami zewnętrznymi

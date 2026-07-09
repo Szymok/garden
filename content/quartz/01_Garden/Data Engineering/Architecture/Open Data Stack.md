@@ -17,15 +17,15 @@ aliases:
   - MDS Open Source
 ---
 # 🎯 Definicja
-**Open Data Stack** to odpowiedź świata Open Source na Modern Data Stack (Snowflake/Fivetran/dbt Cloud).
+**Open Data Stack** to odpowiedź świata Open Source na Modern Data Stack ([[Snowflake|Snowflake]]/Fivetran/[[dbt|dbt]] Cloud).
 To zestaw darmowych, otwartych narzędzi, które razem tworzą kompletną platformę danych.
-Filozofia: Pełna kontrola, brak vendor lock-in, deployment na własnej infrastrukturze (Kubernetes).
+Filozofia: Pełna kontrola, brak vendor lock-in, deployment na własnej infrastrukturze ([[Kubernetes|Kubernetes]]).
 
 # 🔑 Kluczowe Komponenty
 1.  **Ingestion (EL):** [[Airbyte]] / Meld. (Zamiast Fivetran).
 2.  **Transformation (T):** [[dbt]] Core.
 3.  **Orchestration:** [[Dagster]] / [[Apache Airflow]] / Prefect.
-4.  **Storage:** [[DuckDB]] / Postgres / [[Apache Iceberg]]. (Zamiast Snowflake/BigQuery).
+4.  **Storage:** [[DuckDB]] / Postgres / [[Apache Iceberg]]. (Zamiast [[Snowflake|Snowflake]]/BigQuery).
 5.  **Visualization:** Apache Superset / Metabase. (Zamiast Looker/Tableau).
 
 # 📚 Szczegółowe wyjaśnienie
@@ -35,15 +35,15 @@ Zalety:
 - **Elastyczność:** Możesz modyfikować kod narzędzi.
 
 Wady:
-- **Obsługa:** Musisz sam to zainstalować, łatać i utrzymywać (DevOps heavy).
+- **Obsługa:** Musisz sam to zainstalować, łatać i utrzymywać ([[DevOps|DevOps]] heavy).
 
 # 💡 Przykład zastosowania
-Startup buduje analitykę. Nie stać ich na Snowflake ($$$).
+Startup buduje analitykę. Nie stać ich na [[Snowflake|Snowflake]] ($$$).
 Stawiają:
-- Airbyte na k8s do pobierania danych z bazy prod.
+- [[Airbyte|Airbyte]] na k8s do pobierania danych z bazy prod.
 - PostgreSQL jako hurtownię.
-- dbt Core do modelowania.
-- Dagster do orkiestracji.
+- [[dbt|dbt]] Core do modelowania.
+- [[Dagster|Dagster]] do orkiestracji.
 - Metabase do dashboardów.
 Koszt miesięczny: $50 (za VMki). Data Stack gotowy.
 
@@ -51,4 +51,4 @@ Koszt miesięczny: $50 (za VMki). Data Stack gotowy.
 - "The Modern Data Stack is Dead, Long Live the Open Data Stack".
 
 ## 👽 Brudnopis
-- Wersja "Light": DuckDB + dbt + Rill/Evidence. To tzw. "Laptop Data Stack" - potężna analityka działająca lokalnie na plikach Parquet, bez żadnych serwerów.
+- Wersja "Light": [[DuckDB|DuckDB]] + [[dbt|dbt]] + Rill/Evidence. To tzw. "Laptop Data Stack" - potężna analityka działająca lokalnie na plikach Parquet, bez żadnych serwerów.

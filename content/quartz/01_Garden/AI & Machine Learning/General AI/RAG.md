@@ -20,7 +20,7 @@ aliases:
 Model LLM (student) dostaje pytanie. Zamiast zmyślać z głowy, najpierw zagląda do podręcznika (Twojej bazy dokumentów), znajduje odpowiedni fragment i na jego podstawie pisze odpowiedź.
 
 # 🔑 Kluczowe punkty
-- **Aktualność:** GPT-4 nie wie, co się stało wczoraj. RAG pozwala mu to wiedzieć (jeśli dodasz wczorajsze newsy do bazy).
+- **Aktualność:** [[GPT-4|GPT-4]] nie wie, co się stało wczoraj. RAG pozwala mu to wiedzieć (jeśli dodasz wczorajsze newsy do bazy).
 - **Prywatność:** Możesz używać bezpiecznego modelu (np. Llama 3 on-premise) i karmić go tajnymi dokumentami firmy przez RAG.
 - **Brak Halucynacji:** Model opiera się na faktach, które mu dostarczysz.
 

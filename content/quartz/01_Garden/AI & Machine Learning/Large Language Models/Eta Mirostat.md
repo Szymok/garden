@@ -16,16 +16,16 @@ aliases:
   - Parametr Eta
 ---
 # 🎯 Definicja
-**Eta (η)** to parametr w algorytmie samplingu **Mirostat**, który kontroluje "siłę reakcji" (learning rate) algorytmu na odchylenia od założonego poziomu zaskoczenia (Perplexity/Surprisal). Mówiąc prościej: Eta decyduje, jak szybko i agresywnie model koryguje swój styl wypowiedzi, by utrzymać stałą "ciekawość" tekstu.
+**Eta (η)** to parametr w algorytmie samplingu **[[Mirostat|Mirostat]]**, który kontroluje "siłę reakcji" (learning rate) algorytmu na odchylenia od założonego poziomu zaskoczenia (Perplexity/Surprisal). Mówiąc prościej: Eta decyduje, jak szybko i agresywnie model koryguje swój styl wypowiedzi, by utrzymać stałą "ciekawość" tekstu.
 
 # 🔑 Kluczowe punkty
-- **Mirostat:** Algorytm, który próbuje utrzymać stałą jakość/złożoność tekstu (zamiast losowej temperatury).
+- **[[Mirostat|Mirostat]]:** Algorytm, który próbuje utrzymać stałą jakość/złożoność tekstu (zamiast losowej temperatury).
 - **Wysokie Eta:** Szybka, szarpana korekta. Może prowadzić do niestabilności.
 - **Niskie Eta:** Powolna, płynna adaptacja. Model może długo "wracać na tor" po błędzie.
 - **Związek z Tau:** Tau ustawia cel (jaki poziom chaosu chcemy), Eta ustawia, jak szybko tam dążymy.
 
 # 📚 Szczegółowe wyjaśnienie
-Algorytm Mirostat działa w pętli dla każdego wygenerowanego tokena:
+Algorytm [[Mirostat|Mirostat]] działa w pętli dla każdego wygenerowanego tokena:
 1.  Mierzy "zaskoczenie" (Surprisal) ostatniego słowa.
 2.  Porównuje z celem (Target Surprisal).
 3.  Oblicza błąd.
@@ -39,8 +39,8 @@ Jeśli Eta=0.8: Model natychmiast skacze po tematach, reagując na każde nudnie
 Zalecane wartości to zazwyczaj 0.1 - 0.2.
 
 ## 📌 Źródła
-- "Mirostat: A Neural Text Decoding Algorithm that Directly Controls Perplexity" (Arxiv).
+- "[[Mirostat|Mirostat]]: A Neural Text Decoding Algorithm that Directly Controls Perplexity" (Arxiv).
 
 ## 👽 Brudnopis
-- Jest to alternatywa dla `Temperature` i `Top-P`. W Mirostat nie ustawiasz temperatury, algorytm sam nią steruje w locie.
+- Jest to alternatywa dla `Temperature` i `Top-P`. W [[Mirostat|Mirostat]] nie ustawiasz temperatury, algorytm sam nią steruje w locie.
 - Często używane w `llama.cpp` i modelach lokalnych (GGUF).

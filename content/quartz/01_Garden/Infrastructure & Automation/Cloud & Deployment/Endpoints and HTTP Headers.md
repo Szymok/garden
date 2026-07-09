@@ -16,7 +16,7 @@ aliases:
   - Konfiguracja API ONE
 ---
 # 🎯 Definicja
-**Endpoints** (Punkty końcowe) to adresy URL, pod którymi dostępne są usługi API (np. GraphQL). W Ataccama ONE, typowy endpoint dla modułu MMM (Metadata Management Module) to `localhost:8021/graphql`. **HTTP Headers** (Nagłówki) to metadane wysyłane z każdym żądaniem, określające format danych i uwierzytelnienie.
+**Endpoints** (Punkty końcowe) to adresy URL, pod którymi dostępne są usługi API (np. GraphQL). W [[Ataccama|Ataccama]] ONE, typowy endpoint dla modułu MMM ([[Metadata|Metadata]] Management Module) to `localhost:8021/graphql`. **HTTP Headers** (Nagłówki) to metadane wysyłane z każdym żądaniem, określające format danych i uwierzytelnienie.
 
 # 🔑 Kluczowe punkty
 - **Endpoint:** Adres usługi. W GraphQL często jest to jeden adres dla wszystkich zapytań (w przeciwieństwie do REST).
@@ -25,17 +25,17 @@ aliases:
 - **Authorization:** Nagłówek wymagany do zalogowania (Basic lub Bearer Token).
 
 # 📚 Szczegółowe wyjaśnienie
-Aby wysłać zapytanie do API ONE, musisz skonfigurować klienta (np. Postman lub GraphQL Playground):
+Aby wysłać zapytanie do API ONE, musisz skonfigurować klienta (np. Postman lub [[GraphQL Playground|GraphQL Playground]]):
 1.  **URL:** `http://<host>:8021/graphql`
 2.  **Body:** Twoje zapytanie JSON (np. `{ query: { ... } }`).
 3.  **Headers:**
     - `"Content-Type": "application/json"`
     - `"Authorization": "Basic <Base64String>"` (dla Basic Auth)
-    - Lub `"Authorization": "Bearer <JWT_Token>"` (dla Keycloak).
+    - Lub `"Authorization": "Bearer <JWT_Token>"` (dla [[Keycloak|Keycloak]]).
 
 # 💡 Przykład zastosowania
 Chcesz pobrać listę systemów ze słownika.
-W GraphQL Playground w zakładce "HTTP HEADERS" wpisujesz:
+W [[GraphQL Playground|GraphQL Playground]] w zakładce "HTTP HEADERS" wpisujesz:
 ```json
 {
   "Content-Type": "application/json",
@@ -45,9 +45,9 @@ W GraphQL Playground w zakładce "HTTP HEADERS" wpisujesz:
 (Gdzie `YWRtaW46YWRtaW4=` to zakodowane `admin:admin`).
 
 ## 📌 Źródła
-- Ataccama ONE Developer Guide.
+- [[Ataccama|Ataccama]] ONE Developer Guide.
 - MDN Web Docs - HTTP Headers.
 
 ## 👽 Brudnopis
 - Basic Auth nie jest bezpieczny na produkcji (hasło lata w Base64). Używaj Bearer Tokens (OAuth2).
-- W GraphQL Playground nagłówki wpisuje się w dedykowanym panelu JSON na dole po lewej.
+- W [[GraphQL Playground|GraphQL Playground]] nagłówki wpisuje się w dedykowanym panelu JSON na dole po lewej.

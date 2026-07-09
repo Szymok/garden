@@ -16,7 +16,7 @@ aliases:
   - Porty Ataccama
 ---
 # 🎯 Definicja
-Zasady konfiguracji bezpieczeństwa sieciowego (Firewall/iptables) oraz wymagania dotyczące fizycznej sieci (opóźnienia, routing) dla instalacji Ataccama ONE.
+Zasady konfiguracji bezpieczeństwa sieciowego (Firewall/iptables) oraz wymagania dotyczące fizycznej sieci (opóźnienia, routing) dla instalacji [[Ataccama|Ataccama]] ONE.
 
 # 🔑 Kluczowe punkty
 - **Zarządzanie przez Ansible:** Zalecanym sposobem konfiguracji systemowego firewalla (iptables) jest automatyzacja Ansible (`firewall_manage: true`).
@@ -24,7 +24,7 @@ Zasady konfiguracji bezpieczeństwa sieciowego (Firewall/iptables) oraz wymagani
 - **Porty:** Domyślne polityki otwierają tylko niezbędne porty (SSH, HTTP/S, porty usług). Wszystko inne jest blokowane (DROP).
 
 # 📚 Szczegółowe wyjaśnienie
-Ataccama ONE w instalacjach On-Prem/IaaS przejmuje kontrolę nad firewallem systemowym węzłów.
+[[Ataccama|Ataccama]] ONE w instalacjach On-Prem/[[IaaS|IaaS]] przejmuje kontrolę nad firewallem systemowym węzłów.
 Jeśli klient posiada własne rozwiązania (np. UFW, firewalld zarządzane ręcznie), konflikt jest nieunikniony. Ansible Ataccamy spróbuje je wyłączyć i zastąpić regułami `iptables`.
 Można to wyłączyć (`firewall_manage: false`), ale wtedy to klient bierze pełną odpowiedzialność za otwarcie setek portów komunikacyjnych (gRPC, Http) między mikroserwisami.
 
@@ -45,8 +45,8 @@ firewall_custom_rules:
 ## 👽 Brudnopis
 - When configuring the network, consider:
     - **Interconnection**: Target servers must be able to access each other directly using TCP. While a single subnet is recommended, it's not mandatory.
-    - **Latency**: Higher network latencies between Ataccama ONE components or data sources will significantly impact performance.
-    - **IP Addressing and Licenses**: Ataccama licenses are tied to server IP addresses. Consider long-term plans to avoid issues if servers are migrated.
+    - **Latency**: Higher network latencies between [[Ataccama|Ataccama]] ONE components or data sources will significantly impact performance.
+    - **IP Addressing and Licenses**: [[Ataccama|Ataccama]] licenses are tied to server IP addresses. Consider long-term plans to avoid issues if servers are migrated.
 
 - As part of the Ansible installation process, a **Linux firewall (iptables) can be automatically configured** if the `firewall_manage` option is set to true.
 - In this case, a **firewall for each component is installed** as an Ansible job immediately following the component installation.
@@ -67,18 +67,18 @@ firewall_custom_rules:
 - It is necessary to **allow Ansible to configure and manage an iptables-based firewall**.
 - Ansible can remove previously installed UFW and firewalld.
 - If any other unsupported firewall manager is in use, the **customer must remove it before starting the installation process**.
-- You can **define custom firewall rules** if needed.
+- You can **define custom firewall [[Rules|rules]]** if needed.
 - For example, to open **ports 11111 and 12345 on all target servers**, you would set:
 - A **range of ports can also be opened**.
 - For example, to open ports **8080 to 8089 (inclusive)**:
 - If only specific hosts require custom open ports, it's recommended to set this variable only for those respective hosts or groups.
 - This **overrides the global setting** in `group_vars/all/vars.yml`.
 - For instance, in `hosts.yml`, to open port 33333 on one of the three application servers (as an illustration):
-- When custom rules are set in multiple locations, **group settings override global settings, and host settings override all other settings**.
-- More complex rules can be configured by referring to `roles/firewall-rules/README.md`.
+- When custom [[Rules|rules]] are set in multiple locations, **group settings override global settings, and host settings override all other settings**.
+- More complex [[Rules|rules]] can be configured by referring to `roles/firewall-rules/README.md`.
 - Firewall management can also be **completely disabled by setting `firewall_manage: false`**.
 - In this case, an **appropriate firewall must be configured beforehand**.
-- It is **not recommended to manage the firewall on target servers using Ansible _nor_ to enforce additional rules via custom rules or at the network's edge** due to strict configuration.
+- It is **not recommended to manage the firewall on target servers using Ansible _nor_ to enforce additional [[Rules|rules]] via custom [[Rules|rules]] or at the network's edge** due to strict configuration.
 - The following network connections **must be allowed at the network edge**:
     - **Outgoing connections to all relevant data sources**.
     - **Incoming connections from users to the frontend server** (ports 80 and 443).

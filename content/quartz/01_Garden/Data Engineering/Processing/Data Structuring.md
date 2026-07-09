@@ -16,16 +16,16 @@ aliases:
   - Parsing
 ---
 # 🎯 Definicja
-**Strukturyzacja danych** to proces zamiany " chaotycznego tekstu" na "uporządkowane tabelki".
+**[[Strukturyzacja danych|Strukturyzacja danych]]** to proces zamiany " chaotycznego tekstu" na "uporządkowane tabelki".
 Przykład: Masz PDF z fakturą (Tekst). Chcesz mieć Excela z kolumnami: `Kwota`, `Data`, `Sprzedawca`. To jest strukturyzacja.
 
 # 🔑 Kluczowe punkty
-- **Unstructured -> Structured:** 80% danych w firmach to dane niestrukturalne (emaile, PDFy, rozmowy). Strukturyzacja pozwala je analizować.
+- **Unstructured -> Structured:** 80% danych w firmach to [[Dane Niestrukturalne|dane niestrukturalne]] (emaile, PDFy, rozmowy). Strukturyzacja pozwala je analizować.
 - **Narzędzia:** Regex (dla prostych wzorców), NLP (dla tekstu), OCR (dla skanów), LLM (najnowsze i najskuteczniejsze).
 
 # 📚 Szczegółowe wyjaśnienie
 Dane dzielimy na:
-1.  **Strukturalne:** Tabele SQL, CSV.
+1.  **Strukturalne:** Tabele [[SQL|SQL]], CSV.
 2.  **Półstrukturalne:** JSON, XML, Wypełnione Formularze.
 3.  **Niestrukturalne:** Email: "Cześć, kupiłem 5 bułek za 10 zł".
 Strukturyzacja (Parsing) to zamiana trójki w jedynkę.

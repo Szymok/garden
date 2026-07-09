@@ -27,7 +27,7 @@ aliases:
 
 - **Jedna definicja miary** („single source of truth”) — logika jest opisana raz i wykorzystywana w wielu narzędziach.
 - **Spójność raportowania** — wszyscy użytkownicy korzystają z tych samych, centralnie zarządzanych formuł [[KPI]].
-- **Automatyzacja i reużywalność** — metryki definiuje się w pliku konfiguracyjnym (najczęściej YAML), a ich obsługę zapewniają API.
+- **Automatyzacja i reużywalność** — metryki definiuje się w pliku konfiguracyjnym (najczęściej [[YAML|YAML]]), a ich obsługę zapewniają API.
 - **Integracja z [[Business Intelligence|BI]] oraz aplikacjami** — warstwa miary jest powiązana zarówno z narzędziami raportowymi, jak i procesami analitycznymi lub [[Uczenie Maszynowe|ML]].
 - **Optymalizacja i cache** — zaawansowane implementacje pozwalają na cache’owanie wyników i optymalizację często wykorzystywanych metryk.
 
@@ -36,7 +36,7 @@ aliases:
 ## Mechanizm działania
 
 - **Definicja miar i wymiarów:**  
-    Miary (np. przychód, liczba użytkowników) oraz [[Wymiary]] (np. czas, produkt, region) są definiowane w deklaratywnych plikach – najczęściej YAML.
+    Miary (np. przychód, liczba użytkowników) oraz [[Wymiary]] (np. czas, produkt, region) są definiowane w deklaratywnych plikach – najczęściej [[YAML|YAML]].
 - **Warstwa API:**  
     Dostęp do miar odbywa się poprzez API, co pozwala integratorom i [[Business Intelligence|BI]] elastycznie pobierać dane na żądanie, niezależnie od narzędzia czy raportu.
 - **DRY (Don't Repeat Yourself):**  
@@ -76,7 +76,7 @@ Zmiana sposobu liczenia LTV w jednym miejscu natychmiast aktualizuje wszystkie r
 # 👽 Brudnopis
 
 - Warstwa miary = definicje miar (metrics), serwowane API lub buildowane w modelu semantycznym (np. [[dbt]], Cube, Lightdash, Looker).
-- DRY principle – raz zdefiniowana [[Miara]] trafia do [[Business Intelligence|BI]], [[Uczenie Maszynowe|ML]], dashboardów, analityki — koniec duplikowania SQL/logiki [[KPI]].
-- YAML do deklarowania, cache do wydajności, API do integracji.
+- DRY principle – raz zdefiniowana [[Miara]] trafia do [[Business Intelligence|BI]], [[Uczenie Maszynowe|ML]], dashboardów, analityki — koniec duplikowania [[SQL|SQL]]/logiki [[KPI]].
+- [[YAML|YAML]] do deklarowania, cache do wydajności, API do integracji.
 - Eliminacja glue code i manualnych poprawek podyktowanych ad hoc zmianami.
 - Przykład: LTV, ARR, Net Revenue, Churn Rate – spójną logikę wywołuje dowolne narzędzie ([[Business Intelligence|BI]]/[[Uczenie Maszynowe|ML]]).

@@ -16,7 +16,7 @@ aliases:
   - Konfiguracja Połączeń
 ---
 # 🎯 Definicja
-**Data Sources** w Ataccama ONE to "wtyczki" do Twoich systemów.
+**Data Sources** w [[Ataccama|Ataccama]] ONE to "wtyczki" do Twoich systemów.
 Zanim zaczniesz cokolwiek robić (profilować, katalogować), musisz zdefiniować Źródło.
 Może to być baza danych (Oracle, Postgres), chmura (S3, Azure Blob), API (Salesforce) lub plik.
 
@@ -38,7 +38,7 @@ Dodajesz 2 połączenia:
 Analityk wybiera "Główny CRM" i klika "Profiluj". System pyta: "Na którym środowisku?".
 
 ## 📌 Źródła
-- Ataccama ONE Connectivity Guide.
+- [[Ataccama|Ataccama]] ONE Connectivity Guide.
 
 ## 👽 Brudnopis
 - Jednym z najczęstszych błędów jest wpisywanie haseł na sztywno. Zawsze używaj Aliases / Secret Management, żeby hasło do produkcji nie wyciekło.

@@ -17,16 +17,16 @@ aliases:
   - Federacja Danych
 ---
 # 🎯 Definicja
-**Wirtualizacja Danych** to dostęp do danych bez ich przenoszenia.
+**[[Wirtualizacja Danych|Wirtualizacja Danych]]** to dostęp do danych bez ich przenoszenia.
 Zamiast kopiować dane z CRM, ERP i Excela do jednej Hurtowni (ETL), tworzysz "Wirtualną Warstwę", która odpytuje te systemy w czasie rzeczywistym, udając, że jest jedną bazą.
 
 # 🔑 Kluczowe punkty
 - **No Data Movement:** Dane zostają u źródła. Zero kopiowania.
 - **Real-Time:** Widzisz dane takie, jakie są teraz w systemie źródłowym.
-- **Federated Query:** Jedno zapytanie SQL łączy dane z Oracle (CRM) i pliku CSV (Excel).
+- **Federated Query:** Jedno zapytanie [[SQL|SQL]] łączy dane z Oracle (CRM) i pliku CSV (Excel).
 
 # 📚 Szczegółowe wyjaśnienie
-Tradycyjne ETL: Kopiuj wszystko do Data Warehouse. Zajmuje to czas i miejsce.
+Tradycyjne ETL: Kopiuj wszystko do [[Data Warehouse|Data Warehouse]]. Zajmuje to czas i miejsce.
 Wirtualizacja: Użytkownik pyta o "Klientów". Wirtualizator w tle pyta Oracle'a, pyta Salesforce'a, skleja wyniki w pamięci RAM i oddaje użytkownikowi.
 Technologie: [[Denodo]], Dremio, Trino (Presto). Dremio używa [[Apache Arrow]] do szybkiego przetwarzania w pamięci.
 

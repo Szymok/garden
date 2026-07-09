@@ -21,7 +21,7 @@ Ten dokument opisuje techniczne zasady prowadzenia tego Ogrodu Cyfrowego (Digita
 # 🔑 Kluczowe punkty
 - **Folder Główny:** Wszystkie notatki lądują w `content/quartz/01_Garden/`.
 - **Format:** Markdown (`.md`).
-- **Frontmatter:** Każdy plik musi mieć nagłówek YAML z tytułem, statusem i tagami.
+- **Frontmatter:** Każdy plik musi mieć nagłówek [[YAML|YAML]] z tytułem, statusem i tagami.
 
 # 📚 Szczegółowe wyjaśnienie
 ## Linkowanie (WikiLinks)

@@ -23,7 +23,7 @@ Dane w firmie nie mogą być "niczyje". Jeśli są niczyje, to są brudne.
 # 🔑 Kluczowe punkty
 - **Ownership:** Każdy zbiór danych musi mieć Właściciela (Owner) - decydenta.
 - **Stewardship:** Każdy zbiór musi mieć Stewarda - opiekuna operacyjnego (sprząta, opisuje, rozwiązuje problemy).
-- **Data Catalog:** To narzędzie pracy Stewarda. Tu opisuje metadane.
+- **[[Data Catalog|Data Catalog]]:** To narzędzie pracy Stewarda. Tu opisuje metadane.
 
 # 📚 Szczegółowe wyjaśnienie
 Steward niekoniecznie jest informatykiem. To często osoba z biznesu (np. Analityk Sprzedaży), która najlepiej rozumie znaczenie danych.
@@ -40,7 +40,7 @@ Wchodzi, dodaje opis: "Potencjalni klienci z webinarów", flaguje kolumnę `Emai
 Dzięki temu inni wiedzą, co to za dane i jak ich używać.
 
 ## 📌 Źródła
-- DAMA-DMBOK (Data Management Body of Knowledge).
+- DAMA-DMBOK ([[Data Management|Data Management]] Body of Knowledge).
 
 ## 👽 Brudnopis
-- "Everyone's responsibility is no one's responsibility". Stewardship to sformalizowanie odpowiedzialności. Bez tego Data Governance to tylko sterta dokumentów, których nikt nie czyta.
+- "Everyone's responsibility is no one's responsibility". Stewardship to sformalizowanie odpowiedzialności. Bez tego [[Data Governance|Data Governance]] to tylko sterta dokumentów, których nikt nie czyta.

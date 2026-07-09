@@ -17,12 +17,12 @@ aliases:
   - Predicate Pushdown
 ---
 # 🎯 Definicja
-**Push-Down Optimization** to technika przesuwania ciężkich obliczeń tam, gdzie dane leżą (do bazy danych), zamiast przesyłania danych do aplikacji. Zasada: "Przesyłaj pytania, nie dane".
+**[[Push-Down|Push-Down]] Optimization** to technika przesuwania ciężkich obliczeń tam, gdzie dane leżą (do [[Bazy danych|bazy danych]]), zamiast przesyłania danych do aplikacji. Zasada: "Przesyłaj pytania, nie dane".
 
 # 🔑 Kluczowe punkty
 - **Zmniejszenie Transferu:** Zamiast pobierać 1TB danych i filtrować lokalnie, wysyłasz `WHERE rok = 2024` i pobierasz 1GB.
-- **Wykorzystanie Mocy:** Bazy danych (Snowflake, BigQuery) mają potężne silniki optymalizacji. Niech one pracują.
-- **ELT vs ETL:** Push-down jest sercem podejścia **ELT** (Extract-Load-Transform), gdzie transformacja dzieje się w docelowej bazie.
+- **Wykorzystanie Mocy:** [[Bazy danych|Bazy danych]] ([[Snowflake|Snowflake]], BigQuery) mają potężne silniki optymalizacji. Niech one pracują.
+- **ELT vs ETL:** [[Push-Down|Push-down]] jest sercem podejścia **ELT** (Extract-Load-Transform), gdzie transformacja dzieje się w docelowej bazie.
 
 # 📚 Szczegółowe wyjaśnienie
 W systemach rozproszonych (Spark, Presto) istnieje termin **Predicate Pushdown**.
@@ -33,10 +33,10 @@ Przykład: Szukasz `ID=5`. W nagłówku bloku jest napisane "W tym bloku są ID 
 Narzędzie BI (np. Tableau) łączy się z bazą.
 Użytkownik filtruje dashboard na "Polska".
 **Zły scenariusz:** Tableau pobiera wszystkie kraje do pamięci laptopa i filtruje. (Wolno).
-**Dobry scenariusz (Push-down):** Tableau generuje SQL `SELECT ... FROM ... WHERE Country = 'Polska'` i wysyła go do bazy. Baza zwraca tylko wynik. (Szybko).
+**Dobry scenariusz ([[Push-Down|Push-down]]):** Tableau generuje [[SQL|SQL]] `SELECT ... FROM ... WHERE Country = 'Polska'` i wysyła go do bazy. Baza zwraca tylko wynik. (Szybko).
 
 ## 📌 Źródła
 - Databricks Glossary - Predicate Pushdown.
 
 ## 👽 Brudnopis
-- W dbt push-down dzieje się automatycznie, bo dbt po prostu kompiluje SQL i uruchamia go w bazie. To największa zaleta dbt.
+- W [[dbt|dbt]] [[Push-Down|push-down]] dzieje się automatycznie, bo [[dbt|dbt]] po prostu kompiluje [[SQL|SQL]] i uruchamia go w bazie. To największa zaleta [[dbt|dbt]].

@@ -27,22 +27,22 @@ aliases:
 ## Plusy
 - **Specjalizacja:** Model staje się ekspertem w wąskiej dziedzinie (np. pisanie pozwów sądowych).
 - **Mniejszy Prompt:** Nie musisz pisać instrukcji na 10 stron w każdym prompcie, bo model ma to "we krwi".
-- **Koszt (Inference):** Mniejszy model po fine-tuningu może pokonać giganta (GPT-4) w specyficznym zadaniu, będąc 10x tańszym w działaniu.
+- **Koszt (Inference):** Mniejszy model po fine-tuningu może pokonać giganta ([[GPT-4|GPT-4]]) w specyficznym zadaniu, będąc 10x tańszym w działaniu.
 
 ## Minusy
 - **Koszt (Trening):** Musisz mieć GPU i zbiór danych.
 - **Zapominanie (Catastrophic Forgetting):** Douczony model może zgłupieć w innych dziedzinach.
-- **Sztywność:** Jak zmienią się przepisy, musisz trenować od nowa. W RAG po prostu podmieniasz plik PDF.
+- **Sztywność:** Jak zmienią się przepisy, musisz trenować od nowa. W [[RAG|RAG]] po prostu podmieniasz plik PDF.
 
 # 💡 Przykład zastosowania
 Dział Obsługi Klienta Samsunga.
 Chcesz, żeby bot odpowiadał w specyficznym, uprzejmym stylu marki Samsung i używał konkretnych zwrotów.
 Robisz Fine-tuning na bazie 10,000 idealnych rozmów z historii.
 Model uczy się **stylu**.
-Ale wiedzę o tym, ile kosztuje Galaxy S24 dzisiaj, pobiera przez **RAG** z cennika.
+Ale wiedzę o tym, ile kosztuje Galaxy S24 dzisiaj, pobiera przez **[[RAG|RAG]]** z cennika.
 
 ## 📌 Źródła
 - OpenAI Fine-tuning Guide.
 
 ## 👽 Brudnopis
-- Złota zasada: Najpierw spróbuj Prompt Engineering. Potem RAG. Na końcu Fine-tuning.
+- Złota zasada: Najpierw spróbuj Prompt Engineering. Potem [[RAG|RAG]]. Na końcu Fine-tuning.

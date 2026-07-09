@@ -15,11 +15,11 @@ aliases:
   - Zapora Jakości
 ---
 # 🎯 Definicja
-**DQ Firewall** to usługa w Ataccama ONE, która wystawia reguły jakości danych jako **API**. Pozwala to aplikacjom zewnętrznym (np. formularzom webowym, systemom ETL) sprawdzać jakość rekordu *zanim* zostanie on zapisany w bazie. To realizacja zasady "Prevention is better than Cure".
+**DQ Firewall** to usługa w [[Ataccama|Ataccama]] ONE, która wystawia reguły jakości danych jako **API**. Pozwala to aplikacjom zewnętrznym (np. formularzom webowym, systemom ETL) sprawdzać jakość rekordu *zanim* zostanie on zapisany w bazie. To realizacja zasady "Prevention is better than Cure".
 
 # 🔑 Kluczowe punkty
 - **Real-Time DQ:** Ocena jakości odbywa się w milisekundach, w locie.
-- **Centralizacja:** Używasz tych samych reguł, co w batchowym monitoringu (np. `Valid Email`). Nie musisz kodować walidacji dwa razy (raz w Java Script na frontendzie, drugi raz w SQL w hurtowni).
+- **Centralizacja:** Używasz tych samych reguł, co w batchowym monitoringu (np. `Valid Email`). Nie musisz kodować walidacji dwa razy (raz w Java Script na frontendzie, drugi raz w [[SQL|SQL]] w hurtowni).
 - **API:** Dostęp przez REST lub GraphQL.
 
 # 📚 Szczegółowe wyjaśnienie
@@ -29,17 +29,17 @@ Jak to działa?
 3.  Podpinasz reguły walidacyjne (np. `Name` nie może być puste, `Email` musi mieć @).
 4.  Publikujesz projekt. System generuje endpoint HTTP.
 5.  Twój developer frontendu, gdy użytkownik klika "Wyślij", wysyła JSON-a do Ataccamy.
-6.  Ataccama odpowiada: `{"status": "INVALID", "errors": ["Email format is wrong"]}`.
+6.  [[Ataccama|Ataccama]] odpowiada: `{"status": "INVALID", "errors": ["Email format is wrong"]}`.
 7.  Aplikacja blokuje zapis i pokazuje błąd użytkownikowi.
 
 # 💡 Przykład zastosowania
 Formularz rejestracji nowego klienta w banku.
 Zamiast pisać logikę walidacji PESEL-u w kodzie strony www (gdzie łatwo o błąd lub zmianę przepisów), strona wysyła PESEL do DQ Firewalla.
 Firewall sprawdza sumę kontrolną, datę urodzenia i płeć. Jeśli jest błędny, odrzuca go.
-Jeśli bank zmieni reguły (np. obsługa PESELi dla obcokrajowców), zmienia je w jednym miejscu (Ataccama), a wszystkie formularze od razu działają wg nowych zasad.
+Jeśli bank zmieni reguły (np. obsługa PESELi dla obcokrajowców), zmienia je w jednym miejscu ([[Ataccama|Ataccama]]), a wszystkie formularze od razu działają wg nowych zasad.
 
 ## 📌 Źródła
-- Ataccama ONE Documentation - DQ Firewalls.
+- [[Ataccama|Ataccama]] ONE Documentation - DQ Firewalls.
 
 ## 👽 Brudnopis
 - DQ Firewall zapobiega efektowi "Garbage In, Garbage Out".

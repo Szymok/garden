@@ -20,7 +20,7 @@ aliases:
 ---
 
 # 🎯 Definicja 
-Powiadomienia w Monitoring Project dzielą się na dwa typy: General (ogólne) i Specific (specyficzne). Ogólne informują o kluczowych zdarzeniach monitoringu (np. nowe wyniki, błędy), a specyficzne służą do precyzyjnych alertów związanych z wybranymi regułami/sekcjami raportu i progami DQ. Oba typy są zarządzane na zakładce Notifications, z tym że nowe Specific tworzy się z poziomu Report.
+Powiadomienia w [[Monitoring Project|Monitoring Project]] dzielą się na dwa typy: General (ogólne) i Specific (specyficzne). Ogólne informują o kluczowych zdarzeniach monitoringu (np. nowe wyniki, błędy), a specyficzne służą do precyzyjnych alertów związanych z wybranymi regułami/sekcjami raportu i progami DQ. Oba typy są zarządzane na zakładce Notifications, z tym że nowe Specific tworzy się z poziomu Report.
 
 # 🔑 Kluczowe punkty
 
@@ -46,7 +46,7 @@ Powiadomienia w Monitoring Project dzielą się na dwa typy: General (ogólne) i
         - Monitoring failures (run errors).
         - Critical errors in data structures.
         - New results available.
-        - Data quality issues and anomalies.
+        - [[Data Quality|Data quality]] issues and anomalies.
     - Jak skonfigurować:
         - Przejdź do zakładki Notifications w projekcie.
         - Kliknij Add Notification (lub edytuj istniejące).
@@ -71,7 +71,7 @@ Powiadomienia w Monitoring Project dzielą się na dwa typy: General (ogólne) i
 - Dobre praktyki
     - Ustal progi zgodnie z KPI DQ (np. INVALID% > 3% lub nagły wzrost anomalii).
     - Ogranicz szum: używaj Specific dla krytycznych reguł, General dla stanu systemu.
-    - Segmentuj odbiorców: techniczne awarie → on-call, degradacja KPI → stewardzi/ownerzy domen.
+    - Segmentuj odbiorców: techniczne awarie → on-call, degradacja [[KPI|KPI]] → stewardzi/ownerzy domen.
     - Testuj kanały (Slack/Teams webhooks) w środowisku testowym przed produkcją.
     - Po zmianach w raportach/sekcjach zweryfikuj, czy powiązane Specific nadal wskazują poprawne obiekty.
 
@@ -99,4 +99,4 @@ Powiadomienia w Monitoring Project dzielą się na dwa typy: General (ogólne) i
 - Do weryfikacji:
     - Czy wymagać standardu progów (np. INVALID% > 3% critical, 1–3% warning) dla Specific? — do weryfikacji.
     - Czy integrować z incident management (np. Slack → PagerDuty) dla awarii runów? — do weryfikacji.
-    - Czy przechowywać historię alertów w Data Lake dla audytu KPI DQ? — do weryfikacji.
+    - Czy przechowywać historię alertów w [[Data Lake|Data Lake]] dla audytu [[KPI|KPI]] DQ? — do weryfikacji.

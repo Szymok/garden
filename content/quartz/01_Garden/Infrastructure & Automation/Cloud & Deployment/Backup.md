@@ -24,7 +24,7 @@ Proces tworzenia i przechowywania kopii danych w celu ich odzyskania w przypadku
 - **Testy:** Backup, którego nie da się odtworzyć, jest bezwartościowy. Testuj `RESTORE`.
 
 # 📚 Szczegółowe wyjaśnienie
-W kontekście systemów Ataccama/Big Data:
+W kontekście systemów [[Ataccama|Ataccama]]/Big Data:
 - **Metadane (Konfiguracja):** Ważniejsze niż same dane. Dane można często pobrać ze źródeł, ale reguły DQ, plany ETL i słowniki (budowane latami) muszą mieć backup.
 - **Baza danych (Postgres):** `pg_dump` lub snapshoty cloudowe (RDS).
 - **Pliki (Project Files):** Repozytorium Git jest formą backupu kodu, ale pliki konfiguracyjne serwera (`etc/`) też wymagają kopii.
@@ -41,5 +41,5 @@ Awaria dysku na serwerze MDM.
 
 ## 👽 Brudnopis
 - Snapshoty VM vs Backup aplikacji.
-- Backup logiczny (SQL dump) vs fizyczny (kopiowanie plików bazy).
+- Backup logiczny ([[SQL|SQL]] dump) vs fizyczny (kopiowanie plików bazy).
 - Ransomware - backupy muszą być "immutable" (tylko do odczytu) lub odseparowane sieciowo (air-gapped), żeby wirus ich nie zaszyfrował.

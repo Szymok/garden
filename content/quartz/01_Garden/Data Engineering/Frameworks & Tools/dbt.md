@@ -23,28 +23,28 @@ aliases:
 
 # 🎯 Definicja
 
-**dbt (data build tool)** to narzędzie typu open source (dostępne również jako usługa w chmurze – dbt Cloud), które umożliwia transformację danych za pomocą języka SQL bezpośrednio w hurtowni danych. Jest centralnym elementem modelu ELT, koncentrującym się na „T” (transform), i jest standardem de facto w nowoczesnej inżynierii danych ([[Inżynieria Danych|data engineering]] / analytics engineering).
+**dbt (data build tool)** to narzędzie typu open source (dostępne również jako usługa w chmurze – dbt Cloud), które umożliwia transformację danych za pomocą języka [[SQL|SQL]] bezpośrednio w hurtowni danych. Jest centralnym elementem modelu ELT, koncentrującym się na „T” (transform), i jest standardem de facto w nowoczesnej inżynierii danych ([[Inżynieria Danych|data engineering]] / analytics engineering).
 
 # 🔑 Kluczowe punkty
 
-- 📦 Umożliwia pisanie, testowanie, dokumentowanie i uruchamianie transformacji w SQL.
+- 📦 Umożliwia pisanie, testowanie, dokumentowanie i uruchamianie transformacji w [[SQL|SQL]].
 - 🔄 Stosuje podejście ELT — dane są najpierw ładowane do hurtowni, a transformacje wykonywane są wewnątrz niej.
 - 🧱 Wspiera modularne tworzenie modeli danych z możliwością dziedziczenia, zależności i graficznej wizualizacji DAG.
 - ✅ Obsługuje testy danych i automatyczne dokumentowanie modeli oraz metadanych.
-- 🔗 Integruje się z różnymi hurtowniami, takimi jak Snowflake, BigQuery, Redshift, Databricks, PostgreSQL.
+- 🔗 Integruje się z różnymi hurtowniami, takimi jak [[Snowflake|Snowflake]], BigQuery, Redshift, Databricks, PostgreSQL.
 
 # 📚 Szczegółowe wyjaśnienie
 
 ## Jak działa dbt?
 
-1. **Źródła danych** są ładowane do hurtowni danych przez narzędzia typu Fivetran, Airbyte, Kafka (warstwa "extract & load").
-2. **dbt** wykonuje transformacje SQL w hurtowni (np. czyszczenie danych, łączenie tabel, budowa warstw analitycznych).
-3. Dzielisz kod SQL na **modułowe modele** (np. staging, intermediate, marts), które dziedziczą po sobie.
+1. **Źródła danych** są ładowane do hurtowni danych przez narzędzia typu Fivetran, [[Airbyte|Airbyte]], Kafka (warstwa "extract & load").
+2. **dbt** wykonuje transformacje [[SQL|SQL]] w hurtowni (np. czyszczenie danych, łączenie tabel, budowa warstw analitycznych).
+3. Dzielisz kod [[SQL|SQL]] na **modułowe modele** (np. staging, intermediate, marts), które dziedziczą po sobie.
 4. Wszystkie transformacje są wersjonowane i uruchamialne jako pipeline (lokalnie lub w dbt Cloud).
 
 ## Kluczowe składniki
 
-- **Model**: plik SQL budujący tabelę lub widok w hurtowni danych.
+- **Model**: plik [[SQL|SQL]] budujący tabelę lub widok w hurtowni danych.
 - **Seeds**: dane źródłowe z pliku CSV, które można załadować jako tabelę.
 - **Sources**: odniesienia do rzeczywistych tabel poza dbt, np. źródła typu raw_data.orders.
 - **Tests**: predefiniowane lub niestandardowe testy walidujące dane (np. brak NULL, unikalność klucza).
@@ -52,7 +52,7 @@ aliases:
 
 ## Wersja lokalna vs dbt Cloud
 
-|Cecha|dbt Core (CLI)|dbt Cloud (SaaS)|
+|Cecha|dbt Core (CLI)|dbt Cloud ([[SaaS|SaaS]])|
 |---|---|---|
 |Wymagana instalacja|Tak (Python + dbt)|Nie|
 |Framework Open Source|✅|✅|
@@ -79,7 +79,7 @@ Całość jest uruchamiana co godzinę w dbt Cloud za pomocą harmonogramu. Test
 
 # 👽 Brudnopis
 
-- ELT: dbt robi T (transform), Fivetran/Airbyte robi E+L
+- ELT: dbt robi T (transform), Fivetran/[[Airbyte|Airbyte]] robi E+L
 - Standard in analytics engineering & modern [[Stos danych|data stack]]
 - Workflow: sources → staging → core models → marts
 - testy: not_null, unique, accepted_values, relational integrity

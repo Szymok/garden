@@ -23,8 +23,8 @@ Jak komputer czyta dane?
 - **Vectorized (Wektorowo):** Czyta 1000 Nazwisk na raz w jednym cyklu procesora.
 
 # 🔑 Kluczowe punkty
-- **OLTP (Row):** Bazy transakcyjne (Postgres, MySQL). Dobre do zapisu pojedynczych transakcji ("Dodaj koszyk").
-- **OLAP (Column):** Hurtownie (Snowflake, BigQuery). Dobre do analiz ("Policz średnią cenę ze wszystkich koszyków").
+- **[[OLTP|OLTP]] (Row):** Bazy transakcyjne (Postgres, MySQL). Dobre do zapisu pojedynczych transakcji ("Dodaj koszyk").
+- **OLAP (Column):** Hurtownie ([[Snowflake|Snowflake]], BigQuery). Dobre do analiz ("Policz średnią cenę ze wszystkich koszyków").
 - **Vector Engines:** Nowoczesne silniki ([[DuckDB]], ClickHouse). Wykorzystują instrukcje SIMD procesora (robią matematykę na całych wektorach liczb na raz).
 
 # 📚 Szczegółowe wyjaśnienie
@@ -36,10 +36,10 @@ Chcesz policzyć średni wiek Polaków.
 # 💡 Przykład zastosowania
 Analityk wrzuca zapytanie na 100 mln wierszy w [[Pandas]]. Trwa to 20 minut (Python jest wolny, pętle są wolne).
 Przepisuje to na [[DuckDB]] (Silnik Wektorowy). Trwa to 2 sekundy.
-Dlaczego? Bo DuckDB używa C++ i SIMD, przetwarzając dane blokami (Vectors), a nie wiersz po wierszu.
+Dlaczego? Bo [[DuckDB|DuckDB]] używa C++ i SIMD, przetwarzając dane blokami (Vectors), a nie wiersz po wierszu.
 
 ## 📌 Źródła
 - "Designing Data-Intensive Applications".
 
 ## 👽 Brudnopis
-- Format pliku też ma znaczenie. CSV/JSON są wierszowe (powolne). [[Apache Parquet]]/ORC są kolumnowe (szybkie).
+- Format pliku też ma znaczenie. CSV/JSON są wierszowe (powolne). [[Apache Parquet]]/[[ORC|ORC]] są kolumnowe (szybkie).

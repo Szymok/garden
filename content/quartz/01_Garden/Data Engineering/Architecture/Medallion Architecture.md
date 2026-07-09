@@ -26,9 +26,9 @@ aliases:
 
 - Opracowana przez **Databricks** dla [[Delta Lake]]
 - Każda warstwa buduje na poprzedniej — dane płyną jednokierunkowo
-- **Idempotentność**: można ponownie przetworzyć dane z Bronze bez utraty informacji
+- **[[Idempotentność|Idempotentność]]**: można ponownie przetworzyć dane z Bronze bez utraty informacji
 - **Separacja odpowiedzialności**: inżynier ładuje Bronze, analityk czyta Gold
-- Implementowana w [[Delta Lake]], Apache Iceberg, Apache Hudi
+- Implementowana w [[Delta Lake]], [[Apache Iceberg|Apache Iceberg]], [[Apache Hudi|Apache Hudi]]
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -66,7 +66,7 @@ aliases:
 └─────────────────────────────────────────┘
 ```
 
-## Implementacja z dbt
+## Implementacja z [[dbt|dbt]]
 
 ```sql
 -- Bronze: surowe dane (ładuje Airbyte/Kafka)
@@ -104,7 +104,7 @@ GROUP BY 1
 
 # 💡 Przykład zastosowania
 
-**E-commerce Data Platform**: Bronze — surowe zamówienia z Shopify przez Airbyte, Bronze — zdarzenia kliknięć z Kafka. Silver — oczyszczone zamówienia + klienci, Silver — sesje użytkowników. Gold — `daily_revenue_by_channel`, `customer_lifetime_value`, `product_conversion_rate` — konsumowane przez Power BI.
+**E-commerce Data Platform**: Bronze — surowe zamówienia z Shopify przez [[Airbyte|Airbyte]], Bronze — zdarzenia kliknięć z Kafka. Silver — oczyszczone zamówienia + klienci, Silver — sesje użytkowników. Gold — `daily_revenue_by_channel`, `customer_lifetime_value`, `product_conversion_rate` — konsumowane przez Power BI.
 
 # 📌 Źródła
 

@@ -21,17 +21,17 @@ aliases:
 # 🔑 Kluczowe punkty
 - **Odpowiedzialność:** Dostawca dba o OS, poprawki (patche), sieć i hardware. Ty dbasz o Aplikację.
 - **Szybkość:** Wrzucasz kod i działa. Nie instalujesz Linuxa.
-- **Przykłady:** Ataccama ONE PaaS, Azure SQL Database, AWS Elastic Beanstalk, Heroku.
+- **Przykłady:** [[Ataccama|Ataccama]] ONE PaaS, Azure [[SQL|SQL]] Database, AWS Elastic Beanstalk, Heroku.
 
 # 📚 Szczegółowe wyjaśnienie
-To środek drogi między **IaaS** (gdzie dostajesz pustego wirtualnego peceta i robisz wszystko sam) a **SaaS** (gdzie dostajesz gotowy program jak Gmail i nic nie możesz zmienić w środku).
+To środek drogi między **[[IaaS|IaaS]]** (gdzie dostajesz pustego wirtualnego peceta i robisz wszystko sam) a **[[SaaS|SaaS]]** (gdzie dostajesz gotowy program jak Gmail i nic nie możesz zmienić w środku).
 PaaS jest idealny dla programistów.
 
 # 💡 Przykład zastosowania
 Chcesz postawić stronę w Wordpressie.
-**IaaS:** Kupujesz VPS, instalujesz Linuxa, Apache, PHP, MySQL, konfigurujesz firewall...
+**[[IaaS|IaaS]]:** Kupujesz VPS, instalujesz Linuxa, Apache, PHP, MySQL, konfigurujesz firewall...
 **PaaS:** Klikasz "Create MySQL" i "Create Web App". Wrzucasz pliki Wordpressa. Gotowe.
-**SaaS:** Zakładasz konto na WordPress.com.
+**[[SaaS|SaaS]]:** Zakładasz konto na WordPress.com.
 
 ## 📌 Źródła
 - Microsoft Azure - What is PaaS?

@@ -20,7 +20,7 @@ aliases:
 
 # 🔑 Kluczowe punkty
 - **Synergia:** Obraz dostarcza faktów (np. co jest na zdjęciu), tekst dostarcza logiki. Razem dają lepsze wyniki niż każda modalność osobno.
-- **Redukcja halucynacji:** Model widzi "dowód" na obrazku, więc rzadziej zmyśla fakty wizualne.
+- **Redukcja halucynacji:** Model widzi "dowód" na obrazku, więc rzadziej zmyśla [[Fakty|fakty]] wizualne.
 - **Dwuetapowość:**
     1.  **Rationale Generation:** Wygeneruj opis/powód na podstawie obrazu i tekstu.
     2.  **Inference:** Wywnioskuj odpowiedź na podstawie tego opisu.

@@ -15,7 +15,7 @@ aliases:
   - Ręczna naprawa danych
 ---
 # 🎯 Definicja
-**Data Remediation** to proces naprawy błędnych danych. W przeciwieństwie do automatycznego czyszczenia (gdzie skrypt poprawia tysiące rekordów), remediacja często wymaga interwencji człowieka (Stewarda), który musi podjąć decyzję, jak poprawić konkretny rekord (np. zadzwonić do klienta i zapytać o poprawny adres). W Ataccama ONE odbywa się to w module **ONE Data**.
+**Data Remediation** to proces naprawy błędnych danych. W przeciwieństwie do automatycznego czyszczenia (gdzie skrypt poprawia tysiące rekordów), remediacja często wymaga interwencji człowieka (Stewarda), który musi podjąć decyzję, jak poprawić konkretny rekord (np. zadzwonić do klienta i zapytać o poprawny adres). W [[Ataccama|Ataccama]] ONE odbywa się to w module **ONE Data**.
 
 # 🔑 Kluczowe punkty
 - **Workflow:** Wykrycie błędu (Monitoring) -> Załadowanie do ONE Data -> Ręczna korekta -> Walidacja -> Eksport do źródła.
@@ -23,7 +23,7 @@ aliases:
 - **Zastosowanie:** Błędy, których nie da się naprawić automatem (np. literówki w nazwach firm, których nie ma w słowniku).
 
 # 📚 Szczegółowe wyjaśnienie
-Proces w Ataccama ONE:
+Proces w [[Ataccama|Ataccama]] ONE:
 1.  Monitoring DQ wykrywa 500 rekordów "Invalid" w hurtowni.
 2.  Data Steward klika "Load to ONE Data" (filtrując tylko te błędne).
 3.  Otwiera tabelę w przeglądarce. Widzi podświetlone na czerwono komórki.
@@ -36,8 +36,8 @@ Reguła wykryła, że dla klienta "Prezes XYZ" brakuje numeru telefonu.
 Automat tego nie wymyśli. Steward musi znaleźć wizytówkę, wpisać numer ręcznie w ONE Data. System od razu sprawdzi format (+48...). Jeśli OK, Steward zatwierdza zmianę.
 
 ## 📌 Źródła
-- Ataccama ONE Data Documentation.
+- [[[[Ataccama|Ataccama]] ONE Data|[[Ataccama|Ataccama]] ONE Data]] Documentation.
 
 ## 👽 Brudnopis
-- To narzędzie typu "Data Stewardship" / "Data Curation".
+- To narzędzie typu "Data [[Stewardship|Stewardship]]" / "Data Curation".
 - Ważne jest zachowanie Audit Trail (kto i kiedy zmienił dane ręcznie), co ONE Data zapewnia.

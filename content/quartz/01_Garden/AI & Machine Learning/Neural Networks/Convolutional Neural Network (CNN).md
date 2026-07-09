@@ -36,7 +36,7 @@ Kamera widzi obraz. CNN analizuje go.
 Filtr nr 1 wykrywa kolor czerwony.
 Filtr nr 2 wykrywa kształt ośmiokąta.
 Filtr nr 3 wykrywa napis "STOP".
-Sieć łączy te fakty i daje wynik: "Znak STOP (99% pewności)".
+Sieć łączy te [[Fakty|fakty]] i daje wynik: "Znak STOP (99% pewności)".
 
 ## 📌 Źródła
 - Yann LeCun (ojciec CNN).

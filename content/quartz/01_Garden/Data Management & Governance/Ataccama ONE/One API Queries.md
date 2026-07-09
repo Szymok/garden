@@ -19,25 +19,25 @@ aliases:
 
 # 🎯 Definicja
 
-**Zapytania One API (One API Queries)** to zapytania w języku GraphQL służące do pobierania danych i metadanych z platformy Ataccama ONE (np. modułu [[Metadata|Metadata Management]]). W przeciwieństwie do tradycyjnych interfejsów REST API (patrz: [[Endpoints and HTTP Headers|Nagłówki HTTP]]), GraphQL umożliwia klientom precyzyjne określenie struktury zwracanych danych w ramach jednego żądania HTTP, eliminując problem nadmiarowego pobierania danych (over-fetching). Do interaktywnego testowania zapytań służy [[Ataccama Using Playground|GraphQL Playground]].
+**Zapytania One API (One API [[Queries|Queries]])** to zapytania w języku GraphQL służące do pobierania danych i metadanych z platformy [[Ataccama|Ataccama]] ONE (np. modułu [[Metadata|Metadata Management]]). W przeciwieństwie do tradycyjnych interfejsów REST API (patrz: [[Endpoints and HTTP Headers|Nagłówki HTTP]]), GraphQL umożliwia klientom precyzyjne określenie struktury zwracanych danych w ramach jednego żądania HTTP, eliminując problem nadmiarowego pobierania danych (over-fetching). Do interaktywnego testowania zapytań służy [[Ataccama Using Playground|GraphQL Playground]].
 
 # 🔑 Kluczowe punkty
 
 - **Precyzja**: Klient definiuje dokładnie te pola, które są mu potrzebne, w tym dane zagnieżdżone i powiązane encje [[Metadata|modelu metadanych]].
 - **Identyfikator GID**: Podstawą pobierania konkretnych encji jest ich unikalny, globalny identyfikator `gid`.
-- **Funkcje zaawansowane**: Zapytania obsługują sortowanie (`orderBy`), stronicowanie (paginację z parametrami `skip`, `size`, `cursor`) oraz filtrowanie (za pomocą języka AQL i AI).
+- **Funkcje zaawansowane**: Zapytania obsługują sortowanie (`orderBy`), stronicowanie (paginację z parametrami `skip`, `size`, `cursor`) oraz filtrowanie (za pomocą języka [[AQL|AQL]] i AI).
 - **Zadania asynchroniczne**: Przez API można wywoływać operacje takie jak [[Profiling|profilowanie danych]] lub testy [[Data Quality|Jakości Danych]], a następnie odpytywać o ich status (Job status).
 
 # 📚 Szczegółowe wyjaśnienie
 
 ## Pobieranie i przeszukiwanie encji
 
-Zapytania GraphQL pozwalają na przeglądanie struktury metadanych Ataccama ONE. Możliwe jest nakładanie filtrów oraz sortowania:
+Zapytania GraphQL pozwalają na przeglądanie struktury metadanych [[Ataccama|Ataccama]] ONE. Możliwe jest nakładanie filtrów oraz sortowania:
 - **Prymitywne sortowanie**: np. `orderBy: [{ property: "name", direction: ASC }]`.
 - **Paginacja**: kontrolowana za pomocą parametrów `skip` i `size` lub kursorów (patrz również: [[Extracting Audit API#Stronicowanie (Pagination) w Audit API|Paginacja w Audit API]]).
 - **Filtrowanie**: 
-  - `filter` – standardowe filtry oparte na języku AQL (Ataccama Query Language).
-  - `query` – zapytanie AQL przetwarzane wstępnie przez algorytmy sztucznej inteligencji.
+  - `filter` – standardowe filtry oparte na języku [[AQL|AQL]] ([[Ataccama|Ataccama]] Query Language).
+  - `query` – zapytanie [[AQL|AQL]] przetwarzane wstępnie przez algorytmy sztucznej inteligencji.
   - `queryParts` – przyjazne dla użytkownika klocki filtrów przetwarzane przez AI.
 
 ## Statystyki i agregacje Jakości Danych (DQ)
@@ -49,7 +49,7 @@ Platforma umożliwia pobieranie zagregowanych wyników jakości danych dla poję
 
 ---
 
-# 💡 Przykłady zapytań (Queries)
+# 💡 Przykłady zapytań ([[Queries|Queries]])
 
 ## 1. Listowanie elementów katalogu ([[Data Catalog|List catalog items]])
 
@@ -544,7 +544,7 @@ query listProfilingConfigurations {
 }
 ```
 
-## 12. Uruchomienie profilowania elementu katalogu (Profile catalog items: Request)
+## 12. Uruchomienie profilowania elementu katalogu (Profile [[Catalog Items|catalog items]]: Request)
 
 Uruchamia proces [[Profiling|profilowania (profiling)]] na wybranym elemencie przy użyciu pobranego identyfikatora konfiguracji (`configId`). Ta operacja modyfikuje dane, więc pod spodem jest to [[One API Mutations|mutacja]].
 
@@ -617,7 +617,7 @@ query getJobStatus {
 - **Struktura połączeń**: Wykorzystanie schematu `edges` i `node` do paginacji oraz pobierania rekordów.
 - **Parametry DQ dla terminów**:
   - `statistics`: liczba przypisań pojęć w katalogu (patrz: [[Glossary Terms]])
-  - `aggregationResult`: zbiorcza jakość danych z poziomu reguł
+  - `aggregationResult`: zbiorcza [[Jakość Danych|jakość danych]] z poziomu reguł
   - `dqEvalTermAggr`: podsumowanie poprawności (valid/invalid)
 - **Workflow profilowania**:
   1. Pobierz konfigurację (np. `FULL`/`SAMPLE`) -> `profilingConfigurations` (patrz: [[Profiling]])

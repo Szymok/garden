@@ -20,7 +20,7 @@ aliases:
 # 🔑 Kluczowe punkty
 
 - **Są przechowywane w ściśle określonej strukturze** – najczęściej w tabelach baz danych: każda kolumna ma typ (np. liczba, tekst, data), a każdy wiersz odpowiada rekordowi.
-- **Pozwalają na szybkie query i automatyczną analizę** – dostępne są za pomocą SQL lub innych sformalizowanych języków zapytań.
+- **Pozwalają na szybkie query i automatyczną analizę** – dostępne są za pomocą [[SQL|SQL]] lub innych sformalizowanych języków zapytań.
 - **Widoczne są również w sieci** – np. w kodzie stron (schema.org, RDFa, JSON-LD, Microdata) jako uporządkowane opisy produktowe, firmowe, artykułów czy wydarzeń.
 - **Ułatwiają integrację oraz automatyczne przetwarzanie** przez narzędzia IT i systemy analityczne.
 - **Stosowane w wielu branżach**: od sklepów internetowych po analitykę mediów społecznościowych i systemy ERP.
@@ -29,7 +29,7 @@ aliases:
 
 ## Przykłady strukturalnych danych
 
-Najprostsze przykłady to wiersze w bazie SQL:
+Najprostsze przykłady to wiersze w bazie [[SQL|SQL]]:
 
 |wiek|imię|telefon|
 |---|---|---|
@@ -71,7 +71,7 @@ Po ekstrakcji — do postaci strukturalnej:
 |---|---|
 |Bob|29|
 
-Taki przekształcony zestaw jest łatwy do analizy i query w bazach SQL.
+Taki przekształcony zestaw jest łatwy do analizy i query w bazach [[SQL|SQL]].
 
 ## Wdrożenie w sieci – SEO i rich snippets
 
@@ -89,7 +89,7 @@ Wdrożenie danych strukturalnych (np. za pomocą schema.org w formacie JSON-LD w
 
 Jeśli Twoja strona e-commerce posiada produkty z metadanymi Product, Google może je wyświetlić z ceną, oceną i dostępnością już w liście wyników wyszukiwania.
 
-**W SQL**:
+**W [[SQL|SQL]]**:
 
 ```sql
 SELECT * FROM users WHERE age=29
@@ -115,5 +115,5 @@ Taki query jest możliwy tylko na danych strukturalnych — na nieustrukturyzowa
 - Najczęstsze przypadki: produkt, artykuł, wydarzenie, osoba, FAQ — istotne w SEO i widoczności.
 - Niestrukturalne: teksty, obrazy, video.
 - Półstrukturalne: JSON, XML, logi.
-- Wdrożenie: kod strony (schema.org, JSON-LD), tabela SQL, plik CSV z kolumnami i typami.
+- Wdrożenie: kod strony (schema.org, JSON-LD), tabela [[SQL|SQL]], plik CSV z kolumnami i typami.
 - Rich snippets = efekt wdrożenia na stronie (SEO).

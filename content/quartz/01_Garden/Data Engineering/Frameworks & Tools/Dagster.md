@@ -15,11 +15,11 @@ aliases:
   - Software-Defined Assets
 ---
 # 🎯 Definicja
-[**Dagster**](https://dagster.io/) to nowoczesna platforma do **orkiestracji danych**, która redefiniuje podejście do pipeline'ów ETL. Zamiast skupiać się na zadaniach ("zrób X, potem Y"), skupia się na **aktywach danych** ("mam tabelę X i tabelę Y, która zależy od X"). Dzięki modelowi **Software-Defined Assets (SDA)**, kod definiuje stan docelowy danych, a orkiestrator sam wie, co i w jakiej kolejności uruchomić.
+[**Dagster**](https://dagster.io/) to nowoczesna platforma do **orkiestracji danych**, która redefiniuje podejście do pipeline'ów ETL. Zamiast skupiać się na zadaniach ("zrób X, potem Y"), skupia się na **aktywach danych** ("mam tabelę X i tabelę Y, która zależy od X"). Dzięki modelowi **[[Software-Defined Assets|Software-Defined Assets]] (SDA)**, kod definiuje stan docelowy danych, a orkiestrator sam wie, co i w jakiej kolejności uruchomić.
 
 # 🔑 Kluczowe punkty
-- **Asset-Centric:** Podstawową jednostką nie jest `Task`, ale `Asset` (np. Tabela w Snowflake, Plik Parquet, Model ML).
-- **Deklaratywność:** Definiujesz "co to jest", a nie tylko "jak to zrobić".
+- **Asset-Centric:** Podstawową jednostką nie jest `Task`, ale `Asset` (np. Tabela w [[Snowflake|Snowflake]], Plik Parquet, Model ML).
+- **[[Deklaratywność|Deklaratywność]]:** Definiujesz "co to jest", a nie tylko "jak to zrobić".
 - **Testowalność:** Dagster od początku był projektowany z myślą o Unit Testach i łatwym lokalnym developmencie (czego brakuje w Airflow).
 - **Observability:** Wbudowany Lineage, śledzenie metadanych i logów w kontekście konkretnego zasobu danych.
 
@@ -47,9 +47,9 @@ Jeśli poprawisz logikę w B, Dagster automatycznie wie, że trzeba przeliczyć 
 
 ## 📌 Źródła
 - [Dagster Docs](https://docs.dagster.io/)
-- "Software-Defined Assets" Manifesto.
+- "[[Software-Defined Assets|Software-Defined Assets]]" Manifesto.
 
 ## 👽 Brudnopis
-- Działa świetnie z [[dbt]] (traktuje modele dbt jako assety).
+- Działa świetnie z [[dbt]] (traktuje modele [[dbt|dbt]] jako assety).
 - Posiada "Sensors" do uruchamiania pipeline'ów na zdarzenie (np. pojawienie się pliku w S3).
-- Konkurencja: Apache Airflow (imperatywny), Prefect (hybrydowy), Mage.ai.
+- Konkurencja: [[Apache Airflow|Apache Airflow]] (imperatywny), Prefect (hybrydowy), Mage.ai.

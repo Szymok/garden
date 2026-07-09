@@ -16,7 +16,7 @@ aliases:
   - Szyfrowanie haseł w Git
 ---
 # 🎯 Definicja
-**SOPS** (Secrets OPerationS) to narzędzie Mozilli do szyfrowania plików konfiguracyjnych (YAML, JSON, ENV). Pozwala bezpiecznie trzymać hasła i klucze API w repozytorium Git. Szyfruje tylko wartości (values), a klucze (keys) zostawia jawne, co ułatwia przeglądanie struktury pliku (Diff) bez ujawniania sekretów.
+**SOPS** (Secrets OPerationS) to narzędzie Mozilli do szyfrowania plików konfiguracyjnych ([[YAML|YAML]], JSON, ENV). Pozwala bezpiecznie trzymać hasła i klucze API w repozytorium Git. Szyfruje tylko wartości (values), a klucze (keys) zostawia jawne, co ułatwia przeglądanie struktury pliku (Diff) bez ujawniania sekretów.
 
 # 🔑 Kluczowe punkty
 - **Bezpieczny Git:** Możesz trzymać plik `secrets.yaml` w publicznym repozytorium, bo wartości są zaszyfrowane.
@@ -34,7 +34,7 @@ SOPS automatycznie zarządza kluczami "master" i kluczami danych.
 
 # 💡 Przykład zastosowania
 Konfiguracja Kubernetesa (**GitOps**).
-Masz definicję Deploymentu bazy danych. Hasło jest w Secret.
+Masz definicję Deploymentu [[Bazy danych|bazy danych]]. Hasło jest w Secret.
 Zamiast ręcznie wgrywać hasło na klaster (`kubectl create secret`), trzymasz je w repozytorium zaszyfrowane SOPS-em.
 Operator FluxCD lub ArgoCD (z wtyczką SOPS) automatycznie odszyfrowuje je przy wdrażaniu na klaster.
 

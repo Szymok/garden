@@ -26,7 +26,7 @@ aliases:
 
 - Stos danych definiuje kompletny łańcuch przetwarzania danych: od źródła do analityki.
 - W jego skład wchodzą komponenty do ekstrakcji, przechowywania, przetwarzania, raportowania i wartościowania danych.
-- Może być zbudowany z różnych technologii open-source, rozwiązań chmurowych lub narzędzi SaaS.
+- Może być zbudowany z różnych technologii open-source, rozwiązań chmurowych lub narzędzi [[SaaS|SaaS]].
 - Koncepcja nowoczesnego stosu danych ([[Nowoczesny Stos Danych|Modern Data Stack]]) koncentruje się na modularności, chmurze i elastyczności.
 - Kluczowy w tworzeniu platform danych pod raportowanie ([[Business Intelligence|BI]]), Data Science oraz Product Analytics.
 
@@ -36,27 +36,27 @@ aliases:
 
 1. **Ekstrakcja i załadunek danych (ELT/ETL):**
     
-    - Narzędzia ETL/ELT odpowiadają za pobranie danych ze źródeł (API, bazy danych, pliki) i ich załadowanie do hurtowni danych.
-    - Przykłady: Fivetran, Airbyte, Apache NiFi, [[dbt]] (w transformacji), Apache [[Apache Airflow|Airflow]] jako orkiestracja.
+    - Narzędzia ETL/ELT odpowiadają za pobranie danych ze źródeł (API, [[Bazy danych|bazy danych]], pliki) i ich załadowanie do hurtowni danych.
+    - Przykłady: Fivetran, [[Airbyte|Airbyte]], Apache NiFi, [[dbt]] (w transformacji), Apache [[Apache Airflow|Airflow]] jako orkiestracja.
 2. **Przechowywanie danych (Storage/Warehouse):**
     
     - Hurtownie danych (DWH) lub jeziora danych (Data Lakes) przechowują dane w ustrukturyzowanej lub surowej formie.
-    - Przykłady: Snowflake, Google BigQuery, Amazon Redshift, Databricks, [[Delta Lake]], S3.
-3. **Przetwarzanie danych (Processing/Transform):**
+    - Przykłady: [[Snowflake|Snowflake]], Google BigQuery, Amazon Redshift, Databricks, [[Delta Lake]], S3.
+3. **[[Przetwarzanie danych|Przetwarzanie danych]] (Processing/Transform):**
     
     - Transformacje danych — strukturalne, semantyczne, logiczne — przygotowujące dane do analizy i modelowania.
-    - Narzędzia: [[dbt]] (transformacje SQL), Apache Spark, Trino/Presto, [[Pandas]].
+    - Narzędzia: [[dbt]] (transformacje [[SQL|SQL]]), [[Apache Spark|Apache Spark]], Trino/Presto, [[Pandas]].
 4. **Analityka i [[Wizualizacja]] ([[Business Intelligence|BI]]/Analytics):**
     
     - Warstwa prezentacji dla użytkowników biznesowych.
     - Przykłady: Power [[Business Intelligence|BI]], Looker, Tableau, Metabase, Superset.
-5. **Monitorowanie i jakość danych (Data QA / Observability):**
+5. **Monitorowanie i [[Jakość Danych|jakość danych]] (Data QA / Observability):**
     
     - Narzędzia monitorujące jakość i poprawność danych, np. schematy, null-e, odchylenia.
     - Przykłady: Monte Carlo, Great Expectations, Soda, Datadog for pipelines.
 6. **Zarządzanie i bezpieczeństwo (Governance/Security):**
     
-    - Kontrola dostępu, katalogi danych, linie pochodzenia (data lineage), zgodność z RODO/GDPR.
+    - Kontrola dostępu, katalogi danych, linie pochodzenia ([[Data Lineage|data lineage]]), zgodność z RODO/GDPR.
     - Przykłady: Atlan, Collibra, Amundsen, DataHub.
 
 ## Cechy nowoczesnego stosu danych ([[Nowoczesny Stos Danych|Modern Data Stack]])
@@ -70,8 +70,8 @@ aliases:
 
 Startup e-commerce korzysta z nowoczesnego stosu danych zbudowanego z:
 
-- Airbyte do ekstrakcji danych ze Stripe, Shopify i Google Ads
-- Snowflake jako hurtowni danych
+- [[Airbyte|Airbyte]] do ekstrakcji danych ze Stripe, Shopify i Google Ads
+- [[Snowflake|Snowflake]] jako hurtowni danych
 - [[dbt]] do transformacji i modelowania warstw analitycznych
 - Metabase do raportowania
 - Great Expectations do walidacji poprawności danych

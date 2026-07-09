@@ -38,7 +38,7 @@ Tekst: [Wklej tekst]
 "
 
 ## 📌 Źródła
-- OpenAI Prompt Engineering Guide.
+- OpenAI [[Prompt Engineering Guide|Prompt Engineering Guide]].
 
 ## 👽 Brudnopis
 - Chain-of-Thought ("Pomyśl krok po kroku") to jedna z najprostszych metod na skokową poprawę jakości przy trudnych zadaniach logicznych.

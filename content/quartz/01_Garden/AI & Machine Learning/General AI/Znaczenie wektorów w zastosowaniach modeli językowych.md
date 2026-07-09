@@ -88,8 +88,8 @@ Zapytanie → embedding → wyszukiwanie wektorowe → [top-k dokumentów] → B
 |[[Baza wektorowa]]|Cechy|
 |---|---|
 |FAISS|Open-source, Facebook, szybkie przeszukiwanie offline|
-|Pinecone|Usługa SaaS o wysokiej wydajności|
-|Weaviate|Wbudowane embeddingi + metadata store|
+|Pinecone|Usługa [[SaaS|SaaS]] o wysokiej wydajności|
+|Weaviate|Wbudowane embeddingi + [[Metadata|metadata]] store|
 |Chroma|Lekka, lokalna baza, popularna w projektach [[RAG]]|
 |Qdrant|Rust-performance, feature-rich|
 

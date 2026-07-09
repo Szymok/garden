@@ -23,7 +23,7 @@ aliases:
 - **Wygoda:** Ułatwia użytkownikom znalezienie raportu lub definicji, przeklikując się przez drzewo kategorii (zamiast szukać w 1000 płaskich terminów).
 
 # 📚 Szczegółowe wyjaśnienie
-W systemach Data Governance (Ataccama, Collibra), hierarchia nie musi odzwierciedlać struktury HR firmy. Częściej odzwierciedla strukturę domenową (Data Domains).
+W systemach [[Data Governance|Data Governance]] ([[Ataccama|Ataccama]], Collibra), hierarchia nie musi odzwierciedlać struktury HR firmy. Częściej odzwierciedla strukturę domenową (Data Domains).
 Przykładowe drzewo:
 - Obszar: Sprzedaż
   - Podobszar: Sprzedaż Online
@@ -33,13 +33,13 @@ Przykładowe drzewo:
     - Termin: Paragon
 
 # 💡 Przykład zastosowania
-Bank wdraża Data Governance.
+Bank wdraża [[Data Governance|Data Governance]].
 Tworzy hierarchię: `Bank` -> `Piony` -> `Domeny Danych`.
 Dzięki temu, gdy Data Steward z "Pionu Ryzyka" wchodzi do systemu, widzi tylko swój wycinek drzewa i terminy, za które odpowiada, a nie terminy z "Marketingu".
 
 ## 📌 Źródła
-- DAMA-DMBOK (Data Management Body of Knowledge).
+- DAMA-DMBOK ([[Data Management|Data Management]] Body of Knowledge).
 
 ## 👽 Brudnopis
 - Poly-hierarchy: Jeden termin może należeć do wielu gałęzi (np. "Pracownik" jest w "HR" i w "Dostępy IT").
-- Reguły dziedziczenia (Inheritance): Czy jakość danych dziedziczy się w dół hierarchii?
+- Reguły dziedziczenia (Inheritance): Czy [[Jakość Danych|jakość danych]] dziedziczy się w dół hierarchii?

@@ -16,13 +16,13 @@ aliases:
   - Instalacja Samodzielna
 ---
 # 🎯 Definicja
-**Self-Managed Deployment** (dawniej On-Premise) to model, w którym Ataccama ONE działa na **Twoich serwerach** (lub Twoim koncie AWS/Azure).
-Ty dajesz sprzęt, prąd i administratorów. Ataccama daje pliki instalacyjne.
+**Self-Managed Deployment** (dawniej On-Premise) to model, w którym [[Ataccama|Ataccama]] ONE działa na **Twoich serwerach** (lub Twoim koncie AWS/Azure).
+Ty dajesz sprzęt, prąd i administratorów. [[Ataccama|Ataccama]] daje pliki instalacyjne.
 
 # 🔑 Kluczowe punkty
 - **Kontrola:** Twoje dane nigdy nie opuszczają Twojej sieci. Kluczowe dla banków i rządu.
 - **Odpowiedzialność:** Ty musisz robić backupy, dbać o aktualizacje OS, firewall i monitoring.
-- **Złożoność:** Wymaga zespołu DevOps/Adminów znających Linuxa, Tomcata, Jave, bazy danych.
+- **Złożoność:** Wymaga zespołu [[DevOps|DevOps]]/Adminów znających Linuxa, Tomcata, Jave, [[Bazy danych|bazy danych]].
 
 # 📚 Szczegółowe wyjaśnienie
 Proces w 5 krokach:
@@ -33,12 +33,12 @@ Proces w 5 krokach:
 5.  **Handover:** Oddajesz środowisko użytkownikom.
 
 # 💡 Przykład zastosowania
-Ministerstwo Finansów wdraża katalog danych.
-Z uwagi na ustawę, dane podatników nie mogą być w chmurze publicznej (SaaS).
+Ministerstwo Finansów wdraża [[Katalog Danych|katalog danych]].
+Z uwagi na ustawę, dane podatników nie mogą być w chmurze publicznej ([[SaaS|SaaS]]).
 Wybierają Self-Managed Deployment w swoim rządowym centrum danych.
 
 ## 📌 Źródła
-- Ataccama ONE Installation Guide.
+- [[Ataccama|Ataccama]] ONE Installation Guide.
 
 ## 👽 Brudnopis
-- Przeciwieństwem jest **PaaS (Platform as a Service)**, gdzie Ataccama zarządza wszystkim w chmurze, a Ty tylko się logujesz.
+- Przeciwieństwem jest **[[PaaS|PaaS]] (Platform as a Service)**, gdzie [[Ataccama|Ataccama]] zarządza wszystkim w chmurze, a Ty tylko się logujesz.

@@ -16,17 +16,17 @@ aliases:
   - Bazy wektorowe w AI
 ---
 # 🎯 Definicja
-**Wektorowe Bazy Danych** (np. Pinecone, Weaviate, Milvus) działają jako **pamięć długoterminowa** dla modeli językowych. Pozwalają LLM-om "pamiętać" informacje spoza ich treningu (np. Twoje prywatne maile, dokumentację firmy) poprzez wyszukiwanie semantyczne.
+**Wektorowe [[Bazy danych|Bazy Danych]]** (np. Pinecone, Weaviate, Milvus) działają jako **pamięć długoterminowa** dla modeli językowych. Pozwalają LLM-om "pamiętać" informacje spoza ich treningu (np. Twoje prywatne maile, dokumentację firmy) poprzez wyszukiwanie semantyczne.
 
 # 🔑 Kluczowe punkty
 - **Semantic Search:** Szukanie po *znaczeniu*, nie po słowach kluczowych (np. szukając "smutny film" znajdzie "Dramat", mimo że słowa są inne).
 - **Embeddingi:** Teksty zamienione na ciągi liczb (wektory). Podobne teksty są blisko siebie w przestrzeni matematycznej.
-- **RAG:** Baza wektorowa karmi LLM wiedzą w czasie rzeczywistym.
+- **[[RAG|RAG]]:** [[Baza wektorowa|Baza wektorowa]] karmi LLM wiedzą w czasie rzeczywistym.
 
 # 📚 Szczegółowe wyjaśnienie
 Jak to działa?
 1.  Użytkownik wysyła pytanie.
-2.  System zamienia pytanie na wektor (Embedding).
+2.  System zamienia pytanie na wektor ([[Embedding|Embedding]]).
 3.  Baza danych szuka wektorów "najbliższych" temu pytaniu (kosinusowe podobieństwo).
 4.  Znalezione fragmenty tekstów są doklejane do promptu LLM.
 5.  LLM odpowiada, korzystając z tej wiedzy.
@@ -39,4 +39,4 @@ Zamiast trenować model na nowo (co kosztuje miliony), wrzucasz instrukcje PDF d
 - "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks".
 
 ## 👽 Brudnopis
-- Bazy wektorowe rozwiązały problem "nieaktualnej wiedzy" w modelach (GPT-4 wiedział tylko rzeczy do 2023 roku; z bazą wektorową wie to, co wrzuciłeś przed chwilą).
+- Bazy wektorowe rozwiązały problem "nieaktualnej wiedzy" w modelach ([[GPT-4|GPT-4]] wiedział tylko rzeczy do 2023 roku; z bazą wektorową wie to, co wrzuciłeś przed chwilą).

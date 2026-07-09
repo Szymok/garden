@@ -29,7 +29,7 @@ aliases:
 - Pomaga analizować wpływ zmian (impact analysis) i określić, co zostanie dotknięte zmianą upstream.
 - Niezbędne w audycie, zgodności regulacyjnej (np. RODO, SOX) i zarządzaniu jakością danych.
 - Ułatwia rozwiązywanie błędów i problemów wykrytych w metrykach lub raportach końcowych.
-- Może łączyć warstwy techniczne (SQL, pipelines) z warstwą semantyczną (produkty danych, miary BI).
+- Może łączyć warstwy techniczne ([[SQL|SQL]], pipelines) z warstwą semantyczną (produkty danych, miary BI).
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -42,34 +42,34 @@ aliases:
 
 ## Typy lineage
 
-- **Technical lineage** – konkretne zależności między tabelami, kolumnami, jobami w repozytorium kodu (SQL, dbt DAG, Airflow).
+- **Technical lineage** – konkretne zależności między tabelami, kolumnami, jobami w repozytorium kodu ([[SQL|SQL]], [[dbt|dbt]] DAG, Airflow).
 - **Business lineage** – zestawienie jak dane wpływają na wskaźniki, procesy biznesowe (np. “Miesięczna sprzedaż” używa danych ze źródła X, z atrybutów Y).
-- **Operational lineage** – informacje logujące kto, kiedy i jak modyfikował dane. Często używane w Data Governance.
+- **Operational lineage** – informacje logujące kto, kiedy i jak modyfikował dane. Często używane w [[Data Governance|Data Governance]].
 
 ## Jak generowane jest Data Lineage?
 
-- Automatycznie: poprzez narzędzia ETL/ELT, dbt (DAG), systemy katalogowania (np. DataHub, Atlan, Collibra).
+- Automatycznie: poprzez narzędzia ETL/ELT, [[dbt|dbt]] (DAG), systemy katalogowania (np. DataHub, Atlan, Collibra).
 - Ręcznie: dokumentacja tworzona i uzupełniana przez inżynierów danych.
 - Często: mix manualnego opisu i automatycznego zbierania metadanych (śledzenie DAG, query parsing).
 
 ## Rola w ekosystemie danych
 
 - Wspiera strukturę odpowiedzialności (Data Ownership).
-- Ułatwia rozwiązywanie incydentów jakości danych (data observability).
-- Dokumentuje zależności w projektach dbt, Airflow czy Spark.
-- Ułatwia audyty i analizę zgodności (np. skąd pochodzi dana metryka KPI w raporcie zarządu).
+- Ułatwia rozwiązywanie incydentów jakości danych ([[Data Observability|data observability]]).
+- Dokumentuje zależności w projektach [[dbt|dbt]], Airflow czy Spark.
+- Ułatwia audyty i analizę zgodności (np. skąd pochodzi dana metryka [[KPI|KPI]] w raporcie zarządu).
 
 # 💡 Przykład zastosowania
 
 Zespół BI odkrywa, że wartości kolumny „przychód_miesięczny” są podejrzanie zaniżone. Dzięki systemowi Data Lineage analizują ścieżkę powstawania danej metryki:
 
 - Dane źródłowe pochodzą z systemu ERP →
-- Przechodzą przez job integracyjny Apache Airbyte →
-- Zapisują się do stagingowej tabeli w Snowflake →
-- Transformowane za pomocą pipeline dbt (model core__revenue) →
+- Przechodzą przez job integracyjny Apache [[Airbyte|Airbyte]] →
+- Zapisują się do stagingowej tabeli w [[Snowflake|Snowflake]] →
+- Transformowane za pomocą pipeline [[dbt|dbt]] (model core__revenue) →
 - Wykorzystywane w metryce w Looker.
 
-Błąd został zidentyfikowany w joinie w modelu dbt – szybka naprawa zapobiegła propagacji błędnych danych do raportów zarządczych.
+Błąd został zidentyfikowany w joinie w modelu [[dbt|dbt]] – szybka naprawa zapobiegła propagacji błędnych danych do raportów zarządczych.
 
 ## 📌 Źródła
 
@@ -80,8 +80,8 @@ Błąd został zidentyfikowany w joinie w modelu dbt – szybka naprawa zapobieg
 ## 👽 Brudnopis
 
 - Data Lineage = skąd pochodzi dane + co się z nimi działo + gdzie są wykorzystane
-- Visual DAG – jak w dbt → model A korzysta z tabeli B tworzonej z C → wartości z A wpływają na dashboard D
+- Visual DAG – jak w [[dbt|dbt]] → model A korzysta z tabeli B tworzonej z C → wartości z A wpływają na dashboard D
 - Pożyteczne m.in. w: debugowaniu danych, compliance, katalogowaniu, „auditability”
-- Automatyzowane: dbt, Airflow, DataHub, Marquez, OpenMetadata
-- Działa w tandem z Data Contracts i katalogiem danych (Data Catalog)
-- Przykład: wartość KPI w Power BI, jak została policzona i które dane weszły w skład wskaźnika
+- Automatyzowane: [[dbt|dbt]], Airflow, DataHub, Marquez, OpenMetadata
+- Działa w tandem z Data Contracts i katalogiem danych ([[Data Catalog|Data Catalog]])
+- Przykład: wartość [[KPI|KPI]] w Power BI, jak została policzona i które dane weszły w skład wskaźnika

@@ -16,7 +16,7 @@ aliases:
   - Generatywne Sieci Przeciwstawne
 ---
 # 🎯 Definicja
-**Generative Adversarial Network (GAN)** to klasa modeli generatywnych, w których dwie sieci neuronowe – **Generator** i **Dyskryminator** – są trenowane razem w procesie rywalizacji (gry o sumie zerowej). Generator uczy się tworzyć dane (np. obrazy) nieodróżnialne od prawdziwych, a Dyskryminator uczy się wykrywać fałszerstwa.
+**Generative Adversarial Network (GAN)** to klasa modeli generatywnych, w których dwie [[Sieci neuronowe|sieci neuronowe]] – **Generator** i **Dyskryminator** – są trenowane razem w procesie rywalizacji (gry o sumie zerowej). Generator uczy się tworzyć dane (np. obrazy) nieodróżnialne od prawdziwych, a Dyskryminator uczy się wykrywać fałszerstwa.
 
 # 🔑 Kluczowe punkty
 - **Twórca:** Ian Goodfellow (2014).

@@ -16,7 +16,7 @@ aliases:
   - ONE API
 ---
 # 🎯 Definicja
-**GraphQL w Ataccama** to główny interfejs programistyczny (API) platformy Ataccama ONE. Służy do automatyzacji zadań, integracji z innymi systemami (np. Power BI, Jira) oraz budowania niestandardowych aplikacji. W przeciwieństwie do REST, pozwala pobrać dokładnie te dane, których potrzebujesz (np. tylko nazwy tabel, bez ich kolumn).
+**GraphQL w [[Ataccama|Ataccama]]** to główny interfejs programistyczny (API) platformy [[Ataccama|Ataccama]] ONE. Służy do automatyzacji zadań, integracji z innymi systemami (np. Power BI, Jira) oraz budowania niestandardowych aplikacji. W przeciwieństwie do REST, pozwala pobrać dokładnie te dane, których potrzebujesz (np. tylko nazwy tabel, bez ich kolumn).
 
 # 🔑 Kluczowe punkty
 - **Single Endpoint:** Wszystkie zapytania lecą na jeden adres (zazwyczaj `/graphql`).
@@ -41,8 +41,8 @@ Skrypt Python:
 4. Formatuje wynik i wysyła maila.
 
 ## 📌 Źródła
-- Ataccama Developer Guide.
+- [[Ataccama|Ataccama]] Developer Guide.
 
 ## 👽 Brudnopis
-- Ataccama udostępnia też stare API SOAP/REST dla niektórych funkcji Legacy, ale GraphQL jest standardem dla "ONE".
-- GenAI w Ataccama często pod spodem generuje właśnie zapytania GraphQL.
+- [[Ataccama|Ataccama]] udostępnia też stare API SOAP/REST dla niektórych funkcji Legacy, ale GraphQL jest standardem dla "ONE".
+- GenAI w [[Ataccama|Ataccama]] często pod spodem generuje właśnie zapytania GraphQL.

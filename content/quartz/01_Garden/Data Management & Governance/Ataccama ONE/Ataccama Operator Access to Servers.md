@@ -33,7 +33,7 @@ Dobrym standardem jest utworzenie użytkownika technicznego `ansible_user`, doda
 
 
 ## 👽 Brudnopis
-- The **operator** responsible for installing or maintaining the Ataccama ONE Platform must be able to **access all target servers as a superuser (i.e., root) from the Ansible controller using SSH**.
+- The **operator** responsible for installing or maintaining the [[Ataccama|Ataccama]] ONE Platform must be able to **access all target servers as a superuser (i.e., root) from the Ansible controller using SSH**.
 - **SSH access is not required for communication _between_ target servers**.
 - It is **recommended to keep SSH access enabled after installation** for future upgrades, optimisation, and debugging.
 - **Authentication using a public key is recommended** over password authentication due to its higher security.

@@ -17,7 +17,7 @@ aliases:
   - Zeppelin
 ---
 # 🎯 Definicja
-**Notebook (Notatnik)** to interaktywny dokument, który łączy żywy kod (Python, SQL, R), jego wyniki (wykresy, tabele) i tekst narracyjny (Markdown). To standard pracy Data Scientista.
+**Notebook (Notatnik)** to interaktywny dokument, który łączy żywy kod (Python, [[SQL|SQL]], R), jego wyniki (wykresy, tabele) i tekst narracyjny (Markdown). To standard pracy Data Scientista.
 
 # 🔑 Kluczowe punkty
 - **REPL na sterydach:** Piszesz kawałek kodu, klikasz "Uruchom", widzisz wynik od razu. Nie musisz kompilować całego programu.

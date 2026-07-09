@@ -16,9 +16,9 @@ aliases:
   - ECS vs EKS
 ---
 # 🎯 Definicja
-AWS oferuje trzy główne sposoby uruchamiania aplikacji w kontenerach (Docker):
+AWS oferuje trzy główne sposoby uruchamiania aplikacji w kontenerach ([[Docker|Docker]]):
 1.  **ECS (Elastic Container Service):** Prosty, natywny orkiestrator AWS.
-2.  **EKS (Elastic Kubernetes Service):** Zarządzany Kubernetes (dla tych, którzy potrzebują K8s).
+2.  **EKS (Elastic [[Kubernetes|Kubernetes]] Service):** Zarządzany [[Kubernetes|Kubernetes]] (dla tych, którzy potrzebują K8s).
 3.  **Fargate:** Model "Serverless" dla kontenerów (nie zarządzasz serwerami, płacisz za CPU/RAM dla kontenera).
 
 # 🔑 Kluczowe punkty

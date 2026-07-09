@@ -20,14 +20,14 @@ aliases:
 
 # 🔑 Kluczowe punkty
 - **Boilerplate:** AI świetnie usuwa nuda pracę (pisanie setterów, getterów, testów jednostkowych).
-- **Tłumaczenie:** Zamiana kodu Python na Java lub SQL na dbt.
+- **Tłumaczenie:** Zamiana kodu Python na Java lub [[SQL|SQL]] na [[dbt|dbt]].
 - **Pair Programmer:** AI działa jak partner, który podpowiada składnię i rozwiązania, ale Ty (człowiek) musisz to zweryfikować (Code Review).
 
 # 📚 Szczegółowe wyjaśnienie
 Modele LLM (takie jak Codex, StarCoder) zostały wytrenowane na miliardach linii kodu Open Source (GitHub). Dzięki temu znają wzorce projektowe, biblioteki i typowe błędy.
 Ryzyka:
-- **Halucynacje:** Kod może wyglądać poprawnie, ale używać nieistniejącej biblioteki.
-- **Bezpieczeństwo:** AI może zasugerować niebezpieczny kod (np. SQL Injection), jeśli nie zostanie poproszone o wersję bezpieczną.
+- **[[Halucynacje|Halucynacje]]:** Kod może wyglądać poprawnie, ale używać nieistniejącej biblioteki.
+- **Bezpieczeństwo:** AI może zasugerować niebezpieczny kod (np. [[SQL|SQL]] Injection), jeśli nie zostanie poproszone o wersję bezpieczną.
 
 # 💡 Przykład zastosowania
 Deweloper pisze komentarz:

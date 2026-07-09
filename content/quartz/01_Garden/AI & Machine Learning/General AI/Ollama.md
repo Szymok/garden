@@ -58,7 +58,7 @@ curl http://localhost:11434/api/generate \
 
 ## Integracja z [[Retrieval Augmented Generation (RAG)|RAG]]
 
-Ollama + [[LlamaIndex]] lub [[Langchain]] = lokalne RAG pipeline bez zewnętrznych zależności:
+Ollama + [[LlamaIndex]] lub [[Langchain]] = lokalne [[RAG|RAG]] pipeline bez zewnętrznych zależności:
 
 ```python
 from langchain_ollama import ChatOllama
@@ -78,7 +78,7 @@ SYSTEM "Jesteś ekspertem od Ataccama ONE. Odpowiadaj po polsku."
 
 # 💡 Przykład zastosowania
 
-**Lokalny asystent Data Governance**: Ollama z modelem Llama 3.1 8B + [[Retrieval Augmented Generation (RAG)|RAG]] na dokumentacji Ataccamy → chatbot bez wysyłania poufnych danych firmowych do chmury. Steward może pytać po polsku o konfigurację reguł DQ bez dostępu do internetu.
+**Lokalny asystent [[Data Governance|Data Governance]]**: Ollama z modelem Llama 3.1 8B + [[Retrieval Augmented Generation (RAG)|RAG]] na dokumentacji Ataccamy → chatbot bez wysyłania poufnych danych firmowych do chmury. Steward może pytać po polsku o konfigurację reguł DQ bez dostępu do internetu.
 
 # 📌 Źródła
 

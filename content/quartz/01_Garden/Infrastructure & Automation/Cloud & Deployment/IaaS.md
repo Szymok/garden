@@ -20,7 +20,7 @@ aliases:
 
 # 🔑 Kluczowe punkty
 - **Odpowiedzialność:** Dostawca dba o fizyczne kable i prąd. Ty dbasz o patchowanie Windowsa/Linuxa.
-- **Elastyczność:** Największa ze wszystkich modeli (PaaS, SaaS). Możesz zainstalować cokolwiek chcesz.
+- **Elastyczność:** Największa ze wszystkich modeli ([[PaaS|PaaS]], [[SaaS|SaaS]]). Możesz zainstalować cokolwiek chcesz.
 - **Koszt:** Płacisz za zużyte zasoby (CPU/RAM na godzinę).
 
 # 📚 Szczegółowe wyjaśnienie
@@ -30,7 +30,7 @@ To podstawa dla "Lift and Shift" – przenoszenia starych aplikacji do chmury be
 
 # 💡 Przykład zastosowania
 Firma chce przenieść stary system księgowy, który działa tylko na Windows Server 2008.
-Nie mogą użyć SaaS ani PaaS.
+Nie mogą użyć [[SaaS|SaaS]] ani [[PaaS|PaaS]].
 Kupują instancję EC2 (IaaS) w AWS, instalują tam Windowsa i przenoszą aplikację 1:1.
 
 ## 📌 Źródła

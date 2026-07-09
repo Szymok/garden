@@ -83,12 +83,12 @@ squares = map square [1, 2, 3, 4]
 
 # 💡 Przykład zastosowania
 
-W systemie przetwarzania danych zbudowanym na **[[dbt]] + [[Apache Airflow|Airflow]]**, zespoły wykorzystują czyste funkcje SQL bez efektów ubocznych, które transformują dane na podstawie zadeklarowanych modeli. Każdy model (`select`) opisuje jedynie _co_ powinno zostać uzyskane, a nie _w jaki sposób_ — jest to podejście zgodne z filozofią programowania funkcyjnego.
+W systemie przetwarzania danych zbudowanym na **[[dbt]] + [[Apache Airflow|Airflow]]**, zespoły wykorzystują czyste funkcje [[SQL|SQL]] bez efektów ubocznych, które transformują dane na podstawie zadeklarowanych modeli. Każdy model (`select`) opisuje jedynie _co_ powinno zostać uzyskane, a nie _w jaki sposób_ — jest to podejście zgodne z filozofią programowania funkcyjnego.
 
 ## 📌 Źródła
 
 - [Functional Programming in Python – RealPython](https://realpython.com/python-functional-programming/)
-- [Functional [[Inżynieria Danych|Data Engineering]] — [[Maxime Beauchemin]]](https://maximebeauchemin.medium.com/functional-data-engineering-a-modern-paradigm-for-batch-data-processing-2327ec32c42a)
+- [Functional ___BLOCK_PLACEHOLDER_15___ — ___BLOCK_PLACEHOLDER_16___](https://maximebeauchemin.medium.com/functional-data-engineering-a-modern-paradigm-for-batch-data-processing-2327ec32c42a)
 - [Intro to Functional Programming – freeCodeCamp](https://www.freecodecamp.org/news/introduction-to-functional-programming/)
 
 # 👽 Brudnopis

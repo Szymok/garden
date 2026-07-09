@@ -25,7 +25,7 @@ aliases:
 
 # 📚 Strategia Nauki
 Nie ucz się "gotowych promptów na pamięć". Ucz się **zasad działania modelu**.
-Zrozum, że model to "zgadywacz kolejnego słowa". Jeśli prompt jest niejasny, zgadywanie będzie losowe (halucynacje). Jeśli prompt jest precyzyjny (posiada **Constraint**, **Context**, **Format**), zgadywanie będzie deterministyczne.
+Zrozum, że model to "zgadywacz kolejnego słowa". Jeśli prompt jest niejasny, zgadywanie będzie losowe ([[Halucynacje|halucynacje]]). Jeśli prompt jest precyzyjny (posiada **Constraint**, **Context**, **Format**), zgadywanie będzie deterministyczne.
 
 # 💡 Przykład Ewolucji
 1.  **Junior:** "Napisz kod w Pythonie."

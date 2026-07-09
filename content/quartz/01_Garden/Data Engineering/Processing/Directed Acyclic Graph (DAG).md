@@ -16,7 +16,7 @@ aliases:
   - Graf Zależności
 ---
 # 🎯 Definicja
-**DAG (Skierowany Graf Acykliczny)** to mapa drogowa dla Twoich danych.
+**DAG ([[Skierowany Graf Acykliczny|Skierowany Graf Acykliczny]])** to mapa drogowa dla Twoich danych.
 Składa się z zadań (Kropki) i strzałek (Zależności).
 Zasada 1: Strzałki mają kierunek ("Zrób A, potem B").
 Zasada 2: Nie ma pętli (Nie da się zrobić A -> B -> A).
@@ -45,7 +45,7 @@ Airflow ETL:
 - Task `Load_DW`: Ładuje wynik do hurtowni.
 
 ## 📌 Źródła
-- Apache Airflow Concepts - DAGs.
+- [[Apache Airflow|Apache Airflow]] Concepts - DAGs.
 
 ## 👽 Brudnopis
 - Najczęstszy błąd początkujących: Próba zrobienia cyklu (Tabela A aktualizuje Tabelę B, która aktualizuje Tabelę A). To zawsze kończy się błędem lub nieskończoną pętlą. DAG wymusza porządek.

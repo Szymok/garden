@@ -16,7 +16,7 @@ aliases:
   - DQ Checks
 ---
 # 🎯 Definicja
-**DQ Rules** to małe kawałki logiki, które odpowiadają na pytanie: "Czy ta wartość jest poprawna?".
+**DQ [[Rules|Rules]]** to małe kawałki logiki, które odpowiadają na pytanie: "Czy ta wartość jest poprawna?".
 Przykład: "Czy Wiek > 0?", "Czy Email zawiera @?", "Czy PESEL ma 11 cyfr?".
 
 # 🔑 Kluczowe punkty
@@ -25,9 +25,9 @@ Przykład: "Czy Wiek > 0?", "Czy Email zawiera @?", "Czy PESEL ma 11 cyfr?".
 - **Statusy:** Reguła zazwyczaj zwraca: `TRUE` (Dobre), `FALSE` (Złe) lub kody błędów (`ERR_FORMAT`, `ERR_MISSING`).
 
 # 📚 Szczegółowe wyjaśnienie
-W Ataccama ONE reguły tworzysz na 3 sposoby:
+W [[Ataccama|Ataccama]] ONE reguły tworzysz na 3 sposoby:
 1.  **No-Code (Expression Builder):** Klikasz klocki ("Length > 5").
-2.  **Expression (Ataccama Expression Language):** Piszesz kod (podobny do Java/SQL). `length(value) > 5`.
+2.  **Expression ([[Ataccama|Ataccama]] Expression Language):** Piszesz kod (podobny do Java/[[SQL|SQL]]). `length(value) > 5`.
 3.  **Component:** Skomplikowane diagramy przepływu (dla bardzo złożonej logiki, np. walidacja adresu z geo-kodowaniem).
 
 # 💡 Przykład zastosowania
@@ -40,7 +40,7 @@ Logika:
 Wpinasz regułę w Monitoring. Od teraz wiesz dokładnie, jaki % numerów jest błędnych.
 
 ## 📌 Źródła
-- Ataccama ONE Rules Reference.
+- [[Ataccama|Ataccama]] ONE [[Rules|Rules]] Reference.
 
 ## 👽 Brudnopis
 - Nie myl Reguł (Logic) z Planami (Execution). Reguła to definicja. Plan to uruchomienie tej reguły na konkretnym pliku.

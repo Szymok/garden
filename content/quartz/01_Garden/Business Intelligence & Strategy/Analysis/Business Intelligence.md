@@ -27,8 +27,8 @@ Klasyczne BI to raporty PDF wysyłane mailem raz w miesiącu. Nowoczesne BI to i
 Architektura BI:
 1. Źródła danych (ERP, CRM).
 2. ETL/ELT (Integracja).
-3. Data Warehouse (Magazyn).
-4. Warstwa Semantyczna (Logika biznesowa).
+3. [[Data Warehouse|Data Warehouse]] (Magazyn).
+4. [[Warstwa Semantyczna|Warstwa Semantyczna]] (Logika biznesowa).
 5. Frontend (Power BI, Tableau, Looker).
 
 # 💡 Przykład zastosowania
@@ -44,4 +44,4 @@ Dzwoni do sklepu. (Decyzja podjęta na podstawie danych).
 
 ## 👽 Brudnopis
 - BI vs Data Science: BI patrzy w lusterko wsteczne (historia), DS patrzy przez przednią szybę (predykcja).
-- Semantic Layer (LookML, DAX) - klucz do spójności ("Czym właściwie jest Zysk Netto?").
+- [[Semantic Layer|Semantic Layer]] (LookML, DAX) - klucz do spójności ("Czym właściwie jest Zysk Netto?").

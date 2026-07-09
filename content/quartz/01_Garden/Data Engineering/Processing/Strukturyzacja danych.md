@@ -37,8 +37,8 @@ aliases:
 |Rodzaj danych|Opis|
 |---|---|
 |**Niestrukturalne**|Teksty, e-maile, obrazy, pliki PDF, dźwięk – brak ustalonej struktury danych|
-|**Półstrukturalne**|JSON, XML, YAML, logi – mają częściową strukturę, ale nieregularną|
-|**Strukturalne**|Tabele SQL, CSV z nagłówkami, dane relacyjne – jasno określone pola i typy|
+|**Półstrukturalne**|JSON, XML, [[YAML|YAML]], logi – mają częściową strukturę, ale nieregularną|
+|**Strukturalne**|Tabele [[SQL|SQL]], CSV z nagłówkami, dane relacyjne – jasno określone pola i typy|
 
 ## Przykładowe działania w strukturyzacji
 
@@ -65,7 +65,7 @@ Firma analizuje tysiące recenzji produktów z e-commerce w formie surowych teks
 - ocenę (np. 1–5),
 - datę publikacji.
 
-Dzięki użyciu narzędzi NLP i reguł ekstrakcji, system przekształca opinie w dane strukturalne zapisane w tabeli — gotowe do analizy sentymentu i raportowania.
+Dzięki użyciu narzędzi NLP i reguł ekstrakcji, system przekształca opinie w [[Dane Strukturalne|dane strukturalne]] zapisane w tabeli — gotowe do analizy sentymentu i raportowania.
 
 ## 📌 Źródła
 

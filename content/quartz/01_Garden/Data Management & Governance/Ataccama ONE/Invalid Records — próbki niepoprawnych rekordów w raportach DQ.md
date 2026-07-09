@@ -17,7 +17,7 @@ aliases:
   - Rekordy Invalid
 ---
 # 🎯 Definicja
-**Invalid Records** (Próbki Niepoprawnych Rekordów) to funkcja w Ataccama ONE, która pozwala podejrzeć **przykładowe wiersze**, które nie przeszły reguł jakości danych. Zamiast widzieć tylko statystykę ("5 błędów"), widzisz konkretne dane ("Janusz Kowalski, email: janusz at pl"), co pozwala zrozumieć przyczynę problemu.
+**Invalid Records** (Próbki Niepoprawnych Rekordów) to funkcja w [[Ataccama|Ataccama]] ONE, która pozwala podejrzeć **przykładowe wiersze**, które nie przeszły reguł jakości danych. Zamiast widzieć tylko statystykę ("5 błędów"), widzisz konkretne dane ("Janusz Kowalski, email: janusz at pl"), co pozwala zrozumieć przyczynę problemu.
 
 # 🔑 Kluczowe punkty
 - **Kontekst:** Widzisz cały wiersz, nie tylko błędną kolumnę.
@@ -39,7 +39,7 @@ Wniosek: Dane są poprawne, ale w różnych formatach. Reguła jest zbyt restryk
 Działanie: Steward poprawia regułę, zamiast czyścić dane.
 
 ## 📌 Źródła
-- Ataccama ONE Documentation - Monitoring Projects.
+- [[Ataccama|Ataccama]] ONE Documentation - Monitoring Projects.
 
 ## 👽 Brudnopis
 - Próbki to potężne narzędzie diagnostyczne ("Debugowanie danych").

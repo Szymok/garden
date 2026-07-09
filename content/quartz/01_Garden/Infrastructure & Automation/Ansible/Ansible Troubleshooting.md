@@ -16,7 +16,7 @@ aliases:
 ---
 # 🎯 Definicja
 **Troubleshooting** w Ansible to proces znajdowania, dlaczego Playbook nie działa.
-Najczęściej to błędy YAML (wcięcie), literówki w nazwach modułów lub brak uprawnień.
+Najczęściej to błędy [[YAML|YAML]] (wcięcie), literówki w nazwach modułów lub brak uprawnień.
 
 # 🔑 Kluczowe punkty
 - **Czytaj błędy:** Ansible zazwyczaj mówi wprost: "Syntax Error at line 10".
@@ -41,4 +41,4 @@ Naprawa: Dodaj `become: true` do zadania.
 - Ansible Documentation - Troubleshooting.
 
 ## 👽 Brudnopis
-- Błędy wcięć w YAML to 90% problemów początkujących. Używaj edytora z obsługą YAML (VS Code, Vim z pluginem).
+- Błędy wcięć w [[YAML|YAML]] to 90% problemów początkujących. Używaj edytora z obsługą [[YAML|YAML]] (VS Code, Vim z pluginem).

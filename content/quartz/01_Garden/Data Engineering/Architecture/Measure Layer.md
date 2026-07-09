@@ -20,7 +20,7 @@ aliases:
 Koniec z sytuacją, gdzie Marketing ma inny "Przychód" niż Finanse.
 
 # 🔑 Kluczowe punkty
-- **Single Source of Truth:** Definicja matematyczna metryki jest w kodzie (np. YAML w dbt), a nie w klikanym interfejsie narzędzia BI.
+- **Single Source of Truth:** Definicja matematyczna metryki jest w kodzie (np. [[YAML|YAML]] w [[dbt|dbt]]), a nie w klikanym interfejsie narzędzia BI.
 - **Headless BI:** BI staje się tylko wizualizacją. Logika obliczeń jest "głową" oddzieloną od "ciała".
 - **API:** Narzędzia pobierają metryki przez API.
 
@@ -31,7 +31,7 @@ Definicja: `Profit = Price - Tax`.
 Tableau pyta: "Daj mi Profit". PowerBI pyta: "Daj mi Profit". Dostają tę samą liczbę.
 
 # 💡 Przykład zastosowania
-Narzędzia: [[dbt]] Semantic Layer, Cube.dev, LookML.
+Narzędzia: [[dbt]] [[Semantic Layer|Semantic Layer]], Cube.dev, LookML.
 Analityk pisze plik `.yml`:
 ```yaml
 metric:
@@ -39,7 +39,7 @@ metric:
   calculation: sum(order_total)
   filter: status = 'paid'
 ```
-Teraz każdy w firmie używa metryki `revenue`. Jeśli trzeba zmienić definicję (np. odliczyć zwroty), analityk zmienia jedną linię w pliku YAML. Cała firma ma zaktualizowany raport.
+Teraz każdy w firmie używa metryki `revenue`. Jeśli trzeba zmienić definicję (np. odliczyć zwroty), analityk zmienia jedną linię w pliku [[YAML|YAML]]. Cała firma ma zaktualizowany raport.
 
 ## 📌 Źródła
 - The Rise of the Metrics Store (Benn Stancil).

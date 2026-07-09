@@ -36,7 +36,7 @@ Ale w tabeli Pracownicy też jest kolumna `status`. Automat też chce dać "Stat
 Steward wchodzi w `Pracownicy.status` i wyłącza tę regułę, ręcznie przypisując termin "Status Zatrudnienia".
 
 ## 📌 Źródła
-- Ataccama ONE Documentation.
+- [[Ataccama|Ataccama]] ONE Documentation.
 
 ## 👽 Brudnopis
 - To poziom "mikro-zarządzania" procesem discovery.

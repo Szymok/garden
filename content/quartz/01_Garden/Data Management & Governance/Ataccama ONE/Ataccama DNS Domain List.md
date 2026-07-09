@@ -15,7 +15,7 @@ aliases:
   - Ataccama DNS records
 ---
 # 🎯 Definicja
-Zestaw wymaganych rekordów DNS oraz certyfikatów TLS niezbędnych do poprawnej komunikacji między mikroserwisami platformy Ataccama ONE oraz zapewnienia dostępu dla użytkowników końcowych.
+Zestaw wymaganych rekordów DNS oraz certyfikatów TLS niezbędnych do poprawnej komunikacji między mikroserwisami platformy [[Ataccama|Ataccama]] ONE oraz zapewnienia dostępu dla użytkowników końcowych.
 
 # 🔑 Kluczowe punkty
 - **Standard nazewnictwa:** Wszystkie komponenty używają subdomen w ramach jednej domeny klienta (np. `one.mojafirma.com`, `keycloak.mojafirma.com`).
@@ -24,7 +24,7 @@ Zestaw wymaganych rekordów DNS oraz certyfikatów TLS niezbędnych do poprawnej
 - **Reverse Proxy:** Rekordy DNS powinny wskazywać na serwer Nginx (Reverse Proxy), a nie bezpośrednio na kontenery usług.
 
 # 📚 Szczegółowe wyjaśnienie
-Ataccama ONE jest systemem rozproszonym opartym na mikroserwisach. Aby usługi takie jak `MMM` (Metadata Management), `RDM` (Reference Data Management) czy `DQIT` (Data Quality Issue Tracker) mogły ze sobą "rozmawiać", muszą się wzajemnie widzieć w sieci.
+[[Ataccama|Ataccama]] ONE jest systemem rozproszonym opartym na mikroserwisach. Aby usługi takie jak `MMM` ([[Metadata|Metadata]] Management), `RDM` (Reference [[Data Management|Data Management]]) czy `DQIT` ([[Data Quality|Data Quality]] Issue Tracker) mogły ze sobą "rozmawiać", muszą się wzajemnie widzieć w sieci.
 
 Platforma wymusza użycie szyfrowania (TLS), dlatego konfiguracja DNS jest ściśle powiązana z certyfikatami. Jeśli certyfikat wygaśnie lub nazwa w DNS nie będzie pasować do nazwy w certyfikacie (CN/SAN), platforma przestanie działać.
 
@@ -48,7 +48,7 @@ minio    IN CNAME nginx-lb.data.firma.com.
 
 
 ## 👽 Brudnopis
-- **Ataccama ONE DNS names**:
+- **[[Ataccama|Ataccama]] ONE DNS names**:
     - `one.<customer_domain>`
     - `dpm.<customer_domain>`
     - `dpm-grpc.<customer_domain>`
@@ -61,7 +61,7 @@ minio    IN CNAME nginx-lb.data.firma.com.
 - **DQIT DNS names**:
     - `dqit.<customer_domain>`
     - `dqit-console.<customer_domain>`
-- **RDM DNS names**:
+- **[[RDM|RDM]] DNS names**:
     - `rdm.<customer_domain>`
     - `rdm-console.<customer_domain>`
 - **MDM DNS names**:
@@ -82,9 +82,9 @@ minio    IN CNAME nginx-lb.data.firma.com.
 - **Orchestration DNS names (optional)**:
     - `orch.<customer_domain>`
 
-- Since Ataccama ONE exclusively uses hostnames for mutual communication between its components, **all relevant DNS records must be configured in the customer's DNS**.
+- Since [[Ataccama|Ataccama]] ONE exclusively uses hostnames for mutual communication between its components, **all relevant DNS records must be configured in the customer's DNS**.
 - You can use **A or CNAME records**.
-- As Nginx serves as a reverse proxy for the Ataccama ONE application infrastructure, **DNS records should also include the IP address of the reverse proxy server (Nginx)**.
+- As Nginx serves as a reverse proxy for the [[Ataccama|Ataccama]] ONE application infrastructure, **DNS records should also include the IP address of the reverse proxy server (Nginx)**.
 - User access to the frontend is secured by TLS, and it is **mandatory to use valid TLS certificates** containing relevant hostnames.
 - The **customer must provide certificates in their full form** for all required external hostnames.
 - The supported configurations for TLS certificates are:

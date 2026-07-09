@@ -26,7 +26,7 @@ aliases:
 
 - **Transakcyjność:** Gwarantuje spójność i bezpieczeństwo operacji dzięki zasadom ACID (Atomowość, Spójność, Izolacja, Trwałość).
 - **Wysoka wydajność i niskie opóźnienia:** OLTP jest zoptymalizowane pod kątem obsługi bardzo dużej liczby krótkich operacji w trybie wielu użytkowników.
-- **Baza danych operacyjna:** Systemy OLTP są zwykle oparte o relacyjne bazy danych (np. PostgreSQL, Oracle, MS SQL, MySQL).
+- **Baza danych operacyjna:** Systemy OLTP są zwykle oparte o relacyjne [[Bazy danych|bazy danych]] (np. PostgreSQL, Oracle, MS [[SQL|SQL]], MySQL).
 - **Kompaktowe operacje:** Obsługiwane operacje to pojedyncze insert, update, delete, select wykonywane jednocześnie przez wielu użytkowników.
 - **Przeciwieństwo OLAP:** OLAP (Online Analytical Processing) skupia się na analizie danych historycznych i raportowaniu, OLTP – na obsłudze bieżących zdarzeń i transakcji.
 

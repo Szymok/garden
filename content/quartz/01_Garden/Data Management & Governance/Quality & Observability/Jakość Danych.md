@@ -41,7 +41,7 @@ aliases:
 2. **Błąd testu danych (data test failure)**
     
     - Automatyczne testy danych wykonywane podczas pipeline (np. z `dbt tests`, `Great Expectations`, `Soda`) wykrywają naruszenia zasad, np. brakujące wymagane wartości.
-3. **Alert z monitoringu danych (data observability)**
+3. **Alert z monitoringu danych ([[Data Observability|data observability]])**
     
     - Systemy monitorujące (np. Monte Carlo, Databand, Bigeye) śledzą zmiany w objętości danych, rozkładach statystycznych, liczbie nulli – i informują o anomalnych odchyleniach.
 
@@ -63,7 +63,7 @@ aliases:
 
 # 💡 Przykład zastosowania
 
-W systemie e-commerce kluczowy dashboard przestał wyświetlać dane o nowych zamówieniach. Monitor ingestujący dane z logów API wykrył nagły spadek liczby dziennych rekordów oraz wzrost liczby `null` w kolumnie `order_total`. Dzięki alertowi DevOps zauważył problem — pipeline danych nie został uruchomiony po zmianie schematu w źródle. Odpowiednia adnotacja i test schematów zapobiegły nawrotowi problemu.
+W systemie e-commerce kluczowy dashboard przestał wyświetlać dane o nowych zamówieniach. Monitor ingestujący dane z logów API wykrył nagły spadek liczby dziennych rekordów oraz wzrost liczby `null` w kolumnie `order_total`. Dzięki alertowi [[DevOps|DevOps]] zauważył problem — pipeline danych nie został uruchomiony po zmianie schematu w źródle. Odpowiednia adnotacja i test schematów zapobiegły nawrotowi problemu.
 
 ## 📌 Źródła
 
@@ -76,9 +76,9 @@ W systemie e-commerce kluczowy dashboard przestał wyświetlać dane o nowych za
 - Jakość danych ≠ jakość modelu – działa niezależnie
 - Częste źródła problemów: zmiana schematu upstream, błędy pipelines, błędny input użytkownika
 - Testy: not_null, unique, accepted_range
-- Observability = warstwa meta nad jakością (poziom dataops)
-- Z automatu: testy w dbt, monitoring liczności, schema drift detection
-- Efekty złej jakości: złe KPI, błędne rekomendacje, utrata klientów
+- Observability = warstwa meta nad jakością (poziom [[DataOps|dataops]])
+- Z automatu: testy w [[dbt|dbt]], monitoring liczności, schema drift detection
+- Efekty złej jakości: złe [[KPI|KPI]], błędne rekomendacje, utrata klientów
 - Rule of thumb: każdy pipeline → test + watch
 - Rozróżnienie: aktywne (testy, alerty) vs pasywne (ręczne wykrycie, analiza po błędzie)
 

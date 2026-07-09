@@ -14,7 +14,7 @@ aliases:
   - Data Transformation Lessons
 ---
 # 🎯 Purpose
-This note is intended to capture key learnings and "war stories" from real-world data transformation projects.
+This note is intended to capture key learnings and "war stories" from real-world [[Data Transformation|data transformation]] projects.
 
 # 🔑 Key Themes (To Expand)
 - **Culture eats strategy for breakfast:** Why technology is easy but people are hard.

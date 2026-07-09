@@ -25,10 +25,10 @@ Sekwencja etapów przetwarzania danych w systemie MDM, przekształcająca surowe
 - **Source Mapping:** Mapowanie systemów źródłowych na Warstwę Instancji.
 
 # 📚 Szczegółowe wyjaśnienie
-Proces MDM w Ataccama ONE jest zorganizowany w potok (pipeline):
+Proces MDM w [[Ataccama|Ataccama]] ONE jest zorganizowany w potok (pipeline):
 1. **Source Systems:** Pobranie danych.
 2. **Instance Model & Mapping:** Zapisanie w modelu kanonicznym.
-3. **Cleansing Layer:** "Sprzątanie" danych. Ataccama generuje domyślne plany czyszczenia, które można dostosować.
+3. **Cleansing Layer:** "Sprzątanie" danych. [[Ataccama|Ataccama]] generuje domyślne plany czyszczenia, które można dostosować.
 4. **Matching Layer:** Najtrudniejszy etap. Decyzja, czy "Jan Kowalski" i "J. Kowalski" to ta sama osoba. Zbyt luźne reguły = fałszywe połączenia (False Positives). Zbyt restrykcyjne = nie wykrycie duplikatów.
 5. **Master Layer:** Przechowywanie wyników. Możliwość definicji wielu "Golden Records" (np. Złoty Klient Marketingowy vs Złoty Klient Prawny).
 
@@ -45,7 +45,7 @@ Reguła w **Matching Layer**:
 ## 👽 Brudnopis
 Match Merge Validity Check Remove invalid characters & Replace records with correct ones taken from an existing list of alternatives Decide whether to link (group) the current record with another Merge multiple records into a Single one Check master values
 
-Ataccama Database Layers & Processes
+[[Ataccama|Ataccama]] Database Layers & Processes
 ![[Pasted image 20250905134538.png]]
 
 ![[Pasted image 20250905134616.png]]
@@ -63,7 +63,7 @@ Cleansing Layer
 Cleansing is a common part of any project. The incoming data usually needs to be cleansed before it can be processed further (matched, merged etc.). Default cleansing plans are created automatically for every entity. They serve as a decent basis for adding custom data transformations required by your project.
 
 Matching Layer
-Matching is essential for any MDM ject Creating and maintaining ffective matching rules can be tricky, s it needs to be precise enough to liminate incorrect matches, but also •mple enough to not slow down the rmance of the whole MDM lution.
+Matching is essential for any MDM ject Creating and maintaining ffective matching [[Rules|rules]] can be tricky, s it needs to be precise enough to liminate incorrect matches, but also •mple enough to not slow down the rmance of the whole MDM lution.
 
 Master Model
 Once all data is correctly cleansed, matched etc., the master layer comes into play. The master layer serves as a destination for the master records - the „best" records picked from all the candidate records based on customizable criteria. It is possible to define multiple masters.

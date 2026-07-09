@@ -16,13 +16,13 @@ aliases:
   - Komponenty MDM
 ---
 # 🎯 Definicja
-Architektura rozwiązania **Master Data Management (MDM)** w Atacamie opiera się na kilku współpracujących komponentach: Serwerze przetwarzającym, Bazie Danych, Aplikacji Webowej i Systemie Tożsamości. Jest to system modułowy, skalowalny i zorientowany na usługi.
+Architektura rozwiązania **Master [[Data Management|Data Management]] (MDM)** w Atacamie opiera się na kilku współpracujących komponentach: Serwerze przetwarzającym, Bazie Danych, Aplikacji Webowej i Systemie Tożsamości. Jest to system modułowy, skalowalny i zorientowany na usługi.
 
 # 🔑 Kluczowe punkty
 - **MDM Server:** "Mózg". Silnik, który robi matching, merging i walidację danych.
 - **MDM Web App:** "Twarz". Interfejs dla Data Stewardów do ręcznego poprawiania rekordów (Golden Record).
-- **Database:** "Pamięć". Przechowuje dane mistrzowskie, historię zmian i konfigurację (zazwyczaj PostgreSQL, Oracle lub MS SQL).
-- **Keycloak:** "Ochroniarz". Zarządza logowaniem (SSO).
+- **Database:** "Pamięć". Przechowuje dane mistrzowskie, historię zmian i konfigurację (zazwyczaj PostgreSQL, Oracle lub MS [[SQL|SQL]]).
+- **[[Keycloak|Keycloak]]:** "Ochroniarz". Zarządza logowaniem (SSO).
 
 # 📚 Szczegółowe wyjaśnienie
 Przepływ danych:
@@ -40,7 +40,7 @@ Klient zmienia adres w aplikacji mobilnej.
 4. Wysyła notyfikację do systemu Marketingowego, że adres się zmienił.
 
 ## 📌 Źródła
-- Ataccama MDM Developer Guide - Architecture Overview.
+- [[[[Ataccama|Ataccama]] MDM|[[Ataccama|Ataccama]] MDM]] Developer Guide - Architecture Overview.
 
 ## 👽 Brudnopis
-- W chmurze (PaaS) te komponenty są ukryte w kontenerach Kubernetes, ale logiczna architektura pozostaje ta sama.
+- W chmurze ([[PaaS|PaaS]]) te komponenty są ukryte w kontenerach [[Kubernetes|Kubernetes]], ale logiczna architektura pozostaje ta sama.

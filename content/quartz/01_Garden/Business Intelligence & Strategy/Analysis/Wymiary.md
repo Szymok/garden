@@ -65,7 +65,7 @@ Hierarchie pozwalają na operacje typu [[Rollup|roll-up]] i drill-down. Przykła
 
 Umożliwia to predefiniowane agregacje (np. SUMA sprzedaży per miesiąc), eksplorację danych i układanie widoków OLAP.
 
-## Wymiary konformalne (Conformed Dimensions)
+## Wymiary konformalne (Conformed [[Dimensions|Dimensions]])
 
 W modelowaniu Kimballa wymiary takie jak „Czas” lub „Klient” są współdzielone przez różne tabele faktów (np. sprzedaż, płatności, zwroty). Są one kompatybilne z każdą tabelą faktów, która ich potrzebuje. To umożliwia spójne raportowanie i agregacje pomiędzy dziedzinami.
 
@@ -79,9 +79,9 @@ Analityk buduje raport przedstawiający tygodniową sprzedaż według kategorii 
 
 ## 📌 Źródła
 
-- [Kimball Group – [[Modelowanie Wymiarowe|Dimensional Modeling]] Techniques](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/dimensional-modeling-techniques/)
+- [Kimball Group – ___BLOCK_PLACEHOLDER_6___ Techniques](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/dimensional-modeling-techniques/)
 - [Wikipedia: Dimension (data warehouse)](https://en.wikipedia.org/wiki/Dimension_\(data_warehouse\))
-- [[[dbt]] Docs – dimensions in metrics](https://docs.getdbt.com/docs/semantic-layer/metrics/)
+- [[[dbt]] Docs – [[Dimensions|dimensions]] in metrics](https://docs.getdbt.com/docs/semantic-layer/metrics/)
 
 # 👽 Brudnopis
 

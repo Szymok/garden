@@ -25,7 +25,7 @@ aliases:
 
 # 🔑 Kluczowe punkty
 
-- **Deklaratywność**: opisujesz pożądany stan, nie kroki do jego osiągnięcia
+- **[[Deklaratywność|Deklaratywność]]**: opisujesz pożądany stan, nie kroki do jego osiągnięcia
 - **Provider**: wtyczka łącząca Terraform z API chmury (aws, azurerm, google)
 - **State**: plik `terraform.tfstate` — mapa rzeczywistej infrastruktury
 - **Plan → Apply**: `terraform plan` pokazuje zmiany, `terraform apply` je wykonuje

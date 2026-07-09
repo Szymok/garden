@@ -16,15 +16,15 @@ aliases:
   - Wymiary Jakości Danych
 ---
 # 🎯 Definicja
-**Data Quality (DQ)** to miara tego, w jakim stopniu dane nadają się do zamierzonego celu (Fitness for Purpose). Dane wysokiej jakości to takie, które wiernie odzwierciedlają rzeczywistość biznesową i pozwalają na podejmowanie trafnych decyzji.
+**Data Quality (DQ)** to [[Miara|miara]] tego, w jakim stopniu dane nadają się do zamierzonego celu (Fitness for Purpose). Dane wysokiej jakości to takie, które wiernie odzwierciedlają rzeczywistość biznesową i pozwalają na podejmowanie trafnych decyzji.
 
 # 🔑 Kluczowe punkty
 - **Kontekst:** Jakość jest względna. Dane "historyczne" mogą być nieaktualne, ale poprawne dla historyka. Dla handlowca muszą być "świeże".
-- **Wymiary DQ:** Standardowe kryteria oceny jakości (opisane poniżej).
+- **[[Wymiary|Wymiary]] DQ:** Standardowe kryteria oceny jakości (opisane poniżej).
 - **Koszt złej jakości:** Reguła 1-10-100. Zapobieganie kosztuje 1$, naprawa przy wejściu 10$, a naprawa błędu u klienta 100$.
 
 # 📚 Szczegółowe wyjaśnienie
-Standardowe wymiary jakości danych (wg DAMA UK):
+Standardowe [[Wymiary|wymiary]] jakości danych (wg DAMA UK):
 1.  **Completeness (Kompletność):** Czy mamy wszystkie wymagane dane? (Brak NULL-i w polach obowiązkowych).
 2.  **Uniqueness (Unikalność):** Czy ten sam klient nie występuje 5 razy? (Brak duplikatów).
 3.  **Timeliness (Aktualność):** Czy dane są dostępne na czas i czy reprezentują stan bieżący?
@@ -46,4 +46,4 @@ Efekt: Strata pieniędzy, irytacja klientów, niska konwersja. DQ zajmuje się n
 
 ## 👽 Brudnopis
 - DQ Firewall: Blokowanie złych danych już na wejściu (np. walidacja formularza na stronie www).
-- Data Profiling to diagnoza, Data Quality to leczenie (reguły naprawcze/monitorujące).
+- [[Data [[Profiling|Profiling]]|Data [[Profiling|Profiling]]]] to diagnoza, Data Quality to leczenie (reguły naprawcze/monitorujące).

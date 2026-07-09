@@ -16,7 +16,7 @@ aliases:
   - Siatka Danych
 ---
 # 🎯 Definicja
-**Data Mesh** to podejście organizacyjno-techniczne, które traktuje dane jako **Produkt**.
+**[[Data Mesh|Data Mesh]]** to podejście organizacyjno-techniczne, które traktuje dane jako **Produkt**.
 Zamiast jednego, wielkiego, centralnego zespołu "Od Danych" (wąskie gardło), masz wiele zespołów domenowych (Sprzedaż, Logistyka, HR), które same dbają o swoje dane i wystawiają je innym.
 
 # 🔑 Kluczowe punkty
@@ -25,19 +25,19 @@ Zamiast jednego, wielkiego, centralnego zespołu "Od Danych" (wąskie gardło), 
 - **Federated Governance:** Wspólne zasady (Standardy), ale lokalne wykonanie.
 
 # 📚 Szczegółowe wyjaśnienie
-Różnica vs Data Lake:
-- **Data Lake:** Wrzuć wszystko do jednego wora, centralny zespół spróbuje to zrozumieć.
-- **Data Mesh:** Każdy trzyma swoje, ale udostępnia przez standardowe interfejsy (Data Products).
+Różnica vs [[Data Lake|Data Lake]]:
+- **[[Data Lake|Data Lake]]:** Wrzuć wszystko do jednego wora, centralny zespół spróbuje to zrozumieć.
+- **[[Data Mesh|Data Mesh]]:** Każdy trzyma swoje, ale udostępnia przez standardowe interfejsy (Data Products).
 To jak mikroserwisy, ale dla analityki.
 
 # 💡 Przykład zastosowania
 Netflix.
 Zespół od "Rekomendacji" produkuje dane o tym, co kto oglądał.
 Zespół od "Produkcji Filmowej" bierze te dane (przez API/Tabelę), żeby decydować, jakich aktorów zatrudnić.
-Nie proszą centralnego zespołu "zróbcie nam raport". Sami biorą Produkt Danych i robią analizę.
+Nie proszą centralnego zespołu "zróbcie nam raport". Sami biorą [[Produkt Danych|Produkt Danych]] i robią analizę.
 
 ## 📌 Źródła
-- Zhamak Dehghani - "Data Mesh Principles".
+- Zhamak Dehghani - "[[Data Mesh|Data Mesh]] Principles".
 
 ## 👽 Brudnopis
-- Data Mesh nie jest dla każdego. W małej firmie to overengineering. Wymaga kultury DevOps i dojrzałości.
+- [[Data Mesh|Data Mesh]] nie jest dla każdego. W małej firmie to overengineering. Wymaga kultury [[DevOps|DevOps]] i dojrzałości.

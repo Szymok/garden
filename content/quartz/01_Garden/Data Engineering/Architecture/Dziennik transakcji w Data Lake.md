@@ -39,7 +39,7 @@ Dwie osoby próbują zmodyfikować ten sam rekord.
 Bez logu, B mógłby nadpisać zmiany A bez niczyjej wiedzy.
 
 ## 📌 Źródła
-- "Delta Lake: The Definitive Guide".
+- "[[Delta Lake|Delta Lake]]: The Definitive Guide".
 
 ## 👽 Brudnopis
 - Mechanizm ten przenosi funkcje znane z baz Oracle/MSSQL na pliki w chmurze.

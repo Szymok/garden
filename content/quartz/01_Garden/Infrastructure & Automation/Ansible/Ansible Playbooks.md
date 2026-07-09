@@ -26,7 +26,7 @@ Instrukcja wykonywania głównych procedur instalacyjnych i utrzymaniowych platf
 - **Start-at-task:** Opcja wznawiania przerwanej instalacji od konkretnego kroku (z zachowaniem ostrożności).
 
 # 📚 Szczegółowe wyjaśnienie
-Playbook to skrypt opisujący stan docelowy infrastruktury. W Ataccama ONE mamy kilka playbooków zależnie od typu instalacji (Standalone MDM, DQ&C, Hybrid), ale najczęstszy to `site.yml`.
+Playbook to skrypt opisujący stan docelowy infrastruktury. W [[Ataccama|Ataccama]] ONE mamy kilka playbooków zależnie od typu instalacji (Standalone MDM, DQ&C, Hybrid), ale najczęstszy to `site.yml`.
 
 **Przydatne flagi:**
 - `-i`: ścieżka do inwentarza.

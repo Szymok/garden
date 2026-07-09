@@ -26,7 +26,7 @@ aliases:
 
 # 🔑 Kluczowe punkty
 
-- [[Data Mesh|Siatka danych]] zmienia paradygmat: od **centralizacji danych (Data Lake / DWH)** do **federacji domen danych (Data as a Product)**.
+- [[Data Mesh|Siatka danych]] zmienia paradygmat: od **centralizacji danych ([[Data Lake|Data Lake]] / DWH)** do **federacji domen danych (Data as a Product)**.
 - Bazuje na czterech filarach:
     1. **Domenowość (domain ownership)**
     2. **Dane jako produkt (data as a product)**
@@ -40,7 +40,7 @@ aliases:
 
 ## Centralizacja vs [[Data Mesh]]
 
-|Cecha|Data Lake / DWH|[[Data Mesh\|Siatka danych]] ([[Data Mesh]])|
+|Cecha|[[Data Lake|Data Lake]] / DWH|[[Data Mesh\|Siatka danych]] ([[Data Mesh]])|
 |---|---|---|
 |Odpowiedzialność|Centralny zespół danych|Zespoły domenowe|
 |Architektura|Scentralizowana|Rozproszona|
@@ -50,7 +50,7 @@ aliases:
 
 ## Przykład domen i produktów danych (organization-centric)
 
-|Domena|Produkt danych|
+|Domena|[[Produkt Danych|Produkt danych]]|
 |---|---|
 |Marketing|Kampanie, leady, segmentacja|
 |Sprzedaż|Zamówienia, [[KPI]] sprzedażowe|
@@ -61,12 +61,12 @@ aliases:
 ## Komponenty siatki danych
 
 - **Data Products**: publikowane przez zespoły, z określonym kontraktem (schemat, SLA, testy).
-- **Data Platform (self-serve)**: narzędzia udostępniające CI/CD, orkiestrację, katalogi, monitorowanie jakości (np. [[dbt]], Airbyte, [[Dagster]], Great Expectations, DataHub).
+- **Data Platform (self-serve)**: narzędzia udostępniające CI/CD, orkiestrację, katalogi, monitorowanie jakości (np. [[dbt]], [[Airbyte|Airbyte]], [[Dagster]], Great Expectations, DataHub).
 - **Federated Governance**: definiuje wspólne minimum: nazewnictwo, polityki dostępu, bezpieczeństwo, lineage.
 
 # 💡 Przykład zastosowania
 
-Międzynarodowa firma kurierska wdrożyła architekturę [[Data Mesh]], przypisując odpowiedzialność za dane do zespołów domenowych: logistyka, terminale, finanse. Zamiast wysyłać surowe dane do centralnego DWH, każda domena publikuje gotowy produkt danych w formacie [[Apache Iceberg|Iceberg]] na S3, który następnie jest rejestrowany w katalogu danych i wykorzystywany przez zespoły [[Business Intelligence|BI]] oraz [[Uczenie Maszynowe|ML]] do dalszych analiz.
+Międzynarodowa firma kurierska wdrożyła architekturę [[Data Mesh]], przypisując odpowiedzialność za dane do zespołów domenowych: logistyka, terminale, finanse. Zamiast wysyłać surowe dane do centralnego DWH, każda domena publikuje gotowy [[Produkt Danych|produkt danych]] w formacie [[Apache Iceberg|Iceberg]] na S3, który następnie jest rejestrowany w katalogu danych i wykorzystywany przez zespoły [[Business Intelligence|BI]] oraz [[Uczenie Maszynowe|ML]] do dalszych analiz.
 
 # 📌 Źródła
 

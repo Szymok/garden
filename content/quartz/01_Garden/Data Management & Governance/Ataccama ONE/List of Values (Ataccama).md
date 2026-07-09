@@ -22,11 +22,11 @@ aliases:
 # 🔑 Kluczowe punkty
 - **Walidacja:** Podstawa reguł DQ ("Czy wartość jest w słowniku?").
 - **Standaryzacja:** Pomaga utrzymać czystość danych na wejściu (Dropdown na froncie aplikacji).
-- **Zarządzanie:** Słowniki powinny być zarządzane centralnie (Reference Data Management - RDM), a nie zaszyte w kodzie ("Hardcoded").
+- **Zarządzanie:** Słowniki powinny być zarządzane centralnie (Reference [[Data Management|Data Management]] - [[RDM|RDM]]), a nie zaszyte w kodzie ("Hardcoded").
 
 # 📚 Szczegółowe wyjaśnienie
-W Ataccama ONE:
-LOV może być prostym plikiem tekstowym (`.lkp`) lub zarządzaną tabelą w RDM.
+W [[Ataccama|Ataccama]] ONE:
+LOV może być prostym plikiem tekstowym (`.lkp`) lub zarządzaną tabelą w [[RDM|RDM]].
 Użycie w regule: `attr.countryCode is in file('countries.lkp')`.
 To znacznie wydajniejsze niż pisanie `attr == 'PL' or attr == 'DE' or ...` dla 200 krajów.
 
@@ -37,7 +37,7 @@ LOV: `Active`, `Churned`, `Lead`.
 Handlowiec próbuje wpisać status `Very Interested`. System odrzuca zapis, bo wartości nie ma na liście. Dzięki temu raporty analityczne się nie psują.
 
 ## 📌 Źródła
-- Ataccama Documentation - Lookup Files.
+- [[Ataccama|Ataccama]] Documentation - [[Lookup|Lookup]] Files.
 
 ## 👽 Brudnopis
 - LOV to najprostsza forma "Master Data".

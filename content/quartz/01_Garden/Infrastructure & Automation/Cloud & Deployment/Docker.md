@@ -27,7 +27,7 @@ aliases:
 - **Docker Hub**: publiczny rejestr obrazów (jak npm dla obrazów)
 - **Docker Compose**: uruchamianie wielu kontenerów naraz (np. aplikacja + baza danych)
 - **Izolacja**: każdy kontener ma własną sieć, system plików, zmienne środowiskowe
-- **Ataccama ONE** jest deployowana w kontenerach Docker (zarządzanych przez [[Kubernetes]])
+- **[[Ataccama|Ataccama]] ONE** jest deployowana w kontenerach Docker (zarządzanych przez [[Kubernetes]])
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -108,7 +108,7 @@ Kontenery są efemeryczne — dane giną po zatrzymaniu. Wolumeny `volumes:` map
 
 # 💡 Przykład zastosowania
 
-**Lokalne środowisko deweloperskie Ataccamy**: zamiast instalować PostgreSQL, Keycloak i aplikację osobno, `docker-compose up` startuje całe środowisko w 2 minuty. Po zakończeniu pracy `docker-compose down` czyści wszystko bez śladów w systemie.
+**Lokalne środowisko deweloperskie Ataccamy**: zamiast instalować PostgreSQL, [[Keycloak|Keycloak]] i aplikację osobno, `docker-compose up` startuje całe środowisko w 2 minuty. Po zakończeniu pracy `docker-compose down` czyści wszystko bez śladów w systemie.
 
 # 📌 Źródła
 

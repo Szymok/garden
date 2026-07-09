@@ -27,8 +27,8 @@ aliases:
 
 # 📚 Szczegółowe wyjaśnienie
 Samo wytrenowanie modelu (`model.fit()`) to prosta część. Deployment wymaga:
-1.  **Konteneryzacji:** Spakowania modelu i zależności (Docker).
-2.  **Orkiestracji:** Zarządzania skalowaniem (Kubernetes/KServe).
+1.  **Konteneryzacji:** Spakowania modelu i zależności ([[Docker|Docker]]).
+2.  **Orkiestracji:** Zarządzania skalowaniem ([[Kubernetes|Kubernetes]]/KServe).
 3.  **Wersjonowania:** Jaka wersja modelu działa? (MLflow Model Registry).
 4.  **Testowania:** Shadow Deployment (model działa "na cicho", porównujemy go ze starym), Canary Deployment (tylko 5% ruchu idzie na nowy model).
 
@@ -41,9 +41,9 @@ System rekomendacji Netflixa.
 5.  Model w czasie rzeczywistym zwraca listę "Polecane dla Ciebie".
 
 ## 📌 Źródła
-- "Machine Learning Engineering" - Andriy Burkov.
-- "Designing Machine Learning Systems" - Chip Huyen.
+- "[[Machine Learning|Machine Learning]] Engineering" - Andriy Burkov.
+- "Designing [[Machine Learning|Machine Learning]] Systems" - Chip Huyen.
 
 ## 👽 Brudnopis
-- MLOps to DevOps dla ML.
+- MLOps to [[DevOps|DevOps]] dla ML.
 - Częsty błąd: skrypt Pythona z notebooka wrzucony na produkcję ("To działa u mnie").

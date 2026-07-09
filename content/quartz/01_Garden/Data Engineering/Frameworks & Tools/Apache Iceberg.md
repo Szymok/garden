@@ -15,7 +15,7 @@ aliases:
   - Iceberg Data Lake
 ---
 # 🎯 Definicja
-**Apache Iceberg** to otwarty format tabel dla ogromnych zbiorów analitycznych. Został zaprojektowany przez Netflix, aby naprawić problemy ze skalowalnością i poprawnością danych w Apache Hive (np. brakujące pliki, brak atomowości).
+**Apache Iceberg** to otwarty format tabel dla ogromnych zbiorów analitycznych. Został zaprojektowany przez Netflix, aby naprawić problemy ze skalowalnością i poprawnością danych w [[Apache Hive|Apache Hive]] (np. brakujące pliki, brak atomowości).
 
 # 🔑 Kluczowe punkty
 - **Ukryte Partycjonowanie (Hidden Partitioning):** Użytkownik nie musi wiedzieć, że dane są fizycznie podzielone na "rok=2024/miesiac=01". Po prostu pyta o datę, a Iceberg sam wie, które pliki czytać.
@@ -23,8 +23,8 @@ aliases:
 - **Schema Evolution:** Możesz zmienić nazwę kolumny lub jej typ, i nic się nie zepsuje.
 
 # 📚 Szczegółowe wyjaśnienie
-Iceberg zyskuje ogromną popularność jako "wygrany" standard dla nowoczesnego Data Lakehouse. Jest wspierany przez wszystkich gigantów (AWS, Snowflake, Google BigQuery, Databricks).
-W przeciwieństwie do Hudi (skupionego na streamingu) czy Delta Lake (początkowo zamkniętego przez Databricks), Iceberg jest postrzegany jako najbardziej "neutralny" i najlepiej zaprojektowany architektonicznie format.
+Iceberg zyskuje ogromną popularność jako "wygrany" standard dla nowoczesnego [[Data Lakehouse|Data Lakehouse]]. Jest wspierany przez wszystkich gigantów (AWS, [[Snowflake|Snowflake]], Google BigQuery, Databricks).
+W przeciwieństwie do Hudi (skupionego na streamingu) czy [[Delta Lake|Delta Lake]] (początkowo zamkniętego przez Databricks), Iceberg jest postrzegany jako najbardziej "neutralny" i najlepiej zaprojektowany architektonicznie format.
 Nie przechowuje listy plików w folderach (co jest wolne na S3), ale w specjalnych plikach metadanych (Manifest files), co pozwala na błyskawiczne operacje nawet na tabelach z milionami plików.
 
 # 💡 Przykład zastosowania

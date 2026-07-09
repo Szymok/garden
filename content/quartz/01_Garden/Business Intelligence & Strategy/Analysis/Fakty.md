@@ -35,11 +35,11 @@ Analiza ruchu na stronie WWW.
 **Fakt:** PageView.
 **Ziarno:** Jedno wyświetlenie strony.
 **Miary:** Czas spędzony (sekundy).
-**Wymiary:** URL, Browser, User_ID, Geo, Date.
-SQL: `SELECT Geo.Country, COUNT(*) FROM Fact_PageView JOIN Dim_Geo ... GROUP BY Geo.Country` -> Liczba odwiedzin per kraj.
+**[[Wymiary|Wymiary]]:** URL, Browser, User_ID, Geo, Date.
+[[SQL|SQL]]: `SELECT Geo.Country, COUNT(*) FROM Fact_PageView JOIN Dim_Geo ... GROUP BY Geo.Country` -> Liczba odwiedzin per kraj.
 
 ## 📌 Źródła
-- "The Data Warehouse Toolkit" - Ralph Kimball.
+- "The [[Data Warehouse|Data Warehouse]] Toolkit" - Ralph Kimball.
 
 ## 👽 Brudnopis
 - Najważniejsza decyzja przy projektowaniu: wybór Ziarnistości (Grain). Zbyt ogólna (np. agregat miesięczny) uniemożliwia dokładną analizę (drill-down). Zawsze staraj się trzymać najniższe atomowe ziarno w hurtowni.

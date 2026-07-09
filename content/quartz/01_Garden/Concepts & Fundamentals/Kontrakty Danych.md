@@ -22,21 +22,21 @@ aliases:
 # 🔑 Kluczowe punkty
 - **Problem:** "Breaking Changes". Programista zmienia nazwę kolumny w bazie, raporty CEO przestają działać.
 - **Rozwiązanie:** Kontrakt blokuje taką zmianę (testy CI/CD) lub wymusza jej wersjonowanie.
-- **Implementacja:** Często realizowane przez Schema Registry (np. w Kafka zapobieganie zmianom niekompatybilnym) lub pliki YAML/JSON Schema w repozytorium.
+- **Implementacja:** Często realizowane przez Schema Registry (np. w Kafka zapobieganie zmianom niekompatybilnym) lub pliki [[YAML|YAML]]/JSON Schema w repozytorium.
 
 # 📚 Szczegółowe wyjaśnienie
-Bez kontraktów: Inżynieria Danych jest "Sprzątaczem", który musi naprawiać pipeliny po cichych zmianach w źródłach.
+Bez kontraktów: [[Inżynieria Danych|Inżynieria Danych]] jest "Sprzątaczem", który musi naprawiać pipeliny po cichych zmianach w źródłach.
 Z kontraktami: Dane są traktowane jak **Produkt** (API). Tak jak nie zmienia się publicznego API bez ostrzeżenia, tak nie zmienia się struktury danych wylatujących z serwisu.
 
 # 💡 Przykład zastosowania
 Firma e-commerce.
 Kontrakt `Orders v1`: `{ order_id: int, total: decimal }`.
 Programista chce zmienić `total` na `total_amount`.
-System CI/CD (np. Data Mesh governance) odrzuca ten commit z błędem: "Naruszenie kontraktu danych Orders v1. Zmiana niekompatybilna wstecznie. Utwórz wersję v2 lub uzgodnij migrację."
+System CI/CD (np. [[Data Mesh|Data Mesh]] governance) odrzuca ten commit z błędem: "Naruszenie kontraktu danych Orders v1. Zmiana niekompatybilna wstecznie. Utwórz wersję v2 lub uzgodnij migrację."
 
 ## 📌 Źródła
 - "Data Contracts" - Chad Sanderson.
 
 ## 👽 Brudnopis
-- To kluczowy element architektury **Data Mesh**.
-- Przesuwa odpowiedzialność za jakość danych "w lewo" (Shift Left) - do źródła.
+- To kluczowy element architektury **[[Data Mesh|Data Mesh]]**.
+- Przesuwa odpowiedzialność za [[Jakość Danych|jakość danych]] "w lewo" (Shift Left) - do źródła.

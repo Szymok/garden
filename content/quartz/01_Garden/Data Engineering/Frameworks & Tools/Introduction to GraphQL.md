@@ -26,7 +26,7 @@ W przeciwieństwie do REST (gdzie masz sztywne endpointy typu `/users`), w Graph
 - **Strongly Typed:** Masz schemat (Schema), który mówi dokładnie, co jest dostępne.
 
 # 📚 Szczegółowe wyjaśnienie
-W Ataccama ONE API używamy GraphQL do zarządzania metadanymi.
+W [[Ataccama|Ataccama]] ONE API używamy GraphQL do zarządzania metadanymi.
 Możesz pobrać listę Termów, zaktualizować Regułę, uruchomić Profilowanie.
 Query (Pobierz):
 ```graphql

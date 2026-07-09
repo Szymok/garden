@@ -21,12 +21,12 @@ aliases:
 
 # 🎯 Definicja
 
-Czołowi dostawcy usług chmurowych oferują zróżnicowane platformy i narzędzia do skalowalnego przechowywania, przetwarzania oraz analizy danych. Swoje rozwiązania kierują zarówno do małych firm, jak i największych korporacji, wspierając digitalizację, rozwój AI/[[Uczenie Maszynowe|ML]] i analityki biznesowej. Najbardziej znaczącymi globalnie graczami są Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP), a na rynku rozwiązań analitycznych i magazynów danych — Databricks oraz Snowflake.
+Czołowi dostawcy usług chmurowych oferują zróżnicowane platformy i narzędzia do skalowalnego przechowywania, przetwarzania oraz analizy danych. Swoje rozwiązania kierują zarówno do małych firm, jak i największych korporacji, wspierając digitalizację, rozwój AI/[[Uczenie Maszynowe|ML]] i analityki biznesowej. Najbardziej znaczącymi globalnie graczami są Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP), a na rynku rozwiązań analitycznych i magazynów danych — Databricks oraz [[Snowflake|Snowflake]].
 
 # 🔑 Kluczowe punkty
 
-- **AWS, Azure, Google Cloud** – liderzy, którzy posiadają największy globalny zasięg i kompleksowe oferty IaaS, PaaS, SaaS.
-- **Databricks, Snowflake** – wyspecjalizowane platformy, które skupiają się na analityce danych, [[Data Lakehouse|lakehouse]] oraz skalowalnych hurtowniach danych.
+- **AWS, Azure, Google Cloud** – liderzy, którzy posiadają największy globalny zasięg i kompleksowe oferty [[IaaS|IaaS]], [[PaaS|PaaS]], [[SaaS|SaaS]].
+- **Databricks, [[Snowflake|Snowflake]]** – wyspecjalizowane platformy, które skupiają się na analityce danych, [[Data Lakehouse|lakehouse]] oraz skalowalnych hurtowniach danych.
 - **Rosnący trend multi-cloud** – coraz więcej firm łączy usługi kilku dostawców dla większej elastyczności, wysokiej dostępności i optymalizacji kosztów.
 - **Bezpieczeństwo i compliance** – czołowi dostawcy gwarantują zaawansowane mechanizmy ochrony i liczne certyfikaty zgodności.
 
@@ -34,24 +34,24 @@ Czołowi dostawcy usług chmurowych oferują zróżnicowane platformy i narzędz
 
 |Dostawca|Udział w rynku (2025)|Kluczowe cechy|Oferta analityki/[[Data Lakehouse\|lakehouse]]|
 |---|---|---|---|
-|**Amazon Web Services (AWS)**|~30-34%|Najszersze portfolio usług, globalna infrastruktura, wsparcie dla AI/[[Uczenie Maszynowe\|ML]], ekosystem partnerów|Redshift, S3, EMR, serwisy AI, integracje z Databricks, Snowflake|
-|**Microsoft Azure**|~20-23%|Mocna pozycja w sektorze enterprise, wsparcie hybrydowe, integracja z MS Office|Synapse Analytics, Data Lake, Azure Databricks, wsparcie Snowflake|
+|**Amazon Web Services (AWS)**|~30-34%|Najszersze portfolio usług, globalna infrastruktura, wsparcie dla AI/[[Uczenie Maszynowe\|ML]], ekosystem partnerów|Redshift, S3, EMR, serwisy AI, integracje z Databricks, [[Snowflake|Snowflake]]|
+|**Microsoft Azure**|~20-23%|Mocna pozycja w sektorze enterprise, wsparcie hybrydowe, integracja z MS Office|Synapse Analytics, [[Data Lake|Data Lake]], Azure Databricks, wsparcie [[Snowflake|Snowflake]]|
 |**Google Cloud Platform (GCP)**|~12%|Zaawansowana analityka BigQuery, AI/[[Uczenie Maszynowe\|ML]], rozbudowana oferta dla startupów|BigQuery, Cloud Storage, Vertex AI, integracje [[Data Lakehouse\|lakehouse]]|
-|**Databricks**|-|Platforma oparta o Apache Spark, open [[Data Lakehouse\|lakehouse]], [[Delta Lake]], silny nacisk na AI/[[Uczenie Maszynowe\|ML]] i data science|Databricks [[Data Lakehouse\|Lakehouse]], Databricks SQL, [[Delta Lake]], Unity Catalog|
-|**Snowflake**|-|Natywna chmura, wydajne, elastyczne Data Warehouse, silna separacja compute/storage|Snowflake Data Cloud, elastyczny multi-cloud, szybkie skalowanie, natywna obsługa ELT|
+|**Databricks**|-|Platforma oparta o [[Apache Spark|Apache Spark]], open [[Data Lakehouse\|lakehouse]], [[Delta Lake]], silny nacisk na AI/[[Uczenie Maszynowe\|ML]] i data science|Databricks [[Data Lakehouse\|Lakehouse]], Databricks [[SQL|SQL]], [[Delta Lake]], Unity Catalog|
+|**[[Snowflake|Snowflake]]**|-|Natywna chmura, wydajne, elastyczne [[Data Warehouse|Data Warehouse]], silna separacja compute/storage|[[Snowflake|Snowflake]] Data Cloud, elastyczny multi-cloud, szybkie skalowanie, natywna obsługa ELT|
 
 # Szczegółowa charakterystyka
 
 ## 1. Amazon Web Services (AWS)
 
 - Ponad 200 usług chmurowych, globalny zasięg i sieć partnerów.
-- Kluczowe rozwiązania dla danych: Redshift (cloud DWH), S3 (data lake), integracja z narzędziami [[Data Lakehouse|lakehouse]].
+- Kluczowe rozwiązania dla danych: Redshift (cloud DWH), S3 ([[Data Lake|data lake]]), integracja z narzędziami [[Data Lakehouse|lakehouse]].
 - Lider rynku pod względem dojrzałości, skali i bezpieczeństwa.
 
 ## 2. Microsoft Azure
 
 - Rozbudowana oferta usług dla przedsiębiorstw, zaawansowane bezpieczeństwo i compliance.
-- Kluczowe narzędzia: Azure Synapse Analytics, Data Lake, Power [[Business Intelligence|BI]], wsparcie dla Databricks i Snowflake jako natywnych rozwiązań.
+- Kluczowe narzędzia: Azure Synapse Analytics, [[Data Lake|Data Lake]], Power [[Business Intelligence|BI]], wsparcie dla Databricks i [[Snowflake|Snowflake]] jako natywnych rozwiązań.
 
 ## 3. Google Cloud Platform (GCP)
 
@@ -60,11 +60,11 @@ Czołowi dostawcy usług chmurowych oferują zróżnicowane platformy i narzędz
 
 ## 4. Databricks
 
-- Platforma [[Data Lakehouse|Lakehouse]], która łączy zalety hurtowni danych i data lake.
+- Platforma [[Data Lakehouse|Lakehouse]], która łączy zalety hurtowni danych i [[Data Lake|data lake]].
 - Oparta na [[Delta Lake]] – integruje batch, streaming, [[Business Intelligence|BI]] i AI na jednej platformie.
 - Unity Catalog zapewnia centralizowane zarządzanie i bezpieczeństwo.
 
-## 5. Snowflake
+## 5. [[Snowflake|Snowflake]]
 
 - Pionierskie podejście: pełna separacja warstw compute i storage, wysokokonkurencyjne zarządzanie zadaniami.
 - Multi-cloud (AWS, Azure, GCP), natywna obsługa danych ustrukturyzowanych i półstrukturalnych.
@@ -74,8 +74,8 @@ Czołowi dostawcy usług chmurowych oferują zróżnicowane platformy i narzędz
 
 W nowoczesnych wdrożeniach środowisk analitycznych firmy bardzo często łączą ofertę kilku chmurowych dostawców:
 
-- Przechowywanie surowych danych w S3 (AWS), BigQuery (GCP) lub Azure Data Lake.
-- Przetwarzanie i analityka w Databricks [[Data Lakehouse|Lakehouse]] oraz hurtowni Snowflake.
+- Przechowywanie surowych danych w S3 (AWS), BigQuery (GCP) lub Azure [[Data Lake|Data Lake]].
+- Przetwarzanie i analityka w Databricks [[Data Lakehouse|Lakehouse]] oraz hurtowni [[Snowflake|Snowflake]].
 - Integracja z narzędziami [[Business Intelligence|BI]] (Power [[Business Intelligence|BI]], Tableau) oraz wsparcie szybkiego prototypowania AI/[[Uczenie Maszynowe|ML]].
 
 # 📌 Źródła
@@ -83,17 +83,17 @@ W nowoczesnych wdrożeniach środowisk analitycznych firmy bardzo często łącz
 - ProsperOps – Top 9 Cloud Service Providers in 2025
 - CloudZero – Top Cloud Service Providers Globally In 2025
 - Technology Magazine – Top 10: Cloud Computing Companies 2025
-- Databricks Discover – Data Warehouse
+- Databricks Discover – [[Data Warehouse|Data Warehouse]]
 - Databricks – Intelligent Data Warehousing on Databricks
-- Credencys – Snowflake Data Warehousing
-- AdvSysCon – Snowflake Cloud Data Warehouse
+- Credencys – [[Snowflake|Snowflake]] Data Warehousing
+- AdvSysCon – [[Snowflake|Snowflake]] Cloud [[Data Warehouse|Data Warehouse]]
 - Databricks Documentation – Data warehousing on Databricks
-- DEV – Snowflake: Revolutionizing Data Warehousing
+- DEV – [[Snowflake|Snowflake]]: Revolutionizing Data Warehousing
 
 # 👽 Brudnopis
 
-- Liderzy rynku: AWS, Azure, GCP – ponad 65% udziału w rynku IaaS/PaaS.
+- Liderzy rynku: AWS, Azure, GCP – ponad 65% udziału w rynku [[IaaS|IaaS]]/[[PaaS|PaaS]].
 - Databricks: [[Data Lakehouse|lakehouse]], AI/[[Uczenie Maszynowe|ML]], streaming + batch.
-- Snowflake: DWH as a service, automatyczne skalowanie, full SaaS.
+- [[Snowflake|Snowflake]]: DWH as a service, automatyczne skalowanie, full [[SaaS|SaaS]].
 - Multi-cloud = elastyczność, mniejsze ryzyko, lepsza optymalizacja kosztów.
 - Trendy: cloud-native DWH, [[Data Lakehouse|lakehouse]], governance, AI-native platforms.

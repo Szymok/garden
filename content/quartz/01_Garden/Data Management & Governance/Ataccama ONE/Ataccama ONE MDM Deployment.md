@@ -16,22 +16,22 @@ aliases:
   - Warianty instalacji MDM
 ---
 # 🎯 Definicja
-Platforma Ataccama ONE MDM może być wdrażana w różnych konfiguracjach, zależnie od tego, czy potrzebujesz pełnego Master Data Management (MDM), czy tylko Reference Data Management (RDM).
+Platforma [[Ataccama|Ataccama]] [[ONE MDM|ONE MDM]] może być wdrażana w różnych konfiguracjach, zależnie od tego, czy potrzebujesz pełnego Master [[Data Management|Data Management]] (MDM), czy tylko Reference [[Data Management|Data Management]] ([[RDM|RDM]]).
 
 # 🔑 Kluczowe punkty
-- **Separacja:** Warianty "Tylko MDM" lub "Tylko RDM" są instalowane w oddzielnych środowiskach, co zmniejsza narzut na infrastrukturę (mniej serwerów).
-- **Integracja:** Jeśli potrzebujesz obu (MDM i RDM) w jednym miejscu, musisz zainstalować pełną platformę **Ataccama ONE**.
+- **Separacja:** Warianty "Tylko MDM" lub "Tylko [[RDM|RDM]]" są instalowane w oddzielnych środowiskach, co zmniejsza narzut na infrastrukturę (mniej serwerów).
+- **Integracja:** Jeśli potrzebujesz obu (MDM i [[RDM|RDM]]) w jednym miejscu, musisz zainstalować pełną platformę **[[Ataccama|Ataccama]] ONE**.
 
 # 📚 Szczegółowe wyjaśnienie
 W przypadku instalacji dedykowanych (Standalone):
-- **Lightweight:** Jeśli klient chce tylko zarządzać słownikami (RDM), nie musisz stawiać ciężkiego silnika MDM z matchingiem i mergowaniem. Wystarczy lżejsza instalacja.
-- **Full Cloud:** W wersji PaaS (Cloud) zazwyczaj dostajesz dostęp do całej platformy, a funkcje są włączane/wyłączane licencją.
+- **Lightweight:** Jeśli klient chce tylko zarządzać słownikami ([[RDM|RDM]]), nie musisz stawiać ciężkiego silnika MDM z matchingiem i mergowaniem. Wystarczy lżejsza instalacja.
+- **Full Cloud:** W wersji [[PaaS|PaaS]] (Cloud) zazwyczaj dostajesz dostęp do całej platformy, a funkcje są włączane/wyłączane licencją.
 
 # 💡 Przykład zastosowania
-Bank potrzebuje systemu do zarządzania listą walut i kodów krajów (RDM). Nie chcą kupować pełnego MDM do danych klientów. Instalują wersję **ONE RDM Standalone**. Wymaga to mniejszej ilości RAM i CPU.
+Bank potrzebuje systemu do zarządzania listą walut i kodów krajów ([[RDM|RDM]]). Nie chcą kupować pełnego MDM do danych klientów. Instalują wersję **ONE [[RDM|RDM]] Standalone**. Wymaga to mniejszej ilości RAM i CPU.
 
 ## 📌 Źródła
-- Ataccama Installation Guide.
+- [[Ataccama|Ataccama]] Installation Guide.
 
 ## 👽 Brudnopis
-- RDM to często "brama wejściowa" dla klienta. Zaczynają od słowników, a potem dokupują pełne MDM.
+- [[RDM|RDM]] to często "brama wejściowa" dla klienta. Zaczynają od słowników, a potem dokupują pełne MDM.

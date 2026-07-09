@@ -15,23 +15,23 @@ aliases:
   - Przeglądarka metadanych
 ---
 # 🎯 Definicja
-Widok w ONE Desktop służący do inspekcji struktury metadanych platformy (MMDM - Meta Meta Data Model). Pozwala zrozumieć, jakie obiekty (Entities) i relacje istnieją w systemie.
+Widok w [[ONE Desktop|ONE Desktop]] służący do inspekcji struktury metadanych platformy (MMDM - Meta Meta Data Model). Pozwala zrozumieć, jakie obiekty (Entities) i relacje istnieją w systemie.
 
 # 🔑 Kluczowe punkty
-- **Read-only:** Nie służy do edycji (do tego służy Metadata Writer lub GUI webowe).
+- **Read-only:** Nie służy do edycji (do tego służy [[Metadata|Metadata]] Writer lub GUI webowe).
 - **Tryby:**
-    - *Metadata Mode:* Szczegóły konkretnej instancji (np. tabela "Klienci").
-    - *Metadata Presentation Mode:* Definicje typów obiektów (np. co to jest "Tabela").
+    - *[[Metadata|Metadata]] Mode:* Szczegóły konkretnej instancji (np. tabela "Klienci").
+    - *[[Metadata|Metadata]] Presentation Mode:* Definicje typów obiektów (np. co to jest "Tabela").
 
 # 📚 Szczegółowe wyjaśnienie
-Przydatne przy pisaniu zaawansowanych automatyzacji. Jeśli chcesz napisać skrypt, który "znajdzie wszystkie tabele bez właściciela", musisz najpierw zobaczyć w Metadata Explorerze, jak powiązane są obiekty `Table` i `User`.
+Przydatne przy pisaniu zaawansowanych automatyzacji. Jeśli chcesz napisać skrypt, który "znajdzie wszystkie tabele bez właściciela", musisz najpierw zobaczyć w [[Metadata|Metadata]] Explorerze, jak powiązane są obiekty `Table` i `User`.
 
 # 💡 Przykład zastosowania
 Sprawdzenie, jakie atrybuty ma obiekt `DQ Rule` w systemie, aby użyć ich w raporcie (np. `author`, `createdDate`, `qualityDimension`).
 
 ## 📌 Źródła
-- Ataccama Documentation - Metadata Management.
+- [[Ataccama|Ataccama]] Documentation - [[Metadata|Metadata]] Management.
 
 ## 👽 Brudnopis
-- MMM (Metadata Model Management) jest sercem Ataccamy.
+- MMM ([[Metadata|Metadata]] Model Management) jest sercem Ataccamy.
 - Explorer pokazuje "graf" powiązań.

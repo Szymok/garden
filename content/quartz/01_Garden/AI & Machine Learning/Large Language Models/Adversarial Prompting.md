@@ -24,7 +24,7 @@ Zbiór technik atakowania modeli językowych (LLM) mających na celu obejście i
 - **Leakage:** Wyciąganie treści promptu systemowego lub danych wrażliwych.
 
 # 📚 Szczegółowe wyjaśnienie
-Modele LLM nie odróżniają "instrukcji" od "danych" w sposób deterministyczny (jak robi to SQL z prepared statements). To sprawia, że tekst użytkownika może zostać zinterpretowany jako polecenie.
+Modele LLM nie odróżniają "instrukcji" od "danych" w sposób deterministyczny (jak robi to [[SQL|SQL]] z prepared statements). To sprawia, że tekst użytkownika może zostać zinterpretowany jako polecenie.
 Adversarial Prompting to także dziedzina *obronna* (Red Teaming) – badacze celowo atakują modele, aby znaleźć dziury i je załatać przed wdrożeniem.
 
 **Typowe wektory:**

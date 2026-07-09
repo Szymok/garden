@@ -17,7 +17,7 @@ aliases:
   - Analiza struktury danych
 ---
 # 🎯 Definicja
-**Data Profiling** to "rentgen danych". To proces automatycznego skanowania tabeli w celu zrozumienia, co w niej siedzi. Profilowanie mówi Ci: "Masz 10% nulli w kolumnie Email, a w kolumnie Wiek ktoś wpisał -50".
+**Data [[Profiling|Profiling]]** to "rentgen danych". To proces automatycznego skanowania tabeli w celu zrozumienia, co w niej siedzi. Profilowanie mówi Ci: "Masz 10% nulli w kolumnie Email, a w kolumnie Wiek ktoś wpisał -50".
 
 # 🔑 Kluczowe punkty
 - **Statystyki:** Min, Max, Średnia, Odchylenie, Liczba Unikalnych Wartości.
@@ -27,7 +27,7 @@ aliases:
 # 📚 Szczegółowe wyjaśnienie
 Profilowanie to PIERWSZY krok w każdym projekcie migracji lub jakości danych.
 Nie możesz naprawić danych, jeśli nie wiesz, co jest zepsute.
-Narzędzia (jak Ataccama ONE) robią to automatycznie po podpięciu źródła.
+Narzędzia (jak [[Ataccama|Ataccama]] ONE) robią to automatycznie po podpięciu źródła.
 
 # 💡 Przykład zastosowania
 Dostajesz plik CSV z "bazą klientów" od partnera.

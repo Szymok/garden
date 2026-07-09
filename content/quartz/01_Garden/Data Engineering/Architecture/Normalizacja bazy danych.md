@@ -21,7 +21,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Normalizacja bazy danych** to proces systematycznego organizowania danych w relacyjnych bazach danych w taki sposób, aby zredukować redundancję i zapewnić integralność danych. Opiera się na zestawie reguł (tzw. form normalnych) zdefiniowanych przez Edgara F. Codda, twórcę modelu relacyjnego. Dzięki normalizacji struktura bazy danych staje się klarowna, spójna i łatwa w utrzymaniu.
+**Normalizacja [[Bazy danych|bazy danych]]** to proces systematycznego organizowania danych w relacyjnych bazach danych w taki sposób, aby zredukować redundancję i zapewnić integralność danych. Opiera się na zestawie reguł (tzw. form normalnych) zdefiniowanych przez Edgara F. Codda, twórcę modelu relacyjnego. Dzięki normalizacji struktura [[Bazy danych|bazy danych]] staje się klarowna, spójna i łatwa w utrzymaniu.
 
 # 🔑 Kluczowe punkty
 
@@ -29,7 +29,7 @@ aliases:
 - Każdy etap normalizacji (1NF, 2NF, 3NF itp.) eliminuje określony typ nieoptymalnej zależności.
 - Proces bazuje na kluczach głównych, zależnościach funkcjonalnych i dekompozycji tabel.
 - Nadmiarowa dekompozycja może prowadzić do złożonych zapytań – dlatego czasami stosuje się denormalizację.
-- Normalizacja jest fundamentem projektowania OLTP (Online Transaction Processing), a nie OLAP.
+- Normalizacja jest fundamentem projektowania [[OLTP|OLTP]] (Online Transaction Processing), a nie OLAP.
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -97,7 +97,7 @@ W systemie sprzedaży detalicznej tabela zamówień zawiera informacje o klienci
 - 1NF: atomowość, bez kolumn list
 - 2NF: pełna zależność od całego klucza
 - 3NF: bez przechodnich zależności
-- OLTP: normalizacja dobra do aktualizacji, spójności
+- [[OLTP|OLTP]]: normalizacja dobra do aktualizacji, spójności
 - OLAP: denormalizacja → uproszczenie i wydajność raportowania
 - Denormalizacja jako świadome złamanie reguł → korzyści w hurtowniach i BI
 - Przykład: tabele faktów sprzedaży z nazwami produktów = duplicate but faster joins

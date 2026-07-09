@@ -20,11 +20,11 @@ aliases:
 
 # 🔑 Kluczowe punkty
 - **PII (Personally Identifiable Information):** Dane osobowe, które bezwzględnie wymagają ochrony (RODO).
-- **Automatyzacja:** W nowoczesnych systemach (jak Ataccama), klasyfikacja dzieje się automatycznie na podstawie profilowania (np. "Wykryto PESEL -> Nadaj klasę POUFNE").
+- **Automatyzacja:** W nowoczesnych systemach (jak [[Ataccama|Ataccama]]), klasyfikacja dzieje się automatycznie na podstawie profilowania (np. "Wykryto PESEL -> Nadaj klasę POUFNE").
 - **Działanie:** Klasa bezpieczeństwa jest atrybutem metadanych, który "wędruje" z danymi.
 
 # 📚 Szczegółowe wyjaśnienie
-W Ataccama ONE (i innych systemach DG), klasyfikacja często wiąże się z tagami.
+W [[Ataccama|Ataccama]] ONE (i innych systemach DG), klasyfikacja często wiąże się z tagami.
 Jeśli kolumna dostanie tag `Class: Confidential`:
 1.  Zwykły użytkownik zobaczy w Katalogu kłódkę lub zamaskowane wartości (`*****`).
 2.  System zablokuje eksport tych danych do Excela.

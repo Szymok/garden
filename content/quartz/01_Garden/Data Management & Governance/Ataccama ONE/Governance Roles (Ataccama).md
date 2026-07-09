@@ -17,7 +17,7 @@ aliases:
   - System Roles
 ---
 # 🎯 Definicja
-**Roles** w Ataccama ONE definiują, "kto co może". Czy Janek może edytować definicję "Klienta"? Czy może tylko ją czytać? Czy Kasia może usunąć tabelę z katalogu?
+**[[Roles|Roles]]** w [[Ataccama|Ataccama]] ONE definiują, "kto co może". Czy Janek może edytować definicję "Klienta"? Czy może tylko ją czytać? Czy Kasia może usunąć tabelę z katalogu?
 
 # 🔑 Główne Role
 1.  **System Admin:** Bóg systemu. Może wszystko.
@@ -26,20 +26,20 @@ aliases:
 4.  **Guest:** Często domyślna rola z minimalnym dostępem (tylko publiczne dane).
 
 # 📚 Szczegółowe wyjaśnienie
-Uprawnienia są często mapowane z Active Directory (AD) lub Keycloak.
-Przykład: Jeśli jesteś w grupie AD `Marketing_Managers`, automatycznie dostajesz w Ataccama rolę `Data Steward` dla obszaru Marketingu.
+Uprawnienia są często mapowane z Active Directory (AD) lub [[Keycloak|Keycloak]].
+Przykład: Jeśli jesteś w grupie AD `Marketing_Managers`, automatycznie dostajesz w [[Ataccama|Ataccama]] rolę `Data Steward` dla obszaru Marketingu.
 To się nazywa **RBAC** (Role-Based Access Control).
 
 # 💡 Przykład zastosowania
-Firma wdraża Data Governance.
-Nie chcesz, żeby każdy zmieniał definicje KPI "Zysk Netto".
+Firma wdraża [[Data Governance|Data Governance]].
+Nie chcesz, żeby każdy zmieniał definicje [[KPI|KPI]] "Zysk Netto".
 Ustawiasz:
 - Edycja "Zysk Netto": Tylko `Finance_Steward`.
 - Podgląd: Wszyscy (`All_Users`).
 Dzięki temu analitycy wiedzą, że definicja jest wiarygodna i chroniona.
 
 ## 📌 Źródła
-- Ataccama ONE Permissions Guide.
+- [[Ataccama|Ataccama]] ONE Permissions Guide.
 
 ## 👽 Brudnopis
 - Dobra praktyka: "Principle of Least Privilege". Dawaj najniższe uprawnienia, jakie są potrzebne do pracy. Nie dawaj `Admina` każdemu, "żeby nie marudzili, że coś nie działa".

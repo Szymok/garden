@@ -76,7 +76,7 @@ W analizie churnu klientów sieci telekom operator wykorzystał heatmapę korela
 
 ## 📌 Źródła
 
-- Harvard – Data Visualization Best Practices: [https://hbr.org/2016/04/visualizations-that-really-work](https://hbr.org/2016/04/visualizations-that-really-work)
+- Harvard – [[Data Visualization|Data Visualization]] Best Practices: [https://hbr.org/2016/04/visualizations-that-really-work](https://hbr.org/2016/04/visualizations-that-really-work)
 - Seaborn documentation: [https://seaborn.pydata.org/](https://seaborn.pydata.org/)
 - Data Viz Guide (Collection): [https://datavizcatalogue.com](https://datavizcatalogue.com)
 

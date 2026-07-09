@@ -15,15 +15,15 @@ aliases:
   - Ataccama deployment Ansible
 ---
 # 🎯 Definicja
-Zakres wsparcia narzędzia Ansible do automatyzacji instalacji i konfiguracji platformy Ataccama ONE w różnych środowiskach infrastrukturalnych (on-premise oraz chmurowych).
+Zakres wsparcia narzędzia Ansible do automatyzacji instalacji i konfiguracji platformy [[Ataccama|Ataccama]] ONE w różnych środowiskach infrastrukturalnych (on-premise oraz chmurowych).
 
 # 🔑 Kluczowe punkty
 - **Wspierane środowiska:** Serwery fizyczne (on-premise) oraz maszyny wirtualne w chmurze (np. AWS EC2, Azure VM).
 - **Model hybrydowy:** Możliwość zarządzania flotą mieszaną (fizyczne + cloud) w ramach jednego inwentarza Ansible, pod warunkiem łączności sieciowej.
-- **Odpowiedzialność:** Ansible konfiguruje oprogramowanie na *istniejących* maszynach; nie służy do powoływania infrastruktury (do tego służy np. Terraform) ani zarządzania nią.
+- **Odpowiedzialność:** Ansible konfiguruje oprogramowanie na *istniejących* maszynach; nie służy do powoływania infrastruktury (do tego służy np. [[Terraform|Terraform]]) ani zarządzania nią.
 
 # 📚 Szczegółowe wyjaśnienie
-Ataccama dostarcza oficjalne skrypty instalacyjne oparte na Ansible. Dokumentacja podkreśla elastyczność tego podejścia. Kluczowe jest zrozumienie, że Ansible operuje warstwę wyżej niż Infrastructure-as-Code (Terraform/CloudFormation).
+[[Ataccama|Ataccama]] dostarcza oficjalne skrypty instalacyjne oparte na Ansible. Dokumentacja podkreśla elastyczność tego podejścia. Kluczowe jest zrozumienie, że Ansible operuje warstwę wyżej niż Infrastructure-as-Code ([[Terraform|Terraform]]/CloudFormation).
 Dla Ataccamy nie ma znaczenia, czy Linux działa na "blaszaku" w piwnicy czy na instancji `m5.large` w AWS - dopóki jest dostęp przez SSH i Python, Ansible zadziała. Umożliwia to budowanie spójnych środowisk hybrydowych.
 
 # 💡 Przykład zastosowania

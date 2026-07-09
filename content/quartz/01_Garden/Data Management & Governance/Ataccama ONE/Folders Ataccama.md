@@ -15,7 +15,7 @@ aliases:
   - Organizacja Danych
 ---
 # 🎯 Definicja
-**Foldery w Ataccama ONE** to podstawowy mechanizm organizacji zasobów w Data Catalogu. Podobnie jak w systemie Windows/Linux, pozwalają grupować elementy (Tabele, Reguły, Profile) w hierarchiczną strukturę, ułatwiając nawigację i zarządzanie uprawnieniami.
+**Foldery w [[Ataccama|Ataccama]] ONE** to podstawowy mechanizm organizacji zasobów w Data Catalogu. Podobnie jak w systemie Windows/Linux, pozwalają grupować elementy (Tabele, Reguły, Profile) w hierarchiczną strukturę, ułatwiając nawigację i zarządzanie uprawnieniami.
 
 # 🔑 Kluczowe punkty
 - **Logiczna separacja:** Pozwalają oddzielić dane HR od danych Sprzedażowych.
@@ -28,7 +28,7 @@ Dobre praktyki struktury katalogów:
 2.  WEDŁUG WARSTWY: Raw (Bronze), Curated (Silver), Golden (Gold).
 3.  WEDŁUG SYSTEMÓW: SAP, Salesforce, Jira.
 
-Folder nie jest tylko "workiem". W Ataccama ONE folder może mieć swojego Właściciela (Steward), co automatycznie czyni go odpowiedzialnym za wszystkie zasoby w środku.
+Folder nie jest tylko "workiem". W [[Ataccama|Ataccama]] ONE folder może mieć swojego Właściciela (Steward), co automatycznie czyni go odpowiedzialnym za wszystkie zasoby w środku.
 
 # 💡 Przykład zastosowania
 Folder `Marketing / Kampanie 2024`.
@@ -39,7 +39,7 @@ W środku:
 Użytkownik z działu Finansów nie ma dostępu do tego folderu, więc nie widzi tych danych w wynikach wyszukiwania (Security Trimming).
 
 ## 📌 Źródła
-- Ataccama ONE User Guide.
+- [[Ataccama|Ataccama]] ONE User Guide.
 
 ## 👽 Brudnopis
 - Unikaj zbyt głębokich struktur (> 4 poziomy), bo nikt tam nie zajrzy.

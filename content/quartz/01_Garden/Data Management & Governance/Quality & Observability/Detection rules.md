@@ -15,7 +15,7 @@ aliases:
   - Automatyczne Tagowanie
 ---
 # 🎯 Definicja
-**Detection Rules** (l. mnoga) to ogólny mechanizm w platformach Data Governance (takich jak Ataccama ONE czy Collibra), który pozwala na masowe skanowanie metadanych i próbek danych w poszukiwaniu wzorców biznesowych. Jest to silnik napędzający proces **Data Discovery**.
+**Detection [[Rules|Rules]]** (l. mnoga) to ogólny mechanizm w platformach [[Data Governance|Data Governance]] (takich jak [[Ataccama|Ataccama]] ONE czy Collibra), który pozwala na masowe skanowanie metadanych i próbek danych w poszukiwaniu wzorców biznesowych. Jest to silnik napędzający proces **Data Discovery**.
 
 # 🔑 Kluczowe punkty
 - **Skala:** Pozwala zarządzać tysiącami kolumn bez ręcznego przeglądania.
@@ -23,9 +23,9 @@ aliases:
 - **AI/ML:** Nowoczesne systemy używają AI do sugerowania reguł ("Widzę, że te kolumny są podobne do tych, które oznaczyłeś jako Faktura").
 
 # 📚 Szczegółowe wyjaśnienie
-Gdy uruchamiasz "Full Profiling & Discovery":
+Gdy uruchamiasz "Full [[Profiling|Profiling]] & Discovery":
 1.  System pobiera próbkę danych z każdej kolumny.
-2.  Uruchamia zestaw aktywnych **Detection Rules**.
+2.  Uruchamia zestaw aktywnych **Detection [[Rules|Rules]]**.
 3.  Dla każdego dopasowania oblicza "Confidence Score" (Pewność).
 4.  Jeśli pewność > 80% (Threshold), termin przypisywany jest automatycznie.
 5.  Jeśli 50-80%, termin trafia do "Suggestions" dla Data Stewarda.
@@ -38,8 +38,8 @@ Puszczasz skan na całej bazie on-premise.
 Raport pokazuje: "W tych 150 tabelach mamy dane osobowe".
 
 ## 📌 Źródła
-- "Data Governance: The Definitive Guide" - O'Reilly.
-- Ataccama ONE Documentation.
+- "[[Data Governance|Data Governance]]: The Definitive Guide" - O'Reilly.
+- [[Ataccama|Ataccama]] ONE Documentation.
 
 ## 👽 Brudnopis
 - Różnica vs [[Detection Rule]]: Tutaj mówimy o całym systemie/mechanizmie, tam o pojedynczej definicji logicznej.

@@ -25,14 +25,14 @@ aliases:
 - **Open Source:** Projekt rozwijany przez Linux Foundation (stworzony przez Databricks).
 
 # 📚 Szczegółowe wyjaśnienie
-Zwykły Data Lake to "worek plików". Trudno tam zaktualizować jeden rekord (musisz przepisać cały plik). Trudno o spójność (ktoś czyta, gdy ty piszesz).
+Zwykły [[Data Lake|Data Lake]] to "worek plików". Trudno tam zaktualizować jeden rekord (musisz przepisać cały plik). Trudno o spójność (ktoś czyta, gdy ty piszesz).
 Delta Lake wprowadza folder `_delta_log`, w którym w plikach JSON zapisuje każdą operację ("Dodano plik A.parquet", "Usunięto plik B.parquet").
 Gdy czytasz tabelę Delta, Spark najpierw czyta Log, ustala które pliki są aktualne, i dopiero je czyta. Daje to pełną izolację i spójność.
 
 # 💡 Przykład zastosowania
 System RODO / GDPR.
 Musisz usunąć dane Jana Kowalskiego z historycznych zapisów z 5 lat.
-W zwykłym Data Lake to koszmar (szukanie w tysiącach plików JSON/CSV).
+W zwykłym [[Data Lake|Data Lake]] to koszmar (szukanie w tysiącach plików JSON/CSV).
 W Delta Lake robisz: `DELETE FROM users WHERE name = 'Jan Kowalski'`. Silnik Delta sam znajdzie odpowiednie pliki Parquet, przepisze je bez tego rekordu i zaktualizuje log.
 
 ## 📌 Źródła

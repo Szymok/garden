@@ -15,7 +15,7 @@ aliases:
   - Monitoring Jakości
 ---
 # 🎯 Definicja
-**Data Observability** to zdolność do pełnego zrozumienia stanu danych w systemie na podstawie ich zewnętrznych sygnałów. To przeniesienie koncepcji Observability z DevOps (Logs, Metrics, Traces) do świata danych. Odpowiada na pytanie: "Czy moje dane są zdrowe i czy pipeline działa poprawnie?" zanim zadzwoni wściekły klient.
+**Data Observability** to zdolność do pełnego zrozumienia stanu danych w systemie na podstawie ich zewnętrznych sygnałów. To przeniesienie koncepcji Observability z [[DevOps|DevOps]] (Logs, Metrics, Traces) do świata danych. Odpowiada na pytanie: "Czy moje dane są zdrowe i czy pipeline działa poprawnie?" zanim zadzwoni wściekły klient.
 
 # 🔑 Kluczowe punkty
 - **5 Filarów Data Observability:**
@@ -27,8 +27,8 @@ aliases:
 
 # 📚 Szczegółowe wyjaśnienie
 Tradycyjny monitoring mówi: "Serwer działa".
-Data Observability mówi: "Serwer działa, zadanie SQL się udało, ALE wgraliśmy same NULL-e w kolumnie `kwota`, co jest anomalią".
-Narzędzia takie jak Monte Carlo, Metaplane czy moduł Data Observability w Ataccama ONE używają ML do uczenia się "normalnego zachowania" danych i alertują tylko o rzeczywistych odstępstwach, minimalizując szum.
+Data Observability mówi: "Serwer działa, zadanie [[SQL|SQL]] się udało, ALE wgraliśmy same NULL-e w kolumnie `kwota`, co jest anomalią".
+Narzędzia takie jak Monte Carlo, Metaplane czy moduł Data Observability w [[Ataccama|Ataccama]] ONE używają ML do uczenia się "normalnego zachowania" danych i alertują tylko o rzeczywistych odstępstwach, minimalizując szum.
 
 # 💡 Przykład zastosowania
 Codziennie ładujesz kursy walut z API NBP.

@@ -40,4 +40,4 @@ Jeśli 80 na 100 drzew mówi "Nie dać", system odrzuca wniosek.
 
 ## 👽 Brudnopis
 - Random Forest to "szwajcarski scyzoryk" ML. Działa dobrze "prosto z pudełka" (bez długiego strojenia parametrów).
-- Następcą RF jest **XGBoost** (Gradient Boosting), który jest zazwyczaj dokładniejszy, ale trudniejszy w obsłudze.
+- Następcą RF jest **XGBoost** ([[Gradient|Gradient]] Boosting), który jest zazwyczaj dokładniejszy, ale trudniejszy w obsłudze.

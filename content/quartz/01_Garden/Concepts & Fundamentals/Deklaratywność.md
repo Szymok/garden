@@ -23,23 +23,23 @@ Deklaratywnie: "Chcę mieć mleko" (Resztą martwi się Uber Eats / System).
 
 # 🔑 Kluczowe punkty
 - **Wyższy poziom abstrakcji:** Skupiasz się na logice biznesowej, nie na sterowaniu przepływem (`for loop`, `if`).
-- **Idempotentność:** Łatwiej zapewnić, że wielokrotne uruchomienie da ten sam wynik.
-- **Popularność w Data & DevOps:** SQL, Terraform, Kubernetes, dbt - to wszystko narzędzia deklaratywne.
+- **[[Idempotentność|Idempotentność]]:** Łatwiej zapewnić, że wielokrotne uruchomienie da ten sam wynik.
+- **Popularność w Data & [[DevOps|DevOps]]:** [[SQL|SQL]], [[Terraform|Terraform]], [[Kubernetes|Kubernetes]], [[dbt|dbt]] - to wszystko narzędzia deklaratywne.
 
 # 📚 Szczegółowe wyjaśnienie
-**SQL** jest królem deklaratywności.
+**[[SQL|SQL]]** jest królem deklaratywności.
 Piszesz: `SELECT * FROM users WHERE city = 'Warsaw'`.
-Nie piszesz: "Otwórz plik, ustaw wskaźnik na linii 1, sprawdź czy city to Warsaw, jeśli tak to dodaj do bufora...". Silnik bazy danych decyduje, jak to zrobić najszybciej (użyć indeksu? zrobić full scan?).
-W **Kubernetes**: Piszesz plik YAML: "Chcę mieć 3 repliki serwera X". K8s sam dba o to, by je uruchomić i zrestartować, gdy któraś padnie.
+Nie piszesz: "Otwórz plik, ustaw wskaźnik na linii 1, sprawdź czy city to Warsaw, jeśli tak to dodaj do bufora...". Silnik [[Bazy danych|bazy danych]] decyduje, jak to zrobić najszybciej (użyć indeksu? zrobić full scan?).
+W **[[Kubernetes|Kubernetes]]**: Piszesz plik [[YAML|YAML]]: "Chcę mieć 3 repliki serwera X". K8s sam dba o to, by je uruchomić i zrestartować, gdy któraś padnie.
 
 # 💡 Przykład zastosowania
-Inżynieria Danych.
+[[Inżynieria Danych|Inżynieria Danych]].
 Podejście imperatywne (Python script):
 1. Połącz się z FTP.
 2. Pobierz plik.
 3. Rozpakuj.
 4. Wgraj do bazy. (Jak padnie w kroku 3, trzeba pisać obsługę błędów).
-Podejście deklaratywne (Dagster asset):
+Podejście deklaratywne ([[Dagster|Dagster]] asset):
 `@asset: tabela_uzytkownicy`. "Ta tabela powstaje z tego pliku". Orkiestrator sam wie, że musi pobrać plik, żeby stworzyć tabelę.
 
 ## 📌 Źródła

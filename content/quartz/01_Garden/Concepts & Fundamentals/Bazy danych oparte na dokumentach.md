@@ -24,7 +24,7 @@ aliases:
 - **Skalowalność:** Łatwiejsze skalowanie poziome (Sharding) niż w relacyjnych bazach.
 
 # 📚 Szczegółowe wyjaśnienie
-W świecie relacyjnym (SQL), aby zapisać "Fakturę" i jej "Pozycje", musisz mieć dwie tabele (`Invoices`, `InvoiceLines`) i łączyć je JOIN-em.
+W świecie relacyjnym ([[SQL|SQL]]), aby zapisać "Fakturę" i jej "Pozycje", musisz mieć dwie tabele (`Invoices`, `InvoiceLines`) i łączyć je JOIN-em.
 W bazie dokumentowej (MongoDB), Faktura to jeden plik JSON, który zawiera tablicę Pozycji.
 `{ "id": 1, "client": "XYZ", "lines": [ { "item": "A", "price": 10 }, { "item": "B", "price": 5 } ] }`
 Odczyt jest atomowy i szybki (czytasz jeden klucz = dostajesz całość).
@@ -34,7 +34,7 @@ Wady: Trudniejsze raportowanie analityczne (JOINy są drogie/niemożliwe), ryzyk
 # 💡 Przykład zastosowania
 Katalog produktów w e-commerce.
 Jeden produkt to "Telewizor" (ma przekątną ekranu), drugi to "Buty" (mają rozmiar).
-W SQL wymagałoby to tabeli `Attributes` (EAV model) lub wielu kolumn NULL.
+W [[SQL|SQL]] wymagałoby to tabeli `Attributes` (EAV model) lub wielu kolumn NULL.
 W MongoDB każdy produkt ma po prostu inny JSON z odpowiednimi polami.
 
 ## 📌 Źródła

@@ -25,7 +25,7 @@ aliases:
 # 🔑 Kluczowe punkty
 
 - YAML używa **wcięć nadrzędności**, a nie nawiasów (jak JSON)
-- Jest używany w wielu środowiskach: DevOps (Kubernetes), CI/CD (GitHub Actions), dane meta (Hugo/Quartz), Infrastructure as Code (Ansible, Terraform)
+- Jest używany w wielu środowiskach: [[DevOps|DevOps]] ([[Kubernetes|Kubernetes]]), CI/CD (GitHub Actions), dane meta (Hugo/Quartz), Infrastructure as Code (Ansible, [[Terraform|Terraform]])
 - Zapisywany w plikach `.yaml` lub `.yml`
 - Obsługuje typy danych: liczby, teksty, listy, słowniki, wartości logiczne, null
 - Delikatny na błędy formatowania – każde wcięcie ma znaczenie
@@ -56,7 +56,7 @@ adres:
 |---|---|---|
 |Czytelność ludzi|Bardzo dobra|Umiarkowana|
 |Zagnieżdżenia|Spacje i linie|Nawiasy `{}` i `[]`|
-|Komentarze|Tak (`# komentarz`)|Nie|
+|[[Komentarze|Komentarze]]|Tak (`# komentarz`)|Nie|
 |Format|Wolny od typów linijek|Bardziej formalny|
 
 ## Typowe zastosowania
@@ -68,7 +68,7 @@ adres:
 
 # 💡 Przykład zastosowania
 
-Kubernetes deployment:
+[[Kubernetes|Kubernetes]] deployment:
 
 ```yaml
 apiVersion: apps/v1
@@ -97,7 +97,7 @@ spec:
 - [https://yaml.org/](https://yaml.org/)
 - [https://learnxinyminutes.com/docs/yaml/](https://learnxinyminutes.com/docs/yaml/)
 - [https://dev.to/petermbenjamin/how-to-yaml-basics-3p6i](https://dev.to/petermbenjamin/how-to-yaml-basics-3p6i)
-- Kubernetes YAML Reference: [https://kubernetes.io/docs/reference/kubernetes-api/](https://kubernetes.io/docs/reference/kubernetes-api/)
+- [[Kubernetes|Kubernetes]] YAML Reference: [https://kubernetes.io/docs/reference/kubernetes-api/](https://kubernetes.io/docs/reference/kubernetes-api/)
 
 ## 👽 Brudnopis
 
@@ -106,6 +106,6 @@ spec:
 - .yml == .yaml – oba formaty dozwolone
 - Parsing YAML: w Python — PyYAML, ruamel.yaml
 - 2 spacje zamiast tab – must
-- YAML ≠ standard ściśle określony – istnieją różnice implementacyjne (np. w Ansible vs Kubernetes vs Hugo)
+- YAML ≠ standard ściśle określony – istnieją różnice implementacyjne (np. w Ansible vs [[Kubernetes|Kubernetes]] vs Hugo)
 
 ---

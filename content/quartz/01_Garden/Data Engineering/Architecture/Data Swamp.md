@@ -20,24 +20,24 @@ aliases:
 
 # 🎯 Definicja
 
-**Data Swamp** to stan zaawansowanego chaosu w środowisku analitycznym, w którym zgromadzone dane (najczęściej w data lake) tracą użyteczność na skutek braku odpowiedniego zarządzania, katalogowania oraz kontroli jakości. Zamiast być wartościowym zasobem dla analiz, dane w "bagnie" stają się nieodnalezione, niewiarygodne i nieprzydatne dla biznesu.
+**Data Swamp** to stan zaawansowanego chaosu w środowisku analitycznym, w którym zgromadzone dane (najczęściej w [[Data Lake|data lake]]) tracą użyteczność na skutek braku odpowiedniego zarządzania, katalogowania oraz kontroli jakości. Zamiast być wartościowym zasobem dla analiz, dane w "bagnie" stają się nieodnalezione, niewiarygodne i nieprzydatne dla biznesu.
 
 # 🔑 Kluczowe punkty
 
-- **Brak zarządzania i odpowiedzialności**: Główna przyczyna powstawania data swamp to porzucenie zasad data governance, brak własności i jednoznacznych ról odpowiedzialności za dane.
+- **Brak zarządzania i odpowiedzialności**: Główna przyczyna powstawania data swamp to porzucenie zasad [[Data Governance|data governance]], brak własności i jednoznacznych ról odpowiedzialności za dane.
 - **Utrata dostępności i jakości**: Dane są nieopisane, nieskatalogowane, zduplikowane lub sprzeczne – trudno je znaleźć i zweryfikować, nie są aktualizowane.
-- **Zjawisko na bazie Data Lake, ale możliwe także w Data Warehouse**: Niezarządzane data lake to typowy przypadek, lecz zaniedbane hurtownie danych również mogą stać się bagnem.
+- **Zjawisko na bazie [[Data Lake|Data Lake]], ale możliwe także w [[Data Warehouse|Data Warehouse]]**: Niezarządzane [[Data Lake|data lake]] to typowy przypadek, lecz zaniedbane hurtownie danych również mogą stać się bagnem.
 - **Ryzyko niskiej wartości biznesowej**: Data swamp prowadzi do nieproduktywnych kosztów przechowania, utraty zaufania do danych oraz spadku efektywności analityków i zespołów AI.
-- **Może być skutkiem hybrydowych modeli danych**: Złożone środowiska z elementami data lake i data warehouse szczególnie narażone są na chaos bez skutecznego zarządzania metadanymi.
+- **Może być skutkiem hybrydowych modeli danych**: Złożone środowiska z elementami [[Data Lake|data lake]] i [[Data Warehouse|data warehouse]] szczególnie narażone są na chaos bez skutecznego zarządzania metadanymi.
 
 # 📚 Pogłębione wyjaśnienie
 
-## Czym różni się Data Swamp od Data Lake?
+## Czym różni się Data Swamp od [[Data Lake|Data Lake]]?
 
-|Cecha|Data Lake|Data Swamp|
+|Cecha|[[Data Lake|Data Lake]]|Data Swamp|
 |---|---|---|
 |Zarządzanie|Czytelna polityka governance, katalogowanie|Brak governance, brak katalogu, chaos|
-|Jakość danych|Utrzymywana (monitoring, walidacja)|Zaniedbana, zduplikowana, sprzeczna|
+|[[Jakość Danych|Jakość danych]]|Utrzymywana (monitoring, walidacja)|Zaniedbana, zduplikowana, sprzeczna|
 |Wartość biznesowa|Wysoka, wspiera AI/ML/BI|Trudna do wykorzystania, niska wartość|
 |Dostępność|Dane znajdywalne, opisywane, metadane|Dane zagubione, niejasne pochodzenie|
 
@@ -47,7 +47,7 @@ aliases:
 - Brak centralnego katalogu i nieaktualne/lub brak metadanych
 - Brak kontroli dostępu, duplikacja, nieaktualizowane dane
 - Niedostateczna integracja procesów ETL/ELT oraz walidacji jakości
-- Narzucenie data lake bez jasnej strategii i procesów zarządzania
+- Narzucenie [[Data Lake|data lake]] bez jasnej strategii i procesów zarządzania
 
 ## Konsekwencje dla organizacji
 
@@ -77,7 +77,7 @@ aliases:
 # 👽 Brudnopis
 
 - Data Swamp = "jezioro bez mapy" -> nieznane pochodzenie, nieznajdywalność, chaos.
-- Governance, data catalog, stewardship – kluczowe mechanizmy prewencji.
-- Możliwe nawet w Data Warehouse (zaniedbane, duplikowane tabele, przestarzałe raporty).
+- Governance, [[Data Catalog|data catalog]], [[Stewardship|stewardship]] – kluczowe mechanizmy prewencji.
+- Możliwe nawet w [[Data Warehouse|Data Warehouse]] (zaniedbane, duplikowane tabele, przestarzałe raporty).
 - Największy problem w skali enterprise, hybrydy (lake/warehouse/lakehouse) bez master-data-management.
 - Przykłady: dane IoT, logi aplikacyjne, środowiska BI – z czasem powstaje galimatias danych.

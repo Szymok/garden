@@ -35,7 +35,7 @@ Bank chce przetestować nowy system wykrywania fraudów. Nie może użyć prawdz
 Generuje 1 milion syntetycznych transakcji, w tym 5000 "fraudów" o specyficznych wzorcach (np. wypłata w Meksyku 5 min po wypłacie w Polsce). System testowy uczy się na tym wykrywać te wzorce.
 
 ## 📌 Źródła
-- "Synthetic Data for Deep Learning" (Arxiv).
+- "Synthetic Data for [[Deep Learning|Deep Learning]]" (Arxiv).
 
 ## 👽 Brudnopis
 - Gartner przewiduje, że do 2030 większość danych używanych w AI będzie syntetyczna.

@@ -16,8 +16,8 @@ aliases:
   - Plany transformacji
 ---
 # 🎯 Definicja
-**Transformation Plans** w Ataccama ONE to skrypty przetwarzania danych (.plan), które definiują przepływ danych: Odczyt -> Przetwarzanie -> Zapis.
-Szczególnym przypadkiem są **Post-processing plans**, używane do eksportu wyników Data Quality.
+**[[Transformation Plans|Transformation Plans]]** w [[Ataccama|Ataccama]] ONE to skrypty przetwarzania danych (.plan), które definiują przepływ danych: Odczyt -> Przetwarzanie -> Zapis.
+Szczególnym przypadkiem są **Post-processing plans**, używane do eksportu wyników [[Data Quality|Data Quality]].
 
 # 🔑 Kluczowe punkty
 - **Silnik:** Wykonuje je DPE (Data Processing Engine).
@@ -37,7 +37,7 @@ Chce listę tych błędnych adresów, żeby je poprawić w CRM.
 Klika "Export". W tle uruchamia się Transformation Plan, który generuje plik CSV z identyfikatorami tych klientów.
 
 ## 📌 Źródła
-- Ataccama ONE Documentation - Transformation Plans.
+- [[Ataccama|Ataccama]] ONE Documentation - [[Transformation Plans|Transformation Plans]].
 
 ## 👽 Brudnopis
 - To jest "low-code ETL" wbudowany w platformę. Można w nim robić bardzo skomplikowane rzeczy (łączyć z API, bazami danych), ale najczęściej służy do prostych raportów.

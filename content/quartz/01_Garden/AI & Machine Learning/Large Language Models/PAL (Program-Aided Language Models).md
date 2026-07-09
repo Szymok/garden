@@ -34,7 +34,7 @@ Ten kod jest następnie uruchamiany, a wynik (1998) jest pewny w 100%.
 
 # 💡 Przykład zastosowania
 Pytanie: "Jaka była data 1000 dni temu?"
-Model GPT-4 bez PAL: Może zgadnie, może się pomyli o dzień.
+Model [[GPT-4|GPT-4]] bez PAL: Może zgadnie, może się pomyli o dzień.
 Model z PAL: Napisze `datetime.now() - timedelta(days=1000)`.
 
 ## 📌 Źródła

@@ -18,7 +18,7 @@ aliases:
 **Directional Stimulus Prompting (DSP)** to zaawansowana technika sterowania [[Base LLM|modelami językowymi]], w której zamiast ręcznie pisać instrukcję ("Zrób X"), używamy małego, trenowalnego modelu (Policy Model), który generuje "wskazówki" (Stimulus) dla dużego modelu. Wskazówki te naprowadzają duży model na pożądany wynik (np. konkretny styl podsumowania).
 
 # 🔑 Kluczowe punkty
-- **Black Box:** Duży model (np. GPT-4) jest "zamrożony" (nie trenujemy go).
+- **Black Box:** Duży model (np. [[GPT-4|GPT-4]]) jest "zamrożony" (nie trenujemy go).
 - **Policy Model:** Trenujemy mały model (np. T5-small), żeby generował dobre podpowiedzi dla dużego.
 - **Cel:** Uzyskanie lepszych wyników niż przy zwykłym promptingu, ale taniej niż przy pełnym finetuningu dużego modelu.
 

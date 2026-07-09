@@ -34,7 +34,7 @@ Ustawiasz **Full Refresh Overwrite**. Raz dziennie pobierasz całą listę kraj�
 Trwa to 2 sekundy. Nie ma sensu bawić się w skomplikowaną synchronizację przyrostową (Incremental).
 
 ## 📌 Źródła
-- Airbyte Sync Modes.
+- [[Airbyte|Airbyte]] Sync Modes.
 
 ## 👽 Brudnopis
 - Reguła kciuka: Używaj Full Refresh dla tabel słownikowych i małych wymiarów. Używaj Incremental dla tabel Faktów (transakcji).

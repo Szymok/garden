@@ -16,11 +16,11 @@ aliases:
   - Reference Data Validation
 ---
 # 🎯 Definicja
-Walidacja danych przy użyciu tabel **ONE Data** (zarządzanych tabel wewnątrz platformy Ataccama) to nowoczesna alternatywa dla słowników statycznych (Lookups).
+Walidacja danych przy użyciu tabel **ONE Data** (zarządzanych tabel wewnątrz platformy [[Ataccama|Ataccama]]) to nowoczesna alternatywa dla słowników statycznych (Lookups).
 Pozwala Stewardom edytować słownik "Legalnych Wartości" w Excelowym interfejsie w przeglądarce, a Reguły DQ automatycznie pobierają te zmiany.
 
 # 🔑 Kluczowe punkty
-- **Dynamiczność:** Nie musisz przebudowywać plików lookup (.lkp). Zmieniasz rekord w tabeli, reguła "widzi" to od razu.
+- **Dynamiczność:** Nie musisz przebudowywać plików [[Lookup|lookup]] (.lkp). Zmieniasz rekord w tabeli, reguła "widzi" to od razu.
 - **Is From Catalog Item:** Warunek w regule DQ używany do sprawdzenia obecności wartości w tabeli ONE Data.
 - **Self-Service:** Biznes sam zarządza swoimi słownikami (np. Lista Kodów Produktów), bez proszenia IT o wgranie pliku.
 

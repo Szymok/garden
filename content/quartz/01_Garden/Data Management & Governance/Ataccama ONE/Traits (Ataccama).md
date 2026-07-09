@@ -16,7 +16,7 @@ aliases:
   - Entity Traits
 ---
 # 🎯 Definicja
-**Traits** (Cechy) w Ataccama ONE to "naklejki" konfiguracyjne, które przyklejasz do encji w modelu, żeby zmienić ich zachowanie w UI.
+**[[Traits|Traits]]** (Cechy) w [[Ataccama|Ataccama]] ONE to "naklejki" konfiguracyjne, które przyklejasz do encji w modelu, żeby zmienić ich zachowanie w UI.
 Zamiast pisać kod, dodajesz `trait`.
 Przykład: Chcesz, żeby encja miała wykres relacji? Dodajesz `relationships:enabled`.
 
@@ -33,7 +33,7 @@ Przykłady popularnych cech:
 - `fe:mmdProperty`: `{"displayName": "Zatwierdzone Przez"}` zamiast technicznego `appr_by`.
 
 # 💡 Przykład zastosowania
-Masz tabelę `c_customer`. W One Desktop nazywa się brzydko.
+Masz tabelę `c_customer`. W [[ONE Desktop|One Desktop]] nazywa się brzydko.
 Dodajesz Trait:
 ```json
 {
@@ -45,7 +45,7 @@ Dodajesz Trait:
 Teraz w przeglądarce (ONE Web) użytkownik biznesowy widzi "Klienci" z ikonką ludzików.
 
 ## 📌 Źródła
-- Ataccama ONE Documentation - Traits Reference.
+- [[Ataccama|Ataccama]] ONE Documentation - [[Traits|Traits]] Reference.
 
 ## 👽 Brudnopis
-- Traits są częścią MMDM (Meta Meta Data Model). To sposób na "dekorowanie" modelu danych metadanymi wizualnymi.
+- [[Traits|Traits]] są częścią MMDM (Meta Meta Data Model). To sposób na "dekorowanie" modelu danych metadanymi wizualnymi.

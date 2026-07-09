@@ -23,7 +23,7 @@ aliases:
 
 # 🎯 Definicja
 
-**CI/CD** to praktyka DevOps automatyzująca budowanie, testowanie i wdrażanie kodu. **CI** (Continuous Integration) — każda zmiana w kodzie jest automatycznie budowana i testowana. **CD** (Continuous Delivery/Deployment) — zweryfikowany kod jest automatycznie dostarczany do środowisk testowych lub produkcji.
+**CI/CD** to praktyka [[DevOps|DevOps]] automatyzująca budowanie, testowanie i wdrażanie kodu. **CI** (Continuous Integration) — każda zmiana w kodzie jest automatycznie budowana i testowana. **CD** (Continuous Delivery/Deployment) — zweryfikowany kod jest automatycznie dostarczany do środowisk testowych lub produkcji.
 
 # 🔑 Kluczowe punkty
 
@@ -31,7 +31,7 @@ aliases:
 - **GitHub Actions** — najpopularniejszy CI/CD dla repozytoriów GitHub
 - **GitLab CI** — wbudowany CI/CD w GitLab (często w enterprise)
 - **Trigger**: pipeline uruchamia się na push, PR, merge, harmonogram
-- **Artifact**: wynik buildu (obraz Docker, paczka npm, raport testów)
+- **Artifact**: wynik buildu (obraz [[Docker|Docker]], paczka npm, raport testów)
 - **Environment**: dev → staging → production z manualnym zatwierdzeniem
 
 # 📚 Szczegółowe wyjaśnienie
@@ -125,7 +125,7 @@ deploy_staging:
 
 # 💡 Przykład zastosowania
 
-**Wdrożenie aktualizacji Ataccamy**: każdy commit do `main` triggeruje pipeline — testy Ansible playbooks, budowanie obrazów Docker, wdrożenie na środowisko testowe. Po ręcznym zatwierdzeniu QA, ten sam pipeline wdraża na produkcję. Czas wdrożenia: 15 minut zamiast 4 godzin manualnej pracy.
+**Wdrożenie aktualizacji Ataccamy**: każdy commit do `main` triggeruje pipeline — testy [[Ansible Playbooks|Ansible playbooks]], budowanie obrazów [[Docker|Docker]], wdrożenie na środowisko testowe. Po ręcznym zatwierdzeniu QA, ten sam pipeline wdraża na produkcję. Czas wdrożenia: 15 minut zamiast 4 godzin manualnej pracy.
 
 # 📌 Źródła
 

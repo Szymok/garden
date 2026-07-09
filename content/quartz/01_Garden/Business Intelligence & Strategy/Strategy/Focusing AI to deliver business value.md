@@ -23,14 +23,14 @@ Skupienie AI na **Wartości Biznesowej** to zmiana paradygmatu w projektach dany
 - **Trusted Data:** Bez czystych danych (Lineage, Catalog), AI jest ryzykowną zabawką, a nie produktem biznesowym.
 
 # 📚 Szczegółowe wyjaśnienie
-Wielu liderów danych zaczynało od wdrażania Data Governance jako wymogu prawnego (RODO). Teraz muszą udowodnić zwrot z inwestycji (ROI).
+Wielu liderów danych zaczynało od wdrażania [[Data Governance|Data Governance]] jako wymogu prawnego (RODO). Teraz muszą udowodnić zwrot z inwestycji (ROI).
 Produkty Danych (Data Products) wspierane przez AI mają rozwiązywać konkretne problemy:
 - Automatyzacja obsługi klienta.
 - Szybsza analiza ryzyka.
 - Lepsze targetowanie marketingu.
 
 # 💡 Przykład zastosowania
-Zamiast wdrażać "Platformę AI dla wszystkich", firma wdraża "Inteligentnego Asystenta dla Działu Prawnego", który skraca czas analizy umów o 50%. To jest mierzalna wartość biznesowa, która uzasadnia inwestycję w jakość danych i Governance pod spodem.
+Zamiast wdrażać "Platformę AI dla wszystkich", firma wdraża "Inteligentnego Asystenta dla Działu Prawnego", który skraca czas analizy umów o 50%. To jest mierzalna wartość biznesowa, która uzasadnia inwestycję w [[Jakość Danych|jakość danych]] i Governance pod spodem.
 
 ## 📌 Źródła
 - "Data Strategy: How to Profit from a World of Big Data, Analytics and the Internet of Things".

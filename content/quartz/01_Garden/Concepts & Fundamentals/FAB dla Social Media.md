@@ -18,7 +18,7 @@ aliases:
 **FAB** (Features, Advantages, Benefits) to klasyczny model konstruowania przekazu sprzedażowego i marketingowego, który prowadzi odbiorcę od „surowych faktów” do „emocjonalnych korzyści”. Pomaga zamienić nudny opis techniczny w historię, która sprzedaje.
 
 # 🔑 Kluczowe punkty
-- **Features (Cechy):** Co to jest? (Fakty, parametry).
+- **Features (Cechy):** Co to jest? ([[Fakty|Fakty]], parametry).
 - **Advantages (Zalety):** Co to robi? (Funkcjonalność).
 - **Benefits (Korzyści):** Co to daje klientowi? (Emocje, rozwiązanie problemu).
 

@@ -16,15 +16,15 @@ aliases:
   - Projekt Monitoringu
 ---
 # 🎯 Definicja
-**Monitoring Project** w Ataccama ONE to kontener na Twoje automatyczne testy jakości danych. To tutaj mówisz systemowi: "Sprawdzaj tabelę `Klienci` codziennie o 2 w nocy. Jeśli liczba błędnych emaili przekroczy 1%, wyślij mi alert".
+**Monitoring Project** w [[Ataccama|Ataccama]] ONE to kontener na Twoje automatyczne testy jakości danych. To tutaj mówisz systemowi: "Sprawdzaj tabelę `Klienci` codziennie o 2 w nocy. Jeśli liczba błędnych emaili przekroczy 1%, wyślij mi alert".
 
 # 🔑 Kluczowe punkty
-- **Reaktywność:** Pozwala śledzić, jak jakość danych zmienia się w czasie (Trend Line).
+- **Reaktywność:** Pozwala śledzić, jak [[Jakość Danych|jakość danych]] zmienia się w czasie (Trend Line).
 - **Zasób:** Monitorujesz konkretne `Catalog Items` (Tabele, Pliki).
 - **Metody:**
-    1.  **DQ Rules:** Sprawdź poprawność (np. "Email ma @").
+    1.  **DQ [[Rules|Rules]]:** Sprawdź poprawność (np. "Email ma @").
     2.  **Structure Checks:** Czy schema się nie zmieniła? (np. "Czy kolumna ID nadal istnieje?").
-    3.  **Anomaly Detection:** AI wykrywa dziwne skoki (np. "Dziś mamy o 50% mniej rekordów niż zwykle").
+    3.  **[[Anomaly Detection|Anomaly Detection]]:** AI wykrywa dziwne skoki (np. "Dziś mamy o 50% mniej rekordów niż zwykle").
 
 # 📚 Szczegółowe wyjaśnienie
 Proces:
@@ -44,7 +44,7 @@ Po migracji: DQ Score = 95%.
 Widzisz, że 5% rekordów ma błędy walidacji. Poprawiasz skrypt migracyjny i uruchamiasz ponownie. Monitoring pokazuje wzrost jakości do 99%.
 
 ## 📌 Źródła
-- Ataccama User Guide - Monitoring Projects.
+- [[Ataccama|Ataccama]] User Guide - Monitoring Projects.
 
 ## 👽 Brudnopis
-- Ważne: Monitoring Project to nie to samo co **Data Observability**. Monitoring jest "Manualny" (Ty definiujesz reguły). Observability jest "Automatyczne" (System sam uczy się, co jest normą).
+- Ważne: Monitoring Project to nie to samo co **[[Data Observability|Data Observability]]**. Monitoring jest "Manualny" (Ty definiujesz reguły). Observability jest "Automatyczne" (System sam uczy się, co jest normą).

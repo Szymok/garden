@@ -29,10 +29,10 @@ Zamiast pisać moduł "Logowanie" i "Przypominanie hasła" w każdej nowej aplik
 Zalety:
 - Centralne zarządzanie użytkownikami (zmieniasz hasło Jana w jednym miejscu, a nie w 50 bazach).
 - Bezpieczeństwo (Keycloak dba o szyfrowanie, 2FA/MFA, wykrywanie ataków Brute Force).
-W Ataccama ONE Keycloak jest domyślnym dostawcą tożsamości (instalowanym z platformą).
+W [[Ataccama|Ataccama]] ONE Keycloak jest domyślnym dostawcą tożsamości (instalowanym z platformą).
 
 # 💡 Przykład zastosowania
-Firma ma 3 aplikacje: Jira, Wiki i Ataccama.
+Firma ma 3 aplikacje: Jira, Wiki i [[Ataccama|Ataccama]].
 Bez Keycloaka: Użytkownik ma 3 loginy i 3 hasła.
 Z Keycloakiem: Użytkownik wchodzi na Jire -> przekierowanie do Keycloaka -> logowanie -> powrót do Jiry. Wchodzi na Wiki -> działa od razu (bo ma aktywną sesję w Keycloak).
 
@@ -41,4 +41,4 @@ Z Keycloakiem: Użytkownik wchodzi na Jire -> przekierowanie do Keycloaka -> log
 
 ## 👽 Brudnopis
 - Jest to projekt wspierany przez Red Hat (wersja komercyjna to RH-SSO).
-- Wymaga bazy danych (zazwyczaj PostgreSQL) do działania.
+- Wymaga [[Bazy danych|bazy danych]] (zazwyczaj PostgreSQL) do działania.

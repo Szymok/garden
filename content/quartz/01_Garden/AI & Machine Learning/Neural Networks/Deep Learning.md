@@ -45,4 +45,4 @@ Ostatnia mówi: "To jest kot na 99%".
 
 ## 👽 Brudnopis
 - Wymaga ogromnej mocy obliczeniowej (GPU).
-- "Black Box problem" - często trudno zrozumieć, *dlaczego* sieć podjęła taką decyzję (Explainable AI - XAI).
+- "Black Box problem" - często trudno zrozumieć, *dlaczego* sieć podjęła taką decyzję ([[Explainable AI|Explainable AI]] - XAI).

@@ -29,7 +29,7 @@ aliases:
 # 📚 Szczegółowe wyjaśnienie
 Dobre modelowanie to sztuka kompromisu między **elastycznością** (łatwo dodać nowe funkcje) a **wydajnością** (szybkie zapytania).
 Dwa główne podejścia:
-- **OLTP (Relacyjne):** Normalizacja (3NF). Unikanie powtórzeń. Dobre do zapisu (np. system kasowy).
+- **[[OLTP|OLTP]] (Relacyjne):** Normalizacja (3NF). Unikanie powtórzeń. Dobre do zapisu (np. system kasowy).
 - **OLAP (Wymiarowe):** Denormalizacja (Star Schema). Celowe powtórzenia. Dobre do odczytu (np. raport sprzedaży).
 
 # 💡 Przykład zastosowania

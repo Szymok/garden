@@ -33,7 +33,7 @@ aliases:
 
 # 📚 Szczegółowe wyjaśnienie
 
-## Przykładowe role w systemie zarządzania danymi (np. Ataccama ONE)
+## Przykładowe role w systemie zarządzania danymi (np. [[Ataccama|Ataccama]] ONE)
 
 |Rola|Zakres działania|
 |---|---|
@@ -93,4 +93,4 @@ assign_role(
 - Domyślne przypisanie visibility i editable: MMM_data-manager i wyżej zaraz po dodaniu obiektów
 - Można przesłaniać uprawnienia przez `Share` lub `Assign role` API
 - Model skalowalny: user → przynależność do grup/realmu → przypisanie roli kontekstowej
-- Narzędzia: Ataccama ONE, Collibra, Alation, Informatica – wspierają kontekstowe RBAC/ABAC
+- Narzędzia: [[Ataccama|Ataccama]] ONE, Collibra, Alation, Informatica – wspierają kontekstowe RBAC/ABAC

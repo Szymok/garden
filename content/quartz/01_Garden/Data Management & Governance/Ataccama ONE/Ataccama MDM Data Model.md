@@ -23,7 +23,7 @@ Struktura danych leżąca u podstaw systemu MDM, definiująca sposób przechowyw
 - **Normalizacja:** Zalecany balans między pełną normalizacją (wydajność zapisu, złożoność) a denormalizacją (szybkość odczytu, redundancja). Model gwiazdy (Star schema) jest często preferowany.
 
 # 📚 Szczegółowe wyjaśnienie
-Model danych MDM w Ataccama jest generowany automatycznie przy starcie serwera na podstawie definicji logicznej. Użytkownik nie musi ręcznie tworzyć tabel `DDL`.
+Model danych MDM w [[Ataccama|Ataccama]] jest generowany automatycznie przy starcie serwera na podstawie definicji logicznej. Użytkownik nie musi ręcznie tworzyć tabel `DDL`.
 - **Instance Data:** Przechowuje historię i aktualny stan rekordów z systemów źródłowych.
 - **Master Data:** Przechowuje "Złoty Rekord" (Golden Record) - wynik deduplikacji i konsolidacji.
 

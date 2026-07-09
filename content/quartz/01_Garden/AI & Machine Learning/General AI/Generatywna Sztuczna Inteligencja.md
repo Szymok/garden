@@ -37,5 +37,5 @@ GitHub Copilot dopisuje resztę funkcji na podstawie jej nazwy.
 - "Generative AI: A Creative New World" (Sequoia Capital).
 
 ## 👽 Brudnopis
-- Główne ryzyka: Halucynacje, Prawa autorskie (Copyright), Deepfakes, Bias.
+- Główne ryzyka: [[Halucynacje|Halucynacje]], Prawa autorskie (Copyright), Deepfakes, Bias.
 - To najszybciej rozwijająca się technologia konsumencka w historii (ChatGPT - 100 mln użytkowników w 2 miesiące).

@@ -16,7 +16,7 @@ aliases:
 ---
 # 🎯 Definicja
 Konfiguracja Ansible to nie tylko plik `ansible.cfg`. To całe podejście do tego, jak i gdzie uruchamiasz automatyzację.
-Możesz uruchamiać Ansible na **fizycznym serwerze**, **wirtualnej maszynie**, **kontenerze** (Docker), a nawet **WSL** (Windows Subsystem for Linux).
+Możesz uruchamiać Ansible na **fizycznym serwerze**, **wirtualnej maszynie**, **kontenerze** ([[Docker|Docker]]), a nawet **WSL** (Windows Subsystem for Linux).
 
 # 🔑 Kluczowe punkty
 - **Control Node:** Jedyna maszyna, na której instalujesz Ansible.
@@ -27,7 +27,7 @@ Możesz uruchamiać Ansible na **fizycznym serwerze**, **wirtualnej maszynie**, 
 Opcje instalacji:
 1.  **System Package Manager:** `dnf install ansible-core` (Stabilne, systemowe).
 2.  **Pip:** `pip install ansible` (Najnowsze wersje, per-user lub w venv).
-3.  **Kontener:** Obraz Docker z Ansible. Świetne do CI/CD (GitLab Runner), bo zawsze masz czyste środowisko.
+3.  **Kontener:** Obraz [[Docker|Docker]] z Ansible. Świetne do CI/CD (GitLab Runner), bo zawsze masz czyste środowisko.
 
 Zalety Agentless:
 - Szybki start (nic nie instalujesz na celu).

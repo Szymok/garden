@@ -15,7 +15,7 @@ aliases:
   - Zhamak Dehghani
 ---
 # 🎯 Definicja
-**Data Mesh** to paradygmat architektoniczny i organizacyjny, który odchodzi od centralizacji (wielkiego Data Lake/Warehouse) na rzecz **decentralizacji**. Traktuje dane jak **Produkty** (Data as a Product), za które odpowiedzialne są zespoły domenowe (np. Zespół Sprzedaży, Zespół Logistyki), a nie centralny zespół IT/Data.
+**Data Mesh** to paradygmat architektoniczny i organizacyjny, który odchodzi od centralizacji (wielkiego [[Data Lake|Data Lake]]/Warehouse) na rzecz **decentralizacji**. Traktuje dane jak **Produkty** (Data as a Product), za które odpowiedzialne są zespoły domenowe (np. Zespół Sprzedaży, Zespół Logistyki), a nie centralny zespół IT/Data.
 
 # 🔑 Kluczowe punkty
 - **Domain Ownership:** Eksperci od biznesu (Domena) znają swoje dane najlepiej, więc powinni nimi zarządzać.
@@ -31,11 +31,11 @@ Zespół "Analityki" konsumuje ten produkt `Orders` jak zwykłe API, nie musząc
 
 # 💡 Przykład zastosowania
 Netflix lub Zalando.
-Mają setki zespołów deweloperskich. Nie da się mieć jednego centralnego Data Warehouse. Każdy zespół wystawia swoje dane (np. "Odtworzenia Filmów", "Zwroty Towarów") na wspólnej infrastrukturze. Inne zespoły (np. Rekomendacje) subskrybują te dane.
+Mają setki zespołów deweloperskich. Nie da się mieć jednego centralnego [[Data Warehouse|Data Warehouse]]. Każdy zespół wystawia swoje dane (np. "Odtworzenia Filmów", "Zwroty Towarów") na wspólnej infrastrukturze. Inne zespoły (np. Rekomendacje) subskrybują te dane.
 
 ## 📌 Źródła
 - Zhamak Dehghani, "Data Mesh: Delivering Data-Driven Value at Scale".
 
 ## 👽 Brudnopis
 - Data Mesh to trudna zmiana organizacyjna (zmiana kultury), a nie tylko techniczna.
-- Wymaga dojrzałości DevOps w zespołach domenowych.
+- Wymaga dojrzałości [[DevOps|DevOps]] w zespołach domenowych.

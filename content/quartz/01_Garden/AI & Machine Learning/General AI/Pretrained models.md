@@ -24,7 +24,7 @@ aliases:
 - **Oszczędność:** Nie potrzebujesz superkomputera, żeby zacząć.
 
 # 📚 Szczegółowe wyjaśnienie
-Trenowanie modelu takiego jak GPT-4 kosztuje miliony dolarów.
+Trenowanie modelu takiego jak [[GPT-4|GPT-4]] kosztuje miliony dolarów.
 Użycie modelu pretrained kosztuje grosze (lub zero, jeśli jest open-source na Hugging Face).
 Możesz go użyć w trybie:
 1.  **Zero-Shot:** Bez zmian ("Opisz to zdjęcie").

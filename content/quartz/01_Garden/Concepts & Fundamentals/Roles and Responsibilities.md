@@ -12,14 +12,14 @@ aliases:
 ---
 # 🎯 Definicja
 
-**Role i Odpowiedzialności** w Data Governance określają strukturę zarządzania danymi, w której każda osoba i grupa ma przypisane konkretne zadania, od wyznaczania strategii po codzienne dbanie o jakość i bezpieczeństwo konkretnych zbiorów informacji.
+**Role i Odpowiedzialności** w [[Data Governance|Data Governance]] określają strukturę zarządzania danymi, w której każda osoba i grupa ma przypisane konkretne zadania, od wyznaczania strategii po codzienne dbanie o jakość i bezpieczeństwo konkretnych zbiorów informacji.
 
 # 🔑 Kluczowe punkty
 
-*   **Komitet Ładu Danych (Data Governance Committee):** Organ decyzyjny zarządzający politykami, budżetem, ryzykiem i komunikacją.
+*   **Komitet Ładu Danych ([[Data Governance|Data Governance]] Committee):** Organ decyzyjny zarządzający politykami, budżetem, ryzykiem i komunikacją.
 *   **Data Stewards (Opiekunowie danych):** Osoby stosujące zasady ładu wewnątrz jednostek biznesowych (np. Sales, HR, Finance).
 *   **Data Owners (Właściciele danych):** Osoby podejmujące ostateczne decyzje dotyczące konkretnych zbiorów danych, np. zatwierdzanie dostępu.
-*   **Personel IT i DBA:** Techniczni wykonawcy polityk (szyfrowanie, maskowanie, retencja, backup).
+*   **Personel IT i DBA:** Techniczni wykonawcy polityk (szyfrowanie, maskowanie, retencja, [[Backup|backup]]).
 *   **Wiedza to wspólna odpowiedzialność:** Pracownicy biznesowi również są częścią łańcucha bezpieczeństwa i jakości.
 
 # 📚 Szczegółowe wyjaśnienie
@@ -44,4 +44,4 @@ Ważne jest zrozumienie, że ład danych to **odpowiedzialność współdzielona
 
 ## 👽 Brudnopis
 
-Let's talk about the roles and responsibilities inside data governance. First, there's the data governance committee.
+Let's talk about the [[Roles|roles]] and responsibilities inside [[Data Governance|data governance]]. First, there's the [[Data Governance|data governance]] committee.

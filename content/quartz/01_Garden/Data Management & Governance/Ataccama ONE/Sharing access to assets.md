@@ -61,8 +61,8 @@ Poprzez właściwe przypisanie dostępu zapewnił współdzielony model pracy be
 
 ## 📌 Źródła
 
-- Dokumentacja systemu dostępowego platformy danych (np. Ataccama, Collibra, etc.)
-- [Best Practices in Data [[User Management|Access Management]] – Dataversity](https://www.dataversity.net/best-practices-data-access-governance/)
+- Dokumentacja systemu dostępowego platformy danych (np. [[Ataccama|Ataccama]], Collibra, etc.)
+- [Best Practices in Data ___BLOCK_PLACEHOLDER_2___ – Dataversity](https://www.dataversity.net/best-practices-data-access-governance/)
 
 ## 👽 Brudnopis
 

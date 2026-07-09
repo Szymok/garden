@@ -17,7 +17,7 @@ aliases:
   - Data Owner
 ---
 # 🎯 Definicja
-**Governance Roles** to zdefiniowane funkcje i odpowiedzialności przypisane do osób w procesie zarządzania danymi. Określają "kto co może robić" (uprawnienia) oraz "kto za co odpowiada" (odpowiedzialność). Klasyczny trójpodział to: Właściciel, Opiekun (Steward) i Konsument.
+**Governance [[Roles|Roles]]** to zdefiniowane funkcje i odpowiedzialności przypisane do osób w procesie zarządzania danymi. Określają "kto co może robić" (uprawnienia) oraz "kto za co odpowiada" (odpowiedzialność). Klasyczny trójpodział to: Właściciel, Opiekun (Steward) i Konsument.
 
 # 🔑 Kluczowe punkty
 - **Data Owner (Właściciel):** Decydent biznesowy. Odpowiada za budżet, ryzyko i definicje. (Np. Dyrektor Finansowy).
@@ -25,10 +25,10 @@ aliases:
 - **Data Consumer (Konsument):** Użytkownik końcowy. Korzysta z danych do raportów i analiz.
 
 # 📚 Szczegółowe wyjaśnienie
-Twarde rozdzielenie ról jest kluczem do sukcesu Data Governance.
+Twarde rozdzielenie ról jest kluczem do sukcesu [[Data Governance|Data Governance]].
 - Jeśli każdy jest właścicielem, to nikt nie jest.
 - Administrator Systemu (IT) **NIE POWINIEN** być Właścicielem Danych (Biznes). IT tylko trzyma rury, Biznes decyduje, co w nich płynie.
-W narzędziach (Ataccama, Alation), Role przekładają się na przyciski: Steward ma przycisk "Edytuj Definicję", Konsument ma tylko "Zgłoś Błąd".
+W narzędziach ([[Ataccama|Ataccama]], Alation), Role przekładają się na przyciski: Steward ma przycisk "Edytuj Definicję", Konsument ma tylko "Zgłoś Błąd".
 
 # 💡 Przykład zastosowania
 W wierszu tabeli `salary_amount` (kwota wynagrodzenia):
@@ -41,4 +41,4 @@ W wierszu tabeli `salary_amount` (kwota wynagrodzenia):
 
 ## 👽 Brudnopis
 - Oprócz ról biznesowych są role techniczne: Custodian (Administrator bazy), System Owner.
-- Najczęstszy błąd wdrożeń: mianowanie Stewardów bez dania im czasu na pracę (Stewardship jako 3. etat).
+- Najczęstszy błąd wdrożeń: mianowanie Stewardów bez dania im czasu na pracę ([[Stewardship|Stewardship]] jako 3. etat).

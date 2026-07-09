@@ -22,7 +22,7 @@ Dla użytkownika biznesowego wygląda jak zwykła tabela. Dla systemu to wynik s
 
 # 🔑 Kluczowe punkty
 - **Zastosowanie:** Łączenie danych, Filtrowanie, Maskowanie, Obliczanie kolumn, Parsowanie XML/JSON.
-- **Edycja:** Tworzone w ONE Desktop, publikowane do ONE Web.
+- **Edycja:** Tworzone w [[ONE Desktop|ONE Desktop]], publikowane do ONE Web.
 - **Profilowanie:** Możesz profilować VCI tak samo jak zwykłe tabele.
 
 # 📚 Szczegółowe wyjaśnienie
@@ -36,11 +36,11 @@ Analitycy dostają dostęp tylko do `Customers_Safe`. Widzą dane, ale z zamazan
 Dział marketingu potrzebuje listy "VIPów".
 VIP to klient, który wydał > 1000 PLN.
 Nie ma takiej tabeli w bazie.
-Tworzysz VCI z logiką SQL/EtL: `SELECT * FROM orders JOIN customers ... WHERE sum > 1000`.
+Tworzysz VCI z logiką [[SQL|SQL]]/EtL: `SELECT * FROM orders JOIN customers ... WHERE sum > 1000`.
 Wynik publikujesz jako VCI "VIP Customers".
 
 ## 📌 Źródła
-- Ataccama ONE Documentation - Virtual Catalog Items.
+- [[Ataccama|Ataccama]] ONE Documentation - [[Virtual [[Catalog Items|Catalog Items]]|Virtual [[Catalog Items|Catalog Items]]]].
 
 ## 👽 Brudnopis
-- Podobne do "Views" (Widoków) w bazie danych SQL, ale działają na poziomie warstwy aplikacji Ataccama, więc mogą łączyć dane z różnych baz (Federation).
+- Podobne do "Views" (Widoków) w bazie danych [[SQL|SQL]], ale działają na poziomie warstwy aplikacji [[Ataccama|Ataccama]], więc mogą łączyć dane z różnych baz (Federation).

@@ -23,13 +23,13 @@ Zamiast kupować fizyczny serwer, wynajmujesz moc obliczeniową (procesor, RAM) 
 # 🔑 Kluczowe punkty
 - **EC2:** Wirtualne maszyny (Czysty serwer).
 - **Lambda:** Serverless (Tylko kod, nie obchodzą Cię serwery).
-- **ECS/EKS:** Kontenery (Docker/Kubernetes).
+- **ECS/EKS:** Kontenery ([[Docker|Docker]]/[[Kubernetes|Kubernetes]]).
 
 # 📚 Szczegółowe wyjaśnienie
 1.  **EC2 (Elastic Compute Cloud):** Jak wynajęty laptop. Masz pełną kontrolę nad systemem operacyjnym. Dobry do wszystkiego, ale musisz zarządzać systemem.
 2.  **Lambda:** Jak funkcja w Excelu. Uruchamia się, gdy coś się stanie (np. ktoś wgra plik), robi swoje i znika. Płacisz za milisekundy pracy. Idealne do przetwarzania zdarzeń.
 3.  **ECS (Elastic Container Service):** Łatwy sposób na uruchomienie Dockerów.
-4.  **EKS (Elastic Kubernetes Service):** Trudny sposób na uruchomienie Dockerów (Kubernetes), ale daje pełną kontrolę nad orkiestracją.
+4.  **EKS (Elastic [[Kubernetes|Kubernetes]] Service):** Trudny sposób na uruchomienie Dockerów ([[Kubernetes|Kubernetes]]), ale daje pełną kontrolę nad orkiestracją.
 
 # 💡 Przykład zastosowania
 - Strona internetowa WordPress -> **EC2**.

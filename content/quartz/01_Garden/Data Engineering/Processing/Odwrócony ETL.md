@@ -17,7 +17,7 @@ aliases:
   - Aktywacja Danych
 ---
 # 🎯 Definicja
-**Odwrócony ETL (Reverse ETL)** to proces wysyłania danych **z Hurtowni Danych (Data Warehouse) z powrotem do systemów operacyjnych** (CRM, Marketing, Support). To zamykanie pętli danych.
+**Odwrócony ETL (Reverse ETL)** to proces wysyłania danych **z Hurtowni Danych ([[Data Warehouse|Data Warehouse]]) z powrotem do systemów operacyjnych** (CRM, Marketing, Support). To zamykanie pętli danych.
 
 # 🔑 Kluczowe punkty
 - **Kierunek:** Tradycyjny ETL: Aplikacja -> Hurtownia. Reverse ETL: Hurtownia -> Aplikacja.
@@ -26,7 +26,7 @@ aliases:
 
 # 📚 Szczegółowe wyjaśnienie
 Po co to robić?
-Hurtownia (Snowflake) ma "pełen obraz" klienta (dane ze strony www, z płatności, z supportu). System CRM (Salesforce) ma tylko dane sprzedażowe.
+Hurtownia ([[Snowflake|Snowflake]]) ma "pełen obraz" klienta (dane ze strony www, z płatności, z supportu). System CRM (Salesforce) ma tylko dane sprzedażowe.
 Reverse ETL bierze np. obliczony w hurtowni "Lifetime Value" i wkleja go do Salesforce'a, żeby handlowiec wiedział, z kim rozmawia.
 
 # 💡 Przykład zastosowania

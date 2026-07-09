@@ -16,7 +16,7 @@ aliases:
   - Podział tekstu
 ---
 # 🎯 Definicja
-**Tokenizacja** to tłumaczenie tekstu (zrozumiałego dla ludzi) na liczby (zrozumiałe dla modelu).
+**[[Tokenizacja|Tokenizacja]]** to tłumaczenie tekstu (zrozumiałego dla ludzi) na liczby (zrozumiałe dla modelu).
 Model nie widzi słowa "Kot". Widzi liczbę `1532`.
 Tekst jest cięty na kawałki (Tokeny).
 
@@ -28,11 +28,11 @@ Tekst jest cięty na kawałki (Tokeny).
 # 📚 Szczegółowe wyjaśnienie
 Najpopularniejszy algorytm to **BPE (Byte Pair Encoding)**.
 Szuka najczęstszych par znaków i łączy je w token.
-Przykład: "Tokenizacja" może być pocięta na `Token` + `i` + `zacja`.
-Dla języka polskiego tokenizacja jest często mniej wydajna (zużywa więcej tokenów na to samo zdanie) niż dla angielskiego, bo słowa są bardziej skomplikowane gramatycznie.
+Przykład: "[[Tokenizacja|Tokenizacja]]" może być pocięta na `Token` + `i` + `zacja`.
+Dla języka polskiego [[Tokenizacja|tokenizacja]] jest często mniej wydajna (zużywa więcej tokenów na to samo zdanie) niż dla angielskiego, bo słowa są bardziej skomplikowane gramatycznie.
 
 # 💡 Przykład zastosowania
-Liczysz koszt użycia API GPT-4.
+Liczysz koszt użycia API [[GPT-4|GPT-4]].
 Tekst: "Napisz mi raport." (3 słowa).
 Tokeny:
 1. `Napisz`

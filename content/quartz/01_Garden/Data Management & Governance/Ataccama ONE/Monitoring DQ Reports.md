@@ -16,7 +16,7 @@ aliases:
   - DQ Reporting
 ---
 # 🎯 Definicja
-**Monitoring DQ Reports** to automatycznie generowane raporty w Ataccama ONE, które pokazują stan zdrowia Twoich danych po każdym sprawdzaniu (Run). Widzisz w nich trendy (czy jest lepiej, czy gorzej) i anomalie.
+**Monitoring DQ [[Reports|Reports]]** to automatycznie generowane raporty w [[Ataccama|Ataccama]] ONE, które pokazują stan zdrowia Twoich danych po każdym sprawdzaniu (Run). Widzisz w nich trendy (czy jest lepiej, czy gorzej) i anomalie.
 
 # 🔑 Kluczowe punkty
 - **Sections:** Możesz dzielić raport na sekcje logiczne (np. "Dane Kontaktowe", "Dane Finansowe"), żeby Stewardzi nie musieli przekopywać się przez wszystko.
@@ -24,7 +24,7 @@ aliases:
 - **Interactivity:** Możesz kliknąć w słupek błędu i zobaczyć konkretne, zepsute rekordy (Drill-down).
 
 # 📚 Szczegółowe wyjaśnienie
-Raporty są dostępne w zakładce **Report** w każdym projekcie monitoringu (Monitoring Project).
+Raporty są dostępne w zakładce **Report** w każdym projekcie monitoringu ([[Monitoring Project|Monitoring Project]]).
 Ważne: Po zmianie konfiguracji raportu (np. dodaniu nowej sekcji), musisz uruchomić monitoring (Run) jeszcze raz, żeby zobaczyć zmiany.
 
 # 💡 Przykład zastosowania
@@ -34,7 +34,7 @@ Klika. Okazuje się, że wczorajszy import z nowego systemu CRM przyniósł 5000
 Eksportuje te rekordy do Excela i wysyła do IT z prośbą o poprawkę importu.
 
 ## 📌 Źródła
-- Ataccama ONE Monitoring documentation.
+- [[Ataccama|Ataccama]] ONE Monitoring documentation.
 
 ## 👽 Brudnopis
 - Raport powinien być czytelny dla BIZNESU. Nie nazywaj sekcji "Rule_45_A", nazwij ją "Poprawność numerów PESEL".

@@ -16,7 +16,7 @@ aliases:
   - Konsola GraphQL
 ---
 # 🎯 Definicja
-**GraphQL Playground** to interaktywne środowisko (IDE) działające w przeglądarce, które służy do testowania, pisania i debugowania zapytań GraphQL. Jest tym dla GraphQL, czym Postman jest dla REST API, ale zazwyczaj jest wbudowane bezpośrednio w serwer aplikacji (np. w Ataccama ONE).
+**GraphQL Playground** to interaktywne środowisko (IDE) działające w przeglądarce, które służy do testowania, pisania i debugowania zapytań GraphQL. Jest tym dla GraphQL, czym Postman jest dla REST API, ale zazwyczaj jest wbudowane bezpośrednio w serwer aplikacji (np. w [[Ataccama|Ataccama]] ONE).
 
 # 🔑 Kluczowe punkty
 - **Autocomplete:** Dzięki [[GraphQL Introspection|introspekcji]], Playground podpowiada nazwy pól i błędy w czasie rzeczywistym.
@@ -24,7 +24,7 @@ aliases:
 - **Historie (History):** Pamięta Twoje ostatnie zapytania.
 
 # 📚 Szczegółowe wyjaśnienie
-Aby użyć Playground w Ataccama ONE:
+Aby użyć Playground w [[Ataccama|Ataccama]] ONE:
 1. Wejdź na adres: `https://<twoja-instancja>/graphql`.
 2. Otwórz panel **HTTP HEADERS** (na dole).
 3. Dodaj autoryzację (inaczej dostaniesz błąd 401/403):

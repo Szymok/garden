@@ -24,7 +24,7 @@ aliases:
 
 # 🔑 Kluczowe punkty
 
-- Bazy danych można podzielić na relacyjne (SQL) i nierelacyjne (NoSQL).
+- Bazy danych można podzielić na relacyjne ([[SQL|SQL]]) i nierelacyjne (NoSQL).
 - Relacyjne bazy danych przechowują dane w tabelach powiązanych kluczami.
 - NoSQL umożliwia przechowywanie danych dokumentowych, klucz-wartość, grafowych lub kolumnowych.
 - Bazy danych wspierają transakcje, zapewniając integralność i spójność danych.
@@ -35,7 +35,7 @@ aliases:
 ## Rodzaje baz danych
 
 - **Relacyjne bazy danych (RDBMS):**  
-    Dane są przechowywane w tabelach z precyzyjną strukturą, zapytania realizowane za pomocą języka SQL. Przykłady: MySQL, PostgreSQL, Oracle DB.
+    Dane są przechowywane w tabelach z precyzyjną strukturą, zapytania realizowane za pomocą języka [[SQL|SQL]]. Przykłady: MySQL, PostgreSQL, Oracle DB.
     
 - **NoSQL:**  
     Przechowuje dane w mniej ustrukturyzowanych formatach, skalowalnych horyzontalnie. Typy: dokumentowe (MongoDB), grafowe (Neo4j), kolumnowe (Cassandra), klucz-wartość (Redis).
@@ -62,8 +62,8 @@ Relacyjna baza danych może przechowywać informacje o klientach, zamówieniach 
 ## 👽 Brudnopis
 
 - Podstawy: dane, tabela, wiersz, kolumna
-- SQL do manipulacji danych: SELECT, INSERT, UPDATE, DELETE
+- [[SQL|SQL]] do manipulacji danych: SELECT, INSERT, UPDATE, DELETE
 - NoSQL: elastyczność vs. brak spójności ACID w niektórych systemach
 - Wdrażanie: lokalnie, chmura, hybrydy
-- Scalanie, backup, replikacja — systemy wysokiej dostępności
+- Scalanie, [[Backup|backup]], replikacja — systemy wysokiej dostępności
 - Kluczowe technologie i narzędzia: MySQL, PostgreSQL, MongoDB, Redis, Cassandra, Neo4j.

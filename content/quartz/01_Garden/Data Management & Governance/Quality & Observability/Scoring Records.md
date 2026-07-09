@@ -26,7 +26,7 @@ Np. `Score = 0` (Idealny), `Score = 100` (Literówka), `Score = 1,000,000` (Brak
 - **Agregacja:** W raporcie widzisz "Średni Score" lub "Liczbę rekordów z Score > 1000".
 
 # 📚 Szczegółowe wyjaśnienie
-Model punktacji w Ataccama często wygląda tak:
+Model punktacji w [[Ataccama|Ataccama]] często wygląda tak:
 - `0`: Valid.
 - `< 1,000`: Drobna korekta (np. usunięcie spacji).
 - `< 10,000`: Poważna korekta (np. zmiana `W-wa` na `Warszawa`).
@@ -41,7 +41,7 @@ Na górze widzisz rekordy bez Nazwiska i PESELu (Score 5 mln). To są "duchy", k
 Na dole widzisz rekordy, gdzie w ulicy jest literówka "Ul." zamiast "ul." (Score 50). To może poczekać.
 
 ## 📌 Źródła
-- Ataccama ONE DQ Scoring Guide.
+- [[Ataccama|Ataccama]] ONE DQ Scoring Guide.
 
 ## 👽 Brudnopis
-- Pamiętaj o kolumnach technicznych: `sco_email` (liczba) i `exp_email` (kod). To standard w Ataccama.
+- Pamiętaj o kolumnach technicznych: `sco_email` (liczba) i `exp_email` (kod). To standard w [[Ataccama|Ataccama]].

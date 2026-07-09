@@ -33,11 +33,11 @@ Miara musi być **addytywna** (można dodawać sprzedaż z wczoraj i dziś) lub 
 # 💡 Przykład zastosowania
 Dashboard Dyrektora Sprzedaży.
 Miara: **Przychód (Revenue)**.
-Wymiary: **Region**, **Produkt**, **Handlowiec**.
-Dyrektor "kroi" (Slice & Dice) miarę Przychodu przez różne wymiary, żeby zobaczyć, kto sprzedaje najlepiej.
+[[Wymiary|Wymiary]]: **Region**, **Produkt**, **Handlowiec**.
+Dyrektor "kroi" (Slice & Dice) miarę Przychodu przez różne [[Wymiary|wymiary]], żeby zobaczyć, kto sprzedaje najlepiej.
 
 ## 📌 Źródła
-- "The Data Warehouse Toolkit" (Kimball).
+- "The [[Data Warehouse|Data Warehouse]] Toolkit" (Kimball).
 
 ## 👽 Brudnopis
 - Ważne: Spójna definicja. Jeśli Marketing liczy "Sprzedaż" jako "zamówione", a Księgowość jako "opłacone", to mają różne Miary o tej samej nazwie. To prosty przepis na katastrofę na spotkaniu zarządu.

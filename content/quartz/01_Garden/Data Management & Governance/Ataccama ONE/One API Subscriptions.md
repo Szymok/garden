@@ -1,7 +1,7 @@
-# One API Subscriptions
+# One API [[Subscriptions|Subscriptions]]
 
 🎯 **Definicja**
-**Subskrypcje (Subscriptions)** w GraphQL to mechanizm służący do przesyłania aktualizacji danych z serwera do klienta w czasie rzeczywistym. Odbywa się to poprzez ustanowienie stałego, dwukierunkowego połączenia (zazwyczaj przy użyciu protokołu WebSockets). W Ataccama ONE subskrypcje są wykorzystywane do śledzenia zewnętrznych zdarzeń w [[Metadata|modelu metadanych (MMM Eventing System)]]. Do wywoływania zapytań subskrypcji stosuje się [[Ataccama Using Playground|GraphQL Playground]].
+**Subskrypcje ([[Subscriptions|Subscriptions]])** w GraphQL to mechanizm służący do przesyłania aktualizacji danych z serwera do klienta w czasie rzeczywistym. Odbywa się to poprzez ustanowienie stałego, dwukierunkowego połączenia (zazwyczaj przy użyciu protokołu WebSockets). W [[Ataccama|Ataccama]] ONE subskrypcje są wykorzystywane do śledzenia zewnętrznych zdarzeń w [[Metadata|modelu metadanych (MMM Eventing System)]]. Do wywoływania zapytań subskrypcji stosuje się [[Ataccama Using Playground|GraphQL Playground]].
 
 ---
 
@@ -57,7 +57,7 @@ subscription ($id: GID!, $ackLimit: Int!, $entityType: String) {
 ---
 
 ### 2. Potwierdzanie odebranych zdarzeń (Acknowledge)
-Po pomyślnym przetworzeniu paczki zdarzeń po stronie klienta, należy poinformować o tym serwer przy użyciu [[One API Mutations|mutacji]] `_acknowledgeExternalEvents`. Oczyszcza to kolejkę po stronie Ataccama ONE.
+Po pomyślnym przetworzeniu paczki zdarzeń po stronie klienta, należy poinformować o tym serwer przy użyciu [[One API Mutations|mutacji]] `_acknowledgeExternalEvents`. Oczyszcza to kolejkę po stronie [[Ataccama|Ataccama]] ONE.
 
 #### Mutacja potwierdzająca zdarzenia (do podanego identyfikatora włącznie):
 ```graphql
@@ -103,5 +103,5 @@ mutation unsubscribe($id: GID!) {
 ---
 
 📌 **Źródła**
-- Ataccama ONE Eventing System documentation
-- GraphQL Subscriptions Specification
+- [[Ataccama|Ataccama]] ONE Eventing System documentation
+- GraphQL [[Subscriptions|Subscriptions]] Specification

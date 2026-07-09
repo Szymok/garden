@@ -30,7 +30,7 @@ aliases:
 - **Deployment**: deklaratywny opis pożądanego stanu aplikacji
 - **Service**: stały endpoint sieciowy do grupy podów
 - **Helm**: menedżer pakietów dla K8s (jak apt/brew dla K8s)
-- **Ataccama ONE** na produkcji wdraża się przez Helm charts na K8s
+- **[[Ataccama|Ataccama]] ONE** na produkcji wdraża się przez Helm charts na K8s
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -100,7 +100,7 @@ helm install ataccama-one ataccama/one \
 
 # 💡 Przykład zastosowania
 
-**Ataccama w chmurze klienta**: klient instaluje Ataccama ONE na AWS EKS (Elastic Kubernetes Service). Helm chart definiuje wszystkie komponenty (DPE, web aplikacja, Keycloak, PostgreSQL). K8s restartuje automatycznie pody które się zawiesiły i skaluje DPE w górę gdy rosnie wolumen danych do przetworzenia.
+**[[Ataccama|Ataccama]] w chmurze klienta**: klient instaluje [[Ataccama|Ataccama]] ONE na AWS EKS (Elastic Kubernetes Service). Helm chart definiuje wszystkie komponenty (DPE, web aplikacja, [[Keycloak|Keycloak]], PostgreSQL). K8s restartuje automatycznie pody które się zawiesiły i skaluje DPE w górę gdy rosnie wolumen danych do przetworzenia.
 
 # 📌 Źródła
 

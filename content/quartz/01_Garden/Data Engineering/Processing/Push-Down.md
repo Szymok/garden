@@ -21,14 +21,14 @@ aliases:
 
 # 🎯 Definicja
 
-**Push-Down** (lub optymalizacja push-down) to technika polegająca na przesuwaniu logiki transformacji lub przetwarzania danych jak najbliżej ich źródła — zazwyczaj do bazy danych — zamiast realizowania tej logiki po stronie warstwy pośredniej, np. silnika ETL lub hurtowni danych. Dzięki temu ogranicza się przesyłanie danych przez sieć, poprawiając wydajność całego procesu przetwarzania.
+**Push-Down** (lub optymalizacja push-down) to technika polegająca na przesuwaniu logiki transformacji lub przetwarzania danych jak najbliżej ich źródła — zazwyczaj do [[Bazy danych|bazy danych]] — zamiast realizowania tej logiki po stronie warstwy pośredniej, np. silnika ETL lub hurtowni danych. Dzięki temu ogranicza się przesyłanie danych przez sieć, poprawiając wydajność całego procesu przetwarzania.
 
 # 🔑 Kluczowe punkty
 
 - Push-down minimalizuje ilość przesyłanych danych przez sieć, wykonując transformacje bezpośrednio „tam, gdzie dane żyją”.
 - Wykorzystuje wydajność silników baz danych (np. PostgreSQL, BigQuery, Oracle) zamiast procesować dane lokalnie.
-- Szczególnie skuteczny w systemach integracji danych, np. podczas ekstrakcji z OLTP do DWH.
-- Może dotyczyć filtrowania, joinów, agregacji i innych operacji wykonywanych w SQL.
+- Szczególnie skuteczny w systemach integracji danych, np. podczas ekstrakcji z [[OLTP|OLTP]] do DWH.
+- Może dotyczyć filtrowania, joinów, agregacji i innych operacji wykonywanych w [[SQL|SQL]].
 - Często stosowany w warstwie semantycznej, wirtualizacji danych i nowoczesnych systemach ELT.
 
 # 📚 Szczegółowe wyjaśnienie
@@ -43,7 +43,7 @@ Zamiast pobierać całą tabelę z bazy i przetwarzać ją lokalnie, przekształ
 
 ### Z push-down:
 
-- Narzędzie wysyła zapytanie SQL:
+- Narzędzie wysyła zapytanie [[SQL|SQL]]:
 
 ```sql
 SELECT * FROM orders WHERE year = 2025;
@@ -53,9 +53,9 @@ SELECT * FROM orders WHERE year = 2025;
 
 ## Przykłady zastosowań
 
-- **ETL/ELT**: Narzędzia takie jak [[dbt]], Airbyte, Informatica, Talend, przy dobrej konfiguracji, potrafią zaprojektować zapytania tak, by transformacje wykonywały się bezpośrednio w źródle lub w hurtowni.
+- **ETL/ELT**: Narzędzia takie jak [[dbt]], [[Airbyte|Airbyte]], Informatica, Talend, przy dobrej konfiguracji, potrafią zaprojektować zapytania tak, by transformacje wykonywały się bezpośrednio w źródle lub w hurtowni.
 - **[[Wirtualizacja Danych]] ([[Wirtualizacja Danych|Data Virtualization]])**: Narzędzia typu Denodo, Trino, Dremio wykorzystują push-down, aby unikać lokalnego przetwarzania danych.
-- **[[Warstwa Semantyczna]] (Semantic Layer)**: Looker, Cube.dev, AtScale potrafią generować SQL push-down podczas renderowania dashboardów.
+- **[[Warstwa Semantyczna]] ([[Semantic Layer|Semantic Layer]])**: Looker, Cube.dev, AtScale potrafią generować [[SQL|SQL]] push-down podczas renderowania dashboardów.
 
 ## Korzyści z wykorzystania push-down
 
@@ -69,7 +69,7 @@ SELECT * FROM orders WHERE year = 2025;
 ## Potencjalne wyzwania
 
 - Nie wszystkie integracje/silniki wspierają efektywny push-down.
-- Może zwiększyć obciążenie systemów źródłowych operacyjnych (OLTP).
+- Może zwiększyć obciążenie systemów źródłowych operacyjnych ([[OLTP|OLTP]]).
 - Wymaga dobrej znajomości możliwości targetowanego silnika bazodanowego.
 - W niektórych przypadkach wymaga specjalnych konfiguracji/adapterów.
 
@@ -86,13 +86,13 @@ Zespół [[Inżynieria Danych|data engineering]] zbudował pipeline do kopiowani
 
 ## 👽 Brudnopis
 
-- Push-down = SQL wysyłany do źródła zamiast pobrania i transformacji lokalnie
+- Push-down = [[SQL|SQL]] wysyłany do źródła zamiast pobrania i transformacji lokalnie
 - Kluczowe w ELT (nie robi transformacji po pobraniu → szybciej, taniej)
-- Przykłady: [[dbt]] vs Python [[Pandas]]: [[dbt]] pushdown = SQL w silniku, [[Pandas]] lokalnie
-- Data Lake → pushdown do Delta/Parquet przez [[DuckDB]], Presto
-- Siła nowoczesnych [[Data Lakehouse|lakehouse]]: federacyjny SQL z push-down + vectorizzata
-- Nie każdy konektor obsługuje pushdown (np. Airbyte legacy connector vs native JDBC)
+- Przykłady: [[dbt]] vs Python [[Pandas]]: [[dbt]] pushdown = [[SQL|SQL]] w silniku, [[Pandas]] lokalnie
+- [[Data Lake|Data Lake]] → pushdown do Delta/Parquet przez [[DuckDB]], Presto
+- Siła nowoczesnych [[Data Lakehouse|lakehouse]]: federacyjny [[SQL|SQL]] z push-down + vectorizzata
+- Nie każdy konektor obsługuje pushdown (np. [[Airbyte|Airbyte]] legacy connector vs native JDBC)
 - Sprzężenie z cost-based planner – warunki, indeksy, sort merge join
-- Wady: limitacja logiki, zależność od wersji SQL w źródle, security na QL level
+- Wady: limitacja logiki, zależność od wersji [[SQL|SQL]] w źródle, security na QL level
 
 ---

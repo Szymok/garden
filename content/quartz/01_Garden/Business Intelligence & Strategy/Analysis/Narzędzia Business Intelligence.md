@@ -18,10 +18,10 @@ aliases:
   - Narzędzia analityczne
 ---
 # 🎯 Definicja
-**Narzędzia BI (Business Intelligence)** to oprogramowanie, które zamienia surowe dane (miliony wierszy w Excelu/Bazie) w **wizualne informacje** (wykresy, mapy, dashboardy). Pozwalają biznesowi zobaczyć "co się dzieje" bez proszenia IT o wyciąg z bazy.
+**Narzędzia BI ([[Business Intelligence|Business Intelligence]])** to oprogramowanie, które zamienia surowe dane (miliony wierszy w Excelu/Bazie) w **wizualne informacje** (wykresy, mapy, dashboardy). Pozwalają biznesowi zobaczyć "co się dzieje" bez proszenia IT o wyciąg z bazy.
 
 # 🔑 Kluczowe punkty
-- **Wizualizacja:** Ludzki mózg szybciej widzi trend na wykresie niż w tabeli.
+- **[[Wizualizacja|Wizualizacja]]:** Ludzki mózg szybciej widzi trend na wykresie niż w tabeli.
 - **Self-Service:** Użytkownik sam może "wyklikać" raport.
 - **Integracja:** Łączą dane z wielu źródeł (CRM + ERP + Excel).
 
@@ -29,7 +29,7 @@ aliases:
 Rynek dzieli się na kilku graczy:
 1.  **Power BI (Microsoft):** Lider rynku. Świetnie zintegrowany z Excelem/Office. Tani na start.
 2.  **Tableau (Salesforce):** "Mercedes" wśród BI. Piękne wizualizacje, droższy, lubiany przez artystów danych.
-3.  **Looker (Google):** Nowoczesne podejście (Semantic Layer). Piszesz kod (LookML), a biznesowi użytkownicy mają gotowe klocki.
+3.  **Looker (Google):** Nowoczesne podejście ([[Semantic Layer|Semantic Layer]]). Piszesz kod (LookML), a biznesowi użytkownicy mają gotowe klocki.
 4.  **Superset / Metabase:** Open Source. Dedykowane dla startupów i inżynierów.
 
 # 💡 Przykład zastosowania

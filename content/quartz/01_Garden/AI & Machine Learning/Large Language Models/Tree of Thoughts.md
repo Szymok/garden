@@ -39,7 +39,7 @@ ToT:
 1.  "Mogę dodać 4+9 (13)... Mogę pomnożyć 4*9 (36)..." (Generuje gałęzie).
 2.  "36 to za dużo, trudno będzie zejść do 24. 13 jest obiecujące." (Ocena).
 3.  Idzie ścieżką 13...
-Zwykły GPT-4 często "strzela" i się myli. ToT rozwiązuje to systematycznie.
+Zwykły [[GPT-4|GPT-4]] często "strzela" i się myli. ToT rozwiązuje to systematycznie.
 
 ## 📌 Źródła
 - "Tree of Thoughts: Deliberate Problem Solving with Large Language Models" (Yao et al., 2023).

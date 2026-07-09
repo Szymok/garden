@@ -15,7 +15,7 @@ aliases:
   - Linux requirements
 ---
 # 🎯 Definicja
-Lista systemów operacyjnych (dystrybucji Linux) oficjalnie wspieranych dla instalacji Kontrolera Ansible oraz Serwerów Docelowych Ataccama ONE.
+Lista systemów operacyjnych (dystrybucji Linux) oficjalnie wspieranych dla instalacji Kontrolera Ansible oraz Serwerów Docelowych [[Ataccama|Ataccama]] ONE.
 
 # 🔑 Kluczowe punkty
 - **Standardowe dystrybucje:** Wspierane są standardowe instalacje systemów (np. RHEL, AlmaLinux).

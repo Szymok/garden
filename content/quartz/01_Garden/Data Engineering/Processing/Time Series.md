@@ -30,7 +30,7 @@ Analiza szeregów czasowych (Forecasting) służy do przewidywania przyszłości
 Metody:
 1.  **Klasyczne:** ARIMA, Exponential Smoothing. (Dobre dla prostych trendów).
 2.  **ML:** XGBoost (wymaga "Lag Features" - dodania kolumn `sprzedaż_wczoraj`, `sprzedaż_tydzień_temu`).
-3.  **Deep Learning:** LSTM, Transformers, Prophet (Facebooka).
+3.  **[[Deep Learning|Deep Learning]]:** LSTM, Transformers, Prophet (Facebooka).
 
 # 💡 Przykład zastosowania
 Piekarnia chce wiedzieć, ile chleba upiec jutro.

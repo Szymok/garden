@@ -25,7 +25,7 @@ W systemach danych to nie tylko login i hasło, ale skomplikowana macierz uprawn
 - **Grupa:** Zbiór użytkowników (np. "Dział Marketingu").
 
 # 📚 Szczegółowe wyjaśnienie
-W nowoczesnych platformach (jak Ataccama ONE), User Management jest często zintegrowany z korporacyjnym SSO.
+W nowoczesnych platformach (jak [[Ataccama|Ataccama]] ONE), User Management jest często zintegrowany z korporacyjnym SSO.
 Użytkownik nie zakłada konta. Loguje się firmowym mailem.
 System automatycznie przypisuje mu rolę na podstawie jego działu w Active Directory.
 Uprawnienia dzielą się na:

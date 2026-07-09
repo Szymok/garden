@@ -24,7 +24,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Uczenie maszynowe (machine learning, ML)** to dziedzina sztucznej inteligencji (AI), która umożliwia systemom komputerowym **uczenie się z danych** i podejmowanie decyzji lub przewidywań **bez jawnego programowania reguł**. Główna zasada ML polega na wykrywaniu wzorców i zależności w danych, które pozwalają na tworzenie modeli predykcyjnych i systemów adaptacyjnych.
+**Uczenie maszynowe ([[Machine Learning|machine learning]], ML)** to dziedzina sztucznej inteligencji (AI), która umożliwia systemom komputerowym **uczenie się z danych** i podejmowanie decyzji lub przewidywań **bez jawnego programowania reguł**. Główna zasada ML polega na wykrywaniu wzorców i zależności w danych, które pozwalają na tworzenie modeli predykcyjnych i systemów adaptacyjnych.
 
 # 🔑 Kluczowe punkty
 
@@ -86,7 +86,7 @@ System korzysta z danych z wielu źródeł, modeluje je przy użyciu [[Lasy loso
 - dane = paliwo dla algorytmu
 - supervised: dane etykietowane, unsupervised: bez etykiet
 - najpierw modele proste (baseline), potem tuning, model ensemble i deep
-- ważne: jakość danych, nie tylko wybór algorytmu
+- ważne: [[Jakość Danych|jakość danych]], nie tylko wybór algorytmu
 - pipelines ML = preprocessing + training + deployment
 
 ---

@@ -20,12 +20,12 @@ aliases:
 # 🔑 Kluczowe punkty
 - **Wejścia (Inputs):** Dane (x1, x2...), np. jasność piksela.
 - **Wagi (Weights):** Siła połączenia (w1, w2...). "Jak ważne jest to wejście?". Uczenie sieci to po prostu szukanie odpowiednich wag.
-- **Funkcja Aktywacji (Activation):** Decyzja. "Jeśli suma przekracza 5, wyślij 1. Jeśli nie, wyślij 0" (np. ReLU, Sigmoid).
+- **[[Funkcja aktywacji|Funkcja Aktywacji]] (Activation):** Decyzja. "Jeśli suma przekracza 5, wyślij 1. Jeśli nie, wyślij 0" (np. [[ReLU|ReLU]], Sigmoid).
 
 # 📚 Szczegółowe wyjaśnienie
 Matematycznie neuron to: `y = f(suma(x * w) + b)`.
 Pojedynczy neuron (Perceptron) potrafi rozwiązać tylko proste problemy liniowe (np. oddzielić czarne kropki od białych kreską).
-Ale miliony neuronów połączonych w warstwy tworzą **Sieć Neuronową** (Deep Learning), która potrafi rozpoznawać twarze, tłumaczyć języki i pisać wiersze (LLM).
+Ale miliony neuronów połączonych w warstwy tworzą **Sieć Neuronową** ([[Deep Learning|Deep Learning]]), która potrafi rozpoznawać twarze, tłumaczyć języki i pisać wiersze (LLM).
 
 # 💡 Przykład zastosowania
 Neuron decydujący: "Czy iść na spacer?".
@@ -37,7 +37,7 @@ Suma: (1 * -10) + (1 * 5) + (1 * 3) = -2.
 Wynik ujemny -> Nie idę. (Brak aktywacji).
 
 ## 📌 Źródła
-- "Neural Networks and Deep Learning" (Michael Nielsen).
+- "[[Neural Networks|Neural Networks]] and [[Deep Learning|Deep Learning]]" (Michael Nielsen).
 
 ## 👽 Brudnopis
 - Biologiczne neurony są dużo bardziej skomplikowane, ale matematyczna abstrakcja wystarczy, by zbudować ChatGPT.

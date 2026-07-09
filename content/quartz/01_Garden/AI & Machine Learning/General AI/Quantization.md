@@ -53,7 +53,7 @@ Q4_K_M
 └───── Liczba bitów na wagę
 ```
 
-## Jak używać z Ollama
+## Jak używać z [[Ollama|Ollama]]
 
 ```bash
 # Ollama automatycznie dobiera odpowiedni GGUF
