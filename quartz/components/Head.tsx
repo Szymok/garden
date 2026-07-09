@@ -106,6 +106,19 @@ export default (() => {
             return resource
           }
         })}
+        <script
+          defer
+          src="https://umami.skszymon.eu/recorder.js"
+          data-website-id="d367340a-2817-4e84-be17-018b27dd0d4a"
+          data-sample-rate="0.15"
+          data-mask-level="moderate"
+          data-max-duration="300000"
+        ></script>
+        <script
+          defer
+          src="https://umami.skszymon.eu/script.js"
+          data-website-id="d367340a-2817-4e84-be17-018b27dd0d4a"
+        ></script>
       </head>
     )
   }
