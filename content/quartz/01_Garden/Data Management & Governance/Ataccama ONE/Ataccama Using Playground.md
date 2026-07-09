@@ -1,16 +1,16 @@
 # Ataccama Using Playground
 
 🎯 **Definicja**
-**GraphiQL (dawniej GraphQL Playground)** to interaktywne, zintegrowane środowisko programistyczne (IDE) służące do pisania, testowania oraz eksplorowania API GraphQL bezpośrednio w Ataccama ONE. Służy jako konsola deweloperska do uruchamiania zapytań (queries), mutacji (mutations) i subskrypcji (subscriptions).
+**GraphiQL (dawniej GraphQL Playground)** to interaktywne, zintegrowane środowisko programistyczne (IDE) służące do pisania, testowania oraz eksplorowania [[One API Queries|API GraphQL]] bezpośrednio w Ataccama ONE. Służy jako konsola deweloperska do uruchamiania [[One API Queries|zapytań (queries)]], [[One API Mutations|mutacji (mutations)]] i [[One API Subscriptions|subskrypcji (subscriptions)]].
 
 ---
 
 🔑 **Kluczowe punkty**
 - Dostępne pod adresem URL `<adres_ataccama>/playground/`.
-- Wspiera automatyczne uzupełnianie kodu (**Content Assist** za pomocą skrótu `Ctrl + Space`) ułatwiające przeglądanie typów i schematu danych.
+- Wspiera automatyczne uzupełnianie kodu (**Content Assist** za pomocą skrótu `Ctrl + Space`) ułatwiające przeglądanie typów i [[Metadata|schematu danych (schema)]].
 - Posiada panel historii, który zapamiętuje ostatnio wykonywane zapytania.
-- Uwierzytelnianie odbywa się automatycznie w tle przy użyciu aktywnej sesji użytkownika (Bearer token).
-- Pozwala na konfigurację zmiennych (Variables) w dedykowanym panelu w formacie JSON.
+- Uwierzytelnianie odbywa się automatycznie w tle przy użyciu aktywnej sesji użytkownika (Bearer token, patrz: [[Endpoints and HTTP Headers|Nagłówki HTTP i Uwierzytelnianie]]).
+- Pozwala na konfigurację [[One API Queries|zmiennych (Variables)]] w dedykowanym panelu w formacie JSON.
 
 ---
 
@@ -31,7 +31,7 @@
 ---
 
 💡 **Przykład zastosowania**
-Podczas pisania skomplikowanych zapytań o powiązania encji metadanych (np. sprawdzanie atrybutów tabeli), możesz nacisnąć `Ctrl + Space` wewnątrz nawiasów klamrowych. GraphiQL wyświetli listę wszystkich dostępnych pól i typów, które możesz pobrać z modelu danych.
+Podczas pisania skomplikowanych zapytań o powiązania encji metadanych (np. sprawdzanie atrybutów tabeli, patrz: [[Data Catalog]]), możesz nacisnąć `Ctrl + Space` wewnątrz nawiasów klamrowych. GraphiQL wyświetli listę wszystkich dostępnych pól i typów, które możesz pobrać z [[Metadata|modelu danych]].
 
 ---
 

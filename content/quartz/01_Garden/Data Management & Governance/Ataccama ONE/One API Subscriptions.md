@@ -1,15 +1,15 @@
 # One API Subscriptions
 
 🎯 **Definicja**
-**Subskrypcje (Subscriptions)** w GraphQL to mechanizm służący do przesyłania aktualizacji danych z serwera do klienta w czasie rzeczywistym. Odbywa się to poprzez ustanowienie stałego, dwukierunkowego połączenia (zazwyczaj przy użyciu protokołu WebSockets). W Ataccama ONE subskrypcje są wykorzystywane do śledzenia zewnętrznych zdarzeń w module metadanych (MMM Eventing System).
+**Subskrypcje (Subscriptions)** w GraphQL to mechanizm służący do przesyłania aktualizacji danych z serwera do klienta w czasie rzeczywistym. Odbywa się to poprzez ustanowienie stałego, dwukierunkowego połączenia (zazwyczaj przy użyciu protokołu WebSockets). W Ataccama ONE subskrypcje są wykorzystywane do śledzenia zewnętrznych zdarzeń w [[Metadata|modelu metadanych (MMM Eventing System)]]. Do wywoływania zapytań subskrypcji stosuje się [[Ataccama Using Playground|GraphQL Playground]].
 
 ---
 
 🔑 **Kluczowe punkty**
-- Pozwalają na natychmiastowe wypychanie (**push**) zmian danych z serwera do systemów zewnętrznych bez konieczności ciągłego odpytywania (polling).
+- Pozwalają na natychmiastowe wypychanie (**push**) zmian danych z serwera do systemów zewnętrznych bez konieczności ciągłego odpytywania (polling, patrz: [[One API Queries|Zapytania]]).
 - Śledzą zmiany stanu encji, takie jak: utworzenie (`CREATED`), aktualizacja (`UPDATED`) i usunięcie (`DELETED`).
 - Obsługują tryb rozłączony – zdarzenia, które wystąpiły, gdy klient był offline, nie zostaną utracone (są kolejkowane).
-- Przetworzone zdarzenia muszą być potwierdzane przez klienta za pomocą mutacji **`_acknowledgeExternalEvents`**.
+- Przetworzone zdarzenia muszą być potwierdzane przez klienta za pomocą [[One API Mutations|mutacji]] **`_acknowledgeExternalEvents`**.
 - Subskrypcje można kontrolować pod kątem optymalizacji wydajności (grupowanie zdarzeń za pomocą `chunkSize` i `chunkMaxDelay`).
 
 ---
@@ -57,7 +57,7 @@ subscription ($id: GID!, $ackLimit: Int!, $entityType: String) {
 ---
 
 ### 2. Potwierdzanie odebranych zdarzeń (Acknowledge)
-Po pomyślnym przetworzeniu paczki zdarzeń po stronie klienta, należy poinformować o tym serwer przy użyciu mutacji `_acknowledgeExternalEvents`. Oczyszcza to kolejkę po stronie Ataccama ONE.
+Po pomyślnym przetworzeniu paczki zdarzeń po stronie klienta, należy poinformować o tym serwer przy użyciu [[One API Mutations|mutacji]] `_acknowledgeExternalEvents`. Oczyszcza to kolejkę po stronie Ataccama ONE.
 
 #### Mutacja potwierdzająca zdarzenia (do podanego identyfikatora włącznie):
 ```graphql
@@ -72,7 +72,7 @@ mutation acknowledgeEvents($id: GID!, $lastEventId: Long!) {
 ---
 
 ### 3. Sprawdzanie statusu subskrypcji
-Za pomocą zapytania (query) można w każdej chwili sprawdzić status danej subskrypcji oraz dowiedzieć się, ile zdarzeń oczekuje na dostarczenie (`undeliveredEventCount`):
+Za pomocą [[One API Queries|zapytania (query)]] można w każdej chwili sprawdzić status danej subskrypcji oraz dowiedzieć się, ile zdarzeń oczekuje na dostarczenie (`undeliveredEventCount`):
 
 ```graphql
 query getSubscriptionStatus($id: GID!) {
@@ -87,7 +87,7 @@ query getSubscriptionStatus($id: GID!) {
 ---
 
 ### 4. Anulowanie subskrypcji (Unsubscribe)
-Jeśli nie chcesz już otrzymywać powiadomień, należy jawnie wyrejestrować subskrypcję za pomocą mutacji. Zapobiega to marnowaniu zasobów po stronie serwera.
+Jeśli nie chcesz już otrzymywać powiadomień, należy jawną mutacją wyrejestrować subskrypcję. Zapobiega to marnowaniu zasobów po stronie serwera.
 
 #### Mutacja anulująca subskrypcję:
 ```graphql

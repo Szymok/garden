@@ -9,8 +9,8 @@
 - Działa na osobnym porcie (domyślnie **8071**) i korzysta z oddzielnej bazy danych PostgreSQL (nie wpływa na wydajność głównego repozytorium metadanych).
 - Rejestruje dwa typy rekordów: **Operacje** (kto i co zrobił) oraz **Zasoby** (do jakich obiektów uzyskano dostęp).
 - Powiązanie operacji z zasobami odbywa się za pomocą klucza **`correlationId`**.
-- Uwierzytelnianie dzieli wspólny realm Keycloak; użytkownik wywołujący to API musi posiadać rolę `AUDIT_admin` lub `AUDIT_user`.
-- Zapytania do Audit API powinny zawsze zawierać filtry czasowe (czas uniksowy w milisekundach), aby uniknąć pełnego skanowania tabeli.
+- Uwierzytelnianie dzieli wspólny realm Keycloak; użytkownik wywołujący to API musi posiadać rolę `AUDIT_admin` lub `AUDIT_user` (patrz: [[Endpoints and HTTP Headers|Uwierzytelnianie]]).
+- Zapytania do Audit API (patrz: [[One API Queries]]) powinny zawsze zawierać filtry czasowe (czas uniksowy w milisekundach), aby uniknąć pełnego skanowania tabeli.
 
 ---
 
@@ -21,7 +21,7 @@
 | Atrybut | Główne ONE API | Audit API |
 | :--- | :--- | :--- |
 | **Protokół** | GraphQL | GraphQL |
-| **Punkt Końcowy (Endpoint)** | `http://host:8080/graphql` | `http://host:8071/graphql` |
+| **Punkt Końcowy (Endpoint)** | `http://host:8080/graphql` (patrz: [[Endpoints and HTTP Headers]]) | `http://host:8071/graphql` |
 | **Baza danych** | Repozytorium metadanych ONE | Oddzielna baza PostgreSQL |
 | **Dane** | Obiekty ładu danych (Governance) | Wyłącznie wpisy o zdarzeniach (eventy) |
 | **Konfiguracja** | Moduł `mmm` | Moduł `audit` (`server.port`) |
@@ -35,11 +35,11 @@ Aby włączyć audyt na innych obiektach, należy dodać cechę `audit:auditEnab
 
 1. **Operacje (Operations) — co się wydarzyło:**
    - Wyświetlanie (listing), odczyt (read), aktualizacja (update) i usuwanie (delete) zasobów.
-   - Niestandardowe operacje (np. `profiling:bulkProfile`, `datasource:testConnection`).
+   - Niestandardowe operacje (np. [[Profiling|profilowanie]]: `bulkProfile`, testowanie połączeń: `testConnection`, patrz: [[Data Source]]).
    - Naruszenia dostępu (access violations) – logowane, gdy użytkownik nie ma uprawnień lub zasób nie istnieje.
 2. **Zasoby (Assets) — czego dotyczyło zdarzenie:**
-   - Szczegółowa tożsamość zasobu: `assetId`, `assetName`, `assetType`.
-   - Typ dostępu: `ENTITY` (obiekt metadanych) lub `LINK` (wskaźnik do Konsoli Administracyjnej DPM).
+   - Szczegółowa tożsamość zasobu: `assetId`, `assetName`, `assetType` (np. [[Data Catalog|catalogItem]], [[Data Source|source]], connection).
+   - Typ dostępu: `ENTITY` (obiekt metadanych, patrz: [[Metadata]]) lub `LINK` (wskaźnik do Konsoli Administracyjnej DPM).
 
 ---
 
@@ -50,7 +50,7 @@ Aby włączyć audyt na innych obiektach, należy dodać cechę `audit:auditEnab
 | **module** | String | Moduł źródłowy: MMM, DPM lub DMM |
 | **action** | String | Typ zdarzenia: READ, FINISH_SUCCESS, OPERATION |
 | **operation** | String | Konkretna operacja: catalogItem, LIST, testConnection, checkCatalogItemDqEval |
-| **assetType** | String | Typ zaangażowanej encji: catalogItem, connection, source |
+| **assetType** | String | Typ zaangażowanej encji: catalogItem (patrz: [[Data Catalog]]), connection, source |
 | **assetId** | String | Unikalny identyfikator zasobu, do którego uzyskano dostęp |
 | **assetName** | String | Nazwa wyświetlana zasobu |
 | **correlationId** | String | Klucz łączący tę operację z powiązanymi rekordami zasobów (Asset) |
@@ -63,7 +63,7 @@ Aby włączyć audyt na innych obiektach, należy dodać cechę `audit:auditEnab
 
 💡 **Przykłady zapytań GraphQL**
 
-#### 1. Pobranie listy wszystkich rekordów operacji:
+#### 1. Pobranie listy wszystkich rekordów operacji (Query):
 ```graphql
 query listOperations {
   operations {
@@ -132,7 +132,7 @@ query listAssets {
 ```
 
 #### 4. Stronicowanie (Pagination) w Audit API
-Audit API wykorzystuje stronicowanie oparte na parametrach `skip` (przesunięcie) oraz `size` (rozmiar strony):
+Audit API wykorzystuje stronicowanie oparte na parametrach `skip` (przesunięcie) oraz `size` (rozmiar strony) (porównaj ze standardową paginacją w [[One API Queries]]):
 ```graphql
 query listAssets {
   assets(
@@ -171,7 +171,7 @@ graph TD
 ---
 
 ### Pobieranie logów z poziomu ONE Desktop
-W celu cyklicznego pobierania logów do zewnętrznych celów analitycznych można użyć kroku **JSON Call** w ONE Desktop:
+W celu cyklicznego pobierania logów do zewnętrznych celów analitycznych można użyć kroku **JSON Call** w ONE Desktop (zobacz: [[Desktop JSON Call Step General Configuration]]):
 1. **URL:** Skieruj krok na port audytu: `http://host:8071/graphql` (nie na port główny 8080).
 2. **Uprawnienia:** Upewnij się, że użytkownik ma rolę `AUDIT_admin` lub `AUDIT_user` w Keycloak.
 3. **Szablon Wejściowy (Input Template):** Parametryzuj zapytanie za pomocą dynamicznych zmiennych w formacie `${zmienna}`:
