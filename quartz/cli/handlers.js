@@ -321,6 +321,13 @@ See the [documentation](https://quartz.jzhao.xyz) for how to get started.
  * @param {*} argv arguments for `build`
  */
 export async function handleBuild(argv) {
+  const pluginsDir = path.join(cwd, ".quartz", "plugins")
+  if (!fs.existsSync(pluginsDir) || fs.readdirSync(pluginsDir).length === 0) {
+    console.log(styleText("yellow", "Plugins not found. Installing plugins first..."))
+    const { handlePluginInstallUnified } = await import("./plugin-git-handlers.js")
+    await handlePluginInstallUnified({ clean: true })
+  }
+
   if (argv.concurrency !== undefined && argv.concurrency < 1) {
     console.error("Concurrency must be at least 1")
     process.exit(1)
