@@ -4,7 +4,7 @@ created: 2026-02-04
 status: evergreen
 category: API / Development
 difficulty: intermediate
-language: en
+language: pl
 tags:
   - graphql
   - api
