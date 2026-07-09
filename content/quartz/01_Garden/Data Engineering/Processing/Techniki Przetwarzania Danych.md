@@ -1,14 +1,14 @@
-﻿---
+---
 
-title: Techniki Przetwarzania Danych â€“ Przechowywanie Wierszowe, Kolumnowe i Silniki Wektorowe  
+title: Techniki Przetwarzania Danych – Przechowywanie Wierszowe, Kolumnowe i Silniki Wektorowe  
 created: 2025-07-15  
 status: 🌱 draft
-category: InÅ¼ynieria danych  
+category: Inżynieria danych  
 difficulty: podstawowy  
 language: pl  
 tags:
 
-- inÅ¼ynieria danych
+- inżynieria danych
 - DatabaseTechnology
 - ColumnarStorage
 - RowStorage
@@ -19,90 +19,90 @@ aliases:
 
 ---
 
-# ðŸŽ¯ Definicja
+# 🎯 Definicja
 
-**Techniki przetwarzania danych** obejmujÄ… rÃ³Å¼ne sposoby przechowywania, pobierania i przetwarzania danych w bazach danych, rozrÃ³Å¼niajÄ…c m.in. przechowywanie wierszowe, kolumnowe oraz wykorzystanie nowoczesnych silnikÃ³w wektorowych. Celem tych metod jest optymalizacja wydajnoÅ›ci dla odpowiednich typÃ³w obciÄ…Å¼eÅ„: transakcyjnych, analitycznych czy przetwarzania na duÅ¼Ä… skalÄ™.
+**Techniki przetwarzania danych** obejmują różne sposoby przechowywania, pobierania i przetwarzania danych w bazach danych, rozróżniając m.in. przechowywanie wierszowe, kolumnowe oraz wykorzystanie nowoczesnych silników wektorowych. Celem tych metod jest optymalizacja wydajności dla odpowiednich typów obciążeń: transakcyjnych, analitycznych czy przetwarzania na dużą skalę.
 
-# ðŸ”‘ Kluczowe punkty
+# 🔑 Kluczowe punkty
 
-- **Przechowywanie kolumnowe** optymalizuje analitykÄ™ i duÅ¼e skany danych.
-- **Przechowywanie wierszowe** zapewnia wysokÄ… wydajnoÅ›Ä‡ operacji transakcyjnych (OLTP).
-- **Silnik wektorowy** wykorzystuje paralele przetwarzanie blokowe i instrukcje SIMD, drastycznie zwiÄ™kszajÄ…c wydajnoÅ›Ä‡ zapytaÅ„ analitycznych.
-- WybÃ³r metody zaleÅ¼y od charakteru danych oraz typowych operacji.
+- **Przechowywanie kolumnowe** optymalizuje analitykę i duże skany danych.
+- **Przechowywanie wierszowe** zapewnia wysoką wydajność operacji transakcyjnych (OLTP).
+- **Silnik wektorowy** wykorzystuje paralele przetwarzanie blokowe i instrukcje SIMD, drastycznie zwiększając wydajność zapytań analitycznych.
+- Wybór metody zależy od charakteru danych oraz typowych operacji.
 
-# ðŸ“š SzczegÃ³Å‚owe wyjaÅ›nienie
+# 📚 Szczegółowe wyjaśnienie
 
 ## Przechowywanie kolumnowe
 
-- Dane przechowywane sÄ… w osobnych blokach dla kaÅ¼dej kolumny tabeli.
-- UmoÅ¼liwia szybkie agregacje, selektywne pobieranie wybranych kolumn i skutecznÄ… kompresjÄ™.
-- Idealne do hurtowni danych, [[Business Intelligence|BI]], raportowania â€“ zapytania odczytujÄ…ce wybrane kolumny z milionÃ³w wierszy.
-- PrzykÅ‚ady: **[[Apache Druid]]**, **ClickHouse**, **BigQuery**, **Snowflake**.
+- Dane przechowywane są w osobnych blokach dla każdej kolumny tabeli.
+- Umożliwia szybkie agregacje, selektywne pobieranie wybranych kolumn i skuteczną kompresję.
+- Idealne do hurtowni danych, [[Business Intelligence|BI]], raportowania – zapytania odczytujące wybrane kolumny z milionów wierszy.
+- Przykłady: **[[Apache Druid]]**, **ClickHouse**, **BigQuery**, **Snowflake**.
 
 **Zalety:**
 
-- Szybkie skanowanie kolumn i duÅ¼a oszczÄ™dnoÅ›Ä‡ miejsca przy duÅ¼ej powtarzalnoÅ›ci wartoÅ›ci.
-- Wysoka wydajnoÅ›Ä‡ w obciÄ…Å¼eniach analitycznych (OLAP).
+- Szybkie skanowanie kolumn i duża oszczędność miejsca przy dużej powtarzalności wartości.
+- Wysoka wydajność w obciążeniach analitycznych (OLAP).
 
 **Ograniczenia:**
 
-- Wolniejsze wstawianie/aktualizacja pojedynczych rekordÃ³w.
-- Mniej wydajne w aplikacjach operujÄ…cych na caÅ‚ych wierszach.
+- Wolniejsze wstawianie/aktualizacja pojedynczych rekordów.
+- Mniej wydajne w aplikacjach operujących na całych wierszach.
 
 ## Przechowywanie wierszowe
 
-- Dane przechowywane sÄ… w postaci kolejnych wierszy (rekordÃ³w).
-- KaÅ¼dy wiersz reprezentuje peÅ‚nÄ… encjÄ™ obiektu, np. pojedynczy zamÃ³wienie lub uÅ¼ytkownik.
+- Dane przechowywane są w postaci kolejnych wierszy (rekordów).
+- Każdy wiersz reprezentuje pełną encję obiektu, np. pojedynczy zamówienie lub użytkownik.
 - Stosowane w relacyjnych bazach transakcyjnych: **PostgreSQL**, **MySQL**, **SQL Server**.
 
 **Zalety:**
 
-- Szybkie pobieranie, aktualizacja i usuwanie pojedynczych rekordÃ³w.
+- Szybkie pobieranie, aktualizacja i usuwanie pojedynczych rekordów.
 - Dobre wsparcie dla typowego OLTP: operacje CRUD, transakcje, wykrywanie kolizji.
 
 **Ograniczenia:**
 
-- MaÅ‚o wydajne dla analiz na wielu kolumnach z duÅ¼ych zestawÃ³w danych.
-- Brak moÅ¼liwoÅ›ci sprytnego kompresowania w obrÄ™bie pojedynczej kolumny.
+- Mało wydajne dla analiz na wielu kolumnach z dużych zestawów danych.
+- Brak możliwości sprytnego kompresowania w obrębie pojedynczej kolumny.
 
-|Technika|PrzykÅ‚ady zastosowania|Typowe bazy danych|
+|Technika|Przykłady zastosowania|Typowe bazy danych|
 |---|---|---|
 |Kolumnowe|Analityka, [[Business Intelligence\|BI]], hurtownie|Druid, BigQuery, ClickHouse|
 |Wierszowe|OLTP, systemy operacyjne|MySQL, Postgres, Oracle|
 
 ## Silnik wektorowy
 
-- Nowoczesny sposÃ³b przetwarzania zapytaÅ„, gdzie operacje (np. suma kolumny) sÄ… wykonywane na â€žwektorachâ€ (duÅ¼ych blokach danych) zamiast pojedynczych wierszy.
-- Wykorzystuje instrukcje SIMD procesora â€“ jedno polecenie operuje na wielu wartoÅ›ciach naraz.
-- Minimalizuje narzut obsÅ‚ugi zapytaÅ„ wzglÄ™dem przetwarzania wiersz po wierszu.
-- Podnosi wydajnoÅ›Ä‡ cacheâ€™owania, umoÅ¼liwia masowe przetwarzanie oraz znacznie przyspiesza analizy i agregacje.
+- Nowoczesny sposób przetwarzania zapytań, gdzie operacje (np. suma kolumny) są wykonywane na „wektorach” (dużych blokach danych) zamiast pojedynczych wierszy.
+- Wykorzystuje instrukcje SIMD procesora – jedno polecenie operuje na wielu wartościach naraz.
+- Minimalizuje narzut obsługi zapytań względem przetwarzania wiersz po wierszu.
+- Podnosi wydajność cache’owania, umożliwia masowe przetwarzanie oraz znacznie przyspiesza analizy i agregacje.
 
-**PrzykÅ‚ady silnikÃ³w:**
+**Przykłady silników:**
 
-- **[[DuckDB]]** â€“ analizy OLAP na laptopie, Python, R.
-- **Photon Engine (Databricks)** â€“ [[Analiza Danych]] w chmurze.
+- **[[DuckDB]]** – analizy OLAP na laptopie, Python, R.
+- **Photon Engine (Databricks)** – [[Analiza Danych]] w chmurze.
 - **[[Apache Arrow]], Polars** (engine typu [[DataFrames|dataframe]]).
 
 **Zalety:**
 
-- Drastyczny wzrost wydajnoÅ›ci w przetwarzaniu masowym.
-- Efektywna wspÃ³Å‚praca z silnikami kolumnowymi i narzÄ™dziami data science.
+- Drastyczny wzrost wydajności w przetwarzaniu masowym.
+- Efektywna współpraca z silnikami kolumnowymi i narzędziami data science.
 
-# ðŸ’¡ PrzykÅ‚ad zastosowania
+# 💡 Przykład zastosowania
 
-Analizy danych clickstream w platformie e-commerce: dane z milionÃ³w odsÅ‚on sÄ… Å‚adowane do bazy z przechowywaniem kolumnowym (np. Druid), a agregacje oraz transformacje do raportÃ³w wykonywane sÄ… przez silnik wektorowy DuckDB, co zapewnia szybkie generowanie raportÃ³w nawet przy bardzo duÅ¼ych wolumenach danych.
+Analizy danych clickstream w platformie e-commerce: dane z milionów odsłon są ładowane do bazy z przechowywaniem kolumnowym (np. Druid), a agregacje oraz transformacje do raportów wykonywane są przez silnik wektorowy DuckDB, co zapewnia szybkie generowanie raportów nawet przy bardzo dużych wolumenach danych.
 
-## ðŸ“Œ Å¹rÃ³dÅ‚a
+## 📌 Źródła
 
-- [DuckDB â€” Oficjalna dokumentacja](https://duckdb.org/docs/why_duckdb)
+- [DuckDB — Oficjalna dokumentacja](https://duckdb.org/docs/why_duckdb)
 - [Photon Engine (Databricks)](https://databricks.com/blog/2021/12/15/introducing-photon-the-next-generation-engine-on-the-databricks-lakehouse-platform.html)
-- [Column-based vs Row-based Data Stores â€” Vertica Blog](https://www.vertica.com/blog/column-based-vs-row-based-data-stores/)
-- [SIMD and Vectorization Explained â€” DuckDB Blog](https://duckdb.org/2022/09/07/vectorized-processing.html)
+- [Column-based vs Row-based Data Stores — Vertica Blog](https://www.vertica.com/blog/column-based-vs-row-based-data-stores/)
+- [SIMD and Vectorization Explained — DuckDB Blog](https://duckdb.org/2022/09/07/vectorized-processing.html)
 
-# ðŸ‘½ Brudnopis
+# 👽 Brudnopis
 
-- Kolumnowe â€“ skanowanie, kompresja, agregacje, OLAP.
-- Wierszowe â€“ CRUD, OLTP, wydajne aktualizacje pojedynczych rekordÃ³w.
-- Wektorowe â€“ przetwarzanie masowe, SIMD, cache locality, [[DuckDB]], Databricks Photon.
-- WybÃ³r zaleÅ¼y od przypadku i obciÄ…Å¼enia (transakcje vs analityka vs [[Uczenie Maszynowe|ML]]).
+- Kolumnowe – skanowanie, kompresja, agregacje, OLAP.
+- Wierszowe – CRUD, OLTP, wydajne aktualizacje pojedynczych rekordów.
+- Wektorowe – przetwarzanie masowe, SIMD, cache locality, [[DuckDB]], Databricks Photon.
+- Wybór zależy od przypadku i obciążenia (transakcje vs analityka vs [[Uczenie Maszynowe|ML]]).
 - Bazy: [[DuckDB]] = wektorowy + kolumnowy, Druid = kolumnowy/OLAP, Postgres/MySQL = wierszowy.

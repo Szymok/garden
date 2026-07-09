@@ -1,89 +1,89 @@
-﻿---
+---
 
 title: Niestrukturalne dane  
 created: 2025-07-16  
 status: 🌱 draft
-category: inÅ¼ynieria danych  
+category: inżynieria danych  
 difficulty: podstawowy  
 language: pl  
 tags:
 
-- inÅ¼ynieria danych
+- inżynieria danych
 - koncepcje  
 aliases:
 
 ---
 
-# ðŸŽ¯ Definicja
+# 🎯 Definicja
 
-**Niestrukturalne dane** to dane, ktÃ³re nie sÄ… zapisane w standardowej, dobrze zdefiniowanej strukturze tabelarycznej lub schematycznej. CzÄ™sto wystÄ™pujÄ… jako wolny tekst, multimedia lub inne formaty niepoddajÄ…ce siÄ™ Å‚atwej analizie maszynowej. W przeciwieÅ„stwie do danych strukturalnych, dane niestrukturalne wymagajÄ… dodatkowego przetwarzania lub transformacji, aby moÅ¼na byÅ‚o je efektywnie analizowaÄ‡.
+**Niestrukturalne dane** to dane, które nie są zapisane w standardowej, dobrze zdefiniowanej strukturze tabelarycznej lub schematycznej. Często występują jako wolny tekst, multimedia lub inne formaty niepoddające się łatwej analizie maszynowej. W przeciwieństwie do danych strukturalnych, dane niestrukturalne wymagają dodatkowego przetwarzania lub transformacji, aby można było je efektywnie analizować.
 
-# ðŸ”‘ Kluczowe punkty
+# 🔑 Kluczowe punkty
 
-- Nie trzymajÄ… siÄ™ sztywnego schematu (np. brak kolumn i typÃ³w danych).
-- Ich analiza wymaga technik przetwarzania jÄ™zyka naturalnego (NLP), OCR, eksploracji tekstu, audio/wideo.
-- CzÄ™sto zawierajÄ… cenne informacje kontekstowe i semantyczne, niemoÅ¼liwe do uchwycenia w "pÅ‚askich" tabelach.
-- WystÄ™pujÄ… powszechnie w danych typu big data i wymagajÄ… specjalistycznych narzÄ™dzi do zebrania, obrÃ³bki i analizy.
+- Nie trzymają się sztywnego schematu (np. brak kolumn i typów danych).
+- Ich analiza wymaga technik przetwarzania języka naturalnego (NLP), OCR, eksploracji tekstu, audio/wideo.
+- Często zawierają cenne informacje kontekstowe i semantyczne, niemożliwe do uchwycenia w "płaskich" tabelach.
+- Występują powszechnie w danych typu big data i wymagają specjalistycznych narzędzi do zebrania, obróbki i analizy.
 
-# ðŸ“š SzczegÃ³Å‚owe wyjaÅ›nienie
+# 📚 Szczegółowe wyjaśnienie
 
-## PrzykÅ‚ady niestrukturalnych danych
+## Przykłady niestrukturalnych danych
 
-|ID|NiestrukturalnyCiÄ…g|
+|ID|NiestrukturalnyCiąg|
 |---|---|
 |1|"Bob ma 29 lat"|
-|2|"Mary wÅ‚aÅ›nie skoÅ„czyÅ‚a 30 lat"|
+|2|"Mary właśnie skończyła 30 lat"|
 
-Inne typowe przykÅ‚ady:
+Inne typowe przykłady:
 
-- wiadomoÅ›ci e-mail (treÅ›Ä‡ + zaÅ‚Ä…czniki)
+- wiadomości e-mail (treść + załączniki)
 - dokumenty (PDF, Word, tekst), raporty
-- zdjÄ™cia i filmy (obrazy, wideo)
-- transkrypcje rozmÃ³w, audio, notatki gÅ‚osowe
-- [[Komentarze]] z social mediÃ³w, czaty, recenzje
+- zdjęcia i filmy (obrazy, wideo)
+- transkrypcje rozmów, audio, notatki głosowe
+- [[Komentarze]] z social mediów, czaty, recenzje
 - wyniki ankiet (odpowiedzi otwarte)
 
-## PorÃ³wnanie: dane niestrukturalne vs. strukturalne
+## Porównanie: dane niestrukturalne vs. strukturalne
 
 |Cecha|Dane strukturalne|Dane niestrukturalne|
 |---|---|---|
 |Forma przechowywania|tabela, kolumny, rekordy|wolny tekst, plik, multimedia|
-|UÅ¼ycie schematu|tak|nie|
-|MoÅ¼liwoÅ›Ä‡ zapytaÅ„ SQL|wysoka|niska lub wymagajÄ…ca transformacji|
-|ÅatwoÅ›Ä‡ przetwarzania maszynowego|wysoka|wymagajÄ… preprocesingu lub ekstrakcji|
-|PrzykÅ‚ady|imiÄ™, wiek, ID, adres|tekst e-maila, plik JPEG, wpis na Twitterze|
+|Użycie schematu|tak|nie|
+|Możliwość zapytań SQL|wysoka|niska lub wymagająca transformacji|
+|Łatwość przetwarzania maszynowego|wysoka|wymagają preprocesingu lub ekstrakcji|
+|Przykłady|imię, wiek, ID, adres|tekst e-maila, plik JPEG, wpis na Twitterze|
 
 ## [[Transformacja danych]] niestrukturalnych
 
-Aby dane niestrukturalne mogÅ‚y byÄ‡ uÅ¼yte do analizy, muszÄ… najpierw zostaÄ‡ przeksztaÅ‚cone w format strukturalny np. w ramach procesÃ³w:
+Aby dane niestrukturalne mogły być użyte do analizy, muszą najpierw zostać przekształcone w format strukturalny np. w ramach procesów:
 
-- ETL â€“ Extract, Transform, Load
-- ELT â€“ Extract, Load, Transform
-- [[Transformacja danych]] â€“ ekstrakcja encji, [[Tokenizacja]] tekstu, konwersja audio do tekstu (ASR), OCR
-- Entity Recognition â€“ np. wykrywanie nazw wÅ‚asnych, dat, lokalizacji z tekstu
+- ETL – Extract, Transform, Load
+- ELT – Extract, Load, Transform
+- [[Transformacja danych]] – ekstrakcja encji, [[Tokenizacja]] tekstu, konwersja audio do tekstu (ASR), OCR
+- Entity Recognition – np. wykrywanie nazw własnych, dat, lokalizacji z tekstu
 
-Po transformacji, oryginalne dane mogÄ… wyglÄ…daÄ‡ tak:
+Po transformacji, oryginalne dane mogą wyglądać tak:
 
-|ID|ImiÄ™|Wiek|
+|ID|Imię|Wiek|
 |---|---|---|
 |1|Bob|29|
 |2|Mary|30|
 
-Pozwala to na wykonywanie standardowych zapytaÅ„:
+Pozwala to na wykonywanie standardowych zapytań:
 
 ```sql
 SELECT * FROM users WHERE wiek = 30;
 ```
 
-# ðŸ’¡ Praktyczne zastosowania
+# 💡 Praktyczne zastosowania
 
-- **Chatboty i NLP** â€“ analiza zapytaÅ„ uÅ¼ytkownikÃ³w w wolnej formie.
-- **CRM** â€“ analiza maili w poszukiwaniu leadÃ³w, zapytaÅ„, reklamacji.
-- **Finanse** â€“ ekstrakcja danych z PDF-Ã³w, raportÃ³w sprzedaÅ¼y.
-- **Medycyna** â€“ analiza wynikÃ³w badaÅ„, historii chorÃ³b w notkach klinicznych.
-- **RPA** â€“ automatyczne wyciÄ…ganie danych z faktur, CV, formularzy.
+- **Chatboty i NLP** – analiza zapytań użytkowników w wolnej formie.
+- **CRM** – analiza maili w poszukiwaniu leadów, zapytań, reklamacji.
+- **Finanse** – ekstrakcja danych z PDF-ów, raportów sprzedaży.
+- **Medycyna** – analiza wyników badań, historii chorób w notkach klinicznych.
+- **RPA** – automatyczne wyciąganie danych z faktur, CV, formularzy.
 
-# ðŸ“Œ Å¹rÃ³dÅ‚a
+# 📌 Źródła
 
 - [https://www.ibm.com/topics/unstructured-data](https://www.ibm.com/topics/unstructured-data)
 - [https://www.oracle.com/pl/big-data/what-is-unstructured-data/](https://www.oracle.com/pl/big-data/what-is-unstructured-data/)
@@ -92,10 +92,10 @@ SELECT * FROM users WHERE wiek = 30;
 - [https://www.techtarget.com/searchbusinessanalytics/definition/unstructured-data](https://www.techtarget.com/searchbusinessanalytics/definition/unstructured-data)
 - [https://towardsdatascience.com/structured-vs-unstructured-data-a505515f32be](https://towardsdatascience.com/structured-vs-unstructured-data-a505515f32be)
 
-# ðŸ‘½ Brudnopis
+# 👽 Brudnopis
 
-- Trudniejsze do analizy, ale o wiÄ™kszym kontekÅ›cie
-- WystÄ™pujÄ… powszechnie w enterprise â€“ mail, pliki, media, transkrypcje
-- NLP, OCR, ASR â€“ przykÅ‚ady technik automatyzacji i transformacji
-- Airbyte, Talend, Dataiku â€“ platformy wspierajÄ…ce konwersjÄ™
-- MoÅ¼liwoÅ›Ä‡ strukturyzacji za pomocÄ… NLP/NLU â€“ np. wyszukiwanie encji (NER), klasyfikacja tekstu, embeddingi semanticzne
+- Trudniejsze do analizy, ale o większym kontekście
+- Występują powszechnie w enterprise – mail, pliki, media, transkrypcje
+- NLP, OCR, ASR – przykłady technik automatyzacji i transformacji
+- Airbyte, Talend, Dataiku – platformy wspierające konwersję
+- Możliwość strukturyzacji za pomocą NLP/NLU – np. wyszukiwanie encji (NER), klasyfikacja tekstu, embeddingi semanticzne

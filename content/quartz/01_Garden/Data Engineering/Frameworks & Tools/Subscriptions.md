@@ -1,4 +1,4 @@
-﻿---
+---
 title: GraphQL Subscriptions
 created: 2026-05-06
 status: 🌱 draft
@@ -20,4 +20,4 @@ Event data consists of the following elements for each event: id: The identifier
 Acknowledge events After the received events have been processed, they need to be acknowledged (at least after every ackLimit number of events). Acknowledge event can be done using the following operation.
 
 
-Unsubscribe and Retrieve subscription status â€¢ In case you no longer want to receive events, you can unregister the subscription using the following operation. GraphQL operation for unregistering a subscription mutation($id: GID!){ _ unsubscribeExternalEvents(subscriptionld: $id) â€¢ If you do not remove a subscription this way, it is automatically discarded after the period of time configured using the property: plugin.external-events.ataccama.one.externalev ents.subscribers-retention-period. The subscription status can be obtained using the following query. In addition to the subscription status (status), the query returns the subscription identifier (subscriptionld) and the number of undelivered events (undeliveredEventCount). GraphQL query for retrieving subscription status query status($id: GID!){ _externalEventsSubscriptionStatus(subscription ld:$id){ subscriptionld undeliveredEventCount status
+Unsubscribe and Retrieve subscription status • In case you no longer want to receive events, you can unregister the subscription using the following operation. GraphQL operation for unregistering a subscription mutation($id: GID!){ _ unsubscribeExternalEvents(subscriptionld: $id) • If you do not remove a subscription this way, it is automatically discarded after the period of time configured using the property: plugin.external-events.ataccama.one.externalev ents.subscribers-retention-period. The subscription status can be obtained using the following query. In addition to the subscription status (status), the query returns the subscription identifier (subscriptionld) and the number of undelivered events (undeliveredEventCount). GraphQL query for retrieving subscription status query status($id: GID!){ _externalEventsSubscriptionStatus(subscription ld:$id){ subscriptionld undeliveredEventCount status

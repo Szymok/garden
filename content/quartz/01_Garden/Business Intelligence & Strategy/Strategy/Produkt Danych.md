@@ -1,72 +1,72 @@
-﻿---
+---
 
 title: Produkt Danych  
 created: 2025-07-15  
 status: 🌱 draft
-category: InÅ¼ynieria danych  
+category: Inżynieria danych  
 difficulty: podstawowy  
 language: pl  
 tags:
 
 - produkt danych
-- inÅ¼ynieria danych
+- inżynieria danych
 - data mesh
-- zarzÄ…dzanie danymi  
+- zarządzanie danymi  
 aliases:
 - data product
 
 ---
 
-# ðŸŽ¯ Definicja
+# 🎯 Definicja
 
-**Produkt Danych (ang. Data Product)** to zdefiniowany, dostarczony i zarzÄ…dzany artefakt oparty na danych, ktÃ³ry przynosi bezpoÅ›redniÄ… wartoÅ›Ä‡ uÅ¼ytkownikowi koÅ„cowemu lub innej jednostce organizacyjnej. DJ Patil, pierwszy Chief Data Scientist USA, okreÅ›liÅ‚ produkt danych jako â€žprodukt, ktÃ³ry uÅ‚atwia osiÄ…gniÄ™cie celu koÅ„cowego poprzez daneâ€ .
+**Produkt Danych (ang. Data Product)** to zdefiniowany, dostarczony i zarządzany artefakt oparty na danych, który przynosi bezpośrednią wartość użytkownikowi końcowemu lub innej jednostce organizacyjnej. DJ Patil, pierwszy Chief Data Scientist USA, określił produkt danych jako „produkt, który ułatwia osiągnięcie celu końcowego poprzez dane” .
 
-W podejÅ›ciu Data Mesh dane sÄ… traktowane jako produkt, ktÃ³ry ma wÅ‚aÅ›ciciela, gwarantowanÄ… jakoÅ›Ä‡, katalog, dokumentacjÄ™ i interfejs API, a jego wartoÅ›Ä‡ jest weryfikowana poprzez faktyczne uÅ¼ycie.
+W podejściu Data Mesh dane są traktowane jako produkt, który ma właściciela, gwarantowaną jakość, katalog, dokumentację i interfejs API, a jego wartość jest weryfikowana poprzez faktyczne użycie.
 
-# ðŸ”‘ Kluczowe punkty
+# 🔑 Kluczowe punkty
 
-- **Dostarczalny artefakt:** np. tabela, raport BI, model ML, API z danymi â€” coÅ›, co ma odbiorcÄ™ i wartoÅ›Ä‡ uÅ¼ytkowÄ….
-- **Wbudowana jakoÅ›Ä‡ i katalog:** Produkt danych powinien byÄ‡ opatrzony opisem, SLA, kontaktami, wersjami.
-- **WÅ‚asnoÅ›Ä‡ domenowa:** Zgodnie z Data Mesh, produkty sÄ… utrzymywane przez zespoÅ‚y domenowe (source-aligned).
-- **Zorientowanie na uÅ¼ycie:** Musi rozwiÄ…zywaÄ‡ rzeczywisty problem lub wspieraÄ‡ decyzje.
-- **Integracja z infrastrukturÄ… danych:** Produkty danych sÄ… elementem ekosystemu â€“ powstajÄ… na bazie pipelineâ€™Ã³w, warstw semantycznych i metadanych.
+- **Dostarczalny artefakt:** np. tabela, raport BI, model ML, API z danymi — coś, co ma odbiorcę i wartość użytkową.
+- **Wbudowana jakość i katalog:** Produkt danych powinien być opatrzony opisem, SLA, kontaktami, wersjami.
+- **Własność domenowa:** Zgodnie z Data Mesh, produkty są utrzymywane przez zespoły domenowe (source-aligned).
+- **Zorientowanie na użycie:** Musi rozwiązywać rzeczywisty problem lub wspierać decyzje.
+- **Integracja z infrastrukturą danych:** Produkty danych są elementem ekosystemu – powstają na bazie pipeline’ów, warstw semantycznych i metadanych.
 
-# ðŸ“š SzczegÃ³Å‚owe wyjaÅ›nienie
+# 📚 Szczegółowe wyjaśnienie
 
 ## Rola Produktu Danych w architekturze danych
 
-Produkty danych sÄ… "konsumpcyjnÄ…" warstwÄ… architektury danych â€” dostarczajÄ… uÅ¼ytkownikowi koÅ„cowemu konkretny, Å‚atwo dostÄ™pny i zrozumiaÅ‚y wynik prac inÅ¼ynierii danych. NiezaleÅ¼nie czy to raport w Power BI, API REST zwracajÄ…ce metrykÄ™ finansowÄ… czy zbiÃ³r danych uÅ¼ywany do trenowania modelu ML â€” kaÅ¼dy z nich stanowi samodzielny, mierzalny produkt.
+Produkty danych są "konsumpcyjną" warstwą architektury danych — dostarczają użytkownikowi końcowemu konkretny, łatwo dostępny i zrozumiały wynik prac inżynierii danych. Niezależnie czy to raport w Power BI, API REST zwracające metrykę finansową czy zbiór danych używany do trenowania modelu ML — każdy z nich stanowi samodzielny, mierzalny produkt.
 
-## Cechy wysokiej jakoÅ›ci Produktu Danych
+## Cechy wysokiej jakości Produktu Danych
 
 - **Dokumentacja i opis znaczenia metryk**
-- **Jasne zarzÄ…dzanie wersjami**
-- **StaÅ‚y monitoring jakoÅ›ci (profilowanie, alerting)**
-- **ZespÃ³Å‚ wÅ‚aÅ›cicielski lub steward**
+- **Jasne zarządzanie wersjami**
+- **Stały monitoring jakości (profilowanie, alerting)**
+- **Zespół właścicielski lub steward**
 - **Prosty interfejs integracji** (np. SQL view, endpoint API)
-- **Zdefiniowane SLA i zgodnoÅ›Ä‡ z normami (np. GDPR)**
+- **Zdefiniowane SLA i zgodność z normami (np. GDPR)**
 
-## PrzykÅ‚ady ProduktÃ³w Danych
+## Przykłady Produktów Danych
 
-- Dashboard sprzedaÅ¼owy w Lookerze z miarami konwersji
+- Dashboard sprzedażowy w Lookerze z miarami konwersji
 - Model predykcji rezygnacji klienta
-- Tabela modelowa z miarami LTV klienta dostÄ™pna w warstwie semantycznej (np. w dbt)
-- Endpoint API zwracajÄ…cy status produktu z kalkulowanym wskaÅºnikiem ryzyka
+- Tabela modelowa z miarami LTV klienta dostępna w warstwie semantycznej (np. w dbt)
+- Endpoint API zwracający status produktu z kalkulowanym wskaźnikiem ryzyka
 
-# ðŸ’¡ PrzykÅ‚ad zastosowania
+# 💡 Przykład zastosowania
 
-W firmie typu retail zespÃ³Å‚ danych publikuje produkt danych: tabelÄ™ modelowÄ… â€žcustomer_lifetime_value_model_v1â€, zawierajÄ…cÄ… obliczony wskaÅºnik LTV wraz z segmentacjÄ… transakcyjnÄ…. Tabela jest aktualizowana co noc, udostÄ™pniona w hurtowni danych Snowflake, posiada metadane w katalogu (np. Atlan) i speÅ‚nia SLA <15min opÃ³Åºnienia. Jest wykorzystywana przez zespÃ³Å‚ marketingu do uruchamiania kampanii targetowanych przez narzÄ™dzia typu reverse ETL.
+W firmie typu retail zespół danych publikuje produkt danych: tabelę modelową „customer_lifetime_value_model_v1”, zawierającą obliczony wskaźnik LTV wraz z segmentacją transakcyjną. Tabela jest aktualizowana co noc, udostępniona w hurtowni danych Snowflake, posiada metadane w katalogu (np. Atlan) i spełnia SLA <15min opóźnienia. Jest wykorzystywana przez zespół marketingu do uruchamiania kampanii targetowanych przez narzędzia typu reverse ETL.
 
-## ðŸ“Œ Å¹rÃ³dÅ‚a
+## 📌 Źródła
 
-- [DJ Patil â€“ Twitter](https://twitter.com/dpatil)
-- [Introduction to Data Products â€“ datameshlearning.com](https://www.datameshlearning.com/glossary/data-product)
-- [Martinfowler.com â€“ Data Mesh](https://martinfowler.com/articles/data-mesh-principles.html)
+- [DJ Patil – Twitter](https://twitter.com/dpatil)
+- [Introduction to Data Products – datameshlearning.com](https://www.datameshlearning.com/glossary/data-product)
+- [Martinfowler.com – Data Mesh](https://martinfowler.com/articles/data-mesh-principles.html)
 
-## ðŸ‘½ Brudnopis
+## 👽 Brudnopis
 
-- Produkt danych = coÅ›, co ma odbiorcÄ™ i wartoÅ›Ä‡ â†’ tabela, model, raport, API
-- DJ Patil: "uÅ‚atwia osiÄ…gniÄ™cie celu poprzez dane"
-- Data Mesh: ownership, SLA, discoverability, dokumentacja â†’ produkt jak software
-- PrzykÅ‚ady: model przewidywania churnu, raport menedÅ¼erski z kluczowymi KPI, endpoint odpytywalny przez zespÃ³Å‚ operacyjny
+- Produkt danych = coś, co ma odbiorcę i wartość → tabela, model, raport, API
+- DJ Patil: "ułatwia osiągnięcie celu poprzez dane"
+- Data Mesh: ownership, SLA, discoverability, dokumentacja → produkt jak software
+- Przykłady: model przewidywania churnu, raport menedżerski z kluczowymi KPI, endpoint odpytywalny przez zespół operacyjny
 - Kontekst: kluczowy element demokratyzacji danych i nowoczesnych architektur danych (mesh, lakehouse)

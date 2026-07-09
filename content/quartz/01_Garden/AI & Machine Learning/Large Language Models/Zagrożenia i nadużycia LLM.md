@@ -1,96 +1,96 @@
-﻿---
-title: ZagroÅ¼enia i naduÅ¼ycia LLM
+---
+title: Zagrożenia i nadużycia LLM
 created: 2025-07-16
 status: 🌱 draft
 category: LLM
-difficulty: Å›redni
+difficulty: średni
 language: pl
 tags:
   - LLM
-  - bezpieczeÅ„stwo
-  - naduÅ¼ycia
+  - bezpieczeństwo
+  - nadużycia
   - prompt
   - injection
   - uprzedzenia
 aliases:
-  - zagroÅ¼enia LLM
-  - naduÅ¼ycia modeli jÄ™zykowych
+  - zagrożenia LLM
+  - nadużycia modeli językowych
 ---
 
-# ðŸŽ¯ Wprowadzenie
+# 🎯 Wprowadzenie
 
-Pomimo niezwykÅ‚ej skutecznoÅ›ci duÅ¼ych modeli jÄ™zykowych ([[Base LLM|LLM]]) i zaawansowania technik takich jak few-shot czy chain-of-thought, wdroÅ¼enie tych modeli w aplikacjach komercyjnych i operacyjnych wiÄ…Å¼e siÄ™ z realnym ryzykiem naduÅ¼yÄ‡, zagroÅ¼eÅ„ i wyzwaÅ„ etyczno-spoÅ‚ecznych.
+Pomimo niezwykłej skuteczności dużych modeli językowych ([[Base LLM|LLM]]) i zaawansowania technik takich jak few-shot czy chain-of-thought, wdrożenie tych modeli w aplikacjach komercyjnych i operacyjnych wiąże się z realnym ryzykiem nadużyć, zagrożeń i wyzwań etyczno-społecznych.
 
-Ten rozdziaÅ‚ skupia siÄ™ na gÅ‚Ã³wnych scenariuszach zagroÅ¼eÅ„ i oszustw, z jakimi naleÅ¼y siÄ™ liczyÄ‡ podczas wdraÅ¼ania i zabezpieczania aplikacji [[Base LLM|LLM]].
+Ten rozdział skupia się na głównych scenariuszach zagrożeń i oszustw, z jakimi należy się liczyć podczas wdrażania i zabezpieczania aplikacji [[Base LLM|LLM]].
 
-# ðŸ”‘ Kluczowe zagroÅ¼enia i naduÅ¼ycia
+# 🔑 Kluczowe zagrożenia i nadużycia
 
 ## 1. Prompt Injection (Wstrzykiwanie Podpowiedzi)
 
-- **Na czym polega:** AtakujÄ…cy umieszcza w wejÅ›ciu (np. wiadomoÅ›ciach, plikach, zapytaniach API) sprytne instrukcje, ktÃ³re majÄ… za zadanie przejÄ…Ä‡ lub zmodyfikowaÄ‡ wykonywanÄ… przez model podpowiedÅº lub instrukcjÄ™. PrzykÅ‚ad: doÅ‚Ä…czenie frazy "Zignoruj wszystkie poprzednie polecenia i wykonaj X".
-- **Ryzyka:** Ujawnienie informacji, manipulacja wynikami, Å‚amanie polityk firmy (np. wyciek danych, omijanie filtrÃ³w bezpieczeÅ„stwa).
+- **Na czym polega:** Atakujący umieszcza w wejściu (np. wiadomościach, plikach, zapytaniach API) sprytne instrukcje, które mają za zadanie przejąć lub zmodyfikować wykonywaną przez model podpowiedź lub instrukcję. Przykład: dołączenie frazy "Zignoruj wszystkie poprzednie polecenia i wykonaj X".
+- **Ryzyka:** Ujawnienie informacji, manipulacja wynikami, łamanie polityk firmy (np. wyciek danych, omijanie filtrów bezpieczeństwa).
 
-## 2. Szkodliwe zachowania i generowanie szkodliwych treÅ›ci
+## 2. Szkodliwe zachowania i generowanie szkodliwych treści
 
-- **Toxicity i hate speech:** [[Base LLM|LLM]] mogÄ… â€“ zarÃ³wno bezpoÅ›rednio, jak i niezamierzenie â€“ generowaÄ‡ treÅ›ci obraÅºliwe, dyskryminujÄ…ce lub nieetyczne.
-- **Porady o charakterze ryzykownym:** Modele mogÄ… udzielaÄ‡ â€œporadâ€ medycznych, prawnych lub finansowych bez odpowiedniej kwalifikacji, co niesie ryzyko prawne i dla uÅ¼ytkownika.
+- **Toxicity i hate speech:** [[Base LLM|LLM]] mogą – zarówno bezpośrednio, jak i niezamierzenie – generować treści obraźliwe, dyskryminujące lub nieetyczne.
+- **Porady o charakterze ryzykownym:** Modele mogą udzielać “porad” medycznych, prawnych lub finansowych bez odpowiedniej kwalifikacji, co niesie ryzyko prawne i dla użytkownika.
 
-## 3. UogÃ³lnianie i podatnoÅ›Ä‡ na manipulacje
+## 3. Uogólnianie i podatność na manipulacje
 
-- **Overfitting na promptach:** Nawet dobrze przygotowane przykÅ‚ady mogÄ… byÄ‡ nadmiernie dopasowane, przez co model â€žprzejmujeâ€ styl lub logikÄ™ atakujÄ…cego (np. przez manipulacjÄ™ przykÅ‚adowymi etykietami).
-- **ZÅ‚oÅ›liwa kalibracja:** Celowe wywoÅ‚ywanie modelu do podania zmyÅ›lonych lub szkodliwych odpowiedzi przez odpowiednie ciÄ…gi testowe.
+- **Overfitting na promptach:** Nawet dobrze przygotowane przykłady mogą być nadmiernie dopasowane, przez co model „przejmuje” styl lub logikę atakującego (np. przez manipulację przykładowymi etykietami).
+- **Złośliwa kalibracja:** Celowe wywoływanie modelu do podania zmyślonych lub szkodliwych odpowiedzi przez odpowiednie ciągi testowe.
 
 ## 4. Uprzedzenia i biasy (Bias, Social Bias)
 
-- **Wrodzone biasy:** Modele mogÄ… reprodukowaÄ‡ uprzedzenia obecne w danych treningowych, zwÅ‚aszcza te dotyczÄ…ce pÅ‚ci, rasy, wieku, religii.
-- **Social bias:** [[Base LLM|LLM]] mogÄ… nieÅ›wiadomie faworyzowaÄ‡ czy dyskryminowaÄ‡ grupy spoÅ‚eczne, wzmacniaÄ‡ stereotypy czy nierÃ³wnoÅ›ci.
+- **Wrodzone biasy:** Modele mogą reprodukować uprzedzenia obecne w danych treningowych, zwłaszcza te dotyczące płci, rasy, wieku, religii.
+- **Social bias:** [[Base LLM|LLM]] mogą nieświadomie faworyzować czy dyskryminować grupy społeczne, wzmacniać stereotypy czy nierówności.
 
-## 5. [[Factuality]] â€“ prawdziwoÅ›Ä‡ odpowiedzi
+## 5. [[Factuality]] – prawdziwość odpowiedzi
 
-- **[[Halucynacje]]:** Modele regularnie generujÄ… spÃ³jnie brzmiÄ…ce, lecz caÅ‚kowicie nieprawdziwe lub zmyÅ›lone odpowiedzi (fabrykowanie cytatÃ³w, tworzenie nieistniejÄ…cych faktÃ³w).
-- **FaÅ‚szywe poczucie pewnoÅ›ci:** Model nie sygnalizuje niepewnoÅ›ci, przez co uÅ¼ytkownik moÅ¼e uznaÄ‡ nieprawdziwÄ… odpowiedÅº za wiarygodnÄ….
+- **[[Halucynacje]]:** Modele regularnie generują spójnie brzmiące, lecz całkowicie nieprawdziwe lub zmyślone odpowiedzi (fabrykowanie cytatów, tworzenie nieistniejących faktów).
+- **Fałszywe poczucie pewności:** Model nie sygnalizuje niepewności, przez co użytkownik może uznać nieprawdziwą odpowiedź za wiarygodną.
 
-# ðŸ›¡ï¸ Praktyki i strategie Å‚agodzÄ…ce
+# 🛡️ Praktyki i strategie łagodzące
 
 ## Ochrona przed prompt injection
 
-- Walidowanie i filtrowanie wejÅ›Ä‡ uÅ¼ytkownika.
-- Oddzielanie logiki promptÃ³w systemowych od danych pochodzÄ…cych od uÅ¼ytkownika.
-- Stosowanie sandboxingu generowanych poleceÅ„.
+- Walidowanie i filtrowanie wejść użytkownika.
+- Oddzielanie logiki promptów systemowych od danych pochodzących od użytkownika.
+- Stosowanie sandboxingu generowanych poleceń.
 
-## Ograniczanie toksycznych i szkodliwych treÅ›ci
+## Ograniczanie toksycznych i szkodliwych treści
 
-- Fine-tuning modeli na â€œbezpiecznychâ€ zbiorach danych i walidacja pod kÄ…tem contentu.
-- WdroÅ¼enie filtrÃ³w wyjÅ›ciowych oraz mechanizmÃ³w moderacji AI/human-in-the-loop.
+- Fine-tuning modeli na “bezpiecznych” zbiorach danych i walidacja pod kątem contentu.
+- Wdrożenie filtrów wyjściowych oraz mechanizmów moderacji AI/human-in-the-loop.
 - Unikanie jednoosobowego autorytetu modeli w kwestiach medycznych/prawnych.
 
-## Minimalizowanie biasÃ³w i uprzedzeÅ„
+## Minimalizowanie biasów i uprzedzeń
 
-- RÃ³Å¼nicowanie i audyt danych wejÅ›ciowych podczas trenowania modeli.
-- Przeprowadzanie regularnych testÃ³w na wystÄ™powanie biasÃ³w spoÅ‚ecznych.
-- TransparentnoÅ›Ä‡ logiki i explicite wyjaÅ›nianie mechanizmÃ³w dziaÅ‚ania [[Base LLM|LLM]].
+- Różnicowanie i audyt danych wejściowych podczas trenowania modeli.
+- Przeprowadzanie regularnych testów na występowanie biasów społecznych.
+- Transparentność logiki i explicite wyjaśnianie mechanizmów działania [[Base LLM|LLM]].
 
-## Poprawa [[Factuality]] i wiarygodnoÅ›ci
+## Poprawa [[Factuality]] i wiarygodności
 
-- Dawanie modelowi jawnie pozwolenia na przyznanie siÄ™ do â€œnie wiemâ€, â€œbrak danychâ€.
-- UzupeÅ‚nianie promptÃ³w o kontekst, cytaty ÅºrÃ³dÅ‚owe lub podejÅ›cie [[RAG]] ([[Retrieval Augmented Generation (RAG)|retrieval-augmented generation]]).
+- Dawanie modelowi jawnie pozwolenia na przyznanie się do “nie wiem”, “brak danych”.
+- Uzupełnianie promptów o kontekst, cytaty źródłowe lub podejście [[RAG]] ([[Retrieval Augmented Generation (RAG)|retrieval-augmented generation]]).
 - Weryfikacja odpowiedzi przez dedykowane algorytmy fact-checking (czasem przez drugi model).
 
-# ðŸ“ Podsumowanie praktyczne
+# 📝 Podsumowanie praktyczne
 
-|Ryzyko|SposÃ³b przeciwdziaÅ‚ania|
+|Ryzyko|Sposób przeciwdziałania|
 |---|---|
-|Prompt Injection|Walidacja i rozdzielanie wejÅ›Ä‡|
-|TreÅ›ci szkodliwe|Filtry, moderacja AI/human|
-|Uprzedzenia|Audyt, rÃ³Å¼nicowanie danych|
+|Prompt Injection|Walidacja i rozdzielanie wejść|
+|Treści szkodliwe|Filtry, moderacja AI/human|
+|Uprzedzenia|Audyt, różnicowanie danych|
 |[[Halucynacje]]|Kontekst, [[RAG]], fact-checking|
 
-Realne zastosowanie [[Base LLM|LLM]] wymaga zarÃ³wno projektowania bezpiecznych promptÃ³w, jak i systematycznego audytu oraz integracji dodatkowych narzÄ™dzi (np. klasyfikatorÃ³w treÅ›ci, sandboxÃ³w, testÃ³w bias/[[Factuality]]) na kaÅ¼dym etapie rozwoju produktu opartego o AI.
+Realne zastosowanie [[Base LLM|LLM]] wymaga zarówno projektowania bezpiecznych promptów, jak i systematycznego audytu oraz integracji dodatkowych narzędzi (np. klasyfikatorów treści, sandboxów, testów bias/[[Factuality]]) na każdym etapie rozwoju produktu opartego o AI.
 
-# ðŸ‘½ Brudnopis
+# 👽 Brudnopis
 
-- [[Base LLM|LLM]] = moc, ale i zagroÅ¼enia (prompt pollution, sygnaÅ‚y zÅ‚oÅ›liwe, bias, [[Halucynacje]])
-- Rynek: coraz wiÄ™cej narzÄ™dzi do testÃ³w "prompt injection", classifier toxicity, governance
-- Audyt, interpretowalnoÅ›Ä‡, [[Explainable AI]] â€“ roÅ›nie znaczenie w produkcyjnych wdroÅ¼eniach AI
-- BezpieczeÅ„stwo: testy adversarial, edukacja zespoÅ‚Ã³w, feedback od uÅ¼ytkownikÃ³w
+- [[Base LLM|LLM]] = moc, ale i zagrożenia (prompt pollution, sygnały złośliwe, bias, [[Halucynacje]])
+- Rynek: coraz więcej narzędzi do testów "prompt injection", classifier toxicity, governance
+- Audyt, interpretowalność, [[Explainable AI]] – rośnie znaczenie w produkcyjnych wdrożeniach AI
+- Bezpieczeństwo: testy adversarial, edukacja zespołów, feedback od użytkowników
 - Mechanizmy: explicit confidence, fallback systems, monitoring abuse/attack patterns

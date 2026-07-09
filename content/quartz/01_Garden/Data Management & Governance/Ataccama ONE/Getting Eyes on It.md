@@ -1,4 +1,4 @@
-﻿---
+---
 title: Getting Eyes on It
 created: 2026-02-23
 status: 🌱 draft
@@ -10,36 +10,36 @@ tags:
 aliases:
   - 
 ---
-# ðŸŽ¯ Definicja
+# 🎯 Definicja
 
-Zasada **"Getting Eyes on It"** opiera siÄ™ na przekonaniu, Å¼e bÅ‚Ä™dy sÄ… Å‚atwiejsze do wykrycia i naprawienia, gdy kod lub proces jest poddawany inspekcji przez wiele osÃ³b. Zgodnie z Prawem Linusa: *"Przy odpowiedniej liczbie oczu wszystkie bÅ‚Ä™dy sÄ… nieistotne"* (Given enough eyeballs, all bugs are shallow).
+Zasada **"Getting Eyes on It"** opiera się na przekonaniu, że błędy są łatwiejsze do wykrycia i naprawienia, gdy kod lub proces jest poddawany inspekcji przez wiele osób. Zgodnie z Prawem Linusa: *"Przy odpowiedniej liczbie oczu wszystkie błędy są nieistotne"* (Given enough eyeballs, all bugs are shallow).
 
-# ðŸ”‘ Kluczowe punkty
+# 🔑 Kluczowe punkty
 
-*   **Katedra vs. Bazar:** Model zamkniÄ™ty (elitarne grono) vs. model otwarty (kaÅ¼dy moÅ¼e patrzeÄ‡ i poprawiaÄ‡).
-*   **Pull Request (PR) Review:** Krytyczny mechanizm weryfikacji zmian przez innych deweloperÃ³w przed ich wdroÅ¼eniem.
-*   **Artefakty pierwszej klasy:** Procesy (np. wersjonowanie, buildy), ktÃ³rych zespÃ³Å‚ nie porzuci nawet pod presjÄ… terminÃ³w.
-*   **Analiza statyczna:** Automatyczne skanowanie kodu (np. SonarQube) w poszukiwaniu bÅ‚Ä™dÃ³w logicznych i luk bezpieczeÅ„stwa.
-*   **Shift Left:** Wykrywanie problemÃ³w jak najwczeÅ›niej w cyklu produkcyjnym.
+*   **Katedra vs. Bazar:** Model zamknięty (elitarne grono) vs. model otwarty (każdy może patrzeć i poprawiać).
+*   **Pull Request (PR) Review:** Krytyczny mechanizm weryfikacji zmian przez innych deweloperów przed ich wdrożeniem.
+*   **Artefakty pierwszej klasy:** Procesy (np. wersjonowanie, buildy), których zespół nie porzuci nawet pod presją terminów.
+*   **Analiza statyczna:** Automatyczne skanowanie kodu (np. SonarQube) w poszukiwaniu błędów logicznych i luk bezpieczeństwa.
+*   **Shift Left:** Wykrywanie problemów jak najwcześniej w cyklu produkcyjnym.
 
-# ðŸ“š SzczegÃ³Å‚owe wyjaÅ›nienie
+# 📚 Szczegółowe wyjaśnienie
 
-Problemy w systemach nie biorÄ… siÄ™ znikÄ…d Ã¢â‚¬â€œ sÄ… tam umieszczane przez ludzi. Aby zminimalizowaÄ‡ ich liczbÄ™, musimy celowo wprowadzaÄ‡ mechanizmy inspekcji. Bazar (model Open Source) jest skuteczny, poniewaÅ¼ duÅ¼a liczba recenzentÃ³w sprawia, Å¼e deweloperzy bardziej dbajÄ… o jakoÅ›Ä‡ swoich wkÅ‚adÃ³w.
+Problemy w systemach nie biorą się znikąd – są tam umieszczane przez ludzi. Aby zminimalizować ich liczbę, musimy celowo wprowadzać mechanizmy inspekcji. Bazar (model Open Source) jest skuteczny, ponieważ duża liczba recenzentów sprawia, że deweloperzy bardziej dbają o jakość swoich wkładów.
 
-W Å›rodowisku korporacyjnym "oczy na kod" zapewniamy poprzez:
-1.  **Automatyczne buildy PR:** SprawdzajÄ…, czy kod siÄ™ kompiluje i czy przechodzi testy jednostkowe.
-2.  **Human Review:** Senior deweloperzy patrzÄ… na logikÄ™ i wymagania biznesowe.
-3.  **Analiza statyczna:** NarzÄ™dzia programistycznie sprawdzajÄ… standardy (np. czy nie ma hardkodowanych haseÅ‚).
+W środowisku korporacyjnym "oczy na kod" zapewniamy poprzez:
+1.  **Automatyczne buildy PR:** Sprawdzają, czy kod się kompiluje i czy przechodzi testy jednostkowe.
+2.  **Human Review:** Senior deweloperzy patrzą na logikę i wymagania biznesowe.
+3.  **Analiza statyczna:** Narzędzia programistycznie sprawdzają standardy (np. czy nie ma hardkodowanych haseł).
 
-Otwarcie kodu (Open Sourcing) to najbardziej ekstremalna forma tej zasady, ktÃ³ra pozwala uÅ¼ytkownikom na samodzielne znajdowanie i naprawianie bÅ‚Ä™dÃ³w, o ile nie zagraÅ¼a to wÅ‚asnoÅ›ci intelektualnej firmy.
+Otwarcie kodu (Open Sourcing) to najbardziej ekstremalna forma tej zasady, która pozwala użytkownikom na samodzielne znajdowanie i naprawianie błędów, o ile nie zagraża to własności intelektualnej firmy.
 
-# ðŸ’¡ PrzykÅ‚ad zastosowania
+# 💡 Przykład zastosowania
 
-*   **SonarQube w CI/CD:** Skonfigurowanie skanera tak, aby blokowaÅ‚ build, jeÅ›li deweloper zapomni o obsÅ‚udze wartoÅ›ci `null` lub zostawi hasÅ‚o w kodzie. NarzÄ™dzie od razu wyjaÅ›nia, dlaczego to bÅ‚Ä…d i jak go naprawiÄ‡, co edukuje zespÃ³Å‚.
-*   **Zablokowanie Main Branch:** UniemoÅ¼liwienie bezpoÅ›redniego merge'owania do gÅ‚Ã³wnej gaÅ‚Ä™zi bez zatwierdzonego Pull Requesta i udanego buildu testowego.
+*   **SonarQube w CI/CD:** Skonfigurowanie skanera tak, aby blokował build, jeśli deweloper zapomni o obsłudze wartości `null` lub zostawi hasło w kodzie. Narzędzie od razu wyjaśnia, dlaczego to błąd i jak go naprawić, co edukuje zespół.
+*   **Zablokowanie Main Branch:** Uniemożliwienie bezpośredniego merge'owania do głównej gałęzi bez zatwierdzonego Pull Requesta i udanego buildu testowego.
 
-## ðŸ“Œ Å¹rÃ³dÅ‚a
+## 📌 Źródła
 
-## ðŸ‘½ Brudnopis
+## 👽 Brudnopis
 
 It's important to understand how problems get into a system. They don't fly in the window.

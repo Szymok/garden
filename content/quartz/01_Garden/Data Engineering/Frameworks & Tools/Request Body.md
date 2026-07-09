@@ -1,4 +1,4 @@
-﻿---
+---
 title: GraphQL Request Body
 created: 2026-05-06
 status: 🌱 draft
@@ -29,4 +29,4 @@ Operation name and type The operation name should be a meaningful name assigned 
 
 Variables If you are using variables, these need to be declared after the operation name while the value is provided in the variables property in the request body. Values that cannot be empty are marked by an exclamation mark following the variable type (!). In the query itself, the variable is passed as an argument using the syntax $<variable_name>. In variables, you need to reference the variable name without any prefixes and supply its value. In the following example, the gid variable is declared as a non-null globally unique identifier type (GID). "operationName": "q", "variables": { "gid": "0726c74e-fc9e-40ad-a29d-23ecldac8769" "query": "query q($gid: GID!) {catalogltem(gid: $gid) { ... }}" If you are using GraphQL Playground, variables are declared in the Query Variables section using, for example, the following syntax:
 
-Requests sent to a GraphQL endpoint return the HTTP 200 0K response. The standard error handling mechanism for GraphQL Requests involves analysing the response body containing an errors object. â€¢ The errors key contains an array of errors returned by the server, with a message and location. If you attempt to publish an entity that no longer exists, the "node not found" message is returned. If you attempt to send a request without having authority, an informative error message e.g. "invalid _ grant" is expected. When there is an issue with authentication, you can find more details in error _ description in the message field.
+Requests sent to a GraphQL endpoint return the HTTP 200 0K response. The standard error handling mechanism for GraphQL Requests involves analysing the response body containing an errors object. • The errors key contains an array of errors returned by the server, with a message and location. If you attempt to publish an entity that no longer exists, the "node not found" message is returned. If you attempt to send a request without having authority, an informative error message e.g. "invalid _ grant" is expected. When there is an issue with authentication, you can find more details in error _ description in the message field.

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Examples of Data Governance Frameworks
 created: 2026-02-24
 status: 🌱 draft
@@ -10,32 +10,32 @@ tags:
 aliases:
   - 
 ---
-# ðŸŽ¯ Definicja
+# 🎯 Definicja
 
-**Frameworki Data Governance** to ustrukturyzowane zbiory najlepszych praktyk i wytycznych, ktÃ³re pomagajÄ… organizacjom zaplanowaÄ‡, wdroÅ¼yÄ‡ i zarzÄ…dzaÄ‡ programem Å‚adu danych. PrzykÅ‚ady obejmujÄ… DAMA (specjalistyczny dla danych) oraz COBIT (ogÃ³lny dla IT).
+**Frameworki Data Governance** to ustrukturyzowane zbiory najlepszych praktyk i wytycznych, które pomagają organizacjom zaplanować, wdrożyć i zarządzać programem ładu danych. Przykłady obejmują DAMA (specjalistyczny dla danych) oraz COBIT (ogólny dla IT).
 
-# ðŸ”‘ Kluczowe punkty
+# 🔑 Kluczowe punkty
 
-*   **DAMA (DMBOK):** Skoncentrowany na zarzÄ…dzaniu danymi; umieszcza Data Governance w centrum "KoÅ‚a DAMA" (DAMA Wheel).
-*   **COBIT:** Szeroki framework zarzÄ…dzania IT, w ktÃ³rym zarzÄ…dzanie danymi jest jednym z wielu komponentÃ³w wspierajÄ…cych cele biznesowe.
-*   **Customizacja:** Frameworki muszÄ… byÄ‡ dostosowane do unikalnej kultury, rozmiaru i potrzeb regulacyjnych organizacji.
-*   **Czego framework nie robi:** Nie zastÄ™puje wiedzy domenowej, nie podejmuje decyzji za firmÄ™ i nie zawiera szczegÃ³Å‚Ã³w technicznych dla konkretnych platform.
+*   **DAMA (DMBOK):** Skoncentrowany na zarządzaniu danymi; umieszcza Data Governance w centrum "Koła DAMA" (DAMA Wheel).
+*   **COBIT:** Szeroki framework zarządzania IT, w którym zarządzanie danymi jest jednym z wielu komponentów wspierających cele biznesowe.
+*   **Customizacja:** Frameworki muszą być dostosowane do unikalnej kultury, rozmiaru i potrzeb regulacyjnych organizacji.
+*   **Czego framework nie robi:** Nie zastępuje wiedzy domenowej, nie podejmuje decyzji za firmę i nie zawiera szczegółów technicznych dla konkretnych platform.
 
-# ðŸ“š SzczegÃ³Å‚owe wyjaÅ›nienie
+# 📚 Szczegółowe wyjaśnienie
 
-Wybrane frameworki oferujÄ… rÃ³Å¼ne podejÅ›cia:
-1.  **DAMA (Data Management Association):** Definiuje Å‚ad danych jako sprawowanie wÅ‚adzy i kontroli nad zasobami danych. Ich model (DAMA Wheel) pokazuje, jak governance wpÅ‚ywa na 10 obszarÃ³w, m.in. architekturÄ™, bezpieczeÅ„stwo, jakoÅ›Ä‡ i metadane.
-2.  **COBIT (ISACA):** To kompleksowy system zarzÄ…dzania caÅ‚ym IT. Dane sÄ… tu zarzÄ…dzane w ramach domen takich jak "Align, Plan, Organize" czy "Deliver, Service, Support". Wymaga wdraÅ¼ania praktyk Å‚adu danych w wielu rÃ³Å¼nych obszarach IT jednoczeÅ›nie.
+Wybrane frameworki oferują różne podejścia:
+1.  **DAMA (Data Management Association):** Definiuje ład danych jako sprawowanie władzy i kontroli nad zasobami danych. Ich model (DAMA Wheel) pokazuje, jak governance wpływa na 10 obszarów, m.in. architekturę, bezpieczeństwo, jakość i metadane.
+2.  **COBIT (ISACA):** To kompleksowy system zarządzania całym IT. Dane są tu zarządzane w ramach domen takich jak "Align, Plan, Organize" czy "Deliver, Service, Support". Wymaga wdrażania praktyk ładu danych w wielu różnych obszarach IT jednocześnie.
 
-WaÅ¼ne jest zrozumienie, Å¼e framework to nie "pismo Å›wiÄ™te". Mniejsze organizacje powinny upraszczaÄ‡ sugerowane struktury (np. Å‚Ä…czyÄ‡ role stewardÃ³w), aby uniknÄ…Ä‡ nadmiernej biurokracji.
+Ważne jest zrozumienie, że framework to nie "pismo święte". Mniejsze organizacje powinny upraszczać sugerowane struktury (np. łączyć role stewardów), aby uniknąć nadmiernej biurokracji.
 
-# ðŸ’¡ PrzykÅ‚ad zastosowania
+# 💡 Przykład zastosowania
 
-**Dostosowanie rÃ³l w DAMA:**
-DAMA sugeruje rozbudowanÄ… strukturÄ™ z Chief Data Stewardem i stewardami wykonawczymi. W Å›redniej wielkoÅ›ci firmie te role moÅ¼na skonsolidowaÄ‡, czyniÄ…c stewardÃ³w po prostu czÅ‚onkami Komitetu Åadu Danych, co pozwala na szybsze dziaÅ‚anie przy zachowaniu zasad frameworku.
+**Dostosowanie ról w DAMA:**
+DAMA sugeruje rozbudowaną strukturę z Chief Data Stewardem i stewardami wykonawczymi. W średniej wielkości firmie te role można skonsolidować, czyniąc stewardów po prostu członkami Komitetu Ładu Danych, co pozwala na szybsze działanie przy zachowaniu zasad frameworku.
 
-## ðŸ“Œ Å¹rÃ³dÅ‚a
+## 📌 Źródła
 
-## ðŸ‘½ Brudnopis
+## 👽 Brudnopis
 
-Now let's look at some example data governance frameworks. For this particular course, I selected two preÃ¢â‚¬â€˜existing frameworks that I have seen used in the field.
+Now let's look at some example data governance frameworks. For this particular course, I selected two pre‑existing frameworks that I have seen used in the field.

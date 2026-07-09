@@ -47,7 +47,7 @@ Słownik Danych ciągle się rozwija, a poniżej wymieniam kilka kluczowych punk
 
 > [!info] Jak możesz pomóc?
 > 
-> 1.  ⭐ Daj gwiazdkę na moim repozytorium na [GitHubie](https://github.com/szymok/quartz)
+> 1.  ⭐ Daj gwiazdkę na moim repozytorium na [GitHubie](https://github.com/Szymok/garden)
 > 2.  🗣️  [Podziel się Słownikiem](https://twitter.com/intent/tweet?text=Świetne%20definicje%20w%20słowniku%20danych%20🧠%20od%20@skszymon&url=quartz.skszymon.eu)
 > 3.  ✍️ Brakuje terminu lub chcesz poprawić błąd? [Wspomóż w tworzeniu Słownika](notes/contribute%20to%20glossary.md) 
-> 4. 👀 Chcesz podyskutować lub potrzebujesz pomocy? Rozmawiaj z nami na [Discord](Serwer w budowie)
+> 4. 👀 Chcesz podyskutować lub potrzebujesz pomocy? Zapraszam do kontaktu!

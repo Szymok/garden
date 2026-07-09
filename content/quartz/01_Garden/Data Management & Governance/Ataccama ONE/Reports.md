@@ -1,4 +1,4 @@
-﻿---
+---
 
 title: Reports  
 created: 2025-05-21  
@@ -18,54 +18,54 @@ aliases:
 
 ---
 
-# ðŸŽ¯ Definicja
+# 🎯 Definicja
 
-**Reports (raporty)** to produkty analityczne â€“ dokumenty, wizualizacje lub dashboardy â€“ prezentujÄ…ce zestaw wnioskÃ³w, wskaÅºnikÃ³w i analiz dotyczÄ…cych danych biznesowych. Raport [[Business Intelligence|BI]] umoÅ¼liwia uÅ¼ytkownikom biznesowym i technicznym szybki przeglÄ…d, analizÄ™ i eksploracjÄ™ danych w przyjaznej, uporzÄ…dkowanej, czÄ™sto interaktywnej formie.
+**Reports (raporty)** to produkty analityczne – dokumenty, wizualizacje lub dashboardy – prezentujące zestaw wniosków, wskaźników i analiz dotyczących danych biznesowych. Raport [[Business Intelligence|BI]] umożliwia użytkownikom biznesowym i technicznym szybki przegląd, analizę i eksplorację danych w przyjaznej, uporządkowanej, często interaktywnej formie.
 
-# ðŸ”‘ Kluczowe punkty
+# 🔑 Kluczowe punkty
 
-- Raporty [[Business Intelligence|BI]] sÄ… budowane w dedykowanych narzÄ™dziach [[Business Intelligence]] i mogÄ… byÄ‡ integrowane, wyÅ›wietlane oraz zarzÄ…dzane centralnie przez platformÄ™ takÄ… jak Ataccama ONE.
-- PozwalajÄ… wizualizowaÄ‡ dane na wiele sposobÃ³w: [[Wizualizacja|wykresy]], dashboardy, tabele, mapy oraz aplikacje interaktywne.
-- Platforma ONE umoÅ¼liwia przeglÄ…d raportÃ³w, dostosowywanie wizualizacji i metadanych, a takÅ¼e zarzÄ…dzanie uprawnieniami â€“ bez moÅ¼liwoÅ›ci edycji zawartoÅ›ci raportu; edycja moÅ¼liwa tylko w narzÄ™dziu [[Business Intelligence|BI]].
-- Raporty mogÄ… byÄ‡ cyklicznie aktualizowane i automatycznie synchronizowane, aby zapewniÄ‡ dostÄ™p do najÅ›wieÅ¼szych wnioskÃ³w biznesowych.
-- MoÅ¼esz zarzÄ…dzaÄ‡ i wyszukiwaÄ‡ raporty wg statusu, tagÃ³w, zastosowanych terminÃ³w, peÅ‚notekstowo lub przez inne metadane.
+- Raporty [[Business Intelligence|BI]] są budowane w dedykowanych narzędziach [[Business Intelligence]] i mogą być integrowane, wyświetlane oraz zarządzane centralnie przez platformę taką jak Ataccama ONE.
+- Pozwalają wizualizować dane na wiele sposobów: [[Wizualizacja|wykresy]], dashboardy, tabele, mapy oraz aplikacje interaktywne.
+- Platforma ONE umożliwia przegląd raportów, dostosowywanie wizualizacji i metadanych, a także zarządzanie uprawnieniami – bez możliwości edycji zawartości raportu; edycja możliwa tylko w narzędziu [[Business Intelligence|BI]].
+- Raporty mogą być cyklicznie aktualizowane i automatycznie synchronizowane, aby zapewnić dostęp do najświeższych wniosków biznesowych.
+- Możesz zarządzać i wyszukiwać raporty wg statusu, tagów, zastosowanych terminów, pełnotekstowo lub przez inne metadane.
 
-# ðŸ“š SzczegÃ³Å‚owe wyjaÅ›nienie
+# 📚 Szczegółowe wyjaśnienie
 
-## Rola raportÃ³w w organizacji
+## Rola raportów w organizacji
 
-- UmoÅ¼liwiajÄ… opisywanie trendÃ³w, [[KPI]], podsumowaÅ„ historycznych i bieÅ¼Ä…cych wynikÃ³w biznesu.
-- SÄ… kluczowym elementem kultury data-driven i zarzÄ…dzania opartym na faktach â€“ przekÅ‚adajÄ… siÄ™ na lepsze, trafniejsze decyzje biznesowe.
-- WspierajÄ… analizÄ™ predykcyjnÄ… i identyfikacjÄ™ nowych szans rynkowych.
-- Centralne repozytorium raportÃ³w (np. w Ataccama ONE) zapobiega duplikowaniu analiz i rozproszonemu zarzÄ…dzaniu wiedzÄ….
+- Umożliwiają opisywanie trendów, [[KPI]], podsumowań historycznych i bieżących wyników biznesu.
+- Są kluczowym elementem kultury data-driven i zarządzania opartym na faktach – przekładają się na lepsze, trafniejsze decyzje biznesowe.
+- Wspierają analizę predykcyjną i identyfikację nowych szans rynkowych.
+- Centralne repozytorium raportów (np. w Ataccama ONE) zapobiega duplikowaniu analiz i rozproszonemu zarządzaniu wiedzą.
 
-## ObsÅ‚uga raportÃ³w w Ataccama ONE
+## Obsługa raportów w Ataccama ONE
 
-- Po podÅ‚Ä…czeniu narzÄ™dzi [[Business Intelligence|BI]], raporty stajÄ… siÄ™ â€žitemami katalogowymiâ€ w ONE i mogÄ… byÄ‡ przeglÄ…dane, indeksowane oraz zarzÄ…dzane razem z innymi aktywami danych.
-- UÅ¼ytkownik moÅ¼e:
-    - przeszukiwaÄ‡ raporty wg statusu, metadanych, terminÃ³w sÅ‚ownikowych,
-    - przeglÄ…daÄ‡ i dostosowywaÄ‡ widgety/wizualizacje,
-    - nadawaÄ‡ metadane i kontekst biznesowy,
-    - zarzÄ…dzaÄ‡ uprawnieniami do raportu (visibility/edit).
-- Nie jest moÅ¼liwa edycja zawartoÅ›ci lub logiki raportu z poziomu ONE â€“ zmiany w raporcie wykonuje siÄ™ w oryginalnym narzÄ™dziu [[Business Intelligence|BI]] (np. Power [[Business Intelligence|BI]], Tableau, Qlik).
+- Po podłączeniu narzędzi [[Business Intelligence|BI]], raporty stają się „itemami katalogowymi” w ONE i mogą być przeglądane, indeksowane oraz zarządzane razem z innymi aktywami danych.
+- Użytkownik może:
+    - przeszukiwać raporty wg statusu, metadanych, terminów słownikowych,
+    - przeglądać i dostosowywać widgety/wizualizacje,
+    - nadawać metadane i kontekst biznesowy,
+    - zarządzać uprawnieniami do raportu (visibility/edit).
+- Nie jest możliwa edycja zawartości lub logiki raportu z poziomu ONE – zmiany w raporcie wykonuje się w oryginalnym narzędziu [[Business Intelligence|BI]] (np. Power [[Business Intelligence|BI]], Tableau, Qlik).
 
-## PrzykÅ‚ady zastosowaÅ„ raportÃ³w
+## Przykłady zastosowań raportów
 
-- [[Wizualizacja]] sprzedaÅ¼y wg regionÃ³w, kanaÅ‚Ã³w, kategorii produktowych.
-- Monitoring [[KPI]] operacyjnych (np. poziomu zapasÃ³w, wskaÅºnikÃ³w konwersji, churnu).
+- [[Wizualizacja]] sprzedaży wg regionów, kanałów, kategorii produktowych.
+- Monitoring [[KPI]] operacyjnych (np. poziomu zapasów, wskaźników konwersji, churnu).
 - Dashboardy predykcyjne (np. prognozowanie popytu, churnu, modeli scoringowych).
-- Monitorowanie jakoÅ›ci danych zintegrowane z procesami [[Data Governance]].
+- Monitorowanie jakości danych zintegrowane z procesami [[Data Governance]].
 
-# ðŸ’¡ PrzykÅ‚ad zastosowania
+# 💡 Przykład zastosowania
 
 **Scenariusz:**  
-ZespÃ³Å‚ [[Business Intelligence|BI]] buduje raport sprzedaÅ¼owy w Power [[Business Intelligence|BI]]. Raport zostaje zintegrowany z Ataccama ONE jako item katalogowy.
+Zespół [[Business Intelligence|BI]] buduje raport sprzedażowy w Power [[Business Intelligence|BI]]. Raport zostaje zintegrowany z Ataccama ONE jako item katalogowy.
 
-- Analityk moÅ¼e go przeglÄ…daÄ‡ w katalogu, dodaÄ‡ metadane biznesowe i powiÄ…zaÄ‡ z odpowiednimi terminami sÅ‚ownika (np. â€žSales Amountâ€, â€žProduct Categoryâ€).
+- Analityk może go przeglądać w katalogu, dodać metadane biznesowe i powiązać z odpowiednimi terminami słownika (np. „Sales Amount”, „Product Category”).
 - Raport podlega automatycznej aktualizacji co noc.
-- Z poziomu ONE manager moÅ¼e wyszukaÄ‡ raport po regionie, statusie â€žzatwierdzonyâ€, a w razie potrzeby oznaczyÄ‡ jako aktywo krytyczne lub udostÄ™pniÄ‡ wybranej grupie decydentÃ³w â€“ bez koniecznoÅ›ci kontaktu z zespoÅ‚em [[Business Intelligence|BI]].
+- Z poziomu ONE manager może wyszukać raport po regionie, statusie „zatwierdzony”, a w razie potrzeby oznaczyć jako aktywo krytyczne lub udostępnić wybranej grupie decydentów – bez konieczności kontaktu z zespołem [[Business Intelligence|BI]].
 
-# ðŸ“Œ Å¹rÃ³dÅ‚a
+# 📌 Źródła
 
 - [Ataccama Reports documentation](https://docs.ataccama.com/one/latest/reports/reports.html)
 - [https://www.ataccama.com/](https://www.ataccama.com/)
@@ -74,10 +74,10 @@ ZespÃ³Å‚ [[Business Intelligence|BI]] buduje raport sprzedaÅ¼owy w Power 
 - [https://www.taxo-acc.pl/baza-wiedzy/co-to-jest-raport-bi/](https://www.taxo-acc.pl/baza-wiedzy/co-to-jest-raport-bi/)
 - [https://www.sap.com/poland/products/data-cloud/cloud-analytics/what-is-business-intelligence.html](https://www.sap.com/poland/products/data-cloud/cloud-analytics/what-is-business-intelligence.html)
 
-# ðŸ‘½ Brudnopis
+# 👽 Brudnopis
 
-- Raport ([[Business Intelligence|BI]] report) = agregat/[[Federacja Danych]] dla biznesu, wyraÅ¼ony w formie wizualnej; najczÄ™Å›ciej: dashboard, tabela, [[Wizualizacja|wykresy]]
-- Podstawa: Power [[Business Intelligence|BI]], Tableau, Qlik, Looker, Excel pivot â€“ Ataccama umoÅ¼liwia centralizacjÄ™ katalogu tych aktywÃ³w
-- Cyfrowa etykieta â€“ metadane pozwalajÄ… tagowaÄ‡ raporty wzglÄ™dem kontekstu biznesowego ([[KPI]], region, produkt, compliance)
-- Nasycenie workflow i governance: kto oglÄ…da, kto zatwierdza, kto udostÄ™pnia dalej (rola, dostÄ™p, polisy)
-- W Lean BI: repozytorium raportÃ³w = podstawa â€ždata marketplaceâ€ uÅ‚atwiajÄ…ca szybkie odkrywanie insightÃ³w przez uÅ¼ytkownikÃ³w nietechnicznych
+- Raport ([[Business Intelligence|BI]] report) = agregat/[[Federacja Danych]] dla biznesu, wyrażony w formie wizualnej; najczęściej: dashboard, tabela, [[Wizualizacja|wykresy]]
+- Podstawa: Power [[Business Intelligence|BI]], Tableau, Qlik, Looker, Excel pivot – Ataccama umożliwia centralizację katalogu tych aktywów
+- Cyfrowa etykieta – metadane pozwalają tagować raporty względem kontekstu biznesowego ([[KPI]], region, produkt, compliance)
+- Nasycenie workflow i governance: kto ogląda, kto zatwierdza, kto udostępnia dalej (rola, dostęp, polisy)
+- W Lean BI: repozytorium raportów = podstawa „data marketplace” ułatwiająca szybkie odkrywanie insightów przez użytkowników nietechnicznych
