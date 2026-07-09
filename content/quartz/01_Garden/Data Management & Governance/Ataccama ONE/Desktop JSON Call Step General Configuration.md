@@ -1,11 +1,10 @@
-# Desktop [[JSON Call step|JSON Call Step]] General Configuration
 
-🎯 **Definicja**
+# 🎯 Definicja
 Krok **JSON Call** w programie **[[ONE Desktop|ONE Desktop]]** służy do wykonywania operacji na ONE API bezpośrednio z poziomu planów integracyjnych i przepływów danych (patrz również: [[Ansible Role in Deployment (Ataccama)|Wdrażanie Ataccamy]]). Umożliwia wysyłanie [[One API Queries|żądań GraphQL]] (za pomocą metody HTTP POST) i przetwarzanie struktury odpowiedzi JSON w celu przekazania jej do kolejnych kroków w planie.
 
 ---
 
-🔑 **Kluczowe punkty**
+# 🔑 Kluczowe punkty
 - Żądania GraphQL są wysyłane przy użyciu metody HTTP **POST** (patrz: [[Endpoints and HTTP Headers|Punkty Końcowe i Nagłówki]]).
 - Treść zapytania (query, patrz: [[One API Queries]]) oraz zmienne (variables) są przekazywane jako oddzielne sekcje w formacie JSON w szablonie wejściowym (**Input Template**).
 - Adres docelowy (URL) może być podany bezpośrednio lub zdefiniowany jako zasób serwerowy (**server resource**).
@@ -14,7 +13,7 @@ Krok **JSON Call** w programie **[[ONE Desktop|ONE Desktop]]** służy do wykony
 
 ---
 
-📚 **Szczegółowe wyjaśnienie konfiguracji**
+# 📚 Szczegółowe wyjaśnienie konfiguracji
 
 ### 1. Konfiguracja ogólna (General Configuration)
 W zakładce General konfigurujesz połączenie i treść żądania:
@@ -50,11 +49,11 @@ Do poprawnego działania wymagane jest uwierzytelnienie. Najczęściej stosuje s
 
 ---
 
-💡 **Przykład zastosowania**
+# 💡 Przykład zastosowania
 Krok ten jest powszechnie stosowany w automatyzacji zadań administracyjnych z poziomu planów [[ONE Desktop|ONE Desktop]] – na przykład w celu pobrania listy wszystkich [[Data Source|źródeł danych]], a następnie wywołania dla nich [[One API Mutations|mutacji]] [[Profiling|profilowania (profiling)]] lub [[Data Quality|ewaluacji DQ]] w pętli.
 
 ---
 
-📌 **Źródła**
+## 📌 Źródła
 - Dokumentacja techniczna [[ONE Desktop|ONE Desktop]]
 - [[Ataccama|Ataccama]] ONE Integration Guide

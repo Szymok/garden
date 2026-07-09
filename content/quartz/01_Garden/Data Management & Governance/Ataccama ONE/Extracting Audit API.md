@@ -1,11 +1,10 @@
-# Extracting Audit API
 
-🎯 **Definicja**
+# 🎯 Definicja
 **Audit API** to dedykowany interfejs GraphQL w module Audytu (Audit module) [[Ataccama|Ataccama]] ONE. Służy do śledzenia i pobierania historii wszystkich działań podejmowanych przez użytkowników w systemie (odczyty, edycje, usunięcia) oraz prób nieautoryzowanego dostępu w celach bezpieczeństwa i zgodności z regulacjami (compliance).
 
 ---
 
-🔑 **Kluczowe punkty**
+# 🔑 Kluczowe punkty
 - Działa na osobnym porcie (domyślnie **8071**) i korzysta z oddzielnej [[Bazy danych|bazy danych]] PostgreSQL (nie wpływa na wydajność głównego repozytorium metadanych).
 - Rejestruje dwa typy rekordów: **Operacje** (kto i co zrobił) oraz **Zasoby** (do jakich obiektów uzyskano dostęp).
 - Powiązanie operacji z zasobami odbywa się za pomocą klucza **`correlationId`**.
@@ -14,7 +13,7 @@
 
 ---
 
-📚 **Szczegółowe wyjaśnienie i architektura**
+# 📚 Szczegółowe wyjaśnienie i architektura
 
 ### Różnice architektoniczne:
 
@@ -61,7 +60,7 @@ Aby włączyć audyt na innych obiektach, należy dodać cechę `audit:auditEnab
 
 ---
 
-💡 **Przykłady zapytań GraphQL**
+# 💡 Przykłady zapytań GraphQL
 
 #### 1. Pobranie listy wszystkich rekordów operacji (Query):
 ```graphql
@@ -184,6 +183,6 @@ W celu cyklicznego pobierania logów do zewnętrznych celów analitycznych możn
 
 ---
 
-📌 **Źródła**
+## 📌 Źródła
 - [[Ataccama|Ataccama]] ONE Security and Auditing Guide
 - [[ONE Desktop|ONE Desktop]] Integration plans repository

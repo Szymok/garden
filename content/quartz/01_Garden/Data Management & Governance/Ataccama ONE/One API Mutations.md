@@ -1,11 +1,10 @@
-# One API [[Mutations|Mutations]]
 
-🎯 **Definicja**
+# 🎯 Definicja
 **Mutacje ([[Mutations|Mutations]])** w GraphQL to specjalne operacje przeznaczone do modyfikacji danych po stronie serwera (zapis, aktualizacja, usuwanie). W przeciwieństwie do [[One API Queries|zapytań (queries)]], które mogą być wykonywane równolegle, mutacje są wykonywane sekwencyjnie (szeregowo), co zapewnia spójność i chroni przed wyścigami (race conditions) podczas modyfikacji danych. Do testowania mutacji można użyć środowiska [[Ataccama Using Playground|GraphQL Playground]].
 
 ---
 
-🔑 **Kluczowe punkty**
+# 🔑 Kluczowe punkty
 - Służą do wykonywania wszelkich operacji zapisu i modyfikacji danych w [[Ataccama|Ataccama]] ONE (tworzenie, edycja, usuwanie encji, uruchamianie procesów).
 - Mutacje mogą zwracać stan wykonanego zadania (np. identyfikator `gid` zadania DQ, patrz: [[Data Quality]]) oraz zmodyfikowany obiekt wraz z zagnieżdżonymi polami.
 - Wykonywane są **sekwencyjnie (w serii)**, w przeciwieństwie do [[One API Queries|zapytań]] wykonywanych współbieżnie.
@@ -13,7 +12,7 @@
 
 ---
 
-📚 **Szczegółowe wyjaśnienie i przykłady**
+# 📚 Szczegółowe wyjaśnienie i przykłady
 
 ### 1. Uruchamianie ewaluacji Jakości Danych (DQ)
 Możesz uruchomić ewaluację jakości danych (DQ evaluation) dla elementu katalogu, konkretnego atrybutu (atrybutu elementu katalogu) lub terminu biznesowego. Każda z tych operacji zwraca identyfikator zadania (`gid`).
@@ -174,6 +173,6 @@ mutation copyRule {
 
 ---
 
-📌 **Źródła**
+## 📌 Źródła
 - Dokumentacja techniczna [[Ataccama|Ataccama]] ONE API
 - GraphQL Specification ([[Mutations|Mutations]])

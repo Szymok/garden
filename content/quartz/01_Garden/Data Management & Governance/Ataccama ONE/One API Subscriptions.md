@@ -1,11 +1,10 @@
-# One API [[Subscriptions|Subscriptions]]
 
-🎯 **Definicja**
+# 🎯 Definicja
 **Subskrypcje ([[Subscriptions|Subscriptions]])** w GraphQL to mechanizm służący do przesyłania aktualizacji danych z serwera do klienta w czasie rzeczywistym. Odbywa się to poprzez ustanowienie stałego, dwukierunkowego połączenia (zazwyczaj przy użyciu protokołu WebSockets). W [[Ataccama|Ataccama]] ONE subskrypcje są wykorzystywane do śledzenia zewnętrznych zdarzeń w [[Metadata|modelu metadanych (MMM Eventing System)]]. Do wywoływania zapytań subskrypcji stosuje się [[Ataccama Using Playground|GraphQL Playground]].
 
 ---
 
-🔑 **Kluczowe punkty**
+# 🔑 Kluczowe punkty
 - Pozwalają na natychmiastowe wypychanie (**push**) zmian danych z serwera do systemów zewnętrznych bez konieczności ciągłego odpytywania (polling, patrz: [[One API Queries|Zapytania]]).
 - Śledzą zmiany stanu encji, takie jak: utworzenie (`CREATED`), aktualizacja (`UPDATED`) i usunięcie (`DELETED`).
 - Obsługują tryb rozłączony – zdarzenia, które wystąpiły, gdy klient był offline, nie zostaną utracone (są kolejkowane).
@@ -14,7 +13,7 @@
 
 ---
 
-📚 **Szczegółowe wyjaśnienie i operacje**
+# 📚 Szczegółowe wyjaśnienie i operacje
 
 ### 1. Tworzenie subskrypcji zdarzeń (Subscribing to Events)
 Podczas uruchamiania subskrypcji określasz filtry (np. konkretny typ encji, identyfikator encji) oraz parametry techniczne:
@@ -102,6 +101,6 @@ mutation unsubscribe($id: GID!) {
 
 ---
 
-📌 **Źródła**
+## 📌 Źródła
 - [[Ataccama|Ataccama]] ONE Eventing System documentation
 - GraphQL [[Subscriptions|Subscriptions]] Specification
