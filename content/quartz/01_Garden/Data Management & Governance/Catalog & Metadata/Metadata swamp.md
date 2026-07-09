@@ -4,7 +4,7 @@ created: 2026-02-04
 status: evergreen
 category: Data Governance / Anti-Patterns
 difficulty: basic
-language: en
+language: pl
 tags:
   - anti-pattern
   - chaos

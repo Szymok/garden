@@ -1,22 +1,66 @@
 ---
-title: Metadata Model Graph
+title: Metadata Model Graph (Wizualizacja Grafu Modelu Metadanych)
 created: 2026-05-06
 status: 🌱 draft
 category: Data Governance
 difficulty: średni
-language: en
+language: pl
 tags:
   - ataccama
   - metadata-model
   - graph
   - entities
+aliases:
+  - Graf modelu metadanych
+  - Model Graph Ataccama
 ---
-To view the [[Metadata|metadata]] graph, go to Global Settings > [[Metadata|Metadata]] Model > Model Graph: 1. 2. 3. 4. Entity type filter: [[Metadata|Metadata]] model entities are categorized into two types. To show all types of entities and their connections, select the All filter. System - Their instances and subtypes describe the configuration of the system layer.(Used internally by the application). Business - This type Of entity is governed by organization. They represent [[Metadata|metadata]] that is important in a business sense. [[Metadata|Metadata]] box: Connects to other entities with lines. To highlight the connections, hover over the line. Entities: Shown as boxes, with their properties listed inside. The connection type: Appears above the connections, for example, AEE, SRE, SEE, etc.
-To look for a specific entity, select the search icon in the upper-right corner and type the entity name. The entity you are looking for is shown and highlighted in green. Manage the graph size: • The icons in the lower-right corner can help with orienting and managing the graph size
-Adding an object to the model graph is done through creating a new entity. Creating an entity in ONE strictly means defining a new entity type. This is done from the Global Settings (1) > [[Metadata|Metadata]] Model (2). Each entity defines a section (or node) in the web application. Where the new entity is displayed depends on its position within Navigation (3)
 
+# 🎯 Definicja
+**[[Wizualizacja|Wizualizacja]] Grafu Modelu Metadanych ([[Metadata|Metadata]] Model Graph)** to interaktywne narzędzie graficzne w [[Ataccama|Ataccama]] ONE, które przedstawia schemat relacji, dziedziczenia oraz powiązań pomiędzy wszystkimi encjami tworzącymi model metadanych platformy. Ułatwia zrozumienie powiązań między warstwami technicznymi i biznesowymi.
 
-I. 2. Go to Global Settings > [[Metadata|Metadata]] Model. Select Create Entity and add the General information as follows: Name: Name of the entity. a. b. Extends: (Optional) Select from the dropdown list available to define Extends for the entity. Doing so extends a node property with additional properties inherited from another node.
-c. 1. II. Ill. Properties: These define the input fields available in the web application. Name: property name displayed in the web application. Type: select a Simple (scalar) or an Object type property. Required: select to make the property mandatory.3. 4. 5. Select Save. (Optional) Add [[Traits|Traits]] as required. [[Traits|Traits]] are properties that are defined by plugins and add additional functionality or change the appearance of the entity. You will now see the draft bar at the top of the screen, click Apply changes.
+---
 
-1. 2. 3. 4. To add your new entity as a property of the main [[Metadata|metadata]] model, in the [[Metadata|Metadata]] Model, search for and select [[Metadata|metadata]]. Select Add Property. Name is case sensitive and must match the name of your new entity. Name: 'entity name' a. b. Type: Embedded object array Object: (use the search bar to search c. for your newly created entity) Select Save. You should now be able to see your entity in the list of Properties for [[Metadata|metadata]]. GO back to the [[Metadata|Metadata]] Model and click Apply changes.
+🔑 **Kluczowe punkty**
+- Dostępny w panelu administracyjnym w zakładce *Global Settings > [[Metadata|Metadata]] Model > Model Graph*.
+- Reprezentuje encje jako bloki (skrzynki) zawierające listę ich właściwości, a powiązania jako linie.
+- Pozwala na filtrowanie encji według ich typu (systemowe vs biznesowe) oraz wyszukiwanie konkretnych obiektów na grafie.
+- Typ relacji (np. `AEE`, `SRE`, `SEE`) jest wyświetlany bezpośrednio nad linią łączącą encje.
+
+---
+
+📚 **Nawigacja i obsługa grafu**
+
+- **Filtrowanie typów encji:** Model metadanych dzieli encje na **Systemowe** (system - używane wewnętrznie do konfiguracji technicznej) oraz **Biznesowe** (business - istotne z punktu widzenia ładu danych, patrz: [[Metadata Model Overview]]). Domyślnie graf pokazuje tylko encje biznesowe. Aby zobaczyć wszystkie powiązania, należy przełączyć filtr na **All**.
+- **Wyszukiwanie i podświetlanie:** Kliknięcie ikony lupy w prawym górnym rogu umożliwia wyszukanie konkretnej encji. Po znalezieniu, wybrany blok zostaje automatycznie wycentrowany i podświetlony na **zielono**.
+- **Interakcja z połączeniami:** Najechanie kursorem na linię łączącą bloki podświetla relację, ułatwiając śledzenie zależności na skomplikowanym grafie.
+- **Skalowanie widoku:** Panel kontrolny w prawym dolnym rogu pozwala na przybliżanie/oddalanie (zoom) oraz automatyczne dopasowanie widoku do ekranu.
+
+---
+
+🛠️ **Procedura dodawania nowej encji do grafu**
+
+Dodanie nowego obiektu do modelu oznacza zdefiniowanie nowego typu encji. Odbywa się to w dwóch krokach:
+
+### Krok 1: Utworzenie samej encji
+1. Przejdź do *Global Settings > [[Metadata|Metadata]] Model* i kliknij przycisk **Create Entity**.
+2. Wypełnij pola ogólne:
+   - **Name:** Nazwa nowej encji.
+   - **Extends (Opcjonalnie):** Pozwala wybrać encję bazową, po której nowa encja odziedziczy właściwości (patrz: [[Entity Extension|Rozszerzanie Encji]]).
+3. Dodaj właściwości (**Properties**), które zdefiniują pola wejściowe (np. nazwa, typ skalarny lub obiektowy, czy pole jest wymagane).
+4. (Opcjonalnie) Dodaj cechy (**[[Traits|Traits]]**), aby nadać encji dodatkowe funkcjonalności (np. profilowanie, [[Jakość Danych|jakość danych]]).
+5. Kliknij **Save**.
+
+### Krok 2: Podpięcie encji pod główny model (`metadata`)
+Aby nowa encja była widoczna i połączona z resztą systemu na grafie, należy dodać ją jako właściwość głównego węzła modelu:
+1. Wyszukaj encję o nazwie `metadata` na liście i przejdź do jej edycji.
+2. Wybierz opcję **Add Property**.
+3. Jako nazwę podaj dokładnie nazwę nowej encji (wielkość liter ma znaczenie).
+4. Ustaw typ jako **Embedded object array** lub **Object** i wskaż swoją nowo utworzoną encję w polu wyszukiwania obiektu.
+5. Kliknij **Save**.
+6. Kliknij **Apply changes** na górnym żółtym pasku wersji roboczej (draft bar), aby opublikować zmiany w całym systemie.
+
+---
+
+📌 **Źródła**
+- [[Ataccama|Ataccama]] ONE Metamodel Configuration Guide
+- [[Ataccama|Ataccama]] ONE Web Application Administration Guide
