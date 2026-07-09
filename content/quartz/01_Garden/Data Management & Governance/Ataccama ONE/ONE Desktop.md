@@ -1,4 +1,4 @@
-﻿---
+---
 title: ONE Desktop
 created: 2026-05-06
 status: 🌱 draft
@@ -9,4 +9,7 @@ tags:
   - ataccama
   - one-desktop
   - desktop-client
+aliases:
+  - ONE Desktop
 ---
+

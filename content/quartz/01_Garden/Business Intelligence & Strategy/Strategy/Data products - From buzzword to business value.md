@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Data Products — From Buzzword to Business Value"
 created: 2026-05-06
 status: 🌱 draft
@@ -10,4 +10,7 @@ tags:
   - data-mesh
   - business-value
   - webinar
+aliases:
+  - Data Products — From Buzzword to Business Value
 ---
+

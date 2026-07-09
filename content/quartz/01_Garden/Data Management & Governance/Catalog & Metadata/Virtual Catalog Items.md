@@ -10,6 +10,8 @@ tags:
   - virtual-catalog
   - catalog-items
   - data-quality
+aliases:
+  - Virtual Catalog Items
 ---
 Contain all data assets and [[Metadata|metadata]] that were loaded from registered data sources and connections. Might include additional [[Metadata|metadata]] such as information about [[Data Quality|data quality]], relationships, lineage, anomalies, etc.
 Create a subset of existing [[Catalog Items|catalog items]], Manually determine which parts of data to use. Remove unwanted records (old, not compliant etc).

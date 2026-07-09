@@ -10,6 +10,8 @@ tags:
   - transformation-plans
   - dq
   - post-processing
+aliases:
+  - Transformation Plans
 ---
 Provide the ability to export data and DQ evaluation results. Can be configured as an extension of [[Reports|reports]] from Monitoring Projects. Post-processing plans are created directly in the ONE Web application by selecting the respective [[Catalog Items|Catalog Items]] within a given [[Monitoring Project|Monitoring Project]]. DQ results can then be downloaded from the Export tab of the [[Monitoring Project|Monitoring project]].
 To do [[Post Processing|post processing]] through a Transformation plan: 2. 3. In the Configuration & Results tab of your [[Monitoring Project|Monitoring Project]]. Select the options menu for the catalog item you wish to report on. Click Add post-processing transformation. As part of the process, provide a name for the plan.

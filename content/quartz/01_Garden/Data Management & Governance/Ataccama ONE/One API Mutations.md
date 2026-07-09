@@ -1,3 +1,19 @@
+---
+title: One API Mutations
+created: 2026-07-09
+status: evergreen
+category: Ataccama ONE
+difficulty: intermediate
+language: pl
+tags:
+  - ataccama
+  - mutations
+  - graphql
+  - api
+aliases:
+  - Mutacje One API
+  - Ataccama mutations
+---
 
 # 🎯 Definicja
 **Mutacje ([[Mutations|Mutations]])** w GraphQL to specjalne operacje przeznaczone do modyfikacji danych po stronie serwera (zapis, aktualizacja, usuwanie). W przeciwieństwie do [[One API Queries|zapytań (queries)]], które mogą być wykonywane równolegle, mutacje są wykonywane sekwencyjnie (szeregowo), co zapewnia spójność i chroni przed wyścigami (race conditions) podczas modyfikacji danych. Do testowania mutacji można użyć środowiska [[Ataccama Using Playground|GraphQL Playground]].

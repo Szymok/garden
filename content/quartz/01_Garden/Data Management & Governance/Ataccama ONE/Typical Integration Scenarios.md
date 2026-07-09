@@ -10,6 +10,8 @@ tags:
   - integration
   - one-desktop
   - one-web
+aliases:
+  - Typical Integration Scenarios
 ---
 Majority of user tasks can be performed directly in the ONE Web application: Consumes data/information directly via the O Web application. Browse [[Catalog Items|Catalog items]], Business Terms, run DQ o evaluations, create [[Rules|Rules]] etc. All activities are defined within a range of the predefined configuration of the Web Application. Any task outside the scope of the default features set require integration with the [[ONE Desktop|ONE Desktop]].
 Structure & Configuration Changes 

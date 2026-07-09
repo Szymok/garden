@@ -1,3 +1,19 @@
+---
+title: One API Subscriptions
+created: 2026-07-09
+status: evergreen
+category: Ataccama ONE
+difficulty: advanced
+language: pl
+tags:
+  - ataccama
+  - subscriptions
+  - graphql
+  - real-time
+aliases:
+  - Subskrypcje One API
+  - Ataccama subscriptions
+---
 
 # 🎯 Definicja
 **Subskrypcje ([[Subscriptions|Subscriptions]])** w GraphQL to mechanizm służący do przesyłania aktualizacji danych z serwera do klienta w czasie rzeczywistym. Odbywa się to poprzez ustanowienie stałego, dwukierunkowego połączenia (zazwyczaj przy użyciu protokołu WebSockets). W [[Ataccama|Ataccama]] ONE subskrypcje są wykorzystywane do śledzenia zewnętrznych zdarzeń w [[Metadata|modelu metadanych (MMM Eventing System)]]. Do wywoływania zapytań subskrypcji stosuje się [[Ataccama Using Playground|GraphQL Playground]].
