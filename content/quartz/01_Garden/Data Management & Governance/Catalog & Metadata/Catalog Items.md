@@ -15,7 +15,7 @@ aliases:
   - Assets
 ---
 # 🎯 Definicja
-**Catalog Items** to podstawowe obiekty zarządzane w Katalogu Danych (Data Catalog). Reprezentują fizyczne lub logiczne zasoby danych, takie jak tabele, pliki, raporty, modele AI czy interfejsy API.
+**Catalog Items** to podstawowe obiekty zarządzane w Katalogu Danych ([[Data Catalog|Data Catalog]]). Reprezentują fizyczne lub logiczne zasoby danych, takie jak tabele, pliki, raporty, modele AI czy interfejsy API.
 
 # 🔑 Kluczowe punkty
 - **Abstrakcja:** Catalog Item to nie same dane (bajty), ale metadane "o danych" (wskaźnik, opis, schemat).
@@ -23,17 +23,17 @@ aliases:
 - **Lineage:** Obiekty są łączone powiązaniami, tworząc mapę przepływu danych.
 
 # 📚 Szczegółowe wyjaśnienie
-W systemie takim jak Ataccama ONE, wszystko w katalogu jest Itemem.
+W systemie takim jak [[Ataccama|Ataccama]] ONE, wszystko w katalogu jest Itemem.
 Hierarchia:
-- **System** (np. "Hurtownia Snowflake").
+- **System** (np. "Hurtownia [[Snowflake|Snowflake]]").
   - **Database** (np. "PROD_DWH").
     - **Schema** (np. "SALES").
       - **Table** (Catalog Item).
         - **Column** (Attribute).
 
 Catalog Item jest centralnym punktem wiedzy. To tu widzisz:
-1. Profiling (jaki jest rozkład danych?).
-2. Data Quality (czy dane są czyste?).
+1. [[Profiling|Profiling]] (jaki jest rozkład danych?).
+2. [[Data Quality|Data Quality]] (czy dane są czyste?).
 3. Glossary (co to znaczy biznesowo?).
 4. Lineage (skąd przyszło?).
 
@@ -42,13 +42,13 @@ Analityk szuka danych o sprzedaży. Wpisuje w wyszukiwarkę katalogu "Sales".
 Znajduje Catalog Item `fact_sales`.
 Widzi, że:
 - Właścicielem jest Jan Kowalski.
-- Jakość danych wynosi 98%.
+- [[Jakość Danych|Jakość danych]] wynosi 98%.
 - Tabela jest oznaczona tagiem "GDPR: Contains Personal Data".
 Dzięki temu wie, czy może jej użyć i kogo pytać o dostęp.
 
 ## 📌 Źródła
-- Ataccama ONE Documentation.
+- [[Ataccama|Ataccama]] ONE Documentation.
 
 ## 👽 Brudnopis
 - Automatyczne katalogowanie (Scanners/Crawlers) vs Ręczne rejestrowanie.
-- Virtual Catalog Items (widoki logiczne stworzone w katalogu, nieistniejące w bazie).
+- [[Virtual Catalog Items|Virtual Catalog Items]] (widoki logiczne stworzone w katalogu, nieistniejące w bazie).

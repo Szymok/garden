@@ -26,7 +26,7 @@ aliases:
 # 🔑 Kluczowe punkty
 
 - **Przechowywanie kolumnowe** optymalizuje analitykę i duże skany danych.
-- **Przechowywanie wierszowe** zapewnia wysoką wydajność operacji transakcyjnych (OLTP).
+- **Przechowywanie wierszowe** zapewnia wysoką wydajność operacji transakcyjnych ([[OLTP|OLTP]]).
 - **Silnik wektorowy** wykorzystuje paralele przetwarzanie blokowe i instrukcje SIMD, drastycznie zwiększając wydajność zapytań analitycznych.
 - Wybór metody zależy od charakteru danych oraz typowych operacji.
 
@@ -37,7 +37,7 @@ aliases:
 - Dane przechowywane są w osobnych blokach dla każdej kolumny tabeli.
 - Umożliwia szybkie agregacje, selektywne pobieranie wybranych kolumn i skuteczną kompresję.
 - Idealne do hurtowni danych, [[Business Intelligence|BI]], raportowania – zapytania odczytujące wybrane kolumny z milionów wierszy.
-- Przykłady: **[[Apache Druid]]**, **ClickHouse**, **BigQuery**, **Snowflake**.
+- Przykłady: **[[Apache Druid]]**, **ClickHouse**, **BigQuery**, **[[Snowflake|Snowflake]]**.
 
 **Zalety:**
 
@@ -53,22 +53,22 @@ aliases:
 
 - Dane przechowywane są w postaci kolejnych wierszy (rekordów).
 - Każdy wiersz reprezentuje pełną encję obiektu, np. pojedynczy zamówienie lub użytkownik.
-- Stosowane w relacyjnych bazach transakcyjnych: **PostgreSQL**, **MySQL**, **SQL Server**.
+- Stosowane w relacyjnych bazach transakcyjnych: **PostgreSQL**, **MySQL**, **[[SQL|SQL]] Server**.
 
 **Zalety:**
 
 - Szybkie pobieranie, aktualizacja i usuwanie pojedynczych rekordów.
-- Dobre wsparcie dla typowego OLTP: operacje CRUD, transakcje, wykrywanie kolizji.
+- Dobre wsparcie dla typowego [[OLTP|OLTP]]: operacje CRUD, transakcje, wykrywanie kolizji.
 
 **Ograniczenia:**
 
 - Mało wydajne dla analiz na wielu kolumnach z dużych zestawów danych.
 - Brak możliwości sprytnego kompresowania w obrębie pojedynczej kolumny.
 
-|Technika|Przykłady zastosowania|Typowe bazy danych|
+|Technika|Przykłady zastosowania|Typowe [[Bazy danych|bazy danych]]|
 |---|---|---|
 |Kolumnowe|Analityka, [[Business Intelligence\|BI]], hurtownie|Druid, BigQuery, ClickHouse|
-|Wierszowe|OLTP, systemy operacyjne|MySQL, Postgres, Oracle|
+|Wierszowe|[[OLTP|OLTP]], systemy operacyjne|MySQL, Postgres, Oracle|
 
 ## Silnik wektorowy
 
@@ -90,7 +90,7 @@ aliases:
 
 # 💡 Przykład zastosowania
 
-Analizy danych clickstream w platformie e-commerce: dane z milionów odsłon są ładowane do bazy z przechowywaniem kolumnowym (np. Druid), a agregacje oraz transformacje do raportów wykonywane są przez silnik wektorowy DuckDB, co zapewnia szybkie generowanie raportów nawet przy bardzo dużych wolumenach danych.
+Analizy danych clickstream w platformie e-commerce: dane z milionów odsłon są ładowane do bazy z przechowywaniem kolumnowym (np. Druid), a agregacje oraz transformacje do raportów wykonywane są przez silnik wektorowy [[DuckDB|DuckDB]], co zapewnia szybkie generowanie raportów nawet przy bardzo dużych wolumenach danych.
 
 ## 📌 Źródła
 
@@ -102,7 +102,7 @@ Analizy danych clickstream w platformie e-commerce: dane z milionów odsłon są
 # 👽 Brudnopis
 
 - Kolumnowe – skanowanie, kompresja, agregacje, OLAP.
-- Wierszowe – CRUD, OLTP, wydajne aktualizacje pojedynczych rekordów.
+- Wierszowe – CRUD, [[OLTP|OLTP]], wydajne aktualizacje pojedynczych rekordów.
 - Wektorowe – przetwarzanie masowe, SIMD, cache locality, [[DuckDB]], Databricks Photon.
 - Wybór zależy od przypadku i obciążenia (transakcje vs analityka vs [[Uczenie Maszynowe|ML]]).
 - Bazy: [[DuckDB]] = wektorowy + kolumnowy, Druid = kolumnowy/OLAP, Postgres/MySQL = wierszowy.

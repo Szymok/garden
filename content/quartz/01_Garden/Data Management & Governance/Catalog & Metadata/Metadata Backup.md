@@ -15,7 +15,7 @@ aliases:
   - Database Snapshot
 ---
 # 🎯 Definicja
-**Metadata Backup** (w Ataccama ONE: Database Snapshot) to pełny zrzut bazy danych zarządzającej metadanymi (MMM Database). Zawiera wszystkie konfiguracje, definicje reguł, strukturę katalogu i użytkowników. NIE zawiera samych danych biznesowych (te są w źródłach).
+**[[Metadata|Metadata]] [[Backup|Backup]]** (w [[Ataccama|Ataccama]] ONE: Database Snapshot) to pełny zrzut [[Bazy danych|bazy danych]] zarządzającej metadanymi (MMM Database). Zawiera wszystkie konfiguracje, definicje reguł, strukturę katalogu i użytkowników. NIE zawiera samych danych biznesowych (te są w źródłach).
 
 # 🔑 Kluczowe punkty
 - **Cel:** Ratunek po awarii (np. nieudany upgrade systemu, przypadkowe usunięcie konfiguracji).
@@ -35,7 +35,7 @@ Administrator chce wgrać nową, eksperymentalną wersję modelu metadanych.
 5. Po 5 minutach system wraca do stanu sprzed zmiany, jakby nic się nie stało.
 
 ## 📌 Źródła
-- Ataccama Administration Guide - Backup & Restore.
+- [[Ataccama|Ataccama]] Administration Guide - [[Backup|Backup]] & Restore.
 
 ## 👽 Brudnopis
-- To nie jest backup długoterminowy (do tego służą regularne dumpy bazy danych Postgres robione przez zespół IT). Snapshot jest narzędziem operacyjnym "na teraz".
+- To nie jest [[Backup|backup]] długoterminowy (do tego służą regularne dumpy [[Bazy danych|bazy danych]] Postgres robione przez zespół IT). Snapshot jest narzędziem operacyjnym "na teraz".

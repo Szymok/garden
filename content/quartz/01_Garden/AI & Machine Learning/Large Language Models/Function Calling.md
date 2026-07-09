@@ -26,7 +26,7 @@ aliases:
 - Model **nie wykonuje** funkcji — tylko decyduje kiedy i z jakimi argumentami ją wywołać
 - Odpowiedź modelu to JSON, nie tekst narracyjny
 - Fundament architektury [[LLM Agents|agentów AI]]
-- Natywnie wspierane przez: GPT-4, Claude 3+, Gemini, Llama 3.1+
+- Natywnie wspierane przez: [[GPT-4|GPT-4]], Claude 3+, Gemini, Llama 3.1+
 - Pozwala LLM na: czytanie danych, zapis, wywoływanie API, uruchamianie kodu
 
 # 📚 Szczegółowe wyjaśnienie
@@ -83,7 +83,7 @@ Model: [call get_schema("customers"), call get_dq_score("customers")]
 
 # 💡 Przykład zastosowania
 
-**Chatbot do Ataccama**: użytkownik pyta "pokaż mi reguły DQ dla tabeli `orders`". Model wywołuje `get_dq_rules(table="orders")` → aplikacja odpytuje [[Ataccama ONE Platform Components|Ataccama API]] → wyniki wracają do modelu → model prezentuje je w czytelnej formie. Bez Function Calling model mógłby tylko halucynować o regułach.
+**Chatbot do [[Ataccama|Ataccama]]**: użytkownik pyta "pokaż mi reguły DQ dla tabeli `orders`". Model wywołuje `get_dq_rules(table="orders")` → aplikacja odpytuje [[Ataccama ONE Platform Components|Ataccama API]] → wyniki wracają do modelu → model prezentuje je w czytelnej formie. Bez Function Calling model mógłby tylko halucynować o regułach.
 
 # 📌 Źródła
 

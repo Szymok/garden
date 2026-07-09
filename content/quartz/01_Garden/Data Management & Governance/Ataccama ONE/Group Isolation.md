@@ -16,11 +16,11 @@ aliases:
   - Chinese Wall
 ---
 # 🎯 Definicja
-**Group Isolation** (Izolacja Grup) to mechanizm bezpieczeństwa w systemach Governance (np. Ataccama), który tworzy "szczelne ściany" między grupami użytkowników. Jeśli grupa "HR" jest izolowana, to nikt spoza tej grupy (nawet z grupy "Finanse") nie zobaczy jej danych, nie będzie mógł przypisać ich Stewarda ani współdzielić z nimi zasobów.
+**Group Isolation** (Izolacja Grup) to mechanizm bezpieczeństwa w systemach Governance (np. [[Ataccama|Ataccama]]), który tworzy "szczelne ściany" między grupami użytkowników. Jeśli grupa "HR" jest izolowana, to nikt spoza tej grupy (nawet z grupy "Finanse") nie zobaczy jej danych, nie będzie mógł przypisać ich Stewarda ani współdzielić z nimi zasobów.
 
 # 🔑 Kluczowe punkty
 - **Zastosowanie:** Dane wrażliwe (Płace, Dane Medyczne), Tajne Projekty (R&D), Oddziały w różnych krajach (prawo lokalne).
-- **Stewardship:** Steward musi być "wewnątrz" izolowanej grupy.
+- **[[Stewardship|Stewardship]]:** Steward musi być "wewnątrz" izolowanej grupy.
 - **Jednokierunkowość:** Często Administrator (nadrzędny) widzi dół, ale dół nie widzi góry ani boków.
 
 # 📚 Szczegółowe wyjaśnienie
@@ -35,7 +35,7 @@ Tworzymy grupę `Switzerland_Ops` z włączoną **Izolacją**.
 Polski analityk szukający "Klient Jan Nowak" w katalogu znajdzie tylko Polaka, nawet jeśli w bazie szwajcarskiej istnieje taki sam rekord.
 
 ## 📌 Źródła
-- Ataccama Documentation - Security & Access Control.
+- [[Ataccama|Ataccama]] Documentation - Security & Access Control.
 
 ## 👽 Brudnopis
 - Jest to forma "Multi-tenancy" na poziomie logicznym aplikacji.

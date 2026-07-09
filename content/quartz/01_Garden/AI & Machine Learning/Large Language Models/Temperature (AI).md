@@ -22,7 +22,7 @@ Zakres: 0.0 - 1.0 (czasem 2.0).
 - **1.0:** Artysta. Wymyśla, ryzykuje, czasem bredzi. (Losowy).
 
 # 🔑 Kluczowe punkty
-- **Niska Temp (0.0 - 0.3):** Kodowanie, Fakty, Klasyfikacja, Wyciąganie danych. Tu błąd jest niedopuszczalny.
+- **Niska Temp (0.0 - 0.3):** Kodowanie, [[Fakty|Fakty]], Klasyfikacja, Wyciąganie danych. Tu błąd jest niedopuszczalny.
 - **Wysoka Temp (0.7 - 1.0):** Pisanie wierszy, Brainstorming, Kreatywne pisanie. Tu różnorodność jest zaletą.
 
 # 📚 Szczegółowe wyjaśnienie

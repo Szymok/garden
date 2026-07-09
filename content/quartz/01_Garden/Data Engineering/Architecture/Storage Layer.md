@@ -21,7 +21,7 @@ W [[Nowoczesny Stos Danych|MDS]] (Cloud) to zazwyczaj **Object Storage** (S3, AD
 W tradycyjnym IT to macierze dyskowe lub HDFS.
 
 # 🔑 Kluczowe punkty
-- **Tanie i Skalowalne:** W chmurze storage jest tani. Możesz trzymać petabajty danych za ułamek ceny bazy danych.
+- **Tanie i Skalowalne:** W chmurze storage jest tani. Możesz trzymać petabajty danych za ułamek ceny [[Bazy danych|bazy danych]].
 - **Rozdzielenie:** Compute (Obliczenia - CPU/RAM) jest oddzielone od Storage (Dysk). To cecha Cloud Native.[[Data Lake|Jezior Danych]].
 - **Trwałość (Durability):** Gwarancja, że dane nie zginą (np. AWS S3 ma trwałość "11 dziewiątek").
 
@@ -32,8 +32,8 @@ Ale na samym dnie zawsze jest plik (Parquet, JSON, CSV) leżący na dysku w chmu
 
 # 💡 Przykład zastosowania
 Amazon S3 (Simple Storage Service).
-Wrzucasz tam zdjęcia, logi, backupy bazy danych, pliki Parquet hurtowni danych.
-Snowflake (baza danych) pod spodem trzyma swoje dane właśnie na S3 (w swoim formacie), ale Ty tego nie widzisz. Ty płacisz za Storage (S3) i Compute (Warehouse) osobno.
+Wrzucasz tam zdjęcia, logi, backupy [[Bazy danych|bazy danych]], pliki Parquet hurtowni danych.
+[[Snowflake|Snowflake]] (baza danych) pod spodem trzyma swoje dane właśnie na S3 (w swoim formacie), ale Ty tego nie widzisz. Ty płacisz za Storage (S3) i Compute (Warehouse) osobno.
 
 ## 📌 Źródła
 - AWS S3 Documentation.

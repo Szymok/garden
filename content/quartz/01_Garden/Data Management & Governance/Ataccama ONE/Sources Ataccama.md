@@ -22,11 +22,11 @@ aliases:
 
 # 🎯 Definicja
 
-**Sources** w kontekście platformy Ataccama ONE to zarejestrowane źródła danych, które stanowią podstawę do dalszych operacji zarządzania danymi — takich jak profilowanie, data discovery, katalogowanie, klasyfikacja, ocena jakości oraz dokumentacja techniczna i biznesowa. Źródła można tworzyć i konfigurować manualnie w sekcji **[[Data Catalog]] → Sources**.
+**Sources** w kontekście platformy [[Ataccama|Ataccama]] ONE to zarejestrowane źródła danych, które stanowią podstawę do dalszych operacji zarządzania danymi — takich jak profilowanie, data discovery, katalogowanie, klasyfikacja, ocena jakości oraz dokumentacja techniczna i biznesowa. Źródła można tworzyć i konfigurować manualnie w sekcji **[[Data Catalog]] → Sources**.
 
 # 🔑 Kluczowe punkty
 
-- 🔌 [[Data Source|Źródło danych]] definiuje punkt wejścia do danych – np. baza danych, Data Lake, S3 bucket, JDBC, REST API.
+- 🔌 [[Data Source|Źródło danych]] definiuje punkt wejścia do danych – np. baza danych, [[Data Lake|Data Lake]], S3 bucket, JDBC, REST API.
 - 🛠️ Do jednego źródła można przypisać wiele połączeń (connections), nawet różnego typu.
 - 👥 W ramach źródła można zarządzać poświadczeniami i dostępami dla różnych użytkowników.
 - ⚙️ Obsługiwane działania to: testowanie połączenia, discovery danych, pełne profilowanie, uruchomienie pipeline’u dokumentującego.
@@ -36,7 +36,7 @@ aliases:
 
 ## Jak działa sekcja Sources?
 
-Sekcja **Sources** w Ataccama ONE umożliwia:
+Sekcja **Sources** w [[Ataccama|Ataccama]] ONE umożliwia:
 
 - Dodawanie i konfigurację źródeł danych.
 - Zarządzanie kilkoma połączeniami pod jedno źródło (np. różne środowiska: DEV, PROD).
@@ -49,12 +49,12 @@ Sekcja **Sources** w Ataccama ONE umożliwia:
 |Typ źródła|Przykład zastosowania|
 |---|---|
 |Amazon S3|Pliki JSON, Parquet, CSV w chmurze|
-|Snowflake|Hurtownia danych analitycznych|
-|PostgreSQL / Oracle|Bazy danych transakcyjne|
+|[[Snowflake|Snowflake]]|Hurtownia danych analitycznych|
+|PostgreSQL / Oracle|[[Bazy danych|Bazy danych]] transakcyjne|
 |Google BigQuery|Analityka danych z Google Cloud|
 |Azure Blob Storage|Pliki stagingowe lub półstrukturalne dane|
 |Generic JDBC|Uniwersalne źródło z danym sterownikiem|
-|REST API|Dane SaaS, CRM, systemów zewnętrznych|
+|REST API|Dane [[SaaS|SaaS]], CRM, systemów zewnętrznych|
 
 ## Elementy zarządzania źródłem
 

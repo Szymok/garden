@@ -24,8 +24,8 @@ aliases:
 # 📚 Szczegółowe wyjaśnienie
 Poziomy piramidy (od dołu):
 1.  **Collection:** Logowanie zdarzeń, sensory, bazy transakcyjne. (Musisz mieć dane).
-2.  **Flow/Storage:** ETL, Data Lake, Hurtownie Danych. (Dane muszą być dostępne i bezpieczne).
-3.  **Exploration/Transformation:** Czyszczenie, anomaly detection, przygotowanie (dbt). (Dane muszą być czyste).
+2.  **Flow/Storage:** ETL, [[Data Lake|Data Lake]], Hurtownie Danych. (Dane muszą być dostępne i bezpieczne).
+3.  **Exploration/Transformation:** Czyszczenie, [[Anomaly Detection|anomaly detection]], przygotowanie ([[dbt|dbt]]). (Dane muszą być czyste).
 4.  **Aggregation/Labeling:** Raporty BI, metryki, segmenty, labeling treningowy. (Wiem, co się stało).
 5.  **AI/ML:** Predykcja, automatyzacja. (Wiem, co się stanie).
 
@@ -42,4 +42,4 @@ Wniosek: Firma jest na poziomie 0. Najpierw trzeba wdrożyć czujniki IoT i baz�
 - "The AI Hierarchy of Needs" - Monica Rogati (fłynny artykuł na Hackernoon).
 
 ## 👽 Brudnopis
-- AI jest "wisienką na torcie". Tortem jest solidna inżynieria danych (Data Engineering).
+- AI jest "wisienką na torcie". Tortem jest solidna [[Inżynieria Danych|inżynieria danych]] (Data Engineering).

@@ -15,7 +15,7 @@ aliases:
 
 # 🎯 Definicja
 
-Warstwa przechowywania (ang. *Storage Layer*) to kluczowy komponent architektury danych, odpowiedzialny za trwałe przechowywanie danych w systemach informatycznych. W kontekście sztucznej inteligencji i zarządzania danymi, warstwa ta zapewnia dostępność, integralność oraz bezpieczeństwo danych, które są podstawą do analizy i podejmowania decyzji.
+Warstwa przechowywania (ang. *[[Storage Layer|Storage Layer]]*) to kluczowy komponent architektury danych, odpowiedzialny za trwałe przechowywanie danych w systemach informatycznych. W kontekście sztucznej inteligencji i zarządzania danymi, warstwa ta zapewnia dostępność, integralność oraz bezpieczeństwo danych, które są podstawą do analizy i podejmowania decyzji.
 
 # 🔑 Kluczowe punkty
 
@@ -23,7 +23,7 @@ Warstwa przechowywania (ang. *Storage Layer*) to kluczowy komponent architektury
 - **Rodzaje pamięci**:
   - [[Znaczenie wektorów w zastosowaniach modeli językowych|Bazy danych]] relacyjne (np. PostgreSQL, MySQL).
   - Magazyny obiektowe (np. Amazon S3, Azure Blob Storage).
-  - Hurtownie danych (np. Snowflake, Google BigQuery).
+  - Hurtownie danych (np. [[Snowflake|Snowflake]], Google BigQuery).
 - **Zasady projektowania**:
   - Skalowalność: możliwość obsługi dużych wolumenów danych.
   - Wysoka dostępność: minimalizacja przestojów.

@@ -16,7 +16,7 @@ aliases:
   - Query Structure
 ---
 # 🎯 Definicja
-**GraphQL Request Body** to struktura JSON, którą wysyłasz do serwera API (metodą POST), aby otrzymać dane. W przeciwieństwie do REST, gdzie parametry są często w URL, w GraphQL **wszystko** (zapytanie, zmienne, nazwa operacji) siedzi w body.
+**GraphQL [[Request Body|Request Body]]** to struktura JSON, którą wysyłasz do serwera API (metodą POST), aby otrzymać dane. W przeciwieństwie do REST, gdzie parametry są często w URL, w GraphQL **wszystko** (zapytanie, zmienne, nazwa operacji) siedzi w body.
 
 # 🔑 Kluczowe punkty
 - **Standardowe pola:**
@@ -26,7 +26,7 @@ aliases:
 - **Zmienne:** Zawsze używaj `variables`, zamiast sklejać stringi (zapobiega to Injection i błędom składni).
 
 # 📚 Szczegółowe wyjaśnienie
-Prawidłowy Request Body wygląda tak:
+Prawidłowy [[Request Body|Request Body]] wygląda tak:
 ```json
 {
   "operationName": "GetTable",
@@ -39,7 +39,7 @@ Prawidłowy Request Body wygląda tak:
 Serwer najpierw sprawdza `query`, potem podstawia `variables` w miejsca oznaczone `$`, a na końcu wykonuje logikę.
 
 # 💡 Przykład zastosowania
-Integracja Pythona z Ataccama ONE:
+Integracja Pythona z [[Ataccama|Ataccama]] ONE:
 ```python
 import requests
 

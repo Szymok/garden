@@ -19,7 +19,7 @@ aliases:
 **LSTM** to rodzaj sieci neuronowej stworzony do analizy **sekwencji** (czasu, tekstu, dźwięku). W odróżnieniu od zwykłych sieci, LSTM posiada "pamięć", dzięki czemu rozumie, że to, co dzieje się teraz, zależy od tego, co działo się 100 kroków temu.
 
 # 🔑 Kluczowe punkty
-- **Problem:** Zwykłe sieci RNN zapominały początek zdania, zanim dotarły do końca ("Vanishing Gradient Problem").
+- **Problem:** Zwykłe sieci RNN zapominały początek zdania, zanim dotarły do końca ("Vanishing [[Gradient|Gradient]] Problem").
 - **Rozwiązanie:** LSTM ma mechanizm "bramek" (Gates), które decydują, co zapamiętać, a co zapomnieć.
 - **Zastosowanie:** Tłumaczenie języków, przewidywanie cen akcji, rozpoznawanie mowy.
 
@@ -29,7 +29,7 @@ Architektura LSTM składa się z komórek, które mają 3 bramki:
 2.  **Input Gate:** "Czy ta nowa informacja jest ważna? Jeśli tak, zapisz ją".
 3.  **Output Gate:** "Co mam teraz powiedzieć na podstawie mojej pamięci?".
 
-Dziś LSTM są wypierane przez architekturę **Transformer** (ChatGPT), która radzi sobie lepiej z długimi tekstami dzięki mechanizmowi Atencji (Attention), ale LSTM nadal jest świetne w prostszych szeregach czasowych (Time Series).
+Dziś LSTM są wypierane przez architekturę **Transformer** (ChatGPT), która radzi sobie lepiej z długimi tekstami dzięki mechanizmowi Atencji (Attention), ale LSTM nadal jest świetne w prostszych szeregach czasowych ([[Time Series|Time Series]]).
 
 # 💡 Przykład zastosowania
 Prognoza pogody.

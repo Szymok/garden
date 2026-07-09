@@ -21,7 +21,7 @@ Są to: adresy IP, wersja systemu operacyjnego, ilość pamięci RAM, procesor, 
 # 🔑 Kluczowe punkty
 - **Automatyczne zbieranie:** Zazwyczaj pierwsze zadanie w Playbooku (`Gathering Facts`).
 - **Użycie w zmiennych:** Możesz użyć faktu (np. `ansible_os_family`) by zdecydować, czy użyć `apt` (Debian) czy `dnf` (RedHat).
-- **Custom Facts:** Możesz definiować własne fakty w `/etc/ansible/facts.d/*.fact`.
+- **Custom Facts:** Możesz definiować własne [[Fakty|fakty]] w `/etc/ansible/facts.d/*.fact`.
 
 # 📚 Szczegółowe wyjaśnienie
 Moduł odpowiedzialny za zbieranie faktów to `setup`.

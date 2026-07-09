@@ -16,7 +16,7 @@ aliases:
   - Instalacja MDM
 ---
 # 🎯 Definicja
-Procedura pełnej instalacji platformy Ataccama ONE (MDM, RDM, DQ) na infrastrukturze klienta (On-Premise), bez zależności od chmury producenta.
+Procedura pełnej instalacji platformy [[Ataccama|Ataccama]] ONE (MDM, [[RDM|RDM]], DQ) na infrastrukturze klienta (On-Premise), bez zależności od chmury producenta.
 
 # 🔑 Kluczowe punkty
 - **Playbooki:** Używamy `mdm_standalone.yml` lub `rdm_standalone.yml` zależnie od licencji. Nie używaj `site.yml` jeśli instalujesz tylko jeden komponent.
@@ -24,20 +24,20 @@ Procedura pełnej instalacji platformy Ataccama ONE (MDM, RDM, DQ) na infrastruk
 - **Dostęp:** Wymagany SSH (root/sudo) do wszystkich serwerów docelowych.
 
 # 📚 Szczegółowe wyjaśnienie
-W wersji Standalone, klient zarządza wszystkim: bazą danych, aplikacją, serwerem Keycloak (IAM) i monitoringiem.
+W wersji Standalone, klient zarządza wszystkim: bazą danych, aplikacją, serwerem [[Keycloak|Keycloak]] (IAM) i monitoringiem.
 Typowe adresy usług po instalacji:
 - `https://console.<domena>` - Panel administracyjny.
 - `https://mda.<domena>` - Aplikacja MDM.
-- `https://rdm.<domena>` - Aplikacja RDM.
+- `https://rdm.<domena>` - Aplikacja [[RDM|RDM]].
 
 **Bezpieczeństwo:**
-Hasła do bazy danych i Keycloaka definiujemy w `secrets.yml`. Należy je zaszyfrować (Ansible Vault) w środowisku produkcyjnym.
+Hasła do [[Bazy danych|bazy danych]] i Keycloaka definiujemy w `secrets.yml`. Należy je zaszyfrować (Ansible Vault) w środowisku produkcyjnym.
 
 # 💡 Przykład weryfikacji
-Po instalacji wejdź na `https://monitoring.<domena>/targets`. Wszystkie usługi (MDM Core, Keycloak, Postgres Exporter) powinny świecić się na zielono (UP).
+Po instalacji wejdź na `https://monitoring.<domena>/targets`. Wszystkie usługi (MDM Core, [[Keycloak|Keycloak]], Postgres Exporter) powinny świecić się na zielono (UP).
 
 ## 📌 Źródła
-- Ataccama Installation Guide - Standalone.
+- [[Ataccama|Ataccama]] Installation Guide - Standalone.
 
 ## 👽 Brudnopis
 - Wymagany Nginx jako Reverse Proxy (instalowany przez Ansible).

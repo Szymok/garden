@@ -24,12 +24,12 @@ aliases:
 
 # 🔑 Kluczowe punkty
 
-- **Rozproszony silnik danych:** Obsługuje przetwarzanie danych na dużą skalę—idealny do Big Data.
-- **Wsparcie wielu języków:** Programowanie w Scala, Python (PySpark), Java, R, SQL.
-- **Przetwarzanie in-memory:** Znacząco przyspiesza analizy i obliczenia względem tradycyjnych systemów dyskowych (np. Hadoop MapReduce).
-- **Modularna architektura:** Obejmuje Spark SQL, Spark Streaming (przetwarzanie strumieniowe), MLlib (uczenie maszynowe), GraphX (przetwarzanie grafowe).
-- **Integracja z chmurą:** Gotowy do uruchamiania w chmurach publicznych oraz w Kubernetes.
-- **Kompatybilność:** Łączy się z HDFS, S3, bazami relacyjnymi, Cassandra, Hive, Delta Lake itp.
+- **Rozproszony silnik danych:** Obsługuje [[Przetwarzanie danych|przetwarzanie danych]] na dużą skalę—idealny do Big Data.
+- **Wsparcie wielu języków:** Programowanie w Scala, Python (PySpark), Java, R, [[SQL|SQL]].
+- **Przetwarzanie in-memory:** Znacząco przyspiesza analizy i obliczenia względem tradycyjnych systemów dyskowych (np. Hadoop [[MapReduce|MapReduce]]).
+- **Modularna architektura:** Obejmuje Spark [[SQL|SQL]], Spark Streaming (przetwarzanie strumieniowe), MLlib ([[Uczenie Maszynowe|uczenie maszynowe]]), GraphX (przetwarzanie grafowe).
+- **Integracja z chmurą:** Gotowy do uruchamiania w chmurach publicznych oraz w [[Kubernetes|Kubernetes]].
+- **Kompatybilność:** Łączy się z HDFS, S3, bazami relacyjnymi, Cassandra, Hive, [[Delta Lake|Delta Lake]] itp.
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -39,7 +39,7 @@ Apache Spark działa w modelu master-worker, gdzie:
 
 - **Driver** zarządza aplikacją i planuje zadania.
 - **Worker Nodes** wykonują faktyczne przetwarzanie (taski) na partycjach danych.
-- **Cluster Manager** (YARN, Mesos, Kubernetes, czy Spark Standalone) zarządza zasobami klastra.
+- **Cluster Manager** (YARN, Mesos, [[Kubernetes|Kubernetes]], czy Spark Standalone) zarządza zasobami klastra.
 
 ### Przetwarzanie in-memory
 
@@ -49,14 +49,14 @@ Silnik Spark trzyma obliczenia i główne zestawy danych w pamięci RAM, co pozw
 
 |Moduł|Przeznaczenie|
 |---|---|
-|**Spark SQL**|Analiza danych tablicowych i SQL|
-|**Spark Streaming**|Przetwarzanie danych strumieniowych (real time)|
+|**Spark [[SQL|SQL]]**|[[Analiza Danych|Analiza danych]] tablicowych i [[SQL|SQL]]|
+|**Spark Streaming**|[[Przetwarzanie danych|Przetwarzanie danych]] strumieniowych (real time)|
 |**MLlib**|Wbudowana biblioteka uczenia maszynowego|
 |**GraphX**|Analiza grafów i relacji|
 
-## Spark na Kubernetes
+## Spark na [[Kubernetes|Kubernetes]]
 
-Apache Spark obsługuje natywne uruchamianie w środowisku Kubernetes, które pozwala:
+Apache Spark obsługuje natywne uruchamianie w środowisku [[Kubernetes|Kubernetes]], które pozwala:
 
 - **Automatycznie skalować** zasoby (pody workerów) do wymagań jobów.
 - **Zarządzać wdrożeniami** w modelu Infrastructure as Code.
@@ -65,7 +65,7 @@ Apache Spark obsługuje natywne uruchamianie w środowisku Kubernetes, które po
 
 # 💡 Przykład zastosowania
 
-Firma telekomunikacyjna przetwarza miliardy rekordów billingowych i sygnałów połączeń w czasie rzeczywistym, wykorzystując Spark Streaming na platformie Kubernetes. Dane są analizowane pod kątem wykrywania fraudów, modelowania churnu i dynamicznej alokacji zasobów sieciowych, a modele maszyny uczącej są wdrażane w MLlib do przewidywania awarii i segmentacji klientów.
+Firma telekomunikacyjna przetwarza miliardy rekordów billingowych i sygnałów połączeń w czasie rzeczywistym, wykorzystując Spark Streaming na platformie [[Kubernetes|Kubernetes]]. Dane są analizowane pod kątem wykrywania fraudów, modelowania churnu i dynamicznej alokacji zasobów sieciowych, a modele maszyny uczącej są wdrażane w MLlib do przewidywania awarii i segmentacji klientów.
 
 # 📌 Źródła
 
@@ -77,10 +77,10 @@ Firma telekomunikacyjna przetwarza miliardy rekordów billingowych i sygnałów 
 # 👽 Brudnopis
 
 - Silnik in-memory, rozproszony, batch & streaming + MLlib
-- Native cloud/K8s, dynamic scaling, integracja z Lakehouse i cloud storage (Delta Lake, S3)
+- Native cloud/K8s, dynamic scaling, integracja z Lakehouse i cloud storage ([[Delta Lake|Delta Lake]], S3)
 - PySpark jako główny interfejs do Data Engineering/ML na Spark
 - Popularne scenariusze: ETL batch, modele ML produkcyjnie, przetwarzanie clickstreamów, rekomendacje
-- Rywalizacja: Dask, Flink (streaming), Pandas/Polars (lokalnie), Databricks platforma (komercyjna Spark)
-- Unified approach: batch+stream+ML+SQL = jeden silnik dla całego pipeline’u danych
+- Rywalizacja: Dask, Flink (streaming), [[Pandas|Pandas]]/Polars (lokalnie), Databricks platforma (komercyjna Spark)
+- Unified approach: batch+stream+ML+[[SQL|SQL]] = jeden silnik dla całego pipeline’u danych
 
 ---

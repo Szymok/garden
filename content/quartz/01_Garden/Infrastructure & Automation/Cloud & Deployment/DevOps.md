@@ -41,7 +41,7 @@ aliases:
     Automatyczne wdrażanie testowanego kodu na kolejne środowiska (staging, prod) z minimalnym udziałem człowieka.
     
 3. **Infrastructure as Code (IaC)**  
-    Opis środowiska infrastrukturalnego jako kodu (np. Terraform, Pulumi, Ansible) pozwala na wersjonowanie, śledzenie zmian oraz replikowalność środowisk.
+    Opis środowiska infrastrukturalnego jako kodu (np. [[Terraform|Terraform]], Pulumi, Ansible) pozwala na wersjonowanie, śledzenie zmian oraz replikowalność środowisk.
     
 4. **Monitoring i obserwowalność**  
     Stały wgląd w zdrowie i zachowanie systemu (logi, metryki, dashboardy, alerty – np. Prometheus, Grafana, Datadog).
@@ -87,7 +87,7 @@ Zespół produktowy wykorzystuje DevOps do codziennego wdrażania zmian w aplika
 - Kiedyś: deweloper pisze → admin wdraża
 - Dziś: jeden zespół, wspólna odpowiedzialność
 - Automatyczne testy + monitoring + rollback → jakościowy deployment
-- DevOps w [[Stos danych|data stack]]: [[dbt]] + Airbyte + [[Apache Airflow|Airflow]] + CI/CD = [[Inżynieria Danych|DataOps]] v2
-- Narzędzia: Git, Docker, Kubernetes, Terraform, Jenkins, ArgoCD, CircleCI
+- DevOps w [[Stos danych|data stack]]: [[dbt]] + [[Airbyte|Airbyte]] + [[Apache Airflow|Airflow]] + CI/CD = [[Inżynieria Danych|DataOps]] v2
+- Narzędzia: Git, [[Docker|Docker]], [[Kubernetes|Kubernetes]], [[Terraform|Terraform]], Jenkins, ArgoCD, CircleCI
 
 ---

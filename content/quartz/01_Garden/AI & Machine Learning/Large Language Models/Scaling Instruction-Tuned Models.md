@@ -40,4 +40,4 @@ Z Instruction Tuning (Flan-T5): Piszesz po prostu "Oceń sentyment: Film był s�
 - "Scaling Instruction-Finetuned Language Models" (Chung et al., 2022).
 
 ## 👽 Brudnopis
-- To dowód, że jakość danych (różnorodność instrukcji) jest ważniejsza niż rozmiar modelu. Mały model instruction-tuned (Flan-T5 XL) bił na głowę gigantycznego GPT-3 w wielu testach.
+- To dowód, że [[Jakość Danych|jakość danych]] (różnorodność instrukcji) jest ważniejsza niż rozmiar modelu. Mały model instruction-tuned (Flan-T5 XL) bił na głowę gigantycznego GPT-3 w wielu testach.

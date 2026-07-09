@@ -12,7 +12,7 @@ aliases:
 ---
 # 🎯 Definicja
 
-**Wdrażanie Frameworka Data Governance** to proces operacjonalizacji zasad ładu danych w organizacji. Obejmuje on przejście od teoretycznych założeń frameworka do konkretnych polityk, ról i narzędzi, które realnie zarządzają cyklem życia danych.
+**Wdrażanie Frameworka [[Data Governance|Data Governance]]** to proces operacjonalizacji zasad ładu danych w organizacji. Obejmuje on przejście od teoretycznych założeń frameworka do konkretnych polityk, ról i narzędzi, które realnie zarządzają cyklem życia danych.
 
 # 🔑 Kluczowe punkty
 
@@ -29,7 +29,7 @@ Wdrożenie frameworka to wieloetapowy proces:
 2.  **Analiza:** Sprawdzenie, co już mamy. Wiele firm nie wie nawet, jakie zbiory danych posiada – stworzenie katalogu jest tu kluczowe.
 3.  **Planowanie:** Stworzenie szczegółowego planu projektu opartego na celach biznesowych i wybranych aktywnościach z frameworka.
 4.  **Egzekucja:** Budowanie zespołu (przyszli członkowie komitetu, prawnicy, deweloperzy). Ważne jest, aby nie czekać miesiącami na pierwsze efekty. Należy testować procesy na małą skalę (subset of systems) i świętować sukcesy.
-5.  **Przekazanie:** Po zakończeniu projektu inicjatywę przejmuje stały Komitet Ładu Danych (Data Governance Committee).
+5.  **Przekazanie:** Po zakończeniu projektu inicjatywę przejmuje stały Komitet Ładu Danych ([[Data Governance|Data Governance]] Committee).
 
 # 💡 Przykład zastosowania
 
@@ -40,4 +40,4 @@ Zamiast wdrażać nową politykę klasyfikacji danych dla wszystkich systemów n
 
 ## 👽 Brudnopis
 
-Let's talk about implementing a data governance framework. So, how do you go?
+Let's talk about implementing a [[Data Governance|data governance]] framework. So, how do you go?

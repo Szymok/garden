@@ -15,7 +15,7 @@ aliases:
   - Zarządzanie Danymi
 ---
 # 🎯 Definicja
-**Data Governance** (Ład Danych) to system uprawnień i odpowiedzialności za zasoby informacyjne. To nie oprogramowanie, ale **strategia**, która definiuje "Kto, co może robić z jakimi danymi, w jakich sytuacjach i jakimi metodami". Odpowiada za jakość danych, bezpieczeństwo i zgodność z regulacjami.
+**Data Governance** (Ład Danych) to system uprawnień i odpowiedzialności za zasoby informacyjne. To nie oprogramowanie, ale **strategia**, która definiuje "Kto, co może robić z jakimi danymi, w jakich sytuacjach i jakimi metodami". Odpowiada za [[Jakość Danych|jakość danych]], bezpieczeństwo i zgodność z regulacjami.
 
 # 🔑 Kluczowe punkty
 - **Ludzie, Procesy, Technologia:** Governance to w 80% ludzie i procesy, a tylko w 20% technologia (narzędzia).
@@ -25,12 +25,12 @@ aliases:
 # 📚 Szczegółowe wyjaśnienie
 Data Governance odpowiada na pytania:
 - Co oznacza termin "Aktywny Klient"? (Słownik Biznesowy)
-- Gdzie są moje dane? (Data Catalog)
-- Skąd przyszły? (Data Lineage)
-- Czy są poprawne? (Data Quality)
+- Gdzie są moje dane? ([[Data Catalog|Data Catalog]])
+- Skąd przyszły? ([[Data Lineage|Data Lineage]])
+- Czy są poprawne? ([[Data Quality|Data Quality]])
 - Kto ma do nich dostęp? (Data Security/Access Control)
 
-Bez DG, organizacja ma "Bagno Danych" (Data Swamp), gdzie nikt nie ufa raportom, a każdy dział liczy KPI po swojemu.
+Bez DG, organizacja ma "Bagno Danych" ([[Data Swamp|Data Swamp]]), gdzie nikt nie ufa raportom, a każdy dział liczy [[KPI|KPI]] po swojemu.
 
 # 💡 Przykład zastosowania
 Bank wprowadza nową politykę kredytową.
@@ -41,7 +41,7 @@ Dzięki Governance:
 Gdy przychodzi audyt KNF, bank w 5 minut generuje raport: kto miał dostęp do danych i jak były przetwarzane (Lineage).
 
 ## 📌 Źródła
-- DAMA-DMBOK (Data Management Body of Knowledge).
+- DAMA-DMBOK ([[Data Management|Data Management]] Body of Knowledge).
 - "Data Governance: The Definitive Guide" - Evren Eryurek.
 
 ## 👽 Brudnopis

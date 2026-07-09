@@ -15,7 +15,7 @@ aliases:
   - Porównywanie Danych
 ---
 # 🎯 Definicja
-**Data Reconciliation** (Rekonsyliacja) to proces porównywania dwóch zbiorów danych w celu upewnienia się, że są one zgodne. Najczęściej stosowany podczas migracji danych (np. z Oracle do Snowflake) lub weryfikacji procesów finansowych, aby potwierdzić, że "to co wyszło" jest tym samym, "co dotarło".
+**Data Reconciliation** (Rekonsyliacja) to proces porównywania dwóch zbiorów danych w celu upewnienia się, że są one zgodne. Najczęściej stosowany podczas migracji danych (np. z Oracle do [[Snowflake|Snowflake]]) lub weryfikacji procesów finansowych, aby potwierdzić, że "to co wyszło" jest tym samym, "co dotarło".
 
 # 🔑 Kluczowe punkty
 - **Porównanie:** Sprawdza liczbę rekordów (Row Count), sumy kontrolne (Aggregates) oraz rozkłady wartości.
@@ -23,7 +23,7 @@ aliases:
 - **Zastosowanie:** Testy regresji, migracje, audyty finansowe.
 
 # 📚 Szczegółowe wyjaśnienie
-W Ataccama ONE funkcja "Reconciliation" pozwala porównać metadane i statystyki profilowania między systemem źródłowym (Origin) a docelowym (Target).
+W [[Ataccama|Ataccama]] ONE funkcja "Reconciliation" pozwala porównać metadane i statystyki profilowania między systemem źródłowym (Origin) a docelowym (Target).
 Nie zawsze trzeba porównywać każdy rekord (co jest kosztowne). Często wystarczy:
 1.  Czy liczba wierszy się zgadza?
 2.  Czy suma kolumny `kwota_transakcji` jest taka sama?
@@ -40,9 +40,9 @@ Wynik:
 Wniosek: Błąd zaokrągleń przy konwersji typów danych (np. float vs decimal). Bez rekonsyliacji mógłbyś tego nie zauważyć.
 
 ## 📌 Źródła
-- "Data Quality Assessment" - Arkady Maydanchik.
-- Ataccama ONE Documentation.
+- "[[Data Quality|Data Quality]] Assessment" - Arkady Maydanchik.
+- [[Ataccama|Ataccama]] ONE Documentation.
 
 ## 👽 Brudnopis
 - Fingerprinting: Technika tworzenia skrótów (haszy) z danych, aby szybko porównywać duże zbiory bez przesyłania ich całej zawartości.
-- W One Desktop można zrobić `Record Level Reconciliation` (porównanie każdego wiersza ID do ID), ale jest to zasobożerne.
+- W [[ONE Desktop|One Desktop]] można zrobić `Record Level Reconciliation` (porównanie każdego wiersza ID do ID), ale jest to zasobożerne.

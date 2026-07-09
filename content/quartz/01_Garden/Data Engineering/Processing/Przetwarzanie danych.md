@@ -27,8 +27,8 @@ aliases:
 - Proces konieczny do przekształcenia surowych danych w **wartościowe informacje**.
 - Może odbywać się w trybie **wsadowym (batch)** lub **strumieniowym (real-time/streaming)**.
 - Zwykle część większego systemu typu **ETL**, **ELT**, **potok danych** lub **platforma danych**.
-- Przetwarzane mogą być dane ustrukturyzowane (np. bazy danych), półustrukturyzowane (np. JSON) lub nieustrukturyzowane (np. logi, media).
-- Codziennie przetwarzają dane systemy takie jak: Spark, Flink, Beam, SQL, dbt, Pandas, Airflow.
+- Przetwarzane mogą być dane ustrukturyzowane (np. [[Bazy danych|bazy danych]]), półustrukturyzowane (np. JSON) lub nieustrukturyzowane (np. logi, media).
+- Codziennie przetwarzają dane systemy takie jak: Spark, Flink, Beam, [[SQL|SQL]], [[dbt|dbt]], [[Pandas|Pandas]], Airflow.
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -51,16 +51,16 @@ aliases:
 
 ## Narzędzia i technologie
 
-- **Języki przetwarzania danych**: SQL, Python (pandas), Scala
-- **Silniki:** Apache Spark, Apache Flink, Apache Beam, Trino, BigQuery
-- **Orkiestracja:** Apache Airflow, Prefect, Dagster
-- **Transformacje analityczne:** dbt
-- **ETL/ELT:** Airbyte, Fivetran, Talend
-- **Przetwarzanie lokalne:** Pandas, Dask
+- **Języki przetwarzania danych**: [[SQL|SQL]], Python ([[Pandas|pandas]]), Scala
+- **Silniki:** [[Apache Spark|Apache Spark]], Apache Flink, Apache Beam, Trino, BigQuery
+- **Orkiestracja:** [[Apache Airflow|Apache Airflow]], Prefect, [[Dagster|Dagster]]
+- **Transformacje analityczne:** [[dbt|dbt]]
+- **ETL/ELT:** [[Airbyte|Airbyte]], Fivetran, Talend
+- **Przetwarzanie lokalne:** [[Pandas|Pandas]], Dask
 
 # 💡 Przykład zastosowania
 
-Dane sprzedażowe z aplikacji mobilnej są pobierane co godzina z systemu transakcyjnego i przesyłane do potoku przetwarzania w Apache Spark. Potok wykonuje:
+Dane sprzedażowe z aplikacji mobilnej są pobierane co godzina z systemu transakcyjnego i przesyłane do potoku przetwarzania w [[Apache Spark|Apache Spark]]. Potok wykonuje:
 
 - konwersję dat,
 - czyszczenie rekordów,
@@ -79,8 +79,8 @@ Dane sprzedażowe z aplikacji mobilnej są pobierane co godzina z systemu transa
 
 - Przetwarzanie = ETL ≈ ELT ≈ orchestration (pojęcia nakładają się)
 - Batch = tańsze, bardziej stabilne; streaming = realtime, trudniejszy w debugowaniu
-- Pandas = lokalne przetwarzanie, Spark = rozproszone
+- [[Pandas|Pandas]] = lokalne przetwarzanie, Spark = rozproszone
 - Potok = wiele kroków transformacji danych, źródło do celu
-- Warto znać różnicę: przetwarzanie danych ≠ analiza danych (etap późniejszy)
+- Warto znać różnicę: przetwarzanie danych ≠ [[Analiza Danych|analiza danych]] (etap późniejszy)
 
 ---

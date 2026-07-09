@@ -38,4 +38,4 @@ To klasyczne Item-based Collaborative Filtering. Nie analizuje, że to "Lampa", 
 
 ## 👽 Brudnopis
 - Nowoczesne systemy łączą to z Content-Based Filtering (analizą treści), tworząc systemy hybrydowe, aby ominąć problem zimnego startu.
-- Deep Learning (NCF - Neural Collaborative Filtering) zastępuje klasyczne metody macierzowe.
+- [[Deep Learning|Deep Learning]] (NCF - Neural Collaborative Filtering) zastępuje klasyczne metody macierzowe.

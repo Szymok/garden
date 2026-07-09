@@ -15,7 +15,7 @@ aliases:
   - Funkcja Extends
 ---
 # 🎯 Definicja
-**Entity Extension** (funkcja `Extends`) to mechanizm dziedziczenia w modelu metadanych (np. w Ataccama ONE). Pozwala stworzyć nową encję, która automatycznie przejmuje wszystkie cechy (właściwości i atrybuty) encji bazowej (rodzica), dodając do niej nowe, specyficzne pola.
+**Entity Extension** (funkcja `Extends`) to mechanizm dziedziczenia w modelu metadanych (np. w [[Ataccama|Ataccama]] ONE). Pozwala stworzyć nową encję, która automatycznie przejmuje wszystkie cechy (właściwości i atrybuty) encji bazowej (rodzica), dodając do niej nowe, specyficzne pola.
 
 # 🔑 Kluczowe punkty
 - **Dziedziczenie:** Encja pochodna ma wszystko to, co rodzic + swoje własne pola.
@@ -37,7 +37,7 @@ Następnie Tabela, Raport i Plik dziedziczą po `Zasób`.
 Dzięki temu, gdy chcesz wyszukać "Wszystkie zasoby o nazwie X", przeszukujesz tylko encję `Zasób`, a nie trzy osobne.
 
 ## 📌 Źródła
-- Ataccama ONE Metamodel Configuration Guide.
+- [[Ataccama|Ataccama]] ONE Metamodel Configuration Guide.
 
 ## 👽 Brudnopis
 - Zła praktyka: Dublowanie nazwy pola w dziecku, jeśli już jest w rodzicu (system na to nie pozwoli lub wywoła błąd).

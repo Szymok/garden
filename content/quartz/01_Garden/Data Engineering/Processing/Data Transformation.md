@@ -16,7 +16,7 @@ aliases:
   - Przekształcanie danych
 ---
 # 🎯 Definicja
-**Transformacja Danych** to środkowa litera w E**T**L.
+**[[Transformacja danych|Transformacja Danych]]** to środkowa litera w E**T**L.
 To zmiana surowych danych (Raw) w dane użyteczne (Information).
 Surowe: `2023-01-01, 100, USD`.
 Po transformacji: `{"date": "2023-01-01", "amount_pln": 400, "category": "High Value"}`.
@@ -34,14 +34,14 @@ Kiedyś (ETL) transformacja działa się na serwerze pośrednim (Informatica, Ta
 # 💡 Przykład zastosowania
 Sklep internetowy.
 Tabela `orders_raw`: Cena netto. VAT jako kod "A", "B".
-Transformacja (SQL):
+Transformacja ([[SQL|SQL]]):
 1.  `CASE WHEN vat_code = 'A' THEN 0.23 ELSE 0 END` (Logika biznesowa).
 2.  `price_net * 1.23` (Wyliczenie Brutto).
 3.  `JOIN customers` (Dodanie miasta klienta).
 Wynik: Tabela `orders_mart` gotowa pod raport w Tableau.
 
 ## 📌 Źródła
-- dbt documentation / guides.
+- [[dbt|dbt]] documentation / guides.
 
 ## 👽 Brudnopis
 - Transformacja to miejsce, gdzie "dane" stają się "prawdą biznesową". To tu zapadają decyzje, jak liczymy przychód.

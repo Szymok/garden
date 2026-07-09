@@ -40,11 +40,11 @@ Profilowanie jest niezbędne do efektywnego zarządzania danymi na poziomie:
 - statystycznym (np. minimum, maksimum, dominujące wartości, procent braków),
 - jakościowym (np. procent niepoprawnych formatów, niespójności w danych).
 
-W narzędziach takich jak Ataccama ONE, Collibra czy Microsoft Purview, wyniki profilowania są zapisywane jako metadane i zasilają inne moduły:
+W narzędziach takich jak [[Ataccama|Ataccama]] ONE, Collibra czy Microsoft Purview, wyniki profilowania są zapisywane jako metadane i zasilają inne moduły:
 
 - [[Data Catalog|katalog danych]] ([[Data Catalog]]),
 - słownik pojęć (Glossary),
-- reguły jakościowe (Data Quality [[Rules]]),
+- reguły jakościowe ([[Data Quality|Data Quality]] [[Rules]]),
 - alerty i [[Data Observability|obserwowalność danych]] ([[Data Observability]]),
 - przypisania terminów (Glossary Term Detection).
 
@@ -64,7 +64,7 @@ W narzędziach takich jak Ataccama ONE, Collibra czy Microsoft Purview, wyniki p
 
 Firma planuje włączyć nowe [[Data Source|źródło danych]] z tabelą `klienci_raw`.
 
-- Zespół danych uruchamia **profilowanie tej tabeli** w narzędziu Ataccama ONE.
+- Zespół danych uruchamia **profilowanie tej tabeli** w narzędziu [[Ataccama|Ataccama]] ONE.
 - Profilowanie wykazuje:
     - Kolumna `email` ma 12% braków (null rate).
     - Kolumna `nip` zawiera 3 wzorce – dwie wersje rozdzielane myślnikami i jedna bez.

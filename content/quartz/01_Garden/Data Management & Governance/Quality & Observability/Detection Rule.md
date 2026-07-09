@@ -24,7 +24,7 @@ aliases:
 - **Efekt:** Automatyczne tagowanie kolumn (np. "To wrażliwe dane PII").
 
 # 📚 Szczegółowe wyjaśnienie
-Reguł nie wykrywają "błędów" (jak DQ Rules), ale "znaczenie".
+Reguł nie wykrywają "błędów" (jak DQ [[Rules|Rules]]), ale "znaczenie".
 Typowe warunki:
 1.  **Nazwa kolumny:** `Contains("pesel")`
 2.  **Format danych:** `MatchesRegex("\d{11}")`
@@ -39,7 +39,7 @@ Tworzysz Regułę Wykrywania:
 Uruchamiasz Discovery. System znajduje 50 kolumn w różnych tabelach, oznaczając je jako wrażliwe.
 
 ## 📌 Źródła
-- Ataccama ONE Documentation - Detection Rules.
+- [[Ataccama|Ataccama]] ONE Documentation - [[Detection [[Rules|rules]]|Detection [[Rules|Rules]]]].
 
 ## 👽 Brudnopis
 - Reguły te są kluczowe w **Data Classification** (np. RODO).

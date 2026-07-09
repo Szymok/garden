@@ -19,7 +19,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Airbyte** to open-source'owa platforma integracji danych (ELT), która synchronizuje dane ze źródeł (bazy danych, SaaS API, pliki) do hurtowni danych lub data lake — z ponad 300 gotowymi konektorami. Jest centralnym komponentem [[Nowoczesny Stos Danych|Modern Data Stack]].
+**Airbyte** to open-source'owa platforma integracji danych (ELT), która synchronizuje dane ze źródeł ([[Bazy danych|bazy danych]], [[SaaS|SaaS]] API, pliki) do hurtowni danych lub [[Data Lake|data lake]] — z ponad 300 gotowymi konektorami. Jest centralnym komponentem [[Nowoczesny Stos Danych|Modern Data Stack]].
 
 # 🔑 Kluczowe punkty
 
@@ -28,7 +28,7 @@ aliases:
 - **[[Inkrementalna synchronizacja|Incremental sync]]**: tylko nowe/zmienione rekordy (zamiast full refresh)
 - **[[Kursor|Cursor]]**: znacznik ostatnio zsynchronizowanego rekordu
 - **CDC**: natywne wsparcie Change Data Capture przez Debezium
-- **Airbyte Cloud** — wersja zarządzana (SaaS), **Airbyte OSS** — self-hosted
+- **Airbyte Cloud** — wersja zarządzana ([[SaaS|SaaS]]), **Airbyte OSS** — self-hosted
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -54,7 +54,7 @@ Source                    Airbyte                Destination
 | Incremental Dedup | Dołącza + deduplikuje | Jak wyżej + unikalne rekordy |
 | CDC | Każda zmiana jako event | Duże tabele, realtime |
 
-## Konfiguracja połączenia (UI / YAML)
+## Konfiguracja połączenia (UI / [[YAML|YAML]])
 
 ```yaml
 source:
@@ -79,7 +79,7 @@ streams:
     primary_key: [id]
 ```
 
-## Airbyte + dbt — typowy stack
+## Airbyte + [[dbt|dbt]] — typowy stack
 
 ```
 PostgreSQL → Airbyte → Snowflake (raw schema)
@@ -91,13 +91,13 @@ PostgreSQL → Airbyte → Snowflake (raw schema)
                          Power BI / Tableau
 ```
 
-## Normalizacja w Airbyte
+## [[Normalizacja w Airbyte|Normalizacja w Airbyte]]
 
 Airbyte może opcjonalnie wykonać podstawową normalizację (spłaszczenie zagnieżdżonych JSON) przed dostarczeniem do destination. Szczegóły: [[Normalizacja w Airbyte]].
 
 # 💡 Przykład zastosowania
 
-**Marketing Analytics Stack**: Airbyte synchronizuje dane z Salesforce (CRM), Google Analytics (traffic) i Stripe (płatności) do BigQuery. Synchronizacja co godzinę, tryb incremental. dbt transformuje surowe dane w `raw` schema do modeli analytics w `marts` schema. Power BI czyta z marts.
+**Marketing Analytics Stack**: Airbyte synchronizuje dane z Salesforce (CRM), Google Analytics (traffic) i Stripe (płatności) do BigQuery. Synchronizacja co godzinę, tryb incremental. [[dbt|dbt]] transformuje surowe dane w `raw` schema do modeli analytics w `marts` schema. Power BI czyta z marts.
 
 # 📌 Źródła
 

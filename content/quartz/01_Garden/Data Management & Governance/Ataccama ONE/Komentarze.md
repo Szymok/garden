@@ -15,7 +15,7 @@ aliases:
   - Dyskusje
 ---
 # 🎯 Definicja
-**Komentarze** w systemach Data Governance (takich jak Ataccama ONE, Collibra) to warstwa "społecznościowa" nałożona na dane. Pozwala użytkownikom dyskutować o jakości, definicjach i własności danych bezpośrednio w katalogu danych, zamiast wymieniać maile czy wiadomości na Teams.
+**Komentarze** w systemach [[Data Governance|Data Governance]] (takich jak [[Ataccama|Ataccama]] ONE, Collibra) to warstwa "społecznościowa" nałożona na dane. Pozwala użytkownikom dyskutować o jakości, definicjach i własności danych bezpośrednio w katalogu danych, zamiast wymieniać maile czy wiadomości na Teams.
 
 # 🔑 Kluczowe punkty
 - **Kontekst:** Dyskusja odbywa się "tam gdzie dane" (np. przy konkretnej kolumnie w tabeli), więc nie ginie kontekst.
@@ -33,7 +33,7 @@ Proces akceptacji nowego terminu w Słowniku Biznesowym.
 Dyskusja o definicji "Klienta Aktywnego" toczy się w komentarzach pod terminem. Po uzgodnieniu wersji ostatecznej, Steward zamyka wątek i publikuje termin.
 
 ## 📌 Źródła
-- Data Catalog Collaboration Features.
+- [[Data Catalog|Data Catalog]] Collaboration Features.
 
 ## 👽 Brudnopis
 - To kluczowy element "Data Democratization" i budowania kultury danych w firmie.

@@ -28,7 +28,7 @@ aliases:
 - Ułatwia unikanie powtarzania się tego samego podzapytania oraz poprawia czytelność kodu.
 - Dostępne są dwa typy: **nierekurencyjne** i **rekurencyjne** CTE.
 - Rekurencyjne CTE pozwala na operacje na danych hierarchicznych i rekurencyjnych strukturach.
-- Stosowanie CTE może poprawić organizację złożonych zapytań SQL.
+- Stosowanie CTE może poprawić organizację złożonych zapytań [[SQL|SQL]].
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -101,11 +101,11 @@ Rekurencyjne CTE umożliwia łatwe uzyskanie pełnej ścieżki hierarchii organi
 
 - [5 praktycznych przykładów użycia CTE w SQL | LearnSQL.com](https://learnsql.com/blog/practical-sql-cte-examples/)
 - Microsoft Docs – Common Table Expressions: [https://docs.microsoft.com/en-us/sql/t-sql/queries/with-common-table-expression-transact-sql](https://docs.microsoft.com/en-us/sql/t-sql/queries/with-common-table-expression-transact-sql)
-- PostgreSQL Documentation – WITH Queries: [https://www.postgresql.org/docs/current/queries-with.html](https://www.postgresql.org/docs/current/queries-with.html)
+- PostgreSQL Documentation – WITH [[Queries|Queries]]: [https://www.postgresql.org/docs/current/queries-with.html](https://www.postgresql.org/docs/current/queries-with.html)
 
 ## 👽 Brudnopis
 
-- CTE – alias i tymczasowa tabela w SQL
+- CTE – alias i tymczasowa tabela w [[SQL|SQL]]
 - Nierekurencyjne: refaktoryzacja zapytań, modularność
 - Rekurencyjne: hierarchie, drzewa, grafy
 - UNION ALL łączy kotwicę i rekurencję

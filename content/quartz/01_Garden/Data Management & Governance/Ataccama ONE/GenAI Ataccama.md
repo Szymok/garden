@@ -15,7 +15,7 @@ aliases:
   - Automatyzacja DQ
 ---
 # 🎯 Definicja
-**GenAI w Ataccama** to zestaw funkcji wbudowanych w platformę Ataccama ONE, które wykorzystują [[Generatywna Sztuczna Inteligencja|modele generatywne]] (LLM) do automatyzacji żmudnych zadań Data Stewardów. AI działa tu jako "współpilot" (Copilot), pomagając w opisywaniu danych, tworzeniu reguł jakości i wyszukiwaniu informacji.
+**GenAI w [[Ataccama|Ataccama]]** to zestaw funkcji wbudowanych w platformę [[Ataccama|Ataccama]] ONE, które wykorzystują [[Generatywna Sztuczna Inteligencja|modele generatywne]] (LLM) do automatyzacji żmudnych zadań Data Stewardów. AI działa tu jako "współpilot" (Copilot), pomagając w opisywaniu danych, tworzeniu reguł jakości i wyszukiwaniu informacji.
 
 # 🔑 Kluczowe funkcje
 - **Generowanie Reguł DQ:** Piszesz "Chcę sprawdzić, czy PESEL jest poprawny", a AI generuje kod reguły.
@@ -24,8 +24,8 @@ aliases:
 - **AI Assistant:** Czat z katalogiem danych ("Pokaż mi wszystkie tabele z danymi finansowymi z 2023").
 
 # 📚 Szczegółowe wyjaśnienie
-Tradycyjne Data Governance wymagało ręcznego klikania i pisania skomplikowanych wyrażeń (Regex, SQL). GenAI obniża barierę wejścia - teraz analityk biznesowy może stworzyć regułę jakości, używając języka naturalnego.
-Ataccama wykorzystuje metadata-driven approach, co oznacza, że AI ma dostęp nie tylko do próbki danych, ale też do kontekstu (nazwy kolumn, relacje), co zwiększa trafność sugestii.
+Tradycyjne [[Data Governance|Data Governance]] wymagało ręcznego klikania i pisania skomplikowanych wyrażeń (Regex, [[SQL|SQL]]). GenAI obniża barierę wejścia - teraz analityk biznesowy może stworzyć regułę jakości, używając języka naturalnego.
+[[Ataccama|Ataccama]] wykorzystuje [[Metadata|metadata]]-driven approach, co oznacza, że AI ma dostęp nie tylko do próbki danych, ale też do kontekstu (nazwy kolumn, relacje), co zwiększa trafność sugestii.
 
 # 💡 Przykład zastosowania
 Steward widzi kolumnę `usr_addr_cty`. Nie wie, co to jest.
@@ -35,7 +35,7 @@ Odpowiedź: "To kolumna zawierająca nazwy miast adresowych użytkowników. Suge
 Steward akceptuje sugestię jednym kliknięciem.
 
 ## 📌 Źródła
-- Ataccama ONE v14+ Documentation.
+- [[Ataccama|Ataccama]] ONE v14+ Documentation.
 
 ## 👽 Brudnopis
 - To nie jest "Magic Button", który robi wszystko sam. To narzędzie wspomagające (Human-in-the-loop).

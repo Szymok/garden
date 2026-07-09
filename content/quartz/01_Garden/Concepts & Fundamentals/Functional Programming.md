@@ -16,7 +16,7 @@ aliases:
   - Paradygmat funkcyjny
 ---
 # 🎯 Definicja
-**Programowanie Funkcyjne (FP)** to styl pisania kodu, w którym traktujesz program jak wielkie równanie matematyczne, a nie jak listę rozkazów dla procesora. Kluczem są **funkcje**, które nie zmieniają stanu świata (Side Effects), tylko zwracają nowe wartości.
+**[[Programowanie Funkcyjne|Programowanie Funkcyjne]] (FP)** to styl pisania kodu, w którym traktujesz program jak wielkie równanie matematyczne, a nie jak listę rozkazów dla procesora. Kluczem są **funkcje**, które nie zmieniają stanu świata (Side Effects), tylko zwracają nowe wartości.
 
 # 🔑 Kluczowe punkty
 - **Immutability (Niezmienność):** Zamiast zmieniać listę `x.append(1)`, tworzysz nową listę `y = x + [1]`. To zapobiega błędom wielowątkowym.
@@ -24,7 +24,7 @@ aliases:
 - **Higher-Order Functions:** Funkcje mogą przyjmować inne funkcje jako argumenty (`map`, `filter`, `reduce`).
 
 # 📚 Szczegółowe wyjaśnienie
-W Data Engineering (np. w Spark, dbt) FP jest bardzo naturalne.
+W Data Engineering (np. w Spark, [[dbt|dbt]]) FP jest bardzo naturalne.
 Pipeline danych to: `Dane Wejściowe -> f(transformacja) -> Dane Wyjściowe`.
 Nie interesuje nas stan pamięci procesora, tylko przepływ danych.
 
@@ -47,4 +47,4 @@ W FP kod jest często krótszy, łatwiejszy do testowania i bezpieczniejszy.
 - "Functional Programming written in Scala".
 
 ## 👽 Brudnopis
-- SQL jest językiem deklaratywnym, bliskim FP. Mówisz "CO" chcesz (Select), a nie "JAK" to zrobić (Pętle).
+- [[SQL|SQL]] jest językiem deklaratywnym, bliskim FP. Mówisz "CO" chcesz (Select), a nie "JAK" to zrobić (Pętle).

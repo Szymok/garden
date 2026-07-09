@@ -38,7 +38,7 @@ Tworzysz model dla "Systemu IT".
 - Administrator -> `Referenced Object` (Wskazuje na użytkownika z listy pracowników).
 
 ## 📌 Źródła
-- Ataccama MMDM Configuration Guide.
+- [[Ataccama|Ataccama]] MMDM Configuration Guide.
 
 ## 👽 Brudnopis
 - `Secret String` to specjalny typ do haseł (widoczny jako `*****`).

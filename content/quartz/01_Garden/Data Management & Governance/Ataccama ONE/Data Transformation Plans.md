@@ -15,7 +15,7 @@ aliases:
   - Post-processing plans
 ---
 # 🎯 Definicja
-**Data Transformation Plans** w Ataccama ONE to wizualne narzędzie do budowania przepływów danych (ETL) w przeglądarce. Pozwala pobrać dane (np. z Katalogu lub wyników Monitoringu), przekształcić je (Filtr, Join, Lookup, Expression) i zapisać wynik (do pliku, bazy lub ONE Data). Jest to webowy odpowiednik planów `.plan` z ONE Desktop.
+**Data [[Transformation Plans|Transformation Plans]]** w [[Ataccama|Ataccama]] ONE to wizualne narzędzie do budowania przepływów danych (ETL) w przeglądarce. Pozwala pobrać dane (np. z Katalogu lub wyników Monitoringu), przekształcić je (Filtr, Join, [[Lookup|Lookup]], Expression) i zapisać wynik (do pliku, bazy lub ONE Data). Jest to webowy odpowiednik planów `.plan` z [[ONE Desktop|ONE Desktop]].
 
 # 🔑 Kluczowe punkty
 - **No-Code / Low-Code:** Budujesz proces z klocków. Kodujesz tylko logikę w Expression.
@@ -44,8 +44,8 @@ Plan:
 5.  Zapisz wynik do nowej tabeli w ONE Data, którą udostępnisz sprzedawcom.
 
 ## 📌 Źródła
-- Ataccama ONE Documentation - Transformation Plans.
+- [[Ataccama|Ataccama]] ONE Documentation - [[Transformation Plans|Transformation Plans]].
 
 ## 👽 Brudnopis
-- Webowe plany są super do szybkich zadań ("Ad-hoc"). Do bardzo skomplikowanych, korporacyjnych ETL-i z setkami kroków nadal częściej używa się ONE Desktop (IDE).
+- Webowe plany są super do szybkich zadań ("Ad-hoc"). Do bardzo skomplikowanych, korporacyjnych ETL-i z setkami kroków nadal częściej używa się [[ONE Desktop|ONE Desktop]] (IDE).
 - Ale webowe plany zyskują na sile (UX jest lepszy).

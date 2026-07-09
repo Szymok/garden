@@ -16,7 +16,7 @@ aliases:
   - Alerts Setup
 ---
 # 🎯 Definicja
-**Monitoring Notifications** w Ataccama ONE pozwalają Ci wiedzieć, kiedy jakość danych spada lub gdy proces monitoringu się zawiesił. Zamiast logować się codziennie do systemu i klikać "Odśwież", system sam wyśle Ci maila lub wiadomość na Slacku.
+**Monitoring Notifications** w [[Ataccama|Ataccama]] ONE pozwalają Ci wiedzieć, kiedy [[Jakość Danych|jakość danych]] spada lub gdy proces monitoringu się zawiesił. Zamiast logować się codziennie do systemu i klikać "Odśwież", system sam wyśle Ci maila lub wiadomość na Slacku.
 
 # 🔑 Kluczowe punkty
 - **Dwa typy:**
@@ -41,7 +41,7 @@ Kanał: Slack `#marketing-data-quality`.
 Dzięki temu reagują tylko na realne problemy, a nie na spam "Job Finished Successfully".
 
 ## 📌 Źródła
-- Ataccama ONE Documentation - Monitoring Notifications.
+- [[Ataccama|Ataccama]] ONE Documentation - Monitoring Notifications.
 
 ## 👽 Brudnopis
 - Przemyśl strategię powiadomień. Jeśli ustawisz ich za dużo, ludzie przestaną je czytać ("Alert Fatigue"). Skup się na błędach krytycznych (Critical Errors).

@@ -69,10 +69,10 @@ W międzynarodowej firmie produkcyjnej dział kontrolingu zauważył rozbieżno�
 ## 👽 Brudnopis
 
 - Data Literacy = czytam dane jak język biznesu
-- Różne poziomy: od podstawowych Excel/chart reading do zaaw. SQL, BI
+- Różne poziomy: od podstawowych Excel/chart reading do zaaw. [[SQL|SQL]], BI
 - Kompetencje poziome: nie tylko analitycy, ale też HR, marketing, ops
 - Ostateczny cel: każdy ma podejmować świadome decyzje oparte na danych
 - Program adopcji: ocena stanu obecnego → diagnoza luki → edukacja/mentoring
-- Typowe narzędzia: Power BI, Tableau, Sheets, Excel, SQL, Looker
+- Typowe narzędzia: Power BI, Tableau, Sheets, Excel, [[SQL|SQL]], Looker
 - Wysoka DL = pytania „dlaczego” zamiast „jak”
 - Data Literacy ≠ data science → to pierwsze to fundament zrozumienia danych w biznesie

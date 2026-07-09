@@ -56,7 +56,7 @@ W społeczności danych popularny jest podział rozwoju biegłości w SQL:
 
 1. **Poziom 0** — brak znajomości, podstawowa składnia.
 2. **Poziom 1–2** — proste zapytania SELECT + JOIN, filtrowanie, agregacje.
-3. **Poziom 3** — zagnieżdżone zapytania, CTE, case-when.
+3. **Poziom 3** — zagnieżdżone zapytania, [[CTE|CTE]], case-when.
 4. **Poziom 4** — OLAP, okna, pivot/unpivot, dynamic SQL.
 5. **Poziom 5** — optymalizacja, profile query, materialized views, performance tuning.
 
@@ -67,7 +67,7 @@ W społeczności danych popularny jest podział rozwoju biegłości w SQL:
 - PostgreSQL – zgodny ze standardem ANSI, rozszerzalny (CTEs, JSON, array).
 - MySQL – popularny open-source, powszechnie używany w aplikacjach webowych.
 - Microsoft SQL Server – dominujący w środowiskach korporacyjnych.
-- Snowflake/BigQuery – SQL jako warstwa do analizy danych w chmurze.
+- [[Snowflake|Snowflake]]/BigQuery – SQL jako warstwa do analizy danych w chmurze.
 - SQLite – lekki silnik dla embedded/mobile apps.
 
 # 💡 Przykład zastosowania
@@ -87,7 +87,7 @@ Zespół analityczny korzysta z SQL do analizy efektywności kampanii marketingo
 - ANSI SQL vs dialekty (PostgreSQL, MySQL, T-SQL)
 - Wydajność: indeksy, explain plan, struktura zapytań
 - SQL to nie tylko analyst tool – to też dla dev i inżynierów
-- Warto znać: CTE, window functions, NULL logic, GROUP BY + HAVING logic
+- Warto znać: [[CTE|CTE]], window functions, NULL logic, GROUP BY + HAVING logic
 - Dobry SQL = szybki, czytelny, skalowalny
 
 ---

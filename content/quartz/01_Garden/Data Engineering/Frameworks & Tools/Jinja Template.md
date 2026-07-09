@@ -17,16 +17,16 @@ aliases:
 ---
 # 🎯 Definicja
 **Jinja** to system szablonów dla Pythona.
-Pozwala łączyć statyczny tekst (HTML, SQL, YAML) z dynamicznymi danymi.
-Zamiast pisać 50 zapytań SQL (`SELECT * FROM table_2023`, `SELECT * FROM table_2024`...), piszesz jeden szablon z pętlą `for`.
+Pozwala łączyć statyczny tekst (HTML, [[SQL|SQL]], [[YAML|YAML]]) z dynamicznymi danymi.
+Zamiast pisać 50 zapytań [[SQL|SQL]] (`SELECT * FROM table_2023`, `SELECT * FROM table_2024`...), piszesz jeden szablon z pętlą `for`.
 
 # 🔑 Kluczowe punkty
 - **Narzędzie pracy Inżyniera Danych:** [[dbt]], [[Apache Airflow]], Ansible - one wszystkie używają Jinja.
 - **Składnia:** `{{ zmienna }}` wypisuje wartość. `{% if %}` robi logikę.
-- **Makra:** Możesz pisać funkcje wewnątrz SQL (np. funkcję do przeliczania walut), żeby nie kopiować kodu.
+- **Makra:** Możesz pisać funkcje wewnątrz [[SQL|SQL]] (np. funkcję do przeliczania walut), żeby nie kopiować kodu.
 
 # 📚 Szczegółowe wyjaśnienie
-Przykład w dbt (SQL):
+Przykład w [[dbt|dbt]] ([[SQL|SQL]]):
 ```sql
 SELECT
   order_id,
@@ -49,4 +49,4 @@ Wynik: `Cześć Szymon! Twoje zamówienie 123 jest gotowe.`
 - Jinja2 Documentation.
 
 ## 👽 Brudnopis
-- "SQL with superpowers". Tak się mówi o połączeniu SQL + Jinja w dbt. To zmienia SQL z języka zapytań w język programowania (metaprogramowania).
+- "[[SQL|SQL]] with superpowers". Tak się mówi o połączeniu [[SQL|SQL]] + Jinja w [[dbt|dbt]]. To zmienia [[SQL|SQL]] z języka zapytań w język programowania (metaprogramowania).

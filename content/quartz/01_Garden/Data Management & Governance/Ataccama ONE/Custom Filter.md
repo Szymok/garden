@@ -15,16 +15,16 @@ aliases:
   - Wyszukiwanie zaawansowane
 ---
 # 🎯 Definicja
-**Custom Filter** w Ataccama ONE to funkcja pozwalająca na tworzenie zaawansowanych kwerend wyszukiwania przy użyciu języka **[[AQL]]** (Ataccama Query Language). Pozwala wyjść poza proste filtrowanie "wybierz z listy" i budować złożoną logikę (`AND`, `OR`, `NOT`, `LIKE`).
+**Custom Filter** w [[Ataccama|Ataccama]] ONE to funkcja pozwalająca na tworzenie zaawansowanych kwerend wyszukiwania przy użyciu języka **[[AQL]]** ([[Ataccama|Ataccama]] Query Language). Pozwala wyjść poza proste filtrowanie "wybierz z listy" i budować złożoną logikę (`AND`, `OR`, `NOT`, `LIKE`).
 
 # 🔑 Kluczowe punkty
 - **Precyzja:** Daje kontrolę, której nie masz w prostym UI. Możesz łączyć warunki nawiasami.
 - **Zapisywanie:** Filtry można zapisać ("Saved Filters") i udostępnić zespołowi.
-- **Zastosowanie:** Wszędzie. W katalogu danych, w Data Quality, w Issue Trackerze.
+- **Zastosowanie:** Wszędzie. W katalogu danych, w [[Data Quality|Data Quality]], w Issue Trackerze.
 
 # 📚 Szczegółowe wyjaśnienie
-Gdy klikniesz "Advanced Filter" lub "Custom AQL", otwierasz konsolę tekstową.
-Składnia jest podobna do SQL, ale operuje na obiektach platformy.
+Gdy klikniesz "Advanced Filter" lub "Custom [[AQL|AQL]]", otwierasz konsolę tekstową.
+Składnia jest podobna do [[SQL|SQL]], ale operuje na obiektach platformy.
 Przykłady operatorów:
 - `IS NULL` / `IS NOT NULL`
 - `IN ("Value1", "Value2")`
@@ -38,8 +38,8 @@ Albo szukasz wszystkich kolumn PII, które nie są jeszcze zabezpieczone:
 `tags CONTAIN "PII" AND attributeType != "Masked"`
 
 ## 📌 Źródła
-- Ataccama ONE Web App User Guide.
+- [[Ataccama|Ataccama]] ONE Web App User Guide.
 
 ## 👽 Brudnopis
-- Ważne: AQL w filtrach webowych to nie to samo co AQL w Sparku/SQL. To język zapytań do *metadanych*.
+- Ważne: [[AQL|AQL]] w filtrach webowych to nie to samo co [[AQL|AQL]] w Sparku/[[SQL|SQL]]. To język zapytań do *metadanych*.
 - Auto-podpowiadanie (IntelliSense) w edytorze filtra bardzo pomaga znać nazwy atrybutów (np. `systemName` vs `name`).

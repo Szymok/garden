@@ -43,4 +43,4 @@ Licznik odsłon artykułu na dużym portalu.
 
 ## 👽 Brudnopis
 - Kappa Architecture: Uproszczenie lambdy (tylko Speed Layer).
-- Złożoność: Utrzymywanie dwóch kodów (jeden dla Storma, jeden dla MapReduce) to koszmar. Ujednolicone API (Beam, Spark, Flink) to naprawiają.
+- Złożoność: Utrzymywanie dwóch kodów (jeden dla Storma, jeden dla [[MapReduce|MapReduce]]) to koszmar. Ujednolicone API (Beam, Spark, Flink) to naprawiają.

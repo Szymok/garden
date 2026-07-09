@@ -33,7 +33,7 @@ Codzienny Raport Sprzedaży.
 1.  **Airflow** budzi się o 3:00.
 2.  Uruchamia ekstrakcję z Kas Fiskalnych.
 3.  Czeka na zakończenie.
-4.  Uruchamia transformację w Snowflake ([[dbt]]).
+4.  Uruchamia transformację w [[Snowflake|Snowflake]] ([[dbt]]).
 5.  Jeśli sukces -> Odświeża dashboard w Tableau.
 6.  Jeśli błąd -> Wysyła Slacka do inżyniera "Raport opóźniony!".
 
@@ -41,4 +41,4 @@ Codzienny Raport Sprzedaży.
 - "Fundamentals of Data Engineering".
 
 ## 👽 Brudnopis
-- Airflow to standard przemysłowy, ale bywa ciężki w utrzymaniu. [[Dagster]] zyskuje popularność dzięki podejściu "Data Asset Centric" (skupia się na danych, nie tylko na zadaniach).
+- Airflow to standard przemysłowy, ale bywa ciężki w utrzymaniu. [[Dagster]] zyskuje popularność dzięki podejściu "[[Data Asset|Data Asset]] Centric" (skupia się na danych, nie tylko na zadaniach).

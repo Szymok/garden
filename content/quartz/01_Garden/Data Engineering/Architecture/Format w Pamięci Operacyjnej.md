@@ -20,20 +20,20 @@ aliases:
 # 🔑 Kluczowe punkty
 - **Kolumnowy:** Dane tego samego typu (np. ceny wszystkich transakcji) leżą obok siebie w pamięci.
 - **SIMD (Single Instruction, Multiple Data):** Procesor może wykonać jedną instrukcję (np. mnożenie) na wielu liczbach naraz.
-- **Language Agnostic:** Python (Pandas), Java (Spark) i C++ mogą czytać ten sam kawałek pamięci bez kopiowania ("Zero-Copy").
+- **Language Agnostic:** Python ([[Pandas|Pandas]]), Java (Spark) i C++ mogą czytać ten sam kawałek pamięci bez kopiowania ("Zero-Copy").
 
 # 📚 Szczegółowe wyjaśnienie
 Tradycyjnie: Python ma swoje obiekty w RAM, Java swoje. Żeby przesłać dane z Pythona do Sparka (Java), trzeba je zamienić na bajty (Serialize), wysłać, i odtworzyć (Deserialize). To zjada 80% czasu procesora.
 In-Memory Format (Arrow): Python i Spark umawiają się na ten sam układ bitów w RAM. Python wystawia wskaźnik, Spark go czyta. Czas narzutu = 0.
 
 # 💡 Przykład zastosowania
-Biblioteka **Polars** (szybka alternatywa dla Pandas).
-Używa formatu Arrow w pamięci. Dzięki temu, gdy wczytujesz plik Parquet (też kolumnowy), dane wskakują do RAM-u prawie bez przekształceń. Operacje sortowania czy filtrowania są 10-50x szybsze niż w Pandas, który używa narzutu obiektowego Pythona.
+Biblioteka **Polars** (szybka alternatywa dla [[Pandas|Pandas]]).
+Używa formatu Arrow w pamięci. Dzięki temu, gdy wczytujesz plik Parquet (też kolumnowy), dane wskakują do RAM-u prawie bez przekształceń. Operacje sortowania czy filtrowania są 10-50x szybsze niż w [[Pandas|Pandas]], który używa narzutu obiektowego Pythona.
 
 ## 📌 Źródła
-- Apache Arrow Documentation.
-- "The Composable Data Management System".
+- [[Apache Arrow|Apache Arrow]] Documentation.
+- "The Composable [[Data Management|Data Management]] System".
 
 ## 👽 Brudnopis
-- To fundament nowoczesnego Data Engineeringu (Spark, Dremio, Snowflake, DuckDB - wszyscy używają wariacji tego formatu).
+- To fundament nowoczesnego Data Engineeringu (Spark, Dremio, [[Snowflake|Snowflake]], [[DuckDB|DuckDB]] - wszyscy używają wariacji tego formatu).
 - Unikaj "Row-based" formatów w RAM do analityki.

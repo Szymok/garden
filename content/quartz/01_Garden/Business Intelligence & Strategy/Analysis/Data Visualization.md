@@ -17,7 +17,7 @@ aliases:
   - Wykresy
 ---
 # 🎯 Definicja
-**Wizualizacja Danych** to zamiana tabel (których nikt nie rozumie) na obrazki (które każdy rozumie).
+**[[Wizualizacja|Wizualizacja]] Danych** to zamiana tabel (których nikt nie rozumie) na obrazki (które każdy rozumie).
 Mózg przetwarza obrazy 60,000 razy szybciej niż tekst.
 
 # 🔑 Kluczowe punkty

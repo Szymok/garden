@@ -16,7 +16,7 @@ aliases:
   - Parametry modelu
 ---
 # 🎯 Definicja
-**Ustawienia LLM** to pokrętła, którymi sterujesz zachowaniem modelu.
+**[[Ustawienia LLM|Ustawienia LLM]]** to pokrętła, którymi sterujesz zachowaniem modelu.
 Model to nie tylko "Prompt + Odpowiedź". To także konfiguracja: "Jak bardzo losowy mam być?", "Jakie słowa karać?".
 
 # 🔑 Kluczowe punkty
@@ -27,7 +27,7 @@ Model to nie tylko "Prompt + Odpowiedź". To także konfiguracja: "Jak bardzo lo
 
 # 📚 Szczegółowe wyjaśnienie
 Domyślne ustawienia (np. w ChatGPT) są zbalansowane (Temp=0.7).
-Do zadań programistycznych (generowanie kodu) używa się Temp=0.2 (Chcesz poprawny kod, a nie "kreatywną składnię").
+Do zadań programistycznych ([[Generowanie kodu|generowanie kodu]]) używa się Temp=0.2 (Chcesz poprawny kod, a nie "kreatywną składnię").
 Do pisania wierszy Temp=0.9.
 
 # 💡 Przykład zastosowania

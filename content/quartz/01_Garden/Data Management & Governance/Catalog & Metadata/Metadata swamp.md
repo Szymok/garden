@@ -15,7 +15,7 @@ aliases:
   - Unmanaged Metadata
 ---
 # 🎯 Definicja
-**Metadata Swamp** to sytuacja, w której organizacja gromadzi ogromne ilości metadanych (logi, schematy, definicje), ale są one tak nieuporządkowane, niespójne i nieopisane, że stają się bezużyteczne. To Data Lake, o które nikt nie zadbał.
+**[[Metadata|Metadata]] Swamp** to sytuacja, w której organizacja gromadzi ogromne ilości metadanych (logi, schematy, definicje), ale są one tak nieuporządkowane, niespójne i nieopisane, że stają się bezużyteczne. To [[Data Lake|Data Lake]], o które nikt nie zadbał.
 
 # 🔑 Kluczowe punkty
 - **Przyczyna:** Importowanie wszystkiego "jak leci" bez strategii i modelu (MMDM).
@@ -32,10 +32,10 @@ Jak uniknąć bagna?
 Firma włączyła "Automatyczny skaner" dla wszystkich swoich serwerów plików.
 Katalog zassał 10 milionów plików Excel, w tym "Lista zakupów na grilla 2019".
 Kiedy CEO szuka "Budżet 2024", wyszukiwarka tonie w śmieciach.
-To jest klasyczny Metadata Swamp.
+To jest klasyczny [[Metadata|Metadata]] Swamp.
 
 ## 📌 Źródła
-- "Data Lake vs Data Swamp".
+- "[[Data Lake|Data Lake]] vs [[Data Swamp|Data Swamp]]".
 
 ## 👽 Brudnopis
-- "Garbage In, Garbage Out". Katalog Danych jest tylko tak dobry, jak jakość metadanych, które do niego wpuścisz.
+- "Garbage In, Garbage Out". [[Katalog Danych|Katalog Danych]] jest tylko tak dobry, jak jakość metadanych, które do niego wpuścisz.

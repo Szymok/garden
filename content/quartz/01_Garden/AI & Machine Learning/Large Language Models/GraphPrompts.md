@@ -36,4 +36,4 @@ Zamiast trenować od nowa, "przepisujemy" strukturę cytowań na format, który 
 
 ## 👽 Brudnopis
 - To bardzo nowa i akademicka dziedzina (2023+).
-- Próba przeniesienia sukcesu "Prompt Engineering" z tekstu na dane strukturalne.
+- Próba przeniesienia sukcesu "Prompt Engineering" z tekstu na [[Dane Strukturalne|dane strukturalne]].

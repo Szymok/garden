@@ -21,20 +21,20 @@ Ten dokument to **mapa mentalna** kluczowych pojęć w nowoczesnej Inżynierii D
 1.  **Storage:** [[Data Warehouse]] (uporządkowane), [[Data Lake]] (surowe), [[Data Lakehouse]] (hybryda).
 2.  **Processing:** [[ETL kontra ELT|ETL vs ELT]], Batch (wsadowe) vs Streaming (ciągłe).
 3.  **Governance:** [[Data Catalog]], [[Data Quality]], [[Lineage]].
-4.  **DevOps:** [[CI/CD]], [[IaC]] (Infrastructure as Code), Konteneryzacja ([[Docker]], [[Kubernetes]]).
+4.  **[[DevOps|DevOps]]:** [[CI/CD]], [[IaC]] (Infrastructure as Code), Konteneryzacja ([[Docker]], [[Kubernetes]]).
 
 # 📚 Szczegółowe wyjaśnienie
 Trendy, które zmieniają branżę (2024+):
-- **Deklaratywność:** Zamiast pisać kod "jak ładować", piszemy "co chcemy załadować" ([[dbt]], SQLMesh).
+- **[[Deklaratywność|Deklaratywność]]:** Zamiast pisać kod "jak ładować", piszemy "co chcemy załadować" ([[dbt]], SQLMesh).
 - **Data Contracts:** Traktowanie danych jako produktu z gwarancją jakości (SLA).
-- **FinOps:** Optymalizacja kosztów chmury (bo Snowflake/BigQuery potrafią być drogie).
+- **FinOps:** Optymalizacja kosztów chmury (bo [[Snowflake|Snowflake]]/BigQuery potrafią być drogie).
 
 # 💡 Przykład zastosowania
 Inżynier Danych projektując nowy system musi wybrać klocki z tej mapy:
-"Zbudujemy **Lakehouse** (Architektura) na **S3** (Storage) używając formatu **Apache Iceberg**. Dane będziemy przetwarzać za pomocą **Spark** (Processing) w trybie **Batch**, a całość orkiestrować **Airflow**. Jakość zapewni nam **Great Expectations** (Governance)."
+"Zbudujemy **Lakehouse** (Architektura) na **S3** (Storage) używając formatu **[[Apache Iceberg|Apache Iceberg]]**. Dane będziemy przetwarzać za pomocą **Spark** (Processing) w trybie **Batch**, a całość orkiestrować **Airflow**. Jakość zapewni nam **Great Expectations** (Governance)."
 
 ## 📌 Źródła
 - "Fundamentals of Data Engineering".
 
 ## 👽 Brudnopis
-- Ta dziedzina zmienia się bardzo szybko. To, co było standardem 5 lat temu (Hadoop), dziś jest legacy. To co jest modne dziś (DuckDB), za 5 lat może być standardem.
+- Ta dziedzina zmienia się bardzo szybko. To, co było standardem 5 lat temu (Hadoop), dziś jest legacy. To co jest modne dziś ([[DuckDB|DuckDB]]), za 5 lat może być standardem.

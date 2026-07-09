@@ -82,7 +82,7 @@ Format: zwykle JSON lub schemat niestandardowy.
 # 🛠️ Narzędzia do przetwarzania danych behawioralnych
 
 - Event streaming: Kafka, Segment, Snowplow, RudderStack
-- Hurtownie danych/Event storage: BigQuery, Snowflake, S3 + Airbyte
+- Hurtownie danych/Event storage: BigQuery, [[Snowflake|Snowflake]], S3 + [[Airbyte|Airbyte]]
 - Transformacje: [[dbt]], Spark, Flink, [[Dagster]]
 - Analityka frontowa: Mixpanel, Heap, PostHog, Amplitude
 - Monitoring i A/B Testing: Optimizely, VWO, Google Optimize
@@ -99,6 +99,6 @@ Format: zwykle JSON lub schemat niestandardowy.
 
 - Dane behawioralne ≠ metadane ≠ dane transakcyjne — ale się uzupełniają
 - Kluczowy składnik [[Platforma Danych Klienta|CDP]] i real-time [[Uczenie Maszynowe|ML]]
-- Dane śledzące zdarzenia trzymane często w Data Lake, transformowane przez [[dbt]] na warstwę analityczną
+- Dane śledzące zdarzenia trzymane często w [[Data Lake|Data Lake]], transformowane przez [[dbt]] na warstwę analityczną
 - Istotne: zgodność z RODO/CCPA (prywatność, anonimizacja użytkownika)
 - Zdarzenia jako mini-historie użytkownika — idealne do uczenia sekwencyjnego i modeli RNN/LSTM/transformerów dla predykcji zachowań

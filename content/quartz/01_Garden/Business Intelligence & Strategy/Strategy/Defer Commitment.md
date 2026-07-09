@@ -25,7 +25,7 @@ Warto preferować wybory odwracalne. Jeśli mamy dwie opcje o podobnej wadze, za
 
 # 💡 Przykład zastosowania
 - **Amazon i Zappos:** Ich sukces opiera się na łatwości zwrotów i refundacji. Klient może podjąć decyzję o zakupie (zobowiązanie), wiedząc, że jest ona odwracalna. Bez tego mechanizmu sprzedaż byłaby znacznie trudniejsza.
-- **Architektura oprogramowania:** Wybór konkretnej bazy danych lub frameworka można czasem odroczyć poprzez stosowanie warstw abstrakcji, co pozwala najpierw skupić się na logice biznesowej.
+- **Architektura oprogramowania:** Wybór konkretnej [[Bazy danych|bazy danych]] lub frameworka można czasem odroczyć poprzez stosowanie warstw abstrakcji, co pozwala najpierw skupić się na logice biznesowej.
 - **Ubezpieczenie podróży:** Opłata za możliwość rezygnacji to w praktyce kupowanie "odwracalności" decyzji o wyjeździe.
 
 ## 📌 Źródła

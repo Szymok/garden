@@ -15,7 +15,7 @@ aliases:
   - Ansible Playbook
 ---
 # 🎯 Definicja
-**Playbook** to lista zadań (Tasks) zapisana w pliku YAML.
+**Playbook** to lista zadań (Tasks) zapisana w pliku [[YAML|YAML]].
 To "scenariusz" dla Ansible. W przeciwieństwie do komend Ad-hoc (jednorazowych), Playbooki są zapisywane, wersjonowane (Git) i wielokrotnego użytku.
 
 # 🔑 Kluczowe punkty
@@ -23,7 +23,7 @@ To "scenariusz" dla Ansible. W przeciwieństwie do komend Ad-hoc (jednorazowych)
   - **Play:** Dotyczy konkretnej grupy hostów (np. "Webservers").
   - **Tasks:** Lista kroków do wykonania (np. "Zainstaluj PHP", "Skopiuj Config").
 - **Moduły:** Klocki budulcowe (`file`, `lineinfile`, `copy`, `dnf`).
-- **Idempotentność:** Możesz uruchomić Playbook 100 razy. Jeśli system jest już skonfigurowany, Ansible nic nie zmieni.
+- **[[Idempotentność|Idempotentność]]:** Możesz uruchomić Playbook 100 razy. Jeśli system jest już skonfigurowany, Ansible nic nie zmieni.
 
 # 📚 Szczegółowe wyjaśnienie
 Przykładowy Playbook `setup_web.yml`:
@@ -52,4 +52,4 @@ Przykładowy Playbook `setup_web.yml`:
 - Ansible Intro to Playbooks.
 
 ## 👽 Brudnopis
-- Pamiętaj: Spacje, nie tabulatory! YAML nienawidzi tabulatorów.
+- Pamiętaj: Spacje, nie tabulatory! [[YAML|YAML]] nienawidzi tabulatorów.

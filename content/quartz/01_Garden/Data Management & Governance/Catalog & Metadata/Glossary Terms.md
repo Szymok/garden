@@ -24,7 +24,7 @@ aliases:
 - **Powiązanie z Danymi:** Termin biznesowy jest mapowany na fizyczne kolumny w bazie danych (np. Termin "Email Klienta" -> Tabela `users`, kolumna `contact_email`).
 
 # 📚 Szczegółowe wyjaśnienie
-W Data Governance:
+W [[Data Governance|Data Governance]]:
 1.  **Physical Data Dictionary:** Opisuje technikalia (Typ pola: Integer, Długość: 50).
 2.  **Business Glossary:** Opisuje biznes (Co to znaczy? Jak to liczymy?).
 Termin spina te dwa światy. Dzięki temu, gdy patrzysz na techniczną kolumnę `LTV_CALC`, widzisz przypięty termin "Lifetime Value" z definicją: "Suma przychodów od klienta minus koszty obsługi".
@@ -35,7 +35,7 @@ Prezes pyta: "Czy to zysk netto czy brutto?".
 Analityk najeżdża myszką na pole w raporcie (zintegrowanym z katalogiem) i widzi dymek z definicją Terminu: "Zysk Brutto (EBITDA)". Konflikt zażegnany.
 
 ## 📌 Źródła
-- DAMA-DMBOK (Data Management Body of Knowledge).
+- DAMA-DMBOK ([[Data Management|Data Management]] Body of Knowledge).
 
 ## 👽 Brudnopis
 - Budowa słownika to proces polityczny, nie techniczny. Najtrudniejsze jest uzgodnienie definicji "Klienta" między działami marketingu (każdy lead) a finansów (taki co zapłacił fakturę).

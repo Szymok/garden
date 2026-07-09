@@ -16,7 +16,7 @@ aliases:
   - Konfiguracja Ansible
 ---
 # 🎯 Definicja
-**Ansible** jest narzędziem wymaganym do instalacji platformy Ataccama ONE (wersje PaaS i On-Prem). Ponieważ instalator ONE to zbiór skryptów Ansible (Playbooków), musimy najpierw poprawnie skonfigurować środowisko (Controller Node), z którego będziemy zarządzać instalacją.
+**Ansible** jest narzędziem wymaganym do instalacji platformy [[Ataccama|Ataccama]] ONE (wersje [[PaaS|PaaS]] i On-Prem). Ponieważ instalator ONE to zbiór skryptów Ansible (Playbooków), musimy najpierw poprawnie skonfigurować środowisko (Controller Node), z którego będziemy zarządzać instalacją.
 
 # 🔑 Kluczowe punkty
 - **Python:** Wymagany Python 3.10+.
@@ -26,7 +26,7 @@ aliases:
 
 # 📚 Szczegółowe wyjaśnienie (Proces)
 1. **Paczki systemowe:** Zainstaluj `git`, `python3-pip`, `sshpass` (dla haseł SSH), `unzip`.
-2. **Paczka ONE:** Pobierz instalator Ataccama ONE i rozpakuj go do katalogu `~/one/`.
+2. **Paczka ONE:** Pobierz instalator [[Ataccama|Ataccama]] ONE i rozpakuj go do katalogu `~/one/`.
 3. **Venv:**
    ```bash
    python3 -m venv ~/venv
@@ -41,7 +41,7 @@ Administrator dostaje 3 czyste serwery Linux, na których ma postawić Ataccamę
 Zamiast logować się na każdy z osobna, loguje się na swój laptop (lub bastion host), instaluje tam Ansible wg powyższej procedury, uzupełnia plik `hosts` (Inventory) adresami tych 3 serwerów i uruchamia jeden komendę, która instaluje całą platformę.
 
 ## 📌 Źródła
-- Ataccama Installation Guide (Ansible Prerequisites).
+- [[Ataccama|Ataccama]] Installation Guide (Ansible Prerequisites).
 
 ## 👽 Brudnopis
 - Najczęstszy błąd: Brak ustawienia `locale` (UTF-8), co powoduje błędy przy instalacji. Rozwiązanie: `sudo localectl set-locale LANG=en_US.UTF-8`.

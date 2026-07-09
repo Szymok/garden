@@ -26,8 +26,8 @@ Model już "umie patrzeć" (zna kształty, krawędzie). Musi się tylko nauczyć
 
 # 📚 Szczegółowe wyjaśnienie
 Większość dzisiejszego AI to Transfer Learning.
-GPT-4 to model pre-trenowany na całym internecie.
-Kiedy robisz RAG albo Few-Shot prompt, korzystasz z jego ogólnej wiedzy.
+[[GPT-4|GPT-4]] to model pre-trenowany na całym internecie.
+Kiedy robisz [[RAG|RAG]] albo Few-Shot prompt, korzystasz z jego ogólnej wiedzy.
 Kiedy robisz Fine-Tuning GPT na swoich mailach, robisz Transfer Learning, żeby mówił Twoim stylem.
 
 # 💡 Przykład zastosowania

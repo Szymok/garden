@@ -20,14 +20,14 @@ aliases:
 
 # 🎯 Definicja
 
-**Warstwa Semantyczna (ang. Semantic Layer)** to pośrednia warstwa logiczna łącząca dane surowe ze źródeł i przekształcone modele w hurtowni z aplikacjami analitycznymi, [[Business Intelligence|BI]] oraz innymi narzędziami końcowymi. Umożliwia spójne i centralne definiowanie miar oraz wymiarów — zapewniając jednolitą interpretację danych, bez względu na to, z którego narzędzia użytkownik korzysta. Warstwa ta tłumaczy zapytania użytkowników lub aplikacji na instrukcje SQL, REST lub GraphQL — bez potrzeby reimplementacji logiki po stronie [[Business Intelligence|BI]].
+**Warstwa Semantyczna (ang. [[Semantic Layer|Semantic Layer]])** to pośrednia warstwa logiczna łącząca dane surowe ze źródeł i przekształcone modele w hurtowni z aplikacjami analitycznymi, [[Business Intelligence|BI]] oraz innymi narzędziami końcowymi. Umożliwia spójne i centralne definiowanie miar oraz wymiarów — zapewniając jednolitą interpretację danych, bez względu na to, z którego narzędzia użytkownik korzysta. Warstwa ta tłumaczy zapytania użytkowników lub aplikacji na instrukcje [[SQL|SQL]], REST lub GraphQL — bez potrzeby reimplementacji logiki po stronie [[Business Intelligence|BI]].
 
 # 🔑 Kluczowe punkty
 
 - **Jedna definicja miar i metryk** dostępna we wszystkich systemach konsumenckich ([[Business Intelligence|BI]], [[Notatniki (Notebooks)|notatniki]], aplikacje).
 - **Separacja logiki od warstw prezentacyjnych** – dzięki czemu zmiana definicji wskaźnika nie powoduje chaosu downstream.
 - **Standaryzacja i demokratyzacja danych** – użytkownicy biznesowi i techniczni korzystają z tej samej logiki raportowej.
-- **Obsługuje wiele formatów zapytań** – SQL, REST, GraphQL.
+- **Obsługuje wiele formatów zapytań** – [[SQL|SQL]], REST, GraphQL.
 - **Skalowalność i bezpieczeństwo** – kontrola uprawnień, wersjonowanie metryk, dynamiczna propagacja zmian.
 
 # 📚 Szczegółowe wyjaśnienie
@@ -37,7 +37,7 @@ aliases:
 - **Definicje miar** (np. MRR, LTV, churn rate), więcej: [[Warstwa Miary]]
 - **Powiązania wymiarów** (np. klient, region, produkt)
 - **Logika czasu (daty, zakresy, agregacje)**
-- **Tłumaczenie języka zapytania** (np. użytkownik pyta RESTem lub przez dashboard → zapytanie SQL)
+- **Tłumaczenie języka zapytania** (np. użytkownik pyta RESTem lub przez dashboard → zapytanie [[SQL|SQL]])
 - **API dostępu programowego** do modelu semantycznego
 
 ## Dlaczego warto wdrożyć?
@@ -50,11 +50,11 @@ Dzięki warstwie semantycznej:
 - Jedna aktualizacja (np. zmiana sposobu liczenia churnu) jest propagowana globalnie.
 - Logika jest kontrolowana, dokumentowana i audytowalna.
 
-## Przykładowe narzędzia implementujące Semantic Layer
+## Przykładowe narzędzia implementujące [[Semantic Layer|Semantic Layer]]
 
 |Narzędzie|Opis|
 |---|---|
-|[[dbt]] Semantic Layer|Definicje metryk, dostępne przez API|
+|[[dbt]] [[Semantic Layer|Semantic Layer]]|Definicje metryk, dostępne przez API|
 |Cube.dev|Headless [[Business Intelligence\|BI]] z cache, GraphQL, REST|
 |LookML (Looker)|Semantyczne modele + przeliczane metryki|
 |Lightdash|Open Source warstwa semantyczna dla [[dbt]]|
@@ -78,7 +78,7 @@ Podwarstwa semantyczna — [[Warstwa Miary]] — zawiera logikę agregacji metry
 
 # 💡 Przykład zastosowania
 
-Organizacja SaaS definiuje miarę "Monthly Active User (MAU)" w jednym miejscu — warstwie semantycznej.  
+Organizacja [[SaaS|SaaS]] definiuje miarę "Monthly Active User (MAU)" w jednym miejscu — warstwie semantycznej.  
 Dzięki temu:
 
 - Dashboard w Looker, notatnik w Jupyterze oraz raport w Power [[Business Intelligence|BI]] pokazują tę samą wartość.
@@ -95,9 +95,9 @@ Dzięki temu:
 # 👽 Brudnopis
 
 - Główne zadanie: abstrakcja warstwy danych, deklaratywna definicja miar → eksport do [[Business Intelligence|BI]]
-- Wsparcie: SQL, REST, GraphQL → klient wybiera, backend tłumaczy
+- Wsparcie: [[SQL|SQL]], REST, GraphQL → klient wybiera, backend tłumaczy
 - reużycie metryk (DRY), kontrola zmian, audyt
 - spójność LTV/ARR/MAU w organizacji: jedno źródło prawdy
 - narzędzia: [[dbt]] metrics, Cube API, Lightdash, LookML, AtScale, MetricFlow
-- relacja: Semantyczna = model + logic + metadata (+ [[Warstwa Miary]])
+- relacja: Semantyczna = model + logic + [[Metadata|metadata]] (+ [[Warstwa Miary]])
 - nowy standard w [[Nowoczesny Stos Danych|MDS]] 2.0 i headless [[Business Intelligence|BI]]

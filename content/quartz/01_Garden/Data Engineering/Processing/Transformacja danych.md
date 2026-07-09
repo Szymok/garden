@@ -53,12 +53,12 @@ Typowe rodzaje transformacji obejmują:
 Transformacja danych jest integralną częścią podejść integracyjnych:
 
 - **ETL (Extract, Transform, Load)** – transformacja odbywa się przed załadowaniem do systemu docelowego.
-- **ELT (Extract, Load, Transform)** – dane są przetwarzane już po załadowaniu do hurtowni danych (np. [[dbt]] w Snowflake).
+- **ELT (Extract, Load, Transform)** – dane są przetwarzane już po załadowaniu do hurtowni danych (np. [[dbt]] w [[Snowflake|Snowflake]]).
 - **[[EtLT]]** – hybrydowy model, w którym część transformacji „oczyszczającej” działa już w warstwie ekstrakcji/object storage.
 
 ## Korzyści z transformacji danych
 
-- **Lepsza jakość danych:** spójność, kompletność, poprawność.
+- **Lepsza [[Jakość Danych|jakość danych]]:** spójność, kompletność, poprawność.
 - **Efektywność przechowywania i przetwarzania:** lepsze wykorzystanie indeksów, kompresji.
 - **Zgodność z wymaganiami systemów downstream (np. hurtownia, model [[Uczenie Maszynowe|ML]]).**
 - **Rozszerzona semantyka:** pozwala na lepsze zrozumienie kontekstu (np. klasyfikacja typów klientów).
@@ -99,7 +99,7 @@ Otrzymany zestaw danych staje się podstawą dla systemu rekomendacji produktowe
 
 - podstawowe działania: oczyszczanie, mapowanie, filtrowanie, agregacje, formatowanie
 - ETL (transformacja przed) vs ELT (transformacja po – np. [[dbt]])
-- enrichment = np. lookup po IP ⇒ lokalizacja
+- enrichment = np. [[Lookup|lookup]] po IP ⇒ lokalizacja
 - transformation = zmiana wartości + zapewnienie jakości + semantyka
 - transformacja jako warstwa pośrednia: staging → core → mart (moduł [[dbt]])
 - przykład: NLP parsing tekstu (“Użytkownik X ma 45 lat”) → structured table

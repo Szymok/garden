@@ -53,11 +53,11 @@ aliases:
 
 ### Kluczowa rola [[Apache Arrow]]
 
-- [[Apache Arrow]] zapewnia wspólny format pamięci, szybki transfer i przetwarzanie danych wektorowych – optymalizacja pod warstwy wirtualne i ad hoc query.
+- [[Apache Arrow]] zapewnia wspólny format pamięci, szybki transfer i [[Przetwarzanie danych|przetwarzanie danych]] wektorowych – optymalizacja pod warstwy wirtualne i ad hoc query.
 
 ## Zastosowania
 
-- Raportowanie [[Business Intelligence|BI]] z wielu źródeł bez centralnego Data Warehouse.
+- Raportowanie [[Business Intelligence|BI]] z wielu źródeł bez centralnego [[Data Warehouse|Data Warehouse]].
 - Analizy ad hoc na danych rozproszonych po systemach operacyjnych firmy.
 - Szybkie prototypowanie i iteracja zapytań bez kosztu ETL.
 
@@ -82,7 +82,7 @@ Międzynarodowa firma technologiczna korzysta z Dremio, aby zintegrować dane z 
 
 - Virtualization = [[Business Intelligence|BI]] i analityka bez ETL, [[Push-Down]] na źródłach, [[Apache Arrow]]
 - Modele semantyczne σ join/federacja kilku źródeł w jednym query context
-- Dremio, Denodo, IBM Data Virtualization Manager
+- Dremio, Denodo, IBM [[Data Virtualization|Data Virtualization]] Manager
 - Warstwy: źródła → federacja → logika biznesowa/model → ekspozycja do [[Business Intelligence|BI]]/query
 - Przewaga: szybkie prototypy, query na aktualnych danych, brak kopiowania/latency ETL
 - Wady: performance ograniczony przez źródła, raczej nie stosować dla obciążeń operacyjnych/masowych batch

@@ -21,7 +21,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Tree of Thoughts (ToT)** to metoda strukturalnego rozumowania przy użyciu modeli językowych ([[Base LLM|LLM]]), która rozszerza klasyczne techniki podpowiadania, takie jak chain-of-thought, o możliwość eksploracji wielu alternatywnych ścieżek rozumowania na różnych etapach. Wprowadza drzewa myśli (sekwencji logicznych) i łączy zdolność [[Base LLM|LLM]] do generowania i oceniania hipotez z algorytmami wyszukiwania takimi jak BFS, DFS czy beam search.
+**[[Tree of Thoughts|Tree of Thoughts]] (ToT)** to metoda strukturalnego rozumowania przy użyciu modeli językowych ([[Base LLM|LLM]]), która rozszerza klasyczne techniki podpowiadania, takie jak chain-of-thought, o możliwość eksploracji wielu alternatywnych ścieżek rozumowania na różnych etapach. Wprowadza drzewa myśli (sekwencji logicznych) i łączy zdolność [[Base LLM|LLM]] do generowania i oceniania hipotez z algorytmami wyszukiwania takimi jak BFS, DFS czy beam search.
 
 ToT jest zaprojektowane z myślą o zadaniach wymagających planowania, eksploracji stanów i złożonego wnioskowania (np. łamigłówki, planowanie działań, kodowanie, pytania wieloetapowe).
 
@@ -37,7 +37,7 @@ ToT jest zaprojektowane z myślą o zadaniach wymagających planowania, eksplora
 
 ## Główna różnica względem chain-of-thought ([[Chain-of-Thought Prompting|CoT]])
 
-|Cecha|Chain of Thought|Tree of Thoughts|
+|Cecha|Chain of Thought|[[Tree of Thoughts|Tree of Thoughts]]|
 |---|---|---|
 |Struktura|Liniowa sekwencja myśli|Drzewo możliwych ścieżek rozumowania|
 |Eksploracja|Jedna droga|Eksploracja wielu możliwości (lookahead)|
@@ -45,7 +45,7 @@ ToT jest zaprojektowane z myślą o zadaniach wymagających planowania, eksplora
 |Algorytmika|Prosta generacja|BFS / DFS / beam + ocena heurystyczna|
 |Zastosowanie|Zadania zero-shot/[[Chain-of-Thought Prompting\|coT]]|Problemy z eksploracją, planowaniem, kodowaniem|
 
-## Jak działa Tree of Thoughts?
+## Jak działa [[Tree of Thoughts|Tree of Thoughts]]?
 
 1. **Problem** (np. matematyczny, decyzyjny) jest przekładany na serię rozwijalnych „myśli” — kroków logicznych prowadzących ku rozwiązaniu.
 2. **[[Base LLM|LLM]] generuje k myśli** na danym „poziomie” rozumowania — np. alternatywne działania, rozwiązania częściowe.

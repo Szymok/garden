@@ -19,7 +19,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Pełna synchronizacja odświeżania (Full Refresh Sync)** to tryb synchronizacji w systemach integracji danych (np. Airbyte), w którym przy każdym uruchomieniu zaciągane są **wszystkie dane** ze źródła, niezależnie od tego, czy zostały już wcześniej zsynchronizowane. Jest to prosta, ale kosztowna metoda zachowywania spójności danych pomiędzy źródłem a celem.
+**Pełna synchronizacja odświeżania ([[Full Refresh Sync|Full Refresh Sync]])** to tryb synchronizacji w systemach integracji danych (np. [[Airbyte|Airbyte]]), w którym przy każdym uruchomieniu zaciągane są **wszystkie dane** ze źródła, niezależnie od tego, czy zostały już wcześniej zsynchronizowane. Jest to prosta, ale kosztowna metoda zachowywania spójności danych pomiędzy źródłem a celem.
 
 # 🔑 Kluczowe punkty
 
@@ -64,20 +64,20 @@ aliases:
 
 # 💡 Przykład zastosowania
 
-W przypadku API dostawcy reklam, które nie udostępnia znacznika `updated_at`, Airbyte używa pełnej synchronizacji z opcją **Overwrite** dla tabel takich jak `ads_config`. Dzięki temu hurtownia danych zawsze zawiera aktualny zestaw konfiguracji kampanii. Mniejsze tabele (<10 MB) nie powodują wizualnie dużego kosztu, a zapewniają pełne odświeżenie danych.
+W przypadku API dostawcy reklam, które nie udostępnia znacznika `updated_at`, [[Airbyte|Airbyte]] używa pełnej synchronizacji z opcją **Overwrite** dla tabel takich jak `ads_config`. Dzięki temu hurtownia danych zawsze zawiera aktualny zestaw konfiguracji kampanii. Mniejsze tabele (<10 MB) nie powodują wizualnie dużego kosztu, a zapewniają pełne odświeżenie danych.
 
 # 📌 Źródła
 
-- [https://docs.airbyte.com/connections/sync-modes/](https://docs.airbyte.com/connections/sync-modes/)
-- [https://airbyte.com/blog/full-refresh-vs-incremental-sync](https://airbyte.com/blog/full-refresh-vs-incremental-sync)
-- [https://docs.airbyte.com/understanding-airbyte/sync-execution/](https://docs.airbyte.com/understanding-airbyte/sync-execution/)
+- ___BLOCK_PLACEHOLDER_9___
+- ___BLOCK_PLACEHOLDER_10___
+- ___BLOCK_PLACEHOLDER_11___
 
 ## 👽 Brudnopis
 
 - Full Refresh = brak „inteligencji różnicowej” → zawsze wszystko
-- Append = trzeba deduplikować (np. `primary key`, `hash`, `generation`)
+- Append = trzeba deduplikować (np. ___BLOCK_PLACEHOLDER_4___, ___BLOCK_PLACEHOLDER_5___, ___BLOCK_PLACEHOLDER_6___)
 - Overwrite robi drop + insert, przydaje się tam, gdzie są delecje
-- Generacja `_airbyte_generation_id` przy każdej synchronizacji
+- Generacja ___BLOCK_PLACEHOLDER_7___ przy każdej synchronizacji
 - Nieefektywne dla danych > 1M rekordów – przejdź na inkrementalne lub [[RAG]]
 - Dobry fallback gdy nie działa tryb inkrementalny (brak kolumny timestamp lub ID)
 

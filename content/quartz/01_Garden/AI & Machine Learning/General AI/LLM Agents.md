@@ -24,7 +24,7 @@ aliases:
 # 🔑 Kluczowe punkty
 
 - **Cykl ReAct**: Reason → Act → Observe → powtórz
-- **Tools (narzędzia)**: agent może wywoływać funkcje, API, bazy danych, wyszukiwarki
+- **Tools (narzędzia)**: agent może wywoływać funkcje, API, [[Bazy danych|bazy danych]], wyszukiwarki
 - **Memory**: krótkoterminowa (kontekst konwersacji) i długoterminowa ([[Baza wektorowa|vector store]])
 - **Planning**: agent rozkłada złożone zadanie na podzadania
 - **Multi-agent**: kilka agentów współpracuje — orchestrator + wyspecjalizowane sub-agenty
@@ -60,11 +60,11 @@ aliases:
 | **ReAct** | Naprzemienne rozumowanie i działanie | Szukaj → przeczytaj → odpowiedz |
 | **Plan & Execute** | Planuje cały task, potem wykonuje | Piszę raport: kroki 1-5 |
 | **Multi-agent** | Hierarchia agentów z różnymi rolami | Orchestrator + Researcher + Writer |
-| **Tool-calling** | Prosty agent z zestawem narzędzi | Chatbot z dostępem do SQL |
+| **Tool-calling** | Prosty agent z zestawem narzędzi | Chatbot z dostępem do [[SQL|SQL]] |
 
-## Function Calling
+## [[Function Calling|Function Calling]]
 
-Nowoczesne LLM (GPT-4, Claude, Gemini) mają natywne wsparcie dla tool use:
+Nowoczesne LLM ([[GPT-4|GPT-4]], Claude, Gemini) mają natywne wsparcie dla tool use:
 
 ```python
 tools = [
@@ -79,16 +79,16 @@ tools = [
 # Model sam decyduje kiedy i jak wywołać narzędzie
 ```
 
-## Agenci w Data Governance
+## Agenci w [[Data Governance|Data Governance]]
 
-Ataccama ONE eksperymentuje z agentami AI (patrz notatki webinarowe) do:
+[[Ataccama|Ataccama]] ONE eksperymentuje z agentami AI (patrz notatki webinarowe) do:
 - automatycznego sugerowania reguł jakości danych
 - proponowania właścicieli danych
 - generowania opisów terminu w Słowniku Biznesowym
 
 # 💡 Przykład zastosowania
 
-**Data Quality Agent**: agent otrzymuje zadanie "sprawdź jakość tabeli `customers`". Autonomicznie: (1) pobiera schemat tabeli z [[Data Catalog|katalogu danych]], (2) uruchamia profilowanie, (3) identyfikuje anomalie, (4) sprawdza reguły DQ w [[Ataccama.md|Ataccama]], (5) generuje raport z rekomendacjami — bez ingerencji człowieka.
+**[[Data Quality|Data Quality]] Agent**: agent otrzymuje zadanie "sprawdź jakość tabeli `customers`". Autonomicznie: (1) pobiera schemat tabeli z [[Data Catalog|katalogu danych]], (2) uruchamia profilowanie, (3) identyfikuje anomalie, (4) sprawdza reguły DQ w [[Ataccama.md|Ataccama]], (5) generuje raport z rekomendacjami — bez ingerencji człowieka.
 
 # 📌 Źródła
 

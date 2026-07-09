@@ -96,7 +96,7 @@ Source DB → Kafka (CDC) → Data Lake (S3/Delta Lake) → dbt → Data Warehou
 
 # 💡 Przykład zastosowania
 
-**Realtime Data Quality Monitoring**: każda transakcja bankowa trafia do topicu Kafki `transactions`. Konsument pobiera zdarzenia i w czasie rzeczywistym sprawdza reguły DQ w [[Ataccama.md|Ataccama]] (np. kwota > 0, waluta z listy dopuszczalnych). Naruszenia trafiają do topicu `dq-violations` → alert do stewardów danych. Czas reakcji: sekundy zamiast godzin.
+**Realtime [[Data Quality|Data Quality]] Monitoring**: każda transakcja bankowa trafia do topicu Kafki `transactions`. Konsument pobiera zdarzenia i w czasie rzeczywistym sprawdza reguły DQ w [[Ataccama.md|Ataccama]] (np. kwota > 0, waluta z listy dopuszczalnych). Naruszenia trafiają do topicu `dq-violations` → alert do stewardów danych. Czas reakcji: sekundy zamiast godzin.
 
 # 📌 Źródła
 

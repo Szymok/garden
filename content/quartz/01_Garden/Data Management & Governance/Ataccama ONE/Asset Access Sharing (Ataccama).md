@@ -17,7 +17,7 @@ aliases:
 ---
 # 🎯 Definicja
 **Asset Sharing** to proces, w którym mówisz: "Chcę, żeby Zespół Marketingu widział ten raport".
-Domyślnie, w Ataccama ONE, to co stworzysz (np. Raport DQ), jest prywatne. Musisz to udostępnić (Share), żeby inni to zobaczyli.
+Domyślnie, w [[Ataccama|Ataccama]] ONE, to co stworzysz (np. Raport DQ), jest prywatne. Musisz to udostępnić (Share), żeby inni to zobaczyli.
 
 # 🔑 Kluczowe punkty
 - **Prywatność:** Domyślnie Private. Bezpieczne od początku.
@@ -25,7 +25,7 @@ Domyślnie, w Ataccama ONE, to co stworzysz (np. Raport DQ), jest prywatne. Musi
 - **Poziomy:** Read Only, Edit, Full Control.
 
 # 📚 Szczegółowe wyjaśnienie
-Struktura grup w Ataccama (Organization Structure) jest hierarchiczna.
+Struktura grup w [[Ataccama|Ataccama]] (Organization Structure) jest hierarchiczna.
 Ustrzegaj się udostępniania wszystkiego grupie głównej (`Organization`), bo zrobisz śmietnik w wynikach wyszukiwania dla całej firmy.
 Udostępniaj tylko zainteresowanym (Least Privilege).
 
@@ -35,7 +35,7 @@ Na początku dzieli się nim tylko z "Kierownikiem Sprzedaży" (dla Feedbacku).
 Po akceptacji, dzieli się z grupą "Dział Sprzedaży" (Read Only), żeby wszyscy mogli korzystać, ale nie zepsuć.
 
 ## 📌 Źródła
-- Ataccama ONE User Management Docs.
+- [[Ataccama|Ataccama]] ONE [[User Management|User Management]] Docs.
 
 ## 👽 Brudnopis
 - To częsty problem wdrożeniowy: "Nic nie widzę!". Odpowiedź: "Bo nikt Ci nic nie udostępnił". Warto mieć zestaw publicznych, ogólnodostępnych zasobów na start.

@@ -35,7 +35,7 @@ Dobry prompt:
 "Jesteś Specjalistą ds. Obsługi Klienta (Rola). Klient jest zdenerwowany opóźnieniem paczki (Kontekst). Napisz przeprosiny i zaoferuj 10% rabatu (Zadanie). Bądź uprzejmy, ale konkretny (Styl). Nie obiecuj daty dostawy (Ograniczenie). Wynik jako czysty tekst maila (Format)."
 
 ## 📌 Źródła
-- "Prompt Engineering Guide" - promptingguide.ai.
+- "[[Prompt Engineering Guide|Prompt Engineering Guide]]" - promptingguide.ai.
 
 ## 👽 Brudnopis
 - Warto eksperymentować z kolejnością (czasem instrukcja na końcu działa lepiej - [[Recency Bias]]).

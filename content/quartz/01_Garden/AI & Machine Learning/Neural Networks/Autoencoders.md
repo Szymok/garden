@@ -15,12 +15,12 @@ aliases:
   - Latent space
 ---
 # 🎯 Definicja
-**Autoenkodery** to sieci neuronowe uczące się w sposób nienadzorowany, których celem jest skompresowanie danych wejściowych do ukrytej reprezentacji (Latent Space), a następnie odtworzenie ich z jak najmniejszym błędem.
+**Autoenkodery** to [[Sieci neuronowe|sieci neuronowe]] uczące się w sposób nienadzorowany, których celem jest skompresowanie danych wejściowych do ukrytej reprezentacji (Latent Space), a następnie odtworzenie ich z jak najmniejszym błędem.
 
 # 🔑 Kluczowe punkty
 - **Struktura:** Encoder (kompresja) -> Bottleneck (kod) -> Decoder (dekompresja).
 - **Cel:** Nauczenie się najważniejszych cech danych (feature extraction) poprzez zmuszenie sieci do "przeciśnięcia" informacji przez wąskie gardło.
-- **Zastosowania:** Usuwanie szumu (Denoising), detekcja anomalii, generowanie danych (VAE - Variational Autoencoders).
+- **Zastosowania:** Usuwanie szumu (Denoising), detekcja anomalii, [[Generowanie danych|generowanie danych]] (VAE - Variational Autoencoders).
 
 # 📚 Szczegółowe wyjaśnienie
 Autoenkoder nie jest uczony klasyfikacji ("to jest kot"), ale tożsamości ("to wejście = to wyjście").

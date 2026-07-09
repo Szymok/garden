@@ -12,7 +12,7 @@ aliases:
 ---
 # 🎯 Definicja
 
-**Framework Data Governance** (Ramy Ładu Danych) to ustrukturyzowane podejście do planowania, wdrażania i zarządzania ładem danych w organizacji. Stanowi on mapę drogową, która dostarcza wytycznych i aktywności opartych na najlepszych praktykach branżowych.
+**Framework [[Data Governance|Data Governance]]** (Ramy Ładu Danych) to ustrukturyzowane podejście do planowania, wdrażania i zarządzania ładem danych w organizacji. Stanowi on mapę drogową, która dostarcza wytycznych i aktywności opartych na najlepszych praktykach branżowych.
 
 # 🔑 Kluczowe punkty
 

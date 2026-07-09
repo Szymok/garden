@@ -16,7 +16,7 @@ aliases:
   - Wywołanie API w Desktopie
 ---
 # 🎯 Definicja
-**JSON Call** to krok (Step) w Ataccama ONE Desktop służący do wykonywania zapytań HTTP (REST, GraphQL) i parsowania odpowiedzi w formacie JSON. Pozwala połączyć proces ETL Ataccamy z dowolnym zewnętrznym systemem (np. pobrać kursy walut, wysłać powiadomienie na Slacka, pobrać dane z ONE Platform przez GraphQL).
+**JSON Call** to krok (Step) w [[Ataccama|Ataccama]] [[ONE Desktop|ONE Desktop]] służący do wykonywania zapytań HTTP (REST, GraphQL) i parsowania odpowiedzi w formacie JSON. Pozwala połączyć proces ETL Ataccamy z dowolnym zewnętrznym systemem (np. pobrać kursy walut, wysłać powiadomienie na Slacka, pobrać dane z ONE Platform przez GraphQL).
 
 # 🔑 Kluczowe punkty
 - **Metody:** Obsługuje GET, POST, PUT, DELETE.
@@ -31,7 +31,7 @@ Konfiguracja kroku:
 4.  **Reader Configuration:** Mapowanie JSON Path (np. `$.data.users[*]`) na kolumny wyjściowe Ataccamy.
 
 # 💡 Przykład zastosowania
-Chcesz pobrać listę użytkowników z Ataccama ONE Platform do pliku Excel.
+Chcesz pobrać listę użytkowników z [[Ataccama|Ataccama]] ONE Platform do pliku Excel.
 1. Tworzysz plan w Desktopie.
 2. Dodajesz krok **JSON Call**.
 3. URL: `https://twoja-instancja/graphql`.
@@ -40,7 +40,7 @@ Chcesz pobrać listę użytkowników z Ataccama ONE Platform do pliku Excel.
 6. Wynik podpinasz do kroku `Text File Writer`.
 
 ## 📌 Źródła
-- Ataccama ONE Desktop Documentation - JSON Call Step.
+- [[Ataccama|Ataccama]] [[ONE Desktop|ONE Desktop]] Documentation - JSON Call Step.
 
 ## 👽 Brudnopis
 - To "Szwajcarski scyzoryk" do integracji w Desktopie.

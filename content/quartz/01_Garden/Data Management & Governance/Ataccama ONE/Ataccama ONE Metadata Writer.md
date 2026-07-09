@@ -15,7 +15,7 @@ aliases:
   - Zapis metadanych
 ---
 # 🎯 Definicja
-Komponent (krok w planie ETL) umożliwiający tworzenie, aktualizację lub usuwanie obiektów metadanych w platformie Ataccama ONE.
+Komponent (krok w planie ETL) umożliwiający tworzenie, aktualizację lub usuwanie obiektów metadanych w platformie [[Ataccama|Ataccama]] ONE.
 
 # 🔑 Kluczowe punkty
 - **Moc:** Pozwala programowo zarządzać platformą (np. automatycznie zakładać tysiące terminów słownikowych).
@@ -24,7 +24,7 @@ Komponent (krok w planie ETL) umożliwiający tworzenie, aktualizację lub usuwa
 
 # 📚 Szczegółowe wyjaśnienie
 Służy do automatyzacji Governance.
-Scenariusz: "Data Synchronization". Masz zewnętrzny system HR. Chcesz, aby każdy nowy pracownik w HR automatycznie stawał się "Użytkownikiem" w Ataccama ONE.
+Scenariusz: "Data Synchronization". Masz zewnętrzny system HR. Chcesz, aby każdy nowy pracownik w HR automatycznie stawał się "Użytkownikiem" w [[Ataccama|Ataccama]] ONE.
 Plan ETL czyta bazę HR -> `Metadata Writer` tworzy obiekt `User` w Ataccamie.
 
 # 💡 Przykład zastosowania
@@ -33,7 +33,7 @@ Masowy import definicji biznesowych z Excela do Glosariusza (Business Glossary).
 2. `Metadata Writer` (tworzy obiekty typu `Term` w folderze `Glossary`).
 
 ## 📌 Źródła
-- Ataccama Desktop Guide.
+- [[Ataccama|Ataccama]] Desktop Guide.
 
 ## 👽 Brudnopis
 - Wymaga uprawnień administratora lub odpowiednich ról w systemie.

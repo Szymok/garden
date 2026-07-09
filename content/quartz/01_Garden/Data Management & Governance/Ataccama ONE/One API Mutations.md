@@ -1,12 +1,12 @@
-# One API Mutations
+# One API [[Mutations|Mutations]]
 
 🎯 **Definicja**
-**Mutacje (Mutations)** w GraphQL to specjalne operacje przeznaczone do modyfikacji danych po stronie serwera (zapis, aktualizacja, usuwanie). W przeciwieństwie do [[One API Queries|zapytań (queries)]], które mogą być wykonywane równolegle, mutacje są wykonywane sekwencyjnie (szeregowo), co zapewnia spójność i chroni przed wyścigami (race conditions) podczas modyfikacji danych. Do testowania mutacji można użyć środowiska [[Ataccama Using Playground|GraphQL Playground]].
+**Mutacje ([[Mutations|Mutations]])** w GraphQL to specjalne operacje przeznaczone do modyfikacji danych po stronie serwera (zapis, aktualizacja, usuwanie). W przeciwieństwie do [[One API Queries|zapytań (queries)]], które mogą być wykonywane równolegle, mutacje są wykonywane sekwencyjnie (szeregowo), co zapewnia spójność i chroni przed wyścigami (race conditions) podczas modyfikacji danych. Do testowania mutacji można użyć środowiska [[Ataccama Using Playground|GraphQL Playground]].
 
 ---
 
 🔑 **Kluczowe punkty**
-- Służą do wykonywania wszelkich operacji zapisu i modyfikacji danych w Ataccama ONE (tworzenie, edycja, usuwanie encji, uruchamianie procesów).
+- Służą do wykonywania wszelkich operacji zapisu i modyfikacji danych w [[Ataccama|Ataccama]] ONE (tworzenie, edycja, usuwanie encji, uruchamianie procesów).
 - Mutacje mogą zwracać stan wykonanego zadania (np. identyfikator `gid` zadania DQ, patrz: [[Data Quality]]) oraz zmodyfikowany obiekt wraz z zagnieżdżonymi polami.
 - Wykonywane są **sekwencyjnie (w serii)**, w przeciwieństwie do [[One API Queries|zapytań]] wykonywanych współbieżnie.
 - Stanowią odpowiednik operacji modyfikujących w REST (POST, PUT, DELETE, patrz: [[Endpoints and HTTP Headers|Nagłówki HTTP]]).
@@ -59,7 +59,7 @@ mutation glossaryTermDQ {
 ---
 
 ### 2. Usuwanie encji (Deleting Entities)
-Usunięcie encji w Ataccama ONE wymaga w pierwszej kolejności utworzenia wersji roboczej usunięcia (delete draft), a następnie jej opublikowania (publish).
+Usunięcie encji w [[Ataccama|Ataccama]] ONE wymaga w pierwszej kolejności utworzenia wersji roboczej usunięcia (delete draft), a następnie jej opublikowania (publish).
 
 #### Operacja GraphQL do usuwania elementu katalogu:
 ```graphql
@@ -134,7 +134,7 @@ mutation publishEntity {
 
 ---
 
-### 4. Klonowanie reguł i terminów (Duplicating Rules and Terms)
+### 4. Klonowanie reguł i terminów (Duplicating [[Rules|Rules]] and Terms)
 Umożliwia skopiowanie konfiguracji [[Data Quality Rules (Ataccama)|reguł DQ]] lub [[Glossary Terms|terminów biznesowych]] (np. w celu przypisania podobnych reguł do wielu plików wyszukiwania). Operacja kopiuje wyłącznie konfigurację i nie przenosi powiązań encji (skopiowany obiekt nie jest nigdzie przypisany).
 
 #### Duplikowanie terminu:
@@ -175,5 +175,5 @@ mutation copyRule {
 ---
 
 📌 **Źródła**
-- Dokumentacja techniczna Ataccama ONE API
-- GraphQL Specification (Mutations)
+- Dokumentacja techniczna [[Ataccama|Ataccama]] ONE API
+- GraphQL Specification ([[Mutations|Mutations]])

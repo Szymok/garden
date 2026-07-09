@@ -15,7 +15,7 @@ aliases:
   - Serializacja obiektów
 ---
 # 🎯 Definicja
-**Pickle** to format binarny w Pythonie służący do "zamrażania" obiektów. Możesz wziąć skomplikowany model Machine Learning (który uczył się 5 godzin), zapisać go do pliku `.pkl` (zamrozić), a potem odczytać w sekundę na innym komputerze (odmrozić) i używać.
+**Pickle** to format binarny w Pythonie służący do "zamrażania" obiektów. Możesz wziąć skomplikowany model [[Machine Learning|Machine Learning]] (który uczył się 5 godzin), zapisać go do pliku `.pkl` (zamrozić), a potem odczytać w sekundę na innym komputerze (odmrozić) i używać.
 
 # 🔑 Kluczowe punkty
 - **Serializacja:** Zamiana obiektu w pamięci RAM na ciąg bajtów na dysku.
@@ -24,7 +24,7 @@ aliases:
 
 # 📚 Szczegółowe wyjaśnienie
 W Data Science używa się Pickle do zapisywania wytrenowanych modeli (np. Scikit-Learn).
-Alternatywą jest format **ONNX** (bezpieczniejszy i przenośny między językami) lub **Joblib** (lepszy dla dużych tablic NumPy).
+Alternatywą jest format **ONNX** (bezpieczniejszy i przenośny między językami) lub **Joblib** (lepszy dla dużych tablic [[NumPy|NumPy]]).
 
 # 💡 Przykład zastosowania
 Trenujesz sieć neuronową.

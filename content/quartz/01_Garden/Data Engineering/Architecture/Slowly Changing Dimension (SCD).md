@@ -40,7 +40,7 @@ SCD Type 2 pozwala policzyć, ile zarabiał jako Junior, a ile jako Senior.
 Bez tego, po awansie, system myślałby, że on od zawsze był Seniorem i od zawsze tyle zarabiał (błąd w raporcie kosztów).
 
 ## 📌 Źródła
-- Ralph Kimball - "The Data Warehouse Toolkit".
+- Ralph Kimball - "The [[Data Warehouse|Data Warehouse]] Toolkit".
 
 ## 👽 Brudnopis
 - Implementacja SCD Type 2 jest trudna (merging, daty, flagi `is_current`). Narzędzia jak [[dbt]] mają gotowe "Snapshots", które robią to automatycznie.

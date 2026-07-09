@@ -22,7 +22,7 @@ aliases:
 # 🔑 Kluczowe punkty
 - **Zamrożenie modelu:** Główny model (np. Llama 70B) pozostaje nienaruszony.
 - **Macierze A i B:** LoRA dodaje dwie małe macierze do warstw sieci neuronowej. Uczymy tylko ich.
-- **Przenośność:** Możesz mieć jeden model bazowy i 50 malutkich adapterów (jeden do pisania wierszy, drugi do SQL, trzeci do medycyny).
+- **Przenośność:** Możesz mieć jeden model bazowy i 50 malutkich adapterów (jeden do pisania wierszy, drugi do [[SQL|SQL]], trzeci do medycyny).
 
 # 📚 Szczegółowe wyjaśnienie
 Tradycyjny Fine-Tuning zmienia wagi całego modelu (np. 70 miliardów parametrów). Wymaga to setek gigabajtów pamięci VRAM (wiele kart A100).

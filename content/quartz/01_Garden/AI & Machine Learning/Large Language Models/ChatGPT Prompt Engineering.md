@@ -31,7 +31,7 @@ Struktura wiadomości w API:
   {"role": "user", "content": "Who won the world cup in 2018?"}
 ]
 ```
-Prompt Engineering w ChatGPT różni się od Base LLM tym, że model "pamięta" historię (w ramach okna kontekstowego), więc można stosować techniki iteracyjnego poprawiania (*"Popraw drugi punkt, jest za długi"*).
+Prompt Engineering w ChatGPT różni się od [[Base LLM|Base LLM]] tym, że model "pamięta" historię (w ramach okna kontekstowego), więc można stosować techniki iteracyjnego poprawiania (*"Popraw drugi punkt, jest za długi"*).
 
 # 💡 Przykład zastosowania
 Chcesz wyciągnąć dane z maila.

@@ -32,8 +32,8 @@ Każdy DAG ma swój harmonogram (np. `@daily` lub cron expression).
 # 💡 Przykład zastosowania
 Prosty ETL:
 1. **Extract:** Pobierz dane pogodowe z API (HttpOperator).
-2. **Transform:** Przelicz średnią temperaturę (PythonOperator + Pandas).
-3. **Load:** Zapisz wynik do hurtowni Snowflake (SnowflakeOperator).
+2. **Transform:** Przelicz średnią temperaturę (PythonOperator + [[Pandas|Pandas]]).
+3. **Load:** Zapisz wynik do hurtowni [[Snowflake|Snowflake]] (SnowflakeOperator).
 
 Wszystko zapięte w DAG, który uruchamia się codziennie o 6:00 rano. Jeśli krok 1 zawiedzie, Airflow automatycznie ponowi próbę (Retry policy) i wyśle alert na Slacka w razie ostatecznego niepowodzenia.
 
@@ -44,4 +44,4 @@ Wszystko zapięte w DAG, który uruchamia się codziennie o 6:00 rano. Jeśli kr
 - Scheduler vs Webserver vs Worker vs Triggerer.
 - Backfilling: Uruchamianie historycznych przebiegów (np. przelicz dane za zeszły rok).
 - XComs: Mechanizm wymiany małych danych między taskami.
-- Alternatywy: Prefect, Dagster, Mage.
+- Alternatywy: Prefect, [[Dagster|Dagster]], Mage.

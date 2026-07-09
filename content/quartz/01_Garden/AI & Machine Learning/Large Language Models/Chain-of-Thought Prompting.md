@@ -44,5 +44,5 @@ Odpowiedź: 12.
 - Wei et al., "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models".
 
 ## 👽 Brudnopis
-- Tree of Thoughts (ToT) - ewolucja CoT, gdzie model generuje wiele ścieżek rozumowania i wybiera najlepszą.
+- [[Tree of Thoughts|Tree of Thoughts]] (ToT) - ewolucja CoT, gdzie model generuje wiele ścieżek rozumowania i wybiera najlepszą.
 - System 1 vs System 2 (Kahneman) - CoT to próba wymuszenia na AI "wolnego myślenia" (System 2).

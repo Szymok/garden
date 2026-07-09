@@ -41,4 +41,4 @@ CDP wie, że to ta sama osoba i przestaje wyświetlać mu reklamy tych butów (o
 - CDP Institute.
 
 ## 👽 Brudnopis
-- Nowy trend: **Composable CDP**. Zamiast kupować gotowe pudełko (np. Segment), budujesz CDP na własnej hurtowni danych (Snowflake) używając narzędzi Reverse ETL (Hightouch).
+- Nowy trend: **Composable CDP**. Zamiast kupować gotowe pudełko (np. Segment), budujesz CDP na własnej hurtowni danych ([[Snowflake|Snowflake]]) używając narzędzi Reverse ETL (Hightouch).

@@ -16,7 +16,7 @@ aliases:
   - Konfiguracja Widoku
 ---
 # 🎯 Definicja
-**Screen Layout** to sposób, w jaki Ataccama ONE wyświetla informacje o danych. Możesz decydować, czy "Opis" jest na górze, czy na dole, czy "Statystyki DQ" są widoczne, i jakie karty (Widgets) widzi użytkownik.
+**Screen Layout** to sposób, w jaki [[Ataccama|Ataccama]] ONE wyświetla informacje o danych. Możesz decydować, czy "Opis" jest na górze, czy na dole, czy "Statystyki DQ" są widoczne, i jakie karty (Widgets) widzi użytkownik.
 
 # 🔑 Kluczowe punkty
 - **No-Code:** Edytujesz układ myszką (Drag & Drop lub prosta konfiguracja JSON w UI), bez deployowania kodu.
@@ -36,7 +36,7 @@ Admin wchodzi w Edit Page, przesuwa widget "Ownership" na samą górę, obok naz
 Teraz każdy od razu wie, do kogo dzwonić w sprawie tej tabeli.
 
 ## 📌 Źródła
-- Ataccama ONE Customization Guide.
+- [[Ataccama|Ataccama]] ONE Customization Guide.
 
 ## 👽 Brudnopis
 - Layouty są potężne. Możesz ukrywać skomplikowane techniczne pola przed użytkownikami biznesowymi, żeby ich nie przerażać. Czysty UI = lepsza adopcja narzędzia.

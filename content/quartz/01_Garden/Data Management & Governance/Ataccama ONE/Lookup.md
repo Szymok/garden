@@ -25,7 +25,7 @@ aliases:
 - **Cache:** Lookupy są zazwyczaj ładowane do pamięci RAM, żeby działały błyskawicznie (nawet przy milionach rekordów).
 
 # 📚 Szczegółowe wyjaśnienie
-W Ataccama ONE `.lkp` to specyficzny format pliku binarnego/tekstowego, zoptymalizowany pod szybkie wyszukiwanie.
+W [[Ataccama|Ataccama]] ONE `.lkp` to specyficzny format pliku binarnego/tekstowego, zoptymalizowany pod szybkie wyszukiwanie.
 Można go zbudować z pliku CSV, tabeli w bazie danych lub innej operacji ETL.
 Rodzaje:
 - **Simple Lookup:** Klucz -> Wartość.
@@ -35,10 +35,10 @@ Rodzaje:
 Analityka sprzedaży.
 W bazie transakcyjnej masz tylko `product_id`.
 W raporcie chcesz widzieć `product_name` i `category`.
-Używasz kroku **Lookup**, który "dokleja" te informacje do każdej transakcji w locie, nie obciążając głównej bazy zapybaniami SQL JOIN.
+Używasz kroku **Lookup**, który "dokleja" te informacje do każdej transakcji w locie, nie obciążając głównej bazy zapybaniami [[SQL|SQL]] JOIN.
 
 ## 📌 Źródła
-- Ataccama Documentation - Lookup Step.
+- [[Ataccama|Ataccama]] Documentation - Lookup Step.
 
 ## 👽 Brudnopis
-- W SQL odpowiednikiem jest `LEFT JOIN`. W Excelu `VLOOKUP` (stąd nazwa).
+- W [[SQL|SQL]] odpowiednikiem jest `LEFT JOIN`. W Excelu `VLOOKUP` (stąd nazwa).

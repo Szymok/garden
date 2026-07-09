@@ -39,7 +39,7 @@ Jeśli nie ustawisz Seeda, Twój model raz będzie miał Accuracy 90%, a raz 88%
 Ustawiasz `torch.manual_seed(42)` i masz pewność, że zmiana wyniku wynika z Twoich poprawek w kodzie, a nie z losowości.
 
 ## 📌 Źródła
-- Numpy Random Seed documentation.
+- [[NumPy|Numpy]] Random Seed documentation.
 
 ## 👽 Brudnopis
 - Dlaczego 42? To odpowiedź na "Wielkie Pytanie o Życie, Wszechświat i całą resztę" z "Autostopem przez Galaktykę". Programiści to lubią.

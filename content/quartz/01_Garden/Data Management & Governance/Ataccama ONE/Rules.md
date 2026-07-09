@@ -22,11 +22,11 @@ aliases:
 
 # 🎯 Definicja
 
-**Rules (reguły)** w kontekście zarządzania danymi w Ataccama ONE to formalne, logiczne zasady definiujące operacje walidacyjne, transformacyjne lub detekcyjne stosowane na danych. Reguły są wykorzystywane do oceny jakości danych, wykrywania terminów słownikowych oraz zapewnienia zgodności metadanych i treści danych z politykami organizacji.
+**Rules (reguły)** w kontekście zarządzania danymi w [[Ataccama|Ataccama]] ONE to formalne, logiczne zasady definiujące operacje walidacyjne, transformacyjne lub detekcyjne stosowane na danych. Reguły są wykorzystywane do oceny jakości danych, wykrywania terminów słownikowych oraz zapewnienia zgodności metadanych i treści danych z politykami organizacji.
 
 # 🔑 Kluczowe punkty
 
-- 📦 W Ataccama wyróżniamy dwa główne typy reguł:
+- 📦 W [[Ataccama|Ataccama]] wyróżniamy dwa główne typy reguł:
     1. [[Detection rules]] – służą do wykrywania terminów słownikowych na poziomie atrybutów.
     2. [[Data Quality Evaluation rules]] – służą do walidacji, monitorowania i oceny jakości danych.
 - ⚙️ Reguły mogą być konfigurowane przez:
@@ -105,13 +105,13 @@ Użytkownik przypina tę regułę do wszystkich kolumn przypisanych do terminu �
 title: Rules  
 created: 2025-04-01  
 status: 🌱 draft
-category: [[Data Governance]] / jakość danych  
+category: [[Data Governance]] / [[Jakość Danych|jakość danych]]  
 difficulty: średni  
 language: pl  
 tags:
 
 - reguły
-- jakość danych
+- [[Jakość Danych|jakość danych]]
 - wykrywanie terminów
 - [[Transformacja danych]]
 - walidacja  
@@ -124,11 +124,11 @@ tags:
 
 # 🎯 Definicja
 
-**Rules (reguły)** w kontekście zarządzania danymi w Ataccama ONE to formalne, logiczne zasady definiujące operacje walidacyjne, transformacyjne lub detekcyjne stosowane na danych. Reguły są wykorzystywane do oceny jakości danych, wykrywania terminów słownikowych oraz zapewnienia zgodności metadanych i treści danych z politykami organizacji.
+**Rules (reguły)** w kontekście zarządzania danymi w [[Ataccama|Ataccama]] ONE to formalne, logiczne zasady definiujące operacje walidacyjne, transformacyjne lub detekcyjne stosowane na danych. Reguły są wykorzystywane do oceny jakości danych, wykrywania terminów słownikowych oraz zapewnienia zgodności metadanych i treści danych z politykami organizacji.
 
 # 🔑 Kluczowe punkty
 
-- 📦 W Ataccama wyróżniamy dwa główne typy reguł:
+- 📦 W [[Ataccama|Ataccama]] wyróżniamy dwa główne typy reguł:
     1. [[Detection rules]] – służą do wykrywania terminów słownikowych na poziomie atrybutów.
     2. [[Data Quality Evaluation rules]] – służą do walidacji, monitorowania i oceny jakości danych.
 - ⚙️ Reguły mogą być konfigurowane przez:

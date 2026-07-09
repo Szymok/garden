@@ -21,7 +21,7 @@ aliases:
 # 🔑 Kluczowe punkty
 - **Pętla:** Myśl (Thought) -> Działanie (Action) -> Obserwacja Wyniku (Observation) -> Myśl...
 - **Autonomia:** Model sam decyduje, kiedy użyć narzędzia.
-- **Fundament Agentów:** To podstawa działania AutoGPT czy LangChain Agents.
+- **Fundament Agentów:** To podstawa działania AutoGPT czy [[Langchain|LangChain]] Agents.
 
 # 📚 Szczegółowe wyjaśnienie
 Zamiast pytać modelu: "Jaka jest pogoda w Warszawie?", gdzie model zgaduje.

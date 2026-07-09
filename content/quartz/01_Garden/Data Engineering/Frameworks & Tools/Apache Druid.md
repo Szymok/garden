@@ -18,12 +18,12 @@ aliases:
 **Apache Druid** to wysokowydajna, rozproszona baza danych czasu rzeczywistego (Real-Time Analytics Database), zaprojektowana do błyskawicznych zapytań agregujących na dużych zbiorach danych (OLAP).
 
 # 🔑 Kluczowe punkty
-- **Sub-second queries:** Odpowiedzi na zapytania analityczne w milisekundy, nawet przy petabajtach danych.
+- **Sub-second [[Queries|queries]]:** Odpowiedzi na zapytania analityczne w milisekundy, nawet przy petabajtach danych.
 - **Streaming Ingestion:** Natywna integracja z Kafką (czyta dane natychmiast po ich pojawieniu się).
 - **Architektura:** Kolumnowy zapis, indeksowanie bitmapowe, brak pełnych transakcji (UPDATE jest trudny/niemożliwy, to append-only system).
 
 # 📚 Szczegółowe wyjaśnienie
-Druid wypełnia lukę między Hurtownią Danych (Snowflake/BigQuery - wysoki latency, duża elastyczność) a bazami Key-Value (Redis - niski latency, brak analityki).
+Druid wypełnia lukę między Hurtownią Danych ([[Snowflake|Snowflake]]/BigQuery - wysoki latency, duża elastyczność) a bazami Key-Value (Redis - niski latency, brak analityki).
 Jest idealny do "User-Facing Analytics" – np. dashboardu dla klienta banku, który pokazuje jego wydatki z ostatnich 5 lat z podziałem na kategorie w ułamku sekundy.
 
 Architektura:
@@ -39,5 +39,5 @@ Netflix używa Druida do monitorowania jakości odtwarzania w czasie rzeczywisty
 
 ## 👽 Brudnopis
 - Alternatywy: ClickHouse, Pinot.
-- Nie zastępuje Data Warehouse (brak złożonych JOINów, trudne usuwanie danych).
+- Nie zastępuje [[Data Warehouse|Data Warehouse]] (brak złożonych JOINów, trudne usuwanie danych).
 - Zapisuje dane w segmentach (Time partitioning).

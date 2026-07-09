@@ -15,7 +15,7 @@ aliases:
   - Zespoły Governance
 ---
 # 🎯 Definicja
-**Governance Groups** to jednostki organizacyjne (Zespoły, Departamenty, Projekty) zdefiniowane w narzędziu Data Governance (np. Ataccama, Collibra), służące do grupowania użytkowników i nadawania im uprawnień do zasobów danych.
+**Governance Groups** to jednostki organizacyjne (Zespoły, Departamenty, Projekty) zdefiniowane w narzędziu [[Data Governance|Data Governance]] (np. [[Ataccama|Ataccama]], Collibra), służące do grupowania użytkowników i nadawania im uprawnień do zasobów danych.
 
 # 🔑 Kluczowe punkty
 - **Hierarchia:** Grupy mogą (i powinny) tworzyć strukturę drzewiastą (Firma -> Dział -> Zespół).
@@ -24,7 +24,7 @@ aliases:
 
 # 📚 Szczegółowe wyjaśnienie
 Grupy upraszczają zarządzanie dostępem (RBAC - Role Based Access Control). Zamiast klikać uprawnienia dla 50 analityków z osobna, dodajesz ich do grupy "Analysts_Marketing", a grupie nadajesz dostęp do folderu "Kampanie".
-W systemach Governance (jak Ataccama), grupy pełnią też rolę **kategorii własności**. Jeśli Grupa "HR" jest właścicielem Terminu, to tylko członkowie grupy HR mogą go edytować.
+W systemach Governance (jak [[Ataccama|Ataccama]]), grupy pełnią też rolę **kategorii własności**. Jeśli Grupa "HR" jest właścicielem Terminu, to tylko członkowie grupy HR mogą go edytować.
 
 # 💡 Przykład zastosowania
 Nowy pracownik dołącza do zespołu Ryzyka.
@@ -33,7 +33,7 @@ W nocy następuje synchronizacja.
 Rano pracownik loguje się do Katalogu Danych i automatycznie widzi wszystkie tabele, raporty i definicje należące do domeny Ryzyka, a dane HR są dla niego ukryte.
 
 ## 📌 Źródła
-- Ataccama ONE User Management.
+- [[Ataccama|Ataccama]] ONE [[User Management|User Management]].
 
 ## 👽 Brudnopis
 - Unikaj "sierot" (użytkowników bez grupy).

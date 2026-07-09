@@ -55,7 +55,7 @@ W systemach takich jak **Apache [[Apache Airflow|Airflow]]**, **[[Dagster]]**, *
 |---|---|
 |**[[Apache Airflow]]**|Planowanie i zarządzanie złożonymi pipeline’ami danych|
 |**[[Dagster]]**|Podejście typu "[[Data Source\|data asset]]-oriented" z deklaratywnym API|
-|**[[dbt]]**|[[Modelowanie Danych]] w SQL jako DAG transformacji|
+|**[[dbt]]**|[[Modelowanie Danych]] w [[SQL|SQL]] jako DAG transformacji|
 |**Prefect**|Nowoczesna orkiestracja z retry, caching, task runnerami|
 
 ## Przykład graficzny DAG
@@ -76,7 +76,7 @@ Każdy z tych kroków jest od siebie zależny i może zostać uruchomiony tylko 
 
 # 💡 Przykład zastosowania
 
-W architekturze danych e-commerce, zespół buduje pipeline oparty o Apache Airflow, w którym:
+W architekturze danych e-commerce, zespół buduje pipeline oparty o [[Apache Airflow|Apache Airflow]], w którym:
 
 - Task A: pobiera dane zamówień z API (`extract_orders`)
 - Task B: oczyszcza dane (`clean_orders`)
@@ -98,6 +98,6 @@ Wszystkie kroki są modelowane jako DAG. Jeśli podczas agregacji (Task C) wyst�
 - Acykliczny → brak cykli, nie ma pętli
 - DAG ≠ drzewo — mogą być wierzchołki z wieloma parentami
 - Istotne w przetwarzaniu danych, [[Business Intelligence|BI]], orkiestracji
-- Struktura bazowa np. w [[dbt]]: każdy model SQL to węzeł DAG
+- Struktura bazowa np. w [[dbt]]: każdy model [[SQL|SQL]] to węzeł DAG
 - Retry, flow control, impact analysis, parallelism → wszystko dostępne dzięki DAG
 - DAG = mapowanie zależności logicznych między taskami – nie wykres ładowania danych

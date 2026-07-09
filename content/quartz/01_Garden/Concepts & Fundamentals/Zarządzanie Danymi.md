@@ -41,7 +41,7 @@ aliases:
 2. **Ramy odpowiedzialności (data [[Stewardship]])**  
     Przypisanie ról i obowiązków – np. właściciel danych (data owner), opiekun danych (data steward), użytkownik danych końcowy.
     
-3. **Jakość danych (Data Quality)**  
+3. **[[Jakość Danych|Jakość danych]] ([[Data Quality|Data Quality]])**  
     Zapewnienie, że dane są dokładne, aktualne, kompletne i możliwe do wykorzystania – np. poprzez automatyczne testy.
     
 4. **Bezpieczeństwo i prywatność danych**  
@@ -68,12 +68,12 @@ Jak podaje [Talend](https://www.talend.com/resources/what-is-data-governance/) ,
 
 # 💡 Przykład zastosowania
 
-W dużej firmie logistycznej wdrożono [[Data Catalog|katalog danych]] i przypisano właścicieli do kluczowych źródeł (CRM, ERP, zamówienia). Użytkownicy z działów finansów, sprzedaży i operacji mogą korzystać z ustandaryzowanych zestawów danych. System monitorujący jakość danych automatycznie alarmuje, gdy w systemie źródłowym pojawią się duplikaty lub wartości odstające. Dzięki temu raportowanie jest bardziej spójne, a ryzyko podejmowania błędnych decyzji spada.
+W dużej firmie logistycznej wdrożono [[Data Catalog|katalog danych]] i przypisano właścicieli do kluczowych źródeł (CRM, ERP, zamówienia). Użytkownicy z działów finansów, sprzedaży i operacji mogą korzystać z ustandaryzowanych zestawów danych. System monitorujący [[Jakość Danych|jakość danych]] automatycznie alarmuje, gdy w systemie źródłowym pojawią się duplikaty lub wartości odstające. Dzięki temu raportowanie jest bardziej spójne, a ryzyko podejmowania błędnych decyzji spada.
 
 ## 📌 Źródła
 
 - [Talend – What is Data Governance?](https://www.talend.com/resources/what-is-data-governance/)
-- [Airbyte – Data Lake & [[Data Lakehouse|Lakehouse]] guide](https://airbyte.com/blog/data-lake-lakehouse-guide-powered-by-table-formats-delta-lake-iceberg-hudi)
+- [Airbyte – Data Lake & ___BLOCK_PLACEHOLDER_7___ guide](https://airbyte.com/blog/data-lake-lakehouse-guide-powered-by-table-formats-delta-lake-iceberg-hudi)
 - [[[Data Governance]] Guide – IBM](https://www.ibm.com/topics/data-governance)
 
 ## 👽 Brudnopis
@@ -81,7 +81,7 @@ W dużej firmie logistycznej wdrożono [[Data Catalog|katalog danych]] i przypis
 - Governance to „polityka i nadzór” nad danymi — kto, co, kiedy, jak i dlaczego
 - [[Roles|Role]]: steward, owner, analyst, admin
 - Zaufanie do danych = compliance + jakość
-- Narzędzia: Collibra, Alation, DataHub, Amundsen, Ataccama
+- Narzędzia: Collibra, Alation, DataHub, Amundsen, [[Ataccama|Ataccama]]
 - Wymagany komponent każdej platformy danych — niezależnie od technologii ([[Business Intelligence|bi]], lake, warehouse)
 - Monitoring danych jakościowych = dashboard + powiadomienia
 - Meta i [[Master Data Management (MDM)|master data management]] — powiązane dziedziny

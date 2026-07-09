@@ -16,15 +16,15 @@ aliases:
   - Llama Index
 ---
 # 🎯 Definicja
-**LlamaIndex** (dawniej GPT Index) to narzędzie stworzone specjalnie do **łączenia LLM z Twoimi danymi**. O ile LangChain to "scyzoryk do wszystkiego", LlamaIndex specjalizuje się w **RAG** (Retrieval-Augmented Generation) - czyli w tym, jak najlepiej pobrać dane z PDF-a, podzielić je, zindeksować i podać modelowi.
+**LlamaIndex** (dawniej GPT Index) to narzędzie stworzone specjalnie do **łączenia LLM z Twoimi danymi**. O ile [[Langchain|LangChain]] to "scyzoryk do wszystkiego", LlamaIndex specjalizuje się w **[[RAG|RAG]]** (Retrieval-Augmented Generation) - czyli w tym, jak najlepiej pobrać dane z PDF-a, podzielić je, zindeksować i podać modelowi.
 
 # 🔑 Kluczowe punkty
-- **Data Connectors:** Gotowe "wtyczki" do czytania danych z Discorda, Notion, SQL, PDF, Jira itd.
+- **Data Connectors:** Gotowe "wtyczki" do czytania danych z Discorda, Notion, [[SQL|SQL]], PDF, Jira itd.
 - **Indices:** Struktury danych (np. Vector Store Index, List Index, Tree Index) optymalizujące wyszukiwanie.
 - **Query Engine:** Silnik, który zamienia pytanie ("Ile zarobiliśmy?") na serię kroków przeszukujących indeks.
 
 # 📚 Szczegółowe wyjaśnienie
-Główna różnica vs LangChain:
+Główna różnica vs [[Langchain|LangChain]]:
 LlamaIndex skupia się na **jakości danych**. Oferuje zaawansowane strategie chunkingu (dzielenia tekstu), rerankingu (ponownego oceniania wyników wyszukiwania, żeby najlepsze były na górze) i syntezy odpowiedzi.
 Jeśli budujesz czatbota "Rozmawiaj ze swoimi dokumentami" - LlamaIndex jest często pierwszym wyborem.
 
@@ -40,4 +40,4 @@ LlamaIndex:
 - LlamaIndex Documentation.
 
 ## 👽 Brudnopis
-- "LangChain to architekt, LlamaIndex to bibliotekarz".
+- "[[Langchain|LangChain]] to architekt, LlamaIndex to bibliotekarz".

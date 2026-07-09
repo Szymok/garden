@@ -23,7 +23,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Wektorowe bazy danych (Vector Databases)** to wyspecjalizowane systemy bazodanowe zaprojektowane do przechowywania, indeksowania i szybkiego wyszukiwania wektorów (embeddingów) – czyli wielowymiarowych reprezentacji numerycznych danych (tekstów, obrazów, audio itp.). W kontekście dużych modeli językowych ([[Base LLM|LLM]]), stanowią podstawową strukturę do realizacji semantycznego wyszukiwania, zadawania pytań do dokumentów ([[RAG]]), filtrowania danych i porównań kontekstowych.
+**Wektorowe [[Bazy danych|bazy danych]] (Vector Databases)** to wyspecjalizowane systemy bazodanowe zaprojektowane do przechowywania, indeksowania i szybkiego wyszukiwania wektorów (embeddingów) – czyli wielowymiarowych reprezentacji numerycznych danych (tekstów, obrazów, audio itp.). W kontekście dużych modeli językowych ([[Base LLM|LLM]]), stanowią podstawową strukturę do realizacji semantycznego wyszukiwania, zadawania pytań do dokumentów ([[RAG]]), filtrowania danych i porównań kontekstowych.
 
 # 🔑 Kluczowe punkty
 
@@ -53,7 +53,7 @@ Po przekształceniu tekstu przez model (np. OpenAI [[Embedding]] API, BERT-as-se
 
 ## Przykłady zastosowań:
 
-- **[[Retrieval Augmented Generation (RAG)|Retrieval-Augmented Generation]] (RAG)** – uzupełnianie kontekstu [[Base LLM|LLM]] o najbardziej dopasowane treści
+- **[[Retrieval Augmented Generation (RAG)|Retrieval-Augmented Generation]] ([[RAG|RAG]])** – uzupełnianie kontekstu [[Base LLM|LLM]] o najbardziej dopasowane treści
 - **Rekomendacje kontekstowe** – dobierane wg podobieństwa semantycznego, a nie tylko reguł biznesowych
 - **Wyszukiwanie semantyczne** – np. „pokaż mi faktury związane z opóźnioną dostawą laptopów”
 - **Wirtualni asystenci AI** – dostęp do wiedzy firmowej zapisanej w embeddingach (PDF-y, strony, bazy wiedzy)
@@ -62,9 +62,9 @@ Po przekształceniu tekstu przez model (np. OpenAI [[Embedding]] API, BERT-as-se
 
 |Baza|Główne cechy|
 |---|---|
-|**Pinecone**|Usługa SaaS, skalowalna, klasy enterprise-ready|
+|**Pinecone**|Usługa [[SaaS|SaaS]], skalowalna, klasy enterprise-ready|
 |**FAISS**|Open-source od Meta AI – szybka, lokalna, wspiera wiele algorytmów ANN|
-|**Weaviate**|Open-source z wbudowanym NLP, tagami - SQL-like query DSL|
+|**Weaviate**|Open-source z wbudowanym NLP, tagami - [[SQL|SQL]]-like query DSL|
 |**Qdrant**|Napisana w Rust, wysoka szybkość i dokładność|
 |**ChromaDB**|Lekka lokalna, idealna dla Chatbotów [[RAG]] offline|
 |**Milvus**|Rozproszona, wspiera miliardy wektorów, dobra do big-scale scenariuszy|
@@ -81,11 +81,11 @@ Firma konsultingowa tworzy [[Base LLM|LLM]]-asystenta do przeszukiwania dokument
 
 ## 📌 Źródła
 
-- [Pinecone – Czym jest [[Baza wektorowa|vector DB]]?](https://www.pinecone.io/learn/vector-database/)
+- [Pinecone – Czym jest ___BLOCK_PLACEHOLDER_13___?](https://www.pinecone.io/learn/vector-database/)
 - [FAISS – Facebook AI Similarity Search](https://github.com/facebookresearch/faiss)
 - [Weaviate – vector database explained](https://weaviate.io/developers/weaviate)
 - [Qdrant – Introduction and benchmark](https://qdrant.tech/documentation/)
-- [[[LangChain]] – Integracja z vector stores](https://docs.langchain.com/docs/integrations/vectorstores/)
+- [[[LangChain]] – Integracja z vector stores](https://docs.[[Langchain|langchain]].com/docs/integrations/vectorstores/)
 
 ## 👽 Brudnopis
 

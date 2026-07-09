@@ -18,7 +18,7 @@ aliases:
 **Automatic Prompt Engineer (APE)** to framework, który traktuje tworzenie promptów jako problem optymalizacyjny (programowanie). Zamiast człowieka piszącego instrukcje, model LLM sam generuje, testuje i wybiera najlepsze prompty do danego zadania.
 
 # 🔑 Kluczowe punkty
-- **Black-box optimization:** APE nie potrzebuje dostępu do wag modelu (działa z API GPT-4/Claude).
+- **Black-box optimization:** APE nie potrzebuje dostępu do wag modelu (działa z API [[GPT-4|GPT-4]]/Claude).
 - **Proces:** Generuj kandydatów -> Ewaluuj wyniki -> Wybierz najlepszy -> Mutuj (ulepszaj).
 - **Wyniki:** Często findet prompty lepsze od ludzkich (np. słynne "Let's work this out in a step by step way to be sure we have the right answer").
 

@@ -21,14 +21,14 @@ aliases:
 
 # 🎯 Definicja
 
-**Data Lake** to skalowalne, elastyczne repozytorium danych służące do przechowywania masowych ilości danych w oryginalnym, niesformatowanym (tzw. surowym) stanie — zarówno strukturalnych, półstrukturalnych, jak i niestrukturalnych. W odróżnieniu od klasycznych hurtowni danych (Data Warehouse), dane w Data Lake trafiają bez zdefiniowanego celu analitycznego, co umożliwia ich późniejsze przetwarzanie, transformację i analizę w różnych kontekstach biznesowych.
+**Data Lake** to skalowalne, elastyczne repozytorium danych służące do przechowywania masowych ilości danych w oryginalnym, niesformatowanym (tzw. surowym) stanie — zarówno strukturalnych, półstrukturalnych, jak i niestrukturalnych. W odróżnieniu od klasycznych hurtowni danych ([[Data Warehouse|Data Warehouse]]), dane w Data Lake trafiają bez zdefiniowanego celu analitycznego, co umożliwia ich późniejsze przetwarzanie, transformację i analizę w różnych kontekstach biznesowych.
 
 # 🔑 Kluczowe punkty
 
 - **Przechowuje dane w dowolnym formacie**: CSV, JSON, XML, obrazy, logi, dokumenty, pliki binarne — zarówno strukturalne, jak i niestrukturalne.
 - **Zasada "najpierw przechowuj, potem modeluj" (schema-on-read):** dane ładowane są bez wstępnej transformacji; transformacja następuje dopiero na etapie analizy.
 - **Zbudowane na systemach rozproszonych** — np. Hadoop HDFS, Amazon S3, Azure Data Lake Storage.
-- **Obsługuje różne cele**: analityka, przetwarzanie strumieniowe (streaming), uczenie maszynowe, analiza logów, integracja danych w czasie rzeczywistym.
+- **Obsługuje różne cele**: analityka, przetwarzanie strumieniowe (streaming), [[Uczenie Maszynowe|uczenie maszynowe]], analiza logów, [[Integracja Danych|integracja danych]] w czasie rzeczywistym.
 - **Niska cena przechowywania dużych wolumenów danych.**
 
 # 📚 Szczegółowe wyjaśnienie
@@ -46,22 +46,22 @@ aliases:
 
 ## Typowe komponenty Data Lake
 
-- **Storage layer** (np. Amazon S3, Azure Data Lake Storage Gen2, HDFS)
+- **[[Storage Layer|Storage layer]]** (np. Amazon S3, Azure Data Lake Storage Gen2, HDFS)
 - **Ingestion layer** (np. Kafka, Flume, Nifi)
-- **Catalog/Metadata layer** (np. Apache Hive, AWS Glue, DataHub)
-- **Processing layer** (np. Apache Spark, Flink, Presto, Athena)
-- **Access/Consumption layer** (np. Jupyter, SQL clients, BI Tools)
+- **Catalog/[[Metadata|Metadata]] layer** (np. [[Apache Hive|Apache Hive]], AWS Glue, DataHub)
+- **Processing layer** (np. [[Apache Spark|Apache Spark]], Flink, Presto, Athena)
+- **Access/Consumption layer** (np. Jupyter, [[SQL|SQL]] clients, BI Tools)
 
 ## Przykłady zastosowania
 
 - **Utrwalanie surowych danych aplikacyjnych i systemowych** do późniejszej analizy (np. logi ze stron internetowych)
-- **Integracja danych z wielu źródeł** (IoT, kliknięcia, media społecznościowe, CRM)
-- **Data Science i uczenie maszynowe** — Data Lake to elastyczne źródło danych do feature engineering
+- **[[Integracja Danych|Integracja danych]] z wielu źródeł** (IoT, kliknięcia, media społecznościowe, CRM)
+- **Data Science i [[Uczenie Maszynowe|uczenie maszynowe]]** — Data Lake to elastyczne źródło danych do feature engineering
 - **Audyt i compliance** — przechowywanie nieprzetworzonych danych pozwala na ich ponowne wykorzystanie bez utraty kontekstu
 
-## Data Lake vs Data Warehouse
+## Data Lake vs [[Data Warehouse|Data Warehouse]]
 
-|Cechy|Data Lake|Data Warehouse|
+|Cechy|Data Lake|[[Data Warehouse|Data Warehouse]]|
 |---|---|---|
 |Schemat|Schemat przy odczycie (schema-on-read)|Schemat przy zapisie (schema-on-write)|
 |Typ danych|Dowolne (strukturalne i nie)|Głównie strukturalne|
@@ -72,7 +72,7 @@ aliases:
 
 # 💡 Wskazówka praktyczna
 
-Data Lake jest często używane jako „warstwa brudna” (raw layer) w nowoczesnych platformach typu **Data Lakehouse** lub **Modern Data Stack**, w których dane są najpierw przechowywane w niestrukturalnej formie, a następnie przekształcane i ładowane do hurtowni danych lub poddawane analizie modelami ML.
+Data Lake jest często używane jako „warstwa brudna” (raw layer) w nowoczesnych platformach typu **[[Data Lakehouse|Data Lakehouse]]** lub **Modern Data Stack**, w których dane są najpierw przechowywane w niestrukturalnej formie, a następnie przekształcane i ładowane do hurtowni danych lub poddawane analizie modelami ML.
 
 # 📌 Źródła
 

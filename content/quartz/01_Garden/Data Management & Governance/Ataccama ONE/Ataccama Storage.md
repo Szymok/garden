@@ -15,7 +15,7 @@ aliases:
   - Katalog domowy Ataccama
 ---
 # 🎯 Definicja
-Zalecenia dotyczące alokacji przestrzeni dyskowej oraz struktury katalogów dla instalacji komponentów Ataccama ONE.
+Zalecenia dotyczące alokacji przestrzeni dyskowej oraz struktury katalogów dla instalacji komponentów [[Ataccama|Ataccama]] ONE.
 
 # 🔑 Kluczowe punkty
 - **Lokalizacja instalacji:** Domyślnie katalog `/opt` (ale konfigurowalne).
@@ -47,5 +47,5 @@ Rekomendacja partycjonowania:
 - **Authentication is required for downloading MMM basic content** (S3 keys required).
 
 Storage Requirements: FHS and Caution
-Third-party software deployed as part of the Ataccama ONE installation uses directories mandated by the Filesystem Hierarchy Standard (FHS), such as /var/lib/postgresql or /var/lib/opensearch.
+Third-party software deployed as part of the [[Ataccama|Ataccama]] ONE installation uses directories mandated by the Filesystem Hierarchy Standard (FHS), such as /var/lib/postgresql or /var/lib/opensearch.
 These directories must also have adequate free space.

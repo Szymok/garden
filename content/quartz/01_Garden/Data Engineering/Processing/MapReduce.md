@@ -25,7 +25,7 @@ aliases:
 
 # 🔑 Kluczowe punkty
 
-- MapReduce umożliwia **równoległe przetwarzanie danych** na setkach lub tysiącach węzłów.
+- MapReduce umożliwia **równoległe [[Przetwarzanie danych|przetwarzanie danych]]** na setkach lub tysiącach węzłów.
 - Składa się z dwóch funkcji: **Map** (operacje na danych wejściowych) i **Reduce** (agregacje wyników).
 - Został spopularyzowany przez Google i zaimplementowany m.in. w Hadoop jako silnik przetwarzania wsadowego.
 - Rewolucyjne podejście do **przetwarzania dużych zbiorów danych** z automatycznym rozproszeniem i tolerancją błędów.
@@ -76,13 +76,13 @@ Output:
 
 ## Nowoczesne alternatywy
 
-- **Apache Spark** – wykonuje przetwarzanie in-memory, szybsze niż MapReduce.
+- **[[Apache Spark|Apache Spark]]** – wykonuje przetwarzanie in-memory, szybsze niż MapReduce.
 - **Apache Flink / Beam** – obsługuje strumieniowanie i sesje czasowe w sposób naturalny.
 - **Databricks / Cloud native engines** – ułatwiają programowanie DAG zamiast sekwencji Map → Reduce.
 
 # 💡 Przykład zastosowania
 
-W firmie telekomunikacyjnej dane z logów połączeń telefonicznych były gromadzone w plikach HDFS. Zadania MapReduce używane były do agregacji minut rozmów przez regiony i godziny szczytu. Mimo że wydajne, z czasem architektura została zastąpiona Apache Spark w celu zmniejszenia czasu przetwarzania.
+W firmie telekomunikacyjnej dane z logów połączeń telefonicznych były gromadzone w plikach HDFS. Zadania MapReduce używane były do agregacji minut rozmów przez regiony i godziny szczytu. Mimo że wydajne, z czasem architektura została zastąpiona [[Apache Spark|Apache Spark]] w celu zmniejszenia czasu przetwarzania.
 
 ## 📌 Źródła
 
@@ -98,7 +98,7 @@ W firmie telekomunikacyjnej dane z logów połączeń telefonicznych były groma
 - Niezależne etapy → łatwo rozproszyć
 - Hadoop MR = poprzednik Spark → duży latency, używany historycznie
 - Typowe zastosowania: count, join, group, sum, deduplicate
-- Brak wsparcia dla graph queries / ML → delegowane do Spark MLlib, GraphX
+- Brak wsparcia dla graph [[Queries|queries]] / ML → delegowane do Spark MLlib, GraphX
 - Wciąż używane w niektórych pipelines offline/legacy
 
 ---

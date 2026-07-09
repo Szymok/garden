@@ -18,7 +18,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Snowflake** to cloudowa platforma danych (Data Cloud) działająca jako SaaS, oferująca hurtownię danych, data lake i możliwości udostępniania danych — na AWS, Azure i GCP. Wyróżnia ją rozdzielenie compute od storage i architektura multi-cluster.
+**Snowflake** to cloudowa platforma danych (Data Cloud) działająca jako [[SaaS|SaaS]], oferująca hurtownię danych, [[Data Lake|data lake]] i możliwości udostępniania danych — na AWS, Azure i GCP. Wyróżnia ją rozdzielenie compute od storage i architektura multi-cluster.
 
 # 🔑 Kluczowe punkty
 
@@ -52,7 +52,7 @@ aliases:
 └─────────────────────────────────┘
 ```
 
-## Kluczowe funkcje SQL
+## Kluczowe funkcje [[SQL|SQL]]
 
 ```sql
 -- Time Travel — dane sprzed 3 dni

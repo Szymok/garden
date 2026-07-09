@@ -23,7 +23,7 @@ Mechanizm parametryzacji automatyzacji Ansible, pozwalający na dostosowanie zac
 - **Zastosowanie:** Konfiguracja portów, ścieżek, haseł, wersji pakietów.
 
 # 📚 Szczegółowe wyjaśnienie
-W projektach takich jak instalator Ataccama ONE, `vars.yml` to centrum sterowania. To tutaj decydujesz:
+W projektach takich jak instalator [[Ataccama|Ataccama]] ONE, `vars.yml` to centrum sterowania. To tutaj decydujesz:
 - Jaka wersja Javy ma być użyta.
 - Gdzie leżą pliki licencji.
 - Jakie są dane dostępowe do bazy (choć te powinny być szyfrowane w Ansible Vault!).

@@ -17,7 +17,7 @@ aliases:
   - Perceptron
 ---
 # 🎯 Definicja
-**Sieci Neuronowe** to algorytmy inspirowane mózgiem. Składają się z warstw "neuronów" (prostych funkcji matematycznych). Każdy neuron bierze sygnały, waży je i przekazuje dalej.
+**[[Sieci neuronowe|Sieci Neuronowe]]** to algorytmy inspirowane mózgiem. Składają się z warstw "neuronów" (prostych funkcji matematycznych). Każdy [[Neuron|neuron]] bierze sygnały, waży je i przekazuje dalej.
 Razem potrafią uczyć się niesamowicie skomplikowanych rzeczy (rozpoznawanie twarzy, tłumaczenie języków).
 
 # 🔑 Kluczowe punkty
@@ -43,4 +43,4 @@ Nie musisz pisać reguł. Sieć sama "czuje", co jest spamem.
 - 3Blue1Brown - Neural Networks Series (YouTube).
 
 ## 👽 Brudnopis
-- To fundament dzisiejszej rewolucji AI. Wszystko co nowoczesne (GPT, Midjourney) to po prostu wielkie sieci neuronowe.
+- To fundament dzisiejszej rewolucji AI. Wszystko co nowoczesne (GPT, Midjourney) to po prostu wielkie [[Sieci neuronowe|sieci neuronowe]].

@@ -36,7 +36,7 @@ W kolejnej rundzie błąd wynosi już tylko 48 tys. zł.
 Powtarzamy milion razy.
 
 ## 📌 Źródła
-- "Calculus for Machine Learning".
+- "Calculus for [[Machine Learning|Machine Learning]]".
 
 ## 👽 Brudnopis
 - Problemy z gradientem:

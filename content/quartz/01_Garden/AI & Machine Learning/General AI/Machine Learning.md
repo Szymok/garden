@@ -40,4 +40,4 @@ Następnym razem sam zablokuje podobny mail.
 - Andrew Ng - Machine Learning Course (Coursera).
 
 ## 👽 Brudnopis
-- ML to podzbiór AI. [[Deep Learning]] (Sieci neuronowe) to podzbiór ML. [[Base LLM|LLM]] to podzbiór Deep Learningu.
+- ML to podzbiór AI. [[Deep Learning]] ([[Sieci neuronowe|Sieci neuronowe]]) to podzbiór ML. [[Base LLM|LLM]] to podzbiór Deep Learningu.

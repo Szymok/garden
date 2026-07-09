@@ -16,7 +16,7 @@ aliases:
   - pd.DataFrame
 ---
 # 🎯 Definicja
-**Pandas** to najpopularniejsza biblioteka Pythona do analizy danych ("Excel for Python"). Pozwala wczytywać pliki (CSV, Excel, SQL), przetwarzać je w tabelach (zwanych **DataFrame**) i zapisywać wyniki.
+**Pandas** to najpopularniejsza biblioteka Pythona do analizy danych ("Excel for Python"). Pozwala wczytywać pliki (CSV, Excel, [[SQL|SQL]]), przetwarzać je w tabelach (zwanych **DataFrame**) i zapisywać wyniki.
 
 # 🔑 Kluczowe punkty
 - **DataFrame:** Główny obiekt. To po prostu tabela w pamięci RAM komputera.
@@ -43,4 +43,4 @@ Cztery linijki kodu zastępują godzinę klikania w Excelu.
 - "Python for Data Analysis" (Wes McKinney - twórca Pandas).
 
 ## 👽 Brudnopis
-- Uwaga: Pandas jest "memory hungry". Jeśli masz plik 10GB, Pandas prawdopodobnie "wywali" Twój laptop. Wtedy użyj `chunksize` albo przesiądź się na DuckDB/Polars.
+- Uwaga: Pandas jest "memory hungry". Jeśli masz plik 10GB, Pandas prawdopodobnie "wywali" Twój laptop. Wtedy użyj `chunksize` albo przesiądź się na [[DuckDB|DuckDB]]/Polars.

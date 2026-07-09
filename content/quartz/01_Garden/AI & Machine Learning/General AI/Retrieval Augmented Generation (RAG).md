@@ -22,7 +22,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Retrieval Augmented Generation ([[RAG]])** to architektura łącząca dużych modeli językowych ([[Base LLM|LLM]]) z mechanizmem wyszukiwania zewnętrznych informacji w celu generowania bardziej precyzyjnych, aktualnych i spójnych odpowiedzi. Zamiast polegać tylko na statycznej wiedzy zakodowanej w parametrach modelu, [[RAG]] dynamizuje generację poprzez pobranie kontekstu z zewnętrznego źródła wiedzy (np. wektorowej bazy danych, dokumentacji, encyklopedii, baz firmowych) i dołączenie go do promptu wejściowego.
+**Retrieval Augmented Generation ([[RAG]])** to architektura łącząca dużych modeli językowych ([[Base LLM|LLM]]) z mechanizmem wyszukiwania zewnętrznych informacji w celu generowania bardziej precyzyjnych, aktualnych i spójnych odpowiedzi. Zamiast polegać tylko na statycznej wiedzy zakodowanej w parametrach modelu, [[RAG]] dynamizuje generację poprzez pobranie kontekstu z zewnętrznego źródła wiedzy (np. wektorowej [[Bazy danych|bazy danych]], dokumentacji, encyklopedii, baz firmowych) i dołączenie go do promptu wejściowego.
 
 # 🔑 Kluczowe punkty
 
@@ -38,7 +38,7 @@ aliases:
 
 1. **Wejście użytkownika:** użytkownik zadaje pytanie (prompt).
 2. **Extractor → Retriever:** pytanie jest przekształcane ([[Embedding]]) i używane do przeszukiwania bazy wektorowej lub innego retrievera (np. Elastic, BM25).
-3. **Pobranie kontekstu:** pobierane są najbardziej istotne fragmenty dokumentów (top-k), np. z PDF, bazy Notion, Confluence, SQL itp.
+3. **Pobranie kontekstu:** pobierane są najbardziej istotne fragmenty dokumentów (top-k), np. z PDF, bazy Notion, Confluence, [[SQL|SQL]] itp.
 4. **Kontekst + Pytanie → [[Base LLM|LLM]]:** zapytanie jest rozszerzane o dołączony kontekst, a następnie przekazywane do modelu [[Base LLM|LLM]].
 5. **[[Base LLM|LLM]] generuje odpowiedź** z wykorzystaniem zewnętrznych danych bez konieczności trenowania na nowo.
 
@@ -72,13 +72,13 @@ aliases:
 |Obszar|Przykład|
 |---|---|
 |Wsparcie klienta|Chatbot z dostępem do dokumentacji, baz wiedzy, polityk firmy|
-|Research platform|Odpowiedzi RAG na zapytania naukowe z bazy publikacji (PubMed, ArXiv)|
-|BI agent|Agent pytany o dane finansowe z arkuszy i SQL|
+|Research platform|Odpowiedzi [[RAG|RAG]] na zapytania naukowe z bazy publikacji (PubMed, ArXiv)|
+|BI agent|Agent pytany o dane finansowe z arkuszy i [[SQL|SQL]]|
 |QA system|Dodawanie kontekstu z własnych danych do ChatGPT lub Claude AI|
 
 # 💡 Przykład zastosowania
 
-Firma wdraża chatbota do obsługi zapytań w wewnętrznym środowisku bankowym. Dokumentacja regulacyjna, zapytania SQL, raporty roczne i wiki produktowa są wczytywane i przekształcane w embeddingi z SentenceTransformers, zapisane w Pinecone ([[Baza wektorowa|vector DB]]).  
+Firma wdraża chatbota do obsługi zapytań w wewnętrznym środowisku bankowym. Dokumentacja regulacyjna, zapytania [[SQL|SQL]], raporty roczne i wiki produktowa są wczytywane i przekształcane w embeddingi z SentenceTransformers, zapisane w Pinecone ([[Baza wektorowa|vector DB]]).  
 Zapytanie użytkownika „Jakie są limity AML dla rynku niemieckiego?” jest zamieniane na [[Embedding]] i porównywane z dokumentami. Top 3 odpowiedzi z dokumentacji dostarczane są do prompta, [[Base LLM|LLM]] (OpenAI [[GPT-4]] turbo) generuje odpowiedź z odniesieniem do źródła i daty dokumentu.
 
 ## 📌 Źródła

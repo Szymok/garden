@@ -20,7 +20,7 @@ aliases:
 # 🔑 Kluczowe punkty
 - **Modularność:** Raz napisany prompt ("Tłumacz na polski") używasz w wielu miejscach.
 - **Zmienne:** `{input_text}`, `{tone}`, `{language}` wstawiane dynamicznie.
-- **Biblioteki:** LangChain, Semantic Kernel – to frameworki zbudowane wokół tej idei.
+- **Biblioteki:** [[Langchain|LangChain]], Semantic Kernel – to frameworki zbudowane wokół tej idei.
 
 # 📚 Szczegółowe wyjaśnienie
 Zamiast:
@@ -40,7 +40,7 @@ Dla laptopa: `GenerateDescription(["16GB RAM", "i7"], "Elektronika")`.
 Prompt pod spodem "instruuje" model, jak zachować się dla danej kategorii, ale programista widzi tylko czystą funkcję.
 
 ## 📌 Źródła
-- LangChain Documentation.
+- [[Langchain|LangChain]] Documentation.
 
 ## 👽 Brudnopis
 - Podejście to jest kluczowe w **LLM Ops**.

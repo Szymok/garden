@@ -21,7 +21,7 @@ aliases:
 # 🔑 Główne Zastosowania
 1.  **Streszczanie (Summarization):** "Zrób TL;DR tego raportu na 200 stron".
 2.  **Ekstrakcja Informacji:** "Wyciągnij z tego PDF-a wszystkie numery faktur i daty płatności do JSON-a".
-3.  **Generowanie Kodu:** "Napisz test unitowy do tej funkcji".
+3.  **[[Generowanie kodu|Generowanie Kodu]]:** "Napisz test unitowy do tej funkcji".
 4.  **Role-Playing / Chatboty:** "Działaj jako wirtualny asystent klienta w banku".
 5.  **Transformacja Tekstu:** "Zmień ton tego agresywnego maila na profesjonalny i uprzejmy".
 

@@ -28,12 +28,12 @@ aliases:
 DataOps walczy z "Data Bureaucracy" i "Fear of Change".
 Tradycyjnie: Zmiana kolumny w hurtowni zajmuje 3 tygodnie, bo "strach czegokolwiek dotknąć".
 DataOps: Zmieniasz kod, puszczasz testy automatyczne na branchu deweloperskim, jeśli zielone -> Deploy na produkcję w 15 minut.
-To połączenie Technologii (Docker, Airflow, dbt) i Kultury (Agile).
+To połączenie Technologii ([[Docker|Docker]], Airflow, [[dbt|dbt]]) i Kultury (Agile).
 
 # 💡 Przykład zastosowania
 Zespół buduje Dashboard Sprzedaży.
 Zamiast wysyłać pliki e-mailem, mają repozytorium kodu.
-Każda zmiana w logice SQL (np. w dbt) jest automatycznie testowana (czy nie dubluje wierszy?).
+Każda zmiana w logice [[SQL|SQL]] (np. w [[dbt|dbt]]) jest automatycznie testowana (czy nie dubluje wierszy?).
 Jeśli testy przejdą, kod jest wdrażany na środowisko produkcyjne, a dokumentacja odświeża się sama.
 Analiza błędów jest prosta, bo mamy pełną historię zmian (Git) i Monitoring (Observability).
 
@@ -42,5 +42,5 @@ Analiza błędów jest prosta, bo mamy pełną historię zmian (Git) i Monitorin
 - "DataOps: The Upstream of Analytics".
 
 ## 👽 Brudnopis
-- Kluczowe narzędzia: Git, Docker, Jenkins/GitLab CI, dbt, Airflow.
+- Kluczowe narzędzia: Git, [[Docker|Docker]], Jenkins/GitLab CI, [[dbt|dbt]], Airflow.
 - DataOps to fundament skutecznego [[Data Mesh]].

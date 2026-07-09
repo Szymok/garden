@@ -17,7 +17,7 @@ aliases:
   - Golden Record
 ---
 # 🎯 Definicja
-**Master Data Management (MDM)** to "serce" ekosystemu danych. To procesy i technologie, które gwarantują, że w całej firmie istnieje **tylko jedna, prawdziwa wersja** informacji o Klientach, Produktach czy Pracownikach.
+**Master [[Data Management|Data Management]] (MDM)** to "serce" ekosystemu danych. To procesy i technologie, które gwarantują, że w całej firmie istnieje **tylko jedna, prawdziwa wersja** informacji o Klientach, Produktach czy Pracownikach.
 
 # 🔑 Kluczowe punkty
 - **Master Data:** Dane rzadko zmienne, kluczowe dla biznesu (np. Jan Kowalski, PESEL: 123).
@@ -37,7 +37,7 @@ Bez MDM: Dla banku jesteś dwoma różnymi osobami. Dzwonią do Ciebie dwa razy 
 Z MDM: Bank widzi "Jana Kowalskiego" jako jedną osobę z dwoma produktami (Widok 360 stopni). Oferta jest dopasowana, a Ty jesteś mniej zirytowany.
 
 ## 📌 Źródła
-- "Master Data Management and Data Governance" (Alex Berson).
+- "Master [[Data Management|Data Management]] and [[Data Governance|Data Governance]]" (Alex Berson).
 
 ## 👽 Brudnopis
 - MDM to często najdroższy i najtrudniejszy projekt w firmie, bo wymaga współpracy politycznej między działami ("Kto jest właścicielem danych klienta? Sprzedaż czy Marketing?").

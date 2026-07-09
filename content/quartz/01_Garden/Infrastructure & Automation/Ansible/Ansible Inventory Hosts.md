@@ -23,10 +23,10 @@ Plik inwentarza (`hosts.yml` lub `hosts.ini`) definiuje strukturę infrastruktur
 - **Hierarchia:** Jeden serwer może należeć do wielu grup.
 
 # 📚 Szczegółowe wyjaśnienie
-W kontekście instalacji Ataccama ONE, plik `hosts.yml` jest mapą drogową dla instalatora. Określa, gdzie zainstalować który moduł.
-Częste grupy w instalacjach Ataccama:
+W kontekście instalacji [[Ataccama|Ataccama]] ONE, plik `hosts.yml` jest mapą drogową dla instalatora. Określa, gdzie zainstalować który moduł.
+Częste grupy w instalacjach [[Ataccama|Ataccama]]:
 - `one_app`: Główny serwer aplikacji (Java).
-- `one_database`: Serwer bazy danych (Postgres).
+- `one_database`: Serwer [[Bazy danych|bazy danych]] (Postgres).
 - `processing`: Silniki przetwarzania (DPE).
 - `monitoring_server`: Prometheus/Grafana.
 

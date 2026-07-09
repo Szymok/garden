@@ -15,12 +15,12 @@ aliases:
   - Pliki Parquet
 ---
 # 🎯 Definicja
-**Apache Parquet** to otwarty, kolumnowy format zapisu danych, zoptymalizowany pod kątem wydajności analityki (OLAP) i kompresji. Jest standardem przechowywania danych w nowoczesnych Data Lake'ach.
+**Apache Parquet** to otwarty, kolumnowy format zapisu danych, zoptymalizowany pod kątem wydajności analityki (OLAP) i kompresji. Jest standardem przechowywania danych w nowoczesnych [[Data Lake|Data Lake]]'ach.
 
 # 🔑 Kluczowe punkty
 - **Kolumnowość:** Wartości z tej samej kolumny są zapisywane obok siebie. To pozwala na świetną kompresję (bo dane są podobne, np. same daty) i szybkie sczytywanie tylko potrzebnych kolumn (Projection Pushdown).
 - **Embedded Schema:** Każdy plik zawiera w stopce swoje metadane (nazwy kolumn, typy danych, statystyki min/max).
-- **Agnostyczny:** Wspierany przez niemal każde narzędzie (Spark, Pandas, Hive, Impala, AWS Athena, Excel).
+- **Agnostyczny:** Wspierany przez niemal każde narzędzie (Spark, [[Pandas|Pandas]], Hive, Impala, AWS Athena, Excel).
 
 # 📚 Szczegółowe wyjaśnienie
 Dlaczego CSV jest zły dla Big Data? Bo żeby policzyć średnią wieku z pliku CSV 1TB, musisz przeczytać całe 1TB tekstu, parsować przecinki i wyciągać kolumnę "Wiek".

@@ -19,8 +19,8 @@ aliases:
 
 # 🔑 Kluczowe punkty
 - **Po co?** Bezpieczeństwo (maskowanie PESEL/Kart) i zgodność techniczna (np. JSON jest zepsuty i wywali Load).
-- **Gdzie?** Tweak dzieje się "w locie" (in-memory) na serwerze ekstrakcji (np. Airbyte worker).
-- **Co dalej?** Po załadowaniu następuje właściwa, ciężka transformacja "T" (SQL/dbt).
+- **Gdzie?** Tweak dzieje się "w locie" (in-memory) na serwerze ekstrakcji (np. [[Airbyte|Airbyte]] worker).
+- **Co dalej?** Po załadowaniu następuje właściwa, ciężka transformacja "T" ([[SQL|SQL]]/[[dbt|dbt]]).
 
 # 📚 Szczegółowe wyjaśnienie
 Czyste ELT ("Wgraj wszystko jak leci") bywa ryzykowne.
@@ -29,7 +29,7 @@ Dlatego robimy **EtLT**:
 1.  **Extract:** Pobierz dane.
 2.  **tweak:** Zahaszuj hasła, usuń nulle z kluczy głównych.
 3.  **Load:** Wgraj do BigQuery.
-4.  **Transform:** Policz KPI.
+4.  **Transform:** Policz [[KPI|KPI]].
 
 # 💡 Przykład zastosowania
 Import logów z aplikacji.
@@ -37,7 +37,7 @@ Logi zawierają tokeny sesji użytkowników (ryzyko!).
 Skrypt Pythona pobiera logi (E), usuwa pole `session_token` (t), i wgrywa do S3 (L). Następnie Spark przetwarza to na raporty (T).
 
 ## 📌 Źródła
-- Airbyte Documentation (Normalization concepts).
+- [[Airbyte|Airbyte]] Documentation (Normalization concepts).
 
 ## 👽 Brudnopis
 - "t" powinno być lekkie. Jeśli "t" zaczyna robić joiny i agregacje, wracasz do starego [[ETL]].

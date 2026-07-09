@@ -21,7 +21,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Transakcje ACID** to zbiór właściwości, które gwarantują poprawność i niezawodność operacji na danych w systemach zarządzania bazami danych (DBMS) oraz nowoczesnych formatach tabel w jeziorach danych (Data Lake Table Formats). Skrót **ACID** oznacza:
+**Transakcje ACID** to zbiór właściwości, które gwarantują poprawność i niezawodność operacji na danych w systemach zarządzania bazami danych (DBMS) oraz nowoczesnych formatach tabel w jeziorach danych ([[Data Lake|Data Lake]] Table Formats). Skrót **ACID** oznacza:
 
 - **A — Atomicity (atomowość)**
 - **C — Consistency (spójność)**
@@ -33,7 +33,7 @@ Te właściwości zapewniają, że każda operacja na danych zostanie przeprowad
 # 🔑 Kluczowe punkty
 
 - Transakcje ACID to warunek konieczny dla **bezpiecznego współdzielenia danych** i gwarantowanej historii zmian.
-- Modele ACID są dziś wspierane nie tylko przez relacyjne bazy danych, ale też nowoczesne **formaty tabel w Data Lake**, takie jak:
+- Modele ACID są dziś wspierane nie tylko przez relacyjne [[Bazy danych|bazy danych]], ale też nowoczesne **formaty tabel w [[Data Lake|Data Lake]]**, takie jak:
     - **[[Delta Lake]]**
     - **[[Apache Iceberg]]**
     - **[[Apache Hudi]]**
@@ -57,7 +57,7 @@ System przechodzi z jednego **poprawnego stanu** w inny poprawny stan. Po zakoń
 
 Transakcje wykonywane równolegle są **odseparowane** i nie powinny na siebie wpływać (np. poprzez "brudny odczyt").
 
-Rodzaje izolacji (w tradycyjnym SQL):
+Rodzaje izolacji (w tradycyjnym [[SQL|SQL]]):
 
 - READ UNCOMMITTED
 - READ COMMITTED
@@ -74,7 +74,7 @@ Po zatwierdzeniu (commit) zmiany są **utrwalone** – pozostają zachowane nawe
 
 | Format             | ACID | Implementacja                                                              |
 | ------------------ | ---- | -------------------------------------------------------------------------- |
-| **[[Delta Lake]]** | ✅    | 'Dziennik transakcji w Data Lake\|_delta_log/`, transakcje JSON, snapshoty |
+| **[[Delta Lake]]** | ✅    | '[[Dziennik transakcji w [[Data Lake|Data Lake]]|Dziennik transakcji w [[Data Lake|Data Lake]]]]\|_delta_log/`, transakcje JSON, snapshoty |
 | **[[Apache Hudi]]**    | ✅    | `commit logs`, `.hoodie/` metadane i timeline                              |
 | **[[Apache Iceberg]]** | ✅    | `metadata.json`, snapshoty, manifesty, atomic commits                      |
 
@@ -100,9 +100,9 @@ Równolegle analityk może wykonać zapytanie używając określonej wersji dany
 ## 👽 Brudnopis
 
 - ACID = minimum współbieżności + gwarancje odczytów
-- Delta: JSON logs, [[Apache Iceberg|Iceberg]]: metadata.json + manifest, [[Apache Hudi|Hudi]]: timeline z commitem
+- Delta: JSON logs, [[Apache Iceberg|Iceberg]]: [[Metadata|metadata]].json + manifest, [[Apache Hudi|Hudi]]: timeline z commitem
 - snapshot = izolacja, redo-log = trwałość
-- ACID ≠ tylko dla OLTP — dziś też OLAP i batch / micro-batch
+- ACID ≠ tylko dla [[OLTP|OLTP]] — dziś też OLAP i batch / micro-batch
 - Wsparcie dla rollback, merge, conflict resolution
 
 ---

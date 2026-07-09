@@ -16,7 +16,7 @@ aliases:
   - Wyszukiwanie Semantyczne
 ---
 # 🎯 Definicja
-**Vector Database** to baza danych, która nie przechowuje "słów" (jak SQL `SELECT * FROM text WHERE content LIKE '%kot%'`), ale **znaczenia** (liczby, wektory).
+**Vector Database** to baza danych, która nie przechowuje "słów" (jak [[SQL|SQL]] `SELECT * FROM text WHERE content LIKE '%kot%'`), ale **znaczenia** (liczby, wektory).
 Dzięki temu, gdy szukasz "mały tygrys", baza znajdzie "kot", mimo że nie ma tam wspólnych liter. Bo semantycznie leżą blisko siebie.
 
 # 🔑 Kluczowe punkty
@@ -26,7 +26,7 @@ Dzięki temu, gdy szukasz "mały tygrys", baza znajdzie "kot", mimo że nie ma t
 
 # 📚 Szczegółowe wyjaśnienie
 Popularne bazy:
-- **Pinecone:** SaaS, łatwy w użyciu, drogi.
+- **Pinecone:** [[SaaS|SaaS]], łatwy w użyciu, drogi.
 - **Weaviate:** Open-source, hybrydowy (keyword + vector).
 - **Qdrant:** Szybki, Rust, popularny w on-premise.
 - **Milvus:** Do ogromnych skal (miliardy wektorów).
@@ -35,8 +35,8 @@ Popularne bazy:
 # 💡 Przykład zastosowania
 Wyszukiwarka w sklepie meblowym.
 Klient wpisuje: "Coś do siedzenia w salonie, żeby było miękko".
-Zwykła baza (SQL): 0 wyników (brak słowa "siedzenia" w opisach foteli).
-Baza Wektorowa: Znajduje "Fotel welurowy", "Sofa narożna", "Pufa". Bo "siedzenie" i "miękko" wektorowo pasuje do opisów tych mebli.
+Zwykła baza ([[SQL|SQL]]): 0 wyników (brak słowa "siedzenia" w opisach foteli).
+[[Baza wektorowa|Baza Wektorowa]]: Znajduje "Fotel welurowy", "Sofa narożna", "Pufa". Bo "siedzenie" i "miękko" wektorowo pasuje do opisów tych mebli.
 
 ## 📌 Źródła
 - "Vector Databases for Beginners" (Pinecone Blog).

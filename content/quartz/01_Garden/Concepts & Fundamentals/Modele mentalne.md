@@ -39,4 +39,4 @@ Dzięki temu modelowi projektuje auto-scaling, zamiast sztywnej infrastruktury.
 - "Almanack of Naval Ravikant".
 
 ## 👽 Brudnopis
-- "Wiedza to fakty. Mądrość to modele, które łączą fakty."
+- "Wiedza to [[Fakty|fakty]]. Mądrość to modele, które łączą [[Fakty|fakty]]."

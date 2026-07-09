@@ -22,7 +22,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Sieci neuronowe** (ang. Artificial Neural Networks, ANN) to klasa modeli w sztucznej inteligencji inspirowana strukturą i działaniem ludzkiego mózgu. Składają się z warstw połączonych ze sobą sztucznych "neuronów", które przekazują i przekształcają informacje, ucząc się odwzorowywać złożone relacje w danych na podstawie przykładów treningowych.
+**Sieci neuronowe** (ang. Artificial [[Neural Networks|Neural Networks]], ANN) to klasa modeli w sztucznej inteligencji inspirowana strukturą i działaniem ludzkiego mózgu. Składają się z warstw połączonych ze sobą sztucznych "neuronów", które przekazują i przekształcają informacje, ucząc się odwzorowywać złożone relacje w danych na podstawie przykładów treningowych.
 
 # 🔑 Kluczowe punkty
 
@@ -53,8 +53,8 @@ Sieć neuronowa to graficzny model funkcji, gdzie dane są przetwarzane przez ko
 ## Typy sieci neuronowych
 
 - **MLP (Multi-Layer Perceptron)** – klasyczna struktura, używana w zadaniach klasyfikacyjnych i regresyjnych.
-- **CNN (Convolutional Neural Networks)** – sieci do przetwarzania danych o strukturze siatki, np. obrazów.
-- **RNN (Recurrent Neural Networks)** – sieci do sekwencji, np. tekstów, sygnałów czasowych.
+- **CNN (Convolutional [[Neural Networks|Neural Networks]])** – sieci do przetwarzania danych o strukturze siatki, np. obrazów.
+- **RNN (Recurrent [[Neural Networks|Neural Networks]])** – sieci do sekwencji, np. tekstów, sygnałów czasowych.
 - **LSTM/GRU** – warianty RNN, lepiej radzące sobie z zależnościami długoterminowymi.
 - **Transformery** – nowoczesna architektura używana m.in. w GPT, BERT – działa równolegle i skutecznie przetwarza długie sekwencje.
 

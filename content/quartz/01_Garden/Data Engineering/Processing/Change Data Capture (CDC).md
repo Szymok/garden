@@ -97,11 +97,11 @@ ALTER TABLE orders REPLICA IDENTITY FULL;
 
 ## CDC w [[Airbyte]]
 
-Airbyte obsługuje CDC jako tryb synchronizacji — bez konieczności manualnej konfiguracji Debezium. Dostępne dla PostgreSQL, MySQL, SQL Server.
+[[Airbyte|Airbyte]] obsługuje CDC jako tryb synchronizacji — bez konieczności manualnej konfiguracji Debezium. Dostępne dla PostgreSQL, MySQL, [[SQL|SQL]] Server.
 
 # 💡 Przykład zastosowania
 
-**Realtime Data Warehouse**: tabela `customers` w PostgreSQL produkcyjnym ma 50M rekordów — full refresh trwałby 6 godzin. CDC przez Debezium → Kafka → Delta Lake przechwytuje tylko zmienione rekordy. Każda aktualizacja adresu klienta trafia do hurtowni w ciągu 10 sekund.
+**Realtime [[Data Warehouse|Data Warehouse]]**: tabela `customers` w PostgreSQL produkcyjnym ma 50M rekordów — full refresh trwałby 6 godzin. CDC przez Debezium → Kafka → [[Delta Lake|Delta Lake]] przechwytuje tylko zmienione rekordy. Każda aktualizacja adresu klienta trafia do hurtowni w ciągu 10 sekund.
 
 # 📌 Źródła
 

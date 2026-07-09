@@ -21,7 +21,7 @@ aliases:
 # 🔑 Kluczowe punkty
 - **Złota zasada:** Zawsze staraj się przechowywać dane na **najniższym możliwym poziomie granulacji** (np. pojedyncza transakcja).
 - **Agregacja:** Jeśli masz niską granulację (transakcje), zawsze możesz je zsumować do miesiąca. Jeśli masz wysoką (miesiąc), nigdy nie odzyskasz danych o poszczególnych dniach.
-- **Wymiary:** Wymiary muszą pasować do granulacji. (Nie możesz użyć wymiaru "Godzina", jeśli ziarnem jest "Dzień").
+- **[[Wymiary|Wymiary]]:** [[Wymiary|Wymiary]] muszą pasować do granulacji. (Nie możesz użyć wymiaru "Godzina", jeśli ziarnem jest "Dzień").
 
 # 📚 Szczegółowe wyjaśnienie
 Błąd początkującego: "Zróbmy tabelę sprzedaży".
@@ -36,8 +36,8 @@ Tabela `F_Sprzedaz`:
 Wersja A pozwala odpowiedzieć na pytanie: "Ile sztuk produktu X sprzedano?". Wersja B tylko: "Ile zarobił sklep?".
 
 ## 📌 Źródła
-- "The Data Warehouse Toolkit" - Ralph Kimball.
+- "The [[Data Warehouse|Data Warehouse]] Toolkit" - Ralph Kimball.
 
 ## 👽 Brudnopis
-- Granulacja determinuje rozmiar bazy danych.
+- Granulacja determinuje rozmiar [[Bazy danych|bazy danych]].
 - Często stosuje się schemat hybrydowy: Tabela szczegółowa (Atomic) + Tabele agregatów (Aggregates) dla szybkości raportowania.

@@ -1,15 +1,15 @@
 # Extracting Audit API
 
 🎯 **Definicja**
-**Audit API** to dedykowany interfejs GraphQL w module Audytu (Audit module) Ataccama ONE. Służy do śledzenia i pobierania historii wszystkich działań podejmowanych przez użytkowników w systemie (odczyty, edycje, usunięcia) oraz prób nieautoryzowanego dostępu w celach bezpieczeństwa i zgodności z regulacjami (compliance).
+**Audit API** to dedykowany interfejs GraphQL w module Audytu (Audit module) [[Ataccama|Ataccama]] ONE. Służy do śledzenia i pobierania historii wszystkich działań podejmowanych przez użytkowników w systemie (odczyty, edycje, usunięcia) oraz prób nieautoryzowanego dostępu w celach bezpieczeństwa i zgodności z regulacjami (compliance).
 
 ---
 
 🔑 **Kluczowe punkty**
-- Działa na osobnym porcie (domyślnie **8071**) i korzysta z oddzielnej bazy danych PostgreSQL (nie wpływa na wydajność głównego repozytorium metadanych).
+- Działa na osobnym porcie (domyślnie **8071**) i korzysta z oddzielnej [[Bazy danych|bazy danych]] PostgreSQL (nie wpływa na wydajność głównego repozytorium metadanych).
 - Rejestruje dwa typy rekordów: **Operacje** (kto i co zrobił) oraz **Zasoby** (do jakich obiektów uzyskano dostęp).
 - Powiązanie operacji z zasobami odbywa się za pomocą klucza **`correlationId`**.
-- Uwierzytelnianie dzieli wspólny realm Keycloak; użytkownik wywołujący to API musi posiadać rolę `AUDIT_admin` lub `AUDIT_user` (patrz: [[Endpoints and HTTP Headers|Uwierzytelnianie]]).
+- Uwierzytelnianie dzieli wspólny realm [[Keycloak|Keycloak]]; użytkownik wywołujący to API musi posiadać rolę `AUDIT_admin` lub `AUDIT_user` (patrz: [[Endpoints and HTTP Headers|Uwierzytelnianie]]).
 - Zapytania do Audit API (patrz: [[One API Queries]]) powinny zawsze zawierać filtry czasowe (czas uniksowy w milisekundach), aby uniknąć pełnego skanowania tabeli.
 
 ---
@@ -56,7 +56,7 @@ Aby włączyć audyt na innych obiektach, należy dodać cechę `audit:auditEnab
 | **correlationId** | String | Klucz łączący tę operację z powiązanymi rekordami zasobów (Asset) |
 | **time** | Long | Czas w milisekundach od epoki Unix (01/01/1970) |
 | **userName** | String | Nazwa użytkownika, który wywołał akcję |
-| **userId** | String | Unikalny identyfikator użytkownika z Keycloak |
+| **userId** | String | Unikalny identyfikator użytkownika z [[Keycloak|Keycloak]] |
 | **violation** | Boolean | `true`, jeśli akcja została odrzucona przez brak uprawnień |
 
 ---
@@ -170,10 +170,10 @@ graph TD
 
 ---
 
-### Pobieranie logów z poziomu ONE Desktop
-W celu cyklicznego pobierania logów do zewnętrznych celów analitycznych można użyć kroku **JSON Call** w ONE Desktop (zobacz: [[Desktop JSON Call Step General Configuration]]):
+### Pobieranie logów z poziomu [[ONE Desktop|ONE Desktop]]
+W celu cyklicznego pobierania logów do zewnętrznych celów analitycznych można użyć kroku **JSON Call** w [[ONE Desktop|ONE Desktop]] (zobacz: [[Desktop JSON Call Step General Configuration]]):
 1. **URL:** Skieruj krok na port audytu: `http://host:8071/graphql` (nie na port główny 8080).
-2. **Uprawnienia:** Upewnij się, że użytkownik ma rolę `AUDIT_admin` lub `AUDIT_user` w Keycloak.
+2. **Uprawnienia:** Upewnij się, że użytkownik ma rolę `AUDIT_admin` lub `AUDIT_user` w [[Keycloak|Keycloak]].
 3. **Szablon Wejściowy (Input Template):** Parametryzuj zapytanie za pomocą dynamicznych zmiennych w formacie `${zmienna}`:
    ```json
    {
@@ -185,5 +185,5 @@ W celu cyklicznego pobierania logów do zewnętrznych celów analitycznych możn
 ---
 
 📌 **Źródła**
-- Ataccama ONE Security and Auditing Guide
-- ONE Desktop Integration plans repository
+- [[Ataccama|Ataccama]] ONE Security and Auditing Guide
+- [[ONE Desktop|ONE Desktop]] Integration plans repository

@@ -21,7 +21,7 @@ Polegasz na jego ogólnej wiedzy ze świata.
 
 # 🔑 Kluczowe punkty
 - **Najprostsza technika:** Po prostu pytasz.
-- **Wymaga Instruction Tuning:** Działa dobrze na modelach trenowanych do wykonywania poleceń (jak GPT-4, Claude), słabo na starych modelach (jak GPT-3 Base).
+- **Wymaga Instruction Tuning:** Działa dobrze na modelach trenowanych do wykonywania poleceń (jak [[GPT-4|GPT-4]], Claude), słabo na starych modelach (jak GPT-3 Base).
 - **Ograniczenia:** Jeśli zadanie jest nietypowe ("Sformatuj to w JSON w specyficzny sposób X"), Zero-Shot często zawodzi. Wtedy użyj [[Few-Shot Prompting]].
 
 # 📚 Szczegółowe wyjaśnienie
@@ -38,7 +38,7 @@ Few-Shot (gdyby Zero-Shot zawiódł):
 `User: "Dobre -> Pozytywny. Złe -> Negatywny. Ten film był okropny -> ?"`
 
 ## 📌 Źródła
-- Prompt Engineering Guide.
+- [[Prompt Engineering Guide|Prompt Engineering Guide]].
 
 ## 👽 Brudnopis
 - To domyślny sposób, w jaki ludzie rozmawiają z ChatGPT. Dopiero gdy model nie rozumie, dodajemy przykłady (Few-Shot) lub instrukcje krok-po-kroku (Chain-of-Thought).

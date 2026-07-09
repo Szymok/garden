@@ -16,7 +16,7 @@ aliases:
   - Metadata Exchange
 ---
 # 🎯 Definicja
-**Metadata Sync** to proces zapewniania spójności między różnymi systemami zarządzania danymi. Jeśli w bazie danych pojawi się nowa tabela, katalog danych powinien o tym wiedzieć. Jeśli analityk doda opis w katalogu, narzędzie BI powinno go wyświetlić.
+**[[Metadata|Metadata]] Sync** to proces zapewniania spójności między różnymi systemami zarządzania danymi. Jeśli w bazie danych pojawi się nowa tabela, [[Katalog Danych|katalog danych]] powinien o tym wiedzieć. Jeśli analityk doda opis w katalogu, narzędzie BI powinno go wyświetlić.
 
 # 🔑 Kluczowe punkty
 - **Kierunek:** Jednokierunkowy (Source -> Catalog) lub Dwukierunkowy (Catalog <-> BI Tool).
@@ -25,15 +25,15 @@ aliases:
 
 # 📚 Szczegółowe wyjaśnienie
 W nowoczesnej firmie masz "Archipelag Narzędzi":
-- Snowflake (Baza)
+- [[Snowflake|Snowflake]] (Baza)
 - Tableau (Raporty)
-- Ataccama/Collibra (Katalog)
+- [[Ataccama|Ataccama]]/Collibra (Katalog)
 - Jira (Zadania)
-Bez synchronizacji, w każdym z tych systemów definicja "Klienta" może być inna. Metadata Sync to "mosty" łączące ten archipelag. Zazwyczaj "Katalog Danych" pełni rolę centralnego węzła (Huba), który zasysa metadane techniczne zewsząd i udostępnia definicje biznesowe z powrotem.
+Bez synchronizacji, w każdym z tych systemów definicja "Klienta" może być inna. [[Metadata|Metadata]] Sync to "mosty" łączące ten archipelag. Zazwyczaj "[[Katalog Danych|Katalog Danych]]" pełni rolę centralnego węzła (Huba), który zasysa metadane techniczne zewsząd i udostępnia definicje biznesowe z powrotem.
 
 # 💡 Przykład zastosowania
 Analityk tworzy nowy raport w Tableau.
-Automat (Metadata Sync) w nocy:
+Automat ([[Metadata|Metadata]] Sync) w nocy:
 1. Skanuje serwer Tableau.
 2. Wykrywa nowy raport.
 3. Tworzy dla niego wpis w Katalogu Danych.
@@ -41,7 +41,7 @@ Automat (Metadata Sync) w nocy:
 Rano Data Steward wchodzi do Katalogu i widzi, że nowa tabela jest już używana w raporcie.
 
 ## 📌 Źródła
-- "Metadata Management for Dummies".
+- "[[Metadata|Metadata]] Management for Dummies".
 
 ## 👽 Brudnopis
-- Największym wrogiem synchronizacji jest **zmiana API** u dostawców (np. nowa wersja Snowflake zmienia nazwy kolumn systemowych).
+- Największym wrogiem synchronizacji jest **zmiana API** u dostawców (np. nowa wersja [[Snowflake|Snowflake]] zmienia nazwy kolumn systemowych).

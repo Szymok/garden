@@ -15,10 +15,10 @@ aliases:
   - Export DQ Results
 ---
 # 🎯 Definicja
-**Post Processing** w Ataccama Monitoring Projects to działania, które dzieją się **po** zakończeniu testów jakości danych. Kiedy system policzy już błędy, możesz chcieć wysłać te wyniki do innej bazy, pliku Excel, albo uruchomić proces naprawczy.
+**Post Processing** w [[Ataccama|Ataccama]] Monitoring Projects to działania, które dzieją się **po** zakończeniu testów jakości danych. Kiedy system policzy już błędy, możesz chcieć wysłać te wyniki do innej bazy, pliku Excel, albo uruchomić proces naprawczy.
 
 # 🔑 Kluczowe punkty
-- **Transformation Plans:** Przekształć surowe wyniki DQ (np. dodaj kolumnę z datą, przefiltruj tylko błędy krytyczne) przed eksportem.
+- **[[Transformation Plans|Transformation Plans]]:** Przekształć surowe wyniki DQ (np. dodaj kolumnę z datą, przefiltruj tylko błędy krytyczne) przed eksportem.
 - **Integration:** Wyślij wyniki do ONE Data (Data Story), Jira, czy hurtowni danych.
 - **Remediation:** Automatycznie twórz zadania dla ludzi "Popraw ten rekord", jeśli błąd jest poważny.
 
@@ -26,7 +26,7 @@ aliases:
 Dostępne opcje:
 1.  **Export to File:** Zapisz CSV z błędnymi rekordami na dysku.
 2.  **ONE Data Writer:** Zapisz wyniki do tabeli w platformie.
-3.  **Custom Plan:** Uruchom dowolny plik `.comp` (Plan ONE Desktop), co daje nieskończone możliwości integracji.
+3.  **Custom Plan:** Uruchom dowolny plik `.comp` (Plan [[ONE Desktop|ONE Desktop]]), co daje nieskończone możliwości integracji.
 
 # 💡 Przykład zastosowania
 Uruchamiasz nocny monitoring bazy klientów.
@@ -37,7 +37,7 @@ Post-processing:
 3.  Wysyła powiadomienie do zespołu Data Stewards.
 
 ## 📌 Źródła
-- Ataccama ONE Documentation - Monitoring Projects Post-processing.
+- [[Ataccama|Ataccama]] ONE Documentation - Monitoring Projects Post-processing.
 
 ## 👽 Brudnopis
 - Post-processing to klucz do "Operational DQ". Samo liczenie błędów nic nie daje, jeśli wyniki nie trafiają do ludzi, którzy mogą je naprawić.

@@ -23,7 +23,7 @@ Zamiast logować się na 100 serwerów i wpisywać `yum install httpd`, piszesz 
 - **`package` module:** Uniwersalny moduł (sam wykrywa, czy to RedHat czy Debian).
 - **`dnf` / `apt`:** Moduły specyficzne dla systemów, dają więcej opcji.
 - **`service`:** Do startowania, stopowania i restartowania usług (np. Apache, Nginx).
-- **Idempotentność:** Jeśli pakiet już jest zainstalowany, Ansible nic nie robi.
+- **[[Idempotentność|Idempotentność]]:** Jeśli pakiet już jest zainstalowany, Ansible nic nie robi.
 
 # 📚 Szczegółowe wyjaśnienie
 ## Zarządzanie Pakietami

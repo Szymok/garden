@@ -15,12 +15,12 @@ aliases:
   - Definition of Metadata
 ---
 # 🎯 Definicja
-**Meta-Metadata** to opis **kształtu** metadanych. Jeśli Metadane mówią nam "To jest tabela z kolumną Email", to Meta-Metadane definiują: "W naszym systemie istnieją Tabele i Kolumny, a Kolumny mogą mieć Typy".
+**Meta-[[Metadata|Metadata]]** to opis **kształtu** metadanych. Jeśli Metadane mówią nam "To jest tabela z kolumną Email", to Meta-Metadane definiują: "W naszym systemie istnieją Tabele i Kolumny, a Kolumny mogą mieć Typy".
 
 # 🔑 Kluczowe punkty
 - **Data:** Zawartość (np. "jan@example.com").
-- **Metadata:** Kontekst (np. "Kolumna: Email, Typ: String").
-- **Meta-Metadata:** Struktura (np. "Obiekt Kolumna musi mieć Nazwę i Typ").
+- **[[Metadata|Metadata]]:** Kontekst (np. "Kolumna: Email, Typ: String").
+- **Meta-[[Metadata|Metadata]]:** Struktura (np. "Obiekt Kolumna musi mieć Nazwę i Typ").
 
 # 📚 Szczegółowe wyjaśnienie
 Wyobraź sobie plik JSON.
@@ -31,14 +31,14 @@ Wyobraź sobie plik JSON.
 W dużych organizacjach Meta-Metadane są kluczowe dla **interoperacyjności**. Jeśli jeden dział nazywa właściciela "Owner", a drugi "DataSteward", systemy się nie dogadają. Meta-metadane narzucają wspólny standard.
 
 # 💡 Przykład zastosowania
-System Data Catalog (jak Ataccama cz Collibra).
+System [[Data Catalog|Data Catalog]] (jak [[Ataccama|Ataccama]] cz Collibra).
 Zanim wprowadzisz pierwszą tabelę, musisz zdefiniować Meta-Metadane:
 "Każdy System ma Nazwę i Właściciela".
 "Każda Tabela należy do Systemu".
 To on definiuje "szkielet" katalogu.
 
 ## 📌 Źródła
-- "DAMA-DMBOK" (Data Management Body of Knowledge).
+- "DAMA-DMBOK" ([[Data Management|Data Management]] Body of Knowledge).
 
 ## 👽 Brudnopis
-- Bez zdefiniowanych meta-metadanych tworzy się "Metadata Swamp" - bagno informacji, których nikt nie potrafi połączyć.
+- Bez zdefiniowanych meta-metadanych tworzy się "[[[[Metadata|Metadata]] swamp|[[Metadata|Metadata]] Swamp]]" - bagno informacji, których nikt nie potrafi połączyć.

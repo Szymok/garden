@@ -16,16 +16,16 @@ aliases:
   - Zapytania GraphQL
 ---
 # 🎯 Definicja
-**GraphQL API** w Ataccama ONE to główny sposób na wyciąganie metadanych z platformy. Zamiast sztywnych endpointów REST (np. `/getUsers`), piszesz elastyczne zapytania ("Daj mi ID, Nazwę i Email użytkowników, ale tylko tych aktywnych").
+**GraphQL API** w [[Ataccama|Ataccama]] ONE to główny sposób na wyciąganie metadanych z platformy. Zamiast sztywnych endpointów REST (np. `/getUsers`), piszesz elastyczne zapytania ("Daj mi ID, Nazwę i Email użytkowników, ale tylko tych aktywnych").
 
 # 🔑 Kluczowe punkty
 - **Elastyczność:** Pobierasz tylko to, czego potrzebujesz.
 - **Relacje:** Możesz pobrać Term, jego Atrybuty i powiązane Reguły w JEDNYM zapytaniu.
-- **Introspection:** Schema jest samodokumentująca się.
+- **[[Introspection|Introspection]]:** Schema jest samodokumentująca się.
 
 # 📚 Szczegółowe wyjaśnienie
 Przykładowe operacje:
-- **List Catalog Items:** Pobierz listę tabel/plików.
+- **List [[Catalog Items|Catalog Items]]:** Pobierz listę tabel/plików.
 - **Profile:** Uruchom profilowanie na tabeli.
 - **Monitoring Projects:** Pobierz wyniki DQ.
 
@@ -45,7 +45,7 @@ query getProjects {
 ```
 
 ## 📌 Źródła
-- Ataccama ONE Developer Guide.
+- [[Ataccama|Ataccama]] ONE Developer Guide.
 
 ## 👽 Brudnopis
-- Używaj **GraphQL Playground** (wbudowanego w ONE), żeby testować zapytania przed wklejeniem ich do skryptów Python/Ansible.
+- Używaj **[[GraphQL Playground|GraphQL Playground]]** (wbudowanego w ONE), żeby testować zapytania przed wklejeniem ich do skryptów Python/Ansible.

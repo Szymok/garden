@@ -29,7 +29,7 @@ aliases:
 - Interpretacja szablonu polega na **renderowaniu** — czyli uzupełnianiu go przekazanymi danymi lub strukturami (słowniki, listy itp.).
 - Popularna składnia `{{ ... }}` (dla wyrażeń) i `{% ... %}` (dla instrukcji logicznych/pętli).
 - Umożliwia iteracje, warunki, makra i filtrowanie danych tekstowych w ramach jednego pliku.
-- Szczególnie użyteczny przy generowaniu kodu SQL, HTML, kodów konfiguracyjnych i raportów.
+- Szczególnie użyteczny przy generowaniu kodu [[SQL|SQL]], HTML, kodów konfiguracyjnych i raportów.
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -84,14 +84,14 @@ Przykład:
 
 ## Typowe zastosowania
 
-- Dynamika zapytań SQL (filtry, warunki, generatory kolumn)
+- Dynamika zapytań [[SQL|SQL]] (filtry, warunki, generatory kolumn)
 - Generowanie stron HTML (np. ze zmiennej treści)
-- Konfiguracje YAML (np. Ansible, [[dbt]] manifest, GitHub workflows)
+- Konfiguracje [[YAML|YAML]] (np. Ansible, [[dbt]] manifest, GitHub workflows)
 - Szablonowanie kodów testowych, dokumentacyjnych lub mailowych
 
 # 💡 Przykład użycia
 
-Zespół inżynierii danych chce stworzyć 30 modeli SQL zawierających różne kolumny tylko dla określonych regionów. Zamiast powielać kod SQL — definiuje pętlę i listę regionów w szablonie Jinja, automatyzując proces tworzenia plików oddzielnie dla każdego regionu.
+Zespół inżynierii danych chce stworzyć 30 modeli [[SQL|SQL]] zawierających różne kolumny tylko dla określonych regionów. Zamiast powielać kod [[SQL|SQL]] — definiuje pętlę i listę regionów w szablonie Jinja, automatyzując proces tworzenia plików oddzielnie dla każdego regionu.
 
 ## 📌 Źródła
 
@@ -103,9 +103,9 @@ Zespół inżynierii danych chce stworzyć 30 modeli SQL zawierających różne 
 ## 👽 Brudnopis
 
 - render() = funkcja w Pythonie do przetworzenia szablonu
-- Można łączyć Jinja z YAML, JSON, Markdown
+- Można łączyć Jinja z [[YAML|YAML]], JSON, Markdown
 - Dużo użycia w: [[Apache Airflow|Airflow]], [[dbt]], cookiecutter, mkdocs, static site generators
-- Wrażliwy na wcięcia i spacje → kluczowe w YAML
+- Wrażliwy na wcięcia i spacje → kluczowe w [[YAML|YAML]]
 - Możliwość tworzenia filtrów własnych: `{{ name | upper }}`
 
 ---

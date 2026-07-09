@@ -20,7 +20,7 @@ aliases:
 Gdy Steward zmienia logikę reguły w bibliotece (np. "E-mail musi mieć @") na nowszą wersję, projekty monitorujące używają "starej" wersji, dopóki jej nie zaktualizujesz.
 
 # 🔑 Kluczowe punkty
-- **Ikona Żarówki:** Pojawia się w Monitoring Project przy atrybucie, jeśli jego reguła ma nowszą wersję.
+- **Ikona Żarówki:** Pojawia się w [[Monitoring Project|Monitoring Project]] przy atrybucie, jeśli jego reguła ma nowszą wersję.
 - **Preview Changes:** Możesz zobaczyć różnicę (Diff) przed kliknięciem "Update".
 - **Scope:** Możesz zaktualizować jedną regułę, cały Catalog Item lub cały Projekt.
 
@@ -41,7 +41,7 @@ Dlatego aktualizacja musi być celowa i kontrolowana.
 7. Steward pisze notatkę: "Spadek jakości wynika ze zmiany definicji reguły".
 
 ## 📌 Źródła
-- Ataccama ONE Documentation - Monitoring Projects.
+- [[Ataccama|Ataccama]] ONE Documentation - Monitoring Projects.
 
 ## 👽 Brudnopis
-- To kluczowy element Data Governance. Zarządzanie zmianą (Change Management) w definicjach jakości.
+- To kluczowy element [[Data Governance|Data Governance]]. Zarządzanie zmianą (Change Management) w definicjach jakości.

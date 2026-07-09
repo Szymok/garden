@@ -11,6 +11,6 @@ tags:
   - database
   - deployment
 ---
-- The platform uses **multiple PostgreSQL databases internally to store various data and metadata**.
+- The platform uses **multiple PostgreSQL databases internally to store various data and [[Metadata|metadata]]**.
 - These databases are **automatically installed or allocated in a cloud environment**.
 - However, the **customer is responsible for managing backups**.

@@ -21,7 +21,7 @@ Szczegółowy opis zmiennych konfiguracyjnych w Ansible Inventory (`vars.yml`), 
 
 # 🔑 Kluczowe punkty
 - **Nginx & Certyfikaty:** Konfiguracja domen i SSL (`nginx_domain`, `nginx_certificates`). Zalecane użycie certyfikatów 'provided'.
-- **Bazy Danych:** Dane dostępowe do wewnętrznej bazy PostgreSQL (`db_user_one`, `postgresql_admin_user` itp.).
+- **[[Bazy danych|Bazy Danych]]:** Dane dostępowe do wewnętrznej bazy PostgreSQL (`db_user_one`, `postgresql_admin_user` itp.).
 - **Sekrety:** Generowanie haseł i tokenów JWT narzędziem `secrets_generator.py`.
 - **Licencje:** Ścieżki do plików licencyjnych.
 - **Firewall:** Opcja `firewall_manage` (czy Ansible ma zarządzać iptables).
@@ -51,14 +51,14 @@ mmm_smtp_host: smtp.office365.com
 - `tools/README_secrets_generator.md`
 
 ## 👽 Brudnopis
-**License files** enable you to run the modules you intend to install. Ataccama will provide these files depending on your license agreement.
-**MDM, RDM, DQIT configuration**: While ONE RDM or DQIT can be configured manually after installation, **ONE MDM _must_ be configured during installation**.
+**License files** enable you to run the modules you intend to install. [[Ataccama|Ataccama]] will provide these files depending on your license agreement.
+**MDM, [[RDM|RDM]], DQIT configuration**: While ONE [[RDM|RDM]] or DQIT can be configured manually after installation, **[[ONE MDM|ONE MDM]] _must_ be configured during installation**.
 **Nginx configuration**: `nginx_domain` is crucial. It is **strongly recommended to prepare your certificates in advance and set the variable to `provided`**. Use a **single certificate** (wildcard of SANs) for simplicity.
 
 **Secrets**: To maintain a secure installation, you **must generate fresh secrets**. Use the **`secrets_generator.py` tool**.
 **Internal Encryption**: Encryption key stored in a **JCEKS keystore**.
 **Firewall**: The auto-configured firewall allows incoming SSH and all ICMP, and opens TCP ports for installed services. It does not limit outgoing connections. You can disable it via `firewall_manage: false`.
-**Bastion host**: Optional group for cloud-managed databases. Acts as a proxy to forward SQL commands.
+**Bastion host**: Optional group for cloud-managed databases. Acts as a proxy to forward [[SQL|SQL]] commands.
 **Package Versions**: Declared in `_packages.yml`. Do not modify unless necessary.
 **SMTP**: Configured via `mmm_smtp_...` variables.
 **Java Options**: Can be customized (e.g., heap memory).

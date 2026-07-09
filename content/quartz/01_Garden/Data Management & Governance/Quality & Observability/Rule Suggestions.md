@@ -16,7 +16,7 @@ aliases:
   - Automatyczne Przypisywanie Reguł
 ---
 # 🎯 Definicja
-**Rule Suggestions** to system "podpowiedzi" w Ataccama ONE. Gdy podłączasz nową tabelę, system mówi: "Hej, ta kolumna wygląda jak Email. W innych projektach używasz do Emili reguły `Validate_Email`. Czy chcesz ją tu zastosować?".
+**Rule Suggestions** to system "podpowiedzi" w [[Ataccama|Ataccama]] ONE. Gdy podłączasz nową tabelę, system mówi: "Hej, ta kolumna wygląda jak Email. W innych projektach używasz do Emili reguły `Validate_Email`. Czy chcesz ją tu zastosować?".
 
 # 🔑 Kluczowe punkty
 - **Oszczędność czasu:** Nie musisz ręcznie szukać reguł. Klikasz "Accept".
@@ -26,7 +26,7 @@ aliases:
 # 📚 Szczegółowe wyjaśnienie
 Jak to działa?
 1.  Podpinasz tabelę `CLIENTS`.
-2.  Data Catalog (AI) wykrywa, że kolumna `mail_addr` to `Business Term: Email`.
+2.  [[Data Catalog|Data Catalog]] (AI) wykrywa, że kolumna `mail_addr` to `Business Term: Email`.
 3.  Monitoring Projekt widzi to powiązanie. Wie, że `Business Term: Email` ma przypisaną domyślną regułę DQ.
 4.  Wyświetla ikonkę żarówki z sugestią.
 
@@ -36,7 +36,7 @@ Ręczne klikanie zajęłoby tydzień.
 Dzięki Rule Suggestions, system sam proponuje 90% konfiguracji. Steward tylko przegląda i zatwierdza ("Accept All"). Czas: 1 dzień.
 
 ## 📌 Źródła
-- Ataccama ONE Documentation - Automated Data Quality.
+- [[Ataccama|Ataccama]] ONE Documentation - Automated [[Data Quality|Data Quality]].
 
 ## 👽 Brudnopis
 - To jeden z najlepszych argumentów za posiadaniem zintegrowanej platformy (Catalog + DQ). Oddzielne narzędzia tego nie potrafią.

@@ -45,11 +45,11 @@ Inne typowe przykłady:
 
 ## Porównanie: dane niestrukturalne vs. strukturalne
 
-|Cecha|Dane strukturalne|Dane niestrukturalne|
+|Cecha|[[Dane Strukturalne|Dane strukturalne]]|Dane niestrukturalne|
 |---|---|---|
 |Forma przechowywania|tabela, kolumny, rekordy|wolny tekst, plik, multimedia|
 |Użycie schematu|tak|nie|
-|Możliwość zapytań SQL|wysoka|niska lub wymagająca transformacji|
+|Możliwość zapytań [[SQL|SQL]]|wysoka|niska lub wymagająca transformacji|
 |Łatwość przetwarzania maszynowego|wysoka|wymagają preprocesingu lub ekstrakcji|
 |Przykłady|imię, wiek, ID, adres|tekst e-maila, plik JPEG, wpis na Twitterze|
 
@@ -97,5 +97,5 @@ SELECT * FROM users WHERE wiek = 30;
 - Trudniejsze do analizy, ale o większym kontekście
 - Występują powszechnie w enterprise – mail, pliki, media, transkrypcje
 - NLP, OCR, ASR – przykłady technik automatyzacji i transformacji
-- Airbyte, Talend, Dataiku – platformy wspierające konwersję
+- [[Airbyte|Airbyte]], Talend, Dataiku – platformy wspierające konwersję
 - Możliwość strukturyzacji za pomocą NLP/NLU – np. wyszukiwanie encji (NER), klasyfikacja tekstu, embeddingi semanticzne

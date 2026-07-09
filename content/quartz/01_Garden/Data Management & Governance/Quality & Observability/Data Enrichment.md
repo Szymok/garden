@@ -15,7 +15,7 @@ aliases:
   - Data Augmentation
 ---
 # 🎯 Definicja
-**Data Enrichment** (Wzbogacanie Danych) to proces rozszerzania wewnętrznych danych organizacji o dodatkowe informacje pochodzące z zewnętrznych źródeł (np. API, publiczne bazy danych, dostawcy tacy jak Dun & Bradstreet). Celem jest podniesienie wartości analitycznej danych.
+**Data Enrichment** (Wzbogacanie Danych) to proces rozszerzania wewnętrznych danych organizacji o dodatkowe informacje pochodzące z zewnętrznych źródeł (np. API, publiczne [[Bazy danych|bazy danych]], dostawcy tacy jak Dun & Bradstreet). Celem jest podniesienie wartości analitycznej danych.
 
 # 🔑 Kluczowe punkty
 - **Szerszy kontekst:** Pozwala zobaczyć więcej niż mamy w systemach transakcyjnych (np. dodanie danych demograficznych do historii zakupów).
@@ -41,5 +41,5 @@ Dzięki temu analitycy mogą odkryć, że "Najwięcej kupują mieszkańcy blokó
 - "Fundamentals of Data Engineering" - Joe Reis.
 
 ## 👽 Brudnopis
-- W Ataccama ONE: Komponenty `Lookup`, `Online Web Service`, `Join`.
+- W [[Ataccama|Ataccama]] ONE: Komponenty `Lookup`, `Online Web Service`, `Join`.
 - Uwaga na RODO: Wzbogacanie danych osobowych o dane profilujące wymaga zgody użytkownika!

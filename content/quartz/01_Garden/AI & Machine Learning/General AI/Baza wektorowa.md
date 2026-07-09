@@ -17,15 +17,15 @@ aliases:
   - Weaviate
 ---
 # 🎯 Definicja
-**Baza wektorowa** to system bazy danych zoptymalizowany do przechowywania i przeszukiwania **embeddingów** (wektorów liczb reprezentujących znaczenie tekstu/obrazu). Umożliwia wyszukiwanie semantyczne ("znajdź teksty o podobnym znaczeniu"), a nie tylko po słowach kluczowych.
+**Baza wektorowa** to system [[Bazy danych|bazy danych]] zoptymalizowany do przechowywania i przeszukiwania **embeddingów** (wektorów liczb reprezentujących znaczenie tekstu/obrazu). Umożliwia wyszukiwanie semantyczne ("znajdź teksty o podobnym znaczeniu"), a nie tylko po słowach kluczowych.
 
 # 🔑 Kluczowe punkty
 - **ANN (Approximate Nearest Neighbor):** Algorytmy takie jak HNSW pozwalają znaleźć "najbliższe" wektory w milisekundy, nawet wśród miliardów rekordów.
 - **Wyszukiwanie semantyczne:** Zapytanie "zgubiłem klucze" znajdzie dokument "procedura wyrabiania duplikatu klucza", mimo braku wspólnych słów.
-- **RAG:** Fundamentalny element systemów Retrieval-Augmented Generation (pamięć długoterminowa dla LLM).
+- **[[RAG|RAG]]:** Fundamentalny element systemów Retrieval-Augmented Generation (pamięć długoterminowa dla LLM).
 
 # 📚 Szczegółowe wyjaśnienie
-Klasyczna baza (SQL/Elasticsearch) szuka słów: `WHERE content LIKE '%klucze%'`.
+Klasyczna baza ([[SQL|SQL]]/Elasticsearch) szuka słów: `WHERE content LIKE '%klucze%'`.
 Baza wektorowa liczy kąt między wektorami (Cosine Similarity). Jeśli kąt jest mały, znaczenia są bliskie.
 Architektura:
 - **Encoder:** Model (np. OpenAI `text-embedding-3`) zamienia tekst na wektor (np. 1536 liczb).

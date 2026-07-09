@@ -18,7 +18,7 @@ aliases:
 
 # 🎯 Definicja
 
-**Dane półstrukturalne** to dane, które nie posiadają ściśle określonego schematu relacyjnego, ale są uporządkowane za pomocą tagów, znaczników, atrybutów czy struktur typu klucz-wartość. Najczęściej występują w postaci plików JSON, XML, YAML, Parquet czy Avro — ich schemat może być zmienny lub częściowy, lecz istnieją elementy umożliwiające rekonstrukcję lub „zrozumienie” zawartości przez maszyny.
+**Dane półstrukturalne** to dane, które nie posiadają ściśle określonego schematu relacyjnego, ale są uporządkowane za pomocą tagów, znaczników, atrybutów czy struktur typu klucz-wartość. Najczęściej występują w postaci plików JSON, XML, [[YAML|YAML]], Parquet czy Avro — ich schemat może być zmienny lub częściowy, lecz istnieją elementy umożliwiające rekonstrukcję lub „zrozumienie” zawartości przez maszyny.
 
 # 🔑 Kluczowe punkty
 
@@ -26,13 +26,13 @@ aliases:
 - Mogą zawierać różnej długości pola, zagnieżdżenia i kolekcje (np. listy, słowniki).
 - Przykłady: JSON, XML, pliki logów, eventy przesyłane przez API.
 - Łatwo przekształcić je do postaci strukturalnej w ramach integracji i transformacji danych, zwłaszcza w procesach ETL/ELT.
-- Umożliwiają elastyczne przechowywanie dynamicznych informacji – kluczowe w systemach analitycznych, chmurowych, platformach integracyjnych (np. Airbyte, Kafka, Data Lake).
+- Umożliwiają elastyczne przechowywanie dynamicznych informacji – kluczowe w systemach analitycznych, chmurowych, platformach integracyjnych (np. [[Airbyte|Airbyte]], Kafka, [[Data Lake|Data Lake]]).
 
 # 📚 Szczegółowe wyjaśnienie
 
 ## Czym różnią się dane półstrukturalne od innych typów?
 
-- **Dane strukturalne:** posiadają sztywny, wyraźnie zdefiniowany schemat (np. tabele SQL, arkusze Excela).
+- **[[Dane Strukturalne|Dane strukturalne]]:** posiadają sztywny, wyraźnie zdefiniowany schemat (np. tabele [[SQL|SQL]], arkusze Excela).
 - **Dane nieustrukturyzowane:** nie mają regularnej struktury (np. teksty, obrazy, e-maile).
 - **Dane półstrukturalne:** są pomiędzy – mają metadane lub tagi, ułatwiając transformację do formatu tabelarycznego.
 
@@ -58,18 +58,18 @@ Po transformacji:
 |1|"Mary X"|
 |2|"John D"|
 
-Proces ten może być zautomatyzowany w narzędziach takich jak Airbyte, [[dbt]], Apache NiFi czy funkcjach SQL (np. funkcje `jsonb_extract_path` w PostgreSQL).
+Proces ten może być zautomatyzowany w narzędziach takich jak [[Airbyte|Airbyte]], [[dbt]], Apache NiFi czy funkcjach [[SQL|SQL]] (np. funkcje `jsonb_extract_path` w PostgreSQL).
 
 ## Typowe zastosowania
 
-- Magazyny danych (Data Lake) obsługujące pliki JSON, Avro, Parquet.
+- Magazyny danych ([[Data Lake|Data Lake]]) obsługujące pliki JSON, Avro, Parquet.
 - Integracja z API – wiele nowoczesnych usług zwraca dane jako JSON/XML.
 - Platformy streamingowe (Kafka, Pulsar) przechowujące komunikaty jako JSON.
 - ELT/ETL – dane półstrukturalne pobierane i transformowane do tabel faktów lub wymiarów.
 
 # 💡 Przykład zastosowania
 
-Zespół analityczny w e-commerce gromadzi logi zdarzeń (clickstream) z aplikacji mobilnej w formacie JSON (półstrukturalnym). Logi te są ładowane do Data Lake w surowej postaci, a następnie podczas procesu ELT są automatycznie „rozwijane” do ustrukturyzowanej tabeli, pozwalającej np. na analizę konwersji, segmentacji użytkowników i testów A/B w hurtowni danych.
+Zespół analityczny w e-commerce gromadzi logi zdarzeń (clickstream) z aplikacji mobilnej w formacie JSON (półstrukturalnym). Logi te są ładowane do [[Data Lake|Data Lake]] w surowej postaci, a następnie podczas procesu ELT są automatycznie „rozwijane” do ustrukturyzowanej tabeli, pozwalającej np. na analizę konwersji, segmentacji użytkowników i testów A/B w hurtowni danych.
 
 # 📌 Źródła
 
@@ -80,7 +80,7 @@ Zespół analityczny w e-commerce gromadzi logi zdarzeń (clickstream) z aplikac
 # 👽 Brudnopis
 
 - Dane półstrukturalne = JSON, XML, Parquet, logi, Avro, lista eventów w Kafka/S3.
-- JSON jako tekst/klucz-wartość → parsowanie do struktur SQL (funkcje jsonb).
+- JSON jako tekst/klucz-wartość → parsowanie do struktur [[SQL|SQL]] (funkcje jsonb).
 - Używane w integracji, [[Business Intelligence|BI]], analityce, [[Data Lakehouse|Lakehouse]]; elastyczna struktura i dynamiczność.
 - ETL/ELT: najczęściej moment „zdejmowania” struktur do tabeli (json > kolumny).
-- Data Lake = przechowywanie półstrukturalne + warstwa transformująca downstream.
+- [[Data Lake|Data Lake]] = przechowywanie półstrukturalne + warstwa transformująca downstream.
