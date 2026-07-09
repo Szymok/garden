@@ -4,7 +4,7 @@ created: 2026-02-04
 status: evergreen
 category: Data Architecture
 difficulty: advanced
-language: en
+language: pl
 tags:
   - metadata
   - abstraction
