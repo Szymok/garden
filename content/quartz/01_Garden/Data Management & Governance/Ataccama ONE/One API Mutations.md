@@ -1,24 +1,25 @@
 # One API Mutations
 
 🎯 **Definicja**
-**Mutacje (Mutations)** w GraphQL to specjalne operacje przeznaczone do modyfikacji danych po stronie serwera (zapis, aktualizacja, usuwanie). W przeciwieństwie do zapytań (queries), które mogą być wykonywane równolegle, mutacje są wykonywane sekwencyjnie (szeregowo), co zapewnia spójność i chroni przed wyścigami (race conditions) podczas modyfikacji danych.
+**Mutacje (Mutations)** w GraphQL to specjalne operacje przeznaczone do modyfikacji danych po stronie serwera (zapis, aktualizacja, usuwanie). W przeciwieństwie do [[One API Queries|zapytań (queries)]], które mogą być wykonywane równolegle, mutacje są wykonywane sekwencyjnie (szeregowo), co zapewnia spójność i chroni przed wyścigami (race conditions) podczas modyfikacji danych. Do testowania mutacji można użyć środowiska [[Ataccama Using Playground|GraphQL Playground]].
 
 ---
 
 🔑 **Kluczowe punkty**
 - Służą do wykonywania wszelkich operacji zapisu i modyfikacji danych w Ataccama ONE (tworzenie, edycja, usuwanie encji, uruchamianie procesów).
-- Mutacje mogą zwracać stan wykonanego zadania (np. identyfikator `gid` zadania DQ) oraz zmodyfikowany obiekt wraz z zagnieżdżonymi polami.
-- Wykonywane są **sekwencyjnie (w serii)**, w przeciwieństwie do zapytań wykonywanych współbieżnie.
-- Stanowią odpowiednik operacji modyfikujących w REST (POST, PUT, DELETE).
+- Mutacje mogą zwracać stan wykonanego zadania (np. identyfikator `gid` zadania DQ, patrz: [[Data Quality]]) oraz zmodyfikowany obiekt wraz z zagnieżdżonymi polami.
+- Wykonywane są **sekwencyjnie (w serii)**, w przeciwieństwie do [[One API Queries|zapytań]] wykonywanych współbieżnie.
+- Stanowią odpowiednik operacji modyfikujących w REST (POST, PUT, DELETE, patrz: [[Endpoints and HTTP Headers|Nagłówki HTTP]]).
 
 ---
 
 📚 **Szczegółowe wyjaśnienie i przykłady**
 
 ### 1. Uruchamianie ewaluacji Jakości Danych (DQ)
-Możesz uruchomić ewaluację jakości danych (DQ evaluation) dla elementu katalogu (catalog item), konkretnego atrybutu (catalog item attribute) lub terminu biznesowego (glossary term). Każda z tych operacji zwraca identyfikator zadania (`gid`).
+Możesz uruchomić ewaluację jakości danych (DQ evaluation) dla elementu katalogu, konkretnego atrybutu (atrybutu elementu katalogu) lub terminu biznesowego. Każda z tych operacji zwraca identyfikator zadania (`gid`).
+- Więcej o profilowaniu i DQ: [[Profiling]] oraz [[Data Quality]].
 
-#### Uruchomienie ewaluacji DQ dla elementu katalogu (Catalog Item)
+#### Uruchomienie ewaluacji DQ dla elementu katalogu ([[Data Catalog|Catalog Item]])
 ```graphql
 mutation catalogItemDQ {
     catalogItemEvaluateDq(gid: "identyfikator_elementu_katalogu") {
@@ -46,7 +47,7 @@ mutation catalogItemAttributeDQ {
 }
 ```
 
-#### Uruchomienie ewaluacji DQ dla terminu słownikowego (Glossary Term)
+#### Uruchomienie ewaluacji DQ dla terminu słownikowego ([[Glossary Terms|Glossary Term]])
 ```graphql
 mutation glossaryTermDQ {
     termEvaluateDq(gid: "identyfikator_terminu") {
@@ -84,7 +85,7 @@ mutation deleteEntity {
 ---
 
 ### 3. Publikowanie encji (Publishing Entities)
-Mutacja `publishEntity` pozwala na publikację dowolnego węzła modelu metadanych (MMD). Obecnie operacja ta omija domyślny proces zatwierdzania (workflow), automatycznie akceptując żądania publikacji.
+Mutacja `publishEntity` pozwala na publikację dowolnego węzła [[Metadata|modelu metadanych (MMD)]]. Obecnie operacja ta omija domyślny proces zatwierdzania (workflow), automatycznie akceptując żądania publikacji.
 
 #### Publikacja elementu katalogu:
 ```graphql
@@ -134,7 +135,7 @@ mutation publishEntity {
 ---
 
 ### 4. Klonowanie reguł i terminów (Duplicating Rules and Terms)
-Umożliwia skopiowanie konfiguracji reguł DQ lub terminów biznesowych (np. w celu przypisania podobnych reguł do wielu plików wyszukiwania). Operacja kopiuje wyłącznie konfigurację i nie przenosi powiązań encji (skopiowany obiekt nie jest nigdzie przypisany).
+Umożliwia skopiowanie konfiguracji [[Data Quality Rules (Ataccama)|reguł DQ]] lub [[Glossary Terms|terminów biznesowych]] (np. w celu przypisania podobnych reguł do wielu plików wyszukiwania). Operacja kopiuje wyłącznie konfigurację i nie przenosi powiązań encji (skopiowany obiekt nie jest nigdzie przypisany).
 
 #### Duplikowanie terminu:
 ```graphql

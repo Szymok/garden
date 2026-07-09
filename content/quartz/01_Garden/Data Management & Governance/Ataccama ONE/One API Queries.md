@@ -19,14 +19,14 @@ aliases:
 
 # 🎯 Definicja
 
-**Zapytania One API (One API Queries)** to zapytania w języku GraphQL służące do pobierania danych i metadanych z platformy Ataccama ONE (np. modułu Metadata Management). W przeciwieństwie do tradycyjnych interfejsów REST API, GraphQL umożliwia klientom precyzyjne określenie struktury zwracanych danych w ramach jednego żądania HTTP, eliminując problem nadmiarowego pobierania danych (over-fetching).
+**Zapytania One API (One API Queries)** to zapytania w języku GraphQL służące do pobierania danych i metadanych z platformy Ataccama ONE (np. modułu [[Metadata|Metadata Management]]). W przeciwieństwie do tradycyjnych interfejsów REST API (patrz: [[Endpoints and HTTP Headers|Nagłówki HTTP]]), GraphQL umożliwia klientom precyzyjne określenie struktury zwracanych danych w ramach jednego żądania HTTP, eliminując problem nadmiarowego pobierania danych (over-fetching). Do interaktywnego testowania zapytań służy [[Ataccama Using Playground|GraphQL Playground]].
 
 # 🔑 Kluczowe punkty
 
-- **Precyzja**: Klient definiuje dokładnie te pola, które są mu potrzebne, w tym dane zagnieżdżone i powiązane encje.
+- **Precyzja**: Klient definiuje dokładnie te pola, które są mu potrzebne, w tym dane zagnieżdżone i powiązane encje [[Metadata|modelu metadanych]].
 - **Identyfikator GID**: Podstawą pobierania konkretnych encji jest ich unikalny, globalny identyfikator `gid`.
 - **Funkcje zaawansowane**: Zapytania obsługują sortowanie (`orderBy`), stronicowanie (paginację z parametrami `skip`, `size`, `cursor`) oraz filtrowanie (za pomocą języka AQL i AI).
-- **Zadania asynchroniczne**: Przez API można wywoływać operacje takie jak profilowanie danych, a następnie odpytywać o ich status (Job status).
+- **Zadania asynchroniczne**: Przez API można wywoływać operacje takie jak [[Profiling|profilowanie danych]] lub testy [[Data Quality|Jakości Danych]], a następnie odpytywać o ich status (Job status).
 
 # 📚 Szczegółowe wyjaśnienie
 
@@ -34,7 +34,7 @@ aliases:
 
 Zapytania GraphQL pozwalają na przeglądanie struktury metadanych Ataccama ONE. Możliwe jest nakładanie filtrów oraz sortowania:
 - **Prymitywne sortowanie**: np. `orderBy: [{ property: "name", direction: ASC }]`.
-- **Paginacja**: kontrolowana za pomocą parametrów `skip` i `size` lub kursorów.
+- **Paginacja**: kontrolowana za pomocą parametrów `skip` i `size` lub kursorów (patrz również: [[Extracting Audit API#Stronicowanie (Pagination) w Audit API|Paginacja w Audit API]]).
 - **Filtrowanie**: 
   - `filter` – standardowe filtry oparte na języku AQL (Ataccama Query Language).
   - `query` – zapytanie AQL przetwarzane wstępnie przez algorytmy sztucznej inteligencji.
@@ -42,16 +42,16 @@ Zapytania GraphQL pozwalają na przeglądanie struktury metadanych Ataccama ONE.
 
 ## Statystyki i agregacje Jakości Danych (DQ)
 
-Platforma umożliwia pobieranie zagregowanych wyników jakości danych dla pojęć biznesowych (Business Terms):
-- **Wystąpienia terminu (Term occurrences)**: Określa, do ilu encji (np. atrybutów, elementów katalogu) przypisano dany termin słownikowy. Parametr `withCount: true` uwzględnia kaskadowo encje potomne.
-- **Agregacja DQ (Aggregation Results)**: Zbiera ostatnie wyniki testów jakości ze wszystkich atrybutów powiązanych z terminem. Parametr `at` pozwala odpytać o stan historyczny.
-- **Ważność terminu (Term Validity)**: Zwraca liczbę poprawnych (valid) i niepoprawnych (invalid) rekordów w powiązanych regułach.
+Platforma umożliwia pobieranie zagregowanych wyników jakości danych dla pojęć biznesowych ([[Glossary Terms|Business Terms]]):
+- **Wystąpienia terminu (Term occurrences)**: Określa, do ilu encji (np. atrybutów, [[Data Catalog|elementów katalogu]]) przypisano dany [[Glossary Terms|termin słownikowy]]. Parametr `withCount: true` uwzględnia kaskadowo encje potomne.
+- **Agregacja DQ (Aggregation Results)**: Zbiera ostatnie wyniki testów jakości ze wszystkich atrybutów powiązanych z terminem. Parametr `at` pozwala odpytać o stan historyczny (porównaj: [[Data Quality|Jakość Danych]]).
+- **Ważność terminu (Term Validity)**: Zwraca liczbę poprawnych (valid) i niepoprawnych (invalid) rekordów w powiązanych [[Data Quality Rules (Ataccama)|regułach DQ]].
 
 ---
 
 # 💡 Przykłady zapytań (Queries)
 
-## 1. Listowanie elementów katalogu (List catalog items)
+## 1. Listowanie elementów katalogu ([[Data Catalog|List catalog items]])
 
 Zapytanie zwraca listę elementów katalogu, ich identyfikatory `gid`, nazwy w wersji roboczej (`draftVersion`) oraz przypisane do nich atrybuty.
 
@@ -123,7 +123,7 @@ query listCatalogItems {
 
 ## 2. Listowanie atrybutów wybranego elementu katalogu (List CI attributes)
 
-Pobiera listę atrybutów dla konkretnego obiektu na podstawie jego zmiennej `$gid`.
+Pobiera listę atrybutów dla konkretnego obiektu na podstawie jego zmiennej `$gid` (patrz również: [[Data Catalog]]).
 
 **Zapytanie (Query):**
 ```graphql
@@ -177,9 +177,9 @@ query listAttributes ($gid: GID!) {
 }
 ```
 
-## 3. Listowanie źródeł danych (List data sources)
+## 3. Listowanie źródeł danych ([[Data Source|List data sources]])
 
-Zwraca listę zdefiniowanych źródeł danych oraz powiązanych z nimi połączeń (connections).
+Zwraca listę zdefiniowanych [[Data Source|źródeł danych]] oraz powiązanych z nimi połączeń (connections).
 
 **Zapytanie (Query):**
 ```graphql
@@ -239,9 +239,9 @@ query listDataSources {
 }
 ```
 
-## 4. Listowanie pojęć słownika biznesowego (List glossary terms)
+## 4. Listowanie pojęć słownika biznesowego ([[Glossary Terms|List glossary terms]])
 
-Zwraca wszystkie dostępne terminy słownikowe w wersji roboczej.
+Zwraca wszystkie dostępne [[Glossary Terms|terminy słownikowe]] w wersji roboczej.
 
 **Zapytanie (Query):**
 ```graphql
@@ -289,7 +289,7 @@ query listGlossaryTerms {
 
 ## 5. Listowanie typów terminów słownikowych (List term types)
 
-Odpytuje o typ każdego zdefiniowanego pojęcia biznesowego (np. `keyPerformanceIndicator`, `businessTerm`).
+Odpytuje o typ każdego zdefiniowanego pojęcia biznesowego (np. `keyPerformanceIndicator`, `businessTerm` - patrz: [[Glossary Terms]]).
 
 **Zapytanie (Query):**
 ```graphql
@@ -331,7 +331,7 @@ query getTermTypes {
 
 ## 6. Listowanie projektów monitorowania jakości (List monitoring projects)
 
-Zapytanie wyciągające identyfikatory wszystkich projektów monitorowania reguł jakościowych.
+Zapytanie wyciągające identyfikatory wszystkich projektów monitorowania [[Data Quality|reguł jakościowych]].
 
 **Zapytanie (Query):**
 ```graphql
@@ -370,7 +370,7 @@ query getProjects {
 
 ## 7. Wyszukiwanie wystąpień terminu (Retrieve term occurrences)
 
-Zwraca statystyki powiązań wybranego pojęcia biznesowego (słownikowego) ze strukturami danych.
+Zwraca statystyki powiązań wybranego pojęcia słownikowego ze strukturami danych (np. [[Data Catalog|elementami katalogu]]).
 
 **Zapytanie (Query):**
 ```graphql
@@ -410,7 +410,7 @@ query getTermOccurrences {
 
 ## 8. Wyniki agregacji jakości danych (DQ) dla terminu (Retrieve term DQ aggregation results)
 
-Zwraca wyniki jakości danych zagregowane z przypisanych atrybutów dla wybranego momentu w historii (`at`).
+Zwraca wyniki jakości danych zagregowane z przypisanych atrybutów (patrz: [[Data Quality]]).
 
 **Zapytanie (Query):**
 ```graphql
@@ -435,7 +435,7 @@ query GetTermDQ {
 
 ## 9. Szczegółowa agregacja atrybutów terminu (Retrieve term's attribute aggregation results)
 
-Pobiera wyniki jakości danych na poziomie konkretnych atrybutów przy użyciu filtra selektora (np. `{limit: 1}` dla ostatniego uruchomienia).
+Pobiera wyniki jakości danych (DQ) na poziomie konkretnych atrybutów.
 
 **Zapytanie (Query):**
 ```graphql
@@ -473,7 +473,7 @@ query GetAttributeDQ {
 
 ## 10. Walidacja i poprawność terminu (Retrieve Term Validity)
 
-Zwraca ogólne metryki poprawności (liczba rekordów poprawnych/błędnych) przypisane do reguł powiązanych z terminem.
+Zwraca ogólne metryki poprawności (liczba rekordów poprawnych/błędnych) dla reguł powiązanych z terminem.
 
 **Zapytanie (Query):**
 ```graphql
@@ -494,9 +494,9 @@ query GetValidity {
 }
 ```
 
-## 11. Profilowanie: Pobieranie konfiguracji (Profiling configurations)
+## 11. Profilowanie: Pobieranie konfiguracji ([[Profiling|Profiling configurations]])
 
-Przed uruchomieniem profilowania należy pobrać identyfikator konfiguracji (domyślne to `FULL` lub `SAMPLE`).
+Przed uruchomieniem profilowania należy pobrać identyfikator konfiguracji (patrz: [[Profiling]]).
 
 **Zapytanie (Query):**
 ```graphql
@@ -546,7 +546,7 @@ query listProfilingConfigurations {
 
 ## 12. Uruchomienie profilowania elementu katalogu (Profile catalog items: Request)
 
-Uruchamia proces profilowania na wybranym elemencie przy użyciu pobranego identyfikatora konfiguracji (`configId`).
+Uruchamia proces [[Profiling|profilowania (profiling)]] na wybranym elemencie przy użyciu pobranego identyfikatora konfiguracji (`configId`). Ta operacja modyfikuje dane, więc pod spodem jest to [[One API Mutations|mutacja]].
 
 **Zapytanie (Query):**
 ```graphql
@@ -613,13 +613,13 @@ query getJobStatus {
 
 # 👽 Brudnopis
 
-- **Różnice z REST**: GraphQL pozwala pobrać dokładnie to, co zadeklarowano w zapytaniu (jeden endpoint, zagnieżdżone obiekty).
+- **Różnice z REST**: GraphQL pozwala pobrać dokładnie to, co zadeklarowano w zapytaniu (jeden endpoint, zagnieżdżone obiekty, patrz: [[Endpoints and HTTP Headers]]).
 - **Struktura połączeń**: Wykorzystanie schematu `edges` i `node` do paginacji oraz pobierania rekordów.
 - **Parametry DQ dla terminów**:
-  - `statistics`: liczba przypisań pojęć w katalogu
+  - `statistics`: liczba przypisań pojęć w katalogu (patrz: [[Glossary Terms]])
   - `aggregationResult`: zbiorcza jakość danych z poziomu reguł
   - `dqEvalTermAggr`: podsumowanie poprawności (valid/invalid)
 - **Workflow profilowania**:
-  1. Pobierz konfigurację (np. `FULL`/`SAMPLE`) -> `profilingConfigurations`
+  1. Pobierz konfigurację (np. `FULL`/`SAMPLE`) -> `profilingConfigurations` (patrz: [[Profiling]])
   2. Uruchom zadanie -> `profile(...)`
   3. Odpytuj o status zadania -> `job(gid) { draftVersion { status } }`

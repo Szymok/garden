@@ -20,13 +20,13 @@ aliases:
 
 # 🎯 Definicja
 
-**Endpoints and HTTP Headers** w platformie Ataccama ONE odnoszą się do punktów końcowych sieci oraz nagłówków protokołu HTTP używanych do komunikacji z API GraphQL platformy. Umożliwiają one zewnętrznym systemom i klientom wysyłanie zapytań (queries), modyfikacji (mutations) oraz subskrypcji (subscriptions) w celu integracji z modułem zarządzania metadanymi (**Metadata Management Module – MMM**).
+**Endpoints and HTTP Headers** w platformie Ataccama ONE odnoszą się do punktów końcowych sieci oraz nagłówków protokołu HTTP używanych do komunikacji z API GraphQL platformy. Umożliwiają one zewnętrznym systemom i klientom wysyłanie [[One API Queries|zapytań (queries)]], [[One API Mutations|modyfikacji (mutations)]] oraz [[One API Subscriptions|subskrypcji (subscriptions)]] w celu integracji z modułem zarządzania metadanymi ([[Metadata|Metadata Management Module – MMM]]).
 
 # 🔑 Kluczowe punkty
 
 - **Jeden punkt końcowy**: Wszystkie zapytania GraphQL w Ataccama ONE są wysyłane na pojedynczy endpoint, zazwyczaj `<ataccama_URL>/graphql`.
-- **Subskrypcje**: Do obsługi zdarzeń w czasie rzeczywistym (subscriptions) używany jest dedykowany endpoint `<ataccama_URL>/subscriptions`.
-- **GraphiQL Playground**: Interaktywne środowisko do testowania zapytań jest dostępne pod adresem `<ataccama_URL>/playground/`.
+- **Subskrypcje**: Do obsługi zdarzeń w czasie rzeczywistym używany jest dedykowany endpoint subskrypcji (patrz: [[One API Subscriptions]]).
+- **GraphiQL Playground**: Interaktywne środowisko do testowania zapytań jest dostępne pod adresem `<ataccama_URL>/playground/` (patrz: [[Ataccama Using Playground]]).
 - **Uwierzytelnianie Bearer Token**: Integracje produkcyjne opierają się na tokenach OAuth2 (JWT) generowanych przez Keycloak (realm `ataccamaone`).
 - **Obsługa błędów**: Zapytania GraphQL zawsze zwracają kod HTTP `200 OK`, a ewentualne błędy walidacji czy biznesowe znajdują się wewnątrz obiektu `errors` w strukturze JSON odpowiedzi.
 
@@ -36,14 +36,14 @@ aliases:
 
 1. **Główny Endpoint GraphQL**:
    - Adres: `<ataccama_URL>/graphql`
-   - Służy do wysyłania standardowych zapytań odczytu (query) i zapisu (mutation).
-   - Host odpowiada lokalizacji serwera HTTP modułu **MMM** (Metadata Management Module).
+   - Służy do wysyłania standardowych zapytań odczytu ([[One API Queries|query]]) i zapisu ([[One API Mutations|mutation]]).
+   - Host odpowiada lokalizacji serwera HTTP modułu [[Metadata|MMM]] (Metadata Management Module).
 2. **Endpoint Subskrypcji**:
    - Adres: `<ataccama_URL>/subscriptions`
-   - Używa protokołu WebSocket do ciągłego przesyłania zdarzeń w czasie rzeczywistym.
+   - Używa protokołu WebSocket do ciągłego przesyłania zdarzeń w czasie rzeczywistym (patrz: [[One API Subscriptions]]).
 3. **GraphiQL Playground**:
    - Adres: `<ataccama_URL>/playground/`
-   - Graficzny interfejs w przeglądarce ułatwiający budowanie i testowanie zapytań. W środowisku GraphiQL uwierzytelnianie sesją użytkownika jest wstrzykiwane automatycznie.
+   - Graficzny interfejs w przeglądarce ułatwiający budowanie i testowanie zapytań (patrz: [[Ataccama Using Playground]]). W środowisku GraphiQL uwierzytelnianie sesją użytkownika jest wstrzykiwane automatycznie.
 
 ## Nagłówki HTTP (HTTP Headers)
 
@@ -56,9 +56,9 @@ Każde zapytanie do API GraphQL musi zawierać następujące nagłówki HTTP:
 - **Keycloak Bearer Token (Rekomendowane produkcyjnie)**:
   Wymaga skonfigurowania klienta typu *service account* w realmie `ataccamaone` w Keycloak, pobrania tokena dostępowego przez endpoint Keycloak i wstrzyknięcia go do nagłówka `Authorization`.
 - **Uwierzytelnianie sesyjne (Playground)**:
-  W GraphiQL aktywna sesja przeglądarki automatycznie odświeża i wstrzykuje token. Jeśli sesja wygaśnie, należy odświeżyć stronę playgroundu.
+  W [[Ataccama Using Playground|GraphiQL]] aktywna sesja przeglądarki automatycznie odświeża i wstrzykuje token. Jeśli sesja wygaśnie, należy odświeżyć stronę playgroundu.
 - **Basic Auth (Zdeprecjonowane)**:
-  Starsze wersje pozwalały na uwierzytelnianie Basic (login i hasło zakodowane w Base64), jednak obecnie standardem jest Bearer token.
+  Starsze wersje pozwalały na uwierzytelnianie Basic (login i hasło zakodowane w Base64), jednak obecnie standardem jest Bearer token. Metodę tę stosuje się m.in. w krokach integracyjnych w programie Desktop (patrz: [[Desktop JSON Call Step General Configuration]]).
 
 ## Ciało zapytania (Request Body)
 
@@ -68,10 +68,10 @@ Zapytania GraphQL przesyłane są metodą **POST**. Ciało żądania to obiekt J
 - `operationName` (opcjonalne): Nazwa operacji, przydatna przy debugowaniu i gdy w jednym zapytaniu przesyłamy wiele operacji.
 
 ### Anatomia zapytania GraphQL
-1. **Root item (Element główny)**: Punkt wejścia zapytania (np. `catalogItems`).
+1. **Root item (Element główny)**: Punkt wejścia zapytania (np. [[Data Catalog|catalogItems]]).
 2. **Fields (Pola)**: Konkretne właściwości obiektów, które chcemy pobrać (np. `gid`, `name`).
 3. **Arguments (Argumenty)**: Filtry i parametry przekazywane do pól (np. `versionSelector: {draftVersion: true}`).
-4. **Edges & Node (Krawędzie i Węzły)**: Struktura opakowująca wyniki w celu obsługi paginacji i metadanych połączenia.
+4. **Edges & Node (Krawędzie i Węzły)**: Struktura opakowująca wyniki w celu obsługi paginacji i metadanych połączenia (patrz: [[One API Queries|Zapytania]]).
 
 ## Obsługa błędów
 
@@ -235,8 +235,8 @@ query GetCatalogItems {
 
 - **Endpoint główny**: POST na `<ataccama_URL>/graphql`
 - **Typy operacji**: 
-  1. `Query` (odczyt)
-  2. `Mutation` (modyfikacja, np. insert/update/delete)
-  3. `Subscription` (nasłuchiwanie zdarzeń czasu rzeczywistego przez WebSocket)
+  1. `Query` (odczyt, patrz: [[One API Queries]])
+  2. `Mutation` (modyfikacja, np. insert/update/delete, patrz: [[One API Mutations]])
+  3. `Subscription` (nasłuchiwanie zdarzeń czasu rzeczywistego przez WebSocket, patrz: [[One API Subscriptions]])
 - **Tokeny**: Keycloak service accounts (realm `ataccamaone`), nagłówek `Authorization: Bearer <token>`
 - **Obsługa błędów**: Brak tradycyjnych błędów HTTP (zawsze 200 OK), wszystkie błędy w kluczu `errors` odpowiedzi JSON.
