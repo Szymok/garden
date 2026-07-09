@@ -203,7 +203,17 @@ plugins:
         GitHub: https://github.com/Szymok/garden
         Ogród Wiedzy: https://quartz.skszymon.eu
   - source: github:quartz-community/recent-notes
-    enabled: false
+    enabled: true
+    layout:
+      position: right
+      priority: 40
+      display: all
+    options:
+      title: Ostatnie notatki
+      limit: 5
+      showTags: true
+      hideTagPages: true
+      hideFolderPages: true
   - source: github:quartz-community/spacer
     enabled: true
     options: {}
@@ -250,11 +260,16 @@ plugins:
       priority: 100
       display: all
   - source: github:quartz-community/stacked-pages
-    enabled: false
+    enabled: true
     layout:
       position: afterBody
       priority: 50
       display: all
+    options:
+      maxTabs: 8
+      mobileBreakpoint: 800
+      showSpines: true
+      animateTransitions: true
 layout:
   groups:
     toolbar:
