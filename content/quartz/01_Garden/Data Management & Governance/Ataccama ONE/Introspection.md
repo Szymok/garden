@@ -1,18 +1,17 @@
-# [[GraphQL Introspection|GraphQL Introspection]]
 
-🎯 **Definicja**
+# 🎯 Definicja
 **Introspekcja (Introspection)** to wbudowana funkcja w technologii GraphQL, która umożliwia klientom odpytywanie serwera o szczegółowe informacje na temat jego schematu (schema). Klient może sprawdzić, jakie [[One API Queries|zapytania (queries)]], [[One API Mutations|mutacje (mutations)]] i [[One API Subscriptions|subskrypcje (subscriptions)]] są obsługiwane, a także jakie typy obiektów, pola i argumenty są dostępne w systemie.
 
 ---
 
-🔑 **Kluczowe punkty**
+# 🔑 Kluczowe punkty
 - Umożliwia dynamiczne generowanie dokumentacji, autouzupełnianie kodu (np. w [[Ataccama Using Playground|GraphiQL]]) i walidację zapytań przed wysłaniem.
 - W [[Ataccama|Ataccama]] ONE można z niej korzystać bezpośrednio za pomocą dedykowanych zapytań w konsoli [[Ataccama Using Playground|GraphQL Playground]] lub narzędzi sieciowych.
 - Rozszerzenia przeglądarki, takie jak **GraphQL Network Inspector**, pozwalają na bezinwazyjne podglądanie zapytań generowanych na żywo przez interfejs użytkownika (frontend) aplikacji ONE do backendu.
 
 ---
 
-📚 **Jak badać ruch GraphQL za pomocą GraphQL Network Inspector (Chrome)**
+# 📚 Jak badać ruch GraphQL za pomocą GraphQL Network Inspector (Chrome)
 
 Przeglądanie zapytań przesyłanych przez aplikację ONE web w czasie rzeczywistym jest kluczem do zrozumienia, jakich zapytań i mutacji użyć we własnych integracjach (np. przy użyciu kroku [[Desktop JSON Call Step General Configuration|JSON Call]]):
 
@@ -28,11 +27,11 @@ Przeglądanie zapytań przesyłanych przez aplikację ONE web w czasie rzeczywis
 
 ---
 
-💡 **Przykład zastosowania**
+# 💡 Przykład zastosowania
 Jeśli chcesz dowiedzieć się, w jaki sposób aplikacja [[Ataccama|Ataccama]] ONE pobiera oceny jakości danych (DQ evaluations) dla danej tabeli, włącz GraphQL Network Inspector, kliknij przycisk odświeżenia DQ (zobacz: [[Data Quality]]) w aplikacji webowej i skopiuj wywołaną w tle [[One API Mutations|mutację]] z zakładki *Request*.
 
 ---
 
-📌 **Źródła**
+## 📌 Źródła
 - GraphQL Specification (Introspection schema)
 - Chrome Web Store - GraphQL Network Inspector

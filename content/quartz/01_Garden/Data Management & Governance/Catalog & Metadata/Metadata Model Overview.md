@@ -15,12 +15,13 @@ aliases:
   - Ataccama metadata model
 ---
 
+
 # 🎯 Definicja
 **Model Metadanych ([[Metadata|Metadata]] Model)** w [[Ataccama|Ataccama]] ONE to logiczna struktura definiująca schemat danych, na którym opiera się cała platforma. Określa on encje (entities), ich właściwości (properties), cechy ([[Traits|traits]]) oraz relacje, służąc jednocześnie jako podstawa do automatycznego generowania interfejsu użytkownika w aplikacji webowej.
 
 ---
 
-🔑 **Kluczowe punkty**
+# 🔑 Kluczowe punkty
 - Definiuje strukturę pojęciową systemu (np. czym jest baza danych, tabela, kolumna, jakie mają atrybuty).
 - Składa się z definicji typów (encji) oraz ich fizycznych instancji (zasobów danych).
 - Umożliwia rozszerzanie domyślnego modelu poprzez tworzenie własnych encji i dodawanie właściwości.
@@ -28,7 +29,7 @@ aliases:
 
 ---
 
-📚 **Szczegółowe wyjaśnienie**
+# 📚 Szczegółowe wyjaśnienie
 
 ### Typy encji w modelu
 Encje w modelu metadanych [[Ataccama|Ataccama]] ONE dzielą się na dwie kategorie:
@@ -49,7 +50,7 @@ Edycja lub usuwanie podstawowej (fabrycznej) konfiguracji domyślnych encji dost
 
 ---
 
-💡 **Opcje ekranu [[Metadata|Metadata]] Model**
+# 💡 Opcje ekranu [[Metadata|Metadata]] Model
 Ekran zarządzania modelem w [[Ataccama|Ataccama]] ONE oferuje następujące narzędzia:
 - **[[Metadata|Metadata]] Model:** Lista wszystkich zdefiniowanych encji tworzących model.
 - **Model Graph:** Graficzna [[Wizualizacja|wizualizacja]] zależności i powiązań między encjami w modelu (patrz: [[Metadata Model Graph]]).
@@ -60,6 +61,6 @@ Ekran zarządzania modelem w [[Ataccama|Ataccama]] ONE oferuje następujące nar
 
 ---
 
-📌 **Źródła**
+## 📌 Źródła
 - [[Ataccama|Ataccama]] ONE Metamodel Configuration Guide
 - [[Ataccama|Ataccama]] ONE Administrator Portal Documentation

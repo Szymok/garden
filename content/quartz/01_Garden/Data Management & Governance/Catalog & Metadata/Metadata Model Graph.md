@@ -15,12 +15,13 @@ aliases:
   - Model Graph Ataccama
 ---
 
+
 # 🎯 Definicja
 **[[Wizualizacja|Wizualizacja]] Grafu Modelu Metadanych ([[Metadata|Metadata]] Model Graph)** to interaktywne narzędzie graficzne w [[Ataccama|Ataccama]] ONE, które przedstawia schemat relacji, dziedziczenia oraz powiązań pomiędzy wszystkimi encjami tworzącymi model metadanych platformy. Ułatwia zrozumienie powiązań między warstwami technicznymi i biznesowymi.
 
 ---
 
-🔑 **Kluczowe punkty**
+# 🔑 Kluczowe punkty
 - Dostępny w panelu administracyjnym w zakładce *Global Settings > [[Metadata|Metadata]] Model > Model Graph*.
 - Reprezentuje encje jako bloki (skrzynki) zawierające listę ich właściwości, a powiązania jako linie.
 - Pozwala na filtrowanie encji według ich typu (systemowe vs biznesowe) oraz wyszukiwanie konkretnych obiektów na grafie.
@@ -28,7 +29,7 @@ aliases:
 
 ---
 
-📚 **Nawigacja i obsługa grafu**
+# 📚 Nawigacja i obsługa grafu
 
 - **Filtrowanie typów encji:** Model metadanych dzieli encje na **Systemowe** (system - używane wewnętrznie do konfiguracji technicznej) oraz **Biznesowe** (business - istotne z punktu widzenia ładu danych, patrz: [[Metadata Model Overview]]). Domyślnie graf pokazuje tylko encje biznesowe. Aby zobaczyć wszystkie powiązania, należy przełączyć filtr na **All**.
 - **Wyszukiwanie i podświetlanie:** Kliknięcie ikony lupy w prawym górnym rogu umożliwia wyszukanie konkretnej encji. Po znalezieniu, wybrany blok zostaje automatycznie wycentrowany i podświetlony na **zielono**.
@@ -61,6 +62,6 @@ Aby nowa encja była widoczna i połączona z resztą systemu na grafie, należy
 
 ---
 
-📌 **Źródła**
+## 📌 Źródła
 - [[Ataccama|Ataccama]] ONE Metamodel Configuration Guide
 - [[Ataccama|Ataccama]] ONE Web Application Administration Guide

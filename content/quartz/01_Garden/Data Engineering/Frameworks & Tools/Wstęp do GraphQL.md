@@ -16,12 +16,13 @@ aliases:
   - GQL
 ---
 
+
 # 🎯 Definicja
 **GraphQL** to język zapytań (Query Language) dla interfejsów API oraz środowisko uruchomieniowe (runtime) do ich wykonywania. Został stworzony przez Facebooka w 2012 roku jako alternatywa dla architektury REST. Pozwala klientom na precyzyjne określenie, jakich danych potrzebują, eliminując problem pobierania nadmiarowych danych (over-fetching) lub niewystarczających danych (under-fetching).
 
 ---
 
-🔑 **Kluczowe punkty**
+# 🔑 Kluczowe punkty
 - **Brak nadmiarowości (No Over-fetching):** Pobierasz tylko te pola, których aplikacja potrzebuje w danej chwili.
 - **Pojedynczy punkt końcowy (Single Endpoint):** Wszystkie zapytania są kierowane na jeden adres URL (np. `/graphql`, patrz: [[Endpoints and HTTP Headers]]).
 - **Silne typowanie (Strongly Typed):** API opiera się na ściśle zdefiniowanym schemacie (Schema), który automatycznie dokumentuje dostępne typy i relacje (patrz: [[GraphQL Introspection|Introspekcja]]).
@@ -29,7 +30,7 @@ aliases:
 
 ---
 
-📚 **Szczegółowe wyjaśnienie**
+# 📚 Szczegółowe wyjaśnienie
 
 W tradycyjnym REST API, pobranie profilu użytkownika i jego postów wymagałoby wywołania kilku endpointów (np. `GET /users/1` i `GET /users/1/posts`). W GraphQL wykonujesz jedno zapytanie określające dokładnie strukturę wynikowego obiektu JSON:
 
@@ -53,7 +54,7 @@ query GetUserProfile {
 
 ---
 
-💡 **Zastosowanie w [[Ataccama|Ataccama]] ONE**
+# 💡 Zastosowanie w [[Ataccama|Ataccama]] ONE
 Interfejs ONE API opiera się w pełni na standardzie GraphQL. Pozwala on na zarządzanie konfiguracją obiektów i metadanymi. Przykładowo, za pomocą GraphQL możesz:
 - Pobrać listę wszystkich terminów biznesowych przypisanych do użytkownika (patrz: [[Glossary Terms]]).
 - Uruchomić zadanie ewaluacji jakości danych (DQ) dla określonego elementu katalogu (patrz: [[Data Quality]]).
@@ -61,6 +62,6 @@ Interfejs ONE API opiera się w pełni na standardzie GraphQL. Pozwala on na zar
 
 ---
 
-📌 **Źródła**
+## 📌 Źródła
 - [Oficjalny samouczek GraphQL.org](https://graphql.org/learn/)
 - Specyfikacja standardu GraphQL (spec.graphql.org)

@@ -1,11 +1,10 @@
-# [[Ataccama|Ataccama]] Using Playground
 
-🎯 **Definicja**
+# 🎯 Definicja
 **GraphiQL (dawniej [[GraphQL Playground|GraphQL Playground]])** to interaktywne, zintegrowane środowisko programistyczne (IDE) służące do pisania, testowania oraz eksplorowania [[One API Queries|API GraphQL]] bezpośrednio w [[Ataccama|Ataccama]] ONE. Służy jako konsola deweloperska do uruchamiania [[One API Queries|zapytań (queries)]], [[One API Mutations|mutacji (mutations)]] i [[One API Subscriptions|subskrypcji (subscriptions)]].
 
 ---
 
-🔑 **Kluczowe punkty**
+# 🔑 Kluczowe punkty
 - Dostępne pod adresem URL `<adres_ataccama>/playground/`.
 - Wspiera automatyczne uzupełnianie kodu (**Content Assist** za pomocą skrótu `Ctrl + Space`) ułatwiające przeglądanie typów i [[Metadata|schematu danych (schema)]].
 - Posiada panel historii, który zapamiętuje ostatnio wykonywane zapytania.
@@ -14,7 +13,7 @@
 
 ---
 
-📚 **Jak korzystać z GraphiQL (Krok po Kroku)**
+# 📚 Jak korzystać z GraphiQL (Krok po Kroku)
 
 1. **Otwarcie środowiska:** Przejdź w przeglądarce pod adres `<adres_ataccama>/playground/`. Nastąpi automatyczne przekierowanie do interfejsu GraphiQL.
 2. **Uwierzytelnianie:** Sprawdź, czy jesteś zalogowany w aplikacji głównej [[Ataccama|Ataccama]] ONE. Playground automatycznie pobiera token Bearer z Twojej aktywnej sesji przeglądarki.
@@ -30,11 +29,11 @@
 
 ---
 
-💡 **Przykład zastosowania**
+# 💡 Przykład zastosowania
 Podczas pisania skomplikowanych zapytań o powiązania encji metadanych (np. sprawdzanie atrybutów tabeli, patrz: [[Data Catalog]]), możesz nacisnąć `Ctrl + Space` wewnątrz nawiasów klamrowych. GraphiQL wyświetli listę wszystkich dostępnych pól i typów, które możesz pobrać z [[Metadata|modelu danych]].
 
 ---
 
-📌 **Źródła**
+## 📌 Źródła
 - Oficjalna dokumentacja GraphiQL
 - [[Ataccama|Ataccama]] ONE Developer Guide
