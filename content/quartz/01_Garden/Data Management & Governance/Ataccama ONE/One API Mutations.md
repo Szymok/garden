@@ -1,46 +1,33 @@
-GraphQL utilizes mutations, specifically designed for operations that modify server-side data.
-A full data platform needs both data fetching and modification mechanisms, making mutations essential in GraphQL.
-With mutations, developers can define custom operations tailored to their specific data modification needs, enhancing flexibility and control.
-Mutations can return the state of the job and as well as the modified object, including nested fields, allowing retrieval of the updated object's state.
-While queries are executed in parallel, mutations are executed in series, ensuring sequential handling of data modifications.
-In REST, any request might induce server-side changes, but conventions discourage using GET requests for data modification. Similarly, GraphQL promotes explicit mutation operations for write operations.
-Mutations support various types of data modifications, including create, update, delete, and custom actions, offering versatility in application development.
+# One API Mutations
 
+🎯 **Definicja**
+**Mutacje (Mutations)** w GraphQL to specjalne operacje przeznaczone do modyfikacji danych po stronie serwera (zapis, aktualizacja, usuwanie). W przeciwieństwie do zapytań (queries), które mogą być wykonywane równolegle, mutacje są wykonywane sekwencyjnie (szeregowo), co zapewnia spójność i chroni przed wyścigami (race conditions) podczas modyfikacji danych.
 
-Running DQ evaluations
-You can run data quality evaluation on a catalog item, a specific column in a catalog item, or a glossary term.
-Depending on the entity type, you need to provide the corresponding identifier.
-In these cases, the operation type is mutation.
-For more information about retrieving correct identifiers for each entity type, see List entities.
+---
 
-GraphQL operation for DQ evaluation on catalog item attributes
-mutation catalogItemAttributeDQ {
-    attributeEvaluateDq(gid: <catalog_item_attribute_id>) {
-        gid
-    }
-}
+🔑 **Kluczowe punkty**
+- Służą do wykonywania wszelkich operacji zapisu i modyfikacji danych w Ataccama ONE (tworzenie, edycja, usuwanie encji, uruchamianie procesów).
+- Mutacje mogą zwracać stan wykonanego zadania (np. identyfikator `gid` zadania DQ) oraz zmodyfikowany obiekt wraz z zagnieżdżonymi polami.
+- Wykonywane są **sekwencyjnie (w serii)**, w przeciwieństwie do zapytań wykonywanych współbieżnie.
+- Stanowią odpowiednik operacji modyfikujących w REST (POST, PUT, DELETE).
 
-GraphQL operation for DQ evaluation on glossary terms
-mutation glossaryTermDQ {
-    termEvaluateDq(gid: <glossary_term_identifier>) {
-        gid
-    }
-}
+---
 
+📚 **Szczegółowe wyjaśnienie i przykłady**
 
-Running DQ evaluations
-All DQ evaluation operations return the same response format with the identifier of the DQ evaluation job (gid).
-The name of the first field under data matches the executed mutation (for example: catalogItemEvaluateDq).
-In all cases, the operation is expected to return the job identifier.
-You can further customize what the operation returns as needed.
-GraphQL operation for DQ evaluation on catalog items
+### 1. Uruchamianie ewaluacji Jakości Danych (DQ)
+Możesz uruchomić ewaluację jakości danych (DQ evaluation) dla elementu katalogu (catalog item), konkretnego atrybutu (catalog item attribute) lub terminu biznesowego (glossary term). Każda z tych operacji zwraca identyfikator zadania (`gid`).
+
+#### Uruchomienie ewaluacji DQ dla elementu katalogu (Catalog Item)
+```graphql
 mutation catalogItemDQ {
-    catalogItemEvaluateDq(gid: <catalog_item_id>) {
+    catalogItemEvaluateDq(gid: "identyfikator_elementu_katalogu") {
         gid
     }
 }
-
-Running DQ evaluation on a catalog item operation response body
+```
+**Przykładowa odpowiedź:**
+```json
 {
     "data": {
         "catalogItemEvaluateDq": {
@@ -48,26 +35,43 @@ Running DQ evaluation on a catalog item operation response body
         }
     }
 }
+```
 
+#### Uruchomienie ewaluacji DQ dla atrybutu elementu katalogu (Attribute)
+```graphql
+mutation catalogItemAttributeDQ {
+    attributeEvaluateDq(gid: "identyfikator_atrybutu") {
+        gid
+    }
+}
+```
 
+#### Uruchomienie ewaluacji DQ dla terminu słownikowego (Glossary Term)
+```graphql
+mutation glossaryTermDQ {
+    termEvaluateDq(gid: "identyfikator_terminu") {
+        gid
+    }
+}
+```
 
-Deleting entities
-Deleting an entity requires first creating a delete draft and then publishing it.
-The operation requires the identifier of the entity.
-To delete a catalog item attribute, replace the root item catalogItemDelete with attributeDelete.
-When deleting a glossary term, use termDelete instead.
-GraphQL operation for deleting catalog items
+---
+
+### 2. Usuwanie encji (Deleting Entities)
+Usunięcie encji w Ataccama ONE wymaga w pierwszej kolejności utworzenia wersji roboczej usunięcia (delete draft), a następnie jej opublikowania (publish).
+
+#### Operacja GraphQL do usuwania elementu katalogu:
+```graphql
 mutation deleteEntity {
-    catalogItemDelete(gid: 
-    "0726c74e-fc9e-40ad-a29d-23ec1dac8769") {
+    catalogItemDelete(gid: "0726c74e-fc9e-40ad-a29d-23ec1dac8769") {
         success
     }
 }
+```
+*Uwaga: W przypadku usuwania atrybutu elementu katalogu należy zastąpić `catalogItemDelete` przez `attributeDelete`. Dla terminu słownikowego użyj `termDelete`.*
 
-The query returns the following structure:
-
-
-Deleting catalog items operation response body
+**Przykładowa odpowiedź:**
+```json
 {
     "data": {
         "catalogItemDelete": {
@@ -75,15 +79,15 @@ Deleting catalog items operation response body
         }
     }
 }
+```
 
+---
 
-Publishing entities
-The mutation publishEntity allows publishing any MMD node.
-Currently, it bypasses the publishing workflow, automatically resolving approval requests (expected to change later).
-When publishing attributes, the root item should be attributePublish. For glossary terms, use termPublish.
-If the field result is added as shown in the example, the operation returns the name of the published node.
-Result field type depends on the entity type.
-GraphQL operation for publishing entities
+### 3. Publikowanie encji (Publishing Entities)
+Mutacja `publishEntity` pozwala na publikację dowolnego węzła modelu metadanych (MMD). Obecnie operacja ta omija domyślny proces zatwierdzania (workflow), automatycznie akceptując żądania publikacji.
+
+#### Publikacja elementu katalogu:
+```graphql
 mutation publishEntity {
     catalogItemPublish(gid: "0726c74e-fc9e-40ad-a29d-23ec1dac8769") {
         success
@@ -94,15 +98,11 @@ mutation publishEntity {
         }
     }
 }
+```
+*Uwaga: W przypadku publikacji atrybutu elementu katalogu użyj `attributePublish`. Dla terminu biznesowego użyj `termPublish`.*
 
-The content assist feature of GraphQL Playground can help you customize what the publishEntity mutation returns. To display all possible query options, press Ctrl+Space or start typing.
-
-
-Publishing entities
-The response is structured as follows:
-
-
-Publishing entities operation response body
+**Przykładowa odpowiedź:**
+```json
 {
     "data": {
         "catalogItemPublish": {
@@ -115,10 +115,10 @@ Publishing entities operation response body
         }
     }
 }
-When publishing a delete draft, the operation returns a response in the following format:
+```
 
-
-Publishing a delete draft operation response body
+**Publikacja wersji roboczej usunięcia (Delete Draft):**
+```json
 {
     "data": {
         "catalogItemDelete": {
@@ -129,35 +129,37 @@ Publishing a delete draft operation response body
         }
     }
 }
+```
 
+---
 
+### 4. Klonowanie reguł i terminów (Duplicating Rules and Terms)
+Umożliwia skopiowanie konfiguracji reguł DQ lub terminów biznesowych (np. w celu przypisania podobnych reguł do wielu plików wyszukiwania). Operacja kopiuje wyłącznie konfigurację i nie przenosi powiązań encji (skopiowany obiekt nie jest nigdzie przypisany).
 
-Duplicating rules and terms
-It is possible to duplicate the configuration of rules and terms.
-This is useful when, for example, similar rules need to be assigned to multiple lookup files.
-This operation only copies the configuration and does not include entity relationships, meaning the duplicated rule or term is not assigned anywhere.
-When duplicating rules and terms, you need to specify the identifier (gid) of the term or rule you want to duplicate.
-GraphQL query for duplicating terms
+#### Duplikowanie terminu:
+```graphql
 mutation copyTerm {
-    termCopy(gid: "<term_ID>") {
+    termCopy(gid: "identyfikator_terminu") {
         result {
             gid
         }
     }
 }
+```
 
-
-Duplicating rules and terms
-GraphQL Query for duplicating rules
+#### Duplikowanie reguły:
+```graphql
 mutation copyRule {
-    ruleCopy(gid: "<rule_ID>") {
+    ruleCopy(gid: "identyfikator_reguly") {
         result {
             gid
         }
     }
 }
+```
 
-Duplicating a rule operation response body
+**Przykładowa odpowiedź:**
+```json
 {
     "data": {
         "ruleCopy": {
@@ -167,13 +169,10 @@ Duplicating a rule operation response body
         }
     }
 }
+```
 
+---
 
-Topic Highlights
-GraphQL utilizes mutations for server-side data modification operations.
-Developers can define custom mutation operations tailored to specific data modification needs.
-Mutations can return the state of the job and modified objects, including nested fields.
-Unlike queries, mutations are executed sequentially to ensure proper data modification handling.
-GraphQL encourages explicit mutation operations for data modification, similar to REST conventions.
-Mutations support create, update, delete, and custom actions.
-In ONE, mutations are used for tasks such as data quality evaluation, deletions, duplications, and publishing entities.
+📌 **Źródła**
+- Dokumentacja techniczna Ataccama ONE API
+- GraphQL Specification (Mutations)
