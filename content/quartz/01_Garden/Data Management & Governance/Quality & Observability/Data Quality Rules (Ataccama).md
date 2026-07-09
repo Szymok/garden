@@ -4,7 +4,7 @@ created: 2026-02-04
 status: evergreen
 category: Ataccama ONE / DQ
 difficulty: basic
-language: en
+language: pl
 tags:
   - rules
   - dq

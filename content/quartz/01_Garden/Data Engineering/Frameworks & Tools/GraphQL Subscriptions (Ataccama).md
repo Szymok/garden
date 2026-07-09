@@ -4,7 +4,7 @@ created: 2026-02-04
 status: evergreen
 category: Ataccama ONE / API
 difficulty: advanced
-language: en
+language: pl
 tags:
   - graphql
   - real-time

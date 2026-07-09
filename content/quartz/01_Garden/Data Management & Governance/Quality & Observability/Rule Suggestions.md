@@ -4,7 +4,7 @@ created: 2026-02-04
 status: evergreen
 category: Ataccama ONE / Automation
 difficulty: intermediate
-language: en
+language: pl
 tags:
   - automation
   - suggestions

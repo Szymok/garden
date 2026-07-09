@@ -45,7 +45,9 @@ aliases:
     
     - Systemy monitorujące (np. Monte Carlo, Databand, Bigeye) śledzą zmiany w objętości danych, rozkładach statystycznych, liczbie nulli – i informują o anomalnych odchyleniach.
 
-![Schemat jakości danych](images/data-quality.pngtrybuty jakości danych
+![Schemat jakości danych](images/data-quality.png)
+
+## Atrybuty jakości danych
 
 |Atrybut|Opis|
 |---|---|
