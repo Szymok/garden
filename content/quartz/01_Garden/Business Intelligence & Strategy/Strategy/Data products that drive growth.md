@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Data Products That Drive Growth"
 created: 2026-05-06
 status: 🌱 draft
@@ -10,4 +10,7 @@ tags:
   - growth
   - strategy
   - webinar
+aliases:
+  - Data Products That Drive Growth
 ---
+

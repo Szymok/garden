@@ -9,6 +9,8 @@ tags:
   - ataccama
   - rdm
   - reference-data
+aliases:
+  - Reference Data Manager (RDM)
 ---
 [[Ataccama|Ataccama]] Reference Data Manager is a tool for managing reference data by supporting formal, defined processes and ensuring central authority over all reference data changes. Reference Data Manager allows not only browsing all reference data, but also changing, creating, and deleting existing data. Its domain-agnostic nature also ensures flexibility to adapt to all types of industries, and its cutting-edge user interface with the latest standards and technology on Ul and UX make an easy-to-use product for data managers.
 

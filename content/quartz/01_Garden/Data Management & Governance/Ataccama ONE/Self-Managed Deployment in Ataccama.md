@@ -1,4 +1,4 @@
-﻿---
+---
 title: Self-Managed Deployment in Ataccama
 created: 2026-05-06
 status: 🌱 draft
@@ -10,6 +10,8 @@ tags:
   - deployment
   - ansible
   - self-managed
+aliases:
+  - Self-Managed Deployment in Ataccama
 ---
 - The [[Automated Deployment|automated deployment]] process aims to deploy a **customised [[Ataccama|Ataccama]] ONE Platform installation** onto **customer-provided infrastructure**.
 - This installation includes:
@@ -72,5 +74,3 @@ Target State of Deployment: Monitoring & Essential Setup
     Furthermore, the following elements must be set up:
         Backups: Handled by the customer.
         Firewalls: Must be configured on every target server using iptables or similar technology. Access should be restricted only to services configured during installation.
-
-

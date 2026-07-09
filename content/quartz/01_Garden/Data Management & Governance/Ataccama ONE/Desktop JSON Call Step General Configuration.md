@@ -1,3 +1,19 @@
+---
+title: Desktop JSON Call Step General Configuration
+created: 2026-07-09
+status: evergreen
+category: Ataccama ONE
+difficulty: intermediate
+language: pl
+tags:
+  - ataccama
+  - one-desktop
+  - json-call
+  - api
+aliases:
+  - Konfiguracja kroku JSON Call
+  - JSON Call ONE Desktop
+---
 
 # 🎯 Definicja
 Krok **JSON Call** w programie **[[ONE Desktop|ONE Desktop]]** służy do wykonywania operacji na ONE API bezpośrednio z poziomu planów integracyjnych i przepływów danych (patrz również: [[Ansible Role in Deployment (Ataccama)|Wdrażanie Ataccamy]]). Umożliwia wysyłanie [[One API Queries|żądań GraphQL]] (za pomocą metody HTTP POST) i przetwarzanie struktury odpowiedzi JSON w celu przekazania jej do kolejnych kroków w planie.

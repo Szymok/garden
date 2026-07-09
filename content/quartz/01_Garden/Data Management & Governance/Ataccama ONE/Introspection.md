@@ -1,3 +1,19 @@
+---
+title: GraphQL Introspection (Ataccama)
+created: 2026-07-09
+status: evergreen
+category: Ataccama ONE
+difficulty: intermediate
+language: pl
+tags:
+  - ataccama
+  - introspection
+  - graphql
+  - network-inspector
+aliases:
+  - Introspekcja GraphQL Ataccama
+  - GraphQL Network Inspector
+---
 
 # 🎯 Definicja
 **Introspekcja (Introspection)** to wbudowana funkcja w technologii GraphQL, która umożliwia klientom odpytywanie serwera o szczegółowe informacje na temat jego schematu (schema). Klient może sprawdzić, jakie [[One API Queries|zapytania (queries)]], [[One API Mutations|mutacje (mutations)]] i [[One API Subscriptions|subskrypcje (subscriptions)]] są obsługiwane, a także jakie typy obiektów, pola i argumenty są dostępne w systemie.

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Reinventing Reference Data — AI-powered Consistency for the Enterprise"
 created: 2026-05-06
 status: 🌱 draft
@@ -11,4 +11,7 @@ tags:
   - ai
   - rdm
   - webinar
+aliases:
+  - Reinventing Reference Data — AI-powered Consistency for the Enterprise
 ---
+

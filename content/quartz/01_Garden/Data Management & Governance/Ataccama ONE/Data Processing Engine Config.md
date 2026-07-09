@@ -11,6 +11,8 @@ tags:
   - spark
   - performance
   - configuration
+aliases:
+  - Data Processing Engine Config
 ---
 The Data Processing Engine: Scaling and Tuning for Big Data Your Engine Is Everything • The DPE is the core component that reads, processes, and applies [[Data Quality|data quality]] [[Rules|rules]] to your data. • Proper configuration is crucial for achieving optimal performance and scalability when working with Big Data. • Performance can be impacted if DPE is not correctly configured.
 DPM Admin console: Your central control Panel • Accessing the Console: Mention the default URL (http:/[localhost:8031, adjust for your environment), and that DPP_admin security [[Roles|roles]] are required. • Key Tabs for Big Data: Engines: Monitor DPE status, restart engines, and view configurations. Jobs: Monitor running tasks, identify performance issues or failures. Configuration: Review, change, and adjust the runtime configurations. • Show how to navigate the Ul

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "The Data Journey Behind Regulatory Reporting"
 created: 2026-05-06
 status: 🌱 draft
@@ -10,4 +10,7 @@ tags:
   - data-governance
   - compliance
   - webinar
+aliases:
+  - The Data Journey Behind Regulatory Reporting
 ---
+

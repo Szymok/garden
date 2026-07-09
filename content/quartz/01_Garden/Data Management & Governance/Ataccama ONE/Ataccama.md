@@ -1,4 +1,4 @@
-﻿---
+---
 title: Ataccama ONE
 created: 2026-05-06
 status: 🌱 draft
@@ -9,4 +9,7 @@ tags:
   - ataccama
   - data-governance
   - platform
+aliases:
+  - Ataccama ONE
 ---
+

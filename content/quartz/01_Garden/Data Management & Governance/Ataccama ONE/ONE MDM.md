@@ -1,4 +1,4 @@
-﻿---
+---
 title: ONE MDM
 created: 2026-05-06
 status: 🌱 draft
@@ -10,6 +10,8 @@ tags:
   - mdm
   - master-data-management
   - rdm
+aliases:
+  - ONE MDM
 ---
 - The [[Ataccama|Ataccama]] ONE MDM suite is available in **two variants**: **MDM** or **[[RDM|RDM]]**.
 - These variants are installed **only in separate environments**.

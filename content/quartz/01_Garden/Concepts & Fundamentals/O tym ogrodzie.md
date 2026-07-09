@@ -1,5 +1,4 @@
 ---
-
 title: "O tym ogrodzie" 
 created: 2025-07-16 
 status: Final 
@@ -11,9 +10,9 @@ tags:
 - help aliases:
 - cyfrowy ogród
 - digital garden
-
+aliases:
+  - O tym ogrodzie
 ---
-
 # 🎯 Definicja i idea
 
 Ten **Słownik** oparty jest na koncepcji [Cyfrowego Ogrodu](https://jzhao.xyz/posts/networked-thought/), która odchodzi od tradycyjnego, liniowego układu haseł na rzecz dynamicznej, sieciowej eksploracji wiedzy. Zamiast statycznej listy terminów, cyfrowy ogród pozwala na „wchodzenie w głąb” i odkrywanie powiązań między tematami, umożliwiając zgłębianie wiedzy wielokierunkowo — jak spacer po ogrodzie, w którym każdy kwiat (węzeł) może prowadzić do kolejnych ścieżek (powiązań).

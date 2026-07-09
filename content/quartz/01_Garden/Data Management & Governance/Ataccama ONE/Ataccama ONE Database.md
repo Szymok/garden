@@ -1,4 +1,4 @@
-﻿---
+---
 title: Ataccama ONE Database
 created: 2026-05-06
 status: 🌱 draft
@@ -10,6 +10,8 @@ tags:
   - postgresql
   - database
   - deployment
+aliases:
+  - Ataccama ONE Database
 ---
 - The platform uses **multiple PostgreSQL databases internally to store various data and [[Metadata|metadata]]**.
 - These databases are **automatically installed or allocated in a cloud environment**.

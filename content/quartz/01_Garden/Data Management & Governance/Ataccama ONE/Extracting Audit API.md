@@ -1,3 +1,19 @@
+---
+title: Extracting Audit API
+created: 2026-07-09
+status: evergreen
+category: Ataccama ONE
+difficulty: advanced
+language: pl
+tags:
+  - ataccama
+  - audit-api
+  - graphql
+  - compliance
+aliases:
+  - Pobieranie logów audytowych
+  - Audit API Ataccama
+---
 
 # 🎯 Definicja
 **Audit API** to dedykowany interfejs GraphQL w module Audytu (Audit module) [[Ataccama|Ataccama]] ONE. Służy do śledzenia i pobierania historii wszystkich działań podejmowanych przez użytkowników w systemie (odczyty, edycje, usunięcia) oraz prób nieautoryzowanego dostępu w celach bezpieczeństwa i zgodności z regulacjami (compliance).

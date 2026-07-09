@@ -1,3 +1,19 @@
+---
+title: Ataccama Using Playground
+created: 2026-07-09
+status: evergreen
+category: Ataccama ONE
+difficulty: basic
+language: pl
+tags:
+  - ataccama
+  - playground
+  - graphql
+  - api
+aliases:
+  - Playground Ataccama
+  - GraphQL Playground Ataccama
+---
 
 # 🎯 Definicja
 **GraphiQL (dawniej [[GraphQL Playground|GraphQL Playground]])** to interaktywne, zintegrowane środowisko programistyczne (IDE) służące do pisania, testowania oraz eksplorowania [[One API Queries|API GraphQL]] bezpośrednio w [[Ataccama|Ataccama]] ONE. Służy jako konsola deweloperska do uruchamiania [[One API Queries|zapytań (queries)]], [[One API Mutations|mutacji (mutations)]] i [[One API Subscriptions|subskrypcji (subscriptions)]].
