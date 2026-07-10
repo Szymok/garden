@@ -13,6 +13,8 @@ tags:
 aliases:
   - Extract tweak Load Transform
   - Pre-processing
+  - ETLT
+  - etlt
 ---
 # 🎯 Definicja
 **EtLT** (Extract, tweak, Load, Transform) to wariant podejścia [[ETL kontra ELT|ELT]], w którym dodajemy mały krok "t" (tweak/cleanup) przed załadowaniem danych. Chodzi o to, by usunąć dane wrażliwe (PII) lub naprawić krytyczne błędy formatu *zanim* dane trafią do chmury/hurtowni.
