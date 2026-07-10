@@ -13,6 +13,7 @@ tags:
 aliases:
   - Prompt Basics
   - Czym jest prompt
+  - Wstęp do promptingu
 ---
 # 🎯 Definicja
 **Prompt** to tekst, który wpisujesz do AI. To polecenie, pytanie lub początek historii. Inżynieria Promptów (Prompt Engineering) to sztuka dobierania słów tak, żeby model zrozumiał intencję i dał najlepszy możliwy wynik.

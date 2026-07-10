@@ -36,7 +36,7 @@ Reguła wykryła, że dla klienta "Prezes XYZ" brakuje numeru telefonu.
 Automat tego nie wymyśli. Steward musi znaleźć wizytówkę, wpisać numer ręcznie w ONE Data. System od razu sprawdzi format (+48...). Jeśli OK, Steward zatwierdza zmianę.
 
 ## 📌 Źródła
-- [[[[Ataccama|Ataccama]] ONE Data|[[Ataccama|Ataccama]] ONE Data]] Documentation.
+- [[Ataccama|Ataccama ONE Data]] Documentation.
 
 ## 👽 Brudnopis
 - To narzędzie typu "Data [[Stewardship|Stewardship]]" / "Data Curation".
