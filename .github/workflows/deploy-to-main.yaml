@@ -1,0 +1,77 @@
+name: Deploy Garden to Main Website
+
+on:
+  push:
+    branches:
+      - v4
+      - quartz-v5
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Garden
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Cache Quartz plugins
+        uses: actions/cache@v4
+        with:
+          path: .quartz/plugins
+          key: ${{ runner.os }}-plugins-${{ hashFiles('quartz.lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-plugins-
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Quartz plugins
+        run: npx quartz plugin install
+
+      - name: Build Quartz Site
+        run: npx quartz build -o public/garden
+
+      - name: Deploy to szymok.github.io Repo
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.DEPLOY_TO_MAIN_WEBSITE_TOKEN }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Clone the destination repository using the deployment token
+          git clone https://x-access-token:${API_TOKEN_GITHUB}@github.com/Szymok/szymok.github.io.git dest-repo
+          
+          # Clean the existing garden directory in destination repo
+          rm -rf dest-repo/garden/*
+          mkdir -p dest-repo/garden
+          
+          # Copy the compiled site files to the destination garden directory
+          cp -r public/garden/* dest-repo/garden/
+          
+          # Commit and push changes
+          cd dest-repo
+          git add garden
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "chore: automated deploy of digital garden notes"
+            git push origin main
+          else
+            echo "No changes to deploy."
+          fi
