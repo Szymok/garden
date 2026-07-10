@@ -16,6 +16,7 @@ tags:
 aliases:
 - katalog danych
 - data catalog Ataccama
+- Data Catalog
 
 ---
 

@@ -19,6 +19,7 @@ aliases:
   - Continuous Deployment
   - GitHub Actions
   - GitLab CI
+  - CI/CD
 ---
 
 # 🎯 Definicja

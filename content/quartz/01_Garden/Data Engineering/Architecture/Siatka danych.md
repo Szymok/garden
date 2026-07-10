@@ -40,7 +40,7 @@ aliases:
 
 ## Centralizacja vs [[Data Mesh]]
 
-|Cecha|[[Data Lake|Data Lake]] / DWH|[[Data Mesh\|Siatka danych]] ([[Data Mesh]])|
+|Cecha|[[Data Lake|Data Lake]] / DWH|[[Siatka danych]] ([[Data Mesh]])|
 |---|---|---|
 |Odpowiedzialność|Centralny zespół danych|Zespoły domenowe|
 |Architektura|Scentralizowana|Rozproszona|
