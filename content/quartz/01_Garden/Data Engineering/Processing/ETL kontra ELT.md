@@ -13,6 +13,10 @@ tags:
 aliases:
   - ETL vs ELT
   - Extract Transform Load
+  - ETL
+  - ELT
+  - etl
+  - elt
 ---
 # 🎯 Definicja
 **ETL** (Extract, Transform, Load) i **ELT** (Extract, Load, Transform) to dwa podejścia do przesyłania danych z punktu A do B. Różnica polega na tym, **kiedy** i **gdzie** odbywa się transformacja (czyszczenie, łączenie).
