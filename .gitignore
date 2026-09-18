@@ -14,3 +14,10 @@ quartz/cli/tui/dist/
 scratch/
 content_backup/
 CLAUDE.md
+
+# prywatne notatki i pliki systemowe vaulta — NIGDY do publicznego repo
+content/quartz/00_Inbox/
+content/quartz/02_Private/
+content/quartz/99_System/
+content/quartz/.trash/
+content/quartz/.smart-env/

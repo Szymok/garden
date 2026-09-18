@@ -12,6 +12,11 @@ configuration:
     - private
     - templates
     - .obsidian
+    - 00_Inbox
+    - 02_Private
+    - 99_System
+    - .trash
+    - .smart-env
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
