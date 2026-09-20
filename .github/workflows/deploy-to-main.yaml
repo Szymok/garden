@@ -3,7 +3,6 @@ name: Deploy Garden to Main Website
 on:
   push:
     branches:
-      - v4
       - quartz-v5
   workflow_dispatch:
 
